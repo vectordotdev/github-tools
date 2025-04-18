@@ -8,11 +8,27 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out/summaries"))
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-
 def export_monthly_summary(cur, table):
-    logging.info(f"Executing monthly summary query for table '{table}'...")
-    output_path = os.path.join(OUTPUT_DIR, f"monthly_summary.{table}.csv")
+    logging.info(f"Executing dynamic monthly summary with all labels for table '{table}'...")
+    output_path = os.path.join(OUTPUT_DIR, f"{table}.monthly_summary.csv")
 
+    # Step 1: Get all distinct label names used with this table
+    cur.execute(f"""
+        SELECT DISTINCT labels.name
+        FROM issue_labels
+        JOIN labels ON labels.id = issue_labels.label_id
+        JOIN {table} ON {table}.id = issue_labels.issue_id
+    """)
+    label_names = [row[0] for row in cur.fetchall()]
+    logging.info(f"Found {len(label_names)} labels for table '{table}'")
+
+    # Step 2: Build dynamic SUM(CASE ...) blocks for each label
+    label_columns_sql = ",\n        ".join(
+        [f"SUM(CASE WHEN lc.label_name = '{label}' THEN 1 ELSE 0 END) AS \"{label}\""
+         for label in label_names]
+    )
+
+    # Step 3: Build final SQL query
     query = f"""
     WITH month_base AS (
         SELECT
@@ -23,42 +39,42 @@ def export_monthly_summary(cur, table):
     ),
     label_counts AS (
         SELECT
-            issue_id,
+            issue_labels.issue_id,
             labels.name AS label_name
         FROM issue_labels
         JOIN labels ON labels.id = issue_labels.label_id
-        WHERE labels.name IN ('type: bug', 'type: feature', 'type: enhancement')
+        JOIN {table} ON {table}.id = issue_labels.issue_id
     )
     SELECT
         mb.month,
-        SUM(CASE WHEN mb.state = 'open' THEN 1 ELSE 0 END) AS open_issues,
-        SUM(CASE WHEN mb.state = 'closed' THEN 1 ELSE 0 END) AS closed_issues,
-        SUM(CASE WHEN lc.label_name = 'type: bug' THEN 1 ELSE 0 END) AS bugs,
-        SUM(CASE WHEN lc.label_name = 'type: feature' THEN 1 ELSE 0 END) AS features,
-        SUM(CASE WHEN lc.label_name = 'type: enhancement' THEN 1 ELSE 0 END) AS enhancements
+        SUM(CASE WHEN mb.state = 'open' THEN 1 ELSE 0 END) AS open_{table},
+        SUM(CASE WHEN mb.state = 'closed' THEN 1 ELSE 0 END) AS closed_{table},
+        {label_columns_sql}
     FROM month_base mb
     LEFT JOIN label_counts lc ON mb.issue_id = lc.issue_id
     GROUP BY mb.month
     ORDER BY mb.month
     """
+
     cur.execute(query)
     rows = cur.fetchall()
+    column_names = [desc[0] for desc in cur.description]
 
-    logging.info(f"Writing monthly summary to {output_path}")
+    logging.info(f"Writing expanded monthly summary to {output_path}")
     with open(output_path, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["month", "open_issues", "closed_issues", "bugs", "features", "enhancements"])
+        writer.writerow(column_names)
         writer.writerows(rows)
-
 
 def export_label_breakdown(cur, table):
     logging.info(f"Executing label breakdown query for table '{table}'...")
     output_path = os.path.join(OUTPUT_DIR, f"label_breakdown.{table}.csv")
 
-    query = """
+    query = f"""
     SELECT labels.name AS label_name, COUNT(*) AS count
     FROM issue_labels
     JOIN labels ON labels.id = issue_labels.label_id
+    JOIN {table} ON {table}.id = issue_labels.issue_id
     GROUP BY labels.name
     ORDER BY count DESC
     """
@@ -74,7 +90,7 @@ def export_label_breakdown(cur, table):
 
 def export_label_timeseries(cur, table):
     logging.info(f"Executing label time-series breakdown query for table '{table}'...")
-    output_path = os.path.join(OUTPUT_DIR, f"label_counts.{table}.csv")
+    output_path = os.path.join(OUTPUT_DIR, f"{table}.label_counts.csv")
 
     query = f"""
     SELECT
@@ -96,6 +112,31 @@ def export_label_timeseries(cur, table):
         writer.writerow(["month", "label_name", "count"])
         writer.writerows(rows)
 
+def export_open_by_label(cur, table):
+    logging.info(f"Calculating open {table} count by label...")
+    output_path = os.path.join(OUTPUT_DIR, f"{table}.open_by_label.csv")
+
+    query = f"""
+       SELECT
+           labels.name AS label_name,
+           SUM(CASE WHEN {table}.state = 'open' THEN 1 ELSE 0 END) AS open_count,
+           SUM(CASE WHEN {table}.state = 'closed' THEN 1 ELSE 0 END) AS closed_count
+       FROM {table}
+       JOIN issue_labels ON {table}.id = issue_labels.issue_id
+       JOIN labels ON labels.id = issue_labels.label_id
+       GROUP BY labels.name
+       ORDER BY open_count DESC, closed_count DESC
+       """
+
+    cur.execute(query)
+    rows = cur.fetchall()
+
+    logging.info(f"Writing open-by-label breakdown to {output_path}")
+    with open(output_path, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["label_name", "open_count", "closed_count"])
+        writer.writerows(rows)
+
 
 def main():
     parser = argparse.ArgumentParser(description="Generate GitHub issue summaries from SQLite.")
@@ -109,6 +150,7 @@ def main():
     cur = conn.cursor()
 
     for table in ["issues", "pull_requests"]:
+        export_open_by_label(cur, table)
         export_monthly_summary(cur, table)
         export_label_breakdown(cur, table)
         export_label_timeseries(cur, table)

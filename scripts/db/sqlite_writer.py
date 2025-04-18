@@ -9,6 +9,7 @@ from scripts.util.load_env import load_github_env_vars
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out"))
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def create_tables(cur):
     print("Creating database tables (issues, pull_requests, labels, issue_labels)...")
@@ -53,8 +54,8 @@ def create_tables(cur):
 
 
 def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    db_filename = f"{timestamp}_{repo_owner}_{repo_name}_issues.db"
+    # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    db_filename = f"{repo_owner}_{repo_name}_issues.db"
     db_path = os.path.join(output_dir, db_filename)
     print(f"Setting up SQLite database at {db_path}...")
 

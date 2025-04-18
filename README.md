@@ -22,7 +22,20 @@ Look at the `static` directory. I manually saved some snapshots in there.
 # Run
 
 ```shell
-python /Users/pavlos.rontidis/PycharmProjects/GithubTools/scripts/db/sqlite_writer.py --input /Users/pavlos.rontidis/PycharmProjects/GithubTools/static/20250417_143706_vectordotdev_vector_issues.json 
-python scripts/db/generate_summary.py --db static/20250418_095233_vectordotdev_vector_issues.db
-python scripts/util/plot.py --start 2024-06 --monthly out/monthly_summary.csv --labels out/label_breakdown.csv --label_counts out/label_timeseries.csv --exclude-labels no-changelog,domain: deps 
+./run-all.sh
 ```
+
+## Trends
+
+### Issues
+![Monthly Issues](images/issues.monthly_issues_trend.png)
+![Top Issue Labels](images/issues.top_labels.png)
+![Issue Label Counts](images/issues.label_counts.png)
+![Top 5 Integration Issue Labels](images/issues.integrations.top_5.monthly_trend.png)
+![Top Integration Issue By Label Total Count](images/issues.open_closed_total_label_count.png)
+
+### Pull Requests
+![Monthly PRs](images/pull_requests.monthly_issues_trend.png)
+![Top PR Labels](images/pull_requests.top_labels.png)
+![PR Label Counts](images/pull_requests.label_counts.png)
+![Top 5 Integration PR Labels](images/pull_requests.integrations.top_5.monthly_trend.png)
