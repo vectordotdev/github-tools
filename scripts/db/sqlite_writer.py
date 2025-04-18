@@ -10,38 +10,28 @@ from scripts.util.load_env import load_github_env_vars
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out"))
 
-def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    db_filename = f"{timestamp}_{repo_owner}_{repo_name}_issues.db"
-    db_path = os.path.join(output_dir, db_filename)
-    print(f"Setting up SQLite database at {db_path}...")
-
-    conn = sqlite3.connect(db_path)
-    cur = conn.cursor()
-
+def create_tables(cur):
     print("Creating database tables (issues, pull_requests, labels, issue_labels)...")
-    cur.execute("""
+
+    common_schema = """
+        id INTEGER PRIMARY KEY,
+        number INTEGER,
+        title TEXT,
+        state TEXT,
+        created_at TEXT,
+        updated_at TEXT,
+        closed_at TEXT,
+        user_login TEXT
+    """
+
+    cur.execute(f"""
         CREATE TABLE IF NOT EXISTS issues(
-            id INTEGER PRIMARY KEY,
-            number INTEGER,
-            title TEXT,
-            state TEXT,
-            created_at TEXT,
-            updated_at TEXT,
-            closed_at TEXT,
-            user_login TEXT
+            {common_schema}
         )
     """)
-    cur.execute("""
+    cur.execute(f"""
         CREATE TABLE IF NOT EXISTS pull_requests(
-            id INTEGER PRIMARY KEY,
-            number INTEGER,
-            title TEXT,
-            state TEXT,
-            created_at TEXT,
-            updated_at TEXT,
-            closed_at TEXT,
-            user_login TEXT
+            {common_schema}
         )
     """)
     cur.execute("""
@@ -60,6 +50,18 @@ def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
         )
     """)
     print("Database tables created successfully.")
+
+
+def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    db_filename = f"{timestamp}_{repo_owner}_{repo_name}_issues.db"
+    db_path = os.path.join(output_dir, db_filename)
+    print(f"Setting up SQLite database at {db_path}...")
+
+    conn = sqlite3.connect(db_path)
+    cur = conn.cursor()
+
+    create_tables(cur)
 
     issue_rows = []
     pr_rows = []
