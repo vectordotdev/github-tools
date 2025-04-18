@@ -24,6 +24,8 @@ color_map = {
     "sink: aws_s3": "#FFC107",
     "sink: splunk_hec": "#27b01c",
     "domain: external_docs": "#9C27B0",
+    "open_issues":  "#FF4C4C",
+    "closed_issues": "#27b01c",
     # Add more as needed
 }
 
@@ -63,8 +65,8 @@ def plot_monthly_summary(path, start_date=None):
         plt.figure(figsize=(12, 6))
         plt.style.use("ggplot")
 
-        plt.plot(df["month"], df["open_issues"], label="Open Issues", linewidth=2.5, marker='o')
-        plt.plot(df["month"], df["closed_issues"], label="Closed Issues", linewidth=2.5, marker='o')
+        plt.plot(df["month"], df["open_issues"], label="Open Issues", color=color_map.get("open_issues"), linewidth=4, marker='o')
+        plt.plot(df["month"], df["closed_issues"], label="Closed Issues", color=color_map.get("closed_issues"), linewidth=4, marker='o')
         plt.plot(df["month"], df["bugs"], label="Bugs", color=color_map.get("type: bug"), linewidth=2.5, linestyle='--')
         plt.plot(df["month"], df["features"], label="Features", color=color_map.get("type: feature"), linewidth=2.5, linestyle='--')
         plt.plot(df["month"], df["enhancements"], label="Enhancements", color=color_map.get("type: enhancement"), linewidth=2.5, linestyle='--')
