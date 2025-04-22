@@ -1,14 +1,13 @@
 import argparse
+import hashlib
 import logging
 import os
 import random
 
+import matplotlib.colors as mcolors
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
-import hashlib
-
 from matplotlib.ticker import MaxNLocator
 
 from scripts.logging.custom_logging import setup_logger
@@ -30,11 +29,12 @@ COLOR_MAP = {
     "domain: sources": "#2dbcbc",
     "domain: transforms": "#8615bf",
     "domain: sinks": "#ad4f47",
-    "open_issues":  "#070707",
+    "open_issues": "#070707",
     "closed_issues": "#27b01c",
-    "open_pull_requests":  "#070707",
+    "open_pull_requests": "#070707",
     "closed_pull_requests": "#27b01c",
 }
+
 
 def setup_styles():
     plt.rcParams["font.family"] = "DejaVu Sans"
@@ -52,6 +52,7 @@ def setup_styles():
     plt.rcParams["grid.alpha"] = 0.5
     plt.rcParams["grid.linestyle"] = "--"  # make all grids dashed
     plt.rcParams["grid.linewidth"] = 0.7
+
 
 def set_axis_labels(ax, xlabel, ylabel):
     ax.set_xlabel(xlabel, fontsize=12, fontstyle='italic')
@@ -76,7 +77,8 @@ def main():
         monthly_csv = os.path.join(args.input_dir, f"{table}.monthly_summary.csv")
         if os.path.exists(monthly_csv):
             plot_monthly_summary_basic(monthly_csv, table, start_date=args.start)
-            plot_integration_trends(monthly_csv, table, start_date=args.start, exclude_labels=args.exclude_labels, top_n=5)
+            plot_integration_trends(monthly_csv, table, start_date=args.start, exclude_labels=args.exclude_labels,
+                                    top_n=5)
 
         label_breakdown_csv = os.path.join(args.input_dir, f"{table}.label_breakdown.csv")
         if os.path.exists(label_breakdown_csv):
@@ -115,6 +117,7 @@ def get_label_color(label_name):
     random.seed(seed)
     return random.choice(all_colors)
 
+
 def plot_monthly_summary_basic(path, table, start_date=None):
     try:
         df = pd.read_csv(path)
@@ -125,14 +128,19 @@ def plot_monthly_summary_basic(path, table, start_date=None):
         plt.figure(figsize=(12, 6))
 
         open_key = f"open_{table}"
-        plt.plot(df["month"], df[open_key], label=f"Open {table}", color=COLOR_MAP.get(open_key), linewidth=3, marker='o')
+        plt.plot(df["month"], df[open_key], label=f"Open {table}", color=COLOR_MAP.get(open_key), linewidth=3,
+                 marker='o')
         plt.xticks(rotation=45)  # Rotate month labels
 
         closed_key = f"closed_{table}"
-        plt.plot(df["month"], df[closed_key], label=f"Closed {table}", color=COLOR_MAP.get(closed_key), linewidth=3, marker='o')
-        plt.plot(df["month"], df["type: bug"], label="Bugs", color=COLOR_MAP.get("type: bug"), linewidth=2, linestyle='--')
-        plt.plot(df["month"], df["type: feature"], label="Features", color=COLOR_MAP.get("type: feature"), linewidth=2, linestyle='--')
-        plt.plot(df["month"], df["type: enhancement"], label="Enhancements", color=COLOR_MAP.get("type: enhancement"), linewidth=2, linestyle='--')
+        plt.plot(df["month"], df[closed_key], label=f"Closed {table}", color=COLOR_MAP.get(closed_key), linewidth=3,
+                 marker='o')
+        plt.plot(df["month"], df["type: bug"], label="Bugs", color=COLOR_MAP.get("type: bug"), linewidth=2,
+                 linestyle='--')
+        plt.plot(df["month"], df["type: feature"], label="Features", color=COLOR_MAP.get("type: feature"), linewidth=2,
+                 linestyle='--')
+        plt.plot(df["month"], df["type: enhancement"], label="Enhancements", color=COLOR_MAP.get("type: enhancement"),
+                 linewidth=2, linestyle='--')
 
         plt.title(f"Monthly GitHub Trends ({table})", fontsize=16)
         ax = plt.gca()
@@ -148,6 +156,7 @@ def plot_monthly_summary_basic(path, table, start_date=None):
     except Exception as e:
         logging.warning(f"[{table}] Could not generate monthly trend plot: {e}")
 
+
 def plot_integration_trends(csv_path, table, start_date=None, exclude_labels=None, top_n=None):
     # Load the CSV data into a DataFrame
     df = pd.read_csv(csv_path)
@@ -155,59 +164,68 @@ def plot_integration_trends(csv_path, table, start_date=None, exclude_labels=Non
     if start_date:
         df = df[df["month"] >= start_date]
 
-    numeric_cols = df.select_dtypes(
-        include='number').columns.tolist()
+    numeric_cols = df.select_dtypes(include='number').columns.tolist()
 
-    # Filter out columns that are not count-like (i.e., not whole numbers or have negative values)
+    # Filter out columns that are not count-like
     label_cols = []
     for col in numeric_cols:
-        # Check if all values are integer-like and non-negative
-        series = df[col].dropna()  # ignore NaNs for the check
+        series = df[col].dropna()
         if (series >= 0).all():
             label_cols.append(col)
 
-    # Exclude any specific columns that are not label categories
+    # Build exclusion set
     exclude_set = set(exclude_labels) if exclude_labels else set()
-    # Add common non-label columns to exclude set (if present in DataFrame)
     for non_label in ['month', 'open_issues', 'closed_issues']:
         if non_label in df.columns:
             exclude_set.add(non_label)
 
-    # Filter out the excluded columns from label_cols
-    label_cols = [col for col in label_cols
-                  if col not in exclude_set
-                  and (col.startswith("source:") or col.startswith("transform:") or col.startswith("sink:"))
-                  and df[col].sum() > 0]
+    # Filter label columns
+    label_cols = [
+        col for col in label_cols
+        if col not in exclude_set
+           and (col.startswith("source:") or col.startswith("transform:") or col.startswith("sink:"))
+           and df[col].sum() > 0
+    ]
 
-    # If requested, select only the top N labels by total count (sum over all months)
+    # Top N filtering
     if top_n is not None and top_n > 0:
-        # Calculate total count for each label and get the top N labels
         top_labels = df[label_cols].sum().nlargest(top_n).index.tolist()
         label_cols = [col for col in label_cols if col in top_labels]
 
-    # Safety check: if no label columns remain, we cannot plot
     if not label_cols:
         raise ValueError("No label count columns found for plotting after filtering. Check the data or parameters.")
 
-    # Create the plot using the filtered label columns
-    ax = df.plot(x='month', y=label_cols, marker='o')  # marker='o' for clarity on points (optional)
+    # Create a wider figure to allocate room for the legend
+    fig, ax = plt.subplots(figsize=(14, 6))
+    df.plot(x='month', y=label_cols, marker='o', ax=ax)
 
-    # Format the Y-axis to have integer ticks only (appropriate for count data)
-    ax.yaxis.set_major_locator(MaxNLocator(
-        integer=True))  # force y-axis to use integer tick labels&#8203;:contentReference[oaicite:5]{index=5}
-    ax = plt.gca()
+    ax.yaxis.set_major_locator(MaxNLocator(integer=True))
     set_axis_labels(ax, "Month", "Count")
+    ax.set_title(f"Integrations Top {top_n} Trend ({table})", fontsize=16)
 
-    ax.set_title(f"Integrations Top {top_n} Trend ({table})", fontsize=16)  # Plot title (can be adjusted as needed)
-    ax.legend(title="Labels", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0)
+    # Legend outside on the right
+    ax.legend(
+        title="Labels",
+        loc="center left",
+        bbox_to_anchor=(1.0, 0.5),
+        fontsize=10,  # Slightly smaller font
+        title_fontsize=12,  # Harmonize with body
+        labelspacing=0.7,  # Tight vertical spacing
+        borderaxespad=0.5,  # Padding between plot and legend
+        frameon=True,  # Add a subtle box
+        framealpha=0.5,  # Light transparent background
+        fancybox=True,  # Rounded corners
+        # borderpad=0.8  # Padding inside the legend box
+    )
 
     plt.xticks(rotation=45)
-    plt.tight_layout()  # Adjust layout to fit labels
+    plt.tight_layout(rect=[0, 0, 0.96, 1])  # Reserve 20% for legend
 
     output_path = os.path.join(OUTPUT_DIR, f"{table}.integrations.top_{top_n}.monthly_trend.png")
     plt.savefig(output_path)
     logging.info(f"Saved plot to {output_path}")
     plt.close()
+
 
 def plot_label_breakdown(path, table, top_n=20, start_date=None, exclude_labels=None):
     try:
@@ -353,6 +371,7 @@ def plot_label_state_counts(path, table, top_n, exclude_labels=None):
         plt.close()
     except Exception as e:
         logging.warning(f"[{table}] Could not generate label count chart: {e}")
+
 
 if __name__ == "__main__":
     main()
