@@ -74,7 +74,7 @@ def export_monthly_summary(cur, table):
 
 def export_label_breakdown(cur, table):
     logging.info(f"Executing label breakdown query for table '{table}'...")
-    output_path = os.path.join(OUTPUT_DIR, f"label_breakdown.{table}.csv")
+    output_path = os.path.join(OUTPUT_DIR, f"{table}.label_breakdown.csv")
     where_clause = "WHERE is_draft = 0" if table == "pull_requests" else ""
 
     query = f"""

@@ -39,3 +39,4 @@ Look at the `static` directory. I manually saved some snapshots in there.
 ![Top PR Labels](out/images/pull_requests.top_labels.png)
 ![PR Label Counts](out/images/pull_requests.label_counts.png)
 ![Top 5 Integration PR Labels](out/images/pull_requests.integrations.top_5.monthly_trend.png)
+![Top Integration PRs By Label Total Count](out/images/pull_requests.open_closed_total_label_count.png)

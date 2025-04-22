@@ -13,10 +13,9 @@ from matplotlib.ticker import MaxNLocator
 
 from scripts.logging.custom_logging import setup_logger
 
-
 # Constants
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../images"))
+OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out/images"))
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Custom label color overrides
@@ -37,8 +36,31 @@ COLOR_MAP = {
     "closed_pull_requests": "#27b01c",
 }
 
+def setup_styles():
+    plt.rcParams["font.family"] = "DejaVu Sans"
+    plt.rcParams["font.size"] = 12
+    plt.rcParams["axes.titlesize"] = 16
+    plt.rcParams["axes.labelsize"] = 12
+    plt.rcParams["xtick.labelsize"] = 10
+    plt.rcParams["ytick.labelsize"] = 10
+    plt.rcParams["axes.spines.top"] = False
+    plt.rcParams["axes.spines.right"] = False
+    plt.rcParams["axes.spines.left"] = True
+    plt.rcParams["axes.spines.bottom"] = True
+    plt.rcParams["axes.axisbelow"] = True
+    plt.rcParams["axes.grid"] = True
+    plt.rcParams["grid.alpha"] = 0.5
+    plt.rcParams["grid.linestyle"] = "--"  # make all grids dashed
+    plt.rcParams["grid.linewidth"] = 0.7
+
+def set_axis_labels(ax, xlabel, ylabel):
+    ax.set_xlabel(xlabel, fontsize=12, fontstyle='italic')
+    ax.set_ylabel(ylabel, fontsize=12, fontstyle='italic')
+
+
 def main():
     setup_logger()
+    setup_styles()
 
     parser = argparse.ArgumentParser(description="Generate visual summaries from GitHub issues CSVs.")
     parser.add_argument("--input-dir", required=True, help="Directory containing the summary CSV files")
@@ -101,23 +123,22 @@ def plot_monthly_summary_basic(path, table, start_date=None):
         df["month"] = pd.to_datetime(df["month"])
 
         plt.figure(figsize=(12, 6))
-        plt.style.use("ggplot")
 
         open_key = f"open_{table}"
-        plt.plot(df["month"], df[open_key], label=f"Open {table}", color=COLOR_MAP.get(open_key), linewidth=4, marker='o')
+        plt.plot(df["month"], df[open_key], label=f"Open {table}", color=COLOR_MAP.get(open_key), linewidth=3, marker='o')
+        plt.xticks(rotation=45)  # Rotate month labels
 
         closed_key = f"closed_{table}"
-        plt.plot(df["month"], df[closed_key], label=f"Closed {table}", color=COLOR_MAP.get(closed_key), linewidth=4, marker='o')
+        plt.plot(df["month"], df[closed_key], label=f"Closed {table}", color=COLOR_MAP.get(closed_key), linewidth=3, marker='o')
         plt.plot(df["month"], df["type: bug"], label="Bugs", color=COLOR_MAP.get("type: bug"), linewidth=2, linestyle='--')
         plt.plot(df["month"], df["type: feature"], label="Features", color=COLOR_MAP.get("type: feature"), linewidth=2, linestyle='--')
         plt.plot(df["month"], df["type: enhancement"], label="Enhancements", color=COLOR_MAP.get("type: enhancement"), linewidth=2, linestyle='--')
 
         plt.title(f"Monthly GitHub Trends ({table})", fontsize=16)
-        plt.xlabel("Month", fontsize=12)
-        plt.ylabel("Count", fontsize=12)
-        plt.xticks(rotation=45)
+        ax = plt.gca()
+        set_axis_labels(ax, "Month", "Count")
+
         plt.legend()
-        plt.grid(True)
         plt.tight_layout()
 
         output_path = os.path.join(OUTPUT_DIR, f"{table}.monthly_issues_trend.png")
@@ -174,12 +195,13 @@ def plot_integration_trends(csv_path, table, start_date=None, exclude_labels=Non
     # Format the Y-axis to have integer ticks only (appropriate for count data)
     ax.yaxis.set_major_locator(MaxNLocator(
         integer=True))  # force y-axis to use integer tick labels&#8203;:contentReference[oaicite:5]{index=5}
-    ax.set_ylabel("Count")  # Y-axis label (counts)
-    ax.set_xlabel("Month")  # X-axis label (month)
-    ax.set_title(f"Integrations Trend ({table})", fontsize=16)  # Plot title (can be adjusted as needed)
-    plt.xticks(rotation=45)  # Rotate month labels if they are long (optional)
+    ax = plt.gca()
+    set_axis_labels(ax, "Month", "Count")
+
+    ax.set_title(f"Integrations Top {top_n} Trend ({table})", fontsize=16)  # Plot title (can be adjusted as needed)
     ax.legend(title="Labels", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0)
 
+    plt.xticks(rotation=45)
     plt.tight_layout()  # Adjust layout to fit labels
 
     output_path = os.path.join(OUTPUT_DIR, f"{table}.integrations.top_{top_n}.monthly_trend.png")
@@ -187,7 +209,7 @@ def plot_integration_trends(csv_path, table, start_date=None, exclude_labels=Non
     logging.info(f"Saved plot to {output_path}")
     plt.close()
 
-def plot_label_breakdown(path, table, top_n=15, start_date=None, exclude_labels=None):
+def plot_label_breakdown(path, table, top_n=20, start_date=None, exclude_labels=None):
     try:
         df = pd.read_csv(path)
 
@@ -203,9 +225,10 @@ def plot_label_breakdown(path, table, top_n=15, start_date=None, exclude_labels=
 
         plt.figure(figsize=(10, 6))
         plt.barh(df["label_name"], df["count"], color=colors)
-        plt.title(f"Top Labels by Frequency ({table})", fontsize=16)
-        plt.xlabel("Count", fontsize=12)
-        plt.gca().invert_yaxis()
+        plt.title(f"Top {top_n} Labels by Frequency ({table})", fontsize=16)
+        ax = plt.gca()
+        set_axis_labels(ax, "Count", "Label")
+        ax.invert_yaxis()
         plt.tight_layout()
 
         output_path = os.path.join(OUTPUT_DIR, f"{table}.top_labels.png")
@@ -270,10 +293,9 @@ def plot_label_count(path, table, top_n=8, start_date=None, exclude_labels=None)
         # Axes styling
         ax.set_xticks(np.arange(len(months)))
         ax.set_xticklabels(months, rotation=45)
-        ax.set_xlabel("Month")
-        ax.set_ylabel(f"Count")
+        set_axis_labels(ax, "Month", "Label")
+
         ax.set_title(f"Top {top_n} Labels Over Time ({table})", fontsize=16)
-        ax.grid(axis='y', linestyle='--', alpha=0.7)
 
         # Legend sorted by total volume
         label_totals = pivot_df.sum().to_dict()
@@ -318,8 +340,8 @@ def plot_label_state_counts(path, table, top_n, exclude_labels=None):
         ax.barh(df["label_name"], df["closed_count"], label="Closed", color="black")
         ax.barh(df["label_name"], df["open_count"], left=df["closed_count"], label="Open", color="green")
 
-        ax.set_xlabel("Count")
-        ax.set_ylabel("Label")
+        set_axis_labels(ax, "Count", "Label")
+
         ax.set_title(f"Top {top_n} Integrations Label Count ({table})", fontsize=16)
         ax.legend(loc="lower right")
         plt.tight_layout()
