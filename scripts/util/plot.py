@@ -16,7 +16,7 @@ from scripts.logging.custom_logging import setup_logger
 
 # Constants
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out/plot"))
+OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../images"))
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Custom label color overrides
@@ -271,7 +271,7 @@ def plot_label_count(path, table, top_n=8, start_date=None, exclude_labels=None)
         ax.set_xticks(np.arange(len(months)))
         ax.set_xticklabels(months, rotation=45)
         ax.set_xlabel("Month")
-        ax.set_ylabel("Issue Count")
+        ax.set_ylabel(f"Count")
         ax.set_title(f"Top {top_n} Labels Over Time ({table})", fontsize=16)
         ax.grid(axis='y', linestyle='--', alpha=0.7)
 

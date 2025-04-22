@@ -1,0 +1,199 @@
+label_name,count
+domain: deps,2657
+no-changelog,1686
+domain: external docs,1004
+domain: core,993
+domain: sinks,897
+domain: sources,767
+ci-condition: integration tests enable,439
+domain: ci,388
+domain: vrl,374
+domain: vdev,344
+domain: transforms,292
+type: tech debt,242
+domain: releasing,189
+domain: topology,160
+dependencies,79
+domain: observability,78
+type: bug,77
+domain: codecs,77
+type: enhancement,74
+ci-condition: k8s e2e tests enable,65
+ci-condition: k8s e2e all targets,61
+domain: tests,57
+domain: dev,55
+domain: config,49
+meta: awaiting author,48
+domain: rfc,34
+domain: performance,23
+domain: metrics,21
+source: internal_metrics,20
+javascript,20
+sink: datadog_metrics,17
+source: file,14
+source: datadog_agent,14
+meta: blocked,14
+source: kafka,13
+sink: datadog_logs,13
+meta: breaking change,13
+source: http_server,12
+sink: datadog_traces,12
+source: opentelemetry,11
+source: journald,11
+source: gcp_pubsub,11
+sink: elasticsearch,11
+editorial review,11
+domain: internal docs,11
+type: task,10
+source: socket,10
+domain: startup,9
+provider: gcp,8
+domain: buffers,8
+type: feature,7
+source: logstash,7
+source: kubernetes_logs,7
+source: host_metrics,7
+source: aws_s3,7
+sink: pulsar,7
+meta: regression,7
+vrl: playground,6
+sink: prometheus_remote_write,6
+sink: datadog_events,6
+domain: cli,6
+vrl: stdlib,5
+source: vector,5
+source: aws_sqs,5
+sink: vector,5
+sink: statsd,5
+sink: splunk_hec,5
+sink: socket,5
+sink: prometheus_exporter,5
+sink: new_relic,5
+sink: new,5
+sink: http,5
+provider: datadog,5
+domain: unit tests,5
+do not merge,5
+transform: log_to_metric,4
+source: statsd,4
+source: splunk_hec,4
+source: prometheus_scrape,4
+source: nats,4
+source: heroku_logs,4
+source: fluent,4
+sink: loki,4
+sink: honeycomb,4
+sink: aws_kinesis_streams,4
+sink: amqp,4
+rust,4
+provider: aws,4
+domain: networking,4
+domain: delivery,4
+domain: data model,4
+transform: lua,3
+source: redis,3
+source: nginx_metrics,3
+source: mongodb_metrics,3
+source: internal_logs,3
+source: http_client,3
+source: dnstap,3
+sink: nats,3
+sink: kafka,3
+sink: gcp_stackdriver_logs,3
+sink: gcp_pubsub,3
+sink: gcp_chronicle,3
+sink: aws_kinesis_firehose,3
+sink: aws_cloudwatch_logs,3
+sink: appsignal,3
+platform: windows,3
+domain: security,3
+domain: schemas,3
+ci-condition: skip-regression,3
+vrl: typedef,2
+transform: sample,2
+transform: remap,2
+transform: metric_to_log,2
+transform: filter,2
+transform: aws_ec2_metadata,2
+source: syslog,2
+source: new,2
+source: file_descriptor,2
+source: exec,2
+source: docker_logs,2
+source: datadog_logs,2
+source: aws_kinesis_firehose,2
+source: aws_ecs_metrics,2
+sink: websocket,2
+sink: sematext_metrics,2
+sink: redis,2
+sink: papertrail,2
+sink: opentelemetry,2
+sink: influxdb_logs,2
+sink: humio_logs,2
+sink: gcp_cloud_storage,2
+sink: file,2
+sink: azure_blob,2
+sink: aws_sqs,2
+sink: aws_s3,2
+sink: aws_cloudwatch_metrics,2
+ruby,2
+platform: kubernetes,2
+domain: soak tests,2
+domain: logs,2
+domain: enterprise,2
+website: template,1
+website: releases,1
+website: operations,1
+website: javascript,1
+transform: throttle,1
+transform: tag_cardinality_limit,1
+transform: reduce,1
+transform: dedupe,1
+source: stdin,1
+source: prometheus_remote_write,1
+source: postgresql_metrics,1
+source: mqtt,1
+source: eventstoredb_metrics,1
+source: apache_metrics,1
+source: amqp,1
+sink: sematext_logs,1
+sink: new_relic_logs,1
+sink: influxdb_metrics,1
+sink: humio_metrics,1
+sink: greptimedb,1
+sink: gcp_stackdriver_metrics,1
+sink: datadog_archives,1
+sink: databend,1
+sink: console,1
+sink: clickhouse,1
+sink: azure_monitor_logs,1
+sink: axiom,1
+provider: splunk,1
+provider: sematext,1
+provider: new relic,1
+provider: humio,1
+provider: honeycomb,1
+provider: azure,1
+platform: x86_64,1
+platform: homebrew,1
+platform: docker,1
+platform: arm64,1
+platform: arm,1
+needs: tests,1
+github_actions,1
+enrichment_table: csv,1
+domain: templating,1
+domain: shutdown,1
+domain: reload,1
+domain: reliability,1
+domain: platforms,1
+domain: parsing,1
+domain: healthchecks,1
+domain: filtering,1
+domain: enrichment_tables,1
+domain: enriching,1
+domain: auth,1
+domain: architecture,1
+domain: api,1
+domain: administration,1
+domain: ARC,1

@@ -32,7 +32,8 @@ def create_tables(cur):
     """)
     cur.execute(f"""
         CREATE TABLE IF NOT EXISTS pull_requests(
-            {common_schema}
+            {common_schema},
+            is_draft BOOLEAN
         )
     """)
     cur.execute("""
@@ -83,7 +84,9 @@ def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
 
         # GitHub API is funny, it returns issues and pull requests in the same endpoint.
         if "pull_request" in issue:
-            pr_rows.append(row)
+            is_draft = issue.get("draft", False)
+            pr_row = row + (is_draft,)
+            pr_rows.append(pr_row)
         else:
             issue_rows.append(row)
 
@@ -109,8 +112,8 @@ def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
     print("Inserting pull requests into database...")
     if pr_rows:
         cur.executemany("""
-            INSERT INTO pull_requests(id, number, title, state, created_at, updated_at, closed_at, user_login)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO pull_requests(id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, pr_rows)
     print(f"Inserted {len(pr_rows)} pull requests into the database.")
 

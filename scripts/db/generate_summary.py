@@ -8,9 +8,11 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out/summaries"))
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+
 def export_monthly_summary(cur, table):
     logging.info(f"Executing dynamic monthly summary with all labels for table '{table}'...")
     output_path = os.path.join(OUTPUT_DIR, f"{table}.monthly_summary.csv")
+    where_clause = "WHERE is_draft = 0" if table == "pull_requests" else ""
 
     # Step 1: Get all distinct label names used with this table
     cur.execute(f"""
@@ -18,6 +20,7 @@ def export_monthly_summary(cur, table):
         FROM issue_labels
         JOIN labels ON labels.id = issue_labels.label_id
         JOIN {table} ON {table}.id = issue_labels.issue_id
+        {where_clause}
     """)
     label_names = [row[0] for row in cur.fetchall()]
     logging.info(f"Found {len(label_names)} labels for table '{table}'")
@@ -36,6 +39,7 @@ def export_monthly_summary(cur, table):
             id AS issue_id,
             state
         FROM {table}
+        {where_clause}
     ),
     label_counts AS (
         SELECT
@@ -44,6 +48,7 @@ def export_monthly_summary(cur, table):
         FROM issue_labels
         JOIN labels ON labels.id = issue_labels.label_id
         JOIN {table} ON {table}.id = issue_labels.issue_id
+        {where_clause}
     )
     SELECT
         mb.month,
@@ -66,15 +71,18 @@ def export_monthly_summary(cur, table):
         writer.writerow(column_names)
         writer.writerows(rows)
 
+
 def export_label_breakdown(cur, table):
     logging.info(f"Executing label breakdown query for table '{table}'...")
     output_path = os.path.join(OUTPUT_DIR, f"label_breakdown.{table}.csv")
+    where_clause = "WHERE is_draft = 0" if table == "pull_requests" else ""
 
     query = f"""
     SELECT labels.name AS label_name, COUNT(*) AS count
     FROM issue_labels
     JOIN labels ON labels.id = issue_labels.label_id
     JOIN {table} ON {table}.id = issue_labels.issue_id
+    {where_clause}
     GROUP BY labels.name
     ORDER BY count DESC
     """
@@ -91,6 +99,7 @@ def export_label_breakdown(cur, table):
 def export_label_timeseries(cur, table):
     logging.info(f"Executing label time-series breakdown query for table '{table}'...")
     output_path = os.path.join(OUTPUT_DIR, f"{table}.label_counts.csv")
+    where_clause = "WHERE is_draft = 0" if table == "pull_requests" else ""
 
     query = f"""
     SELECT
@@ -100,6 +109,7 @@ def export_label_timeseries(cur, table):
     FROM {table}
     JOIN issue_labels ON {table}.id = issue_labels.issue_id
     JOIN labels ON labels.id = issue_labels.label_id
+    {where_clause}
     GROUP BY month, label_name
     ORDER BY month, count DESC
     """
@@ -112,9 +122,11 @@ def export_label_timeseries(cur, table):
         writer.writerow(["month", "label_name", "count"])
         writer.writerows(rows)
 
+
 def export_open_by_label(cur, table):
     logging.info(f"Calculating open {table} count by label...")
     output_path = os.path.join(OUTPUT_DIR, f"{table}.open_by_label.csv")
+    where_clause = "WHERE is_draft = 0" if table == "pull_requests" else ""
 
     query = f"""
        SELECT
@@ -124,10 +136,10 @@ def export_open_by_label(cur, table):
        FROM {table}
        JOIN issue_labels ON {table}.id = issue_labels.issue_id
        JOIN labels ON labels.id = issue_labels.label_id
+       {where_clause}
        GROUP BY labels.name
        ORDER BY open_count DESC, closed_count DESC
        """
-
     cur.execute(query)
     rows = cur.fetchall()
 
