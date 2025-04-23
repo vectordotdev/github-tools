@@ -2,18 +2,20 @@ import argparse
 import json
 import logging
 import os
-import requests
 from datetime import datetime
 
+import requests
+
+from scripts.db.sqlite_writer import write_issues_to_sqlite
 from scripts.logging.custom_logging import setup_logger
 from scripts.util.load_env import load_github_env_vars
-from scripts.db.sqlite_writer import write_issues_to_sqlite
 
 # Constants
 API_BASE_URL = "https://api.github.com/repos"
 BATCH_SIZE = 100  # Max issues per page (GitHub API maximum is 100)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out"))
+OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out/historical/issues"))
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 def fetch_issues(env, include_closed=False):
@@ -117,4 +119,5 @@ def main():
 
 if __name__ == "__main__":
     import sys
+
     sys.exit(main())
