@@ -205,7 +205,7 @@ def plot_integration_trends(csv_path, table, start_date=None, exclude_labels=Non
 
     # Legend outside on the right
     ax.legend(
-        title="Labels",
+        title="Label",
         loc="center left",
         bbox_to_anchor=(1.0, 0.5),
         fontsize=10,  # Slightly smaller font
