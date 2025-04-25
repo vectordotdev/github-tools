@@ -77,8 +77,7 @@ def main():
         monthly_csv = os.path.join(args.input_dir, f"{table}.monthly_summary.csv")
         if os.path.exists(monthly_csv):
             plot_monthly_summary_basic(monthly_csv, table, start_date=args.start)
-            plot_integration_trends(monthly_csv, table, start_date=args.start, exclude_labels=args.exclude_labels,
-                                    top_n=5)
+            plot_integration_trends(monthly_csv, table, start_date=args.start, exclude_labels=args.exclude_labels)
 
         label_breakdown_csv = os.path.join(args.input_dir, f"{table}.label_breakdown.csv")
         if os.path.exists(label_breakdown_csv):
@@ -133,14 +132,23 @@ def plot_monthly_summary_basic(path, table, start_date=None):
         plt.xticks(rotation=45)  # Rotate month labels
 
         closed_key = f"closed_{table}"
-        plt.plot(df["month"], df[closed_key], label=f"Closed {table}", color=COLOR_MAP.get(closed_key), linewidth=3,
+        plt.plot(df["month"], df[closed_key], label=f"Closed {table}",
+                 color=COLOR_MAP.get(closed_key),
+                 linewidth=3,
                  marker='o')
-        plt.plot(df["month"], df["type: bug"], label="Bugs", color=COLOR_MAP.get("type: bug"), linewidth=2,
-                 linestyle='--')
-        plt.plot(df["month"], df["type: feature"], label="Features", color=COLOR_MAP.get("type: feature"), linewidth=2,
-                 linestyle='--')
-        plt.plot(df["month"], df["type: enhancement"], label="Enhancements", color=COLOR_MAP.get("type: enhancement"),
-                 linewidth=2, linestyle='--')
+        plt.plot(df["month"],
+                 df["type: bug"],
+                 label="Bugs",
+                 color=COLOR_MAP.get("type: bug"),
+                 linewidth=2,
+                 linestyle="--")
+        plt.plot(df["month"], df["type: feature"], label="Features", color=COLOR_MAP.get("type: feature"),
+                 linewidth=2, linestyle="--")
+        plt.plot(df["month"], df["type: enhancement"],
+                 label="Enhancements",
+                 color=COLOR_MAP.get("type: enhancement"),
+                 linewidth=2,
+                 linestyle="--")
 
         plt.title(f"Monthly GitHub Trends ({table})", fontsize=16)
         ax = plt.gca()
@@ -157,7 +165,7 @@ def plot_monthly_summary_basic(path, table, start_date=None):
         logging.warning(f"[{table}] Could not generate monthly trend plot: {e}")
 
 
-def plot_integration_trends(csv_path, table, start_date=None, exclude_labels=None, top_n=None):
+def plot_integration_trends(csv_path, table, start_date=None, exclude_labels=None, top_n=5):
     # Load the CSV data into a DataFrame
     df = pd.read_csv(csv_path)
 

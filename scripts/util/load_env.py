@@ -1,8 +1,10 @@
 import os
+
 from dotenv import load_dotenv, find_dotenv
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory where this script is located
-ENV_FILE = os.path.abspath(os.path.join(SCRIPT_DIR, "../default.env"))
+ENV_FILE = os.path.abspath(os.path.join(SCRIPT_DIR, "../vector-default.env"))
+
 
 def load_github_env_vars(env_file=ENV_FILE):
     """
@@ -41,6 +43,7 @@ def load_github_env_vars(env_file=ENV_FILE):
         "REPO_OWNER": repo_owner,
         "REPO_NAME": repo_name
     }
+
 
 # Example usage if running this file directly:
 if __name__ == "__main__":

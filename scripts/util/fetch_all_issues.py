@@ -88,11 +88,16 @@ def main():
         action="store_true",
         help="Include closed issues as well as open issues in the fetch."
     )
+    parser.add_argument(
+        "--env-file",
+        type=str,
+        help="Path to the .env file to load environment variables from",
+    )
     args = parser.parse_args()
 
     # Load environment variables from .env and validate them
     try:
-        env = load_github_env_vars()  # expects GITHUB_TOKEN, REPO_OWNER, REPO_NAME to be set
+        env = load_github_env_vars(args.env_file)  # expects GITHUB_TOKEN, REPO_OWNER, REPO_NAME to be set
     except ValueError as e:
         print(f"Error loading environment variables: {e}")
         return 1

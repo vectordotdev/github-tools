@@ -2,7 +2,6 @@ import argparse
 import json
 import os
 import sqlite3
-from datetime import datetime
 
 from scripts.logging.custom_logging import setup_logger
 from scripts.util.load_env import load_github_env_vars
@@ -10,6 +9,7 @@ from scripts.util.load_env import load_github_env_vars
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out"))
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
 
 def create_tables(cur):
     print("Creating database tables (issues, pull_requests, labels, issue_labels)...")
@@ -71,13 +71,13 @@ def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
     issue_label_rows = []
 
     for issue in issues:
-        issue_id   = issue.get("id")
-        number     = issue.get("number")
-        title      = issue.get("title")
-        state      = issue.get("state")
+        issue_id = issue.get("id")
+        number = issue.get("number")
+        title = issue.get("title")
+        state = issue.get("state")
         created_at = issue.get("created_at")
         updated_at = issue.get("updated_at")
-        closed_at  = issue.get("closed_at")
+        closed_at = issue.get("closed_at")
         user_login = issue.get("user", {}).get("login") if issue.get("user") else None
 
         row = (issue_id, number, title, state, created_at, updated_at, closed_at, user_login)
@@ -92,10 +92,10 @@ def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
 
         labels = issue.get("labels", [])
         for label in labels:
-            lbl_id   = label.get("id")
-            name     = label.get("name")
-            color    = label.get("color")
-            desc     = label.get("description")
+            lbl_id = label.get("id")
+            name = label.get("name")
+            color = label.get("color")
+            desc = label.get("description")
             if lbl_id is not None and lbl_id not in label_map:
                 label_map[lbl_id] = (lbl_id, name, color, desc)
             if lbl_id is not None:
@@ -141,6 +141,7 @@ def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
 
     return db_path
 
+
 def read_json_file(filepath):
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
@@ -155,15 +156,22 @@ def read_json_file(filepath):
 
     return None
 
+
 # Regenerate the database if it already exists.
 def main():
     setup_logger()
+    
     parser = argparse.ArgumentParser(description="Load GitHub issues from a JSON archive into SQLite.")
     parser.add_argument("--input", dest="input", required=True, help="Path to the GitHub issues JSON archive")
+    parser.add_argument(
+        "--env-file",
+        type=str,
+        help="Path to the .env file to load environment variables from",
+    )
     args = parser.parse_args()
 
     try:
-        env = load_github_env_vars()
+        env = load_github_env_vars(args.env_file)
     except ValueError as e:
         print(f"Error loading environment variables: {e}")
         return 1
@@ -179,6 +187,7 @@ def main():
         repo_owner=env['REPO_OWNER'],
         repo_name=env['REPO_NAME'],
     )
+
 
 if __name__ == "__main__":
     main()

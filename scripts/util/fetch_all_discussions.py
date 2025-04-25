@@ -21,6 +21,7 @@ def fetch_discussions(env, limit=100):
     repo_owner = env["REPO_OWNER"]
     repo_name = env["REPO_NAME"]
 
+    # https://docs.github.com/en/graphql/guides/using-the-graphql-api-for-discussions
     query = """
     query($owner: String!, $name: String!, $first: Int!, $after: String) {
       repository(owner: $owner, name: $name) {
@@ -34,9 +35,10 @@ def fetch_discussions(env, limit=100):
             title
             bodyText
             url
-            state
             createdAt
             updatedAt
+            isAnswered
+            locked
             author {
               login
             }
@@ -76,6 +78,13 @@ def fetch_discussions(env, limit=100):
             break
 
         result = response.json()
+
+        # Check for errors in GraphQL response
+        if "errors" in result:
+            logging.error(f"GraphQL errors: {result['errors']}")
+            break
+
+        # Continue as normal
         data = result.get("data", {}).get("repository", {}).get("discussions", {})
 
         discussions.extend(data.get("nodes", []))
