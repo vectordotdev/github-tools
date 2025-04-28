@@ -2,11 +2,9 @@ import argparse
 import json
 import logging
 import os
-from datetime import datetime
 
 import requests
 
-from scripts.db.sqlite_writer import write_issues_to_sqlite
 from scripts.logging.custom_logging import setup_logger
 from scripts.util.load_env import load_github_env_vars
 
@@ -69,8 +67,7 @@ def fetch_issues(env, include_closed=False):
 
 
 def write_to_json_file(issues, repo_owner, repo_name):
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    json_out_file = os.path.join(OUTPUT_DIR, f"{timestamp}_{repo_owner}_{repo_name}_issues.json")
+    json_out_file = os.path.join(OUTPUT_DIR, f"{repo_owner}_{repo_name}_issues.json")
     logging.info(f"Saving raw issues with URLs to {json_out_file}...")
     try:
         with open(json_out_file, "w") as f:
@@ -82,10 +79,12 @@ def write_to_json_file(issues, repo_owner, repo_name):
 
 def main():
     setup_logger()
+    
     parser = argparse.ArgumentParser(description="Fetch GitHub issues from a repository.")
     parser.add_argument(
         "--include-closed",
         action="store_true",
+        default=True,
         help="Include closed issues as well as open issues in the fetch."
     )
     parser.add_argument(
@@ -109,12 +108,6 @@ def main():
         write_to_json_file(issues,
                            repo_owner=env['REPO_OWNER'],
                            repo_name=env['REPO_NAME'])
-        write_issues_to_sqlite(
-            issues=issues,
-            output_dir=OUTPUT_DIR,
-            repo_owner=env['REPO_OWNER'],
-            repo_name=env['REPO_NAME'],
-        )
     except Exception as e:
         print(f"Error fetching issues: {e}")
         return 1

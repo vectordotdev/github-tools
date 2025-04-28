@@ -1,0 +1,132 @@
+[
+    {
+        "name": "crash",
+        "color": "FF0000",
+        "description": "A bug that results in the program unexpectedly terminating, such as a panic."
+    },
+    {
+        "name": "domain: ci",
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment"
+    },
+    {
+        "name": "domain: deps",
+        "color": "343639",
+        "description": "Anything related to dependencies"
+    },
+    {
+        "name": "domain: dev",
+        "color": "343639",
+        "description": "Anything related to the development environment"
+    },
+    {
+        "name": "domain: docs",
+        "color": "030F33",
+        "description": ""
+    },
+    {
+        "name": "domain: releasing",
+        "color": "5C489C",
+        "description": ""
+    },
+    {
+        "name": "domain: tests",
+        "color": "343639",
+        "description": "Anything related to internal tests"
+    },
+    {
+        "name": "Epic",
+        "color": "0366d6",
+        "description": "Larger, user-centric issue that contains multiple sub-issues"
+    },
+    {
+        "name": "fuzz",
+        "color": "1D76DB",
+        "description": "Issues found from fuzz testing"
+    },
+    {
+        "name": "meta: awaiting author",
+        "color": "DBE0E9",
+        "description": "Pull requests that are awaiting their author."
+    },
+    {
+        "name": "meta: good first issue",
+        "color": "DBE0E9",
+        "description": "Anything that is good for new contributors"
+    },
+    {
+        "name": "meta: regression",
+        "color": "DBE0E9",
+        "description": "This is a regression from a previous version"
+    },
+    {
+        "name": "meta:confirmed",
+        "color": "F9D0C4",
+        "description": ""
+    },
+    {
+        "name": "no-changelog",
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+    },
+    {
+        "name": "playground",
+        "color": "C2E0C6",
+        "description": "Changes to the web playground"
+    },
+    {
+        "name": "type: bug",
+        "color": "F6707D",
+        "description": "A code related bug"
+    },
+    {
+        "name": "type: enhancement",
+        "color": "BF72F6",
+        "description": "A value-adding code change that enhances its existing functionality"
+    },
+    {
+        "name": "type: feature",
+        "color": "BF72F6",
+        "description": "A value-adding code addition that introduce new functionality."
+    },
+    {
+        "name": "type: tech debt",
+        "color": "BF72F6",
+        "description": "A code change that does not add user value"
+    },
+    {
+        "name": "vrl: compiler",
+        "color": "C2E0C6",
+        "description": "Changes to the compiler"
+    },
+    {
+        "name": "vrl: diagnostic",
+        "color": "C2E0C6",
+        "description": "Changes to the REPL"
+    },
+    {
+        "name": "vrl: expression checker",
+        "color": "E7E87A",
+        "description": "Anything related to the expression checking phase which happens after source compilation."
+    },
+    {
+        "name": "vrl: parser",
+        "color": "C2E0C6",
+        "description": "Changes to the syntax parser"
+    },
+    {
+        "name": "vrl: stdlib",
+        "color": "C2E0C6",
+        "description": "Changes to the standard library"
+    },
+    {
+        "name": "vrl: syntax",
+        "color": "C2E0C6",
+        "description": "Changes to the syntax"
+    },
+    {
+        "name": "vrl: typedef",
+        "color": "C2E0C6",
+        "description": "Changes to the type system"
+    }
+]

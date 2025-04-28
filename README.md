@@ -21,50 +21,50 @@ REPO_NAME=vector
 The following script deletes and regenerates everything.
 
 ```shell
-./run-all.sh
+./run-all.sh path/to/my.env
 ```
 
 ## Trends
 
 ### Issues
 
-![Monthly Issues](out/images/issues.monthly_issues_trend.png)
+![Monthly Issues](out/images/vectordotdev_vector_issues.monthly_issues_trend.png)
 
 ---
 
-![Top Issue Labels](out/images/issues.top_labels.png)
+![Top Issue Labels](out/images/vectordotdev_vector_issues.top_labels.png)
 
 ---
 
-![Issue Label Counts](out/images/issues.label_counts.png)
+![Issue Label Counts](out/images/vectordotdev_vector_issues.label_counts.png)
 
 ---
 
-![Top 5 Integration Issue Labels](out/images/issues.integrations.top_5.monthly_trend.png)
+![Top 5 Integration Issue Labels](out/images/vectordotdev_vector_issues.integrations.top_5.monthly_trend.png)
 
 ---
 
-![Top Integration Issue By Label Total Count](out/images/issues.open_closed_total_label_count.png)
+![Top Integration Issue By Label Total Count](out/images/vectordotdev_vector_issues.open_closed_total_label_count.png)
 
 ### Pull Requests
 
-![Monthly PRs](out/images/pull_requests.monthly_issues_trend.png)
+![Monthly PRs](out/images/vectordotdev_vector_pull_requests.monthly_issues_trend.png)
 
 ---
 
-![Top PR Labels](out/images/pull_requests.top_labels.png)
+![Top PR Labels](out/images/vectordotdev_vector_pull_requests.top_labels.png)
 
 ---
 
-![PR Label Counts](out/images/pull_requests.label_counts.png)
+![PR Label Counts](out/images/vectordotdev_vector_pull_requests.label_counts.png)
 
 ---
 
-![Top 5 Integration PR Labels](out/images/pull_requests.integrations.top_5.monthly_trend.png)
+![Top 5 Integration PR Labels](out/images/vectordotdev_vector_pull_requests.integrations.top_5.monthly_trend.png)
 
 ---
 
-![Top Integration PRs By Label Total Count](out/images/pull_requests.open_closed_total_label_count.png)
+![Top Integration PRs By Label Total Count](out/images/vectordotdev_vector_pull_requests.open_closed_total_label_count.png)
 
 ### Discussions
 

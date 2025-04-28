@@ -11,6 +11,7 @@ import pandas as pd
 from matplotlib.ticker import MaxNLocator
 
 from scripts.logging.custom_logging import setup_logger
+from scripts.util.load_env import load_github_env_vars
 
 # Constants
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -70,38 +71,65 @@ def main():
         "--exclude-labels",
         help="Comma-separated list of labels to exclude from the label time-series chart",
     )
+    parser.add_argument(
+        "--env-file",
+        type=str,
+        help="Path to the .env file to load environment variables from",
+    )
     args = parser.parse_args()
+
+    try:
+        env = load_github_env_vars(args.env_file)
+    except ValueError as e:
+        print(f"Error loading environment variables: {e}")
+        return 1
 
     table_names = ["issues", "pull_requests"]
     for table in table_names:
-        monthly_csv = os.path.join(args.input_dir, f"{table}.monthly_summary.csv")
+        prefix = f"{env['REPO_OWNER']}_{env['REPO_NAME']}_{table}"
+        monthly_csv = os.path.join(args.input_dir, f"{prefix}.monthly_summary.csv")
         if os.path.exists(monthly_csv):
-            plot_monthly_summary_basic(monthly_csv, table, start_date=args.start)
-            plot_integration_trends(monthly_csv, table, start_date=args.start, exclude_labels=args.exclude_labels)
+            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.monthly_issues_trend.png")
+            plot_monthly_summary_basic(monthly_csv, table, output_path, start_date=args.start)
 
-        label_breakdown_csv = os.path.join(args.input_dir, f"{table}.label_breakdown.csv")
+            n = 5
+            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.integrations.top_{n}.monthly_trend.png")
+            plot_integration_trends(monthly_csv,
+                                    table,
+                                    output_path,
+                                    top_n=n,
+                                    start_date=args.start,
+                                    exclude_labels=args.exclude_labels)
+
+        label_breakdown_csv = os.path.join(args.input_dir, f"{prefix}.label_breakdown.csv")
         if os.path.exists(label_breakdown_csv):
+            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.top_labels.png")
             plot_label_breakdown(
                 label_breakdown_csv,
                 table,
+                output_path,
                 start_date=args.start,
                 exclude_labels=args.exclude_labels
             )
 
-        open_by_label_csv = os.path.join(args.input_dir, f"{table}.label_counts.csv")
+        open_by_label_csv = os.path.join(args.input_dir, f"{prefix}.label_counts.csv")
         if os.path.exists(open_by_label_csv):
+            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.label_counts.png")
             plot_label_count(
                 open_by_label_csv,
                 table,
+                output_path,
                 start_date=args.start,
                 exclude_labels=args.exclude_labels
             )
 
-        open_by_label_csv = os.path.join(args.input_dir, f"{table}.open_by_label.csv")
+        open_by_label_csv = os.path.join(args.input_dir, f"{prefix}.open_by_label.csv")
         if os.path.exists(os.path.join(args.input_dir, open_by_label_csv)):
+            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.open_closed_total_label_count.png")
             plot_label_state_counts(
                 open_by_label_csv,
                 table,
+                output_path,
                 top_n=30,
                 exclude_labels=args.exclude_labels
             )
@@ -117,7 +145,7 @@ def get_label_color(label_name):
     return random.choice(all_colors)
 
 
-def plot_monthly_summary_basic(path, table, start_date=None):
+def plot_monthly_summary_basic(path, table, output_path, start_date=None):
     try:
         df = pd.read_csv(path)
         if start_date:
@@ -157,7 +185,6 @@ def plot_monthly_summary_basic(path, table, start_date=None):
         plt.legend()
         plt.tight_layout()
 
-        output_path = os.path.join(OUTPUT_DIR, f"{table}.monthly_issues_trend.png")
         plt.savefig(output_path)
         logging.info(f"Saved plot to {output_path}")
         plt.close()
@@ -165,7 +192,7 @@ def plot_monthly_summary_basic(path, table, start_date=None):
         logging.warning(f"[{table}] Could not generate monthly trend plot: {e}")
 
 
-def plot_integration_trends(csv_path, table, start_date=None, exclude_labels=None, top_n=5):
+def plot_integration_trends(csv_path, table, output_path, start_date=None, exclude_labels=None, top_n=5):
     # Load the CSV data into a DataFrame
     df = pd.read_csv(csv_path)
 
@@ -201,7 +228,8 @@ def plot_integration_trends(csv_path, table, start_date=None, exclude_labels=Non
         label_cols = [col for col in label_cols if col in top_labels]
 
     if not label_cols:
-        raise ValueError("No label count columns found for plotting after filtering. Check the data or parameters.")
+        print("No label count columns found for plotting after filtering. Check the data or parameters.")
+        return
 
     # Create a wider figure to allocate room for the legend
     fig, ax = plt.subplots(figsize=(14, 6))
@@ -229,13 +257,12 @@ def plot_integration_trends(csv_path, table, start_date=None, exclude_labels=Non
     plt.xticks(rotation=45)
     plt.tight_layout(rect=[0, 0, 0.96, 1])  # Reserve 20% for legend
 
-    output_path = os.path.join(OUTPUT_DIR, f"{table}.integrations.top_{top_n}.monthly_trend.png")
     plt.savefig(output_path)
     logging.info(f"Saved plot to {output_path}")
     plt.close()
 
 
-def plot_label_breakdown(path, table, top_n=20, start_date=None, exclude_labels=None):
+def plot_label_breakdown(path, table, output_path, top_n=20, start_date=None, exclude_labels=None):
     try:
         df = pd.read_csv(path)
 
@@ -257,7 +284,6 @@ def plot_label_breakdown(path, table, top_n=20, start_date=None, exclude_labels=
         ax.invert_yaxis()
         plt.tight_layout()
 
-        output_path = os.path.join(OUTPUT_DIR, f"{table}.top_labels.png")
         plt.savefig(output_path)
         logging.info(f"Saved plot to {output_path}")
         plt.close()
@@ -265,7 +291,7 @@ def plot_label_breakdown(path, table, top_n=20, start_date=None, exclude_labels=
         logging.warning(f"[{table}] Could not generate label breakdown plot: {e}")
 
 
-def plot_label_count(path, table, top_n=8, start_date=None, exclude_labels=None):
+def plot_label_count(path, table, output_path, top_n=8, start_date=None, exclude_labels=None):
     try:
         df = pd.read_csv(path)
         df["month"] = df["month"].astype(str)
@@ -338,7 +364,6 @@ def plot_label_count(path, table, top_n=8, start_date=None, exclude_labels=None)
         )
 
         plt.tight_layout()
-        output_path = os.path.join(OUTPUT_DIR, f"{table}.label_counts.png")
         plt.savefig(output_path)
         logging.info(f"Saved plot to {output_path}")
         plt.close()
@@ -347,7 +372,7 @@ def plot_label_count(path, table, top_n=8, start_date=None, exclude_labels=None)
         logging.warning(f"[{table}] Could not generate label time-series bar chart: {e}")
 
 
-def plot_label_state_counts(path, table, top_n, exclude_labels=None):
+def plot_label_state_counts(path, table, output_path, top_n, exclude_labels=None):
     try:
         df = pd.read_csv(path)
 
@@ -373,7 +398,6 @@ def plot_label_state_counts(path, table, top_n, exclude_labels=None):
         plt.tight_layout()
         plt.gca().invert_yaxis()  # highest total on top
 
-        output_path = os.path.join(OUTPUT_DIR, f"{table}.open_closed_total_label_count.png")
         plt.savefig(output_path)
         logging.info(f"Saved plot to {output_path}")
         plt.close()

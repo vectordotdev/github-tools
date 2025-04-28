@@ -7,7 +7,7 @@ from scripts.logging.custom_logging import setup_logger
 from scripts.util.load_env import load_github_env_vars
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out"))
+OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out/db"))
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
@@ -55,9 +55,12 @@ def create_tables(cur):
 
 
 def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
-    # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     db_filename = f"{repo_owner}_{repo_name}_issues.db"
     db_path = os.path.join(output_dir, db_filename)
+
+    if os.path.exists(db_path):
+        print(f"Deleting database at {db_path}...")
+        os.remove(db_path)
     print(f"Setting up SQLite database at {db_path}...")
 
     conn = sqlite3.connect(db_path)
@@ -160,7 +163,7 @@ def read_json_file(filepath):
 # Regenerate the database if it already exists.
 def main():
     setup_logger()
-    
+
     parser = argparse.ArgumentParser(description="Load GitHub issues from a JSON archive into SQLite.")
     parser.add_argument("--input", dest="input", required=True, help="Path to the GitHub issues JSON archive")
     parser.add_argument(

@@ -1,8 +1,13 @@
 import json
+import os
 
 import requests
 
 from scripts.util.load_env import load_github_env_vars
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out/labels"))
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 def fetch_all_labels(env):
@@ -62,7 +67,17 @@ def save_labels_to_json(labels, filename="vector_labels.json"):
 
 
 if __name__ == "__main__":
-    env = load_github_env_vars()
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--env-file",
+        type=str,
+        help="Path to the .env file to load environment variables from",
+    )
+    args = parser.parse_args()
+    env = load_github_env_vars(args.env_file)
     all_labels = fetch_all_labels(env)
     print_labels(all_labels)
-    save_labels_to_json(all_labels, f"{env['REPO_OWNER']}_{env['REPO_NAME']}_labels.json")
+    out_file = os.path.join(OUTPUT_DIR, f"{env['REPO_OWNER']}_{env['REPO_NAME']}_labels.json")
+    save_labels_to_json(all_labels, out_file)

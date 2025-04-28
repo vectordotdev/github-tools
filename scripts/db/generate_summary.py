@@ -1,17 +1,20 @@
 import argparse
-import sqlite3
 import csv
-import os
 import logging
+import os
+import sqlite3
+
+from scripts.logging.custom_logging import setup_logger
+from scripts.util.load_env import load_github_env_vars
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out/summaries"))
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
-def export_monthly_summary(cur, table):
+def export_monthly_summary(env, cur, table):
     logging.info(f"Executing dynamic monthly summary with all labels for table '{table}'...")
-    output_path = os.path.join(OUTPUT_DIR, f"{table}.monthly_summary.csv")
+    output_path = os.path.join(OUTPUT_DIR, f"{env["REPO_OWNER"]}_{env["REPO_NAME"]}_{table}.monthly_summary.csv")
     where_clause = "WHERE is_draft = 0" if table == "pull_requests" else ""
 
     # Step 1: Get all distinct label names used with this table
@@ -72,9 +75,9 @@ def export_monthly_summary(cur, table):
         writer.writerows(rows)
 
 
-def export_label_breakdown(cur, table):
+def export_label_breakdown(env, cur, table):
     logging.info(f"Executing label breakdown query for table '{table}'...")
-    output_path = os.path.join(OUTPUT_DIR, f"{table}.label_breakdown.csv")
+    output_path = os.path.join(OUTPUT_DIR, f"{env["REPO_OWNER"]}_{env["REPO_NAME"]}_{table}.label_breakdown.csv")
     where_clause = "WHERE is_draft = 0" if table == "pull_requests" else ""
 
     query = f"""
@@ -96,9 +99,9 @@ def export_label_breakdown(cur, table):
         writer.writerows(rows)
 
 
-def export_label_timeseries(cur, table):
+def export_label_timeseries(env, cur, table):
     logging.info(f"Executing label time-series breakdown query for table '{table}'...")
-    output_path = os.path.join(OUTPUT_DIR, f"{table}.label_counts.csv")
+    output_path = os.path.join(OUTPUT_DIR, f"{env["REPO_OWNER"]}_{env["REPO_NAME"]}_{table}.label_counts.csv")
     where_clause = "WHERE is_draft = 0" if table == "pull_requests" else ""
 
     query = f"""
@@ -123,9 +126,9 @@ def export_label_timeseries(cur, table):
         writer.writerows(rows)
 
 
-def export_open_by_label(cur, table):
+def export_open_by_label(env, cur, table):
     logging.info(f"Calculating open {table} count by label...")
-    output_path = os.path.join(OUTPUT_DIR, f"{table}.open_by_label.csv")
+    output_path = os.path.join(OUTPUT_DIR, f"{env["REPO_OWNER"]}_{env["REPO_NAME"]}_{table}.open_by_label.csv")
     where_clause = "WHERE is_draft = 0" if table == "pull_requests" else ""
 
     query = f"""
@@ -151,21 +154,32 @@ def export_open_by_label(cur, table):
 
 
 def main():
+    setup_logger()
+
     parser = argparse.ArgumentParser(description="Generate GitHub issue summaries from SQLite.")
     parser.add_argument("--db", required=True, help="Path to the SQLite database with issues and labels.")
+    parser.add_argument(
+        "--env-file",
+        type=str,
+        help="Path to the .env file to load environment variables from",
+    )
     args = parser.parse_args()
 
-    logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+    try:
+        env = load_github_env_vars(args.env_file)
+    except ValueError as e:
+        print(f"Error loading environment variables: {e}")
+        return 1
 
     db_path = args.db
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
 
     for table in ["issues", "pull_requests"]:
-        export_open_by_label(cur, table)
-        export_monthly_summary(cur, table)
-        export_label_breakdown(cur, table)
-        export_label_timeseries(cur, table)
+        export_open_by_label(env, cur, table)
+        export_monthly_summary(env, cur, table)
+        export_label_breakdown(env, cur, table)
+        export_label_timeseries(env, cur, table)
 
     conn.close()
     logging.info("Done. All CSVs saved.")

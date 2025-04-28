@@ -2,7 +2,6 @@ import argparse
 import json
 import logging
 import os
-from datetime import datetime
 
 import requests
 
@@ -97,8 +96,7 @@ def fetch_discussions(env, limit=100):
 
 
 def write_to_json_file(discussions, repo_owner, repo_name):
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    json_out_file = os.path.join(OUTPUT_DIR, f"{timestamp}_{repo_owner}_{repo_name}_discussions.json")
+    json_out_file = os.path.join(OUTPUT_DIR, f"{repo_owner}_{repo_name}_discussions.json")
     logging.info(f"Saving discussions to {json_out_file}...")
     try:
         with open(json_out_file, "w") as f:
@@ -112,10 +110,15 @@ def main():
     setup_logger()
     parser = argparse.ArgumentParser(description="Fetch GitHub discussions from a repository.")
     parser.add_argument("--limit", type=int, default=100, help="Number of discussions per page (max 100)")
+    parser.add_argument(
+        "--env-file",
+        type=str,
+        help="Path to the .env file to load environment variables from",
+    )
     args = parser.parse_args()
 
     try:
-        env = load_github_env_vars()
+        env = load_github_env_vars(args.env_file)
     except ValueError as e:
         print(f"Error loading environment variables: {e}")
         return 1
