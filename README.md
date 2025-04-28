@@ -21,7 +21,7 @@ REPO_NAME=vector
 The following script deletes and regenerates everything.
 
 ```shell
-./run-all.sh path/to/my.env
+./generate-all.sh
 ```
 
 ## Trends
