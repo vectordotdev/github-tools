@@ -1,38 +1,40 @@
 label_name,open_count,closed_count
-no-changelog,27,1665
-domain: sinks,26,873
-domain: sources,21,748
-domain: deps,19,2630
-domain: external docs,15,991
-meta: awaiting author,7,41
-domain: core,6,985
-domain: transforms,6,284
-domain: ci,3,382
-domain: codecs,3,74
+no-changelog,26,1697
+domain: sinks,24,867
+domain: sources,24,740
+domain: deps,19,2623
+domain: external docs,16,991
+meta: awaiting author,8,41
+domain: core,6,978
+domain: transforms,6,282
+domain: codecs,3,73
 domain: rfc,3,31
-domain: vdev,2,343
-type: tech debt,2,240
+domain: ci,2,385
+domain: vdev,2,348
+type: tech debt,2,239
 source: file,2,12
-editorial review,2,10
-domain: releasing,1,188
-domain: topology,1,159
+domain: releasing,1,189
+domain: topology,1,158
 dependencies,1,78
-domain: performance,1,22
+domain: performance,1,21
 javascript,1,19
 meta: blocked,1,13
 meta: breaking change,1,12
+editorial review,1,11
+sink: amqp,1,4
+source: http_client,1,3
 source: prometheus_scrape,1,3
 domain: logs,1,1
 provider: new relic,1,0
 sink: clickhouse,1,0
 transform: reduce,1,0
-ci-condition: integration tests enable,0,436
-domain: vrl,0,374
-domain: observability,0,78
-type: bug,0,77
-type: enhancement,0,74
-ci-condition: k8s e2e tests enable,0,65
-ci-condition: k8s e2e all targets,0,61
+ci-condition: integration tests enable,0,428
+domain: vrl,0,366
+domain: observability,0,77
+type: bug,0,74
+type: enhancement,0,73
+ci-condition: k8s e2e tests enable,0,64
+ci-condition: k8s e2e all targets,0,60
 domain: tests,0,57
 domain: dev,0,55
 domain: config,0,49
@@ -71,12 +73,10 @@ provider: datadog,0,5
 sink: http,0,5
 sink: new,0,5
 sink: new_relic,0,5
-sink: prometheus_exporter,0,5
 sink: socket,0,5
 sink: splunk_hec,0,5
 sink: statsd,0,5
 sink: vector,0,5
-source: aws_sqs,0,5
 source: vector,0,5
 vrl: stdlib,0,5
 domain: data model,0,4
@@ -84,10 +84,10 @@ domain: delivery,0,4
 domain: networking,0,4
 provider: aws,0,4
 rust,0,4
-sink: amqp,0,4
 sink: aws_kinesis_streams,0,4
 sink: honeycomb,0,4
 sink: loki,0,4
+sink: prometheus_exporter,0,4
 source: fluent,0,4
 source: heroku_logs,0,4
 source: nats,0,4
@@ -107,13 +107,13 @@ sink: gcp_stackdriver_logs,0,3
 sink: kafka,0,3
 sink: nats,0,3
 source: dnstap,0,3
-source: http_client,0,3
 source: internal_logs,0,3
 source: mongodb_metrics,0,3
 source: nginx_metrics,0,3
 source: redis,0,3
 transform: lua,0,3
 domain: enterprise,0,2
+domain: reload,0,2
 domain: soak tests,0,2
 platform: kubernetes,0,2
 ruby,0,2
@@ -155,7 +155,6 @@ domain: healthchecks,0,1
 domain: parsing,0,1
 domain: platforms,0,1
 domain: reliability,0,1
-domain: reload,0,1
 domain: shutdown,0,1
 domain: templating,0,1
 enrichment_table: csv,0,1
@@ -185,6 +184,7 @@ sink: new_relic_logs,0,1
 sink: sematext_logs,0,1
 source: amqp,0,1
 source: apache_metrics,0,1
+source: aws_sqs,0,1
 source: eventstoredb_metrics,0,1
 source: mqtt,0,1
 source: postgresql_metrics,0,1

@@ -1,31 +1,31 @@
 label_name,count
-domain: deps,2649
-no-changelog,1692
-domain: external docs,1006
-domain: core,991
-domain: sinks,899
-domain: sources,769
-ci-condition: integration tests enable,436
-domain: ci,385
-domain: vrl,374
-domain: vdev,345
-domain: transforms,290
-type: tech debt,242
-domain: releasing,189
-domain: topology,160
+domain: deps,2642
+no-changelog,1723
+domain: external docs,1007
+domain: core,984
+domain: sinks,891
+domain: sources,764
+ci-condition: integration tests enable,428
+domain: ci,387
+domain: vrl,366
+domain: vdev,350
+domain: transforms,288
+type: tech debt,241
+domain: releasing,190
+domain: topology,159
 dependencies,79
-domain: observability,78
-type: bug,77
-domain: codecs,77
-type: enhancement,74
-ci-condition: k8s e2e tests enable,65
-ci-condition: k8s e2e all targets,61
+domain: observability,77
+domain: codecs,76
+type: bug,74
+type: enhancement,73
+ci-condition: k8s e2e tests enable,64
+ci-condition: k8s e2e all targets,60
 domain: tests,57
 domain: dev,55
+meta: awaiting author,49
 domain: config,49
-meta: awaiting author,48
 domain: rfc,34
-domain: performance,23
+domain: performance,22
 domain: metrics,21
 source: internal_metrics,20
 javascript,20
@@ -62,15 +62,14 @@ sink: datadog_events,6
 domain: cli,6
 vrl: stdlib,5
 source: vector,5
-source: aws_sqs,5
 sink: vector,5
 sink: statsd,5
 sink: splunk_hec,5
 sink: socket,5
-sink: prometheus_exporter,5
 sink: new_relic,5
 sink: new,5
 sink: http,5
+sink: amqp,5
 provider: datadog,5
 domain: unit tests,5
 do not merge,5
@@ -79,12 +78,13 @@ source: statsd,4
 source: splunk_hec,4
 source: prometheus_scrape,4
 source: nats,4
+source: http_client,4
 source: heroku_logs,4
 source: fluent,4
+sink: prometheus_exporter,4
 sink: loki,4
 sink: honeycomb,4
 sink: aws_kinesis_streams,4
-sink: amqp,4
 rust,4
 provider: aws,4
 domain: networking,4
@@ -95,7 +95,6 @@ source: redis,3
 source: nginx_metrics,3
 source: mongodb_metrics,3
 source: internal_logs,3
-source: http_client,3
 source: dnstap,3
 sink: nats,3
 sink: kafka,3
@@ -138,6 +137,7 @@ sink: aws_cloudwatch_metrics,2
 ruby,2
 platform: kubernetes,2
 domain: soak tests,2
+domain: reload,2
 domain: logs,2
 domain: enterprise,2
 website: template,1
@@ -153,6 +153,7 @@ source: prometheus_remote_write,1
 source: postgresql_metrics,1
 source: mqtt,1
 source: eventstoredb_metrics,1
+source: aws_sqs,1
 source: apache_metrics,1
 source: amqp,1
 sink: sematext_logs,1
@@ -184,7 +185,6 @@ github_actions,1
 enrichment_table: csv,1
 domain: templating,1
 domain: shutdown,1
-domain: reload,1
 domain: reliability,1
 domain: platforms,1
 domain: parsing,1

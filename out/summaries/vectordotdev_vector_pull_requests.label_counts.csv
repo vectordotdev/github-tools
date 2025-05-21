@@ -1,26 +1,19 @@
 month,label_name,count
-2022-03,domain: deps,33
-2022-03,domain: sources,22
-2022-03,domain: sinks,21
-2022-03,domain: external docs,20
-2022-03,domain: core,19
-2022-03,domain: vrl,11
-2022-03,ci-condition: integration tests enable,10
-2022-03,domain: ci,8
-2022-03,domain: transforms,5
-2022-03,source: aws_sqs,4
-2022-03,type: bug,3
-2022-03,domain: topology,3
-2022-03,domain: releasing,3
-2022-03,ci-condition: k8s e2e tests enable,3
-2022-03,ci-condition: k8s e2e all targets,3
-2022-03,domain: codecs,2
-2022-03,type: tech debt,1
-2022-03,type: enhancement,1
-2022-03,sink: prometheus_exporter,1
+2022-03,domain: deps,16
+2022-03,domain: core,11
+2022-03,domain: sources,10
+2022-03,domain: external docs,10
+2022-03,domain: sinks,9
+2022-03,domain: vrl,3
+2022-03,domain: topology,2
+2022-03,domain: ci,2
+2022-03,ci-condition: k8s e2e tests enable,2
+2022-03,ci-condition: k8s e2e all targets,2
+2022-03,ci-condition: integration tests enable,2
 2022-03,javascript,1
-2022-03,domain: performance,1
-2022-03,domain: observability,1
+2022-03,domain: transforms,1
+2022-03,domain: releasing,1
+2022-03,domain: codecs,1
 2022-03,dependencies,1
 2022-04,domain: deps,71
 2022-04,domain: sinks,45
@@ -1150,9 +1143,10 @@ month,label_name,count
 2025-02,editorial review,1
 2025-02,domain: transforms,1
 2025-02,domain: tests,1
+2025-02,domain: reload,1
 2025-03,no-changelog,99
 2025-03,domain: deps,47
-2025-03,domain: external docs,20
+2025-03,domain: external docs,21
 2025-03,domain: sources,12
 2025-03,domain: sinks,12
 2025-03,domain: core,11
@@ -1161,22 +1155,23 @@ month,label_name,count
 2025-03,domain: transforms,6
 2025-03,javascript,4
 2025-03,dependencies,4
+2025-03,meta: awaiting author,2
 2025-03,transform: reduce,1
+2025-03,source: http_client,1
 2025-03,sink: clickhouse,1
-2025-03,meta: awaiting author,1
 2025-03,domain: topology,1
 2025-03,domain: releasing,1
 2025-03,domain: codecs,1
-2025-04,no-changelog,50
-2025-04,domain: external docs,16
+2025-04,no-changelog,51
+2025-04,domain: external docs,21
 2025-04,domain: vdev,15
-2025-04,domain: deps,15
+2025-04,domain: deps,14
+2025-04,domain: sources,12
 2025-04,domain: releasing,12
-2025-04,domain: sources,10
 2025-04,domain: sinks,8
 2025-04,domain: core,5
+2025-04,domain: transforms,4
 2025-04,domain: ci,4
-2025-04,domain: transforms,3
 2025-04,source: prometheus_scrape,1
 2025-04,source: opentelemetry,1
 2025-04,source: file,1
@@ -1184,3 +1179,14 @@ month,label_name,count
 2025-04,editorial review,1
 2025-04,domain: topology,1
 2025-04,domain: rfc,1
+2025-05,no-changelog,30
+2025-05,domain: deps,11
+2025-05,domain: ci,8
+2025-05,domain: vdev,5
+2025-05,domain: sources,5
+2025-05,domain: external docs,5
+2025-05,domain: sinks,4
+2025-05,domain: releasing,3
+2025-05,sink: amqp,1
+2025-05,domain: transforms,1
+2025-05,domain: core,1

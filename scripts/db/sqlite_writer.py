@@ -55,7 +55,7 @@ def create_tables(cur):
 
 
 def write_issues_to_sqlite(issues, output_dir, repo_owner, repo_name):
-    db_filename = f"{repo_owner}_{repo_name}_issues.db"
+    db_filename = f"{repo_owner}_{repo_name}.db"
     db_path = os.path.join(output_dir, db_filename)
 
     if os.path.exists(db_path):
