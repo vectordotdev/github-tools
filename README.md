@@ -26,7 +26,9 @@ The following script deletes and regenerates everything.
 
 ## Trends
 
-### Issues
+#### Vector
+
+##### Issues
 
 ![Monthly Issues](out/images/vectordotdev_vector_issues.monthly_issues_trend.png)
 
@@ -46,7 +48,7 @@ The following script deletes and regenerates everything.
 
 ![Top Integration Issue By Label Total Count](out/images/vectordotdev_vector_issues.open_closed_total_label_count.png)
 
-### Pull Requests
+##### Pull Requests
 
 ![Monthly PRs](out/images/vectordotdev_vector_pull_requests.monthly_issues_trend.png)
 
@@ -66,6 +68,36 @@ The following script deletes and regenerates everything.
 
 ![Top Integration PRs By Label Total Count](out/images/vectordotdev_vector_pull_requests.open_closed_total_label_count.png)
 
-### Discussions
+##### Discussions
 
 TODO!
+
+---
+
+#### VRL
+
+##### Issues
+
+![Monthly Issues](out/images/vectordotdev_vrl_issues.monthly_issues_trend.png)
+
+---
+
+![Top Issue Labels](out/images/vectordotdev_vrl_issues.top_labels.png)
+
+---
+
+![Issue Label Counts](out/images/vectordotdev_vrl_issues.label_counts.png)
+
+##### Pull Requests
+
+![Monthly PRs](out/images/vectordotdev_vrl_pull_requests.monthly_issues_trend.png)
+
+---
+
+![Top PR Labels](out/images/vectordotdev_vrl_pull_requests.top_labels.png)
+
+---
+
+![PR Label Counts](out/images/vectordotdev_vrl_pull_requests.label_counts.png)
+
+
