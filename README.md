@@ -21,6 +21,9 @@ REPO_NAME=vector
 The following script deletes and regenerates everything.
 
 ```shell
+# The following will take a while, as it fetches all issues, PRs, discussions, etc.
+# TODO: Incremental updates.
+# ./fetch_all_slow.sh 
 ./generate-all.sh
 ```
 

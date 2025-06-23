@@ -1,9 +1,9 @@
 label_name,open_count,closed_count
-vrl: stdlib,113,54
+vrl: stdlib,114,54
+type: bug,68,32
 type: enhancement,66,13
-type: bug,65,32
-type: feature,60,27
-vrl: compiler,44,9
+type: feature,60,29
+vrl: compiler,46,9
 vrl: typedef,16,3
 vrl: parser,15,0
 vrl: diagnostic,11,1
@@ -11,8 +11,8 @@ vrl: syntax,9,0
 type: tech debt,8,3
 meta: good first issue,6,4
 fuzz,5,5
-domain: dev,3,1
 Epic,3,0
+domain: dev,2,2
 domain: tests,2,0
 meta:confirmed,1,2
 domain: ci,1,1

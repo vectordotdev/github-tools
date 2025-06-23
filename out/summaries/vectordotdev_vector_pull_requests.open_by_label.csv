@@ -1,47 +1,46 @@
 label_name,open_count,closed_count
-no-changelog,26,1697
-domain: sinks,24,867
-domain: sources,24,740
-domain: deps,19,2623
-domain: external docs,16,991
-meta: awaiting author,8,41
-domain: core,6,978
-domain: transforms,6,282
-domain: codecs,3,73
+meta: awaiting author,25,41
+domain: sinks,24,865
+domain: sources,22,738
+no-changelog,21,1758
+domain: external docs,16,992
+domain: deps,15,2615
+domain: core,7,972
+domain: transforms,5,283
+domain: ci,3,384
+domain: codecs,3,74
 domain: rfc,3,31
-domain: ci,2,385
-domain: vdev,2,348
-type: tech debt,2,239
+domain: vdev,2,354
+type: tech debt,2,241
+domain: releasing,2,188
 source: file,2,12
-domain: releasing,1,189
+editorial review,2,11
 domain: topology,1,158
-dependencies,1,78
+dependencies,1,76
+type: bug,1,75
 domain: performance,1,21
-javascript,1,19
+javascript,1,17
+source: datadog_agent,1,15
 meta: blocked,1,13
 meta: breaking change,1,12
-editorial review,1,11
-sink: amqp,1,4
-source: http_client,1,3
+source: opentelemetry,1,11
 source: prometheus_scrape,1,3
 domain: logs,1,1
 provider: new relic,1,0
 sink: clickhouse,1,0
 transform: reduce,1,0
-ci-condition: integration tests enable,0,428
-domain: vrl,0,366
+ci-condition: integration tests enable,0,425
+domain: vrl,0,358
 domain: observability,0,77
-type: bug,0,74
 type: enhancement,0,73
-ci-condition: k8s e2e tests enable,0,64
-ci-condition: k8s e2e all targets,0,60
+ci-condition: k8s e2e tests enable,0,62
+ci-condition: k8s e2e all targets,0,58
 domain: tests,0,57
 domain: dev,0,55
-domain: config,0,49
+domain: config,0,50
 domain: metrics,0,21
 source: internal_metrics,0,20
 sink: datadog_metrics,0,17
-source: datadog_agent,0,14
 sink: datadog_logs,0,13
 source: kafka,0,13
 sink: datadog_traces,0,12
@@ -50,26 +49,26 @@ domain: internal docs,0,11
 sink: elasticsearch,0,11
 source: gcp_pubsub,0,11
 source: journald,0,11
-source: opentelemetry,0,11
 source: socket,0,10
 type: task,0,10
 domain: startup,0,9
 domain: buffers,0,8
-provider: gcp,0,8
 meta: regression,0,7
+provider: gcp,0,7
 sink: pulsar,0,7
 source: aws_s3,0,7
 source: host_metrics,0,7
 source: kubernetes_logs,0,7
 source: logstash,0,7
-type: feature,0,7
 domain: cli,0,6
 sink: datadog_events,0,6
 sink: prometheus_remote_write,0,6
+type: feature,0,6
 vrl: playground,0,6
 do not merge,0,5
 domain: unit tests,0,5
 provider: datadog,0,5
+sink: amqp,0,5
 sink: http,0,5
 sink: new,0,5
 sink: new_relic,0,5
@@ -82,20 +81,22 @@ vrl: stdlib,0,5
 domain: data model,0,4
 domain: delivery,0,4
 domain: networking,0,4
+domain: schemas,0,4
 provider: aws,0,4
 rust,0,4
 sink: aws_kinesis_streams,0,4
 sink: honeycomb,0,4
 sink: loki,0,4
 sink: prometheus_exporter,0,4
+source: dnstap,0,4
 source: fluent,0,4
 source: heroku_logs,0,4
+source: http_client,0,4
 source: nats,0,4
 source: splunk_hec,0,4
 source: statsd,0,4
 transform: log_to_metric,0,4
 ci-condition: skip-regression,0,3
-domain: schemas,0,3
 domain: security,0,3
 platform: windows,0,3
 sink: appsignal,0,3
@@ -106,7 +107,7 @@ sink: gcp_pubsub,0,3
 sink: gcp_stackdriver_logs,0,3
 sink: kafka,0,3
 sink: nats,0,3
-source: dnstap,0,3
+source: aws_ecs_metrics,0,3
 source: internal_logs,0,3
 source: mongodb_metrics,0,3
 source: nginx_metrics,0,3
@@ -129,7 +130,6 @@ sink: papertrail,0,2
 sink: redis,0,2
 sink: sematext_metrics,0,2
 sink: websocket,0,2
-source: aws_ecs_metrics,0,2
 source: aws_kinesis_firehose,0,2
 source: datadog_logs,0,2
 source: docker_logs,0,2

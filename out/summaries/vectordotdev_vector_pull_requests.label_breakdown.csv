@@ -1,45 +1,45 @@
 label_name,count
-domain: deps,2642
-no-changelog,1723
-domain: external docs,1007
-domain: core,984
-domain: sinks,891
-domain: sources,764
-ci-condition: integration tests enable,428
+domain: deps,2630
+no-changelog,1779
+domain: external docs,1008
+domain: core,979
+domain: sinks,889
+domain: sources,760
+ci-condition: integration tests enable,425
 domain: ci,387
-domain: vrl,366
-domain: vdev,350
+domain: vrl,358
+domain: vdev,356
 domain: transforms,288
-type: tech debt,241
+type: tech debt,243
 domain: releasing,190
 domain: topology,159
-dependencies,79
 domain: observability,77
-domain: codecs,76
-type: bug,74
+domain: codecs,77
+dependencies,77
+type: bug,76
 type: enhancement,73
-ci-condition: k8s e2e tests enable,64
-ci-condition: k8s e2e all targets,60
+meta: awaiting author,66
+ci-condition: k8s e2e tests enable,62
+ci-condition: k8s e2e all targets,58
 domain: tests,57
 domain: dev,55
-meta: awaiting author,49
-domain: config,49
+domain: config,50
 domain: rfc,34
 domain: performance,22
 domain: metrics,21
 source: internal_metrics,20
-javascript,20
+javascript,18
 sink: datadog_metrics,17
+source: datadog_agent,16
 source: file,14
-source: datadog_agent,14
 meta: blocked,14
 source: kafka,13
 sink: datadog_logs,13
 meta: breaking change,13
+editorial review,13
+source: opentelemetry,12
 source: http_server,12
 sink: datadog_traces,12
-editorial review,12
-source: opentelemetry,11
 source: journald,11
 source: gcp_pubsub,11
 sink: elasticsearch,11
@@ -47,16 +47,16 @@ domain: internal docs,11
 type: task,10
 source: socket,10
 domain: startup,9
-provider: gcp,8
 domain: buffers,8
-type: feature,7
 source: logstash,7
 source: kubernetes_logs,7
 source: host_metrics,7
 source: aws_s3,7
 sink: pulsar,7
+provider: gcp,7
 meta: regression,7
 vrl: playground,6
+type: feature,6
 sink: prometheus_remote_write,6
 sink: datadog_events,6
 domain: cli,6
@@ -81,12 +81,14 @@ source: nats,4
 source: http_client,4
 source: heroku_logs,4
 source: fluent,4
+source: dnstap,4
 sink: prometheus_exporter,4
 sink: loki,4
 sink: honeycomb,4
 sink: aws_kinesis_streams,4
 rust,4
 provider: aws,4
+domain: schemas,4
 domain: networking,4
 domain: delivery,4
 domain: data model,4
@@ -95,7 +97,7 @@ source: redis,3
 source: nginx_metrics,3
 source: mongodb_metrics,3
 source: internal_logs,3
-source: dnstap,3
+source: aws_ecs_metrics,3
 sink: nats,3
 sink: kafka,3
 sink: gcp_stackdriver_logs,3
@@ -106,7 +108,6 @@ sink: aws_cloudwatch_logs,3
 sink: appsignal,3
 platform: windows,3
 domain: security,3
-domain: schemas,3
 ci-condition: skip-regression,3
 vrl: typedef,2
 transform: sample,2
@@ -121,7 +122,6 @@ source: exec,2
 source: docker_logs,2
 source: datadog_logs,2
 source: aws_kinesis_firehose,2
-source: aws_ecs_metrics,2
 sink: websocket,2
 sink: sematext_metrics,2
 sink: redis,2

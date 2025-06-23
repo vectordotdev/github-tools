@@ -1,32 +1,16 @@
 month,label_name,count
-2022-03,domain: deps,16
-2022-03,domain: core,11
-2022-03,domain: sources,10
-2022-03,domain: external docs,10
-2022-03,domain: sinks,9
-2022-03,domain: vrl,3
-2022-03,domain: topology,2
-2022-03,domain: ci,2
-2022-03,ci-condition: k8s e2e tests enable,2
-2022-03,ci-condition: k8s e2e all targets,2
-2022-03,ci-condition: integration tests enable,2
-2022-03,javascript,1
-2022-03,domain: transforms,1
-2022-03,domain: releasing,1
-2022-03,domain: codecs,1
-2022-03,dependencies,1
-2022-04,domain: deps,71
-2022-04,domain: sinks,45
-2022-04,domain: sources,41
-2022-04,domain: external docs,38
-2022-04,domain: vrl,37
-2022-04,domain: core,30
-2022-04,domain: ci,19
-2022-04,ci-condition: integration tests enable,17
-2022-04,type: tech debt,11
+2022-04,domain: deps,58
+2022-04,domain: sinks,42
+2022-04,domain: sources,39
+2022-04,domain: external docs,35
+2022-04,domain: vrl,32
+2022-04,domain: core,26
+2022-04,domain: ci,17
+2022-04,ci-condition: integration tests enable,16
+2022-04,type: tech debt,10
 2022-04,domain: transforms,9
-2022-04,dependencies,9
 2022-04,domain: releasing,8
+2022-04,dependencies,8
 2022-04,ci-condition: k8s e2e tests enable,8
 2022-04,ci-condition: k8s e2e all targets,8
 2022-04,type: bug,7
@@ -34,13 +18,12 @@ month,label_name,count
 2022-04,domain: config,5
 2022-04,type: enhancement,4
 2022-04,domain: codecs,4
-2022-04,type: feature,3
 2022-04,domain: rfc,3
+2022-04,type: feature,2
 2022-04,source: nats,2
 2022-04,source: journald,2
 2022-04,sink: nats,2
 2022-04,meta: regression,2
-2022-04,javascript,2
 2022-04,source: splunk_hec,1
 2022-04,source: kubernetes_logs,1
 2022-04,source: http_server,1
@@ -48,9 +31,9 @@ month,label_name,count
 2022-04,sink: new_relic_logs,1
 2022-04,sink: elasticsearch,1
 2022-04,ruby,1
-2022-04,provider: gcp,1
 2022-04,platform: windows,1
 2022-04,platform: kubernetes,1
+2022-04,javascript,1
 2022-04,domain: tests,1
 2022-04,domain: performance,1
 2022-04,domain: healthchecks,1
@@ -867,7 +850,7 @@ month,label_name,count
 2023-12,domain: codecs,1
 2024-01,no-changelog,145
 2024-01,domain: deps,111
-2024-01,domain: core,31
+2024-01,domain: core,30
 2024-01,domain: vdev,27
 2024-01,domain: external docs,22
 2024-01,domain: sinks,14
@@ -903,6 +886,7 @@ month,label_name,count
 2024-02,source: mqtt,1
 2024-02,sink: splunk_hec,1
 2024-02,sink: datadog_logs,1
+2024-02,meta: awaiting author,1
 2024-02,domain: topology,1
 2024-02,domain: rfc,1
 2024-03,no-changelog,127
@@ -965,6 +949,7 @@ month,label_name,count
 2024-05,source: kafka,1
 2024-05,sink: elasticsearch,1
 2024-05,meta: breaking change,1
+2024-05,meta: awaiting author,1
 2024-05,domain: schemas,1
 2024-05,domain: performance,1
 2024-05,domain: config,1
@@ -1007,6 +992,7 @@ month,label_name,count
 2024-07,domain: vdev,5
 2024-07,domain: releasing,3
 2024-07,type: tech debt,2
+2024-07,meta: awaiting author,2
 2024-07,dependencies,2
 2024-08,no-changelog,102
 2024-08,domain: deps,57
@@ -1023,6 +1009,7 @@ month,label_name,count
 2024-08,type: enhancement,1
 2024-08,type: bug,1
 2024-08,transform: filter,1
+2024-08,meta: awaiting author,1
 2024-08,javascript,1
 2024-08,domain: topology,1
 2024-08,domain: releasing,1
@@ -1044,6 +1031,7 @@ month,label_name,count
 2024-09,type: bug,4
 2024-09,sink: new_relic,4
 2024-09,type: tech debt,2
+2024-09,meta: awaiting author,2
 2024-09,editorial review,2
 2024-09,domain: logs,2
 2024-09,dependencies,2
@@ -1051,7 +1039,6 @@ month,label_name,count
 2024-09,source: logstash,1
 2024-09,provider: new relic,1
 2024-09,meta: breaking change,1
-2024-09,meta: awaiting author,1
 2024-09,javascript,1
 2024-09,github_actions,1
 2024-09,domain: tests,1
@@ -1072,11 +1059,11 @@ month,label_name,count
 2024-10,dependencies,5
 2024-10,domain: releasing,3
 2024-10,ci-condition: skip-regression,3
+2024-10,meta: awaiting author,2
 2024-10,domain: topology,2
 2024-10,type: enhancement,1
 2024-10,type: bug,1
 2024-10,provider: datadog,1
-2024-10,meta: awaiting author,1
 2024-10,domain: tests,1
 2024-11,no-changelog,121
 2024-11,domain: deps,66
@@ -1122,10 +1109,10 @@ month,label_name,count
 2025-01,domain: releasing,8
 2025-01,domain: ci,6
 2025-01,domain: transforms,4
+2025-01,meta: awaiting author,3
 2025-01,vrl: stdlib,1
 2025-01,sink: pulsar,1
 2025-01,sink: opentelemetry,1
-2025-01,meta: awaiting author,1
 2025-01,domain: topology,1
 2025-01,domain: security,1
 2025-01,domain: networking,1
@@ -1138,17 +1125,17 @@ month,label_name,count
 2025-02,domain: sources,8
 2025-02,domain: ci,7
 2025-02,domain: topology,4
+2025-02,meta: awaiting author,3
 2025-02,domain: releasing,3
-2025-02,meta: awaiting author,2
 2025-02,editorial review,1
 2025-02,domain: transforms,1
 2025-02,domain: tests,1
 2025-02,domain: reload,1
-2025-03,no-changelog,99
+2025-03,no-changelog,100
 2025-03,domain: deps,47
 2025-03,domain: external docs,21
+2025-03,domain: sinks,13
 2025-03,domain: sources,12
-2025-03,domain: sinks,12
 2025-03,domain: core,11
 2025-03,domain: vdev,7
 2025-03,domain: ci,7
@@ -1163,30 +1150,55 @@ month,label_name,count
 2025-03,domain: releasing,1
 2025-03,domain: codecs,1
 2025-04,no-changelog,51
-2025-04,domain: external docs,21
+2025-04,domain: external docs,20
 2025-04,domain: vdev,15
 2025-04,domain: deps,14
 2025-04,domain: sources,12
 2025-04,domain: releasing,12
-2025-04,domain: sinks,8
+2025-04,domain: sinks,7
 2025-04,domain: core,5
 2025-04,domain: transforms,4
 2025-04,domain: ci,4
+2025-04,meta: awaiting author,3
+2025-04,source: opentelemetry,2
 2025-04,source: prometheus_scrape,1
-2025-04,source: opentelemetry,1
 2025-04,source: file,1
 2025-04,platform: kubernetes,1
 2025-04,editorial review,1
 2025-04,domain: topology,1
 2025-04,domain: rfc,1
-2025-05,no-changelog,30
+2025-05,no-changelog,33
 2025-05,domain: deps,11
-2025-05,domain: ci,8
+2025-05,domain: ci,10
+2025-05,domain: sources,9
+2025-05,domain: external docs,9
 2025-05,domain: vdev,5
-2025-05,domain: sources,5
-2025-05,domain: external docs,5
-2025-05,domain: sinks,4
-2025-05,domain: releasing,3
+2025-05,domain: sinks,5
+2025-05,domain: releasing,4
+2025-05,type: tech debt,2
+2025-05,source: datadog_agent,2
+2025-05,domain: core,2
+2025-05,type: bug,1
+2025-05,source: dnstap,1
 2025-05,sink: amqp,1
+2025-05,meta: awaiting author,1
+2025-05,editorial review,1
 2025-05,domain: transforms,1
-2025-05,domain: core,1
+2025-05,domain: topology,1
+2025-06,no-changelog,52
+2025-06,domain: deps,17
+2025-06,domain: external docs,11
+2025-06,domain: core,10
+2025-06,domain: sinks,9
+2025-06,domain: vdev,6
+2025-06,domain: sources,4
+2025-06,meta: awaiting author,3
+2025-06,domain: codecs,2
+2025-06,domain: ci,2
+2025-06,type: tech debt,1
+2025-06,type: bug,1
+2025-06,source: aws_ecs_metrics,1
+2025-06,domain: transforms,1
+2025-06,domain: topology,1
+2025-06,domain: schemas,1
+2025-06,domain: config,1
