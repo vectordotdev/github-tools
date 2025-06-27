@@ -153,6 +153,86 @@ def export_open_by_label(env, cur, table):
         writer.writerows(rows)
 
 
+def export_overall_totals(env, cur, table, exclude_labels=None):
+    """
+    Writes a CSV with two columns—total_open_<table> and total_closed_<table>—
+    for the given table name, excluding any items that have labels in exclude_labels.
+    """
+    # 1) Build a list of WHERE predicates
+    where_clauses = []
+    params = []
+
+    # pull_requests get filtered for drafts
+    if table == "pull_requests":
+        where_clauses.append("is_draft = 0")
+
+    # exclude any IDs that have an unwanted label
+    if exclude_labels:
+        placeholders = ", ".join("?" for _ in exclude_labels)
+        where_clauses.append(
+            f"""{table}.id NOT IN (
+                  SELECT issue_id
+                  FROM issue_labels
+                  JOIN labels ON labels.id = issue_labels.label_id
+                  WHERE labels.name IN ({placeholders})
+               )"""
+        )
+        params.extend(sorted(exclude_labels))
+
+    # 2) Join them into a single WHERE … AND … clause (or omit entirely)
+    where_sql = ""
+    if where_clauses:
+        where_sql = "WHERE " + " AND ".join(where_clauses)
+
+    # 3) Run the query
+    query = f"""
+        SELECT
+            SUM(CASE WHEN state = 'open'   THEN 1 ELSE 0 END) AS total_open_{table},
+            SUM(CASE WHEN state = 'closed' THEN 1 ELSE 0 END) AS total_closed_{table}
+        FROM {table}
+        {where_sql}
+    """
+    logging.info(f"Executing overall-totals for `{table}` with excludes={exclude_labels!r}")
+    cur.execute(query, params)
+    total_open, total_closed = cur.fetchone()
+
+    # 4) Dump to CSV
+    output_path = os.path.join(
+        OUTPUT_DIR,
+        f"{env['REPO_OWNER']}_{env['REPO_NAME']}_{table}.overall_totals.csv"
+    )
+    logging.info(f"Writing overall totals for `{table}` to {output_path}")
+    with open(output_path, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow([f"total_open_{table}", f"total_closed_{table}"])
+        writer.writerow([total_open or 0, total_closed or 0])
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Generate GitHub issue summaries from SQLite.")
+    parser.add_argument("--db", required=True, help="Path to the SQLite database with issues and labels.")
+    parser.add_argument(
+        "--env-file",
+        type=str,
+        help="Path to the .env file to load environment variables from",
+    )
+    parser.add_argument(
+        "--exclude-labels",
+        type=str,
+        help="Comma-separated list of labels to exclude from the various charts",
+    )
+    args = parser.parse_args()
+
+    raw = args.exclude_labels
+    if raw:
+        labels = {lbl.strip() for lbl in raw.split(",") if lbl.strip()}
+        args.exclude_labels = labels if labels else None
+    else:
+        args.exclude_labels = None
+
+    return args
+
+
 def main():
     setup_logger()
 
@@ -163,7 +243,7 @@ def main():
         type=str,
         help="Path to the .env file to load environment variables from",
     )
-    args = parser.parse_args()
+    args = parse_args()
 
     try:
         env = load_github_env_vars(args.env_file)
@@ -180,6 +260,7 @@ def main():
         export_monthly_summary(env, cur, table)
         export_label_breakdown(env, cur, table)
         export_label_timeseries(env, cur, table)
+        export_overall_totals(env, cur, table, args.exclude_labels)
 
     conn.close()
     logging.info("Done. All CSVs saved.")
