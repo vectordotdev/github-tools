@@ -60,23 +60,46 @@ def set_axis_labels(ax, xlabel, ylabel):
     ax.set_ylabel(ylabel, fontsize=12, fontstyle='italic')
 
 
-def main():
-    setup_logger()
-    setup_styles()
-
-    parser = argparse.ArgumentParser(description="Generate visual summaries from GitHub issues CSVs.")
-    parser.add_argument("--input-dir", required=True, help="Directory containing the summary CSV files")
-    parser.add_argument("--start", help="Only include data from this YYYY-MM date forward")
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Generate visual summaries from GitHub issues CSVs."
+    )
+    parser.add_argument(
+        "--input-dir",
+        required=True,
+        help="Directory containing the summary CSV files",
+    )
+    parser.add_argument(
+        "--start",
+        help="Only include data from this YYYY-MM date forward",
+    )
     parser.add_argument(
         "--exclude-labels",
-        help="Comma-separated list of labels to exclude from the label time-series chart",
+        type=str,
+        help="Comma-separated list of labels to exclude from the various charts",
     )
     parser.add_argument(
         "--env-file",
         type=str,
         help="Path to the .env file to load environment variables from",
     )
+
     args = parser.parse_args()
+
+    raw = args.exclude_labels
+    if raw:
+        labels = {lbl.strip() for lbl in raw.split(",") if lbl.strip()}
+        args.exclude_labels = labels if labels else None
+    else:
+        args.exclude_labels = None
+
+    return args
+
+
+def main():
+    setup_logger()
+    setup_styles()
+    args = parse_args()
 
     try:
         env = load_github_env_vars(args.env_file)
@@ -89,7 +112,7 @@ def main():
         prefix = f"{env['REPO_OWNER']}_{env['REPO_NAME']}_{table}"
         monthly_csv = os.path.join(args.input_dir, f"{prefix}.monthly_summary.csv")
         if os.path.exists(monthly_csv):
-            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.monthly_issues_trend.png")
+            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.monthly_trend.png")
             plot_monthly_summary_basic(monthly_csv, table, output_path, start_date=args.start)
 
             n = 5
@@ -208,16 +231,18 @@ def plot_integration_trends(csv_path, table, output_path, start_date=None, exclu
         if (series >= 0).all():
             label_cols.append(col)
 
+    if not exclude_labels:
+        exclude_labels = set()
+        
     # Build exclusion set
-    exclude_set = set(exclude_labels) if exclude_labels else set()
     for non_label in ['month', 'open_issues', 'closed_issues']:
         if non_label in df.columns:
-            exclude_set.add(non_label)
+            exclude_labels.add(non_label)
 
     # Filter label columns
     label_cols = [
         col for col in label_cols
-        if col not in exclude_set
+        if col not in exclude_labels
            and (col.startswith("source:") or col.startswith("transform:") or col.startswith("sink:"))
            and df[col].sum() > 0
     ]
@@ -270,8 +295,7 @@ def plot_label_breakdown(path, table, output_path, top_n=20, start_date=None, ex
             df = df[df["month"] >= start_date]
 
         if exclude_labels:
-            exclude_set = set(label.strip() for label in exclude_labels.split(","))
-            df = df[~df["label_name"].isin(exclude_set)]
+            df = df[~df["label_name"].isin(exclude_labels)]
 
         df = df.sort_values("count", ascending=False).head(top_n)
         colors = [get_label_color(label) for label in df["label_name"]]
@@ -300,8 +324,7 @@ def plot_label_count(path, table, output_path, top_n=8, start_date=None, exclude
             df = df[df["month"] >= start_date]
 
         if exclude_labels:
-            exclude_set = set(label.strip() for label in exclude_labels.split(","))
-            df = df[~df["label_name"].isin(exclude_set)]
+            df = df[~df["label_name"].isin(exclude_labels)]
 
         # Top N labels by total count
         top_labels = (
@@ -377,8 +400,7 @@ def plot_label_state_counts(path, table, output_path, top_n, exclude_labels=None
         df = pd.read_csv(path)
 
         if exclude_labels:
-            exclude_set = set(label.strip() for label in exclude_labels.split(","))
-            df = df[~df["label_name"].isin(exclude_set)]
+            df = df[~df["label_name"].isin(exclude_labels)]
 
         df = df[df["label_name"].str.startswith(("source:", "transform:", "sink:"))]
 

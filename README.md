@@ -33,7 +33,7 @@ The following script deletes and regenerates everything.
 
 ##### Issues
 
-![Monthly Issues](out/images/vectordotdev_vector_issues.monthly_issues_trend.png)
+![Monthly Issues](out/images/vectordotdev_vector_issues.monthly_trend.png)
 
 ---
 
@@ -53,7 +53,7 @@ The following script deletes and regenerates everything.
 
 ##### Pull Requests
 
-![Monthly PRs](out/images/vectordotdev_vector_pull_requests.monthly_issues_trend.png)
+![Monthly PRs](out/images/vectordotdev_vector_pull_requests.monthly_trend.png)
 
 ---
 
@@ -81,7 +81,7 @@ TODO!
 
 ##### Issues
 
-![Monthly Issues](out/images/vectordotdev_vrl_issues.monthly_issues_trend.png)
+![Monthly Issues](out/images/vectordotdev_vrl_issues.monthly_trend.png)
 
 ---
 
@@ -93,7 +93,7 @@ TODO!
 
 ##### Pull Requests
 
-![Monthly PRs](out/images/vectordotdev_vrl_pull_requests.monthly_issues_trend.png)
+![Monthly PRs](out/images/vectordotdev_vrl_pull_requests.monthly_trend.png)
 
 ---
 
