@@ -1,20 +1,20 @@
 month,label_name,count
-2022-04,domain: deps,58
-2022-04,domain: sinks,42
-2022-04,domain: sources,39
-2022-04,domain: external docs,35
-2022-04,domain: vrl,32
-2022-04,domain: core,26
-2022-04,domain: ci,17
-2022-04,ci-condition: integration tests enable,16
+2022-04,domain: deps,54
+2022-04,domain: sinks,41
+2022-04,domain: sources,36
+2022-04,domain: vrl,31
+2022-04,domain: external docs,30
+2022-04,domain: core,25
+2022-04,domain: ci,15
+2022-04,ci-condition: integration tests enable,13
 2022-04,type: tech debt,10
 2022-04,domain: transforms,9
-2022-04,domain: releasing,8
 2022-04,dependencies,8
-2022-04,ci-condition: k8s e2e tests enable,8
-2022-04,ci-condition: k8s e2e all targets,8
 2022-04,type: bug,7
-2022-04,domain: topology,6
+2022-04,domain: releasing,7
+2022-04,ci-condition: k8s e2e tests enable,7
+2022-04,ci-condition: k8s e2e all targets,7
+2022-04,domain: topology,5
 2022-04,domain: config,5
 2022-04,type: enhancement,4
 2022-04,domain: codecs,4
@@ -985,7 +985,7 @@ month,label_name,count
 2024-07,domain: deps,61
 2024-07,domain: external docs,22
 2024-07,domain: core,21
-2024-07,domain: sources,12
+2024-07,domain: sources,13
 2024-07,domain: sinks,10
 2024-07,domain: transforms,6
 2024-07,domain: ci,6
@@ -1059,11 +1059,11 @@ month,label_name,count
 2024-10,dependencies,5
 2024-10,domain: releasing,3
 2024-10,ci-condition: skip-regression,3
-2024-10,meta: awaiting author,2
 2024-10,domain: topology,2
 2024-10,type: enhancement,1
 2024-10,type: bug,1
 2024-10,provider: datadog,1
+2024-10,meta: awaiting author,1
 2024-10,domain: tests,1
 2024-11,no-changelog,121
 2024-11,domain: deps,66
@@ -1105,7 +1105,7 @@ month,label_name,count
 2025-01,domain: sinks,15
 2025-01,domain: core,14
 2025-01,domain: vdev,12
-2025-01,domain: sources,10
+2025-01,domain: sources,11
 2025-01,domain: releasing,8
 2025-01,domain: ci,6
 2025-01,domain: transforms,4
@@ -1125,13 +1125,13 @@ month,label_name,count
 2025-02,domain: sources,8
 2025-02,domain: ci,7
 2025-02,domain: topology,4
-2025-02,meta: awaiting author,3
 2025-02,domain: releasing,3
+2025-02,meta: awaiting author,2
 2025-02,editorial review,1
 2025-02,domain: transforms,1
 2025-02,domain: tests,1
 2025-02,domain: reload,1
-2025-03,no-changelog,100
+2025-03,no-changelog,101
 2025-03,domain: deps,47
 2025-03,domain: external docs,21
 2025-03,domain: sinks,13
@@ -1142,7 +1142,7 @@ month,label_name,count
 2025-03,domain: transforms,6
 2025-03,javascript,4
 2025-03,dependencies,4
-2025-03,meta: awaiting author,2
+2025-03,meta: awaiting author,3
 2025-03,transform: reduce,1
 2025-03,source: http_client,1
 2025-03,sink: clickhouse,1
@@ -1172,6 +1172,7 @@ month,label_name,count
 2025-05,domain: ci,10
 2025-05,domain: sources,9
 2025-05,domain: external docs,9
+2025-05,meta: awaiting author,7
 2025-05,domain: vdev,5
 2025-05,domain: sinks,5
 2025-05,domain: releasing,4
@@ -1181,24 +1182,27 @@ month,label_name,count
 2025-05,type: bug,1
 2025-05,source: dnstap,1
 2025-05,sink: amqp,1
-2025-05,meta: awaiting author,1
 2025-05,editorial review,1
 2025-05,domain: transforms,1
 2025-05,domain: topology,1
-2025-06,no-changelog,52
+2025-05,domain: enrichment_tables,1
+2025-06,no-changelog,71
 2025-06,domain: deps,17
-2025-06,domain: external docs,11
+2025-06,domain: external docs,15
+2025-06,domain: vdev,10
+2025-06,domain: sinks,10
 2025-06,domain: core,10
-2025-06,domain: sinks,9
-2025-06,domain: vdev,6
-2025-06,domain: sources,4
-2025-06,meta: awaiting author,3
+2025-06,meta: awaiting author,5
+2025-06,domain: sources,5
+2025-06,domain: ci,4
 2025-06,domain: codecs,2
-2025-06,domain: ci,2
 2025-06,type: tech debt,1
 2025-06,type: bug,1
+2025-06,source: heroku_logs,1
+2025-06,source: demo_logs,1
 2025-06,source: aws_ecs_metrics,1
 2025-06,domain: transforms,1
 2025-06,domain: topology,1
 2025-06,domain: schemas,1
+2025-06,domain: releasing,1
 2025-06,domain: config,1

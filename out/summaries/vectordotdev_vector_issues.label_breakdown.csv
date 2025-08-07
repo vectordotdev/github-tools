@@ -1,32 +1,32 @@
 label_name,count
-type: bug,1323
-type: feature,702
-domain: config,152
+type: bug,1322
+type: feature,701
+domain: config,151
 type: enhancement,141
 domain: observability,140
 domain: vrl,106
 domain: external docs,99
-domain: codecs,81
-domain: sources,74
-source: file,68
+domain: codecs,78
+domain: sources,73
+source: file,67
+domain: releasing,66
 type: tech debt,65
-domain: releasing,65
 meta: regression,63
 source: kubernetes_logs,61
 domain: buffers,58
-domain: performance,52
+domain: performance,51
 domain: metrics,44
-sink: aws_s3,43
 domain: sinks,43
-source: kafka,40
+sink: aws_s3,41
+source: kafka,38
 sink: elasticsearch,38
 domain: logs,37
 source: datadog_agent,35
 domain: ci,35
 vrl: stdlib,34
 sink: datadog_metrics,34
-domain: tests,32
 source: http_server,31
+domain: tests,31
 vrl: playground,28
 source: host_metrics,27
 meta: good first issue,27
@@ -76,15 +76,15 @@ sink: file,13
 sink: datadog_traces,13
 sink: aws_cloudwatch_logs,13
 domain: vdev,13
-domain: networking,13
-type: task,12
 sink: socket,12
 sink: opentelemetry,12
 sink: nats,12
 sink: aws_kinesis_streams,12
 provider: gcp,12
+domain: networking,12
 domain: deps,12
 vrl: compiler,11
+type: task,11
 sink: aws_kinesis_firehose,11
 platform: windows,11
 domain: traces,11
@@ -135,6 +135,7 @@ needs: rfc,5
 have: nice,5
 domain: templating,5
 domain: setup,5
+domain: internal docs,5
 domain: data model,5
 transform: dedupe,4
 transform: aggregate,4
@@ -150,7 +151,6 @@ sink: datadog_archives,4
 sink: axiom,4
 provider: splunk,4
 needs: approval,4
-domain: internal docs,4
 domain: healthchecks,4
 domain: enterprise,4
 vrl: diagnostic,3

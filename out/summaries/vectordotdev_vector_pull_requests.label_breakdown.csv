@@ -1,27 +1,27 @@
 label_name,count
-domain: deps,2630
-no-changelog,1779
-domain: external docs,1008
-domain: core,979
+domain: deps,2626
+no-changelog,1799
+domain: external docs,1007
+domain: core,978
 domain: sinks,889
 domain: sources,760
-ci-condition: integration tests enable,425
+ci-condition: integration tests enable,422
 domain: ci,387
-domain: vrl,358
-domain: vdev,356
+domain: vdev,360
+domain: vrl,357
 domain: transforms,288
 type: tech debt,243
 domain: releasing,190
-domain: topology,159
+domain: topology,158
 domain: observability,77
 domain: codecs,77
 dependencies,77
 type: bug,76
 type: enhancement,73
-meta: awaiting author,66
-ci-condition: k8s e2e tests enable,62
-ci-condition: k8s e2e all targets,58
+meta: awaiting author,73
+ci-condition: k8s e2e tests enable,61
 domain: tests,57
+ci-condition: k8s e2e all targets,57
 domain: dev,55
 domain: config,50
 domain: rfc,34
@@ -62,6 +62,7 @@ sink: datadog_events,6
 domain: cli,6
 vrl: stdlib,5
 source: vector,5
+source: heroku_logs,5
 sink: vector,5
 sink: statsd,5
 sink: splunk_hec,5
@@ -79,7 +80,6 @@ source: splunk_hec,4
 source: prometheus_scrape,4
 source: nats,4
 source: http_client,4
-source: heroku_logs,4
 source: fluent,4
 source: dnstap,4
 sink: prometheus_exporter,4
@@ -140,6 +140,7 @@ domain: soak tests,2
 domain: reload,2
 domain: logs,2
 domain: enterprise,2
+domain: enrichment_tables,2
 website: template,1
 website: releases,1
 website: operations,1
@@ -153,6 +154,7 @@ source: prometheus_remote_write,1
 source: postgresql_metrics,1
 source: mqtt,1
 source: eventstoredb_metrics,1
+source: demo_logs,1
 source: aws_sqs,1
 source: apache_metrics,1
 source: amqp,1
@@ -190,7 +192,6 @@ domain: platforms,1
 domain: parsing,1
 domain: healthchecks,1
 domain: filtering,1
-domain: enrichment_tables,1
 domain: enriching,1
 domain: auth,1
 domain: architecture,1
