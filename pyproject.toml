@@ -8,7 +8,7 @@ version = "0.0.1"
 description = "Personal scripts for GitHub automation and analysis"
 authors = [{ name = "Pavlos Rontidis", email = "pavlos.rontidis@gmail.com" }]
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">3.12"
 dependencies = []
 
 [tool.setuptools]
