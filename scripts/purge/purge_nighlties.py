@@ -165,10 +165,21 @@ if __name__ == "__main__":
                         type=str,
                         required=True,
                         help="Path to the .env file to load environment variables from")
-    parser.add_argument("--dry-run",
-                        action="store_true",
-                        default=True,
-                        help="Run in dry-run mode (default: True). Pass --dry-run false to actually delete.")
+
+    dry_run_group = parser.add_mutually_exclusive_group()
+    dry_run_group.add_argument(
+        "--dry-run",
+        dest="dry_run",
+        action="store_true",
+        help="Run in dry-run mode (default)."
+    )
+    dry_run_group.add_argument(
+        "--no-dry-run",
+        dest="dry_run",
+        action="store_false",
+        help="Run in destructive mode (actually delete versions)."
+    )
+    parser.set_defaults(dry_run=True)
     args = parser.parse_args()
 
     try:
