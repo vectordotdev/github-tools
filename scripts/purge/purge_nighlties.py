@@ -100,15 +100,21 @@ def clean_github_versions(threshold, github_token, dry_run=True):
             if nightly_tags:
                 print(f"🧹 GitHub version {version['id']} (tags: {tags}, created: {created_dt.date()})")
 
-                for tag in nightly_tags:
-                    f.write(json.dumps({
-                        "tag": tag,
-                        "last_updated": str(created_dt.date())
-                    }) + "\n")
+                if dry_run:
+                    for tag in nightly_tags:
+                        f.write(json.dumps({
+                            "tag": tag,
+                            "last_updated": str(created_dt.date())
+                        }) + "\n")
 
                 if not dry_run:
                     if delete_github_version(version["id"], github_token):
                         print(f"✅ Deleted GitHub version {version['id']}")
+                        for tag in nightly_tags:
+                            f.write(json.dumps({
+                                "tag": tag,
+                                "last_updated": str(created_dt.date())
+                            }) + "\n")
                     else:
                         print(f"❌ Failed to delete GitHub version {version['id']}")
 
@@ -137,14 +143,15 @@ def clean_dockerhub_tags(threshold, username, password, dry_run=True):
             tag_date = datetime.fromisoformat(tag["last_updated"].replace("Z", "+00:00"))
 
             if name.startswith("nightly") and tag_date < threshold:
-                print(f"🧹 Deleting Docker tag {name} (last updated: {tag_date.date()})")
-                f.write(json.dumps({"tag": name, "last_updated": str(tag_date.date())}) + "\n")
+                if dry_run:
+                    f.write(json.dumps({"tag": name, "last_updated": str(tag_date.date())}) + "\n")
 
                 if not dry_run:
                     delete_url = f"https://hub.docker.com/v2/repositories/{DOCKER_REPO}/tags/{name}/"
                     delete_resp = requests.delete(delete_url, headers=headers)
                     if delete_resp.status_code == 204:
                         print(f"✅ Deleted Docker tag: {name}")
+                        f.write(json.dumps({"tag": name, "last_updated": str(tag_date.date())}) + "\n")
                     else:
                         print(f"❌ Failed to delete {name}: {delete_resp.status_code} - {delete_resp.text}")
 
