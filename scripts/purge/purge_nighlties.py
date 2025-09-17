@@ -1,4 +1,5 @@
 import argparse
+import json
 import os
 from datetime import datetime, timezone, timedelta
 
@@ -79,24 +80,43 @@ def list_docker_tags():
 
 def clean_github_versions(threshold, github_token, dry_run=True):
     print(f"🔍 Checking GitHub nightly container versions older than {threshold.date()}")
-    for version in list_github_versions(github_token):
-        tags = version.get("metadata", {}).get("container", {}).get("tags", [])
-        created_at = version.get("created_at")
-        created_dt = datetime.fromisoformat(created_at.rstrip("Z")).replace(tzinfo=timezone.utc)
-        if any(t.startswith("nightly") for t in tags) and created_dt < threshold:
-            print(f"🧹 Deleting GitHub version {version['id']} (tags: {tags}, created: {created_dt.date()})")
-            if dry_run:
-                print(f"⚠️ Dry run: would delete GitHub version {version['id']}")
-            else:
-                if delete_github_version(version["id"], github_token):
-                    print(f"✅ Deleted GitHub version {version['id']}")
-                else:
-                    print(f"❌ Failed to delete GitHub version {version['id']}")
+
+    with open(GITHUB_AUDIT_FILE, "w") as f:
+        f.write(json.dumps({"dry_run": dry_run}) + "\n")
+
+        versions = list_github_versions(github_token)
+        print(f"ℹ️  Fetched {len(versions)} GitHub versions")
+
+        for version in versions:
+            tags = version["metadata"]["container"]["tags"]
+
+            # Skip early if version is newer than threshold
+            created_at = version["created_at"]
+            created_dt = datetime.fromisoformat(created_at.rstrip("Z")).replace(tzinfo=timezone.utc)
+            if created_dt >= threshold:
+                continue
+
+            nightly_tags = [t for t in tags if "nightly" in t]
+            if nightly_tags:
+                print(f"🧹 GitHub version {version['id']} (tags: {tags}, created: {created_dt.date()})")
+
+                for tag in nightly_tags:
+                    f.write(json.dumps({
+                        "tag": tag,
+                        "last_updated": str(created_dt.date())
+                    }) + "\n")
+
+                if not dry_run:
+                    if delete_github_version(version["id"], github_token):
+                        print(f"✅ Deleted GitHub version {version['id']}")
+                    else:
+                        print(f"❌ Failed to delete GitHub version {version['id']}")
+
+    print(f"📄 Wrote audit file: {GITHUB_AUDIT_FILE}")
 
 
 def clean_dockerhub_tags(threshold, username, password, dry_run=True):
     print(f"🔍 Checking Docker Hub tags older than {threshold.date()}")
-
     login_resp = requests.post(
         "https://hub.docker.com/v2/users/login/",
         json={"username": username, "password": password}
@@ -109,21 +129,26 @@ def clean_dockerhub_tags(threshold, username, password, dry_run=True):
     token = login_resp.json()["token"]
     headers = {"Authorization": f"JWT {token}"}
 
-    tags = list_docker_tags()
-    for tag in tags:
-        name = tag["name"]
-        tag_date = datetime.fromisoformat(tag["last_updated"].replace("Z", "+00:00"))
-        if name.startswith("nightly") and tag_date < threshold:
-            print(f"🧹 Deleting Docker tag {name} (last updated: {tag_date.date()})")
-            if dry_run:
-                print(f"⚠️ Dry run: would delete Docker tag {name}")
-            else:
-                delete_url = f"https://hub.docker.com/v2/repositories/{DOCKER_REPO}/tags/{name}/"
-                delete_resp = requests.delete(delete_url, headers=headers)
-                if delete_resp.status_code == 204:
-                    print(f"✅ Deleted Docker tag: {name}")
-                else:
-                    print(f"❌ Failed to delete {name}: {delete_resp.status_code} - {delete_resp.text}")
+    with open(DOCKERHUB_AUDIT_FILE, "w") as f:
+        f.write(json.dumps({"dry_run": dry_run}) + "\n")
+
+        for tag in list_docker_tags():
+            name = tag["name"]
+            tag_date = datetime.fromisoformat(tag["last_updated"].replace("Z", "+00:00"))
+
+            if name.startswith("nightly") and tag_date < threshold:
+                print(f"🧹 Deleting Docker tag {name} (last updated: {tag_date.date()})")
+                f.write(json.dumps({"tag": name, "last_updated": str(tag_date.date())}) + "\n")
+
+                if not dry_run:
+                    delete_url = f"https://hub.docker.com/v2/repositories/{DOCKER_REPO}/tags/{name}/"
+                    delete_resp = requests.delete(delete_url, headers=headers)
+                    if delete_resp.status_code == 204:
+                        print(f"✅ Deleted Docker tag: {name}")
+                    else:
+                        print(f"❌ Failed to delete {name}: {delete_resp.status_code} - {delete_resp.text}")
+
+    print(f"📄 Wrote audit file: {DOCKERHUB_AUDIT_FILE}")
 
 
 # ----------------------------
@@ -154,8 +179,7 @@ if __name__ == "__main__":
 
     threshold_date = get_date_threshold(args.older_than)
     github_token = env["GITHUB_TOKEN"]
-
-    # clean_github_versions(threshold_date, github_token, dry_run=args.dry_run)
+    clean_github_versions(threshold_date, github_token, dry_run=args.dry_run)
 
     username = env["DOCKER_USERNAME"]
     password = env["DOCKER_PASSWORD"]
