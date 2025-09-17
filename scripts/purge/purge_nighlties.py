@@ -1,4 +1,5 @@
 import argparse
+import os
 from datetime import datetime, timezone, timedelta
 
 import requests
@@ -15,6 +16,13 @@ DOCKER_TAGS_API = f"https://hub.docker.com/v2/repositories/{DOCKER_REPO}/tags?pa
 GITHUB_ORG = "vectordotdev"
 GITHUB_PACKAGE = "vector"
 GITHUB_API = f"https://api.github.com/orgs/{GITHUB_ORG}/packages/container/{GITHUB_PACKAGE}/versions"
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out/purge"))
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+GITHUB_AUDIT_FILE = os.path.join(OUTPUT_DIR, "nightly_github.jsonl")
+DOCKERHUB_AUDIT_FILE = os.path.join(OUTPUT_DIR, "nightly_dockerhub.jsonl")
 
 
 # ----------------------------
