@@ -1,13 +1,12 @@
-import os
 from datetime import datetime, timedelta, UTC
+
 import requests
-import json
 import semver  # Added semver library
 
-from scripts.util.load_env import load_github_env_vars
+from scripts.util.load_env import load_env
 
 # Load environment variables
-ENV = load_github_env_vars()
+ENV = load_env()
 OWNER = ENV.get("REPO_OWNER", "vectordotdev")
 REPO = ENV.get("REPO_NAME", "vector")
 TOKEN = ENV.get("GITHUB_TOKEN")

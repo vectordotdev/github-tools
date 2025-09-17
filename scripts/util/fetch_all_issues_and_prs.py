@@ -6,7 +6,7 @@ import os
 import requests
 
 from scripts.logging.custom_logging import setup_logger
-from scripts.util.load_env import load_github_env_vars
+from scripts.util.load_env import load_env
 
 # Constants
 API_BASE_URL = "https://api.github.com/repos"
@@ -79,7 +79,7 @@ def write_to_json_file(issues, repo_owner, repo_name):
 
 def main():
     setup_logger()
-    
+
     parser = argparse.ArgumentParser(description="Fetch GitHub issues from a repository.")
     parser.add_argument(
         "--include-closed",
@@ -96,7 +96,7 @@ def main():
 
     # Load environment variables from .env and validate them
     try:
-        env = load_github_env_vars(args.env_file)  # expects GITHUB_TOKEN, REPO_OWNER, REPO_NAME to be set
+        env = load_env(args.env_file)  # expects GITHUB_TOKEN, REPO_OWNER, REPO_NAME to be set
     except ValueError as e:
         print(f"Error loading environment variables: {e}")
         return 1

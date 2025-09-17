@@ -11,7 +11,7 @@ import pandas as pd
 from matplotlib.ticker import MaxNLocator
 
 from scripts.logging.custom_logging import setup_logger
-from scripts.util.load_env import load_github_env_vars
+from scripts.util.load_env import load_env
 
 # Constants
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -102,7 +102,7 @@ def main():
     args = parse_args()
 
     try:
-        env = load_github_env_vars(args.env_file)
+        env = load_env(args.env_file)
     except ValueError as e:
         print(f"Error loading environment variables: {e}")
         return 1
@@ -233,7 +233,7 @@ def plot_integration_trends(csv_path, table, output_path, start_date=None, exclu
 
     if not exclude_labels:
         exclude_labels = set()
-        
+
     # Build exclusion set
     for non_label in ['month', 'open_issues', 'closed_issues']:
         if non_label in df.columns:

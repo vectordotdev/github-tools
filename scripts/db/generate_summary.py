@@ -5,7 +5,7 @@ import os
 import sqlite3
 
 from scripts.logging.custom_logging import setup_logger
-from scripts.util.load_env import load_github_env_vars
+from scripts.util.load_env import load_env
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../out/summaries"))
@@ -246,7 +246,7 @@ def main():
     args = parse_args()
 
     try:
-        env = load_github_env_vars(args.env_file)
+        env = load_env(args.env_file)
     except ValueError as e:
         print(f"Error loading environment variables: {e}")
         return 1

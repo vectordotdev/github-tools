@@ -3,7 +3,7 @@ from datetime import datetime, timezone, timedelta
 
 import requests
 
-from scripts.util.load_env import load_env_vars
+from scripts.util.load_env import load_env
 
 # ----------------------------
 # Configuration
@@ -139,7 +139,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     try:
-        env = load_env_vars(args.env_file)
+        env = load_env(args.env_file)
     except ValueError as e:
         print(f"Error loading environment variables: {e}")
         exit(1)
