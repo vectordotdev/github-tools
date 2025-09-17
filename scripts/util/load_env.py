@@ -6,6 +6,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory whe
 ENV_FILE = os.path.abspath(os.path.join(SCRIPT_DIR, "../vector-default.env"))
 
 
+# TODO remove in favor of `load_env_vars`
 def load_github_env_vars(env_file=ENV_FILE):
     """
     Load and validate GitHub-related environment variables from the given .env file.
@@ -43,6 +44,32 @@ def load_github_env_vars(env_file=ENV_FILE):
         "REPO_OWNER": repo_owner,
         "REPO_NAME": repo_name
     }
+
+
+def load_env_vars(env_file=ENV_FILE) -> dict:
+    """
+    Load all environment variables from a .env file and return them as a dictionary.
+
+    Args:
+        env_file (str): Path to the .env file.
+
+    Returns:
+        dict: A dictionary of all key=value pairs from the .env file.
+
+    Raises:
+        ValueError: If the .env file is missing or can't be parsed.
+    """
+    if not os.path.exists(env_file):
+        env_file = find_dotenv()
+        if not env_file:
+            raise ValueError(f"No .env file found at {env_file}")
+
+    success = load_dotenv(env_file, override=True, verbose=True)
+    if not success:
+        raise ValueError(f"Failed to load .env file at: {env_file}")
+
+    # Return all current environment variables as a dict (loaded .env will now be in os.environ)
+    return {k: v for k, v in os.environ.items() if not k.startswith("_")}
 
 
 # Example usage if running this file directly:
