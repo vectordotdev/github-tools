@@ -1,9 +1,17 @@
 import json
 import random
+import re
 import time
 from datetime import datetime, timezone, timedelta
 
 import requests
+
+GITHUB_ORG = "vectordotdev"
+GITHUB_PACKAGE = "vector"
+GITHUB_API = f"https://api.github.com/orgs/{GITHUB_ORG}/packages/container/{GITHUB_PACKAGE}/versions"
+
+# Block versioned tags like: 0.48.0, 0.47.X, 1.2.3-debian, etc.
+BLOCKED_TAG_PATTERN = re.compile(r"^\d+\.\d+\.\d+([.-]|$)|^\d+\.\d+\.X([.-]|$)")
 
 
 def get_date_threshold(days_old):
@@ -96,6 +104,10 @@ def purge_dockerhub_images(repo, audit_file, threshold, username, password, dry_
         f.write(json.dumps({"dry_run": dry_run}) + "\n")
 
         for tag in list_tags(repo):
+            # Always skip semver-like tags
+            if BLOCKED_TAG_PATTERN.match(tag["name"]):
+                continue
+
             name = tag["name"]
             tag_date = datetime.fromisoformat(tag["last_updated"].replace("Z", "+00:00"))
 
@@ -114,3 +126,140 @@ def purge_dockerhub_images(repo, audit_file, threshold, username, password, dry_
                         print(f"❌ Failed to delete {name}: {delete_resp.status_code} - {delete_resp.text}")
 
     print(f"📄 Audit log saved to: {audit_file}")
+
+
+def github_headers(github_token):
+    return {
+        "Authorization": f"Bearer {github_token}",
+        "Accept": "application/vnd.github+json"
+    }
+
+
+def list_github_versions(github_token):
+    versions = []
+    page = 1
+    while True:
+        resp = requests.get(f"{GITHUB_API}?per_page=100&page={page}", headers=github_headers(github_token))
+        resp.raise_for_status()
+        batch = resp.json()
+        if not batch:
+            break
+        versions.extend(batch)
+        page += 1
+    return versions
+
+
+def delete_github_version(version_id, github_token):
+    resp = requests.delete(f"{GITHUB_API}/{version_id}", headers=github_headers(github_token))
+    return resp.status_code == 204
+
+
+def purge_github_versions(threshold, github_token, audit_file, dry_run=True, tag_filter=None):
+    """
+    Deletes GitHub container versions older than the threshold that match the tag_filter.
+
+    Parameters:
+        - threshold (datetime): Only delete versions created before this date
+        - github_token (str): GitHub personal access token
+        - audit_file (str): Path to audit file to write actions
+        - dry_run (bool): If True, don't actually delete
+        - tag_filter (Callable[[str], bool]): Function to filter tags to delete (filters for 'nightly' default)
+    """
+    print(f"🔍 Checking GitHub container versions older than {threshold.date()}")
+
+    with open(audit_file, "w") as f:
+        f.write(json.dumps({"dry_run": dry_run}) + "\n")
+
+        versions = list_github_versions(github_token)
+        print(f"ℹ️  Fetched {len(versions)} GitHub versions")
+
+        for version in versions:
+            tags = version["metadata"]["container"]["tags"]
+            created_at = version["created_at"]
+            created_dt = datetime.fromisoformat(created_at.rstrip("Z")).replace(tzinfo=timezone.utc)
+
+            if created_dt >= threshold:
+                continue
+
+            # Use tag_filter or default to 'nightly' in tag
+            filter_fn = tag_filter or (lambda t: "nightly" in t)
+            matching_tags = [t for t in tags if filter_fn(t)]
+
+            for tag in matching_tags:
+                # Always skip semver-like tags
+                if BLOCKED_TAG_PATTERN.match(tag):
+                    continue
+
+            if matching_tags:
+                print(f"🧹 GitHub version {version['id']} (tags: {tags}, created: {created_dt.date()})")
+
+                if dry_run:
+                    for tag in matching_tags:
+                        f.write(json.dumps({
+                            "tag": tag,
+                            "last_updated": str(created_dt.date())
+                        }) + "\n")
+
+                else:
+                    if delete_github_version(version["id"], github_token):
+                        print(f"✅ Deleted GitHub version {version['id']}")
+                        for tag in matching_tags:
+                            f.write(json.dumps({
+                                "tag": tag,
+                                "last_updated": str(created_dt.date())
+                            }) + "\n")
+                    else:
+                        print(f"❌ Failed to delete GitHub version {version['id']}")
+
+    print(f"📄 Wrote audit file: {audit_file}")
+
+
+def purge_github_untagged_versions(threshold, github_token, audit_file, dry_run=True):
+    """
+    Deletes untagged GitHub container versions older than the threshold.
+
+    Parameters:
+        - threshold (datetime): Only delete versions created before this date
+        - github_token (str): GitHub personal access token
+        - audit_file (str): Path to audit file to write actions
+        - dry_run (bool): If True, don't actually delete
+    """
+    print(f"🔍 Checking untagged GitHub container versions older than {threshold.date()}")
+
+    with open(audit_file, "w") as f:
+        f.write(json.dumps({"dry_run": dry_run}) + "\n")
+
+        versions = list_github_versions(github_token)
+        print(f"ℹ️  Fetched {len(versions)} GitHub versions")
+
+        for version in versions:
+            tags = version["metadata"]["container"]["tags"]
+            created_at = version["created_at"]
+            created_dt = datetime.fromisoformat(created_at.rstrip("Z")).replace(tzinfo=timezone.utc)
+
+            if created_dt >= threshold:
+                continue
+
+            if tags:
+                continue  # ❌ Skip tagged versions
+
+            print(f"🧹 Untagged version {version['id']} (created: {created_dt.date()})")
+
+            if dry_run:
+                f.write(json.dumps({
+                    "tag": "<untagged>",
+                    "version_id": version["id"],
+                    "last_updated": str(created_dt.date())
+                }) + "\n")
+            else:
+                if delete_github_version(version["id"], github_token):
+                    print(f"✅ Deleted untagged GitHub version {version['id']}")
+                    f.write(json.dumps({
+                        "tag": "<untagged>",
+                        "version_id": version["id"],
+                        "last_updated": str(created_dt.date())
+                    }) + "\n")
+                else:
+                    print(f"❌ Failed to delete untagged GitHub version {version['id']}")
+
+    print(f"📄 Wrote audit file: {audit_file}")
