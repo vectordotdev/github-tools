@@ -117,6 +117,12 @@ if __name__ == "__main__":
                         type=str,
                         required=True,
                         help="Path to the .env file to load environment variables from")
+    parser.add_argument(
+        "--target",
+        choices=["dockerhub", "github", "all"],
+        default="all",
+        help="Which platform to clean: 'dockerhub', 'github', or 'all' (default: all)"
+    )
 
     dry_run_group = parser.add_mutually_exclusive_group()
     dry_run_group.add_argument(
@@ -140,22 +146,24 @@ if __name__ == "__main__":
         print(f"Error loading environment variables: {e}")
         exit(1)
 
-    threshold_date = get_date_threshold(args.older_than)
-    github_token = env["GITHUB_TOKEN"]
-    # clean_github_versions(threshold_date, github_token, dry_run=args.dry_run)
+    if args.target in ("github", "all"):
+        threshold_date = get_date_threshold(args.older_than)
+        github_token = env["GITHUB_TOKEN"]
+        clean_github_versions(threshold_date, github_token, dry_run=args.dry_run)
 
-    username = env["DOCKER_USERNAME"]
-    password = env["DOCKER_PASSWORD"]
-    if not username or not password:
-        print("❌ DOCKER_USERNAME and DOCKER_PASSWORD environment variables are required.")
-        exit(1)
+    if args.target in ("dockerhub", "all"):
+        username = env["DOCKER_USERNAME"]
+        password = env["DOCKER_PASSWORD"]
+        if not username or not password:
+            print("❌ DOCKER_USERNAME and DOCKER_PASSWORD environment variables are required.")
+            exit(1)
 
-    purge_dockerhub_images(
-        repo=DOCKER_REPO,
-        audit_file=DOCKERHUB_AUDIT_FILE,
-        threshold=datetime.now(timezone.utc) - timedelta(days=30),
-        username=username,
-        password=password,
-        dry_run=args.dry_run,
-        tag_filter=lambda tag: tag.startswith("nightly")
-    )
+        purge_dockerhub_images(
+            repo=DOCKER_REPO,
+            audit_file=DOCKERHUB_AUDIT_FILE,
+            threshold=datetime.now(timezone.utc) - timedelta(days=30),
+            username=username,
+            password=password,
+            dry_run=args.dry_run,
+            tag_filter=lambda tag: tag.startswith("nightly")
+        )
