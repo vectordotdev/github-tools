@@ -1,4 +1,6 @@
 import json
+import random
+import time
 from datetime import datetime, timezone, timedelta
 
 import requests
@@ -6,6 +8,25 @@ import requests
 
 def get_date_threshold(days_old):
     return datetime.now(timezone.utc) - timedelta(days=days_old)
+
+
+def retry_with_backoff(func, max_attempts=10, base_delay=1, max_delay=120):
+    """
+    Retry a function with exponential backoff on HTTP 429 or 5xx errors.
+    """
+    for attempt in range(max_attempts):
+        try:
+            response = func()
+            if response.status_code in (429, 500, 502, 503, 504):
+                raise requests.exceptions.HTTPError(f"Retryable status code: {response.status_code}")
+            return response
+        except requests.exceptions.RequestException as e:
+            wait = min(max_delay, base_delay * (2 ** attempt) + random.uniform(0, 1))
+            print(f"⏳ Attempt {attempt + 1} failed: {e}. Retrying in {wait:.1f}s...")
+            time.sleep(wait)
+
+    print(f"❌ Exceeded retry attempts.")
+    return None
 
 
 def list_docker_tags(repo):
@@ -85,7 +106,7 @@ def purge_dockerhub_images(repo, audit_file, threshold, username, password, dry_
                     f.write(json.dumps({"tag": name, "last_updated": str(tag_date.date())}) + "\n")
                 else:
                     delete_url = f"https://hub.docker.com/v2/repositories/{repo}/tags/{name}/"
-                    delete_resp = requests.delete(delete_url, headers=headers)
+                    delete_resp = retry_with_backoff(lambda: requests.delete(delete_url, headers=headers))
                     if delete_resp.status_code == 204:
                         print(f"✅ Deleted tag: {name}")
                         f.write(json.dumps({"tag": name, "last_updated": str(tag_date.date())}) + "\n")
