@@ -56,7 +56,8 @@ def purge_dockerhub_images(repo, audit_file, threshold, username, password, dry_
 
     login_resp = requests.post(
         "https://hub.docker.com/v2/users/login/",
-        json={"username": username, "password": password}
+        json={"username": username, "password": password},
+        headers={"Content-Type": "application/json"},
     )
 
     if login_resp.status_code != 200:

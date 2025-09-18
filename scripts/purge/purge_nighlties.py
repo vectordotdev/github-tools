@@ -1,7 +1,7 @@
 import argparse
 import json
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 import requests
 
@@ -142,7 +142,7 @@ if __name__ == "__main__":
 
     threshold_date = get_date_threshold(args.older_than)
     github_token = env["GITHUB_TOKEN"]
-    clean_github_versions(threshold_date, github_token, dry_run=args.dry_run)
+    # clean_github_versions(threshold_date, github_token, dry_run=args.dry_run)
 
     username = env["DOCKER_USERNAME"]
     password = env["DOCKER_PASSWORD"]
@@ -151,11 +151,11 @@ if __name__ == "__main__":
         exit(1)
 
     purge_dockerhub_images(
-        repo="timberio/vector-dev",
-        audit_file="audit.jsonl",
+        repo=DOCKER_REPO,
+        audit_file=DOCKERHUB_AUDIT_FILE,
         threshold=datetime.now(timezone.utc) - timedelta(days=30),
-        username="your_user",
-        password="your_pass",
-        dry_run=True,
+        username=username,
+        password=password,
+        dry_run=args.dry_run,
         tag_filter=lambda tag: tag.startswith("nightly")
     )
