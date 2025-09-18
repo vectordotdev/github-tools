@@ -1,10 +1,11 @@
 import argparse
 import json
 import os
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 
 import requests
 
+from scripts.purge.utils import get_date_threshold, purge_dockerhub_images
 from scripts.util.load_env import load_env
 
 # ----------------------------
@@ -12,7 +13,6 @@ from scripts.util.load_env import load_env
 # ----------------------------
 
 DOCKER_REPO = "timberio/vector"
-DOCKER_TAGS_API = f"https://hub.docker.com/v2/repositories/{DOCKER_REPO}/tags?page_size=100"
 
 GITHUB_ORG = "vectordotdev"
 GITHUB_PACKAGE = "vector"
@@ -29,10 +29,6 @@ DOCKERHUB_AUDIT_FILE = os.path.join(OUTPUT_DIR, "nightly_dockerhub.jsonl")
 # ----------------------------
 # Helpers
 # ----------------------------
-
-def get_date_threshold(days_old):
-    return datetime.now(timezone.utc) - timedelta(days=days_old)
-
 
 def github_headers(github_token):
     return {
@@ -58,20 +54,6 @@ def list_github_versions(github_token):
 def delete_github_version(version_id, github_token):
     resp = requests.delete(f"{GITHUB_API}/{version_id}", headers=github_headers(github_token))
     return resp.status_code == 204
-
-
-def list_docker_tags():
-    tags = []
-    page = 1
-    while True:
-        resp = requests.get(f"{DOCKER_TAGS_API}&page={page}")
-        resp.raise_for_status()
-        data = resp.json()
-        tags.extend(data.get("results", []))
-        if not data.get("next"):
-            break
-        page += 1
-    return tags
 
 
 # ----------------------------
@@ -121,43 +103,6 @@ def clean_github_versions(threshold, github_token, dry_run=True):
     print(f"📄 Wrote audit file: {GITHUB_AUDIT_FILE}")
 
 
-def clean_dockerhub_tags(threshold, username, password, dry_run=True):
-    print(f"🔍 Checking Docker Hub tags older than {threshold.date()}")
-    login_resp = requests.post(
-        "https://hub.docker.com/v2/users/login/",
-        json={"username": username, "password": password}
-    )
-
-    if login_resp.status_code != 200:
-        print(f"❌ Failed to authenticate with Docker Hub: {login_resp.text}")
-        return
-
-    token = login_resp.json()["token"]
-    headers = {"Authorization": f"JWT {token}"}
-
-    with open(DOCKERHUB_AUDIT_FILE, "w") as f:
-        f.write(json.dumps({"dry_run": dry_run}) + "\n")
-
-        for tag in list_docker_tags():
-            name = tag["name"]
-            tag_date = datetime.fromisoformat(tag["last_updated"].replace("Z", "+00:00"))
-
-            if name.startswith("nightly") and tag_date < threshold:
-                if dry_run:
-                    f.write(json.dumps({"tag": name, "last_updated": str(tag_date.date())}) + "\n")
-
-                if not dry_run:
-                    delete_url = f"https://hub.docker.com/v2/repositories/{DOCKER_REPO}/tags/{name}/"
-                    delete_resp = requests.delete(delete_url, headers=headers)
-                    if delete_resp.status_code == 204:
-                        print(f"✅ Deleted Docker tag: {name}")
-                        f.write(json.dumps({"tag": name, "last_updated": str(tag_date.date())}) + "\n")
-                    else:
-                        print(f"❌ Failed to delete {name}: {delete_resp.status_code} - {delete_resp.text}")
-
-    print(f"📄 Wrote audit file: {DOCKERHUB_AUDIT_FILE}")
-
-
 # ----------------------------
 # Entry Point
 # ----------------------------
@@ -205,4 +150,12 @@ if __name__ == "__main__":
         print("❌ DOCKER_USERNAME and DOCKER_PASSWORD environment variables are required.")
         exit(1)
 
-    clean_dockerhub_tags(threshold_date, username, password, dry_run=args.dry_run)
+    purge_dockerhub_images(
+        repo="timberio/vector-dev",
+        audit_file="audit.jsonl",
+        threshold=datetime.now(timezone.utc) - timedelta(days=30),
+        username="your_user",
+        password="your_pass",
+        dry_run=True,
+        tag_filter=lambda tag: tag.startswith("nightly")
+    )
