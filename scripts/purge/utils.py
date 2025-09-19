@@ -65,6 +65,7 @@ def list_tags(repo):
         if not data.get("next"):
             break
         page += 1
+    tags.sort(key=lambda t: datetime.fromisoformat(t["tag_last_pushed"]))
     return tags
 
 
