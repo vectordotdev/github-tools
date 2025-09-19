@@ -118,7 +118,7 @@ def purge_dockerhub_images(repo, audit_file, threshold, username, password, dry_
                     f.write(json.dumps({"tag": name, "last_updated": str(tag_date.date())}) + "\n")
                 else:
                     delete_url = f"https://hub.docker.com/v2/repositories/{repo}/tags/{name}/"
-                    delete_resp = retry_with_backoff(lambda: requests.delete(delete_url, headers=headers))
+                    delete_resp = requests.delete(delete_url, headers=headers)
                     if delete_resp.status_code == 204:
                         print(f"✅ Deleted tag: {name}")
                         f.write(json.dumps({"tag": name, "last_updated": str(tag_date.date())}) + "\n")
