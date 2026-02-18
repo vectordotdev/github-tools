@@ -1,248 +1,13 @@
 month,label_name,count
-2022-04,type: bug,53
-2022-04,type: feature,22
-2022-04,meta: regression,18
-2022-04,domain: config,17
-2022-04,domain: performance,15
-2022-04,domain: vrl,14
-2022-04,provider: aws,12
-2022-04,domain: codecs,10
-2022-04,domain: external docs,8
-2022-04,domain: ci,6
-2022-04,Epic,5
-2022-04,type: enhancement,4
-2022-04,source: kubernetes_logs,4
-2022-04,domain: tests,4
-2022-04,domain: observability,4
-2022-04,type: tech debt,3
-2022-04,type: task,3
-2022-04,source: vector,3
-2022-04,sink: vector,3
-2022-04,sink: nats,3
-2022-04,domain: schemas,3
-2022-04,domain: cli,3
-2022-04,domain: buffers,3
-2022-04,vrl: stdlib,2
-2022-04,transform: route,2
-2022-04,source: socket,2
-2022-04,source: nats,2
-2022-04,source: kafka,2
-2022-04,source: journald,2
-2022-04,source: internal_logs,2
-2022-04,source: datadog_agent,2
-2022-04,source: aws_s3,2
-2022-04,sink: splunk_hec,2
-2022-04,sink: socket,2
-2022-04,sink: gcp_stackdriver_metrics,2
-2022-04,sink: elasticsearch,2
-2022-04,sink: datadog_metrics,2
-2022-04,sink: datadog_logs,2
-2022-04,sink: aws_kinesis_firehose,2
-2022-04,sink: aws_cloudwatch_logs,2
-2022-04,provider: datadog,2
-2022-04,domain: unit tests,2
-2022-04,domain: sources,2
-2022-04,domain: deps,2
-2022-04,vrl: compiler,1
-2022-04,source: syslog,1
-2022-04,source: redis,1
-2022-04,source: http_server,1
-2022-04,source: exec,1
-2022-04,source: demo_logs,1
-2022-04,source: datadog_logs,1
-2022-04,source: aws_sqs,1
-2022-04,sink: new_relic_logs,1
-2022-04,sink: http,1
-2022-04,sink: gcp_stackdriver_logs,1
-2022-04,sink: gcp_cloud_storage,1
-2022-04,sink: file,1
-2022-04,sink: datadog_events,1
-2022-04,sink: clickhouse,1
-2022-04,sink: aws_s3,1
-2022-04,provider: gcp,1
-2022-04,platform: docker,1
-2022-04,have: nice,1
-2022-04,domain: traces,1
-2022-04,domain: topology,1
-2022-04,domain: soak tests,1
-2022-04,domain: sinks,1
-2022-04,domain: setup,1
-2022-04,domain: reload,1
-2022-04,domain: logs,1
-2022-04,domain: durability,1
-2022-04,domain: dev,1
-2022-04,domain: delivery,1
-2022-04,domain: auth,1
-2022-05,type: bug,40
-2022-05,type: feature,26
-2022-05,domain: vrl,16
-2022-05,type: tech debt,7
-2022-05,domain: config,7
-2022-05,source: gcp_pubsub,6
-2022-05,domain: sinks,6
-2022-05,domain: observability,6
-2022-05,type: enhancement,5
-2022-05,provider: gcp,5
-2022-05,domain: performance,4
-2022-05,domain: codecs,4
-2022-05,vrl: compiler,3
-2022-05,source: kubernetes_logs,3
-2022-05,sink: gcp_cloud_storage,3
-2022-05,sink: datadog_metrics,3
-2022-05,domain: sources,3
-2022-05,domain: ci,3
-2022-05,transform: lua,2
-2022-05,source: vector,2
-2022-05,sink: kafka,2
-2022-05,sink: gcp_pubsub,2
-2022-05,sink: file,2
-2022-05,provider: aws,2
-2022-05,platform: rpm,2
-2022-05,platform: docker,2
-2022-05,needs: rfc,2
-2022-05,domain: tests,2
-2022-05,domain: schemas,2
-2022-05,domain: releasing,2
-2022-05,domain: networking,2
-2022-05,domain: metrics,2
-2022-05,domain: deployment,2
-2022-05,domain: buffers,2
-2022-05,vrl: syntax,1
-2022-05,type: task,1
-2022-05,transform: log_to_metric,1
-2022-05,transform: aws_ec2_metadata,1
-2022-05,source: prometheus_scrape,1
-2022-05,source: nats,1
-2022-05,source: internal_logs,1
-2022-05,source: exec,1
-2022-05,source: datadog_agent,1
-2022-05,source: aws_ecs_metrics,1
-2022-05,sink: vector,1
-2022-05,sink: splunk_hec,1
-2022-05,sink: redis,1
-2022-05,sink: datadog_logs,1
-2022-05,sink: aws_s3,1
-2022-05,sink: aws_kinesis_firehose,1
-2022-05,sink: aws_cloudwatch_logs,1
-2022-05,platform: debian,1
-2022-05,platform: arm,1
-2022-05,meta: regression,1
-2022-05,meta: idea,1
-2022-05,meta: good first issue,1
-2022-05,meta: blocked,1
-2022-05,domain: unit tests,1
-2022-05,domain: traces,1
-2022-05,domain: soak tests,1
-2022-05,domain: shutdown,1
-2022-05,domain: security,1
-2022-05,domain: platforms,1
-2022-05,domain: external docs,1
-2022-05,domain: data model,1
-2022-05,domain: cli,1
-2022-05,domain: architecture,1
-2022-06,type: bug,69
-2022-06,type: feature,20
-2022-06,domain: vrl,15
-2022-06,domain: config,13
-2022-06,domain: buffers,10
-2022-06,domain: delivery,9
-2022-06,domain: observability,8
-2022-06,type: enhancement,7
-2022-06,domain: metrics,7
-2022-06,domain: external docs,7
-2022-06,vrl: typedef,6
-2022-06,domain: reliability,6
-2022-06,type: tech debt,5
-2022-06,source: file,4
-2022-06,sink: datadog_metrics,4
-2022-06,meta: regression,4
-2022-06,domain: sinks,4
-2022-06,domain: reload,4
-2022-06,domain: performance,4
-2022-06,domain: dev,4
-2022-06,vrl: stdlib,3
-2022-06,vrl: compiler,3
-2022-06,source: internal_metrics,3
-2022-06,source: host_metrics,3
-2022-06,sink: statsd,3
-2022-06,sink: socket,3
-2022-06,sink: pulsar,3
-2022-06,sink: prometheus_exporter,3
-2022-06,sink: papertrail,3
-2022-06,sink: gcp_cloud_storage,3
-2022-06,sink: datadog_traces,3
-2022-06,sink: datadog_logs,3
-2022-06,sink: aws_s3,3
-2022-06,domain: tests,3
-2022-06,domain: releasing,3
-2022-06,domain: codecs,3
-2022-06,vrl: diagnostic,2
-2022-06,transform: tag_cardinality_limit,2
-2022-06,transform: lua,2
-2022-06,source: vector,2
-2022-06,source: journald,2
-2022-06,source: datadog_agent,2
-2022-06,sink: vector,2
-2022-06,sink: prometheus_remote_write,2
-2022-06,provider: datadog,2
-2022-06,platform: debian,2
-2022-06,domain: transforms,2
-2022-06,domain: traces,2
-2022-06,domain: sources,2
-2022-06,domain: platforms,2
-2022-06,domain: logs,2
-2022-06,domain: ci,2
-2022-06,website: template,1
-2022-06,source: syslog,1
-2022-06,source: stdin,1
-2022-06,source: kubernetes_logs,1
-2022-06,source: internal_logs,1
-2022-06,source: gcp_pubsub,1
-2022-06,source: fluent,1
-2022-06,source: docker_logs,1
-2022-06,source: dnstap,1
-2022-06,source: aws_sqs,1
-2022-06,source: aws_ecs_metrics,1
-2022-06,sink: websocket,1
-2022-06,sink: new_relic,1
-2022-06,sink: nats,1
-2022-06,sink: kafka,1
-2022-06,sink: influxdb_logs,1
-2022-06,sink: elasticsearch,1
-2022-06,sink: datadog_events,1
-2022-06,sink: datadog_archives,1
-2022-06,sink: console,1
-2022-06,sink: clickhouse,1
-2022-06,sink: blackhole,1
-2022-06,provider: papertrail,1
-2022-06,provider: new relic,1
-2022-06,platform: windows,1
-2022-06,platform: ubuntu,1
-2022-06,platform: rpm,1
-2022-06,platform: kubernetes,1
-2022-06,platform: helm,1
-2022-06,platform: amazon-linux,1
-2022-06,needs: docs,1
-2022-06,meta: idea,1
-2022-06,meta: good first issue,1
-2022-06,have: nice,1
-2022-06,have: must,1
-2022-06,domain: unit tests,1
-2022-06,domain: setup,1
-2022-06,domain: enriching,1
-2022-06,domain: data model,1
-2022-06,domain: api,1
-2022-06,domain: ARC,1
-2022-06,Epic,1
-2022-07,type: bug,47
+2022-07,type: bug,46
 2022-07,type: feature,31
 2022-07,domain: vrl,16
 2022-07,vrl: typedef,14
 2022-07,type: enhancement,11
 2022-07,type: tech debt,8
-2022-07,domain: observability,6
 2022-07,domain: config,6
 2022-07,vrl: stdlib,5
+2022-07,domain: observability,5
 2022-07,domain: sources,4
 2022-07,domain: external docs,4
 2022-07,vrl: compiler,3
@@ -303,8 +68,8 @@ month,label_name,count
 2022-07,needs: approval,1
 2022-07,meta: regression,1
 2022-07,meta: idea,1
-2022-07,meta: good first issue,1
 2022-07,have: nice,1
+2022-07,good first issue,1
 2022-07,domain: topology,1
 2022-07,domain: templating,1
 2022-07,domain: shutdown,1
@@ -470,8 +235,8 @@ month,label_name,count
 2022-09,needs: more info,1
 2022-09,needs: approval,1
 2022-09,meta: idea,1
-2022-09,meta: good first issue,1
 2022-09,have: must,1
+2022-09,good first issue,1
 2022-09,domain: traces,1
 2022-09,domain: security,1
 2022-09,domain: reload,1
@@ -603,7 +368,7 @@ month,label_name,count
 2022-11,provider: new relic,1
 2022-11,provider: gcp,1
 2022-11,provider: azure,1
-2022-11,meta: good first issue,1
+2022-11,good first issue,1
 2022-11,domain: unit tests,1
 2022-11,domain: sinks,1
 2022-11,domain: performance,1
@@ -712,7 +477,7 @@ month,label_name,count
 2023-01,sink: splunk_hec,2
 2023-01,provider: aws,2
 2023-01,meta: regression,2
-2023-01,meta: good first issue,2
+2023-01,good first issue,2
 2023-01,domain: observability,2
 2023-01,domain: deps,2
 2023-01,website: template,1
@@ -921,7 +686,7 @@ month,label_name,count
 2023-04,domain: auth,1
 2023-05,type: bug,34
 2023-05,type: feature,16
-2023-05,type: enhancement,10
+2023-05,type: enhancement,11
 2023-05,source: file,4
 2023-05,domain: config,4
 2023-05,domain: metrics,3
@@ -1021,7 +786,7 @@ month,label_name,count
 2023-07,sink: gcp_stackdriver_metrics,1
 2023-07,sink: datadog_metrics,1
 2023-07,sink: datadog_logs,1
-2023-07,meta: good first issue,1
+2023-07,good first issue,1
 2023-07,domain: vrl,1
 2023-07,domain: vdev,1
 2023-07,domain: transforms,1
@@ -1243,12 +1008,12 @@ month,label_name,count
 2024-01,type: feature,18
 2024-01,domain: config,5
 2024-01,domain: codecs,4
+2024-01,domain: buffers,3
 2024-01,source: http_server,2
 2024-01,sink: aws_s3,2
 2024-01,meta: awaiting author,2
 2024-01,domain: releasing,2
 2024-01,domain: observability,2
-2024-01,domain: buffers,2
 2024-01,vrl: stdlib,1
 2024-01,type: announcement,1
 2024-01,source: prometheus_scrape,1
@@ -1263,7 +1028,7 @@ month,label_name,count
 2024-01,sink: gcp_pubsub,1
 2024-01,sink: azure_blob,1
 2024-01,provider: aws,1
-2024-01,meta: good first issue,1
+2024-01,good first issue,1
 2024-01,enrichment_table: csv,1
 2024-01,domain: unit tests,1
 2024-01,domain: delivery,1
@@ -1295,7 +1060,7 @@ month,label_name,count
 2024-02,provider: aws,1
 2024-02,platform: windows,1
 2024-02,meta: regression,1
-2024-02,meta: good first issue,1
+2024-02,good first issue,1
 2024-02,domain: security,1
 2024-02,domain: dev,1
 2024-02,complexity: moderate,1
@@ -1338,8 +1103,8 @@ month,label_name,count
 2024-04,domain: config,3
 2024-04,source: kafka,2
 2024-04,source: http_server,2
-2024-04,meta: good first issue,2
 2024-04,meta: awaiting author,2
+2024-04,good first issue,2
 2024-04,domain: unit tests,2
 2024-04,domain: releasing,2
 2024-04,domain: performance,2
@@ -1383,7 +1148,7 @@ month,label_name,count
 2024-05,sink: prometheus_remote_write,1
 2024-05,sink: clickhouse,1
 2024-05,sink: aws_kinesis_streams,1
-2024-05,meta: good first issue,1
+2024-05,good first issue,1
 2024-05,domain: releasing,1
 2024-05,domain: platforms,1
 2024-05,domain: networking,1
@@ -1424,7 +1189,7 @@ month,label_name,count
 2024-07,type: tech debt,2
 2024-07,source: aws_ecs_metrics,2
 2024-07,sink: prometheus_remote_write,2
-2024-07,meta: good first issue,2
+2024-07,good first issue,2
 2024-07,domain: releasing,2
 2024-07,domain: codecs,2
 2024-07,type: enhancement,1
@@ -1456,7 +1221,7 @@ month,label_name,count
 2024-08,type: feature,14
 2024-08,domain: codecs,7
 2024-08,source: http_server,4
-2024-08,meta: good first issue,3
+2024-08,good first issue,3
 2024-08,transform: reduce,2
 2024-08,source: file,2
 2024-08,meta: regression,2
@@ -1544,8 +1309,8 @@ month,label_name,count
 2024-10,sink: datadog_logs,1
 2024-10,provider: aws,1
 2024-10,platform: windows,1
-2024-10,meta: good first issue,1
 2024-10,have: nice,1
+2024-10,good first issue,1
 2024-10,domain: tests,1
 2024-10,domain: releasing,1
 2024-10,domain: networking,1
@@ -1569,14 +1334,16 @@ month,label_name,count
 2024-11,source: file,1
 2024-11,source: aws_s3,1
 2024-11,sink: vector,1
+2024-11,sink: nats,1
 2024-11,sink: file,1
 2024-11,sink: elasticsearch,1
 2024-11,sink: azure_blob,1
 2024-11,sink: aws_cloudwatch_metrics,1
-2024-11,meta: good first issue,1
 2024-11,meta: awaiting author,1
+2024-11,good first issue,1
 2024-11,domain: vrl,1
 2024-11,domain: platforms,1
+2024-11,domain: metrics,1
 2024-11,domain: enrichment_tables,1
 2024-11,domain: codecs,1
 2024-11,domain: ci,1
@@ -1590,7 +1357,7 @@ month,label_name,count
 2024-12,source: host_metrics,2
 2024-12,sink: gcp_chronicle,2
 2024-12,sink: clickhouse,2
-2024-12,meta: good first issue,2
+2024-12,good first issue,2
 2024-12,domain: external docs,2
 2024-12,transform: aws_ec2_metadata,1
 2024-12,source: redis,1
@@ -1614,7 +1381,6 @@ month,label_name,count
 2025-01,source: kubernetes_logs,2
 2025-01,source: http_server,2
 2025-01,sink: datadog_logs,2
-2025-01,meta: awaiting author,2
 2025-01,domain: releasing,2
 2025-01,domain: networking,2
 2025-01,vrl: stdlib,1
@@ -1630,6 +1396,7 @@ month,label_name,count
 2025-01,sink: azure_blob,1
 2025-01,sink: aws_kinesis_streams,1
 2025-01,sink: amqp,1
+2025-01,meta: awaiting author,1
 2025-01,domain: traces,1
 2025-01,domain: security,1
 2025-01,domain: metrics,1
@@ -1650,7 +1417,6 @@ month,label_name,count
 2025-02,sink: clickhouse,2
 2025-02,sink: aws_s3,2
 2025-02,platform: windows,2
-2025-02,meta: good first issue,2
 2025-02,domain: security,2
 2025-02,domain: metrics,2
 2025-02,type: tech debt,1
@@ -1665,6 +1431,9 @@ month,label_name,count
 2025-02,sink: kafka,1
 2025-02,sink: elasticsearch,1
 2025-02,sink: datadog_metrics,1
+2025-02,provider: splunk,1
+2025-02,hacktoberfest,1
+2025-02,good first issue,1
 2025-02,domain: validation,1
 2025-02,domain: traces,1
 2025-02,domain: tests,1
@@ -1721,7 +1490,7 @@ month,label_name,count
 2025-04,sink: azure_blob,2
 2025-04,sink: aws_kinesis_streams,2
 2025-04,sink: aws_cloudwatch_logs,2
-2025-04,meta: good first issue,2
+2025-04,good first issue,2
 2025-04,domain: releasing,2
 2025-04,domain: codecs,2
 2025-04,vrl: diagnostic,1
@@ -1747,26 +1516,29 @@ month,label_name,count
 2025-04,enrichment_table: geoip,1
 2025-04,domain: unit tests,1
 2025-04,domain: security,1
+2025-04,domain: memory,1
 2025-04,domain: log_namespace,1
 2025-04,domain: external docs,1
 2025-04,domain: enrichment_tables,1
 2025-04,domain: buffers,1
 2025-05,type: feature,27
 2025-05,type: bug,27
+2025-05,domain: config,5
 2025-05,sink: elasticsearch,4
-2025-05,domain: config,4
 2025-05,domain: codecs,3
 2025-05,domain: buffers,3
 2025-05,transform: log_to_metric,2
 2025-05,source: new,2
 2025-05,source: journald,2
 2025-05,sink: aws_s3,2
+2025-05,domain: reload,2
 2025-05,domain: memory,2
 2025-05,source: syslog,1
 2025-05,source: statsd,1
 2025-05,source: socket,1
 2025-05,source: http_client,1
 2025-05,source: file,1
+2025-05,sink: websocket,1
 2025-05,sink: vector,1
 2025-05,sink: splunk_hec,1
 2025-05,sink: redis,1
@@ -1781,29 +1553,220 @@ month,label_name,count
 2025-05,domain: validation,1
 2025-05,domain: templating,1
 2025-05,domain: security,1
-2025-05,domain: reload,1
 2025-05,domain: releasing,1
 2025-05,domain: log_namespace,1
 2025-05,domain: external docs,1
 2025-05,domain: enrichment_tables,1
 2025-05,domain: api,1
-2025-06,type: bug,13
-2025-06,type: feature,12
+2025-06,type: bug,15
+2025-06,type: feature,14
 2025-06,domain: releasing,3
-2025-06,domain: performance,2
+2025-06,domain: performance,3
+2025-06,domain: metrics,2
 2025-06,domain: config,2
 2025-06,transform: remap,1
 2025-06,transform: new,1
 2025-06,transform: dedupe,1
 2025-06,transform: aggregate,1
+2025-06,source: socket,1
 2025-06,source: opentelemetry,1
 2025-06,source: mqtt,1
+2025-06,source: kafka,1
 2025-06,source: journald,1
 2025-06,source: http_server,1
 2025-06,source: aws_sqs,1
 2025-06,sink: redis,1
 2025-06,sink: postgres,1
-2025-06,meta: good first issue,1
+2025-06,sink: datadog_logs,1
+2025-06,sink: aws_cloudwatch_logs,1
+2025-06,good first issue,1
 2025-06,domain: security,1
-2025-06,domain: metrics,1
+2025-06,domain: memory,1
 2025-06,domain: internal docs,1
+2025-07,type: bug,18
+2025-07,type: feature,11
+2025-07,type: tech debt,3
+2025-07,sink: loki,2
+2025-07,domain: tests,2
+2025-07,domain: external docs,2
+2025-07,domain: deps,2
+2025-07,domain: core,2
+2025-07,type: enhancement,1
+2025-07,transform: reduce,1
+2025-07,source: splunk_hec,1
+2025-07,source: new,1
+2025-07,source: logstash,1
+2025-07,source: http_server,1
+2025-07,source: host_metrics,1
+2025-07,source: datadog_agent,1
+2025-07,source: amqp,1
+2025-07,sink: opentelemetry,1
+2025-07,sink: new,1
+2025-07,sink: elasticsearch,1
+2025-07,sink: datadog_metrics,1
+2025-07,meta: confirmed,1
+2025-07,good first issue,1
+2025-07,domain: vrl,1
+2025-07,domain: validation,1
+2025-07,domain: traces,1
+2025-07,domain: sinks,1
+2025-07,domain: metrics,1
+2025-07,domain: log_namespace,1
+2025-07,domain: dev,1
+2025-07,domain: config,1
+2025-07,domain: codecs,1
+2025-07,domain: buffers,1
+2025-08,type: bug,27
+2025-08,type: feature,11
+2025-08,sink: clickhouse,4
+2025-08,domain: performance,4
+2025-08,type: enhancement,2
+2025-08,source: kubernetes_logs,2
+2025-08,source: file,2
+2025-08,source: docker_logs,2
+2025-08,domain: vrl,2
+2025-08,domain: codecs,2
+2025-08,vrl: compiler,1
+2025-08,type: tech debt,1
+2025-08,transform: new,1
+2025-08,transform: lua,1
+2025-08,transform: log_to_metric,1
+2025-08,source: syslog,1
+2025-08,source: opentelemetry,1
+2025-08,source: mqtt,1
+2025-08,source: host_metrics,1
+2025-08,sink: splunk_hec,1
+2025-08,sink: prometheus_exporter,1
+2025-08,sink: kafka,1
+2025-08,sink: humio_logs,1
+2025-08,sink: aws_s3,1
+2025-08,platform: macos,1
+2025-08,platform: docker,1
+2025-08,meta: regression,1
+2025-08,have: nice,1
+2025-08,hacktoberfest,1
+2025-08,good first issue,1
+2025-08,domain: validation,1
+2025-08,domain: tests,1
+2025-08,domain: releasing,1
+2025-08,domain: enrichment_tables,1
+2025-08,domain: config,1
+2025-09,type: bug,31
+2025-09,type: feature,16
+2025-09,source: file,4
+2025-09,domain: buffers,3
+2025-09,type: tech debt,2
+2025-09,source: docker_logs,2
+2025-09,sink: aws_s3,2
+2025-09,domain: tests,2
+2025-09,domain: reload,2
+2025-09,domain: releasing,2
+2025-09,domain: memory,2
+2025-09,domain: ci,2
+2025-09,complexity: high,2
+2025-09,vrl: playground,1
+2025-09,transform: dedupe,1
+2025-09,source: opentelemetry,1
+2025-09,source: mongodb_metrics,1
+2025-09,source: http_server,1
+2025-09,source: http_client,1
+2025-09,source: amqp,1
+2025-09,sink: splunk_hec,1
+2025-09,sink: socket,1
+2025-09,sink: opentelemetry,1
+2025-09,sink: loki,1
+2025-09,sink: gcp_cloud_storage,1
+2025-09,sink: file,1
+2025-09,sink: datadog_metrics,1
+2025-09,sink: datadog_logs,1
+2025-09,sink: azure_blob,1
+2025-09,sink: amqp,1
+2025-09,needs: investigation,1
+2025-09,meta: regression,1
+2025-09,have: nice,1
+2025-09,hacktoberfest,1
+2025-09,good first issue,1
+2025-09,domain: metrics,1
+2025-09,domain: external docs,1
+2025-09,domain: dev,1
+2025-09,complexity: moderate,1
+2025-10,type: bug,19
+2025-10,type: feature,12
+2025-10,source: opentelemetry,2
+2025-10,source: file,2
+2025-10,source: aws_s3,2
+2025-10,domain: metrics,2
+2025-10,type: enhancement,1
+2025-10,transform: exclusive_route,1
+2025-10,transform: aggregate,1
+2025-10,source: websocket,1
+2025-10,source: socket,1
+2025-10,source: kubernetes_logs,1
+2025-10,source: docker_logs,1
+2025-10,sink: prometheus_remote_write,1
+2025-10,sink: opentelemetry,1
+2025-10,sink: clickhouse,1
+2025-10,sink: axiom,1
+2025-10,platform: macos,1
+2025-10,platform: kubernetes,1
+2025-10,needs: more info,1
+2025-10,meta: regression,1
+2025-10,meta: idea,1
+2025-10,meta: confirmed,1
+2025-10,hacktoberfest,1
+2025-10,good first issue,1
+2025-10,enrichment_table: csv,1
+2025-10,domain: website,1
+2025-10,domain: releasing,1
+2025-10,domain: performance,1
+2025-10,domain: codecs,1
+2025-10,domain: cli,1
+2025-11,type: bug,26
+2025-11,type: feature,9
+2025-11,meta: regression,3
+2025-11,type: enhancement,2
+2025-11,source: opentelemetry,2
+2025-11,source: kafka,2
+2025-11,sink: kafka,2
+2025-11,domain: metrics,2
+2025-11,domain: external docs,2
+2025-11,transform: exclusive_route,1
+2025-11,source: prometheus_scrape,1
+2025-11,source: prometheus_remote_write,1
+2025-11,source: prometheus_pushgateway,1
+2025-11,source: mongodb_metrics,1
+2025-11,source: journald,1
+2025-11,source: datadog_agent,1
+2025-11,sink: opentelemetry,1
+2025-11,sink: elasticsearch,1
+2025-11,sink: datadog_metrics,1
+2025-11,sink: blackhole,1
+2025-11,sink: azure_blob,1
+2025-11,provider: splunk,1
+2025-11,provider: azure,1
+2025-11,meta: confirmed,1
+2025-11,domain: releasing,1
+2025-11,domain: ci,1
+2025-12,type: bug,16
+2025-12,type: feature,14
+2025-12,vrl: typedef,1
+2025-12,type: enhancement,1
+2025-12,source: opentelemetry,1
+2025-12,source: nats,1
+2025-12,sink: file,1
+2025-12,domain: releasing,1
+2025-12,domain: metrics,1
+2025-12,domain: api,1
+2026-01,type: bug,14
+2026-01,type: feature,9
+2026-01,type: enhancement,1
+2026-01,transform: new,1
+2026-01,source: opentelemetry,1
+2026-01,source: file,1
+2026-01,sink: opentelemetry,1
+2026-01,domain: releasing,1
+2026-01,domain: external docs,1
+2026-02,type: bug,13
+2026-02,type: feature,6
+2026-02,source: mqtt,1
+2026-02,sink: clickhouse,1

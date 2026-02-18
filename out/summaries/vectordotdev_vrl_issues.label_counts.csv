@@ -17,7 +17,7 @@ month,label_name,count
 2021-03,vrl: parser,1
 2021-03,vrl: compiler,1
 2021-03,type: feature,1
-2021-03,meta: good first issue,1
+2021-03,good first issue,1
 2021-03,domain: tests,1
 2021-04,vrl: stdlib,8
 2021-04,type: enhancement,8
@@ -108,7 +108,7 @@ month,label_name,count
 2022-08,vrl: parser,1
 2022-08,vrl: diagnostic,1
 2022-08,meta: regression,1
-2022-08,meta: good first issue,1
+2022-08,good first issue,1
 2022-08,domain: dev,1
 2022-09,vrl: compiler,4
 2022-09,type: bug,4
@@ -128,7 +128,7 @@ month,label_name,count
 2022-12,Epic,1
 2023-01,vrl: stdlib,4
 2023-01,type: feature,3
-2023-01,meta: good first issue,2
+2023-01,good first issue,2
 2023-01,type: tech debt,1
 2023-01,type: bug,1
 2023-01,meta:confirmed,1
@@ -143,7 +143,7 @@ month,label_name,count
 2023-03,type: enhancement,2
 2023-03,type: bug,2
 2023-03,type: feature,1
-2023-03,meta: good first issue,1
+2023-03,good first issue,1
 2023-04,vrl: stdlib,3
 2023-04,vrl: compiler,1
 2023-04,type: feature,1
@@ -151,11 +151,12 @@ month,label_name,count
 2023-04,type: bug,1
 2023-05,type: bug,9
 2023-05,fuzz,6
+2023-05,vrl: stdlib,4
 2023-05,vrl: compiler,4
 2023-05,vrl: typedef,3
-2023-05,vrl: stdlib,3
 2023-05,type: enhancement,2
 2023-05,type: feature,1
+2023-05,stdlib: parse_cef,1
 2023-05,crash,1
 2023-06,type: enhancement,5
 2023-06,vrl: stdlib,4
@@ -189,24 +190,25 @@ month,label_name,count
 2024-01,vrl: stdlib,7
 2024-01,type: feature,2
 2024-01,type: bug,2
-2024-01,meta: good first issue,1
+2024-01,good first issue,1
 2024-02,vrl: stdlib,1
 2024-02,vrl: compiler,1
 2024-03,vrl: stdlib,4
 2024-03,type: bug,1
 2024-04,vrl: stdlib,5
 2024-04,type: bug,2
+2024-04,stdlib: parse_cef,2
 2024-04,type: feature,1
 2024-05,vrl: stdlib,6
 2024-05,type: bug,4
 2024-05,vrl: compiler,2
 2024-05,type: feature,2
 2024-05,type: enhancement,1
-2024-05,meta: good first issue,1
+2024-05,good first issue,1
 2024-06,vrl: stdlib,3
 2024-06,type: feature,2
 2024-06,type: bug,1
-2024-06,meta: good first issue,1
+2024-06,good first issue,1
 2024-06,domain: ci,1
 2024-07,vrl: stdlib,5
 2024-07,type: feature,3
@@ -217,7 +219,7 @@ month,label_name,count
 2024-08,type: enhancement,2
 2024-08,type: bug,2
 2024-08,type: feature,1
-2024-08,meta: good first issue,1
+2024-08,good first issue,1
 2024-09,vrl: stdlib,2
 2024-09,vrl: compiler,2
 2024-09,vrl: typedef,1
@@ -242,7 +244,7 @@ month,label_name,count
 2024-12,type: tech debt,2
 2024-12,vrl: compiler,1
 2024-12,type: bug,1
-2024-12,meta: good first issue,1
+2024-12,good first issue,1
 2024-12,domain: dev,1
 2024-12,domain: ci,1
 2025-01,vrl: compiler,3
@@ -267,3 +269,41 @@ month,label_name,count
 2025-04,type: bug,1
 2025-05,type: feature,2
 2025-06,type: bug,2
+2025-06,vrl: stdlib,1
+2025-06,type: feature,1
+2025-07,vrl: stdlib,3
+2025-07,type: feature,3
+2025-07,type: tech debt,1
+2025-07,type: bug,1
+2025-07,stdlib: parse_cef,1
+2025-07,good first issue,1
+2025-08,type: bug,4
+2025-08,vrl: stdlib,3
+2025-08,type: feature,2
+2025-08,type: enhancement,1
+2025-08,stdlib: parse,1
+2025-08,new function,1
+2025-08,domain: performance,1
+2025-08,domain: core,1
+2025-09,vrl: stdlib,2
+2025-09,type: bug,2
+2025-09,type: feature,1
+2025-09,stdlib: parse_cef,1
+2025-09,needs: more info,1
+2025-10,type: bug,8
+2025-10,vrl: stdlib,5
+2025-10,stdlib: parse_key_value,3
+2025-10,type: feature,1
+2025-10,stdlib: unnest,1
+2025-10,stdlib: parse_timestamp,1
+2025-10,stdlib: parse_cef,1
+2025-10,stdlib: parse_aws_vpc_flow_log,1
+2025-11,type: feature,2
+2025-11,type: bug,2
+2025-11,vrl: stdlib,1
+2025-11,stdlib: parse_klog,1
+2025-11,stdlib: encode_proto,1
+2025-12,type: feature,1
+2026-01,type: bug,1
+2026-01,stdlib: parse_duration,1
+2026-02,type: feature,1
