@@ -1,6 +1,6 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand};
-use github_tools::{commands::{build_db, fetch_discussions, fetch_issues, fetch_labels}, config::Config};
+use github_tools::{commands::{build_db, fetch_discussions, fetch_issues, fetch_labels, generate_summaries}, config::Config};
 
 #[derive(Parser)]
 #[command(name = "github-tools", about = "GitHub data extraction and analysis tools")]
@@ -101,7 +101,8 @@ fn main() -> Result<()> {
             build_db::run(&input, &config)
         }
         Command::GenerateSummaries { db, env_file, exclude_labels } => {
-            todo!("generate-summaries: db={db}, env_file={env_file:?}, exclude_labels={exclude_labels:?}")
+            let config = Config::load(env_file.as_deref())?;
+            generate_summaries::run(&db, &config, exclude_labels.as_deref())
         }
         Command::Purge { target } => match target {
             PurgeTarget::Nightly { older_than, env_file, dry_run } => {
