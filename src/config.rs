@@ -20,7 +20,9 @@ impl Config {
 impl Config {
     pub fn load(env_file: Option<&str>) -> Result<Self> {
         if let Some(path) = env_file {
-            dotenvy::from_filename(path)
+            // Use override so that successive calls with different env files
+            // (e.g. workflow loops over vector.env then vrl.env) each take effect.
+            dotenvy::from_filename_override(path)
                 .with_context(|| format!("Failed to load env file: {path}"))?;
         } else {
             dotenvy::dotenv().ok();
