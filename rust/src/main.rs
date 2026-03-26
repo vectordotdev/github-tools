@@ -1,6 +1,6 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand};
-use github_tools::{commands::{build_db, close_old_prs, delete_stale_branches, fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge}, config::Config};
+use github_tools::{commands::{build_db, close_old_prs, delete_stale_branches, fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge, remove_legacy_label}, config::Config};
 use reqwest::blocking::Client;
 use std::path::Path;
 
@@ -55,6 +55,29 @@ enum Command {
     DeleteStaleBranches {
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
+    },
+    /// Remove a legacy type label from issues/PRs, optionally setting the type field
+    RemoveLegacyLabel {
+        #[arg(long, required = true, help = "Repository owner/name (repeatable)")]
+        repo: Vec<String>,
+        #[arg(long, required = true)]
+        legacy_label: String,
+        #[arg(long, default_value = "open")]
+        state: String,
+        #[arg(long)]
+        set_type_field: bool,
+        #[arg(long)]
+        require_type_field: bool,
+        #[arg(long)]
+        case_insensitive: bool,
+        #[arg(long, default_value = "")]
+        token: String,
+        #[arg(long)]
+        dry_run: bool,
+        #[arg(long)]
+        since: Option<String>,
+        #[arg(long)]
+        limit: Option<usize>,
     },
     /// Purge stale container images
     Purge {
@@ -125,6 +148,17 @@ fn main() -> Result<()> {
         Command::GenerateSummaries { db, env_file, exclude_labels } => {
             let config = Config::load(env_file.as_deref())?;
             generate_summaries::run(&db, &config, exclude_labels.as_deref())
+        }
+        Command::RemoveLegacyLabel { repo, legacy_label, state, set_type_field, require_type_field, case_insensitive, token, dry_run, since, limit } => {
+            let resolved_token = if token.is_empty() {
+                std::env::var("GITHUB_TOKEN").unwrap_or_default()
+            } else {
+                token
+            };
+            remove_legacy_label::run(&remove_legacy_label::Args {
+                repos: repo, legacy_label, state, set_type_field, require_type_field,
+                case_insensitive, token: resolved_token, dry_run, since, limit,
+            })
         }
         Command::Purge { target } => {
             let client = Client::new();
