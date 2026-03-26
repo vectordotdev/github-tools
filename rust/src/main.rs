@@ -1,6 +1,8 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand};
-use github_tools::{commands::{build_db, fetch_discussions, fetch_issues, fetch_labels, generate_summaries}, config::Config};
+use github_tools::{commands::{build_db, fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge}, config::Config};
+use reqwest::blocking::Client;
+use std::path::Path;
 
 #[derive(Parser)]
 #[command(name = "github-tools", about = "GitHub data extraction and analysis tools")]
@@ -104,16 +106,44 @@ fn main() -> Result<()> {
             let config = Config::load(env_file.as_deref())?;
             generate_summaries::run(&db, &config, exclude_labels.as_deref())
         }
-        Command::Purge { target } => match target {
-            PurgeTarget::Nightly { older_than, env_file, dry_run } => {
-                todo!("purge-nightly: older_than={older_than}, env_file={env_file}, dry_run={dry_run}")
+        Command::Purge { target } => {
+            let client = Client::new();
+            match target {
+                PurgeTarget::Nightly { older_than, env_file, dry_run } => {
+                    let config = Config::load(Some(&env_file))?;
+                    purge::purge_github_versions(
+                        &client, &config.github_token,
+                        Path::new("out/purge/nightly_github.jsonl"),
+                        older_than, dry_run,
+                        |t| t.contains("nightly"),
+                    )?;
+                    purge::purge_dockerhub_images(
+                        &client, "timberio/vector",
+                        &config.docker_username()?, &config.docker_password()?,
+                        Path::new("out/purge/nightly_dockerhub.jsonl"),
+                        30, dry_run,
+                        |t| t.starts_with("nightly"),
+                    )
+                }
+                PurgeTarget::Untagged { older_than, env_file, dry_run } => {
+                    let config = Config::load(Some(&env_file))?;
+                    purge::purge_github_untagged_versions(
+                        &client, &config.github_token,
+                        Path::new("out/purge/untagged_github.jsonl"),
+                        older_than, dry_run,
+                    )
+                }
+                PurgeTarget::VectorDev { older_than, env_file, dry_run } => {
+                    let config = Config::load(Some(&env_file))?;
+                    purge::purge_dockerhub_images(
+                        &client, "timberio/vector-dev",
+                        &config.docker_username()?, &config.docker_password()?,
+                        Path::new("out/purge/vector_dev_dockerhub.jsonl"),
+                        older_than, dry_run,
+                        |_| true,
+                    )
+                }
             }
-            PurgeTarget::Untagged { older_than, env_file, dry_run } => {
-                todo!("purge-untagged: older_than={older_than}, env_file={env_file}, dry_run={dry_run}")
-            }
-            PurgeTarget::VectorDev { older_than, env_file, dry_run } => {
-                todo!("purge-vector-dev: older_than={older_than}, env_file={env_file}, dry_run={dry_run}")
-            }
-        },
+        }
     }
 }

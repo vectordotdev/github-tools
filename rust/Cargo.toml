@@ -32,3 +32,9 @@ rusqlite = { version = "0.32", features = ["bundled"] }
 
 # CSV
 csv = "1"
+
+# Date/time
+chrono = { version = "0.4", features = ["serde"] }
+
+# Regex
+regex = "1"

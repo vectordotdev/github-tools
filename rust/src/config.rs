@@ -8,6 +8,16 @@ pub struct Config {
 }
 
 impl Config {
+    pub fn docker_username(&self) -> Result<String> {
+        env::var("DOCKER_USERNAME").context("DOCKER_USERNAME not set")
+    }
+
+    pub fn docker_password(&self) -> Result<String> {
+        env::var("DOCKER_PASSWORD").context("DOCKER_PASSWORD not set")
+    }
+}
+
+impl Config {
     pub fn load(env_file: Option<&str>) -> Result<Self> {
         if let Some(path) = env_file {
             dotenvy::from_filename(path)
