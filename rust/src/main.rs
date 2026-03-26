@@ -1,6 +1,6 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand};
-use github_tools::{commands::{build_db, close_old_prs, delete_stale_branches, fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge, remove_legacy_label}, config::Config};
+use github_tools::{commands::{build_db, close_old_prs, delete_stale_branches, fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge, remove_legacy_label, workflows}, config::Config};
 use reqwest::blocking::Client;
 use std::path::Path;
 
@@ -43,6 +43,27 @@ enum Command {
         env_file: Option<String>,
         #[arg(long, help = "Comma-separated labels to exclude")]
         exclude_labels: Option<String>,
+    },
+    /// Fetch issues+discussions for all repos (replaces fetch_all_slow.sh)
+    FetchAll {
+        #[arg(long, required = true, help = "Env files to iterate (repeatable)")]
+        env_file: Vec<String>,
+    },
+    /// Build DB + summaries for all repos (replaces generate_all.sh)
+    GenerateAll {
+        #[arg(long, required = true)]
+        env_file: Vec<String>,
+        #[arg(long)]
+        exclude_labels: Option<String>,
+    },
+    /// Run all purge operations (replaces purge_all.sh)
+    PurgeAll {
+        #[arg(long)]
+        env_file: String,
+        #[arg(long, default_value = "30")]
+        older_than: u32,
+        #[arg(long)]
+        dry_run: bool,
     },
     /// Close old PRs with the 'meta: awaiting author' label
     CloseOldPrs {
@@ -136,6 +157,15 @@ fn main() -> Result<()> {
         Command::BuildDb { input, env_file } => {
             let config = Config::load(env_file.as_deref())?;
             build_db::run(&input, &config)
+        }
+        Command::FetchAll { env_file } => {
+            workflows::fetch_all(&env_file)
+        }
+        Command::GenerateAll { env_file, exclude_labels } => {
+            workflows::generate_all(&env_file, exclude_labels.as_deref())
+        }
+        Command::PurgeAll { env_file, older_than, dry_run } => {
+            workflows::purge_all(&env_file, older_than, dry_run)
         }
         Command::CloseOldPrs { env_file, dry_run } => {
             let config = Config::load(env_file.as_deref())?;

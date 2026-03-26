@@ -106,8 +106,11 @@ struct GraphQlResponse {
 }
 
 pub fn run(config: &Config) -> Result<()> {
-    let client = Client::new();
-    let discussions = fetch_all_discussions(&client, config)?;
+    run_with_client(&Client::new(), config)
+}
+
+pub fn run_with_client(client: &Client, config: &Config) -> Result<()> {
+    let discussions = fetch_all_discussions(client, config)?;
 
     println!("Total discussions fetched: {}", discussions.len());
 

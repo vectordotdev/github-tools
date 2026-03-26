@@ -8,8 +8,11 @@ use std::path::Path;
 const BATCH_SIZE: u32 = 100;
 
 pub fn run(config: &Config) -> Result<()> {
-    let client = Client::new();
-    let issues = fetch_all_issues(&client, config)?;
+    run_with_client(&Client::new(), config)
+}
+
+pub fn run_with_client(client: &Client, config: &Config) -> Result<()> {
+    let issues = fetch_all_issues(client, config)?;
 
     println!("Total issues/PRs fetched: {}", issues.len());
 
