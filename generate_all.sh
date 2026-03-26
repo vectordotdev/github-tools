@@ -5,8 +5,8 @@ export PYTHONPATH=.
 
 # Define pairs
 INPUT_FILES=(
-  "static/vectordotdev_vector_issues.json"
-  "static/vectordotdev_vrl_issues.json"
+  "data/vectordotdev_vector_issues.json"
+  "data/vectordotdev_vrl_issues.json"
 )
 ENV_FILES=(
   "vector.env"

@@ -1,10 +1,22 @@
 # github-tools
 
-> [!WARNING]  
+> [!WARNING]
 > Under Construction. I force push to this frequently.
 
+Tools for extracting data from GitHub, storing it in a local SQLite database, querying it, and visualizing trends.
 
-These are some tools for extracting data for GitHub, storing them in a local db, querying them and finally visualizing them.
+# Directory Layout
+
+```
+data/        # Committed JSON snapshots used as pipeline input (issues, discussions)
+out/         # Gitignored — all generated and local-only files
+  historical/  # Raw JSON fetched from GitHub API (fetch scripts write here)
+  db/          # SQLite databases
+  summaries/   # Generated CSVs
+  images/      # Generated PNG charts
+  purge/       # Purge audit logs (local only)
+scripts/     # All Python logic
+```
 
 # Configuration
 
@@ -16,91 +28,39 @@ REPO_OWNER=vectordotdev
 REPO_NAME=vector
 ```
 
-# Run
+# Workflow
 
-The following script deletes and regenerates everything.
+## 1. (Optional) Fetch fresh data from GitHub
+
+Fetches all issues, PRs, and discussions into `out/historical/`. This is slow.
 
 ```shell
-# The following will take a while, as it fetches all issues, PRs, discussions, etc.
-# TODO: Incremental updates.
-# ./fetch_all_slow.sh 
-./generate-all.sh
+./fetch_all_slow.sh
 ```
 
-## Trends
+After fetching, promote the files to `data/` to commit them as a new snapshot:
 
-#### Vector
+```shell
+cp out/historical/issues/vectordotdev_vector_issues.json data/
+cp out/historical/issues/vectordotdev_vrl_issues.json data/
+cp out/historical/discussions/vectordotdev_vector_discussions.json data/
+cp out/historical/discussions/vectordotdev_vrl_discussions.json data/
+```
 
-##### Issues
+## 2. Generate DB, summaries, and charts
 
-![Monthly Issues](out/images/vectordotdev_vector_issues.monthly_trend.png)
+Reads from `data/`, writes all output to `out/`.
 
----
+```shell
+./generate_all.sh
+```
 
-![Top Issue Labels](out/images/vectordotdev_vector_issues.top_labels.png)
+Charts are written to `out/images/`.
 
----
+## 3. (Optional) Purge stale container images
 
-![Issue Label Counts](out/images/vectordotdev_vector_issues.label_counts.png)
+```shell
+./purge_all.sh
+```
 
----
-
-![Top 5 Integration Issue Labels](out/images/vectordotdev_vector_issues.integrations.top_5.monthly_trend.png)
-
----
-
-![Top Integration Issue By Label Total Count](out/images/vectordotdev_vector_issues.open_closed_total_label_count.png)
-
-##### Pull Requests
-
-![Monthly PRs](out/images/vectordotdev_vector_pull_requests.monthly_trend.png)
-
----
-
-![Top PR Labels](out/images/vectordotdev_vector_pull_requests.top_labels.png)
-
----
-
-![PR Label Counts](out/images/vectordotdev_vector_pull_requests.label_counts.png)
-
----
-
-![Top 5 Integration PR Labels](out/images/vectordotdev_vector_pull_requests.integrations.top_5.monthly_trend.png)
-
----
-
-![Top Integration PRs By Label Total Count](out/images/vectordotdev_vector_pull_requests.open_closed_total_label_count.png)
-
-##### Discussions
-
-TODO!
-
----
-
-#### VRL
-
-##### Issues
-
-![Monthly Issues](out/images/vectordotdev_vrl_issues.monthly_trend.png)
-
----
-
-![Top Issue Labels](out/images/vectordotdev_vrl_issues.top_labels.png)
-
----
-
-![Issue Label Counts](out/images/vectordotdev_vrl_issues.label_counts.png)
-
-##### Pull Requests
-
-![Monthly PRs](out/images/vectordotdev_vrl_pull_requests.monthly_trend.png)
-
----
-
-![Top PR Labels](out/images/vectordotdev_vrl_pull_requests.top_labels.png)
-
----
-
-![PR Label Counts](out/images/vectordotdev_vrl_pull_requests.label_counts.png)
-
-
+Audit logs are written to `out/purge/` (local only, not committed).
