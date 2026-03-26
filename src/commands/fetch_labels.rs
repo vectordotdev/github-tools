@@ -51,7 +51,7 @@ fn fetch_all_labels(client: &Client, config: &Config) -> Result<Vec<Label>> {
 
         let response = client
             .get(&url)
-            .header("Authorization", format!("token {}", config.github_token))
+            .header("Authorization", format!("Bearer {}", config.github_token))
             .header("Accept", "application/vnd.github.v3+json")
             .header("User-Agent", "github-tools")
             .query(&[("per_page", PER_PAGE), ("page", page)])

@@ -8,9 +8,15 @@ use std::io::Write;
 use std::path::Path;
 use std::sync::OnceLock;
 
-const GITHUB_ORG: &str = "vectordotdev";
-const GITHUB_PACKAGE: &str = "vector";
 const DOCKERHUB_LOGIN_URL: &str = "https://hub.docker.com/v2/users/login/";
+
+// Configurable via env vars; fall back to vectordotdev/vector defaults.
+fn ghcr_org() -> String {
+    std::env::var("GHCR_ORG").unwrap_or_else(|_| "vectordotdev".to_string())
+}
+fn ghcr_package() -> String {
+    std::env::var("GHCR_PACKAGE").unwrap_or_else(|_| "vector".to_string())
+}
 
 fn blocked_tag_pattern() -> &'static Regex {
     static RE: OnceLock<Regex> = OnceLock::new();
@@ -27,7 +33,8 @@ fn threshold(days_old: u32) -> DateTime<Utc> {
 
 fn github_api_url() -> String {
     format!(
-        "https://api.github.com/orgs/{GITHUB_ORG}/packages/container/{GITHUB_PACKAGE}/versions"
+        "https://api.github.com/orgs/{}/packages/container/{}/versions",
+        ghcr_org(), ghcr_package()
     )
 }
 
@@ -75,16 +82,17 @@ pub fn purge_github_versions(
     audit_file: &Path,
     older_than: u32,
     dry_run: bool,
+    yes: bool,
     tag_filter: impl Fn(&str) -> bool,
 ) -> Result<()> {
     let cutoff = threshold(older_than);
-    println!("Checking GitHub container versions older than {}", cutoff.date_naive());
+    println!("Checking {}/{} container versions older than {}", ghcr_org(), ghcr_package(), cutoff.date_naive());
 
-    let mut audit = open_audit(audit_file, dry_run)?;
     let versions = list_github_versions(client, token)?;
     println!("Fetched {} GitHub versions", versions.len());
 
-    for version in &versions {
+    // Pre-collect matching versions
+    let matching: Vec<(&Value, Vec<String>)> = versions.iter().filter_map(|version| {
         let tags: Vec<&str> = version["metadata"]["container"]["tags"]
             .as_array()
             .map(|a| a.iter().filter_map(|v| v.as_str()).collect())
@@ -97,36 +105,57 @@ pub fn purge_github_versions(
             .map(|dt| dt.and_utc())
             .unwrap_or(Utc::now());
 
-        if created_dt >= cutoff {
-            continue;
-        }
+        if created_dt >= cutoff { return None; }
 
-        let matching: Vec<&str> = tags
-            .iter()
+        let matched_tags: Vec<String> = tags.iter()
             .copied()
             .filter(|t| !blocked_tag_pattern().is_match(t) && tag_filter(t))
+            .map(|t| t.to_string())
             .collect();
 
-        if matching.is_empty() {
-            continue;
+        if matched_tags.is_empty() { None } else { Some((version, matched_tags)) }
+    }).collect();
+
+    if matching.is_empty() {
+        println!("No matching versions found.");
+        open_audit(audit_file, dry_run)?; // still write header
+        return Ok(());
+    }
+
+    println!("Found {} version(s) to purge.", matching.len());
+
+    if dry_run {
+        let mut audit = open_audit(audit_file, dry_run)?;
+        for (version, tags) in &matching {
+            let created_at = version["created_at"].as_str().unwrap_or("").trim_end_matches('Z');
+            let created_dt = created_at.parse::<chrono::NaiveDateTime>().map(|dt| dt.and_utc()).unwrap_or(Utc::now());
+            for tag in tags {
+                writeln!(audit, "{}", json!({"tag": tag, "last_updated": created_dt.date_naive().to_string()}))?;
+            }
         }
+        println!("[dry-run] Audit log saved to: {}", audit_file.display());
+        return Ok(());
+    }
 
+    if !crate::confirm(&format!("Delete {} GitHub container version(s)?", matching.len()), yes) {
+        println!("Aborted.");
+        return Ok(());
+    }
+
+    let mut audit = open_audit(audit_file, dry_run)?;
+    for (version, tags) in &matching {
         let version_id = version["id"].as_u64().unwrap_or(0);
-        println!("Found version {version_id} (tags: {tags:?}, created: {})", created_dt.date_naive());
+        let created_at = version["created_at"].as_str().unwrap_or("").trim_end_matches('Z');
+        let created_dt = created_at.parse::<chrono::NaiveDateTime>().map(|dt| dt.and_utc()).unwrap_or(Utc::now());
 
-        if dry_run {
-            for tag in &matching {
+        println!("Deleting version {version_id} (tags: {tags:?})");
+        if delete_github_version(client, version_id, token)? {
+            println!("Deleted GitHub version {version_id}");
+            for tag in tags {
                 writeln!(audit, "{}", json!({"tag": tag, "last_updated": created_dt.date_naive().to_string()}))?;
             }
         } else {
-            if delete_github_version(client, version_id, token)? {
-                println!("Deleted GitHub version {version_id}");
-                for tag in &matching {
-                    writeln!(audit, "{}", json!({"tag": tag, "last_updated": created_dt.date_naive().to_string()}))?;
-                }
-            } else {
-                eprintln!("Failed to delete GitHub version {version_id}");
-            }
+            eprintln!("Failed to delete GitHub version {version_id}");
         }
     }
     println!("Audit log saved to: {}", audit_file.display());
@@ -139,47 +168,59 @@ pub fn purge_github_untagged_versions(
     audit_file: &Path,
     older_than: u32,
     dry_run: bool,
+    yes: bool,
 ) -> Result<()> {
     let cutoff = threshold(older_than);
-    println!("Checking untagged GitHub container versions older than {}", cutoff.date_naive());
+    println!("Checking untagged {}/{} container versions older than {}", ghcr_org(), ghcr_package(), cutoff.date_naive());
 
-    let mut audit = open_audit(audit_file, dry_run)?;
     let versions = list_github_versions(client, token)?;
     println!("Fetched {} GitHub versions", versions.len());
 
-    for version in &versions {
+    let untagged: Vec<(&Value, DateTime<Utc>)> = versions.iter().filter_map(|version| {
         let tags: Vec<&str> = version["metadata"]["container"]["tags"]
             .as_array()
             .map(|a| a.iter().filter_map(|v| v.as_str()).collect())
             .unwrap_or_default();
 
-        if !tags.is_empty() {
-            continue;
+        if !tags.is_empty() { return None; }
+
+        let created_at = version["created_at"].as_str().unwrap_or("").trim_end_matches('Z');
+        let created_dt = created_at.parse::<chrono::NaiveDateTime>().map(|dt| dt.and_utc()).unwrap_or(Utc::now());
+
+        if created_dt >= cutoff { None } else { Some((version, created_dt)) }
+    }).collect();
+
+    if untagged.is_empty() {
+        println!("No untagged versions found.");
+        open_audit(audit_file, dry_run)?;
+        return Ok(());
+    }
+
+    println!("Found {} untagged version(s) to purge.", untagged.len());
+
+    if dry_run {
+        let mut audit = open_audit(audit_file, dry_run)?;
+        for (version, created_dt) in &untagged {
+            let version_id = version["id"].as_u64().unwrap_or(0);
+            writeln!(audit, "{}", json!({"tag": "<untagged>", "version_id": version_id, "last_updated": created_dt.date_naive().to_string()}))?;
         }
+        println!("[dry-run] Audit log saved to: {}", audit_file.display());
+        return Ok(());
+    }
 
-        let created_at = version["created_at"].as_str().unwrap_or("");
-        let created_dt = created_at
-            .trim_end_matches('Z')
-            .parse::<chrono::NaiveDateTime>()
-            .map(|dt| dt.and_utc())
-            .unwrap_or(Utc::now());
+    if !crate::confirm(&format!("Delete {} untagged GitHub container version(s)?", untagged.len()), yes) {
+        println!("Aborted.");
+        return Ok(());
+    }
 
-        if created_dt >= cutoff {
-            continue;
-        }
-
+    let mut audit = open_audit(audit_file, dry_run)?;
+    for (version, created_dt) in &untagged {
         let version_id = version["id"].as_u64().unwrap_or(0);
-        println!("Untagged version {version_id} (created: {})", created_dt.date_naive());
-
-        if dry_run {
+        if delete_github_version(client, version_id, token)? {
+            println!("Deleted untagged GitHub version {version_id}");
             writeln!(audit, "{}", json!({"tag": "<untagged>", "version_id": version_id, "last_updated": created_dt.date_naive().to_string()}))?;
         } else {
-            if delete_github_version(client, version_id, token)? {
-                println!("Deleted untagged GitHub version {version_id}");
-                writeln!(audit, "{}", json!({"tag": "<untagged>", "version_id": version_id, "last_updated": created_dt.date_naive().to_string()}))?;
-            } else {
-                eprintln!("Failed to delete untagged GitHub version {version_id}");
-            }
+            eprintln!("Failed to delete untagged GitHub version {version_id}");
         }
     }
     println!("Audit log saved to: {}", audit_file.display());
@@ -195,7 +236,8 @@ fn dockerhub_login(client: &Client, username: &str, password: &str) -> Result<St
         .send()?;
 
     if resp.status().as_u16() != 200 {
-        anyhow::bail!("Failed to authenticate with Docker Hub: {}", resp.text()?);
+        // Do not include response body — it may echo credentials on some errors
+        anyhow::bail!("Failed to authenticate with Docker Hub (HTTP {})", resp.status());
     }
     Ok(resp.json::<Value>()?["token"]
         .as_str()
@@ -231,47 +273,59 @@ pub fn purge_dockerhub_images(
     audit_file: &Path,
     older_than: u32,
     dry_run: bool,
+    yes: bool,
     tag_filter: impl Fn(&str) -> bool,
 ) -> Result<()> {
     let cutoff = threshold(older_than);
-    println!("Checking Docker Hub tags for '{repo}' older than {}", cutoff.date_naive());
+    println!("Checking Docker Hub '{repo}' tags older than {}", cutoff.date_naive());
 
-    let token = dockerhub_login(client, username, password)?;
-    let auth_header = format!("JWT {token}");
-
-    let mut audit = open_audit(audit_file, dry_run)?;
     let tags = list_dockerhub_tags(client, repo)?;
 
-    for tag in &tags {
+    let matching: Vec<(&Value, String, DateTime<Utc>)> = tags.iter().filter_map(|tag| {
         let name = tag["name"].as_str().unwrap_or("");
-
-        if blocked_tag_pattern().is_match(name) {
-            continue;
-        }
+        if blocked_tag_pattern().is_match(name) { return None; }
 
         let last_updated = tag["last_updated"].as_str().unwrap_or("");
-        let tag_date = last_updated
-            .replace('Z', "+00:00")
-            .parse::<DateTime<Utc>>()
-            .unwrap_or(Utc::now());
+        let tag_date = last_updated.replace('Z', "+00:00").parse::<DateTime<Utc>>().unwrap_or(Utc::now());
 
-        if tag_date >= cutoff || !tag_filter(name) {
-            continue;
+        if tag_date >= cutoff || !tag_filter(name) { None } else { Some((tag, name.to_string(), tag_date)) }
+    }).collect();
+
+    if matching.is_empty() {
+        println!("No matching tags found.");
+        open_audit(audit_file, dry_run)?;
+        return Ok(());
+    }
+
+    println!("Found {} tag(s) to purge.", matching.len());
+
+    if dry_run {
+        let mut audit = open_audit(audit_file, dry_run)?;
+        for (_, name, tag_date) in &matching {
+            writeln!(audit, "{}", json!({"tag": name, "last_updated": tag_date.date_naive().to_string()}))?;
         }
+        println!("[dry-run] Audit log saved to: {}", audit_file.display());
+        return Ok(());
+    }
 
-        println!("Found tag: {name} (last updated: {})", tag_date.date_naive());
+    if !crate::confirm(&format!("Delete {} Docker Hub tag(s) from '{repo}'?", matching.len()), yes) {
+        println!("Aborted.");
+        return Ok(());
+    }
 
-        if dry_run {
+    // Authenticate only when we're actually going to delete
+    let token = dockerhub_login(client, username, password)?;
+    let auth_header = format!("JWT {token}");
+    let mut audit = open_audit(audit_file, dry_run)?;
+
+    for (_, name, tag_date) in &matching {
+        let delete_url = format!("https://hub.docker.com/v2/repositories/{repo}/tags/{name}/");
+        let resp = client.delete(&delete_url).header("Authorization", &auth_header).send()?;
+        if resp.status().as_u16() == 204 {
+            println!("Deleted tag: {name}");
             writeln!(audit, "{}", json!({"tag": name, "last_updated": tag_date.date_naive().to_string()}))?;
         } else {
-            let delete_url = format!("https://hub.docker.com/v2/repositories/{repo}/tags/{name}/");
-            let resp = client.delete(&delete_url).header("Authorization", &auth_header).send()?;
-            if resp.status().as_u16() == 204 {
-                println!("Deleted tag: {name}");
-                writeln!(audit, "{}", json!({"tag": name, "last_updated": tag_date.date_naive().to_string()}))?;
-            } else {
-                eprintln!("Failed to delete {name}: {} - {}", resp.status(), resp.text()?);
-            }
+            eprintln!("Failed to delete {name}: {}", resp.status());
         }
     }
     println!("Audit log saved to: {}", audit_file.display());

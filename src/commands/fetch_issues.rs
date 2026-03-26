@@ -40,7 +40,7 @@ fn fetch_all_issues(client: &Client, config: &Config) -> Result<Vec<Value>> {
 
         let response = client
             .get(&url)
-            .header("Authorization", format!("token {}", config.github_token))
+            .header("Authorization", format!("Bearer {}", config.github_token))
             .header("Accept", "application/vnd.github.v3+json")
             .header("User-Agent", "github-tools")
             .query(&[

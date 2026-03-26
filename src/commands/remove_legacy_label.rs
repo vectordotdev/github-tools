@@ -16,6 +16,7 @@ pub struct Args {
     pub case_insensitive: bool,
     pub token: String,
     pub dry_run: bool,
+    pub yes: bool,
     pub since: Option<String>,
     pub limit: Option<usize>,
 }
@@ -181,6 +182,14 @@ pub fn run(args: &Args) -> Result<()> {
     println!("Migrating '{}' -> Type field '{}'", args.legacy_label, type_info.name);
     if let Some(limit) = args.limit {
         println!("Processing up to {limit} issues");
+    }
+
+    if !args.dry_run && !crate::confirm(
+        &format!("This will modify labels on issues/PRs in: {}. Proceed?", args.repos.join(", ")),
+        args.yes,
+    ) {
+        println!("Aborted.");
+        return Ok(());
     }
 
     let mut total_seen = 0usize;

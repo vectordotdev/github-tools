@@ -6,13 +6,16 @@ use serde_json::Value;
 
 const STALE_YEARS: i64 = 4;
 
-pub fn run(config: &Config) -> Result<()> {
+pub fn run(config: &Config, dry_run: bool, yes: bool) -> Result<()> {
     let client = Client::new();
     let cutoff = Utc::now() - Duration::days(STALE_YEARS * 365);
 
     println!("Fetching branches for {}/{}...", config.repo_owner, config.repo_name);
     let branches = fetch_all_branches(&client, config)?;
-    println!("Total branches: {}", branches.len());
+    println!("Total branches fetched: {}", branches.len());
+
+    // First pass: classify without deleting
+    let mut stale: Vec<(String, DateTime<Utc>)> = Vec::new();
 
     for branch in &branches {
         let name = branch["name"].as_str().unwrap_or("");
@@ -28,8 +31,8 @@ pub fn run(config: &Config) -> Result<()> {
                 println!("Keeping active branch: {name} (last commit: {})", last_commit.date_naive());
             }
             Some(last_commit) => {
-                println!("Deleting stale branch: {name} (last commit: {})", last_commit.date_naive());
-                delete_branch(&client, config, name)?;
+                println!("Stale branch: {name} (last commit: {})", last_commit.date_naive());
+                stale.push((name.to_string(), last_commit));
             }
             None => {
                 println!("Could not determine activity for branch: {name}");
@@ -37,6 +40,34 @@ pub fn run(config: &Config) -> Result<()> {
         }
     }
 
+    if stale.is_empty() {
+        println!("No stale branches found.");
+        return Ok(());
+    }
+
+    println!("\nFound {} stale branch(es) to delete.", stale.len());
+
+    if dry_run {
+        println!("[dry-run] The following branches would be deleted:");
+        for (name, last_commit) in &stale {
+            println!("  {name} (last commit: {})", last_commit.date_naive());
+        }
+        return Ok(());
+    }
+
+    if !crate::confirm(
+        &format!("Delete {} stale branch(es)?", stale.len()),
+        yes,
+    ) {
+        println!("Aborted.");
+        return Ok(());
+    }
+
+    for (name, _) in &stale {
+        delete_branch(&client, config, name)?;
+    }
+
+    println!("Done. Deleted {} branch(es).", stale.len());
     Ok(())
 }
 
@@ -56,7 +87,7 @@ fn fetch_all_branches(client: &Client, config: &Config) -> Result<Vec<Value>> {
     loop {
         let resp = client
             .get(&url)
-            .header("Authorization", format!("token {}", config.github_token))
+            .header("Authorization", format!("Bearer {}", config.github_token))
             .header("Accept", "application/vnd.github.v3+json")
             .header("User-Agent", "github-tools")
             .query(&[("per_page", "100"), ("page", &page.to_string())])
@@ -87,7 +118,7 @@ fn get_last_commit_date(client: &Client, config: &Config, branch: &str) -> Resul
     );
     let resp = client
         .get(&url)
-        .header("Authorization", format!("token {}", config.github_token))
+        .header("Authorization", format!("Bearer {}", config.github_token))
         .header("Accept", "application/vnd.github.v3+json")
         .header("User-Agent", "github-tools")
         .query(&[("sha", branch), ("per_page", "1")])
@@ -109,7 +140,7 @@ fn delete_branch(client: &Client, config: &Config, branch: &str) -> Result<()> {
     );
     let resp = client
         .delete(&url)
-        .header("Authorization", format!("token {}", config.github_token))
+        .header("Authorization", format!("Bearer {}", config.github_token))
         .header("Accept", "application/vnd.github.v3+json")
         .header("User-Agent", "github-tools")
         .send()?;
@@ -117,7 +148,7 @@ fn delete_branch(client: &Client, config: &Config, branch: &str) -> Result<()> {
     if resp.status().as_u16() == 204 {
         println!("Deleted branch: {branch}");
     } else {
-        eprintln!("Failed to delete branch {branch}: {} - {}", resp.status(), resp.text()?);
+        eprintln!("Failed to delete branch {branch}: {}", resp.status());
     }
     Ok(())
 }
