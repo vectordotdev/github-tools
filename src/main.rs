@@ -1,11 +1,20 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand};
-use github_tools::{commands::{build_db, close_old_prs, delete_stale_branches, fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge, remove_legacy_label, workflows}, config::Config};
+use github_tools::{
+    commands::{
+        build_db, close_old_prs, delete_stale_branches, fetch_discussions, fetch_issues,
+        fetch_labels, generate_summaries, purge, remove_legacy_label, workflows,
+    },
+    config::Config,
+};
 use reqwest::blocking::Client;
 use std::path::Path;
 
 #[derive(Parser)]
-#[command(name = "github-tools", about = "GitHub data extraction and analysis tools")]
+#[command(
+    name = "github-tools",
+    about = "GitHub data extraction and analysis tools"
+)]
 struct Cli {
     #[command(subcommand)]
     command: Command,
@@ -172,77 +181,142 @@ fn main() -> Result<()> {
             let config = Config::load(env_file.as_deref())?;
             build_db::run(&input, &config)
         }
-        Command::FetchAll { env_file } => {
-            workflows::fetch_all(&env_file)
-        }
-        Command::GenerateAll { env_file, exclude_labels } => {
-            workflows::generate_all(&env_file, exclude_labels.as_deref())
-        }
-        Command::PurgeAll { env_file, older_than, dry_run, yes } => {
-            workflows::purge_all(&env_file, older_than, dry_run, yes)
-        }
-        Command::CloseOldPrs { env_file, dry_run, yes } => {
+        Command::FetchAll { env_file } => workflows::fetch_all(&env_file),
+        Command::GenerateAll {
+            env_file,
+            exclude_labels,
+        } => workflows::generate_all(&env_file, exclude_labels.as_deref()),
+        Command::PurgeAll {
+            env_file,
+            older_than,
+            dry_run,
+            yes,
+        } => workflows::purge_all(&env_file, older_than, dry_run, yes),
+        Command::CloseOldPrs {
+            env_file,
+            dry_run,
+            yes,
+        } => {
             let config = Config::load(env_file.as_deref())?;
             close_old_prs::run(&config, dry_run, yes)
         }
-        Command::DeleteStaleBranches { env_file, dry_run, yes } => {
+        Command::DeleteStaleBranches {
+            env_file,
+            dry_run,
+            yes,
+        } => {
             let config = Config::load(env_file.as_deref())?;
             delete_stale_branches::run(&config, dry_run, yes)
         }
-        Command::GenerateSummaries { db, env_file, exclude_labels } => {
+        Command::GenerateSummaries {
+            db,
+            env_file,
+            exclude_labels,
+        } => {
             let config = Config::load(env_file.as_deref())?;
             generate_summaries::run(&db, &config, exclude_labels.as_deref())
         }
-        Command::RemoveLegacyLabel { repo, legacy_label, state, set_type_field, require_type_field, case_insensitive, dry_run, yes, since, limit } => {
+        Command::RemoveLegacyLabel {
+            repo,
+            legacy_label,
+            state,
+            set_type_field,
+            require_type_field,
+            case_insensitive,
+            dry_run,
+            yes,
+            since,
+            limit,
+        } => {
             let token = std::env::var("GITHUB_TOKEN")
                 .or_else(|_| std::env::var("GH_TOKEN"))
                 .unwrap_or_default();
             if token.is_empty() {
-                anyhow::bail!("GITHUB_TOKEN environment variable is required for remove-legacy-label");
+                anyhow::bail!(
+                    "GITHUB_TOKEN environment variable is required for remove-legacy-label"
+                );
             }
             remove_legacy_label::run(&remove_legacy_label::Args {
-                repos: repo, legacy_label, state, set_type_field, require_type_field,
-                case_insensitive, token, dry_run, since, limit, yes,
+                repos: repo,
+                legacy_label,
+                state,
+                set_type_field,
+                require_type_field,
+                case_insensitive,
+                token,
+                dry_run,
+                since,
+                limit,
+                yes,
             })
         }
         Command::Purge { target } => {
             let client = Client::new();
             match target {
-                PurgeTarget::Nightly { older_than, env_file, dry_run, yes } => {
+                PurgeTarget::Nightly {
+                    older_than,
+                    env_file,
+                    dry_run,
+                    yes,
+                } => {
                     let config = Config::load(Some(&env_file))?;
                     let dh_repo = std::env::var("DOCKERHUB_NIGHTLY_REPO")
                         .unwrap_or_else(|_| "timberio/vector".to_string());
                     purge::purge_github_versions(
-                        &client, &config.github_token,
+                        &client,
+                        &config.github_token,
                         Path::new("out/purge/nightly_github.jsonl"),
-                        older_than, dry_run, yes,
+                        older_than,
+                        dry_run,
+                        yes,
                         |t| t.contains("nightly"),
                     )?;
                     purge::purge_dockerhub_images(
-                        &client, &dh_repo,
-                        &config.docker_username()?, &config.docker_password()?,
+                        &client,
+                        &dh_repo,
+                        &config.docker_username()?,
+                        &config.docker_password()?,
                         Path::new("out/purge/nightly_dockerhub.jsonl"),
-                        30, dry_run, yes,
+                        30,
+                        dry_run,
+                        yes,
                         |t| t.starts_with("nightly"),
                     )
                 }
-                PurgeTarget::Untagged { older_than, env_file, dry_run, yes } => {
+                PurgeTarget::Untagged {
+                    older_than,
+                    env_file,
+                    dry_run,
+                    yes,
+                } => {
                     let config = Config::load(Some(&env_file))?;
                     purge::purge_github_untagged_versions(
-                        &client, &config.github_token,
+                        &client,
+                        &config.github_token,
                         Path::new("out/purge/untagged_github.jsonl"),
-                        older_than, dry_run, yes,
+                        older_than,
+                        dry_run,
+                        yes,
                     )
                 }
-                PurgeTarget::VectorDev { older_than, env_file, dry_run, yes } => {
+                PurgeTarget::VectorDev {
+                    older_than,
+                    env_file,
+                    dry_run,
+                    yes,
+                } => {
                     let config = Config::load(Some(&env_file))?;
                     let dh_repo = std::env::var("DOCKERHUB_VECTOR_DEV_REPO")
                         .unwrap_or_else(|_| "timberio/vector-dev".to_string());
                     purge::purge_dockerhub_images(
-                        &client, &dh_repo,
-                        &config.docker_username()?, &config.docker_password()?,
+                        &client,
+                        &dh_repo,
+                        &config.docker_username()?,
+                        &config.docker_password()?,
                         Path::new("out/purge/vector_dev_dockerhub.jsonl"),
-                        older_than, dry_run, yes,
+                        older_than,
+                        dry_run,
+                        yes,
                         |_| true,
                     )
                 }

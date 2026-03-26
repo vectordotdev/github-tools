@@ -50,7 +50,10 @@ pub fn run(config: &Config, dry_run: bool, yes: bool) -> Result<()> {
 
     println!("\nFound {} PR(s) to close:", matched.len());
     for (number, title, created_at) in &matched {
-        println!("  PR #{number}: {title} (created: {})", created_at.date_naive());
+        println!(
+            "  PR #{number}: {title} (created: {})",
+            created_at.date_naive()
+        );
     }
 
     if dry_run {
@@ -86,7 +89,11 @@ fn fetch_open_prs(client: &Client, config: &Config) -> Result<Vec<Value>> {
             .header("Authorization", format!("Bearer {}", config.github_token))
             .header("Accept", "application/vnd.github.v3+json")
             .header("User-Agent", "github-tools")
-            .query(&[("state", "open"), ("per_page", "100"), ("page", &page.to_string())])
+            .query(&[
+                ("state", "open"),
+                ("per_page", "100"),
+                ("page", &page.to_string()),
+            ])
             .send()
             .context("Failed to fetch PRs")?
             .error_for_status()?;
@@ -94,7 +101,9 @@ fn fetch_open_prs(client: &Client, config: &Config) -> Result<Vec<Value>> {
         let batch: Vec<Value> = resp.json()?;
         let done = batch.len() < 100;
         prs.extend(batch);
-        if done { break; }
+        if done {
+            break;
+        }
         page += 1;
     }
     Ok(prs)

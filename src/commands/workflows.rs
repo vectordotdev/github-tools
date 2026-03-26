@@ -1,6 +1,6 @@
 /// High-level workflow commands that orchestrate multiple sub-commands,
 /// replacing fetch_all_slow.sh, generate_all.sh, and purge_all.sh.
-use crate::commands::{fetch_discussions, fetch_issues, build_db, generate_summaries, purge};
+use crate::commands::{build_db, fetch_discussions, fetch_issues, generate_summaries, purge};
 use crate::config::Config;
 use anyhow::Result;
 use reqwest::blocking::Client;
@@ -32,7 +32,10 @@ pub fn generate_all(env_files: &[String], exclude_labels: Option<&str>) -> Resul
     for env_file in env_files {
         println!("\n=== Generating for env: {env_file} ===");
         let config = Config::load(Some(env_file))?;
-        let input = format!("data/{}_{}_issues.json", config.repo_owner, config.repo_name);
+        let input = format!(
+            "data/{}_{}_issues.json",
+            config.repo_owner, config.repo_name
+        );
         let db = format!("out/db/{}_{}.db", config.repo_owner, config.repo_name);
 
         println!("Running with input: {input}");
@@ -50,32 +53,46 @@ pub fn purge_all(env_file: &str, older_than: u32, dry_run: bool, yes: bool) -> R
 
     println!("\n=== Purge nightly (GitHub + Docker Hub) ===");
     purge::purge_github_versions(
-        &client, &config.github_token,
+        &client,
+        &config.github_token,
         Path::new("out/purge/nightly_github.jsonl"),
-        older_than, dry_run, yes,
+        older_than,
+        dry_run,
+        yes,
         |t| t.contains("nightly"),
     )?;
     purge::purge_dockerhub_images(
-        &client, &dockerhub_nightly_repo(),
-        &config.docker_username()?, &config.docker_password()?,
+        &client,
+        &dockerhub_nightly_repo(),
+        &config.docker_username()?,
+        &config.docker_password()?,
         Path::new("out/purge/nightly_dockerhub.jsonl"),
-        30, dry_run, yes,
+        30,
+        dry_run,
+        yes,
         |t| t.starts_with("nightly"),
     )?;
 
     println!("\n=== Purge untagged (GitHub) ===");
     purge::purge_github_untagged_versions(
-        &client, &config.github_token,
+        &client,
+        &config.github_token,
         Path::new("out/purge/untagged_github.jsonl"),
-        older_than, dry_run, yes,
+        older_than,
+        dry_run,
+        yes,
     )?;
 
     println!("\n=== Purge vector-dev (Docker Hub) ===");
     purge::purge_dockerhub_images(
-        &client, &dockerhub_vector_dev_repo(),
-        &config.docker_username()?, &config.docker_password()?,
+        &client,
+        &dockerhub_vector_dev_repo(),
+        &config.docker_username()?,
+        &config.docker_password()?,
         Path::new("out/purge/vector_dev_dockerhub.jsonl"),
-        older_than, dry_run, yes,
+        older_than,
+        dry_run,
+        yes,
         |_| true,
     )?;
 

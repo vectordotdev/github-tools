@@ -5,14 +5,16 @@ use std::fs;
 use std::path::Path;
 
 pub fn run(db: &str, config: &Config, exclude_labels: Option<&str>) -> Result<()> {
-    let conn = Connection::open(db)
-        .with_context(|| format!("Failed to open database: {db}"))?;
+    let conn = Connection::open(db).with_context(|| format!("Failed to open database: {db}"))?;
 
     let out_dir = Path::new("out/summaries");
     fs::create_dir_all(out_dir)?;
 
     let exclude: Option<Vec<String>> = exclude_labels.map(|s| {
-        s.split(',').map(|l| l.trim().to_string()).filter(|l| !l.is_empty()).collect()
+        s.split(',')
+            .map(|l| l.trim().to_string())
+            .filter(|l| !l.is_empty())
+            .collect()
     });
 
     for table in &["issues", "pull_requests"] {
@@ -29,14 +31,26 @@ pub fn run(db: &str, config: &Config, exclude_labels: Option<&str>) -> Result<()
 }
 
 fn where_clause(table: &str) -> &'static str {
-    if table == "pull_requests" { "WHERE is_draft = 0" } else { "" }
+    if table == "pull_requests" {
+        "WHERE is_draft = 0"
+    } else {
+        ""
+    }
 }
 
 fn csv_path(out_dir: &Path, config: &Config, table: &str, suffix: &str) -> std::path::PathBuf {
-    out_dir.join(format!("{}_{}_{}.{}.csv", config.repo_owner, config.repo_name, table, suffix))
+    out_dir.join(format!(
+        "{}_{}_{}.{}.csv",
+        config.repo_owner, config.repo_name, table, suffix
+    ))
 }
 
-fn export_monthly_summary(conn: &Connection, out_dir: &Path, config: &Config, table: &str) -> Result<()> {
+fn export_monthly_summary(
+    conn: &Connection,
+    out_dir: &Path,
+    config: &Config,
+    table: &str,
+) -> Result<()> {
     let wc = where_clause(table);
 
     // Step 1: get all distinct label names for this table
@@ -82,10 +96,20 @@ fn export_monthly_summary(conn: &Connection, out_dir: &Path, config: &Config, ta
         ORDER BY mb.month"
     );
 
-    write_query_to_csv(conn, &query, &[], &csv_path(out_dir, config, table, "monthly_summary"))
+    write_query_to_csv(
+        conn,
+        &query,
+        &[],
+        &csv_path(out_dir, config, table, "monthly_summary"),
+    )
 }
 
-fn export_label_breakdown(conn: &Connection, out_dir: &Path, config: &Config, table: &str) -> Result<()> {
+fn export_label_breakdown(
+    conn: &Connection,
+    out_dir: &Path,
+    config: &Config,
+    table: &str,
+) -> Result<()> {
     let wc = where_clause(table);
     let query = format!(
         "SELECT labels.name AS label_name, COUNT(*) AS count
@@ -96,10 +120,20 @@ fn export_label_breakdown(conn: &Connection, out_dir: &Path, config: &Config, ta
          GROUP BY labels.name
          ORDER BY count DESC"
     );
-    write_query_to_csv(conn, &query, &[], &csv_path(out_dir, config, table, "label_breakdown"))
+    write_query_to_csv(
+        conn,
+        &query,
+        &[],
+        &csv_path(out_dir, config, table, "label_breakdown"),
+    )
 }
 
-fn export_label_timeseries(conn: &Connection, out_dir: &Path, config: &Config, table: &str) -> Result<()> {
+fn export_label_timeseries(
+    conn: &Connection,
+    out_dir: &Path,
+    config: &Config,
+    table: &str,
+) -> Result<()> {
     let wc = where_clause(table);
     let query = format!(
         "SELECT substr({table}.created_at, 1, 7) AS month, labels.name AS label_name, COUNT(*) AS count
@@ -110,10 +144,20 @@ fn export_label_timeseries(conn: &Connection, out_dir: &Path, config: &Config, t
          GROUP BY month, label_name
          ORDER BY month, count DESC"
     );
-    write_query_to_csv(conn, &query, &[], &csv_path(out_dir, config, table, "label_counts"))
+    write_query_to_csv(
+        conn,
+        &query,
+        &[],
+        &csv_path(out_dir, config, table, "label_counts"),
+    )
 }
 
-fn export_open_by_label(conn: &Connection, out_dir: &Path, config: &Config, table: &str) -> Result<()> {
+fn export_open_by_label(
+    conn: &Connection,
+    out_dir: &Path,
+    config: &Config,
+    table: &str,
+) -> Result<()> {
     let wc = where_clause(table);
     let query = format!(
         "SELECT labels.name AS label_name,
@@ -126,7 +170,12 @@ fn export_open_by_label(conn: &Connection, out_dir: &Path, config: &Config, tabl
          GROUP BY labels.name
          ORDER BY open_count DESC, closed_count DESC"
     );
-    write_query_to_csv(conn, &query, &[], &csv_path(out_dir, config, table, "open_by_label"))
+    write_query_to_csv(
+        conn,
+        &query,
+        &[],
+        &csv_path(out_dir, config, table, "open_by_label"),
+    )
 }
 
 fn export_overall_totals(
@@ -143,8 +192,8 @@ fn export_overall_totals(
         where_parts.push("is_draft = 0".to_string());
     }
 
-    if let Some(labels) = exclude_labels {
-        if !labels.is_empty() {
+    if let Some(labels) = exclude_labels
+        && !labels.is_empty() {
             let placeholders = labels.iter().map(|_| "?").collect::<Vec<_>>().join(", ");
             where_parts.push(format!(
                 "{table}.id NOT IN (
@@ -157,7 +206,6 @@ fn export_overall_totals(
             sorted.sort();
             params.extend(sorted);
         }
-    }
 
     let where_sql = if where_parts.is_empty() {
         String::new()
@@ -174,7 +222,7 @@ fn export_overall_totals(
 
     let rusqlite_params: Vec<rusqlite::types::Value> = params
         .into_iter()
-        .map(|s| rusqlite::types::Value::Text(s))
+        .map(rusqlite::types::Value::Text)
         .collect();
 
     write_query_to_csv(

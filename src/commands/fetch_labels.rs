@@ -28,7 +28,10 @@ pub fn run(config: &Config) -> Result<()> {
 
     let out_dir = Path::new("out/labels");
     fs::create_dir_all(out_dir)?;
-    let out_file = out_dir.join(format!("{}_{}_labels.json", config.repo_owner, config.repo_name));
+    let out_file = out_dir.join(format!(
+        "{}_{}_labels.json",
+        config.repo_owner, config.repo_name
+    ));
     let json = serde_json::to_string_pretty(&labels)?;
     fs::write(&out_file, json)?;
     println!("Labels saved to '{}'", out_file.display());

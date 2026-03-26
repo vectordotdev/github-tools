@@ -161,7 +161,9 @@ fn fetch_all_discussions(client: &Client, config: &Config) -> Result<Vec<Discuss
             break;
         }
 
-        let result: GraphQlResponse = response.json().context("Failed to parse GraphQL response")?;
+        let result: GraphQlResponse = response
+            .json()
+            .context("Failed to parse GraphQL response")?;
 
         if let Some(errors) = result.errors {
             eprintln!("Warning: GraphQL errors: {errors}");

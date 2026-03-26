@@ -18,7 +18,10 @@ pub fn run_with_client(client: &Client, config: &Config) -> Result<()> {
 
     let out_dir = Path::new("out/historical/issues");
     fs::create_dir_all(out_dir)?;
-    let out_file = out_dir.join(format!("{}_{}_issues.json", config.repo_owner, config.repo_name));
+    let out_file = out_dir.join(format!(
+        "{}_{}_issues.json",
+        config.repo_owner, config.repo_name
+    ));
     let json = serde_json::to_string_pretty(&issues)?;
     fs::write(&out_file, json)?;
     println!("Saved to '{}'", out_file.display());
@@ -61,7 +64,10 @@ fn fetch_all_issues(client: &Client, config: &Config) -> Result<Vec<Value>> {
         let page_items: Vec<Value> = response.json().context("Failed to parse response")?;
         let done = page_items.is_empty() || page_items.len() < BATCH_SIZE as usize;
 
-        println!("Page {page} fetched. Total collected: {}", issues.len() + page_items.len());
+        println!(
+            "Page {page} fetched. Total collected: {}",
+            issues.len() + page_items.len()
+        );
         issues.extend(page_items);
 
         if done {

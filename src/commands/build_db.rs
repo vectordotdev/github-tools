@@ -7,10 +7,9 @@ use std::fs;
 use std::path::Path;
 
 pub fn run(input: &str, config: &Config) -> Result<()> {
-    let json = fs::read_to_string(input)
-        .with_context(|| format!("Failed to read input file: {input}"))?;
-    let items: Vec<Value> = serde_json::from_str(&json)
-        .context("Failed to parse issues JSON")?;
+    let json =
+        fs::read_to_string(input).with_context(|| format!("Failed to read input file: {input}"))?;
+    let items: Vec<Value> = serde_json::from_str(&json).context("Failed to parse issues JSON")?;
 
     println!("Loaded {} items from {input}", items.len());
 
@@ -34,7 +33,8 @@ pub fn run(input: &str, config: &Config) -> Result<()> {
 
 fn create_tables(conn: &Connection) -> Result<()> {
     println!("Creating database tables (issues, pull_requests, labels, issue_labels)...");
-    conn.execute_batch("
+    conn.execute_batch(
+        "
         CREATE TABLE IF NOT EXISTS issues (
             id          INTEGER PRIMARY KEY,
             number      INTEGER,
@@ -67,14 +67,18 @@ fn create_tables(conn: &Connection) -> Result<()> {
             label_id    INTEGER,
             PRIMARY KEY (issue_id, label_id)
         );
-    ")?;
+    ",
+    )?;
     println!("Database tables created successfully.");
     Ok(())
 }
 
+type IssueRow = (i64, i64, String, String, String, String, Option<String>, Option<String>);
+type PrRow = (i64, i64, String, String, String, String, Option<String>, Option<String>, bool);
+
 fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
-    let mut issue_rows: Vec<(i64, i64, String, String, String, String, Option<String>, Option<String>)> = Vec::new();
-    let mut pr_rows: Vec<(i64, i64, String, String, String, String, Option<String>, Option<String>, bool)> = Vec::new();
+    let mut issue_rows: Vec<IssueRow> = Vec::new();
+    let mut pr_rows: Vec<PrRow> = Vec::new();
     let mut label_map: HashMap<i64, (i64, String, String, Option<String>)> = HashMap::new();
     let mut issue_label_set: HashSet<(i64, i64)> = HashSet::new();
 
@@ -90,9 +94,13 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
 
         if item.get("pull_request").is_some() {
             let is_draft = item["draft"].as_bool().unwrap_or(false);
-            pr_rows.push((id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft));
+            pr_rows.push((
+                id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft,
+            ));
         } else {
-            issue_rows.push((id, number, title, state, created_at, updated_at, closed_at, user_login));
+            issue_rows.push((
+                id, number, title, state, created_at, updated_at, closed_at, user_login,
+            ));
         }
 
         if let Some(labels) = item["labels"].as_array() {
@@ -116,8 +124,11 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
             "INSERT INTO issues(id, number, title, state, created_at, updated_at, closed_at, user_login)
              VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)"
         )?;
-        for (id, number, title, state, created_at, updated_at, closed_at, user_login) in &issue_rows {
-            stmt.execute(rusqlite::params![id, number, title, state, created_at, updated_at, closed_at, user_login])?;
+        for (id, number, title, state, created_at, updated_at, closed_at, user_login) in &issue_rows
+        {
+            stmt.execute(rusqlite::params![
+                id, number, title, state, created_at, updated_at, closed_at, user_login
+            ])?;
         }
     }
     println!("Inserted {} issues.", issue_rows.len());
@@ -128,17 +139,20 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
             "INSERT INTO pull_requests(id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft)
              VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)"
         )?;
-        for (id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft) in &pr_rows {
-            stmt.execute(rusqlite::params![id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft])?;
+        for (id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft) in
+            &pr_rows
+        {
+            stmt.execute(rusqlite::params![
+                id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft
+            ])?;
         }
     }
     println!("Inserted {} pull requests.", pr_rows.len());
 
     println!("Inserting labels into database...");
     {
-        let mut stmt = conn.prepare(
-            "INSERT INTO labels(id, name, color, description) VALUES (?1, ?2, ?3, ?4)"
-        )?;
+        let mut stmt = conn
+            .prepare("INSERT INTO labels(id, name, color, description) VALUES (?1, ?2, ?3, ?4)")?;
         for (id, name, color, desc) in label_map.values() {
             stmt.execute(rusqlite::params![id, name, color, desc])?;
         }
@@ -147,9 +161,8 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
 
     println!("Inserting issue-label relationships into database...");
     {
-        let mut stmt = conn.prepare(
-            "INSERT INTO issue_labels(issue_id, label_id) VALUES (?1, ?2)"
-        )?;
+        let mut stmt =
+            conn.prepare("INSERT INTO issue_labels(issue_id, label_id) VALUES (?1, ?2)")?;
         for (issue_id, label_id) in &issue_label_set {
             stmt.execute(rusqlite::params![issue_id, label_id])?;
         }

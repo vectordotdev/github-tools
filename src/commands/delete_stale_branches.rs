@@ -10,7 +10,10 @@ pub fn run(config: &Config, dry_run: bool, yes: bool) -> Result<()> {
     let client = Client::new();
     let cutoff = Utc::now() - Duration::days(STALE_YEARS * 365);
 
-    println!("Fetching branches for {}/{}...", config.repo_owner, config.repo_name);
+    println!(
+        "Fetching branches for {}/{}...",
+        config.repo_owner, config.repo_name
+    );
     let branches = fetch_all_branches(&client, config)?;
     println!("Total branches fetched: {}", branches.len());
 
@@ -28,10 +31,16 @@ pub fn run(config: &Config, dry_run: bool, yes: bool) -> Result<()> {
 
         match get_last_commit_date(&client, config, name)? {
             Some(last_commit) if last_commit > cutoff => {
-                println!("Keeping active branch: {name} (last commit: {})", last_commit.date_naive());
+                println!(
+                    "Keeping active branch: {name} (last commit: {})",
+                    last_commit.date_naive()
+                );
             }
             Some(last_commit) => {
-                println!("Stale branch: {name} (last commit: {})", last_commit.date_naive());
+                println!(
+                    "Stale branch: {name} (last commit: {})",
+                    last_commit.date_naive()
+                );
                 stale.push((name.to_string(), last_commit));
             }
             None => {
@@ -55,10 +64,7 @@ pub fn run(config: &Config, dry_run: bool, yes: bool) -> Result<()> {
         return Ok(());
     }
 
-    if !crate::confirm(
-        &format!("Delete {} stale branch(es)?", stale.len()),
-        yes,
-    ) {
+    if !crate::confirm(&format!("Delete {} stale branch(es)?", stale.len()), yes) {
         println!("Aborted.");
         return Ok(());
     }
@@ -103,15 +109,23 @@ fn fetch_all_branches(client: &Client, config: &Config) -> Result<Vec<Value>> {
             .unwrap_or(false);
 
         let batch: Vec<Value> = resp.json()?;
-        if batch.is_empty() { break; }
+        if batch.is_empty() {
+            break;
+        }
         branches.extend(batch);
-        if !has_next { break; }
+        if !has_next {
+            break;
+        }
         page += 1;
     }
     Ok(branches)
 }
 
-fn get_last_commit_date(client: &Client, config: &Config, branch: &str) -> Result<Option<DateTime<Utc>>> {
+fn get_last_commit_date(
+    client: &Client,
+    config: &Config,
+    branch: &str,
+) -> Result<Option<DateTime<Utc>>> {
     let url = format!(
         "https://api.github.com/repos/{}/{}/commits",
         config.repo_owner, config.repo_name
