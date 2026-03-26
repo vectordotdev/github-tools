@@ -1,6 +1,6 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand};
-use github_tools::{commands::{fetch_labels, fetch_issues}, config::Config};
+use github_tools::{commands::{fetch_discussions, fetch_issues, fetch_labels}, config::Config};
 
 #[derive(Parser)]
 #[command(name = "github-tools", about = "GitHub data extraction and analysis tools")]
@@ -93,7 +93,8 @@ fn main() -> Result<()> {
             fetch_issues::run(&config)
         }
         Command::FetchDiscussions { env_file } => {
-            todo!("fetch-discussions: env_file={env_file:?}")
+            let config = Config::load(env_file.as_deref())?;
+            fetch_discussions::run(&config)
         }
         Command::BuildDb { input, env_file } => {
             todo!("build-db: input={input}, env_file={env_file:?}")
