@@ -64,6 +64,8 @@ enum Command {
         env_file: Vec<String>,
         #[arg(long)]
         exclude_labels: Option<String>,
+        #[arg(long, help = "Only include data from this YYYY-MM date forward (passed to plot.py). Defaults to 12 months ago.")]
+        start: Option<String>,
     },
     /// Run all purge operations (replaces purge_all.sh)
     PurgeAll {
@@ -185,7 +187,8 @@ fn main() -> Result<()> {
         Command::GenerateAll {
             env_file,
             exclude_labels,
-        } => workflows::generate_all(&env_file, exclude_labels.as_deref()),
+            start,
+        } => workflows::generate_all(&env_file, exclude_labels.as_deref(), start.as_deref()),
         Command::PurgeAll {
             env_file,
             older_than,
