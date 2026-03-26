@@ -8,12 +8,13 @@ Tools for extracting data from GitHub, storing it in a local SQLite database, qu
 # Directory Layout
 
 ```
-data/        # Committed JSON snapshots used as pipeline input (issues, discussions)
+data/        # Committed snapshots: JSON inputs and PNG charts
+  images/    # Committed PNG charts (promoted from out/images/)
 out/         # Gitignored — all generated and local-only files
   historical/  # Raw JSON fetched from GitHub API (fetch scripts write here)
   db/          # SQLite databases
   summaries/   # Generated CSVs
-  images/      # Generated PNG charts
+  images/      # Generated PNG charts (promote to data/images/ to commit)
   purge/       # Purge audit logs (local only)
 scripts/     # All Python logic
 ```
@@ -38,7 +39,7 @@ Fetches all issues, PRs, and discussions into `out/historical/`. This is slow.
 ./fetch_all_slow.sh
 ```
 
-After fetching, promote the files to `data/` to commit them as a new snapshot:
+After fetching, promote the JSON files to `data/` to commit them as a new snapshot:
 
 ```shell
 cp out/historical/issues/vectordotdev_vector_issues.json data/
@@ -55,7 +56,11 @@ Reads from `data/`, writes all output to `out/`.
 ./generate_all.sh
 ```
 
-Charts are written to `out/images/`.
+After generating, promote the charts to `data/images/` to commit them:
+
+```shell
+cp out/images/*.png data/images/
+```
 
 ## 3. (Optional) Purge stale container images
 
@@ -64,3 +69,79 @@ Charts are written to `out/images/`.
 ```
 
 Audit logs are written to `out/purge/` (local only, not committed).
+
+# Trends
+
+#### Vector
+
+##### Issues
+
+![Monthly Issues](data/images/vectordotdev_vector_issues.monthly_trend.png)
+
+---
+
+![Top Issue Labels](data/images/vectordotdev_vector_issues.top_labels.png)
+
+---
+
+![Issue Label Counts](data/images/vectordotdev_vector_issues.label_counts.png)
+
+---
+
+![Top 5 Integration Issue Labels](data/images/vectordotdev_vector_issues.integrations.top_5.monthly_trend.png)
+
+---
+
+![Top Integration Issue By Label Total Count](data/images/vectordotdev_vector_issues.open_closed_total_label_count.png)
+
+##### Pull Requests
+
+![Monthly PRs](data/images/vectordotdev_vector_pull_requests.monthly_trend.png)
+
+---
+
+![Top PR Labels](data/images/vectordotdev_vector_pull_requests.top_labels.png)
+
+---
+
+![PR Label Counts](data/images/vectordotdev_vector_pull_requests.label_counts.png)
+
+---
+
+![Top 5 Integration PR Labels](data/images/vectordotdev_vector_pull_requests.integrations.top_5.monthly_trend.png)
+
+---
+
+![Top Integration PRs By Label Total Count](data/images/vectordotdev_vector_pull_requests.open_closed_total_label_count.png)
+
+##### Discussions
+
+TODO!
+
+---
+
+#### VRL
+
+##### Issues
+
+![Monthly Issues](data/images/vectordotdev_vrl_issues.monthly_trend.png)
+
+---
+
+![Top Issue Labels](data/images/vectordotdev_vrl_issues.top_labels.png)
+
+---
+
+![Issue Label Counts](data/images/vectordotdev_vrl_issues.label_counts.png)
+
+##### Pull Requests
+
+![Monthly PRs](data/images/vectordotdev_vrl_pull_requests.monthly_trend.png)
+
+---
+
+![Top PR Labels](data/images/vectordotdev_vrl_pull_requests.top_labels.png)
+
+---
+
+![PR Label Counts](data/images/vectordotdev_vrl_pull_requests.label_counts.png)
