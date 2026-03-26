@@ -1,7 +1,7 @@
 # github-tools
 
-> [!WARNING]
-> Under Construction. I force push to this frequently.
+> [!NOTE]
+> This repo is actively developed. Main branch may be rewritten.
 
 Tools for extracting data from GitHub, storing it in a local SQLite database, querying it, and visualizing trends.
 
