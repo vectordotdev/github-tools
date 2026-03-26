@@ -1,6 +1,6 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand};
-use github_tools::{commands::{build_db, fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge}, config::Config};
+use github_tools::{commands::{build_db, close_old_prs, delete_stale_branches, fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge}, config::Config};
 use reqwest::blocking::Client;
 use std::path::Path;
 
@@ -43,6 +43,18 @@ enum Command {
         env_file: Option<String>,
         #[arg(long, help = "Comma-separated labels to exclude")]
         exclude_labels: Option<String>,
+    },
+    /// Close old PRs with the 'meta: awaiting author' label
+    CloseOldPrs {
+        #[arg(long, help = "Path to .env file")]
+        env_file: Option<String>,
+        #[arg(long)]
+        dry_run: bool,
+    },
+    /// Delete branches with no commits in the last 4 years
+    DeleteStaleBranches {
+        #[arg(long, help = "Path to .env file")]
+        env_file: Option<String>,
     },
     /// Purge stale container images
     Purge {
@@ -101,6 +113,14 @@ fn main() -> Result<()> {
         Command::BuildDb { input, env_file } => {
             let config = Config::load(env_file.as_deref())?;
             build_db::run(&input, &config)
+        }
+        Command::CloseOldPrs { env_file, dry_run } => {
+            let config = Config::load(env_file.as_deref())?;
+            close_old_prs::run(&config, dry_run)
+        }
+        Command::DeleteStaleBranches { env_file } => {
+            let config = Config::load(env_file.as_deref())?;
+            delete_stale_branches::run(&config)
         }
         Command::GenerateSummaries { db, env_file, exclude_labels } => {
             let config = Config::load(env_file.as_deref())?;
