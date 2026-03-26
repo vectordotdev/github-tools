@@ -8,38 +8,76 @@ Tools for extracting data from GitHub, storing it in a local SQLite database, qu
 # Directory Layout
 
 ```
-data/        # Committed snapshots: JSON inputs and PNG charts
-  images/    # Committed PNG charts (promoted from out/images/)
-out/         # Gitignored — all generated and local-only files
-  historical/  # Raw JSON fetched from GitHub API (fetch scripts write here)
-  db/          # SQLite databases
-  summaries/   # Generated CSVs
-  images/      # Generated PNG charts (promote to data/images/ to commit)
-  purge/       # Purge audit logs (local only)
-scripts/     # All Python logic
+src/             # Rust source (single binary: github-tools)
+scripts/util/    # Python: plot.py (charts), json_to_csv.py (utility)
+data/            # Committed snapshots: JSON inputs and PNG charts
+  images/        # Committed PNG charts (promoted from out/images/)
+out/             # Gitignored — all generated and local-only files
+  historical/    # Raw JSON fetched from GitHub API
+  db/            # SQLite databases
+  summaries/     # Generated CSVs
+  images/        # Generated PNG charts (promote to data/images/ to commit)
+  purge/         # Purge audit logs (local only)
+```
+
+# Build
+
+```shell
+cargo build --release
+# Binary: target/release/github-tools
 ```
 
 # Configuration
 
-For GitHub integrations, you will need a `.env` file. Example:
+Most commands take an `--env-file` pointing to a `.env` file:
 
 ```dotenv
-GITHUB_TOKEN=REDACTED
+GITHUB_TOKEN=...
 REPO_OWNER=vectordotdev
 REPO_NAME=vector
+DOCKER_USERNAME=...   # purge commands only
+DOCKER_PASSWORD=...   # purge commands only
 ```
+
+# Commands
+
+```
+github-tools <COMMAND>
+
+Fetch:
+  fetch-all          Fetch issues + discussions for all repos (workflow)
+  fetch-issues       Fetch all issues/PRs for a repository
+  fetch-discussions  Fetch all discussions for a repository
+  fetch-labels       Fetch all labels for a repository
+
+Pipeline:
+  generate-all       Build DB + summaries for all repos (workflow)
+  build-db           Load issues JSON into SQLite database
+  generate-summaries Generate CSV summaries from SQLite database
+
+Purge:
+  purge-all          Run all purge operations (workflow)
+  purge nightly      Purge old nightly images from GitHub and Docker Hub
+  purge untagged     Purge untagged GitHub container images
+  purge vector-dev   Purge old vector-dev images from Docker Hub
+
+Maintenance:
+  close-old-prs          Close PRs with 'meta: awaiting author' older than 6 months
+  delete-stale-branches  Delete branches with no commits in 4 years
+  remove-legacy-label    Remove legacy type labels from issues/PRs
+```
+
+Run `github-tools <COMMAND> --help` for full argument details.
 
 # Workflow
 
 ## 1. (Optional) Fetch fresh data from GitHub
 
-Fetches all issues, PRs, and discussions into `out/historical/`. This is slow.
-
 ```shell
-./fetch_all_slow.sh
+github-tools fetch-all --env-file vector.env --env-file vrl.env
 ```
 
-After fetching, promote the JSON files to `data/` to commit them as a new snapshot:
+Writes to `out/historical/`. Promote to `data/` to commit as a snapshot:
 
 ```shell
 cp out/historical/issues/vectordotdev_vector_issues.json data/
@@ -50,13 +88,18 @@ cp out/historical/discussions/vectordotdev_vrl_discussions.json data/
 
 ## 2. Generate DB, summaries, and charts
 
-Reads from `data/`, writes all output to `out/`.
-
 ```shell
-./generate_all.sh
+github-tools generate-all \
+  --env-file vector.env --env-file vrl.env \
+  --exclude-labels "no-changelog,meta: awaiting author"
+
+# Charts (still Python):
+python scripts/util/plot.py --env-file vector.env --input-dir out/summaries \
+  --start $(date -d "$(date +%Y-%m-01) -12 months" +%Y-%m) \
+  --exclude-labels "no-changelog,meta: awaiting author"
 ```
 
-After generating, promote the charts to `data/images/` to commit them:
+Promote charts to commit:
 
 ```shell
 cp out/images/*.png data/images/
@@ -65,10 +108,11 @@ cp out/images/*.png data/images/
 ## 3. (Optional) Purge stale container images
 
 ```shell
-./purge_all.sh
+github-tools purge-all --env-file vector.env --dry-run
+github-tools purge-all --env-file vector.env  # omit --dry-run to execute
 ```
 
-Audit logs are written to `out/purge/` (local only, not committed).
+Audit logs written to `out/purge/` (local only).
 
 # Trends
 
