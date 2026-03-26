@@ -1,5 +1,6 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand};
+use github_tools::{commands::fetch_labels, config::Config};
 
 #[derive(Parser)]
 #[command(name = "github-tools", about = "GitHub data extraction and analysis tools")]
@@ -84,7 +85,8 @@ fn main() -> Result<()> {
 
     match cli.command {
         Command::FetchLabels { env_file } => {
-            todo!("fetch-labels: env_file={env_file:?}")
+            let config = Config::load(env_file.as_deref())?;
+            fetch_labels::run(&config)
         }
         Command::FetchIssues { env_file } => {
             todo!("fetch-issues: env_file={env_file:?}")
