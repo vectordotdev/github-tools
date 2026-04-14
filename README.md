@@ -118,6 +118,8 @@ Audit logs written to `out/purge/` (local only).
 
 #### Vector
 
+> **Filters applied:** Draft PRs are excluded. Items with the following labels are excluded from all charts: `no-changelog`, `meta: awaiting author`.
+
 ##### Issues
 
 ![Monthly Issues](data/images/vectordotdev_vector_issues.monthly_trend.png)
@@ -165,6 +167,8 @@ TODO!
 ---
 
 #### VRL
+
+> **Filters applied:** Draft PRs are excluded. Items with the following labels are excluded from all charts: `no-changelog`, `meta: awaiting author`.
 
 ##### Issues
 
