@@ -1,3 +1,4 @@
+use crate::commands::fetch_discussions::Discussion;
 use crate::config::Config;
 use anyhow::{Context, Result};
 use rusqlite::Connection;
@@ -32,7 +33,7 @@ pub fn run(input: &str, config: &Config) -> Result<()> {
 }
 
 fn create_tables(conn: &Connection) -> Result<()> {
-    println!("Creating database tables (issues, pull_requests, labels, issue_labels)...");
+    println!("Creating database tables...");
     conn.execute_batch(
         "
         CREATE TABLE IF NOT EXISTS issues (
@@ -67,6 +68,20 @@ fn create_tables(conn: &Connection) -> Result<()> {
             issue_id    INTEGER,
             label_id    INTEGER,
             PRIMARY KEY (issue_id, label_id)
+        );
+        CREATE TABLE IF NOT EXISTS discussions (
+            number        INTEGER PRIMARY KEY,
+            title         TEXT,
+            category      TEXT,
+            created_at    TEXT,
+            updated_at    TEXT,
+            closed_at     TEXT,
+            closed        BOOLEAN,
+            state_reason  TEXT,
+            is_answered   BOOLEAN,
+            user_login    TEXT,
+            comment_count INTEGER,
+            upvote_count  INTEGER
         );
     ",
     )?;
@@ -171,5 +186,31 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
     }
     println!("Inserted {} issue-label records.", issue_label_set.len());
 
+    Ok(())
+}
+
+pub fn load_discussions(conn: &Connection, discussions: &[Discussion]) -> Result<()> {
+    println!("Inserting discussions into database...");
+    let mut stmt = conn.prepare(
+        "INSERT OR REPLACE INTO discussions(number, title, category, created_at, updated_at, closed_at, closed, state_reason, is_answered, user_login, comment_count, upvote_count)
+         VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12)"
+    )?;
+    for d in discussions {
+        stmt.execute(rusqlite::params![
+            d.number,
+            d.title,
+            d.category.name,
+            d.created_at,
+            d.updated_at,
+            d.closed_at,
+            d.closed,
+            d.state_reason,
+            d.is_answered,
+            d.author.as_ref().map(|a| a.login.as_str()),
+            d.comments.total_count,
+            d.upvote_count,
+        ])?;
+    }
+    println!("Inserted {} discussions.", discussions.len());
     Ok(())
 }

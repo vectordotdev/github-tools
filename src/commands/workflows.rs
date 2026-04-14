@@ -36,8 +36,21 @@ pub fn generate_all(env_files: &[String], exclude_labels: Option<&str>, start: O
         let input = format!("data/{}_{}_issues.json", config.repo_owner, config.repo_name);
         let db = format!("out/db/{}_{}.db", config.repo_owner, config.repo_name);
 
+        let discussions_input = format!("data/{}_{}_discussions.json", config.repo_owner, config.repo_name);
+
         println!("Running with input: {input}");
         build_db::run(&input, &config)?;
+
+        // Load discussions if the JSON file exists
+        if std::path::Path::new(&discussions_input).exists() {
+            println!("Loading discussions from: {discussions_input}");
+            let disc_json = std::fs::read_to_string(&discussions_input)?;
+            let discussions: Vec<crate::commands::fetch_discussions::Discussion> =
+                serde_json::from_str(&disc_json)?;
+            let conn = rusqlite::Connection::open(&db)?;
+            build_db::load_discussions(&conn, &discussions)?;
+        }
+
         generate_summaries::run(&db, &config, exclude_labels)?;
     }
 
