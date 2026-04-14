@@ -43,7 +43,8 @@ fn create_tables(conn: &Connection) -> Result<()> {
             created_at  TEXT,
             updated_at  TEXT,
             closed_at   TEXT,
-            user_login  TEXT
+            user_login  TEXT,
+            issue_type  TEXT
         );
         CREATE TABLE IF NOT EXISTS pull_requests (
             id          INTEGER PRIMARY KEY,
@@ -73,7 +74,7 @@ fn create_tables(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
-type IssueRow = (i64, i64, String, String, String, String, Option<String>, Option<String>);
+type IssueRow = (i64, i64, String, String, String, String, Option<String>, Option<String>, Option<String>);
 type PrRow = (i64, i64, String, String, String, String, Option<String>, Option<String>, bool);
 
 fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
@@ -91,6 +92,7 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
         let updated_at = item["updated_at"].as_str().unwrap_or("").to_string();
         let closed_at = item["closed_at"].as_str().map(|s| s.to_string());
         let user_login = item["user"]["login"].as_str().map(|s| s.to_string());
+        let issue_type = item["issue_type"].as_str().map(|s| s.to_string());
 
         if item.get("pull_request").is_some() {
             let is_draft = item["draft"].as_bool().unwrap_or(false);
@@ -99,7 +101,7 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
             ));
         } else {
             issue_rows.push((
-                id, number, title, state, created_at, updated_at, closed_at, user_login,
+                id, number, title, state, created_at, updated_at, closed_at, user_login, issue_type,
             ));
         }
 
@@ -121,13 +123,13 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
     println!("Inserting issues into database...");
     {
         let mut stmt = conn.prepare(
-            "INSERT INTO issues(id, number, title, state, created_at, updated_at, closed_at, user_login)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)"
+            "INSERT INTO issues(id, number, title, state, created_at, updated_at, closed_at, user_login, issue_type)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)"
         )?;
-        for (id, number, title, state, created_at, updated_at, closed_at, user_login) in &issue_rows
+        for (id, number, title, state, created_at, updated_at, closed_at, user_login, issue_type) in &issue_rows
         {
             stmt.execute(rusqlite::params![
-                id, number, title, state, created_at, updated_at, closed_at, user_login
+                id, number, title, state, created_at, updated_at, closed_at, user_login, issue_type
             ])?;
         }
     }
