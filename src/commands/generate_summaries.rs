@@ -1,5 +1,6 @@
 use crate::config::Config;
 use anyhow::{Context, Result};
+use chrono::Utc;
 use rusqlite::Connection;
 use std::fs;
 use std::path::Path;
@@ -59,6 +60,9 @@ fn export_monthly_summary(
     };
     let where_and = where_and_owned.as_str();
 
+    let current_month = Utc::now().format("%Y-%m").to_string();
+    eprintln!("Warning: excluding current incomplete month ({current_month}) from monthly summary for {table}");
+
     // Step 1: get all distinct label names for this table
     let label_names: Vec<String> = {
         let mut stmt = conn.prepare(&format!(
@@ -105,6 +109,7 @@ fn export_monthly_summary(
         FROM events e
         LEFT JOIN label_counts lc ON e.issue_id = lc.issue_id
         GROUP BY e.month
+        HAVING e.month < '{current_month}'
         ORDER BY e.month"
     );
 
