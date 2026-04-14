@@ -29,6 +29,9 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
         author {
           login
         }
+        issueType {
+          name
+        }
         labels(first: 100) {
           nodes {
             id
@@ -212,6 +215,8 @@ fn to_rest_format(node: &Value, is_pr: bool) -> Value {
         .to_lowercase()
         .replace("merged", "closed");
 
+    let issue_type = node["issueType"]["name"].as_str().map(|s| s.to_string());
+
     let mut item = json!({
         "id": node["databaseId"],
         "number": node["number"],
@@ -224,6 +229,7 @@ fn to_rest_format(node: &Value, is_pr: bool) -> Value {
             "login": node["author"]["login"],
         },
         "labels": labels,
+        "issue_type": issue_type,
     });
 
     if is_pr {

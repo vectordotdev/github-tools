@@ -36,6 +36,16 @@ COLOR_MAP = {
     "closed_pull_requests": "#27b01c",
 }
 
+# Type overlay lines for the monthly trend chart.
+# Each entry: (display_label, color, list_of_possible_column_names)
+# The first matching column found in the CSV will be used.
+TYPE_OVERLAYS = [
+    ("Bugs",         "#FF4C4C", ["type: bug",         "Bug"]),
+    ("Features",     "#4C9AFF", ["type: feature",      "Feature"]),
+    ("Enhancements", "#36B37E", ["type: enhancement",  "Enhancement"]),
+    ("Tasks",        "#FFA500", ["type: task",          "Task"]),
+]
+
 
 def setup_styles():
     plt.rcParams["font.family"] = "DejaVu Sans"
@@ -187,19 +197,12 @@ def plot_monthly_summary_basic(path, table, output_path, start_date=None):
                  color=COLOR_MAP.get(closed_key),
                  linewidth=3,
                  marker='o')
-        plt.plot(df["month"],
-                 df["type: bug"],
-                 label="Bugs",
-                 color=COLOR_MAP.get("type: bug"),
-                 linewidth=2,
-                 linestyle="--")
-        plt.plot(df["month"], df["type: feature"], label="Features", color=COLOR_MAP.get("type: feature"),
-                 linewidth=2, linestyle="--")
-        plt.plot(df["month"], df["type: enhancement"],
-                 label="Enhancements",
-                 color=COLOR_MAP.get("type: enhancement"),
-                 linewidth=2,
-                 linestyle="--")
+        for display_label, color, candidates in TYPE_OVERLAYS:
+            col = next((c for c in candidates if c in df.columns), None)
+            if col is not None:
+                plt.plot(df["month"], df[col],
+                         label=display_label, color=color,
+                         linewidth=2, linestyle="--")
 
         plt.title(f"Monthly GitHub Trends ({table})", fontsize=16)
         ax = plt.gca()

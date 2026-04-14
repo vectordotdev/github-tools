@@ -17,26 +17,67 @@ pub fn run(db: &str, config: &Config, exclude_labels: Option<&str>) -> Result<()
             .filter(|l| !l.is_empty())
             .collect()
     });
+    let exc = exclude.as_deref();
 
     for table in &["issues", "pull_requests"] {
         println!("Generating summaries for table '{table}'...");
-        export_open_by_label(&conn, out_dir, config, table)?;
-        export_monthly_summary(&conn, out_dir, config, table)?;
-        export_label_breakdown(&conn, out_dir, config, table)?;
-        export_label_timeseries(&conn, out_dir, config, table)?;
-        export_overall_totals(&conn, out_dir, config, table, exclude.as_deref())?;
+        export_open_by_label(&conn, out_dir, config, table, exc)?;
+        export_monthly_summary(&conn, out_dir, config, table, exc)?;
+        export_label_breakdown(&conn, out_dir, config, table, exc)?;
+        export_label_timeseries(&conn, out_dir, config, table, exc)?;
+        export_overall_totals(&conn, out_dir, config, table, exc)?;
     }
 
     println!("Done. All CSVs saved to '{}'", out_dir.display());
     Ok(())
 }
 
-fn where_clause(table: &str) -> &'static str {
-    if table == "pull_requests" {
-        "WHERE is_draft = 0"
-    } else {
-        ""
+/// Build the WHERE clause parts and params for excluding items with certain labels.
+/// Returns (sql_condition, params) where sql_condition is like
+/// "{table}.id NOT IN (SELECT ...)" and params are the label names.
+fn exclude_filter(table: &str, exclude_labels: Option<&[String]>) -> (Option<String>, Vec<String>) {
+    match exclude_labels {
+        Some(labels) if !labels.is_empty() => {
+            let placeholders = labels.iter().map(|_| "?").collect::<Vec<_>>().join(", ");
+            let sql = format!(
+                "{table}.id NOT IN (
+                    SELECT issue_id FROM issue_labels
+                    JOIN labels ON labels.id = issue_labels.label_id
+                    WHERE labels.name IN ({placeholders})
+                )"
+            );
+            let mut params = labels.to_vec();
+            params.sort();
+            (Some(sql), params)
+        }
+        _ => (None, Vec::new()),
     }
+}
+
+/// Combine the base where clause (e.g. draft filter), exclude filter, and any extra conditions.
+fn build_where(table: &str, exclude_labels: Option<&[String]>, extra: &[&str]) -> (String, Vec<String>) {
+    let mut parts: Vec<String> = Vec::new();
+
+    if table == "pull_requests" {
+        parts.push("is_draft = 0".to_string());
+    }
+
+    let (exc_sql, params) = exclude_filter(table, exclude_labels);
+    if let Some(sql) = exc_sql {
+        parts.push(sql);
+    }
+
+    for cond in extra {
+        parts.push(cond.to_string());
+    }
+
+    let where_sql = if parts.is_empty() {
+        String::new()
+    } else {
+        format!("WHERE {}", parts.join(" AND "))
+    };
+
+    (where_sql, params)
 }
 
 fn csv_path(out_dir: &Path, config: &Config, table: &str, suffix: &str) -> std::path::PathBuf {
@@ -46,53 +87,98 @@ fn csv_path(out_dir: &Path, config: &Config, table: &str, suffix: &str) -> std::
     ))
 }
 
+fn to_rusqlite_params(params: &[String]) -> Vec<rusqlite::types::Value> {
+    params
+        .iter()
+        .map(|s| rusqlite::types::Value::Text(s.clone()))
+        .collect()
+}
+
 fn export_monthly_summary(
     conn: &Connection,
     out_dir: &Path,
     config: &Config,
     table: &str,
+    exclude_labels: Option<&[String]>,
 ) -> Result<()> {
-    let wc = where_clause(table);
-    let where_and_owned = if wc.is_empty() {
-        "WHERE".to_string()
-    } else {
-        format!("{wc} AND")
-    };
-    let where_and = where_and_owned.as_str();
+    let (wc, params) = build_where(table, exclude_labels, &[]);
+    let (wc_closed, params_closed) = build_where(table, exclude_labels, &["closed_at IS NOT NULL"]);
 
     let current_month = Utc::now().format("%Y-%m").to_string();
     eprintln!("Warning: excluding current incomplete month ({current_month}) from monthly summary for {table}");
 
-    // Step 1: get all distinct label names for this table
+    // Get all distinct label names for this table (respecting exclude filter)
     let label_names: Vec<String> = {
-        let mut stmt = conn.prepare(&format!(
+        let label_query = format!(
             "SELECT DISTINCT labels.name
              FROM issue_labels
              JOIN labels ON labels.id = issue_labels.label_id
              JOIN {table} ON {table}.id = issue_labels.issue_id
              {wc}"
-        ))?;
-        stmt.query_map([], |row| row.get(0))?
+        );
+        let rp = to_rusqlite_params(&params);
+        let mut stmt = conn.prepare(&label_query)?;
+        stmt.query_map(rusqlite::params_from_iter(rp.iter()), |row| row.get(0))?
             .collect::<rusqlite::Result<_>>()?
     };
 
-    // Step 2: build dynamic SUM(CASE ...) columns
     let label_columns_sql = label_names
         .iter()
         .map(|l| format!("SUM(CASE WHEN lc.label_name = '{l}' THEN 1 ELSE 0 END) AS \"{l}\""))
         .collect::<Vec<_>>()
         .join(",\n        ");
 
-    // Use a UNION of created and closed events so each month reflects activity:
-    // - created_{table}: items opened that month
-    // - closed_{table}: items closed/merged that month (by closed_at)
+    let maybe_label_cols = if label_columns_sql.is_empty() {
+        String::new()
+    } else {
+        format!(",\n            {label_columns_sql}")
+    };
+
+    // Add issue_type breakdown columns if the table has an issue_type column
+    let has_issue_type = conn
+        .prepare(&format!("SELECT issue_type FROM {table} LIMIT 0"))
+        .is_ok();
+    let issue_type_names: Vec<String> = if has_issue_type {
+        let (type_wc, type_params) = build_where(table, exclude_labels, &["issue_type IS NOT NULL"]);
+        let mut stmt = conn.prepare(&format!(
+            "SELECT DISTINCT issue_type FROM {table} {type_wc} ORDER BY issue_type"
+        ))?;
+        let rp = to_rusqlite_params(&type_params);
+        stmt.query_map(rusqlite::params_from_iter(rp.iter()), |row| row.get(0))?
+            .collect::<rusqlite::Result<_>>()?
+    } else {
+        Vec::new()
+    };
+    let maybe_type_cols = if issue_type_names.is_empty() {
+        String::new()
+    } else {
+        let cols = issue_type_names
+            .iter()
+            .map(|t| format!("SUM(CASE WHEN it.issue_type = '{t}' AND e.event = 'created' THEN 1 ELSE 0 END) AS \"{t}\""))
+            .collect::<Vec<_>>()
+            .join(",\n            ");
+        format!(",\n            {cols}")
+    };
+
+    let maybe_type_join = if issue_type_names.is_empty() {
+        String::new()
+    } else {
+        format!("\n        LEFT JOIN {table} it ON e.issue_id = it.id")
+    };
+
+    // Combine params: created query params + closed query params
+    let mut all_params = params.clone();
+    all_params.extend(params_closed);
+    // + one more copy for label_counts CTE
+    all_params.extend(params);
+
     let query = format!(
         "WITH events AS (
             SELECT substr(created_at, 1, 7) AS month, id AS issue_id, 'created' AS event
             FROM {table} {wc}
             UNION ALL
             SELECT substr(closed_at, 1, 7) AS month, id AS issue_id, 'closed' AS event
-            FROM {table} {where_and} closed_at IS NOT NULL
+            FROM {table} {wc_closed}
         ),
         label_counts AS (
             SELECT issue_labels.issue_id, labels.name AS label_name
@@ -104,10 +190,9 @@ fn export_monthly_summary(
         SELECT
             e.month,
             SUM(CASE WHEN e.event = 'created' THEN 1 ELSE 0 END) AS created_{table},
-            SUM(CASE WHEN e.event = 'closed' THEN 1 ELSE 0 END) AS closed_{table},
-            {label_columns_sql}
+            SUM(CASE WHEN e.event = 'closed' THEN 1 ELSE 0 END) AS closed_{table}{maybe_label_cols}{maybe_type_cols}
         FROM events e
-        LEFT JOIN label_counts lc ON e.issue_id = lc.issue_id
+        LEFT JOIN label_counts lc ON e.issue_id = lc.issue_id{maybe_type_join}
         GROUP BY e.month
         HAVING e.month < '{current_month}'
         ORDER BY e.month"
@@ -116,7 +201,7 @@ fn export_monthly_summary(
     write_query_to_csv(
         conn,
         &query,
-        &[],
+        &to_rusqlite_params(&all_params),
         &csv_path(out_dir, config, table, "monthly_summary"),
     )
 }
@@ -126,8 +211,9 @@ fn export_label_breakdown(
     out_dir: &Path,
     config: &Config,
     table: &str,
+    exclude_labels: Option<&[String]>,
 ) -> Result<()> {
-    let wc = where_clause(table);
+    let (wc, params) = build_where(table, exclude_labels, &[]);
     let query = format!(
         "SELECT labels.name AS label_name, COUNT(*) AS count
          FROM issue_labels
@@ -140,7 +226,7 @@ fn export_label_breakdown(
     write_query_to_csv(
         conn,
         &query,
-        &[],
+        &to_rusqlite_params(&params),
         &csv_path(out_dir, config, table, "label_breakdown"),
     )
 }
@@ -150,8 +236,9 @@ fn export_label_timeseries(
     out_dir: &Path,
     config: &Config,
     table: &str,
+    exclude_labels: Option<&[String]>,
 ) -> Result<()> {
-    let wc = where_clause(table);
+    let (wc, params) = build_where(table, exclude_labels, &[]);
     let query = format!(
         "SELECT substr({table}.created_at, 1, 7) AS month, labels.name AS label_name, COUNT(*) AS count
          FROM {table}
@@ -164,7 +251,7 @@ fn export_label_timeseries(
     write_query_to_csv(
         conn,
         &query,
-        &[],
+        &to_rusqlite_params(&params),
         &csv_path(out_dir, config, table, "label_counts"),
     )
 }
@@ -174,8 +261,9 @@ fn export_open_by_label(
     out_dir: &Path,
     config: &Config,
     table: &str,
+    exclude_labels: Option<&[String]>,
 ) -> Result<()> {
-    let wc = where_clause(table);
+    let (wc, params) = build_where(table, exclude_labels, &[]);
     let query = format!(
         "SELECT labels.name AS label_name,
                 SUM(CASE WHEN {table}.state = 'open' THEN 1 ELSE 0 END) AS open_count,
@@ -190,7 +278,7 @@ fn export_open_by_label(
     write_query_to_csv(
         conn,
         &query,
-        &[],
+        &to_rusqlite_params(&params),
         &csv_path(out_dir, config, table, "open_by_label"),
     )
 }
@@ -202,50 +290,18 @@ fn export_overall_totals(
     table: &str,
     exclude_labels: Option<&[String]>,
 ) -> Result<()> {
-    let mut where_parts: Vec<String> = Vec::new();
-    let mut params: Vec<String> = Vec::new();
-
-    if table == "pull_requests" {
-        where_parts.push("is_draft = 0".to_string());
-    }
-
-    if let Some(labels) = exclude_labels
-        && !labels.is_empty() {
-            let placeholders = labels.iter().map(|_| "?").collect::<Vec<_>>().join(", ");
-            where_parts.push(format!(
-                "{table}.id NOT IN (
-                    SELECT issue_id FROM issue_labels
-                    JOIN labels ON labels.id = issue_labels.label_id
-                    WHERE labels.name IN ({placeholders})
-                )"
-            ));
-            let mut sorted = labels.to_vec();
-            sorted.sort();
-            params.extend(sorted);
-        }
-
-    let where_sql = if where_parts.is_empty() {
-        String::new()
-    } else {
-        format!("WHERE {}", where_parts.join(" AND "))
-    };
-
+    let (wc, params) = build_where(table, exclude_labels, &[]);
     let query = format!(
         "SELECT
             SUM(CASE WHEN state = 'open'   THEN 1 ELSE 0 END) AS total_open_{table},
             SUM(CASE WHEN state = 'closed' THEN 1 ELSE 0 END) AS total_closed_{table}
-         FROM {table} {where_sql}"
+         FROM {table} {wc}"
     );
-
-    let rusqlite_params: Vec<rusqlite::types::Value> = params
-        .into_iter()
-        .map(rusqlite::types::Value::Text)
-        .collect();
 
     write_query_to_csv(
         conn,
         &query,
-        &rusqlite_params,
+        &to_rusqlite_params(&params),
         &csv_path(out_dir, config, table, "overall_totals"),
     )
 }
