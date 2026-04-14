@@ -94,7 +94,7 @@ github-tools generate-all \
   --exclude-labels "no-changelog,meta: awaiting author"
 
 # Charts (still Python):
-python scripts/util/plot.py --env-file vector.env --input-dir out/summaries \
+python -m scripts.util.plot --env-file vector.env --input-dir out/summaries \
   --start $(date -d "$(date +%Y-%m-01) -12 months" +%Y-%m) \
   --exclude-labels "no-changelog,meta: awaiting author"
 ```

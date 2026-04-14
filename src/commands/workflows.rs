@@ -52,7 +52,7 @@ pub fn generate_all(env_files: &[String], exclude_labels: Option<&str>, start: O
     println!("\nTo regenerate charts, run plot.py for each repo:");
     for env_file in env_files {
         let mut cmd = format!(
-            "PYTHONPATH=. python scripts/util/plot.py --env-file {env_file} --input-dir out/summaries --start {start_arg}"
+            "python -m scripts.util.plot --env-file {env_file} --input-dir out/summaries --start {start_arg}"
         );
         if let Some(labels) = exclude_labels {
             cmd.push_str(&format!(" --exclude-labels \"{labels}\""));
