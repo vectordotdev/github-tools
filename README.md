@@ -163,7 +163,7 @@ Audit logs written to `out/purge/` (local only).
 
 ##### Discussions
 
-TODO!
+![Monthly Discussions](data/images/vectordotdev_vector_discussions.monthly_trend.png)
 
 ---
 
@@ -192,3 +192,7 @@ TODO!
 ---
 
 ![PR Label Counts](data/images/vectordotdev_vrl_pull_requests.label_counts.png)
+
+##### Discussions
+
+![Monthly Discussions](data/images/vectordotdev_vrl_discussions.monthly_trend.png)

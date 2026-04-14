@@ -28,6 +28,16 @@ pub fn run(db: &str, config: &Config, exclude_labels: Option<&str>) -> Result<()
         export_overall_totals(&conn, out_dir, config, table, exc)?;
     }
 
+    // Generate discussion summaries if the table exists
+    let has_discussions: bool = conn
+        .prepare("SELECT 1 FROM discussions LIMIT 1")
+        .and_then(|mut s| s.query_row([], |_| Ok(true)))
+        .unwrap_or(false);
+    if has_discussions {
+        println!("Generating summaries for discussions...");
+        export_discussion_monthly_summary(&conn, out_dir, config)?;
+    }
+
     println!("Done. All CSVs saved to '{}'", out_dir.display());
     Ok(())
 }
@@ -303,6 +313,33 @@ fn export_overall_totals(
         &query,
         &to_rusqlite_params(&params),
         &csv_path(out_dir, config, table, "overall_totals"),
+    )
+}
+
+fn export_discussion_monthly_summary(
+    conn: &Connection,
+    out_dir: &Path,
+    config: &Config,
+) -> Result<()> {
+    let current_month = Utc::now().format("%Y-%m").to_string();
+
+    let query = format!(
+        "SELECT
+            substr(created_at, 1, 7) AS month,
+            COUNT(*) AS created_discussions,
+            SUM(CASE WHEN closed THEN 1 ELSE 0 END) AS closed_discussions,
+            SUM(CASE WHEN is_answered THEN 1 ELSE 0 END) AS answered_discussions
+         FROM discussions
+         GROUP BY month
+         HAVING month < '{current_month}'
+         ORDER BY month"
+    );
+
+    write_query_to_csv(
+        conn,
+        &query,
+        &[],
+        &csv_path(out_dir, config, "discussions", "monthly_summary"),
     )
 }
 

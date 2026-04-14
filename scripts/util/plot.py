@@ -167,6 +167,13 @@ def main():
                 exclude_labels=args.exclude_labels
             )
 
+    # Discussion trends
+    disc_prefix = f"{env['REPO_OWNER']}_{env['REPO_NAME']}_discussions"
+    disc_csv = os.path.join(args.input_dir, f"{disc_prefix}.monthly_summary.csv")
+    if os.path.exists(disc_csv):
+        output_path = os.path.join(OUTPUT_DIR, f"{disc_prefix}.monthly_trend.png")
+        plot_discussion_trend(disc_csv, output_path, start_date=args.start)
+
 
 def get_label_color(label_name):
     if label_name in COLOR_MAP:
@@ -216,6 +223,36 @@ def plot_monthly_summary_basic(path, table, output_path, start_date=None):
         plt.close()
     except Exception as e:
         logging.warning(f"[{table}] Could not generate monthly trend plot: {e}")
+
+
+def plot_discussion_trend(path, output_path, start_date=None):
+    try:
+        df = pd.read_csv(path)
+        if start_date:
+            df = df[df["month"] >= start_date]
+        df["month"] = pd.to_datetime(df["month"])
+
+        plt.figure(figsize=(12, 6))
+
+        plt.plot(df["month"], df["created_discussions"],
+                 label="Created", color="#070707", linewidth=3, marker='o')
+        plt.plot(df["month"], df["closed_discussions"],
+                 label="Closed", color="#27b01c", linewidth=3, marker='o')
+        plt.plot(df["month"], df["answered_discussions"],
+                 label="Answered", color="#4C9AFF", linewidth=2, linestyle="--")
+
+        plt.title("Monthly Discussion Trends", fontsize=16)
+        ax = plt.gca()
+        set_axis_labels(ax, "Month", "Count")
+
+        plt.legend()
+        plt.tight_layout()
+
+        plt.savefig(output_path)
+        logging.info(f"Saved plot to {output_path}")
+        plt.close()
+    except Exception as e:
+        logging.warning(f"[discussions] Could not generate monthly trend plot: {e}")
 
 
 def plot_integration_trends(csv_path, table, output_path, start_date=None, exclude_labels=None, top_n=5):

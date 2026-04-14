@@ -24,6 +24,9 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
         url
         createdAt
         updatedAt
+        closedAt
+        closed
+        stateReason
         isAnswered
         locked
         author {
@@ -51,6 +54,9 @@ pub struct Discussion {
     pub url: String,
     pub created_at: String,
     pub updated_at: String,
+    pub closed_at: Option<String>,
+    pub closed: bool,
+    pub state_reason: Option<String>,
     pub is_answered: Option<bool>,
     pub locked: bool,
     pub author: Option<Author>,
