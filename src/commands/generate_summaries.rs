@@ -1,5 +1,6 @@
 use crate::config::Config;
 use anyhow::{Context, Result};
+use chrono::Utc;
 use rusqlite::Connection;
 use std::fs;
 use std::path::Path;
@@ -52,6 +53,15 @@ fn export_monthly_summary(
     table: &str,
 ) -> Result<()> {
     let wc = where_clause(table);
+    let where_and_owned = if wc.is_empty() {
+        "WHERE".to_string()
+    } else {
+        format!("{wc} AND")
+    };
+    let where_and = where_and_owned.as_str();
+
+    let current_month = Utc::now().format("%Y-%m").to_string();
+    eprintln!("Warning: excluding current incomplete month ({current_month}) from monthly summary for {table}");
 
     // Step 1: get all distinct label names for this table
     let label_names: Vec<String> = {
@@ -73,10 +83,16 @@ fn export_monthly_summary(
         .collect::<Vec<_>>()
         .join(",\n        ");
 
+    // Use a UNION of created and closed events so each month reflects activity:
+    // - created_{table}: items opened that month
+    // - closed_{table}: items closed/merged that month (by closed_at)
     let query = format!(
-        "WITH month_base AS (
-            SELECT substr(created_at, 1, 7) AS month, id AS issue_id, state
+        "WITH events AS (
+            SELECT substr(created_at, 1, 7) AS month, id AS issue_id, 'created' AS event
             FROM {table} {wc}
+            UNION ALL
+            SELECT substr(closed_at, 1, 7) AS month, id AS issue_id, 'closed' AS event
+            FROM {table} {where_and} closed_at IS NOT NULL
         ),
         label_counts AS (
             SELECT issue_labels.issue_id, labels.name AS label_name
@@ -86,14 +102,15 @@ fn export_monthly_summary(
             {wc}
         )
         SELECT
-            mb.month,
-            SUM(CASE WHEN mb.state = 'open' THEN 1 ELSE 0 END) AS open_{table},
-            SUM(CASE WHEN mb.state = 'closed' THEN 1 ELSE 0 END) AS closed_{table},
+            e.month,
+            SUM(CASE WHEN e.event = 'created' THEN 1 ELSE 0 END) AS created_{table},
+            SUM(CASE WHEN e.event = 'closed' THEN 1 ELSE 0 END) AS closed_{table},
             {label_columns_sql}
-        FROM month_base mb
-        LEFT JOIN label_counts lc ON mb.issue_id = lc.issue_id
-        GROUP BY mb.month
-        ORDER BY mb.month"
+        FROM events e
+        LEFT JOIN label_counts lc ON e.issue_id = lc.issue_id
+        GROUP BY e.month
+        HAVING e.month < '{current_month}'
+        ORDER BY e.month"
     );
 
     write_query_to_csv(

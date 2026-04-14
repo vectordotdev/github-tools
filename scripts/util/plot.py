@@ -30,9 +30,9 @@ COLOR_MAP = {
     "domain: sources": "#2dbcbc",
     "domain: transforms": "#8615bf",
     "domain: sinks": "#ad4f47",
-    "open_issues": "#070707",
+    "created_issues": "#070707",
     "closed_issues": "#27b01c",
-    "open_pull_requests": "#070707",
+    "created_pull_requests": "#070707",
     "closed_pull_requests": "#27b01c",
 }
 
@@ -177,8 +177,8 @@ def plot_monthly_summary_basic(path, table, output_path, start_date=None):
 
         plt.figure(figsize=(12, 6))
 
-        open_key = f"open_{table}"
-        plt.plot(df["month"], df[open_key], label=f"Open {table}", color=COLOR_MAP.get(open_key), linewidth=3,
+        created_key = f"created_{table}"
+        plt.plot(df["month"], df[created_key], label=f"Created {table}", color=COLOR_MAP.get(created_key), linewidth=3,
                  marker='o')
         plt.xticks(rotation=45)  # Rotate month labels
 
@@ -235,7 +235,7 @@ def plot_integration_trends(csv_path, table, output_path, start_date=None, exclu
         exclude_labels = set()
 
     # Build exclusion set
-    for non_label in ['month', 'open_issues', 'closed_issues']:
+    for non_label in ['month', 'created_issues', 'closed_issues', 'created_pull_requests', 'closed_pull_requests']:
         if non_label in df.columns:
             exclude_labels.add(non_label)
 
