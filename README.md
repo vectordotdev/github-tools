@@ -116,6 +116,9 @@ Audit logs written to `out/purge/` (local only).
 
 # Trends
 
+> [!NOTE]
+> Draft PRs are excluded. Issues and PRs with the following labels are excluded from all charts: `no-changelog`, `meta: awaiting author`.
+
 #### Vector
 
 ##### Issues
