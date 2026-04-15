@@ -124,7 +124,8 @@ fn export_monthly_summary(
              FROM issue_labels
              JOIN labels ON labels.id = issue_labels.label_id
              JOIN {table} ON {table}.id = issue_labels.issue_id
-             {wc}"
+             {wc}
+             ORDER BY labels.name"
         );
         let rp = to_rusqlite_params(&params);
         let mut stmt = conn.prepare(&label_query)?;
