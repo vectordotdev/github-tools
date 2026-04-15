@@ -1,0 +1,623 @@
+[
+  {
+    "number": 1408,
+    "title": "Language Server?",
+    "bodyText": "Hi, I wasn't able to find an official language server for VRL.\nIs there no LS?\nBtw. I am using KDE Kate, so a plugin/extension for VSCode or similar won't work for me and I need a standalone.",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1408",
+    "createdAt": "2025-05-29T17:02:21Z",
+    "updatedAt": "2026-03-09T21:06:33Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "ancoron"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 3
+  },
+  {
+    "number": 1585,
+    "title": "Idea: support `ddtags` and `ddsource` in `match_datadog_query`",
+    "bodyText": "Inspired by vectordotdev/vector#22281, which does the same thing for the filter transform.",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1585",
+    "createdAt": "2025-12-18T18:05:18Z",
+    "updatedAt": "2025-12-18T18:05:18Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": null,
+    "locked": false,
+    "author": {
+      "login": "joeymarianer-calendly"
+    },
+    "category": {
+      "name": "Ideas"
+    },
+    "comments": {
+      "totalCount": 0
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1584,
+    "title": "`match_datadog_query` and `ddtags`/`ddsource`",
+    "bodyText": "As of Vector 0.45.0 (specifically this PR), Vector supports using ddtags in addition to tags in certain situations. Is it possible to do something similar in VRL with match_datadog_query? Or do I have to rewrite my pipelines to use contains(.ddtags, ...) instead?\nI've tried running .tags = split(del(.ddtags), \",\") ?? [] before the queries, but that seems to break the datadog_logs sink unfortunately.\nExample playground of something that I'd like to be able to do (I want this to add foo: bar too the message).",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1584",
+    "createdAt": "2025-12-17T19:49:35Z",
+    "updatedAt": "2025-12-17T21:29:58Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "joeymarianer-calendly"
+    },
+    "category": {
+      "name": "General"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1541,
+    "title": "0.50.0 alb",
+    "bodyText": "Added an optional strict_mode parameter to parse_aws_alb_log. When set to false, the parser ignores any newly added/trailing fields in AWS ALB logs instead of failing. Defaults to true to preserve current behavior\nhow to set up parameter  strict_mode",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1541",
+    "createdAt": "2025-10-16T09:50:15Z",
+    "updatedAt": "2025-10-17T13:45:27Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "lhh528634141"
+    },
+    "category": {
+      "name": "General"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1480,
+    "title": "break syntax",
+    "bodyText": "Hello,\nI notice that the VRL documentation states that the break command/syntax is reserved for future use. Is there anything blocking that from being implemented?\nThere's context; we have several large payloads that we are processing with VRL in vector. The current implementation requires us to go through the entire array or object, even when there are no further matches. We have tried various approaches with filter and map_values with little difference in overall throughput. Maybe there's another way that we are missing; otherwise, we would be happy to submit a PR to introduce break.\nHappy to discuss this further if there are other options beyond break, or potentially other avenues we should explore.",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1480",
+    "createdAt": "2025-08-21T21:43:54Z",
+    "updatedAt": "2025-09-05T14:17:25Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": null,
+    "locked": false,
+    "author": {
+      "login": "jlambatl"
+    },
+    "category": {
+      "name": "Ideas"
+    },
+    "comments": {
+      "totalCount": 2
+    },
+    "upvoteCount": 2
+  },
+  {
+    "number": 1481,
+    "title": "additional array functions",
+    "bodyText": "Hello,\nFollowing the contributors' guidelines, some array features are currently not implemented or available in VRL. I've seen some discussions about them.\nSpecifically, this involves using the array index integer from a variable. There have been several issues/discussions on this topic. I couldn't find a conclusive answer on whether this was something that could be introduced, and or how it could be introduced in those discussions or issues.\nA basic (bad) example\nfor_each(my_awesome_array) -> | idx, val | {\n    if val == \"foo\" {\n        my_awesome_array[idx] = \"bar\"\n    }\n}\n\nThere's also a related area of array ranges, like\nmy_awesome_array[1..]\n\nArray ranges would avoid split and join, and would also be useful to have pop() to remove the last item in an array.\nKeen to hear your thoughts before we start doing any coding,\nThanks in advance.",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1481",
+    "createdAt": "2025-08-21T22:02:58Z",
+    "updatedAt": "2025-09-03T07:11:45Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": null,
+    "locked": false,
+    "author": {
+      "login": "jlambatl"
+    },
+    "category": {
+      "name": "Ideas"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1448,
+    "title": "Caching",
+    "bodyText": "Hello,\nReading the documentation, I see this: https://github.com/vectordotdev/vrl/blob/main/DESIGN.md#performance-warning, which talks about running a cache. I see that there are also in-memory tables that can potentially be used in a similar situation.\nHas there been any thought to adding VRL functions for some of the common caches, or potentially adding something like groupcache functions/support?\nAs we transition some of our pipelines over to Vector and use VRL heavily, there are some use cases where being able to access data centrally would be a big win. We currently use Flink for this use case; however, the complexity of Flink for simple global counters and similar atomic counters is costly and probably overkill.",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1448",
+    "createdAt": "2025-07-16T01:00:44Z",
+    "updatedAt": "2025-07-16T23:07:32Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "jlambatl"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1418,
+    "title": "Trying to understand why replace isn't working on a regex",
+    "bodyText": "I have this example logs message/event:\n{\"file\":\"/var/lib/service/nodes/406a6907-6133-48d4-85f6-cc5122bdcc65/data/protocol_data/worker/worker.log\",\"hostname\":\"node.example.com\",\"message\":\"\\u001b[2m2025-06-02T03:45:06.475906Z\\u001b[0m \\u001b[32m INFO\\u001b[0m \\u001b[2mworker::controller::p2p\\u001b[0m\\u001b[2m:\\u001b[0m Sending 1 logs (606 bytes)\",\"source_type\":\"file\",\"timestamp\":\"2025-06-02T15:12:43.709155183Z\"}\nI'm trying to remove the ANSI color coding that's coming through the logs.\nI'm trying with this replace function replace(string!(.message), r'\\\\u001b\\[[0-9]*[mK]', \"\")\nNo errors, but no replacement is happening.  The regex correctly matches according to regex101 testing.  I must be doing something wrong with the replace functionality.",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1418",
+    "createdAt": "2025-06-02T15:54:58Z",
+    "updatedAt": "2025-06-02T17:12:36Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "calebcall"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1402,
+    "title": "nested json  - array showing of type any",
+    "bodyText": "Hi All,\nThis has been bugging me so hopefully someone can help. I have been playing around with telemetry on a virtual machine. the output provides a nested message.\nexample:\n{\n\t\"event_type\": \"gRPC\",\n\t\"seq\": 341,\n\t\"serialization\": \"json_string\",\n\t\"telemetry_data\": \"{\\\"/state/counters/carrier-transitions\\\":\\\"1\\\",\\\"extension\\\":\\\"{\\\\\\\"systemId\\\\\\\":\\\\\\\"re0\\\\\\\",\\\\\\\"componentId\\\\\\\":65535,\\\\\\\"sensorName\\\\\\\":\\\\\\\"sensor_1000\\\\\\\",\\\\\\\"subscribedPath\\\\\\\":\\\\\\\"/interfaces/interface/state/counters/\\\\\\\",\\\\\\\"streamedPath\\\\\\\":\\\\\\\"/interfaces/interface/state/counters/\\\\\\\",\\\\\\\"component\\\\\\\":\\\\\\\"re0/mib2d\\\\\\\",\\\\\\\"sequenceNumber\\\\\\\":\\\\\\\"30\\\\\\\",\\\\\\\"payloadGetTimestamp\\\\\\\":\\\\\\\"1747220510937\\\\\\\",\\\\\\\"streamCreationTimestamp\\\\\\\":\\\\\\\"1747220510937\\\\\\\",\\\\\\\"exportTimestamp\\\\\\\":\\\\\\\"1747220510941\\\\\\\"}\\\",\\\"notification_timestamp\\\":1747220510938291848,\\\"sensor_path\\\":[{\\\"name\\\":\\\"interfaces\\\"},{\\\"filters\\\":{\\\"name\\\":\\\"et-0/0/0\\\"},\\\"name\\\":\\\"interface\\\"}],\\\"system_id\\\":\\\"re0\\\"}\",\n\t\"telemetry_node\": \"192.168.100.10\",\n\t\"telemetry_port\": 38596,\n\t\"timestamp\": 1747220511,\n\t\"writer_id\": \"mdt\"\n}\n\n\nWhen parsing with parse_json i do not appear to have the json array object mapped as an array, preventing me looping around it to concat 'name' into a string separated by '/'\n.t = parse_json!(.telemetry_data) output provides (sensor_path is an array)\n{\n\t\"event_type\": \"gRPC\",\n\t\"seq\": 341,\n\t\"serialization\": \"json_string\",\n\t\"t\": {\n\t\t\"/state/counters/carrier-transitions\": \"1\",\n\t\t\"extension\": \"{\\\"systemId\\\":\\\"re0\\\",\\\"componentId\\\":65535,\\\"sensorName\\\":\\\"sensor_1000\\\",\\\"subscribedPath\\\":\\\"/interfaces/interface/state/counters/\\\",\\\"streamedPath\\\":\\\"/interfaces/interface/state/counters/\\\",\\\"component\\\":\\\"re0/mib2d\\\",\\\"sequenceNumber\\\":\\\"30\\\",\\\"payloadGetTimestamp\\\":\\\"1747220510937\\\",\\\"streamCreationTimestamp\\\":\\\"1747220510937\\\",\\\"exportTimestamp\\\":\\\"1747220510941\\\"}\",\n\t\t\"notification_timestamp\": 1747220510938292000,\n\t\t\"sensor_path\": [\n\t\t\t{\n\t\t\t\t\"name\": \"interfaces\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"filters\": {\n\t\t\t\t\t\"name\": \"et-0/0/0\"\n\t\t\t\t},\n\t\t\t\t\"name\": \"interface\"\n\t\t\t}\n\t\t],\n\t\t\"system_id\": \"re0\"\n\t},\n<SNIP>\n\n.dt = type_def(.t.sensor_path) type json\n\"dt\": {\n\t\"json\": true \n},\n\nhow to i make the json array into a vector array object so i can iterate over it?\nessentially i want to create a string where each name of sensor_path is joined with / to form a key string. ie: /interfaces/interface in this example.\nhopefully someone can help me move forward :). if so, thanks in advance!\nPlayLink",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1402",
+    "createdAt": "2025-05-14T16:26:03Z",
+    "updatedAt": "2025-05-21T14:56:41Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "triggerhappy17"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1401,
+    "title": "parse_timestamp issue, works in playground but not in code",
+    "bodyText": "after a few hours  of going around this I can confirm that on 0.46.1 at least this VRL does not work but it works on playground\nhttps://playground.vrl.dev/?state=eyJwcm9ncmFtIjoiIC50aW1lc3RhbXAgPSB0b191bml4X3RpbWVzdGFtcChwYXJzZV90aW1lc3RhbXAhKC50aW1lLCBmb3JtYXQ6IFwiJStcIiksIHVuaXQ6IFwibmFub3NlY29uZHNcIikiLCJldmVudCI6eyJtZXRyaWNfdHlwZSI6ImxvZ3MiLCJzZXZlcml0eSI6IklORk8iLCJ0aW1lIjoiMjAyNS0wNS0xMVQwMTo1MToxMS44NjQ0MjU3MDdaIn0sImlzX2pzb25sIjpmYWxzZSwiZXJyb3IiOm51bGx9\n2025-05-11T14:17:20.082810Z ERROR transform{component_kind=\"transform\" component_id=db_logs component_type=remap}: vector::internal_events::remap: Mapping failed with event. error=\"function call error for \"to_unix_timestamp\" at (33:129): function call error for \"parse_timestamp\" at (51:107): unable to convert value to timestamp\" error_type=\"conversion_failed\" stage=\"processing\" internal_log_rate_limit=true\n.timestamp = to_unix_timestamp(parse_timestamp!(.time, format: \"%+\"), unit: \"nanoseconds\")\n.timestamp = to_unix_timestamp(parse_timestamp!(.time, format: \"%Y-%m-%dT%H:%M:%S.%fZ\"), unit: \"nanoseconds\")\nboth work in the playground but not in the actual code",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1401",
+    "createdAt": "2025-05-11T14:29:18Z",
+    "updatedAt": "2025-05-14T14:38:10Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": false,
+    "locked": false,
+    "author": {
+      "login": "thebadking"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1387,
+    "title": "need help with regex and vrl",
+    "bodyText": "Hi there,\nHi, i'm trying to extract the src and dst fields from a sonicwall firewall from ssyslog. What i do not want to succeed.\nCan someone please shed some light on what i am doing wrong.\nvector.toml\n[api]\nenabled = true\n\n[sources.sonic_syslog]\ntype = \"socket\"\naddress = \"0.0.0.0:41898\"\nmode = \"udp\"\n\n[transforms.remap_grok_sonicwall_fw]\ntype = \"remap\"\ninputs = [\"sonic_syslog\"]\nsource = '''\n. = parse_grok!(.message, \"%{SYSLOG5424PRI}%{GREEDYDATA:message}\")\n'''\n\n[transforms.parse_raw_sonicwall]\ntype = \"remap\"\ninputs = [\"remap_grok_sonicwall_fw\"]\nsource = '''\n.message = to_string(.message) ?? \"\"\n.event.original = .message\n\n# Versuch: generisch alle Felder parsen (falls m\u00f6glich)\n.parsed, err = parse_key_value(.message, field_delimiter: \" \", key_value_delimiter: \"=\")\n\n# Falls kein valides Parsing, dann sicherstellen, dass wir mit leerem Objekt weiterarbeiten\nif err != null || !exists(.parsed) {\n  .parsed = {}  # fallback auf leeres Objekt\n}\n'''\n\n[transforms.extract_src_dst]\ntype = \"remap\"\ninputs = [\"parse_raw_sonicwall\"]\nsource = '''\n.log.parsed_src = .parsed.src\n.log.parsed_dst = .parsed.dst\n\n.src_parts = match!(.parsed.src, r'(?P<src_ip>\\d+\\.\\d+\\.\\d+\\.\\d+):(?P<src_port>\\d+)(?::(?P<src_if>[^:\\s]+))?(?::(?P<src_fqdn>[^:\\s]+))?')\nif is_object(.src_parts) {\n  .source.ip = .src_parts.src_ip\n  .source.port = to_int(.src_parts.src_port)\n  if exists(.src_parts.src_if) { .source.interface = .src_parts.src_if }\n  if exists(.src_parts.src_fqdn) { .source.domain = .src_parts.src_fqdn }\n}\n\n.dst_parts = match!(.parsed.dst, r'(?P<dst_ip>\\d+\\.\\d+\\.\\d+\\.\\d+):(?P<dst_port>\\d+)(?::(?P<dst_if>[^:\\s]+))?(?::(?P<dst_fqdn>[^:\\s]+))?')\nif is_object(.dst_parts) {\n  .destination.ip = .dst_parts.dst_ip\n  .destination.port = to_int(.dst_parts.dst_port)\n  if exists(.dst_parts.dst_if) { .destination.interface = .dst_parts.dst_if }\n  if exists(.dst_parts.dst_fqdn) { .destination.domain = .dst_parts.dst_fqdn }\n}\n\n'''\n\n\n[transforms.normalize_event_fields]\ntype = \"remap\"\ninputs = [\"extract_src_dst\"]\nsource = '''\n.@timestamp = now()\n.event.ingested = now()\n.event.module = \"sonicwall\"\n.event.dataset = \"sonicwall.firewall\"\n\nif contains(string!(.message), \"deny\") {\n  .event.outcome = \"denied\"\n  .event.action = \"blocked\"\n  .event.category = [\"network\"]\n  .event.type = [\"denied\"]\n} else if contains(string!(.message), \"allow\") {\n  .event.outcome = \"success\"\n  .event.action = \"allowed\"\n  .event.category = [\"network\"]\n  .event.type = [\"connection\"]\n} else {\n  .event.outcome = \"unknown\"\n  .event.action = \"observed\"\n  .event.category = [\"network\"]\n  .event.type = [\"info\"]\n}\n'''\n\n[transforms.cleanup_sonicwall]\ntype = \"remap\"\ninputs = [\"normalize_event_fields\"]\nsource = '''\n. = compact(., nullish: true, recursive: true)\n'''\n\n[sinks.console_out]\ntype = \"console\"\ninputs = [\"cleanup_sonicwall\"]\ntarget = \"stdout\"\nencoding.codec = \"json\"\n\nexample logfile:\nid=test sn=11 time=\\\"2025-04-22 12:23:42 UTC\\\" fw=192.168.5.2 pri=6 c=1024 m=537 msg=\\\"Connection Closed\\\" app=49169 appName='General DNS' n=110850326 usr=\\\"Unknown (SSO failed)\\\" src=192.168.0.2:54553:X0:STGlocal dst=172.17.34.11:53:X0 proto=udp/dns sent=68 spkt=1 dpi=0 fw_action=\\\"NA\\\"\n\noutput vector:\n{\n  \"@timestamp\": \"2025-04-22T12:23:42.135734784Z\",\n  \"dst_parts\": true,\n  \"event\": {\n    \"action\": \"observed\",\n    \"category\": [\n      \"network\"\n    ],\n    \"dataset\": \"sonicwall.firewall\",\n    \"ingested\": \"2025-04-22T12:23:42.135735573Z\",\n    \"module\": \"sonicwall\",\n    \"original\": \"  id=test sn=11 time=\\\"2025-04-22 12:23:42 UTC\\\" fw=192.168.5.2 pri=6 c=1024 m=537 msg=\\\"Connection Closed\\\" app=49169 appName='General DNS' n=110850326 usr=\\\"Unknown (SSO failed)\\\" src=192.168.0.2:54553:X0:STGlocal dst=172.17.34.11:53:X0 proto=udp/dns sent=68 spkt=1 dpi=0 fw_action=\\\"NA\\\"\",\n    \"outcome\": \"unknown\",\n    \"type\": [\n      \"info\"\n    ]\n  },\n  \"log\": {\n    \"parsed_dst\": \"172.17.34.11:53:X0\",\n    \"parsed_src\": \"192.168.0.2:54553:X0:STGlocal\"\n  },\n  \"message\": \"  id=test sn=11 time=\\\"2025-04-22 12:23:42 UTC\\\" fw=192.168.5.2 pri=6 c=1024 m=537 msg=\\\"Connection Closed\\\" app=49169 appName='General DNS' n=110850326 usr=\\\"Unknown (SSO failed)\\\" src=192.168.0.2:54553:X0:STGlocal dst=172.17.34.11:53:X0 proto=udp/dns sent=68 spkt=1 dpi=0 fw_action=\\\"NA\\\"\",\n  \"parsed\": {\n    \"app\": \"49169\",\n    \"appName\": \"General DNS\",\n    \"c\": \"1024\",\n    \"dpi\": \"0\",\n    \"dst\": \"172.17.34.11:53:X0\",\n    \"fw\": \"192.168.5.2\",\n    \"fw_action\": \"NA\",\n    \"id\": \"test\",\n    \"m\": \"537\",\n    \"msg\": \"Connection Closed\",\n    \"n\": \"110850326\",\n    \"pri\": \"6\",\n    \"proto\": \"udp/dns\",\n    \"sent\": \"68\",\n    \"sn\": \"11\",\n    \"spkt\": \"1\",\n    \"src\": \"192.168.0.2:54553:X0:STGlocal\",\n    \"time\": \"2025-04-22 12:23:42 UTC\",\n    \"usr\": \"Unknown (SSO failed)\"\n  },\n  \"src_parts\": true,\n  \"syslog5424_pri\": \"134\"\n}\n\nThe regex itself was successfully tested here:\nhttps://regex101.com/\nThanx for any help here\nStefan",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1387",
+    "createdAt": "2025-04-22T12:35:57Z",
+    "updatedAt": "2025-04-25T19:14:21Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": false,
+    "locked": false,
+    "author": {
+      "login": "StefanSa"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1377,
+    "title": "how use for_each",
+    "bodyText": "I have the data\n    \"http_request_headers\":\n    [\n        {\n            \"name\": \"Connection\",\n            \"value\": \"keep-alive\"\n        },\n        {\n            \"name\": \"Accept\",\n            \"value\": \"text/plain, */*; q=0.01\"\n        },\n        {\n            \"name\": \"X-Requested-With\",\n            \"value\": \"XMLHttpRequest\"\n        },\n        {\n            \"name\": \"Accept-Encoding\",\n            \"value\": \"gzip, deflate\"\n        },\n        {\n            \"name\": \"Accept-Language\",\n            \"value\": \"zh-CN,zh;q=0.9\"\n        }\n \n    ],\n\nthen I want change to the data\n \"http_request_headers\":\n{   \n\"Connection\":\"keep-alive\",\n \"Accept\":\"text/plain, */*; q=0.01\"\n}\nI don't know how to combine for each map keys to generate results",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1377",
+    "createdAt": "2025-04-10T06:59:38Z",
+    "updatedAt": "2025-04-10T13:46:27Z",
+    "closedAt": null,
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "tri0mphe"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1287,
+    "title": "sysmonforlinux VRL?",
+    "bodyText": "Trying to reformat sysmonforlinux logs ingested with otel-collector on openobserve with parse_xml but not working.\nSample log\n{\"_timestamp\":1740278298956019,\"body___cursor\":\"s=1f1c1569ecaf4433b2af2adb4ecd7ab8;i=3631dffc;b=a8b664d9874f45a0ae605b44aab17725;m=33e41b94a6;t=62ec61dd1d0f3;x=a6c989aa8bba9fb6\",\"body___monotonic_timestamp\":\"222870344870\",\"body__boot_id\":\"a8b664d9874f45a0ae605b44aab17725\",\"body__cap_effective\":\"1c3a1a061d3\",\"body__cmdline\":\"/opt/sysmon/sysmon -i /opt/sysmon/config.xml -service\",\"body__comm\":\"sysmon\",\"body__exe\":\"/opt/sysmon/sysmon\",\"body__gid\":\"0\",\"body__hostname\":\"myhostname\",\"body__machine_id\":\"f7e6787db2d84830854e33af0a1338b8\",\"body__pid\":\"26407\",\"body__selinux_context\":\"unconfined\\n\",\"body__source_realtime_timestamp\":\"1740278298953418\",\"body__systemd_cgroup\":\"/system.slice/sysmon.service\",\"body__systemd_invocation_id\":\"b8bf958180274ce7a503e5251ec15954\",\"body__systemd_slice\":\"system.slice\",\"body__systemd_unit\":\"sysmon.service\",\"body__transport\":\"syslog\",\"body__uid\":\"0\",\"body_message\":\"<Event><System><Provider Name=\\\"Linux-Sysmon\\\" Guid=\\\"{ff032593-a8d3-4f13-b0d6-01fc615a0f97}\\\"/><EventID>1</EventID><Version>5</Version><Level>4</Level><Task>1</Task><Opcode>0</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime=\\\"2025-02-23T02:38:18.953287000Z\\\"/><EventRecordID>22924914</EventRecordID><Correlation/><Execution ProcessID=\\\"26407\\\" ThreadID=\\\"26407\\\"/><Channel>Linux-Sysmon/Operational</Channel><Computer>myhostname</Computer><Security UserId=\\\"0\\\"/></System><EventData><Data Name=\\\"RuleName\\\">-</Data><Data Name=\\\"UtcTime\\\">2025-02-23 02:38:18.961</Data><Data Name=\\\"ProcessGuid\\\">{f7e6787d-8a1a-67ba-306e-20d452560000}</Data><Data Name=\\\"ProcessId\\\">37605</Data><Data Name=\\\"Image\\\">/bin/bin/sleep</Data><Data Name=\\\"FileVersion\\\">-</Data><Data Name=\\\"Description\\\">-</Data><Data Name=\\\"Product\\\">-</Data><Data Name=\\\"Company\\\">-</Data><Data Name=\\\"OriginalFileName\\\">-</Data><Data Name=\\\"CommandLine\\\">sleep 1</Data><Data Name=\\\"CurrentDirectory\\\">/path/to/current/dir</Data><Data Name=\\\"User\\\">root</Data><Data Name=\\\"LogonGuid\\\">{f7e6787d-0000-0000-0000-000000000000}</Data><Data Name=\\\"LogonId\\\">0</Data><Data Name=\\\"TerminalSessionId\\\">4294967295</Data><Data Name=\\\"IntegrityLevel\\\">no level</Data><Data Name=\\\"Hashes\\\">-</Data><Data Name=\\\"ParentProcessGuid\\\">{00000000-0000-0000-0000-000000000000}</Data><Data Name=\\\"ParentProcessId\\\">880</Data><Data Name=\\\"ParentImage\\\">-</Data><Data Name=\\\"ParentCommandLine\\\">-</Data><Data Name=\\\"ParentUser\\\">-</Data></EventData></Event>\",\"body_priority\":\"6\",\"body_syslog_facility\":\"1\",\"body_syslog_identifier\":\"sysmon\",\"body_syslog_timestamp\":\"Feb 23 02:38:18 \",\"dropped_attributes_count\":0,\"host_name\":\"myhostname\",\"os_type\":\"linux\",\"severity\":0}\n\n$ echo \"<Event><System><Provider Name=\\\"Linux-Sysmon\\\" Guid=\\\"{ff032593-a8d3-4f13-b0d6-01fc615a0f97}\\\"/><EventID>1</EventID><Version>5</Version><Level>4</Level><Task>1</Task><Opcode>0</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime=\\\"2025-02-23T02:38:18.953287000Z\\\"/><EventRecordID>22924914</EventRecordID><Correlation/><Execution ProcessID=\\\"26407\\\" ThreadID=\\\"26407\\\"/><Channel>Linux-Sysmon/Operational</Channel><Computer>myhostname</Computer><Security UserId=\\\"0\\\"/></System><EventData><Data Name=\\\"RuleName\\\">-</Data><Data Name=\\\"UtcTime\\\">2025-02-23 02:38:18.961</Data><Data Name=\\\"ProcessGuid\\\">{f7e6787d-8a1a-67ba-306e-20d452560000}</Data><Data Name=\\\"ProcessId\\\">37605</Data><Data Name=\\\"Image\\\">/bin/bin/sleep</Data><Data Name=\\\"FileVersion\\\">-</Data><Data Name=\\\"Description\\\">-</Data><Data Name=\\\"Product\\\">-</Data><Data Name=\\\"Company\\\">-</Data><Data Name=\\\"OriginalFileName\\\">-</Data><Data Name=\\\"CommandLine\\\">sleep 1</Data><Data Name=\\\"CurrentDirectory\\\">/path/to/current/dir</Data><Data Name=\\\"User\\\">root</Data><Data Name=\\\"LogonGuid\\\">{f7e6787d-0000-0000-0000-000000000000}</Data><Data Name=\\\"LogonId\\\">0</Data><Data Name=\\\"TerminalSessionId\\\">4294967295</Data><Data Name=\\\"IntegrityLevel\\\">no level</Data><Data Name=\\\"Hashes\\\">-</Data><Data Name=\\\"ParentProcessGuid\\\">{00000000-0000-0000-0000-000000000000}</Data><Data Name=\\\"ParentProcessId\\\">880</Data><Data Name=\\\"ParentImage\\\">-</Data><Data Name=\\\"ParentCommandLine\\\">-</Data><Data Name=\\\"ParentUser\\\">-</Data></EventData></Event>\" | xmllint --format -\n<?xml version=\"1.0\"?>\n<Event>\n  <System>\n    <Provider Name=\"Linux-Sysmon\" Guid=\"{ff032593-a8d3-4f13-b0d6-01fc615a0f97}\"/>\n    <EventID>1</EventID>\n    <Version>5</Version>\n    <Level>4</Level>\n    <Task>1</Task>\n    <Opcode>0</Opcode>\n    <Keywords>0x8000000000000000</Keywords>\n    <TimeCreated SystemTime=\"2025-02-23T02:38:18.953287000Z\"/>\n    <EventRecordID>22924914</EventRecordID>\n    <Correlation/>\n    <Execution ProcessID=\"26407\" ThreadID=\"26407\"/>\n    <Channel>Linux-Sysmon/Operational</Channel>\n    <Computer>myhostname</Computer>\n    <Security UserId=\"0\"/>\n  </System>\n  <EventData>\n    <Data Name=\"RuleName\">-</Data>\n    <Data Name=\"UtcTime\">2025-02-23 02:38:18.961</Data>\n    <Data Name=\"ProcessGuid\">{f7e6787d-8a1a-67ba-306e-20d452560000}</Data>\n    <Data Name=\"ProcessId\">37605</Data>\n    <Data Name=\"Image\">/bin/bin/sleep</Data>\n    <Data Name=\"FileVersion\">-</Data>\n    <Data Name=\"Description\">-</Data>\n    <Data Name=\"Product\">-</Data>\n    <Data Name=\"Company\">-</Data>\n    <Data Name=\"OriginalFileName\">-</Data>\n    <Data Name=\"CommandLine\">sleep 1</Data>\n    <Data Name=\"CurrentDirectory\">/path/to/current/dir</Data>\n    <Data Name=\"User\">root</Data>\n    <Data Name=\"LogonGuid\">{f7e6787d-0000-0000-0000-000000000000}</Data>\n    <Data Name=\"LogonId\">0</Data>\n    <Data Name=\"TerminalSessionId\">4294967295</Data>\n    <Data Name=\"IntegrityLevel\">no level</Data>\n    <Data Name=\"Hashes\">-</Data>\n    <Data Name=\"ParentProcessGuid\">{00000000-0000-0000-0000-000000000000}</Data>\n    <Data Name=\"ParentProcessId\">880</Data>\n    <Data Name=\"ParentImage\">-</Data>\n    <Data Name=\"ParentCommandLine\">-</Data>\n    <Data Name=\"ParentUser\">-</Data>\n  </EventData>\n</Event>\n\nCurrent VRL\nret1 = parse_xml!(.body_message)\n. = merge!(., ret1)\ndel(.body_message)\ndel(.body___cursor)\ndel(.body___monotonic_timestamp)\ndel(.body__boot_id)\ndel(.body__cap_effective)\ndel(.body__cmdline)\ndel(.body__exe)\ndel(.body__gid)\ndel(.body__hostname)\ndel(.body__pid)\ndel(.body__systemd_cgroup)\ndel(.body__systemd_slice)\ndel(.body__systemd_unit)\ndel(.body__runtime_scope)\ndel(.body__selinux_context)\ndel(.body__source_realtime_timestamp)\ndel(.body__systemd_invocation_id)\ndel(.body__transport)\ndel(.body__uid)\ndel(.body_priority)\ndel(.body_syslog_facility)\ndel(.body_syslog_identifier) \ndel(.body_syslog_pid)\ndel(.dropped_attributes_count) \ndel(.severity)\n.\n\nMy current result:\n    {\n        \"_timestamp\": 1740278298956019,\n        \"body__comm\": \"sysmon\",\n        \"body__machine_id\": \"f7e6787db2d84830854e33af0a1338b8\",\n        \"body_syslog_timestamp\": \"Feb 23 02:38:18 \",\n        \"event_eventdata_data\": \"[{\\\"@Name\\\":\\\"RuleName\\\",\\\"text\\\":\\\"-\\\"},{\\\"@Name\\\":\\\"UtcTime\\\",\\\"text\\\":\\\"2025-02-23 02:38:18.961\\\"},{\\\"@Name\\\":\\\"ProcessGuid\\\",\\\"text\\\":\\\"{f7e6787d-8a1a-67ba-306e-20d452560000}\\\"},{\\\"@Name\\\":\\\"ProcessId\\\",\\\"text\\\":37605},{\\\"@Name\\\":\\\"Image\\\",\\\"text\\\":\\\"/bin/bin/sleep\\\"},{\\\"@Name\\\":\\\"FileVersion\\\",\\\"text\\\":\\\"-\\\"},{\\\"@Name\\\":\\\"Description\\\",\\\"text\\\":\\\"-\\\"},{\\\"@Name\\\":\\\"Product\\\",\\\"text\\\":\\\"-\\\"},{\\\"@Name\\\":\\\"Company\\\",\\\"text\\\":\\\"-\\\"},{\\\"@Name\\\":\\\"OriginalFileName\\\",\\\"text\\\":\\\"-\\\"},{\\\"@Name\\\":\\\"CommandLine\\\",\\\"text\\\":\\\"sleep 1\\\"},{\\\"@Name\\\":\\\"CurrentDirectory\\\",\\\"text\\\":\\\"/path/to/current/dir\\\"},{\\\"@Name\\\":\\\"User\\\",\\\"text\\\":\\\"root\\\"},{\\\"@Name\\\":\\\"LogonGuid\\\",\\\"text\\\":\\\"{f7e6787d-0000-0000-0000-000000000000}\\\"},{\\\"@Name\\\":\\\"LogonId\\\",\\\"text\\\":0},{\\\"@Name\\\":\\\"TerminalSessionId\\\",\\\"text\\\":4294967295},{\\\"@Name\\\":\\\"IntegrityLevel\\\",\\\"text\\\":\\\"no level\\\"},{\\\"@Name\\\":\\\"Hashes\\\",\\\"text\\\":\\\"-\\\"},{\\\"@Name\\\":\\\"ParentProcessGuid\\\",\\\"text\\\":\\\"{00000000-0000-0000-0000-000000000000}\\\"},{\\\"@Name\\\":\\\"ParentProcessId\\\",\\\"text\\\":880},{\\\"@Name\\\":\\\"ParentImage\\\",\\\"text\\\":\\\"-\\\"},{\\\"@Name\\\":\\\"ParentCommandLine\\\",\\\"text\\\":\\\"-\\\"},{\\\"@Name\\\":\\\"ParentUser\\\",\\\"text\\\":\\\"-\\\"}]\",\n        \"event_system_channel\": \"Linux-Sysmon/Operational\",\n        \"event_system_computer\": \"myhostname\",\n        \"event_system_eventid\": 1,\n        \"event_system_eventrecordid\": 22924914,\n        \"event_system_execution__processid\": \"26407\",\n        \"event_system_execution__threadid\": \"26407\",\n        \"event_system_keywords\": \"0x8000000000000000\",\n        \"event_system_level\": 4,\n        \"event_system_opcode\": 0,\n        \"event_system_provider__guid\": \"{ff032593-a8d3-4f13-b0d6-01fc615a0f97}\",\n        \"event_system_provider__name\": \"Linux-Sysmon\",\n        \"event_system_security__userid\": \"0\",\n        \"event_system_task\": 1,\n        \"event_system_timecreated__systemtime\": \"2025-02-23T02:38:18.953287000Z\",\n        \"event_system_version\": 5,\n        \"host_name\": \"myhostname\",\n        \"os_type\": \"linux\"\n    }\n\nExpected result from docs https://vector.dev/docs/reference/vrl/functions/#parse_xml\n    {\n        \"_timestamp\": 1740278298956019,\n        \"body__comm\": \"sysmon\",\n        \"body__machine_id\": \"f7e6787db2d84830854e33af0a1338b8\",\n        \"body_syslog_timestamp\": \"Feb 23 02:38:18 \",\n        \"event_eventdata_data\": {\n             \"@RuleName\": \"-\",\n             \"@UtcTime\": \"2025-02-23 02:38:18.961\",\n             \"@Image\": \"/bin/bin/sleep\",\n             ...\n        }\n        \"event_system_channel\": \"Linux-Sysmon/Operational\",\n        \"event_system_computer\": \"myhostname\",\n        \"event_system_eventid\": 1,\n        \"event_system_eventrecordid\": 22924914,\n        \"event_system_execution__processid\": \"26407\",\n        \"event_system_execution__threadid\": \"26407\",\n        \"event_system_keywords\": \"0x8000000000000000\",\n        \"event_system_level\": 4,\n        \"event_system_opcode\": 0,\n        \"event_system_provider__guid\": \"{ff032593-a8d3-4f13-b0d6-01fc615a0f97}\",\n        \"event_system_provider__name\": \"Linux-Sysmon\",\n        \"event_system_security__userid\": \"0\",\n        \"event_system_task\": 1,\n        \"event_system_timecreated__systemtime\": \"2025-02-23T02:38:18.953287000Z\",\n        \"event_system_version\": 5,\n        \"host_name\": \"myhostname\",\n        \"os_type\": \"linux\"\n    }\n\ntried a parse_regex with join like mentioned in vectordotdev/vector#16000 but nok\nany advice?\nthanks",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1287",
+    "createdAt": "2025-02-23T20:34:45Z",
+    "updatedAt": "2025-04-06T23:49:04Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "juju4"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 2
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1336,
+    "title": "parse_json for a string where string contains \"\" inside the key while reading message from kafka",
+    "bodyText": "I am reading message from kafka and trying to parse the json, For some message I am getting \"\" inside the value of the key.\ni tried replace but its not helping. Can someone help here? Thanks in advance\nsample message:\nvrl code:\nVRL CODE\nsample message:\n{\n    \"message\": \"{\\\"test\\\": \\\"this\\\", \\\"key_with_quotes\\\": \\\"\\\"quotes\\\"\\\"}\"\n}\ncode:\n.msg, .replaceerr = replace(.message, s'\"\"', s'\\\"\\\"')\n.out, .err = parse_json(.msg)",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1336",
+    "createdAt": "2025-03-12T17:15:06Z",
+    "updatedAt": "2025-03-12T17:59:01Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": false,
+    "locked": false,
+    "author": {
+      "login": "yjagdale"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1333,
+    "title": "Functions documentation",
+    "bodyText": "Hello,\nI'm currently trying to write a very light LSP for vrl, and it made me notice that most of the functions don't have a summary and usage to display.\nI'd like to make a PR to add these to all the existing functions, so I was wondering how to format them and what to include in their content.\nFor the summary, something close to the function description in the VRL function reference should fit most of the time, or just its first sentence when it's too long?\nFor the usage, I assume using the whole function description could work.\nHowever, should the function properties (fallibility, purity, errors to handle) and the description of its arguments be present as well?\nCurrently, for the few functions with a usage, it contains more or less the same as the summary plus the name of its arguments inserted in the description. Sometimes, some more information is added, or the description of its arguments.\nDo you have any requirements about it? Otherwise, I'll likely go with something like that:\n[purity][fallibility]\n\n<full description>\n\n<arguments description>\n\n<errors to handle>\n\nThanks in advance!",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1333",
+    "createdAt": "2025-03-11T10:04:30Z",
+    "updatedAt": "2025-03-12T14:51:17Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": false,
+    "locked": false,
+    "author": {
+      "login": "JTKU"
+    },
+    "category": {
+      "name": "General"
+    },
+    "comments": {
+      "totalCount": 2
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1311,
+    "title": "Should `find` return `null` when the pattern wasn't found?",
+    "bodyText": "Right now it returns -1, which from what I can see is somewhat of a special case, because in other functions if something could not be found, null is returned. Returning -1 might introduce hidden bugs if the return value is not analyzed, for example:\n.string = \"foobar\"\n.index = find!(.string, \"123\")\n.output = slice!(.string, .index)\n\nThis code will compile without issues, and the value stored in .output will be \"r\". Maybe it would be better to return null (which will fail the slice!() function) or make the find!() function fail if the pattern wasn't found, requiring the developer to handle that case explicitly.",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1311",
+    "createdAt": "2025-03-03T10:12:10Z",
+    "updatedAt": "2025-09-22T13:45:01Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "simplepad"
+    },
+    "category": {
+      "name": "General"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1302,
+    "title": "The `match_datadog_query` function expects a `query` literal",
+    "bodyText": "Hi, I have been unable to assign a value in a for_each loop for use in match_datadog_query() as the query. Hoping I am doing something really silly. Any help much appreciated.\n{\n    \"message\": \"Hello VRL\",\n    \"foo\": \"delete me\",\n    \"http_status\": \"200\",\n    \"tiers\": [{\"tier_name\": \"gold\", \"query\": \"*\"}]\n}\n\ngiven the program\nfor_each(array!(.tiers)) -> |_index, tier_config| {\n    query = tier_config.query\n    if match_datadog_query(value: ., query: query) {\n        .requested_tier = tier_config.tier_name\n    }\n}\n\nI get the error\nerror[E610]: function compilation error: error[E400] unexpected expression type\n  \u250c\u2500 :4:8\n  \u2502\n4 \u2502     if match_datadog_query(value: ., query: query) {\n  \u2502        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  \u2502        \u2502\n  \u2502        unexpected expression for argument \"query\"\n  \u2502        expected: literal\n  \u2502        received: variable call\n  \u2502\n\nhttps://playground.vrl.dev/?state=eyJwcm9ncmFtIjoiXG5mb3JfZWFjaChhcnJheSEoLnRpZXJzKSkgLT4gfF9pbmRleCwgdGllcl9jb25maWd8IHtcbiAgICBxdWVyeSA9IHRpZXJfY29uZmlnLnF1ZXJ5XG4gICAgaWYgbWF0Y2hfZGF0YWRvZ19xdWVyeSh2YWx1ZTogLiwgcXVlcnk6IHF1ZXJ5KSB7XG4gICAgICAgIC5yZXF1ZXN0ZWRfdGllciA9IHRpZXJfY29uZmlnLnRpZXJfbmFtZVxuICAgIH1cbn1cblxuIiwiZXZlbnQiOnsibWVzc2FnZSI6IkhlbGxvIFZSTCIsImZvbyI6ImRlbGV0ZSBtZSIsImh0dHBfc3RhdHVzIjoiMjAwIiwidGllcnMiOlt7InRpZXJfbmFtZSI6ImdvbGQiLCJxdWVyeSI6IioifV19LCJpc19qc29ubCI6ZmFsc2UsImVycm9yIjpudWxsfQ%3D%3D",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1302",
+    "createdAt": "2025-02-27T03:49:12Z",
+    "updatedAt": "2025-03-03T17:40:43Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": false,
+    "locked": false,
+    "author": {
+      "login": "tbenade"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1293,
+    "title": "IP classification with `ip_cidr_contains` - is there an optimal approach??",
+    "bodyText": "Hello, I want to classify the IP type os a given ip. I have come around with this code\n# Function to classify an IP address based on its type\nif ip_cidr_contains(\"10.0.0.0/8\", .ip) ||\n   ip_cidr_contains(\"172.16.0.0/12\", .ip) ||\n   ip_cidr_contains(\"192.168.0.0/16\", .ip) {\n    .ip_type = \"private\"\n} else if ip_cidr_contains(\"127.0.0.0/8\", .ip) {\n    .ip_type = \"loopback\"\n} else if ip_cidr_contains(\"169.254.0.0/16\", .ip) {\n    .ip_type = \"link_local\"\n} else if ip_cidr_contains(\"224.0.0.0/4\", .ip) {\n    .ip_type = \"multicast\"\n} else if ip_cidr_contains(\"100.64.0.0/10\", .ip) {\n    .ip_type = \"carrier_nat\"\n} else if ip_cidr_contains(\"192.0.0.0/24\", .ip) ||\n          ip_cidr_contains(\"192.0.2.0/24\", .ip) ||\n          ip_cidr_contains(\"198.51.100.0/24\", .ip) ||\n          ip_cidr_contains(\"203.0.113.0/24\", .ip) {\n    .ip_type = \"documentation\"\n} else if ip_cidr_contains(\"240.0.0.0/4\", .ip) {\n    .ip_type = \"reserved\"\n} else {\n    .ip_type = \"public\"\n}\n\nit works fine, but i dont like so many if. I dont think that is very optimal. Is there a better way to do it?",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1293",
+    "createdAt": "2025-02-10T23:01:25Z",
+    "updatedAt": "2025-04-19T01:02:47Z",
+    "closedAt": null,
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "dr4gon123"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 2
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1278,
+    "title": "Vector Remap Error: Parent Path Segment Rejects Mutation When Using del(.)",
+    "bodyText": "I have the following configuration:\nFirst remap:\n. = merge!(., parse_json(.message))\n\nSecond remap(in a deeper location):\nevent_data = del(.)\nmeta_data = %my_source\n\n# Now, try to form a new object with only the required properties:\n.log.level = \"info\"\n.some.property = event_data.some.property \n\nBut got error:\n\"parent path segment rejects this mutation\"\n\"querying a field of a non-object type is unsupported\"\n\nThis issue is related to:\n\nThis change was made to prevent accidentally overwriting non-collection types. As the diagnostic message suggests, you can still achieve the desired result by first re-writing the non-collection type to a collection type (foo = {}), and then mutating the collection itself.\nhttps://vector.dev/highlights/2022-08-16-0-24-0-upgrade-guide/\n\n\u26a0\ufe0f  Without del(.), it works as expected; however, in my case I do not need everything inside .\nIt would nice to have the ability to restore . (root) object after del(.)",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1278",
+    "createdAt": "2025-02-19T11:15:16Z",
+    "updatedAt": "2025-02-20T15:07:09Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": false,
+    "locked": false,
+    "author": {
+      "login": "Anton0C"
+    },
+    "category": {
+      "name": "General"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 3
+  },
+  {
+    "number": 1279,
+    "title": "Not able to get Regex to get just the filename from the full path working with Vector",
+    "bodyText": "I'm trying to write a transform where I want to get just the filename from the full pathname. I have a got a Rust regular expression which is working on Rust's regular expression test site but when I put the same inside the \"remap\" transform it does not work.\n\nMy input is -\n# cat input.json\n{\"file\":\"/opt/application/service-manager-2/logs/service-manager.log\",\"hostname\":\"ab126310fc26\",\"message\":\"{\\\"level\\\":\\\"info\\\",\\\"message\\\":\\\"all mandatory: true\\\",\\\"timestamp\\\":\\\"2025-02-11T12:43:21.292Z\\\"}\", \"source_type\":\"file\",\"timestamp\":\"2025-02-12T04:49:55.885440369Z\"}\n\nMy program.vrl file looks like this -\n# cat program.vrl1\n\n.file = parse_regex!(.file, r'[^/]*$')\n\n\nIn my output I always get \"file\" tag as blank-\n# vector vrl --input input.json --program program.vrl1 --print-object\n2025-02-19T09:03:27.106999Z  INFO vector::app: Log level is enabled. level=\"info\"\n{ \"file\": {  }, \"hostname\": \"ab126310fc26\", \"message\": \"{\\\"level\\\":\\\"info\\\",\\\"message\\\":\\\"all mandatory: true\\\",\\\"timestamp\\\":\\\"2025-02-11T12:43:21.292Z\\\"}\", \"source_type\": \"file\", \"timestamp\": \"2025-02-12T04:49:55.885440369Z\" `}`\n\nam I missing something here? To me it feels like soemthing which should work.",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1279",
+    "createdAt": "2025-02-19T09:07:01Z",
+    "updatedAt": "2025-02-20T09:02:04Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "harikeshtripathi"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1268,
+    "title": "Issue Extracting Docker Label Value with Dots (com.test.data.job) in VRL",
+    "bodyText": "Hi Team,\nI'm trying to extract a Docker label (com.test.data.job) inside a remap transform in Vector and use it as a dynamic value when writing logs to an S3 bucket. However, I keep running into type errors.\nWhat I'm Trying to Do:\nI want to extract the value of the com.test.data.job label from docker.container_labels and store it in a new field .job_id. Here\u2019s my current transform:\ntransforms:\n  extract_label:\n    type: remap\n    inputs:\n      - docker_logs\n    source: |\n      .job_id = get(.docker.container_labels, \"com.test.data.job\") ?? \"unknown\"\n\nErrors I\u2019m Encountering:\nI\u2019ve tried multiple approaches, but I keep getting errors like:\nthis expression resolves to the exact type string\nbut the parameter \"path\" expects the exact type array\n\nor\n required argument missing: \"path\" (position 1)\nI also tried escaping dots (\"com.test.data.job\") and using an array-style lookup (get([\"docker\", \"container_labels\", \"com.test.data.job\"])), but none worked.\nMy Questions:\n\nHow can I correctly extract a Docker label that contains dots (.) in its name?\nWhat is the correct way to reference deeply nested string keys in remap?\nIs there an alternative approach if VRL doesn\u2019t support this directly?\n\nAny guidance would be appreciated! Thanks in advance. \ud83d\ude80",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1268",
+    "createdAt": "2025-02-12T04:15:29Z",
+    "updatedAt": "2025-02-13T21:21:59Z",
+    "closedAt": "2025-02-13T21:21:56Z",
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "sairamktummala"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 3
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1245,
+    "title": "Potential false positive warning for an unused variable in VRL",
+    "bodyText": "Hello,\nIs this a false positive warning or am I doing something incorrectly here?\n[transforms.utils_log_pre_processor]\n  type = \"remap\"\n  inputs = [\"...\"]\n  source = '''\n    vector_ingest_time = now()\n    match, err = parse_json(.message)\n    if err != null {\n      log(\"Utils Pre-Processor: Failed to jsonify message with error \" + err, level: \"error\", rate_limit_secs:1)\n      abort\n    } else {\n      . = match\n    }\n    ...\n  '''\n\nI'm getting a warning:\nWARN transform{component_kind=\"transform\" component_id=utils_log_pre_processor component_type=remap}: vector::transforms::remap: VRL compilation warning. warnings=\nwarning[E900]: unused variable `err`\n  \u250c\u2500 :2:12\n  \u2502\n2 \u2502     match, err = parse_json(.message)\n  \u2502            ^^^ help: use the result of this expression or remove it\n  \u2502\n  = this expression has no side-effects\n  = see language documentation at https://vrl.dev\n  = try your code in the VRL REPL, learn more at https://vrl.dev/example\n\nThanks very much!",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1245",
+    "createdAt": "2025-01-31T00:23:27Z",
+    "updatedAt": "2025-02-01T00:31:26Z",
+    "closedAt": "2025-02-01T00:31:26Z",
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "maxdialpad"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 2
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1243,
+    "title": "VRL Flatten function error",
+    "bodyText": "I keep getting and error with the flatten function trying to flatten the object below. Is it too complex?  a bug? anyone have any suggestions.  If I do is_object() it returns true so it meets the expectations of the flatten funtion.\nerror[E110]: invalid argument type\n  \u250c\u2500 :1:9\n  \u2502\n1 \u2502 flatten(.p)\n  \u2502         ^^\n  \u2502         \u2502\n  \u2502         this expression resolves to one of string, integer, float, boolean, null, array or object\n  \u2502         but the parameter \"value\" expects one of array or object\n  \u2502\n  = learn more about error code 110 at https://errors.vrl.dev/110\n  = see language documentation at https://vrl.dev\n  = try your code in the VRL REPL, learn more at https://vrl.dev/examples\n\nexample\n{\n  \"active\": 1,\n  \"agents\": [\n    {\n      \"active\": 1,\n      \"agentId\": 113253,\n      \"agentName\": \"Windsor Edge Agent\",\n      \"dateStart\": \"2024-11-18 14:10:00\",\n      \"metricsAtEnd\": \"Active\",\n      \"metricsAtStart\": \"Error: \\\"Connection timed out after 5001 milliseconds\\\"\",\n      \"permalink\": \"https://app.thousandeyes.com/\"\n    }\n  ],\n  \"alertId\": \"348688fa-7de1-4113-a97f-4b8675907bd0\",\n  \"apiLinks\": [\n    {\n      \"href\": \"https://api.thousandeyes.com/\",\n      \"rel\": \"related\"\n    },\n    {\n      \"href\": \"https://api.thousandeyes.com/\",\n      \"rel\": \"data\"\n    }\n  ],\n  \"dateStart\": \"2024-11-18 14:15:00\",\n  \"metadata\": {\n    \"version\": 1\n  },\n  \"permalink\": \"https://app.thousandeyes.com/\",\n  \"ruleExpression\": \"((probDetail != \\\"\\\"))\",\n  \"ruleId\": 123,\n  \"ruleName\": \"Proxy Error Alert\",\n  \"severity\": \"INFO\",\n  \"suppressed\": 0,\n  \"testId\": 123,\n  \"testName\": \"my-test-1\",\n  \"type\": \"HTTP Server\",\n  \"violationCount\": 1\n}",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1243",
+    "createdAt": "2025-01-30T23:06:07Z",
+    "updatedAt": "2025-02-01T20:32:41Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "satellite-no"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 6
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1240,
+    "title": "error[E101]: invalid regular expression",
+    "bodyText": "I was try to exclude logs but getting the error. i will appreciate any help on this\ndatadog_exclude_log:\n      type: filter\n      condition: |\n          structured, err = parse_regex(.message, r'^(-|(?P<remote>\\S+)) - (-|(?P<user_agent>\\S+)) \\[(?P<timestamp>.+)\\] \"(?P<path>(?P<method>\\w+) (?P<path>\\S+) (?P<protocol>\\S+))\" (?P<status>\\d+) (?P<size>\\d+) \"(-|(?P<referer>.+))\" \"(-|(?P<agent>.+))\" \"(-|(?P<http_x_forwarded_for>.+))\" \"(-|(?P<host>.+))\" \"(-|(?P<session_cookie>.+))\" \"(-|(?P<endpoint.request>\\d+\\.\\d+))\" \"user\\[(-|(?P<http_method>.+))\\]\"$')\n            if err != null {\n              log(\"Unable to parse_regex RAW:\" + string!(.message), level: \"error\")\n            }\n            else {\n              .level == \"info\" && .logger_name == \"INBOUND_REQUEST\"\n              .status == \"DEBUG\" || .status == \"INFO\"\n              .request_time = to_float!(.request_time)\n              .timestamp = parse_timestamp!(.timestamp, \"%d/%b/%Y:%H:%M:%S %z\")\n            }\n\nEdited: Please use surround blocks with ```",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1240",
+    "createdAt": "2025-01-29T19:26:27Z",
+    "updatedAt": "2025-01-31T16:38:25Z",
+    "closedAt": "2025-01-31T16:38:25Z",
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": false,
+    "locked": false,
+    "author": {
+      "login": "adedokunk"
+    },
+    "category": {
+      "name": "General"
+    },
+    "comments": {
+      "totalCount": 4
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1224,
+    "title": "Detecting When Vector Drops A Large Log Line",
+    "bodyText": "Moved to vectordotdev/vector#22286",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1224",
+    "createdAt": "2025-01-22T23:04:01Z",
+    "updatedAt": "2025-01-22T23:16:57Z",
+    "closedAt": "2025-01-22T23:14:37Z",
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": false,
+    "locked": false,
+    "author": {
+      "login": "sean-brandenburg"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 0
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1213,
+    "title": "Expected literal as function argment",
+    "bodyText": "I tried something like this:\nformat = \"combined\"\nif (.stream == \"stderr\") {\n    format = \"error\"\n}\nmsg = parse_nginx_log!(.message, format)\n\nand got the following error\nerror[E610]: function compilation error: error[E400] unexpected expression type\n  \u250c\u2500 :5:7\n  \u2502\n5 \u2502 msg = parse_nginx_log!(.message, format)\n  \u2502       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  \u2502       \u2502\n  \u2502       unexpected expression for argument \"format\"\n  \u2502       expected: literal\n  \u2502       received: variable call\n  \u2502\n  = learn more about error code 400 at https://errors.vrl.dev/400\n  = see language documentation at https://vrl.dev\n  = try your code in the VRL REPL, learn more at https://vrl.dev/examples\n\nI've looked at the reference for this function (https://vector.dev/docs/reference/vrl/functions/#parse_nginx_log) and the VRL specification, and didn't read anywhere that variables couldn't be used in place of literals? Maybe I'm missing something?",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1213",
+    "createdAt": "2025-01-07T07:37:13Z",
+    "updatedAt": "2025-01-13T08:52:58Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": false,
+    "locked": false,
+    "author": {
+      "login": "elwinar"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 1206,
+    "title": "How to the use of VRL crate and write/test custom functions",
+    "bodyText": "This started as a discussion on Discord with @pront.\nI'm writing an application that uses VRL as a crate and I'm adding custom functions. I have to admit it's not easy to know how to write a custom function because there is no documentation about it.\nFor instance I'm writing:\n\na function that takes a string and an array of paths and returns a string\na function that takes a string and based on its content access elements of the current document (found under path .)\n\nThe questions I still have are:\n\nhow do we write custom functions ? I started from an existing function but not sure if I did everything correctly. It seems not all functions are defined following the same conventions\nwhat should end up in fn compile, resolve and the inner function itself ?\nhow do we test our custom functions ? I have defined fn examples in my RecordId struct and @pront showed me that you run those using ./scripts/checks.sh vrl_tests. I figured that we can test specific functions using something like cargo run --package vrl-tests --bin vrl-tests -- -p functions/set but this is only in the VRL repo. How would we do it in our own repo that uses VRL with custom functions ?\n\nIt short I feel there is a lack of documentation around how to use VRL as a crate and how to extend it with a good way to test it.",
+    "url": "https://github.com/vectordotdev/vrl/discussions/1206",
+    "createdAt": "2025-01-03T22:49:20Z",
+    "updatedAt": "2025-01-10T22:25:40Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": false,
+    "locked": false,
+    "author": {
+      "login": "cscetbon"
+    },
+    "category": {
+      "name": "General"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 2
+  }
+]

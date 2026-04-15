@@ -7,10 +7,14 @@ use std::collections::{HashMap, HashSet};
 use std::fs;
 use std::path::Path;
 
+/// Load issues/PRs from a single JSON file or a directory of JSON files.
 pub fn run(input: &str, config: &Config) -> Result<()> {
-    let json =
-        fs::read_to_string(input).with_context(|| format!("Failed to read input file: {input}"))?;
-    let items: Vec<Value> = serde_json::from_str(&json).context("Failed to parse issues JSON")?;
+    let input_path = Path::new(input);
+    let items = if input_path.is_dir() {
+        load_json_dir(input_path)?
+    } else {
+        load_json_file(input_path)?
+    };
 
     println!("Loaded {} items from {input}", items.len());
 
@@ -30,6 +34,29 @@ pub fn run(input: &str, config: &Config) -> Result<()> {
 
     println!("Database saved to '{}'", db_path.display());
     Ok(())
+}
+
+fn load_json_file(path: &Path) -> Result<Vec<Value>> {
+    let json = fs::read_to_string(path)
+        .with_context(|| format!("Failed to read input file: {}", path.display()))?;
+    serde_json::from_str(&json).context("Failed to parse issues JSON")
+}
+
+fn load_json_dir(dir: &Path) -> Result<Vec<Value>> {
+    let mut all_items = Vec::new();
+    let mut entries: Vec<_> = fs::read_dir(dir)?
+        .filter_map(|e| e.ok())
+        .filter(|e| e.path().extension().is_some_and(|ext| ext == "json"))
+        .collect();
+    entries.sort_by_key(|e| e.path());
+
+    for entry in entries {
+        let path = entry.path();
+        let items = load_json_file(&path)?;
+        println!("  Loaded {} items from {}", items.len(), path.display());
+        all_items.extend(items);
+    }
+    Ok(all_items)
 }
 
 fn create_tables(conn: &Connection) -> Result<()> {
@@ -138,7 +165,7 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
     println!("Inserting issues into database...");
     {
         let mut stmt = conn.prepare(
-            "INSERT INTO issues(id, number, title, state, created_at, updated_at, closed_at, user_login, issue_type)
+            "INSERT OR REPLACE INTO issues(id, number, title, state, created_at, updated_at, closed_at, user_login, issue_type)
              VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)"
         )?;
         for (id, number, title, state, created_at, updated_at, closed_at, user_login, issue_type) in &issue_rows
@@ -153,7 +180,7 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
     println!("Inserting pull requests into database...");
     {
         let mut stmt = conn.prepare(
-            "INSERT INTO pull_requests(id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft)
+            "INSERT OR REPLACE INTO pull_requests(id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft)
              VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)"
         )?;
         for (id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft) in
@@ -169,7 +196,7 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
     println!("Inserting labels into database...");
     {
         let mut stmt = conn
-            .prepare("INSERT INTO labels(id, name, color, description) VALUES (?1, ?2, ?3, ?4)")?;
+            .prepare("INSERT OR REPLACE INTO labels(id, name, color, description) VALUES (?1, ?2, ?3, ?4)")?;
         for (id, name, color, desc) in label_map.values() {
             stmt.execute(rusqlite::params![id, name, color, desc])?;
         }
@@ -179,7 +206,7 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
     println!("Inserting issue-label relationships into database...");
     {
         let mut stmt =
-            conn.prepare("INSERT INTO issue_labels(issue_id, label_id) VALUES (?1, ?2)")?;
+            conn.prepare("INSERT OR REPLACE INTO issue_labels(issue_id, label_id) VALUES (?1, ?2)")?;
         for (issue_id, label_id) in &issue_label_set {
             stmt.execute(rusqlite::params![issue_id, label_id])?;
         }
@@ -187,6 +214,32 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
     println!("Inserted {} issue-label records.", issue_label_set.len());
 
     Ok(())
+}
+
+/// Load discussions from a single JSON file or a directory of JSON files.
+pub fn load_discussions_from_path(conn: &Connection, input: &str) -> Result<()> {
+    let path = Path::new(input);
+    let discussions: Vec<Discussion> = if path.is_dir() {
+        let mut all = Vec::new();
+        let mut entries: Vec<_> = fs::read_dir(path)?
+            .filter_map(|e| e.ok())
+            .filter(|e| e.path().extension().is_some_and(|ext| ext == "json"))
+            .collect();
+        entries.sort_by_key(|e| e.path());
+        for entry in entries {
+            let json = fs::read_to_string(entry.path())?;
+            let items: Vec<Discussion> = serde_json::from_str(&json)?;
+            println!("  Loaded {} discussions from {}", items.len(), entry.path().display());
+            all.extend(items);
+        }
+        all
+    } else {
+        let json = fs::read_to_string(path)
+            .with_context(|| format!("Failed to read: {}", path.display()))?;
+        serde_json::from_str(&json)?
+    };
+    println!("Loaded {} discussions from {input}", discussions.len());
+    load_discussions(conn, &discussions)
 }
 
 pub fn load_discussions(conn: &Connection, discussions: &[Discussion]) -> Result<()> {
