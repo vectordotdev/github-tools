@@ -59,12 +59,8 @@ pub fn generate_all(env_files: &[String], exclude_labels: Option<&str>, start: O
             None
         };
         if let Some(disc_path) = disc_input {
-            println!("Loading discussions from: {disc_path}");
-            let disc_json = std::fs::read_to_string(disc_path)?;
-            let discussions: Vec<crate::commands::fetch_discussions::Discussion> =
-                serde_json::from_str(&disc_json)?;
             let conn = rusqlite::Connection::open(&db)?;
-            build_db::load_discussions(&conn, &discussions)?;
+            build_db::load_discussions_from_path(&conn, disc_path)?;
         }
 
         generate_summaries::run(&db, &config, exclude_labels)?;

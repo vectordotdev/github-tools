@@ -216,6 +216,32 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
     Ok(())
 }
 
+/// Load discussions from a single JSON file or a directory of JSON files.
+pub fn load_discussions_from_path(conn: &Connection, input: &str) -> Result<()> {
+    let path = Path::new(input);
+    let discussions: Vec<Discussion> = if path.is_dir() {
+        let mut all = Vec::new();
+        let mut entries: Vec<_> = fs::read_dir(path)?
+            .filter_map(|e| e.ok())
+            .filter(|e| e.path().extension().is_some_and(|ext| ext == "json"))
+            .collect();
+        entries.sort_by_key(|e| e.path());
+        for entry in entries {
+            let json = fs::read_to_string(entry.path())?;
+            let items: Vec<Discussion> = serde_json::from_str(&json)?;
+            println!("  Loaded {} discussions from {}", items.len(), entry.path().display());
+            all.extend(items);
+        }
+        all
+    } else {
+        let json = fs::read_to_string(path)
+            .with_context(|| format!("Failed to read: {}", path.display()))?;
+        serde_json::from_str(&json)?
+    };
+    println!("Loaded {} discussions from {input}", discussions.len());
+    load_discussions(conn, &discussions)
+}
+
 pub fn load_discussions(conn: &Connection, discussions: &[Discussion]) -> Result<()> {
     println!("Inserting discussions into database...");
     let mut stmt = conn.prepare(
