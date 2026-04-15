@@ -33,18 +33,34 @@ pub fn generate_all(env_files: &[String], exclude_labels: Option<&str>, start: O
     for env_file in env_files {
         println!("\n=== Generating for env: {env_file} ===");
         let config = Config::load(Some(env_file))?;
-        let input = format!("data/{}_{}_issues.json", config.repo_owner, config.repo_name);
-        let db = format!("out/db/{}_{}.db", config.repo_owner, config.repo_name);
+        let repo_prefix = format!("{}_{}", config.repo_owner, config.repo_name);
+        let issues_dir = format!("data/{repo_prefix}/issues");
+        let single_file = format!("data/{repo_prefix}_issues.json");
+        let db = format!("out/db/{repo_prefix}.db");
 
-        let discussions_input = format!("data/{}_{}_discussions.json", config.repo_owner, config.repo_name);
+        // Prefer directory of year files, fall back to single JSON file
+        let input = if std::path::Path::new(&issues_dir).is_dir() {
+            &issues_dir
+        } else {
+            &single_file
+        };
 
         println!("Running with input: {input}");
-        build_db::run(&input, &config)?;
+        build_db::run(input, &config)?;
 
-        // Load discussions if the JSON file exists
-        if std::path::Path::new(&discussions_input).exists() {
-            println!("Loading discussions from: {discussions_input}");
-            let disc_json = std::fs::read_to_string(&discussions_input)?;
+        // Load discussions: try directory first, then single file
+        let disc_dir = format!("data/{repo_prefix}/discussions");
+        let disc_file = format!("data/{repo_prefix}_discussions.json");
+        let disc_input: Option<&str> = if std::path::Path::new(&disc_dir).is_dir() {
+            Some(&disc_dir)
+        } else if std::path::Path::new(&disc_file).exists() {
+            Some(&disc_file)
+        } else {
+            None
+        };
+        if let Some(disc_path) = disc_input {
+            println!("Loading discussions from: {disc_path}");
+            let disc_json = std::fs::read_to_string(disc_path)?;
             let discussions: Vec<crate::commands::fetch_discussions::Discussion> =
                 serde_json::from_str(&disc_json)?;
             let conn = rusqlite::Connection::open(&db)?;

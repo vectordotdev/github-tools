@@ -11,6 +11,7 @@ Tools for extracting data from GitHub, storing it in a local SQLite database, qu
 src/             # Rust source (single binary: github-tools)
 scripts/util/    # Python: plot.py (charts), json_to_csv.py (utility)
 data/            # Committed snapshots: JSON inputs and PNG charts
+  {owner}_{repo}/issues/  # Issues/PRs JSON split by year (2024.json, 2025.json, ...)
   images/        # Committed PNG charts (promoted from out/images/)
 out/             # Gitignored — all generated and local-only files
   historical/    # Raw JSON fetched from GitHub API
@@ -77,14 +78,7 @@ Run `github-tools <COMMAND> --help` for full argument details.
 github-tools fetch-all --env-file vector.env --env-file vrl.env
 ```
 
-Writes to `out/historical/`. Promote to `data/` to commit as a snapshot:
-
-```shell
-cp out/historical/issues/vectordotdev_vector_issues.json data/
-cp out/historical/issues/vectordotdev_vrl_issues.json data/
-cp out/historical/discussions/vectordotdev_vector_discussions.json data/
-cp out/historical/discussions/vectordotdev_vrl_discussions.json data/
-```
+Writes to `out/historical/`. The fetched JSON must be split by year and promoted to `data/` to commit as a snapshot. Issues/PRs are stored in `data/{owner}_{repo}/issues/{year}.json`.
 
 ## 2. Generate DB, summaries, and charts
 

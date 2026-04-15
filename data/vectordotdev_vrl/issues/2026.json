@@ -1,0 +1,3472 @@
+[
+  {
+    "closed_at": "2026-03-20T18:34:18Z",
+    "created_at": "2026-03-11T18:09:25Z",
+    "id": 4059811047,
+    "issue_type": "Bug",
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      }
+    ],
+    "number": 1701,
+    "state": "closed",
+    "title": "`http_request` retry policy discards first OK request",
+    "updated_at": "2026-03-20T18:34:18Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-09T17:37:21Z",
+    "id": 4046958920,
+    "issue_type": "Bug",
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      }
+    ],
+    "number": 1693,
+    "state": "open",
+    "title": "`parse_user_agent(\"curl/8.7.1\")` returns `\"curl\"` as the version",
+    "updated_at": "2026-03-09T17:37:31Z",
+    "user": {
+      "login": "andrey-mazo"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-08T17:07:58Z",
+    "id": 4041727851,
+    "issue_type": "Feature",
+    "labels": [
+      {
+        "color": "BF72F6",
+        "description": "A value-adding code addition that introduce new functionality.",
+        "id": 6071513945365121417,
+        "name": "type: feature"
+      }
+    ],
+    "number": 1692,
+    "state": "open",
+    "title": "Preserve numeric precision with `decimal` type",
+    "updated_at": "2026-03-18T06:56:50Z",
+    "user": {
+      "login": "benjamin-awd"
+    }
+  },
+  {
+    "closed_at": "2026-03-20T14:53:00Z",
+    "created_at": "2026-03-04T17:07:15Z",
+    "id": 4023100160,
+    "issue_type": "Feature",
+    "labels": [
+      {
+        "color": "BF72F6",
+        "description": "A value-adding code addition that introduce new functionality.",
+        "id": 6071513945365121417,
+        "name": "type: feature"
+      }
+    ],
+    "number": 1682,
+    "state": "closed",
+    "title": "Allow specific keys to be excluded from `flatten`",
+    "updated_at": "2026-03-20T14:53:00Z",
+    "user": {
+      "login": "benjamin-awd"
+    }
+  },
+  {
+    "closed_at": "2026-02-24T22:52:31Z",
+    "created_at": "2026-02-13T16:38:05Z",
+    "id": 3938011510,
+    "issue_type": null,
+    "labels": [],
+    "number": 1639,
+    "state": "closed",
+    "title": "`Example` should take in an optional input",
+    "updated_at": "2026-02-24T22:52:31Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-02-13T16:21:13Z",
+    "id": 3937943791,
+    "issue_type": null,
+    "labels": [],
+    "number": 1638,
+    "state": "open",
+    "title": "`Function::return_kind` should be checked",
+    "updated_at": "2026-02-13T16:21:13Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-02-12T19:00:24Z",
+    "id": 3933492057,
+    "issue_type": "Feature",
+    "labels": [
+      {
+        "color": "BF72F6",
+        "description": "A value-adding code addition that introduce new functionality.",
+        "id": 6071513945365121417,
+        "name": "type: feature"
+      }
+    ],
+    "number": 1636,
+    "state": "open",
+    "title": "Support AES-GCM in `encrypt`/`decrypt` functions",
+    "updated_at": "2026-02-12T19:00:24Z",
+    "user": {
+      "login": "dodo0822"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-02-02T15:26:14Z",
+    "id": 3886547720,
+    "issue_type": null,
+    "labels": [],
+    "number": 1620,
+    "state": "open",
+    "title": "Disallow usage of implicit arithmetic methods for std types",
+    "updated_at": "2026-02-02T15:26:14Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-02T18:12:51Z",
+    "created_at": "2026-01-28T06:11:52Z",
+    "id": 3863754543,
+    "issue_type": "Bug",
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      },
+      {
+        "color": "aaaaaa",
+        "description": null,
+        "id": 8623086532424964028,
+        "name": "stdlib: parse_duration"
+      }
+    ],
+    "number": 1615,
+    "state": "closed",
+    "title": "`parse_duration` can cause panics & crash with extreme values",
+    "updated_at": "2026-02-02T18:12:51Z",
+    "user": {
+      "login": "srstrickland"
+    }
+  },
+  {
+    "closed_at": "2026-04-14T19:19:50Z",
+    "created_at": "2026-04-14T18:07:22Z",
+    "draft": false,
+    "id": 3529879266,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1734,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): Upgrade rand from 0.8 to 0.9.3",
+    "updated_at": "2026-04-14T19:19:51Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-01T18:56:02Z",
+    "draft": false,
+    "id": 3478764103,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 3978135660969177644,
+        "name": "domain: ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1733,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(ci): bump github/codeql-action from 4.32.6 to 4.35.1",
+    "updated_at": "2026-04-01T18:56:03Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-01T18:55:55Z",
+    "draft": false,
+    "id": 3478763389,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 3978135660969177644,
+        "name": "domain: ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1732,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(ci): bump dorny/paths-filter from 3.0.2 to 4.0.1",
+    "updated_at": "2026-04-01T18:55:55Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-01T20:05:37Z",
+    "created_at": "2026-04-01T18:55:51Z",
+    "draft": false,
+    "id": 3478762893,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 3978135660969177644,
+        "name": "domain: ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1731,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): bump Swatinem/rust-cache from 2.9.0 to 2.9.1",
+    "updated_at": "2026-04-01T20:05:38Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-01T21:07:18Z",
+    "created_at": "2026-04-01T18:55:43Z",
+    "draft": false,
+    "id": 3478762251,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 3978135660969177644,
+        "name": "domain: ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1730,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): bump actions/github-script from 7.1.0 to 8.0.0",
+    "updated_at": "2026-04-01T21:07:19Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-01T04:28:54Z",
+    "draft": false,
+    "id": 3475173412,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1729,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump which from 7.0.2 to 7.0.3",
+    "updated_at": "2026-04-01T04:28:55Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-01T04:28:02Z",
+    "draft": false,
+    "id": 3475171471,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1728,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump redox_syscall from 0.5.17 to 0.5.18",
+    "updated_at": "2026-04-01T04:28:03Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-01T04:27:32Z",
+    "draft": false,
+    "id": 3475170474,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1727,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump proptest-derive from 0.6.0 to 0.8.0",
+    "updated_at": "2026-04-01T04:31:19Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-01T04:27:09Z",
+    "draft": false,
+    "id": 3475169640,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1726,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump rust_decimal from 1.38.0 to 1.41.0",
+    "updated_at": "2026-04-01T04:27:10Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-01T04:26:53Z",
+    "draft": false,
+    "id": 3475169056,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1725,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump tempfile from 3.26.0 to 3.27.0",
+    "updated_at": "2026-04-01T04:26:53Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-01T04:26:30Z",
+    "draft": false,
+    "id": 3475168318,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1724,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump unicode-segmentation from 1.12.0 to 1.13.2",
+    "updated_at": "2026-04-01T04:26:31Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-01T04:25:52Z",
+    "draft": false,
+    "id": 3475166943,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1723,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump getrandom from 0.2.16 to 0.2.17",
+    "updated_at": "2026-04-14T19:25:18Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-01T04:25:29Z",
+    "draft": false,
+    "id": 3475166138,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1722,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump the patches group with 29 updates",
+    "updated_at": "2026-04-14T19:20:11Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-30T16:20:52Z",
+    "created_at": "2026-03-30T14:42:10Z",
+    "draft": false,
+    "id": 3466948516,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1721,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(dev): anchor docs/ CODEOWNERS pattern to repo root",
+    "updated_at": "2026-03-30T16:20:53Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-26T18:32:06Z",
+    "created_at": "2026-03-26T18:16:21Z",
+    "draft": false,
+    "id": 3453030565,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      },
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1644252665972272219,
+        "name": "dependencies"
+      },
+      {
+        "color": "2b67c6",
+        "description": "Pull requests that update python code",
+        "id": 2860970809727362708,
+        "name": "python"
+      }
+    ],
+    "number": 1720,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump requests from 2.32.5 to 2.33.0 in /release",
+    "updated_at": "2026-03-26T18:32:07Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-26T03:39:00Z",
+    "draft": false,
+    "id": 3448814603,
+    "issue_type": null,
+    "labels": [],
+    "number": 1719,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(core): add decimal type",
+    "updated_at": "2026-03-30T16:44:49Z",
+    "user": {
+      "login": "benjamin-awd"
+    }
+  },
+  {
+    "closed_at": "2026-03-23T15:37:26Z",
+    "created_at": "2026-03-21T09:40:53Z",
+    "draft": false,
+    "id": 3428242026,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1718,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump rustls-webpki from 0.103.9 to 0.103.10",
+    "updated_at": "2026-03-23T15:37:32Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-20T19:29:18Z",
+    "created_at": "2026-03-20T18:51:04Z",
+    "draft": false,
+    "id": 3426375226,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1716,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): gate check-features to merge queue only",
+    "updated_at": "2026-03-20T19:29:19Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-20T19:16:23Z",
+    "created_at": "2026-03-20T18:38:33Z",
+    "draft": false,
+    "id": 3426331470,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1715,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): Bump dd-rust-license-tool from 1.0.4 to 1.0.6",
+    "updated_at": "2026-03-20T19:16:24Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-20T18:56:14Z",
+    "created_at": "2026-03-20T18:29:01Z",
+    "draft": false,
+    "id": 3426292816,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1714,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump quickcheck from 1.0.3 to 1.1.0",
+    "updated_at": "2026-03-20T18:56:15Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-20T18:23:22Z",
+    "created_at": "2026-03-20T18:04:30Z",
+    "draft": false,
+    "id": 3426193506,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1713,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): restrict default token permissions in generated docs workflows",
+    "updated_at": "2026-03-20T18:23:23Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-20T18:34:16Z",
+    "created_at": "2026-03-20T16:24:00Z",
+    "draft": false,
+    "id": 3425767213,
+    "issue_type": null,
+    "labels": [],
+    "number": 1712,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(cli): avoid executing programs during REPL input validation",
+    "updated_at": "2026-03-20T18:34:18Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-20T13:58:43Z",
+    "draft": false,
+    "id": 3425133188,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1711,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(dev): add generate-fixtures feature",
+    "updated_at": "2026-04-14T16:49:30Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-19T17:51:29Z",
+    "created_at": "2026-03-19T14:11:04Z",
+    "draft": false,
+    "id": 3420278383,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1710,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(cli): consolidate free functions into Repl impl",
+    "updated_at": "2026-03-19T17:51:30Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-03-17T17:39:01Z",
+    "created_at": "2026-03-17T14:14:14Z",
+    "draft": false,
+    "id": 3409840516,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1709,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(cli): decouple cli feature from stdlib",
+    "updated_at": "2026-03-17T17:39:03Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-03-17T19:29:12Z",
+    "created_at": "2026-03-17T09:30:39Z",
+    "draft": false,
+    "id": 3408506682,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1708,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(package): update cli feature to use stdlib-base",
+    "updated_at": "2026-03-17T19:29:13Z",
+    "user": {
+      "login": "dd-sebastien-lb"
+    }
+  },
+  {
+    "closed_at": "2026-03-16T21:17:47Z",
+    "created_at": "2026-03-16T20:50:41Z",
+    "draft": false,
+    "id": 3406379087,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1707,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump lz4_flex from 0.11.5 to 0.11.6",
+    "updated_at": "2026-03-16T21:17:48Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-12T15:16:08Z",
+    "created_at": "2026-03-12T14:54:29Z",
+    "draft": false,
+    "id": 3390108873,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1706,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): pin actions to a full length commit SHA",
+    "updated_at": "2026-03-12T15:16:08Z",
+    "user": {
+      "login": "step-security-bot"
+    }
+  },
+  {
+    "closed_at": "2026-03-12T13:27:35Z",
+    "created_at": "2026-03-11T21:33:02Z",
+    "draft": false,
+    "id": 3386347890,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1705,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore: pin versions in release/requirements.txt",
+    "updated_at": "2026-03-12T13:27:36Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-12T13:27:19Z",
+    "created_at": "2026-03-11T20:59:00Z",
+    "draft": false,
+    "id": 3386211532,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1704,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(stdlib): test all examples",
+    "updated_at": "2026-03-12T13:27:20Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T21:41:20Z",
+    "created_at": "2026-03-11T18:40:18Z",
+    "draft": false,
+    "id": 3385623923,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1703,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs: add network notice to reverse_dns and standardize notice",
+    "updated_at": "2026-03-11T21:41:21Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T19:14:11Z",
+    "created_at": "2026-03-11T18:16:33Z",
+    "draft": false,
+    "id": 3385523510,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1702,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump reqwest-retry to 0.8",
+    "updated_at": "2026-03-11T19:14:12Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T19:16:34Z",
+    "created_at": "2026-03-11T17:48:38Z",
+    "draft": false,
+    "id": 3385404240,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      },
+      {
+        "color": "030F33",
+        "description": "",
+        "id": 5382697962711776491,
+        "name": "domain: docs"
+      }
+    ],
+    "number": 1700,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(dev): updates to README.md",
+    "updated_at": "2026-03-11T19:16:35Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T17:52:44Z",
+    "created_at": "2026-03-11T17:14:42Z",
+    "draft": false,
+    "id": 3385250992,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1699,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): replace unmaintained paste with pastey",
+    "updated_at": "2026-03-11T17:52:45Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T17:20:30Z",
+    "created_at": "2026-03-11T17:04:10Z",
+    "draft": false,
+    "id": 3385207243,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1698,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): replace unmaintained ansi_term with nu-ansi-term",
+    "updated_at": "2026-03-11T17:20:31Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T15:04:49Z",
+    "created_at": "2026-03-11T14:50:30Z",
+    "draft": false,
+    "id": 3384529950,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1697,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): skip static analysis if secrets not available",
+    "updated_at": "2026-03-11T15:04:51Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T14:12:39Z",
+    "created_at": "2026-03-11T13:57:54Z",
+    "draft": false,
+    "id": 3384268739,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1696,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(deps): use proptest-derive v0.6 in Cargo.lock",
+    "updated_at": "2026-03-11T14:12:40Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T14:40:30Z",
+    "created_at": "2026-03-11T00:17:47Z",
+    "draft": false,
+    "id": 3381327795,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1695,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump quinn-proto from 0.11.13 to 0.11.14",
+    "updated_at": "2026-03-11T14:40:31Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-09T19:31:38Z",
+    "created_at": "2026-03-09T19:16:11Z",
+    "draft": false,
+    "id": 3375015097,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1694,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(dev): remove sibling PR mention",
+    "updated_at": "2026-03-09T19:31:39Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-06T15:45:41Z",
+    "created_at": "2026-03-06T15:27:07Z",
+    "draft": false,
+    "id": 3364364702,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 3978135660969177644,
+        "name": "domain: ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1691,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(dev): remove gardener workflows",
+    "updated_at": "2026-03-06T15:45:42Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-03-05T23:30:00Z",
+    "created_at": "2026-03-05T23:16:04Z",
+    "draft": false,
+    "id": 3361317731,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1690,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): prevent script injection via github.head_ref",
+    "updated_at": "2026-03-05T23:30:02Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-05T16:16:09Z",
+    "created_at": "2026-03-05T15:11:29Z",
+    "draft": false,
+    "id": 3359364641,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1689,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): ensure check-generated-docs reports status on all PRs",
+    "updated_at": "2026-03-05T16:16:11Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-05T17:57:53Z",
+    "created_at": "2026-03-05T14:50:03Z",
+    "draft": false,
+    "id": 3359242478,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1688,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(releasing): Prepare 0.31.0 release",
+    "updated_at": "2026-03-05T17:57:54Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T21:10:08Z",
+    "created_at": "2026-03-04T20:56:11Z",
+    "draft": false,
+    "id": 3355217516,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1687,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(dev): fix compilation errors in test code",
+    "updated_at": "2026-03-04T21:10:09Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T20:16:38Z",
+    "created_at": "2026-03-04T19:33:44Z",
+    "draft": true,
+    "id": 3354904865,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1686,
+    "pull_request": {},
+    "state": "closed",
+    "title": "DO NOT MERGE testing(ci): test PR for CI changes in #1685",
+    "updated_at": "2026-03-04T20:16:38Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T20:11:45Z",
+    "created_at": "2026-03-04T19:30:25Z",
+    "draft": false,
+    "id": 3354893475,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1685,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): allow check-generated-docs to comment on fork PRs",
+    "updated_at": "2026-03-04T20:17:04Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-05T20:44:47Z",
+    "created_at": "2026-03-04T17:45:59Z",
+    "draft": false,
+    "id": 3354495325,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1684,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): restrict workflow token permissions to least privilege",
+    "updated_at": "2026-03-05T20:44:48Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-20T14:52:58Z",
+    "created_at": "2026-03-04T17:27:59Z",
+    "draft": false,
+    "id": 3354427570,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "DBE0E9",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta: awaiting author"
+      }
+    ],
+    "number": 1683,
+    "pull_request": {},
+    "state": "closed",
+    "title": "enhancement(stdlib): add `except` argument to flatten",
+    "updated_at": "2026-03-20T14:52:58Z",
+    "user": {
+      "login": "benjamin-awd"
+    }
+  },
+  {
+    "closed_at": "2026-03-03T22:30:50Z",
+    "created_at": "2026-03-03T18:00:34Z",
+    "draft": false,
+    "id": 3350021306,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1681,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(dev): stdlib feature should include all functions",
+    "updated_at": "2026-03-03T22:30:51Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-03-05T20:01:55Z",
+    "created_at": "2026-03-03T03:39:23Z",
+    "draft": false,
+    "id": 3347009304,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1680,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(stdlib): gate crypto/hashing functions behind enable_crypto_functions feature",
+    "updated_at": "2026-03-05T20:01:57Z",
+    "user": {
+      "login": "hligit"
+    }
+  },
+  {
+    "closed_at": "2026-03-03T21:40:29Z",
+    "created_at": "2026-03-03T01:19:59Z",
+    "draft": false,
+    "id": 3346725144,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1679,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 23 updates",
+    "updated_at": "2026-03-03T21:40:30Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-06T15:28:39Z",
+    "created_at": "2026-03-01T14:52:39Z",
+    "draft": false,
+    "id": 3340974875,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 3978135660969177644,
+        "name": "domain: ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1678,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): bump github/codeql-action from 4.32.0 to 4.32.4",
+    "updated_at": "2026-03-06T15:28:40Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-06T15:28:39Z",
+    "created_at": "2026-03-01T14:52:26Z",
+    "draft": false,
+    "id": 3340974459,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 3978135660969177644,
+        "name": "domain: ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1677,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): bump actions/upload-artifact from 6.0.0 to 7.0.0",
+    "updated_at": "2026-03-06T15:28:40Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T17:27:12Z",
+    "created_at": "2026-03-01T04:22:11Z",
+    "draft": false,
+    "id": 3339972943,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1676,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump crc from 3.3.0 to 3.4.0",
+    "updated_at": "2026-03-04T17:27:13Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T17:55:23Z",
+    "created_at": "2026-03-01T04:21:49Z",
+    "draft": false,
+    "id": 3339972667,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1675,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump http from 1.3.1 to 1.4.0",
+    "updated_at": "2026-03-04T17:55:25Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-06T15:33:27Z",
+    "created_at": "2026-03-01T04:21:07Z",
+    "draft": false,
+    "id": 3339972017,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1674,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump proptest-derive from 0.6.0 to 0.8.0",
+    "updated_at": "2026-03-06T15:33:28Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-06T15:30:33Z",
+    "created_at": "2026-03-01T04:20:46Z",
+    "draft": false,
+    "id": 3339971716,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1673,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump data-encoding from 2.9.0 to 2.10.0",
+    "updated_at": "2026-03-06T15:30:34Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-06T15:28:39Z",
+    "created_at": "2026-03-01T04:20:31Z",
+    "draft": false,
+    "id": 3339971530,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1672,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump proptest from 1.9.0 to 1.10.0",
+    "updated_at": "2026-03-06T15:28:40Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-06T15:24:50Z",
+    "created_at": "2026-03-01T04:20:02Z",
+    "draft": false,
+    "id": 3339971139,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1671,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump security-framework-sys from 2.15.0 to 2.17.0",
+    "updated_at": "2026-03-06T15:24:52Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-06T15:22:38Z",
+    "created_at": "2026-03-01T04:19:42Z",
+    "draft": false,
+    "id": 3339970850,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1670,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump tempfile from 3.21.0 to 3.25.0",
+    "updated_at": "2026-03-06T15:22:40Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-03T01:19:17Z",
+    "created_at": "2026-03-01T04:19:14Z",
+    "draft": false,
+    "id": 3339970184,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1669,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group with 22 updates",
+    "updated_at": "2026-03-03T01:19:19Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-03T01:01:27Z",
+    "created_at": "2026-02-28T11:40:16Z",
+    "draft": false,
+    "id": 3338685171,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1668,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(deps): make reqwest optional behind enable_network_functions",
+    "updated_at": "2026-03-03T01:01:27Z",
+    "user": {
+      "login": "hligit"
+    }
+  },
+  {
+    "closed_at": "2026-02-27T20:58:49Z",
+    "created_at": "2026-02-27T19:53:00Z",
+    "draft": false,
+    "id": 3337111000,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1667,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(stdlib): replace __mock_return_values_for_tests with deterministic flag on Example",
+    "updated_at": "2026-02-27T20:58:50Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T19:23:53Z",
+    "created_at": "2026-02-27T19:16:44Z",
+    "draft": false,
+    "id": 3337004395,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1666,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(dev): remove vrl-cli and run cli with `cargo run`",
+    "updated_at": "2026-03-11T19:23:54Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-26T20:25:16Z",
+    "created_at": "2026-02-26T20:08:34Z",
+    "draft": false,
+    "id": 3332719197,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1665,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[Datadog] Fix Static Code Analysis violation",
+    "updated_at": "2026-02-26T20:25:17Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-02-26T20:55:15Z",
+    "created_at": "2026-02-26T19:40:19Z",
+    "draft": false,
+    "id": 3332615909,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1664,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(rfc): Update auto doc generation rfc with revised approach",
+    "updated_at": "2026-02-26T20:55:16Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T18:06:29Z",
+    "created_at": "2026-02-26T03:28:46Z",
+    "draft": false,
+    "id": 3328830774,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      },
+      {
+        "color": "00b88e",
+        "description": "Used by the docs team to signal that we're triaging the review request.",
+        "id": 615100863173465684,
+        "name": "editorial review"
+      }
+    ],
+    "number": 1663,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: add automatic docs generation",
+    "updated_at": "2026-03-04T18:06:30Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-26T19:05:55Z",
+    "created_at": "2026-02-25T20:21:09Z",
+    "draft": false,
+    "id": 3327574794,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 3978135660969177644,
+        "name": "domain: ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1662,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(ci): add support for Datadog Static Analyzer",
+    "updated_at": "2026-02-26T19:05:56Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-02-25T19:54:01Z",
+    "created_at": "2026-02-25T15:10:14Z",
+    "draft": false,
+    "id": 3326229185,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1661,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(ci): add code coverage workflow and upload to DD",
+    "updated_at": "2026-02-25T19:54:03Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-02-25T14:39:20Z",
+    "created_at": "2026-02-25T14:19:04Z",
+    "draft": false,
+    "id": 3325990325,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the standard library",
+        "id": 8863369235281820815,
+        "name": "vrl: stdlib"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1660,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(dev): fix broken src/stdlib/http_request.rs tests",
+    "updated_at": "2026-02-25T14:39:22Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-02-24T22:26:46Z",
+    "created_at": "2026-02-24T22:14:05Z",
+    "draft": false,
+    "id": 3322826915,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1659,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs: improve truncate's suffix description",
+    "updated_at": "2026-02-24T22:26:47Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-24T19:43:55Z",
+    "created_at": "2026-02-24T19:14:09Z",
+    "draft": false,
+    "id": 3322230653,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1658,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(stdlib): add input to example",
+    "updated_at": "2026-02-24T19:43:56Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-24T17:10:29Z",
+    "created_at": "2026-02-24T16:55:19Z",
+    "draft": false,
+    "id": 3321690524,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1657,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs: move network performance notice into notices",
+    "updated_at": "2026-02-24T17:10:31Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-02-24T15:21:59Z",
+    "draft": false,
+    "id": 3321290946,
+    "issue_type": null,
+    "labels": [],
+    "number": 1656,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(parse json): add arbitrary_precision for serde_json",
+    "updated_at": "2026-02-24T15:21:59Z",
+    "user": {
+      "login": "YJDoc2"
+    }
+  },
+  {
+    "closed_at": "2026-02-23T21:07:25Z",
+    "created_at": "2026-02-23T20:49:22Z",
+    "draft": false,
+    "id": 3317645108,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1655,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs: fix encode_charset usage()",
+    "updated_at": "2026-02-23T21:07:28Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-23T17:01:57Z",
+    "created_at": "2026-02-23T16:49:05Z",
+    "draft": false,
+    "id": 3316823393,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1654,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs: improve snakecase and format_number examples",
+    "updated_at": "2026-02-23T17:01:58Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-04-03T19:07:23Z",
+    "created_at": "2026-02-22T10:23:13Z",
+    "draft": false,
+    "id": 3312556461,
+    "issue_type": null,
+    "labels": [],
+    "number": 1653,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(stdlib): jq entries commands",
+    "updated_at": "2026-04-03T19:07:23Z",
+    "user": {
+      "login": "close2code-palm"
+    }
+  },
+  {
+    "closed_at": "2026-02-23T14:33:25Z",
+    "created_at": "2026-02-20T21:23:17Z",
+    "draft": false,
+    "id": 3309521535,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1652,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(stdlib): use basename in examples when files don't exist",
+    "updated_at": "2026-02-23T14:33:27Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-20T20:49:06Z",
+    "created_at": "2026-02-19T22:05:02Z",
+    "draft": false,
+    "id": 3305146515,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1651,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs(stdlib): format examples and fix descriptions",
+    "updated_at": "2026-02-20T20:49:07Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-19T20:29:49Z",
+    "created_at": "2026-02-19T20:09:47Z",
+    "draft": false,
+    "id": 3304746351,
+    "issue_type": null,
+    "labels": [],
+    "number": 1650,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(stdlib): correct parameter types for md5, seahash, floor, parse_key_value",
+    "updated_at": "2026-02-19T20:29:50Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-06T10:32:47Z",
+    "created_at": "2026-02-19T13:18:37Z",
+    "draft": false,
+    "id": 3303072213,
+    "issue_type": null,
+    "labels": [],
+    "number": 1649,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(new function): implement an `encode_csv` VRL function",
+    "updated_at": "2026-03-10T20:35:48Z",
+    "user": {
+      "login": "armleth"
+    }
+  },
+  {
+    "closed_at": "2026-02-18T19:10:25Z",
+    "created_at": "2026-02-18T18:36:47Z",
+    "draft": false,
+    "id": 3299921484,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1648,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): move VRL_GITHUB_* into env vars",
+    "updated_at": "2026-02-18T19:10:26Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-18T15:51:37Z",
+    "created_at": "2026-02-18T15:28:31Z",
+    "draft": false,
+    "id": 3299219563,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1647,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump keccak to 0.1.6 to mitigate RUSTSEC-2026-0012",
+    "updated_at": "2026-02-18T15:51:39Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-18T16:26:00Z",
+    "created_at": "2026-02-18T15:16:20Z",
+    "draft": false,
+    "id": 3299170985,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1646,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(dev): Use builder pattern in Parameter",
+    "updated_at": "2026-02-18T16:26:02Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-17T20:50:19Z",
+    "created_at": "2026-02-17T20:37:35Z",
+    "draft": false,
+    "id": 3295922042,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1645,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(dev): fix unused import warnings in build.rs",
+    "updated_at": "2026-02-17T20:50:20Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-17T20:42:04Z",
+    "created_at": "2026-02-17T20:30:02Z",
+    "draft": false,
+    "id": 3295897582,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1644,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(stdlib): use enum_variants for excluded_boundaries/original_case",
+    "updated_at": "2026-02-17T20:42:05Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-17T19:22:56Z",
+    "created_at": "2026-02-17T17:59:56Z",
+    "draft": false,
+    "id": 3295432202,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1643,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): add scorecard action",
+    "updated_at": "2026-02-17T19:22:57Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-02-17T20:04:04Z",
+    "created_at": "2026-02-17T17:42:00Z",
+    "draft": false,
+    "id": 3295371941,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1642,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(stdlib)!: add `enum_variants` to Parameter",
+    "updated_at": "2026-02-26T21:26:31Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-02-15T20:45:15Z",
+    "draft": false,
+    "id": 3287541326,
+    "issue_type": null,
+    "labels": [],
+    "number": 1641,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(vrl): add AES-GCM support to encrypt/decrypt functions",
+    "updated_at": "2026-03-20T14:55:25Z",
+    "user": {
+      "login": "dodo0822"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-02-13T18:42:36Z",
+    "draft": true,
+    "id": 3282099380,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "ededed",
+        "description": null,
+        "id": 4268919197329712461,
+        "name": "Bits AI"
+      }
+    ],
+    "number": 1640,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat: re-add unicode string escapes",
+    "updated_at": "2026-03-20T19:47:11Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-17T16:30:20Z",
+    "created_at": "2026-02-12T21:07:48Z",
+    "draft": false,
+    "id": 3278190788,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1637,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 58 updates",
+    "updated_at": "2026-02-17T16:30:22Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-11T23:06:10Z",
+    "created_at": "2026-02-11T19:42:24Z",
+    "draft": false,
+    "id": 3273234640,
+    "issue_type": null,
+    "labels": [],
+    "number": 1635,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(stdlib): Fix incorrect `basename` type_def",
+    "updated_at": "2026-02-11T23:06:12Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-12T20:42:47Z",
+    "created_at": "2026-02-09T22:09:36Z",
+    "draft": false,
+    "id": 3264621182,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1634,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat!(stdlib): add `category` to Function",
+    "updated_at": "2026-02-26T21:29:30Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-12T18:48:50Z",
+    "created_at": "2026-02-09T15:03:02Z",
+    "draft": false,
+    "id": 3263273352,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1632,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(stdlib): add `notices` to Function",
+    "updated_at": "2026-02-26T21:26:18Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-09T15:21:03Z",
+    "created_at": "2026-02-09T13:52:53Z",
+    "draft": false,
+    "id": 3262995519,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1631,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(flags): only restrict encode and parse proto with flag system functions",
+    "updated_at": "2026-02-09T15:21:04Z",
+    "user": {
+      "login": "dd-sebastien-lb"
+    }
+  },
+  {
+    "closed_at": "2026-02-12T01:46:13Z",
+    "created_at": "2026-02-08T17:00:59Z",
+    "draft": false,
+    "id": 3260063921,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1630,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(stdlib): add `pure` to Function",
+    "updated_at": "2026-02-26T21:26:15Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-08T19:40:19Z",
+    "created_at": "2026-02-08T10:06:35Z",
+    "draft": false,
+    "id": 3259539569,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1629,
+    "pull_request": {},
+    "state": "closed",
+    "title": "refactoring(clippy): allows cleanup and refactoring",
+    "updated_at": "2026-02-08T19:40:19Z",
+    "user": {
+      "login": "close2code-palm"
+    }
+  },
+  {
+    "closed_at": "2026-02-11T11:42:49Z",
+    "created_at": "2026-02-06T23:49:23Z",
+    "draft": false,
+    "id": 3256544765,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1628,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat!(stdlib): add `return_kind` and `return_rules` to Function",
+    "updated_at": "2026-02-26T21:26:13Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-06T21:16:59Z",
+    "created_at": "2026-02-06T19:49:12Z",
+    "draft": false,
+    "id": 3255975295,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1627,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(stdlib): Add optional `internal_failure_reasons` to Function",
+    "updated_at": "2026-02-26T21:26:10Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-12T21:05:54Z",
+    "created_at": "2026-02-06T16:36:38Z",
+    "draft": false,
+    "id": 3255410855,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1626,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 53 updates",
+    "updated_at": "2026-02-12T21:05:57Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-06T16:11:26Z",
+    "created_at": "2026-02-05T18:52:46Z",
+    "draft": false,
+    "id": 3251485666,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1625,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump time from 0.3.44 to 0.3.47",
+    "updated_at": "2026-02-06T16:11:27Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-06T16:34:30Z",
+    "created_at": "2026-02-04T19:00:40Z",
+    "draft": false,
+    "id": 3247074638,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1624,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 54 updates",
+    "updated_at": "2026-02-06T16:34:32Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-04T14:34:27Z",
+    "created_at": "2026-02-04T10:51:18Z",
+    "draft": true,
+    "id": 3245272812,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1623,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Chore(vrl): add build flag to remove network functions",
+    "updated_at": "2026-02-04T14:34:27Z",
+    "user": {
+      "login": "dd-sebastien-lb"
+    }
+  },
+  {
+    "closed_at": "2026-02-04T18:58:37Z",
+    "created_at": "2026-02-03T20:03:39Z",
+    "draft": false,
+    "id": 3242730392,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1622,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 52 updates",
+    "updated_at": "2026-02-04T18:58:40Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-03T19:39:36Z",
+    "created_at": "2026-02-03T19:22:10Z",
+    "draft": false,
+    "id": 3242575140,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1621,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump bytes from 1.10.1 to 1.11.1",
+    "updated_at": "2026-02-03T19:39:38Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-03T20:01:44Z",
+    "created_at": "2026-02-01T04:25:57Z",
+    "draft": false,
+    "id": 3232470166,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1619,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 48 updates",
+    "updated_at": "2026-02-03T20:01:46Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-02T18:12:50Z",
+    "created_at": "2026-01-30T18:02:01Z",
+    "draft": false,
+    "id": 3228783562,
+    "issue_type": null,
+    "labels": [],
+    "number": 1618,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(stdlib): fix panic due to overflow in parse_duration",
+    "updated_at": "2026-02-02T18:23:33Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-03T14:15:12Z",
+    "created_at": "2026-01-30T15:26:43Z",
+    "draft": false,
+    "id": 3228271521,
+    "issue_type": null,
+    "labels": [],
+    "number": 1617,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(cli): Add --quiet flag to suppress REPL banner",
+    "updated_at": "2026-02-03T14:15:14Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-06T17:18:47Z",
+    "created_at": "2026-01-28T10:00:39Z",
+    "draft": false,
+    "id": 3218066317,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1616,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(vrl): add build flag to remove env and system functions",
+    "updated_at": "2026-02-06T17:18:48Z",
+    "user": {
+      "login": "dd-sebastien-lb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-01-27T15:59:53Z",
+    "draft": false,
+    "id": 3215187724,
+    "issue_type": null,
+    "labels": [],
+    "number": 1614,
+    "pull_request": {},
+    "state": "open",
+    "title": "enhancement(stdlib): add IPv4-mapped IPv6 support to ip_cidr_contains",
+    "updated_at": "2026-02-16T17:19:24Z",
+    "user": {
+      "login": "milas"
+    }
+  },
+  {
+    "closed_at": "2026-02-06T16:13:10Z",
+    "created_at": "2026-01-26T23:03:04Z",
+    "draft": false,
+    "id": 3212386282,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1613,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat!(stdlib): Add required optional default to Parameter",
+    "updated_at": "2026-02-26T21:26:08Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-01T04:24:19Z",
+    "created_at": "2026-01-22T21:40:30Z",
+    "draft": false,
+    "id": 3201059696,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1612,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 43 updates",
+    "updated_at": "2026-02-01T04:24:21Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-22T21:18:39Z",
+    "created_at": "2026-01-22T20:41:58Z",
+    "draft": false,
+    "id": 3200906361,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1611,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(releasing): Prepare 0.30.0 release",
+    "updated_at": "2026-01-22T21:18:40Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-02-03T21:02:38Z",
+    "created_at": "2026-01-21T21:44:26Z",
+    "draft": false,
+    "id": 3196935148,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1610,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat!(stdlib): add required description field to Parameter",
+    "updated_at": "2026-02-26T21:26:06Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-01-15T23:23:35Z",
+    "draft": false,
+    "id": 3179167453,
+    "issue_type": null,
+    "labels": [],
+    "number": 1609,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(dev): Example macro out of order with tests",
+    "updated_at": "2026-01-16T16:33:36Z",
+    "user": {
+      "login": "bfung"
+    }
+  },
+  {
+    "closed_at": "2026-01-15T19:44:59Z",
+    "created_at": "2026-01-14T22:53:18Z",
+    "draft": false,
+    "id": 3175304918,
+    "issue_type": null,
+    "labels": [],
+    "number": 1608,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(stdlib)!: Add required usage method to all functions",
+    "updated_at": "2026-02-26T21:26:05Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-01-14T20:01:16Z",
+    "created_at": "2026-01-14T19:38:45Z",
+    "draft": false,
+    "id": 3174748274,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1607,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(dev): make convert_value_raw private again",
+    "updated_at": "2026-01-14T20:01:17Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-01-22T21:39:02Z",
+    "created_at": "2026-01-14T19:23:15Z",
+    "draft": false,
+    "id": 3174708284,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1606,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 37 updates",
+    "updated_at": "2026-01-22T21:39:04Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-14T19:21:18Z",
+    "created_at": "2026-01-14T18:55:43Z",
+    "draft": false,
+    "id": 3174633969,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1605,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs: fix invalid references and add CI check",
+    "updated_at": "2026-01-14T19:21:20Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-01-14T21:58:51Z",
+    "created_at": "2026-01-14T16:50:48Z",
+    "draft": false,
+    "id": 3174228057,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1604,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(ci): add Cargo.lock sync check",
+    "updated_at": "2026-01-14T21:58:52Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-01-14T19:01:38Z",
+    "created_at": "2026-01-14T16:42:48Z",
+    "draft": false,
+    "id": 3174200826,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1603,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump fancy-regex from 0.16.2 to 0.17.0",
+    "updated_at": "2026-01-14T19:01:39Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T20:36:01Z",
+    "created_at": "2026-01-09T20:24:14Z",
+    "draft": false,
+    "id": 3160809047,
+    "issue_type": null,
+    "labels": [],
+    "number": 1602,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: add `parse_yaml` function",
+    "updated_at": "2026-03-04T20:36:01Z",
+    "user": {
+      "login": "juchem"
+    }
+  },
+  {
+    "closed_at": "2026-01-14T19:21:44Z",
+    "created_at": "2026-01-05T22:02:00Z",
+    "draft": false,
+    "id": 3147583084,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1600,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 31 updates",
+    "updated_at": "2026-01-14T19:21:47Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T22:00:50Z",
+    "created_at": "2026-01-05T18:33:57Z",
+    "draft": false,
+    "id": 3147153373,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1599,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 28 updates",
+    "updated_at": "2026-01-05T22:00:52Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T21:20:42Z",
+    "created_at": "2026-01-05T18:29:34Z",
+    "draft": false,
+    "id": 3147144566,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1598,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): Bump jsonschema to 0.38.1 in Cargo.toml",
+    "updated_at": "2026-01-05T21:20:43Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T18:32:54Z",
+    "created_at": "2026-01-05T18:13:55Z",
+    "draft": false,
+    "id": 3147105547,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1597,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 29 updates",
+    "updated_at": "2026-01-05T18:32:56Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T17:37:31Z",
+    "created_at": "2026-01-05T15:52:36Z",
+    "draft": false,
+    "id": 3146705833,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1596,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(dev): use dynamic year in examples",
+    "updated_at": "2026-01-05T17:37:32Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T17:54:38Z",
+    "created_at": "2026-01-01T14:02:17Z",
+    "draft": false,
+    "id": 3140746010,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 3978135660969177644,
+        "name": "domain: ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1595,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): bump actions/checkout from 5 to 6",
+    "updated_at": "2026-01-05T17:54:39Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T17:55:47Z",
+    "created_at": "2026-01-01T04:19:52Z",
+    "draft": false,
+    "id": 3140246895,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1594,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump jsonschema from 0.37.4 to 0.38.1",
+    "updated_at": "2026-01-05T17:55:49Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T18:52:25Z",
+    "created_at": "2026-01-01T04:19:36Z",
+    "draft": false,
+    "id": 3140246674,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1593,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump criterion from 0.7.0 to 0.8.1",
+    "updated_at": "2026-01-05T18:52:26Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T18:15:05Z",
+    "created_at": "2026-01-01T04:19:13Z",
+    "draft": false,
+    "id": 3140246345,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1592,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump half from 2.6.0 to 2.7.1",
+    "updated_at": "2026-01-05T18:15:06Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-04T18:35:56Z",
+    "created_at": "2026-01-01T04:18:21Z",
+    "draft": false,
+    "id": 3140245669,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1591,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump mio from 1.0.4 to 1.1.1",
+    "updated_at": "2026-02-04T18:35:57Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T21:42:52Z",
+    "created_at": "2026-01-01T04:17:59Z",
+    "draft": false,
+    "id": 3140245371,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1590,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump portable-atomic from 1.11.1 to 1.13.0",
+    "updated_at": "2026-01-05T21:42:53Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T18:13:04Z",
+    "created_at": "2026-01-01T04:17:29Z",
+    "draft": false,
+    "id": 3140244974,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain: deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 1589,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group with 19 updates",
+    "updated_at": "2026-01-05T18:13:06Z",
+    "user": {
+      "login": "dependabot"
+    }
+  }
+]
