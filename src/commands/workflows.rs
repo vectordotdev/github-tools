@@ -16,13 +16,13 @@ fn dockerhub_vector_dev_repo() -> String {
 }
 
 /// Ports fetch_all_slow.sh: fetches issues and discussions for each env file.
-pub fn fetch_all(env_files: &[String]) -> Result<()> {
+pub fn fetch_all(env_files: &[String], since: Option<&str>) -> Result<()> {
     let client = Client::new();
     for env_file in env_files {
         println!("\n=== Fetching for env: {env_file} ===");
         let config = Config::load(Some(env_file))?;
-        fetch_issues::run_with_client(&client, &config)?;
-        fetch_discussions::run_with_client(&client, &config)?;
+        fetch_issues::run_with_client(&client, &config, since)?;
+        fetch_discussions::run_with_client(&client, &config, since)?;
     }
     Ok(())
 }
