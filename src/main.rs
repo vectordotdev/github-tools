@@ -2,7 +2,7 @@ use anyhow::Result;
 use clap::{Parser, Subcommand};
 use github_tools::{
     commands::{
-        build_db, close_old_prs, delete_stale_branches, fetch_discussions, fetch_issues,
+        build_db, close_old_prs, compact, delete_stale_branches, fetch_discussions, fetch_issues,
         fetch_labels, generate_summaries, purge, remove_legacy_label, workflows,
     },
     config::Config,
@@ -31,11 +31,15 @@ enum Command {
     FetchIssues {
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
+        #[arg(long, help = "Only fetch items updated since this date (ISO, YYYY-MM, or relative: 3m, 1y, 30d)")]
+        since: Option<String>,
     },
     /// Fetch all discussions for a repository
     FetchDiscussions {
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
+        #[arg(long, help = "Only fetch items updated since this date (ISO, YYYY-MM, or relative: 3m, 1y, 30d)")]
+        since: Option<String>,
     },
     /// Load issues JSON into SQLite database
     BuildDb {
@@ -57,6 +61,8 @@ enum Command {
     FetchAll {
         #[arg(long, required = true, help = "Env files to iterate (repeatable)")]
         env_file: Vec<String>,
+        #[arg(long, help = "Only fetch items updated since this date (ISO, YYYY-MM, or relative: 3m, 1y, 30d)")]
+        since: Option<String>,
     },
     /// Build DB + summaries for all repos (replaces generate_all.sh)
     GenerateAll {
@@ -119,6 +125,11 @@ enum Command {
         #[arg(long)]
         limit: Option<usize>,
     },
+    /// Deduplicate JSON year files in a data directory
+    Compact {
+        #[arg(help = "Path to directory containing year JSON files (e.g. data/vectordotdev_vector/issues)")]
+        dir: String,
+    },
     /// Purge stale container images
     Purge {
         #[command(subcommand)]
@@ -171,19 +182,20 @@ fn main() -> Result<()> {
             let config = Config::load(env_file.as_deref())?;
             fetch_labels::run(&config)
         }
-        Command::FetchIssues { env_file } => {
+        Command::FetchIssues { env_file, since } => {
             let config = Config::load(env_file.as_deref())?;
-            fetch_issues::run(&config)
+            fetch_issues::run(&config, since.as_deref())
         }
-        Command::FetchDiscussions { env_file } => {
+        Command::FetchDiscussions { env_file, since } => {
             let config = Config::load(env_file.as_deref())?;
-            fetch_discussions::run(&config)
+            fetch_discussions::run(&config, since.as_deref())
         }
         Command::BuildDb { input, env_file } => {
             let config = Config::load(env_file.as_deref())?;
             build_db::run(&input, &config)
         }
-        Command::FetchAll { env_file } => workflows::fetch_all(&env_file),
+        Command::Compact { dir } => compact::run(&dir),
+        Command::FetchAll { env_file, since } => workflows::fetch_all(&env_file, since.as_deref()),
         Command::GenerateAll {
             env_file,
             exclude_labels,
