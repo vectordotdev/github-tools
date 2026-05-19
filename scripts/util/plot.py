@@ -117,6 +117,10 @@ def main():
         print(f"Error loading environment variables: {e}")
         return 1
 
+    # source:/transform:/sink: label prefixes only exist in vectordotdev/vector;
+    # skip integration-specific charts for every other repo.
+    is_vector = env['REPO_OWNER'] == 'vectordotdev' and env['REPO_NAME'] == 'vector'
+
     table_names = ["issues", "pull_requests"]
     for table in table_names:
         prefix = f"{env['REPO_OWNER']}_{env['REPO_NAME']}_{table}"
@@ -125,14 +129,15 @@ def main():
             output_path = os.path.join(OUTPUT_DIR, f"{prefix}.monthly_trend.png")
             plot_monthly_summary_basic(monthly_csv, table, output_path, start_date=args.start)
 
-            n = 5
-            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.integrations.top_{n}.monthly_trend.png")
-            plot_integration_trends(monthly_csv,
-                                    table,
-                                    output_path,
-                                    top_n=n,
-                                    start_date=args.start,
-                                    exclude_labels=args.exclude_labels)
+            if is_vector:
+                n = 5
+                output_path = os.path.join(OUTPUT_DIR, f"{prefix}.integrations.top_{n}.monthly_trend.png")
+                plot_integration_trends(monthly_csv,
+                                        table,
+                                        output_path,
+                                        top_n=n,
+                                        start_date=args.start,
+                                        exclude_labels=args.exclude_labels)
 
         label_breakdown_csv = os.path.join(args.input_dir, f"{prefix}.label_breakdown.csv")
         if os.path.exists(label_breakdown_csv):
@@ -156,16 +161,17 @@ def main():
                 exclude_labels=args.exclude_labels
             )
 
-        open_by_label_csv = os.path.join(args.input_dir, f"{prefix}.open_by_label.csv")
-        if os.path.exists(os.path.join(args.input_dir, open_by_label_csv)):
-            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.open_closed_total_label_count.png")
-            plot_label_state_counts(
-                open_by_label_csv,
-                table,
-                output_path,
-                top_n=30,
-                exclude_labels=args.exclude_labels
-            )
+        if is_vector:
+            open_by_label_csv = os.path.join(args.input_dir, f"{prefix}.open_by_label.csv")
+            if os.path.exists(open_by_label_csv):
+                output_path = os.path.join(OUTPUT_DIR, f"{prefix}.open_closed_total_label_count.png")
+                plot_label_state_counts(
+                    open_by_label_csv,
+                    table,
+                    output_path,
+                    top_n=30,
+                    exclude_labels=args.exclude_labels
+                )
 
         contributor_csv = os.path.join(args.input_dir, f"{prefix}.contributor_monthly.csv")
         if os.path.exists(contributor_csv):
