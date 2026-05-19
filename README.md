@@ -75,7 +75,7 @@ Run `github-tools <COMMAND> --help` for full argument details.
 ## 1. (Optional) Fetch fresh data from GitHub
 
 ```shell
-github-tools fetch-all --env-file vector.env --env-file vrl.env
+github-tools fetch-all --env-file vector.env --env-file vrl.env --env-file quickwit.env
 ```
 
 Writes to `out/historical/`. The fetched JSON must be split by year and promoted to `data/` to commit as a snapshot. Issues/PRs are stored in `data/{owner}_{repo}/issues/{year}.json`.
@@ -84,7 +84,7 @@ Writes to `out/historical/`. The fetched JSON must be split by year and promoted
 
 ```shell
 github-tools generate-all \
-  --env-file vector.env --env-file vrl.env \
+  --env-file vector.env --env-file vrl.env --env-file quickwit.env \
   --exclude-labels "no-changelog,meta: awaiting author"
 
 # Charts (still Python):
@@ -114,6 +114,7 @@ Per-repo trend pages with all charts:
 
 - [Vector](trends/vector.md)
 - [VRL](trends/vrl.md)
+- [Quickwit](trends/quickwit.md)
 
 > [!NOTE]
 > Issues and PRs with the following labels are excluded from all charts: `no-changelog`, `meta: awaiting author`.
