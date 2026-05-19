@@ -116,4 +116,4 @@ Per-repo trend pages with all charts:
 - [VRL](trends/vrl.md)
 
 > [!NOTE]
-> Draft PRs are excluded. Issues and PRs with the following labels are excluded from all charts: `no-changelog`, `meta: awaiting author`.
+> Issues and PRs with the following labels are excluded from all charts: `no-changelog`, `meta: awaiting author`.
