@@ -28,6 +28,8 @@ pub fn run(db: &str, config: &Config, exclude_labels: Option<&str>) -> Result<()
         export_overall_totals(&conn, out_dir, config, table, exc)?;
     }
 
+    export_contributor_monthly(&conn, out_dir, config, "pull_requests", exc)?;
+
     // Generate discussion summaries if the table exists
     let has_discussions: bool = conn
         .prepare("SELECT 1 FROM discussions LIMIT 1")
@@ -314,6 +316,31 @@ fn export_overall_totals(
         &query,
         &to_rusqlite_params(&params),
         &csv_path(out_dir, config, table, "overall_totals"),
+    )
+}
+
+fn export_contributor_monthly(
+    conn: &Connection,
+    out_dir: &Path,
+    config: &Config,
+    table: &str,
+    exclude_labels: Option<&[String]>,
+) -> Result<()> {
+    let (wc, params) = build_where(table, exclude_labels, &["user_login IS NOT NULL"]);
+    let query = format!(
+        "SELECT substr({table}.created_at, 1, 7) AS month,
+                {table}.user_login AS user_login,
+                COUNT(*) AS count
+         FROM {table}
+         {wc}
+         GROUP BY month, user_login
+         ORDER BY month, count DESC"
+    );
+    write_query_to_csv(
+        conn,
+        &query,
+        &to_rusqlite_params(&params),
+        &csv_path(out_dir, config, table, "contributor_monthly"),
     )
 }
 

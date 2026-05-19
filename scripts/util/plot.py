@@ -167,6 +167,11 @@ def main():
                 exclude_labels=args.exclude_labels
             )
 
+        contributor_csv = os.path.join(args.input_dir, f"{prefix}.contributor_monthly.csv")
+        if os.path.exists(contributor_csv):
+            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.contributors_top10_12m.png")
+            plot_contributor_heatmap(contributor_csv, table, output_path)
+
     # Discussion trends
     disc_prefix = f"{env['REPO_OWNER']}_{env['REPO_NAME']}_discussions"
     disc_csv = os.path.join(args.input_dir, f"{disc_prefix}.monthly_summary.csv")
@@ -465,6 +470,69 @@ def plot_label_state_counts(path, table, output_path, top_n, exclude_labels=None
         plt.close()
     except Exception as e:
         logging.warning(f"[{table}] Could not generate label count chart: {e}")
+
+
+def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=12):
+    try:
+        df = pd.read_csv(path)
+        if df.empty:
+            logging.warning(f"[{table}] Contributor CSV is empty: {path}")
+            return
+
+        df = df[~df["user_login"].str.endswith("[bot]", na=False)]
+        if df.empty:
+            logging.warning(f"[{table}] No non-bot contributors in {path}")
+            return
+
+        months_all = sorted(df["month"].dropna().unique())
+        window = months_all[-window_months:]
+        df = df[df["month"].isin(window)]
+        if df.empty:
+            logging.warning(f"[{table}] No contributor data in last {window_months} months")
+            return
+
+        totals = df.groupby("user_login")["count"].sum().sort_values(ascending=False)
+        top_users = totals.head(top_n).index.tolist()
+        df = df[df["user_login"].isin(top_users)]
+
+        pivot = (
+            df.pivot_table(index="user_login", columns="month", values="count", fill_value=0)
+              .reindex(index=top_users, columns=window, fill_value=0)
+        )
+
+        last_month = window[-1]
+        pivot = pivot.assign(_total=totals.reindex(pivot.index).values)
+        pivot = pivot.sort_values(by=[last_month, "_total"], ascending=False).drop(columns="_total")
+
+        fig, ax = plt.subplots(figsize=(12, 5))
+        im = ax.imshow(pivot.values, aspect="auto", cmap="YlOrRd")
+
+        ax.set_xticks(np.arange(len(window)))
+        ax.set_xticklabels(window, rotation=45, ha="right")
+        ax.set_yticks(np.arange(len(pivot.index)))
+        ax.set_yticklabels(pivot.index)
+
+        vmax = pivot.values.max() if pivot.values.size else 0
+        for i in range(pivot.shape[0]):
+            for j in range(pivot.shape[1]):
+                v = pivot.values[i, j]
+                if v > 0:
+                    color = "white" if v > vmax * 0.5 else "black"
+                    ax.text(j, i, int(v), ha="center", va="center", color=color, fontsize=9)
+
+        cbar = fig.colorbar(im, ax=ax)
+        cbar.set_label(f"{table} opened")
+
+        ax.set_title(f"Top {top_n} {table} contributors (last {window_months} months)", fontsize=16)
+        set_axis_labels(ax, "Month", "Contributor")
+        ax.grid(False)
+
+        plt.tight_layout()
+        plt.savefig(output_path)
+        logging.info(f"Saved plot to {output_path}")
+        plt.close()
+    except Exception as e:
+        logging.warning(f"[{table}] Could not generate contributor heatmap: {e}")
 
 
 if __name__ == "__main__":
