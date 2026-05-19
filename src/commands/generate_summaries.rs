@@ -327,6 +327,7 @@ fn export_contributor_monthly(
     exclude_labels: Option<&[String]>,
 ) -> Result<()> {
     let (wc, params) = build_where(table, exclude_labels, &["user_login IS NOT NULL"]);
+    let current_month = Utc::now().format("%Y-%m").to_string();
     let query = format!(
         "SELECT substr({table}.created_at, 1, 7) AS month,
                 {table}.user_login AS user_login,
@@ -334,6 +335,7 @@ fn export_contributor_monthly(
          FROM {table}
          {wc}
          GROUP BY month, user_login
+         HAVING month < '{current_month}'
          ORDER BY month, count DESC"
     );
     write_query_to_csv(
