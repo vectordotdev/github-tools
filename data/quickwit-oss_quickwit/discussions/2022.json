@@ -1,0 +1,163 @@
+[
+  {
+    "author": {
+      "login": "zbalkan"
+    },
+    "bodyText": "Hi. I am currently using Wazuh as SIEM with OpenSearch as the log database. Yet, the default OpenSearch implementation does not provide immutable indices and it is not easy to set it up without a third party. I am wondering if I can replace OpenSearch instance with Quickwit. Do you have a documentation, article, or tutorial for that?",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2022-09-27T18:50:08Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 2024,
+    "stateReason": null,
+    "title": "Wazuh with Quickwit backend",
+    "updatedAt": "2023-05-15T22:25:06Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/2024"
+  },
+  {
+    "author": {
+      "login": "tshepang"
+    },
+    "bodyText": "One can use S3 as primary storage with Quickwit, so I do wonder if one can similarly use Azure object storage.",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2022-08-24T00:02:19Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 1873,
+    "stateReason": null,
+    "title": "can one use azure object storage",
+    "updatedAt": "2022-08-24T15:18:34Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/1873"
+  },
+  {
+    "author": {
+      "login": "collimarco"
+    },
+    "bodyText": "I am looking at \"Concepts\" in the Documentation.\nThere is a part that I cannot find: what are the files stored in S3? What is the file structure of indexes and reverse indexes on S3? What is the content / structure of each file?\nIt would be really useful in order to better understand this project.\nCurrently the documentation suggests that there is split pruning based on timestamp and tags, but then it doesn't explain anything  about full text search, aggregations, etc. It would be interesting to see the steps involved or some diagrams.",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2022-07-07T10:06:38Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 1738,
+    "stateReason": null,
+    "title": "Indexing overview",
+    "updatedAt": "2022-07-12T00:25:36Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/1738"
+  },
+  {
+    "author": {
+      "login": "collimarco"
+    },
+    "bodyText": "From your documentation:\n\nNote that this metadata is only generated when the cardinality of the field is less than 1 000. Tag pruning is notably useful on multi-tenant datasets.\n\nDoes that mean that we can only have 1000 tenants?\nI was thinking about using the tenant ID as a tag...",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2022-06-20T09:58:44Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 1652,
+    "stateReason": null,
+    "title": "Tag pruning limits",
+    "updatedAt": "2023-05-15T22:33:21Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/1652"
+  },
+  {
+    "author": {
+      "login": "HeenaBansal2009"
+    },
+    "bodyText": "Hi @fmassot ,\nI  have few more questions about quickwit indexing .\n\nwhat kind of tokenizer does the indexer use, ngram or language specific tokenizer.\nDoes quickwit tokens filter space  too like , query = VPN authenticated user is supported in current release?\n\nThanks.",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2022-05-06T16:20:26Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 1388,
+    "stateReason": null,
+    "title": "Is the index in Quikwit language independent?",
+    "updatedAt": "2023-05-15T22:34:00Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/1388"
+  },
+  {
+    "author": {
+      "login": "HeenaBansal2009"
+    },
+    "bodyText": "I have a question\nWhat all result formats quickwit supports. I read somewhere that quickwit supports only JSON as of now.\nI would really appreciate if some can confirm the supported query results formats as well as the ingested data format for quickwit .",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 3
+    },
+    "createdAt": "2022-05-02T15:40:14Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 1357,
+    "stateReason": null,
+    "title": "Supported format in QUICKWIT",
+    "updatedAt": "2022-06-16T18:58:47Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/1357"
+  },
+  {
+    "author": {
+      "login": "HeenaBansal2009"
+    },
+    "bodyText": "Hi ,\nI am trying to ingest json file in to Quickwit using below query.  I am getting error. Please advice what is wrong here.\ncat ./testdata/hackernews.json | ./quickwit index search --index hackernews\nI followed below steps before ingesting data to quickwit :\n\nI converted the. native.zst downloaded from hackernews to json using clickhouse.\nfeed index configuration as per data schema to quickwit with (./quickwit index create --index-config hacker news.yaml)\nNow When i am trying to ingest json file in to Quickwit using (cat ./testdata/hackernews.json | ./quickwit index search --index hackernews), I ma getting command usability error.",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 3
+    },
+    "createdAt": "2022-05-03T14:53:14Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 1359,
+    "stateReason": null,
+    "title": "Trying to ingest json file in to quickwit.",
+    "updatedAt": "2022-06-02T02:17:50Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/1359"
+  }
+]

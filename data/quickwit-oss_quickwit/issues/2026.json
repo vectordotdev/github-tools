@@ -1,0 +1,6789 @@
+[
+  {
+    "closed_at": null,
+    "created_at": "2026-05-19T14:43:36Z",
+    "id": 4478350844,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6447,
+    "state": "open",
+    "title": "`IndexingSplitStore` copies local files that could be moved",
+    "updated_at": "2026-05-19T14:43:36Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-18T08:36:20Z",
+    "id": 4467552864,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6440,
+    "state": "open",
+    "title": "Slow query performance when using sort_by_field on queries with few matches",
+    "updated_at": "2026-05-19T13:44:29Z",
+    "user": {
+      "login": "Windforce17"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-14T07:25:32Z",
+    "id": 4444056863,
+    "issue_type": null,
+    "labels": [],
+    "number": 6430,
+    "state": "open",
+    "title": "/search-plan may over-fetch split metadata from PostgreSQL metastore on wide queries",
+    "updated_at": "2026-05-14T07:27:36Z",
+    "user": {
+      "login": "earlbread"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-08T15:08:23Z",
+    "id": 4407367470,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6413,
+    "state": "open",
+    "title": "Indexers not gracefully terminating and getting force killed",
+    "updated_at": "2026-05-15T10:34:03Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-20T20:54:48Z",
+    "id": 4298647744,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6326,
+    "state": "open",
+    "title": "OTLP HTTP endpoint hangs in certain conditions",
+    "updated_at": "2026-04-30T08:49:44Z",
+    "user": {
+      "login": "oleksandr-zhyhalo"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-20T11:47:39Z",
+    "id": 4295394712,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6324,
+    "state": "open",
+    "title": "Routing table retains stale entries for short-lived shards",
+    "updated_at": "2026-04-26T17:34:18Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": "2026-05-05T08:47:29Z",
+    "created_at": "2026-04-20T09:18:13Z",
+    "id": 4294541104,
+    "issue_type": null,
+    "labels": [],
+    "number": 6322,
+    "state": "closed",
+    "title": "quickwit_common::rate_limited_* should show how many logs were skipped",
+    "updated_at": "2026-05-05T08:47:29Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-16T11:46:22Z",
+    "id": 4275482321,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6312,
+    "state": "open",
+    "title": "The sequencer mailbox capacity prevents Uploader concurrency",
+    "updated_at": "2026-04-16T11:46:22Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-14T09:04:17Z",
+    "id": 4260951899,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "New feature or request",
+        "id": 1470408430858150435,
+        "name": "enhancement"
+      }
+    ],
+    "number": 6302,
+    "state": "open",
+    "title": "Remove stale metrics",
+    "updated_at": "2026-04-14T09:04:17Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-13T08:17:30Z",
+    "id": 4252588247,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6294,
+    "state": "open",
+    "title": "Cardinality aggregation on small count seems inaccurate.",
+    "updated_at": "2026-04-13T08:17:30Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-10T11:35:47Z",
+    "id": 4238857332,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6288,
+    "state": "open",
+    "title": "ExistQuery may not be accurate when relying on fast-field",
+    "updated_at": "2026-04-10T11:35:47Z",
+    "user": {
+      "login": "evance-br"
+    }
+  },
+  {
+    "closed_at": "2026-04-14T18:38:21Z",
+    "created_at": "2026-03-26T12:49:13Z",
+    "id": 4143614912,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6223,
+    "state": "closed",
+    "title": "traceparent header from incoming http request not propagated to span context",
+    "updated_at": "2026-04-14T18:38:21Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-19T17:25:30Z",
+    "id": 4103135614,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6211,
+    "state": "open",
+    "title": "Query can not filter",
+    "updated_at": "2026-03-24T10:46:12Z",
+    "user": {
+      "login": "emresudo"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-19T08:40:29Z",
+    "id": 4100194530,
+    "issue_type": null,
+    "labels": [],
+    "number": 6210,
+    "state": "open",
+    "title": "Optimize S3 Bandwidth Usage via Two-Phase Progressive Leaf Search for Heavy Queries",
+    "updated_at": "2026-03-19T08:40:39Z",
+    "user": {
+      "login": "snac21"
+    }
+  },
+  {
+    "closed_at": "2026-03-26T18:15:18Z",
+    "created_at": "2026-03-18T17:40:02Z",
+    "id": 4096730978,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6209,
+    "state": "closed",
+    "title": "Configuring IPv6 listen address falls back to 0.0.0.0",
+    "updated_at": "2026-03-27T10:57:23Z",
+    "user": {
+      "login": "liamkinne"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-16T09:05:20Z",
+    "id": 4081163402,
+    "issue_type": null,
+    "labels": [],
+    "number": 6204,
+    "state": "open",
+    "title": "Migration number 25 causes CPU spike and lock contention on splits tables during metastore startup",
+    "updated_at": "2026-03-16T15:56:35Z",
+    "user": {
+      "login": "minhyuk-playground"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-02-24T15:29:19Z",
+    "id": 3984356453,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6167,
+    "state": "open",
+    "title": "migration problem",
+    "updated_at": "2026-03-11T08:13:38Z",
+    "user": {
+      "login": "gitarns"
+    }
+  },
+  {
+    "closed_at": "2026-02-19T15:16:00Z",
+    "created_at": "2026-02-18T14:50:16Z",
+    "id": 3958236000,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6161,
+    "state": "closed",
+    "title": "search panics on short intervals",
+    "updated_at": "2026-02-19T15:16:00Z",
+    "user": {
+      "login": "yorik"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T13:17:40Z",
+    "created_at": "2026-02-13T11:32:25Z",
+    "id": 3936723507,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6158,
+    "state": "closed",
+    "title": "Indexer graceful shutdown causes ingestion gap and 500 errors \"no shards available\"",
+    "updated_at": "2026-03-11T13:17:40Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-02-12T12:00:05Z",
+    "id": 3931471498,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6155,
+    "state": "open",
+    "title": "Ingest_v2 MergePipeline (Packager, Uploader) inconsistency after index update",
+    "updated_at": "2026-02-12T12:00:05Z",
+    "user": {
+      "login": "insect0"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-02-11T10:33:35Z",
+    "id": 3925820098,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "New feature or request",
+        "id": 1470408430858150435,
+        "name": "enhancement"
+      }
+    ],
+    "number": 6150,
+    "state": "open",
+    "title": "Offloading search for lambdas for list_fields too",
+    "updated_at": "2026-02-11T14:36:38Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-02-07T02:57:02Z",
+    "id": 3909194485,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0075ca",
+        "description": "Improvements or additions to documentation",
+        "id": 3954923629933036143,
+        "name": "documentation"
+      }
+    ],
+    "number": 6146,
+    "state": "open",
+    "title": "[Documentation] out of date makefile comment",
+    "updated_at": "2026-02-07T02:57:22Z",
+    "user": {
+      "login": "rektide"
+    }
+  },
+  {
+    "closed_at": "2026-03-26T14:42:11Z",
+    "created_at": "2026-02-03T09:30:16Z",
+    "id": 3890211089,
+    "issue_type": null,
+    "labels": [],
+    "number": 6138,
+    "state": "closed",
+    "title": "Small service outage when control-plane restarts",
+    "updated_at": "2026-03-26T14:42:11Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": "2026-03-05T16:59:28Z",
+    "created_at": "2026-01-30T18:07:54Z",
+    "id": 3876806803,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "New feature or request",
+        "id": 1470408430858150435,
+        "name": "enhancement"
+      }
+    ],
+    "number": 6132,
+    "state": "closed",
+    "title": "Hide sensitive data on developer debug API endpoint",
+    "updated_at": "2026-03-05T16:59:28Z",
+    "user": {
+      "login": "evance-br"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-01-30T16:58:05Z",
+    "id": 3876555774,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6130,
+    "state": "open",
+    "title": "Aggregation failing after index schema update",
+    "updated_at": "2026-01-30T16:58:05Z",
+    "user": {
+      "login": "evance-br"
+    }
+  },
+  {
+    "closed_at": "2026-01-20T14:55:48Z",
+    "created_at": "2026-01-20T14:53:07Z",
+    "id": 3834077562,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6106,
+    "state": "closed",
+    "title": "[Bug]: thread 'main' panicked at core/src/data.rs:241:38 in extract_env() method",
+    "updated_at": "2026-01-20T14:55:48Z",
+    "user": {
+      "login": "BlockForge-Dev"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-01-16T14:08:44Z",
+    "id": 3822202079,
+    "issue_type": null,
+    "labels": [],
+    "number": 6101,
+    "state": "open",
+    "title": "Indexing stops intermittently",
+    "updated_at": "2026-02-23T14:04:52Z",
+    "user": {
+      "login": "evance-br"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-19T19:54:13Z",
+    "draft": false,
+    "id": 3711592494,
+    "issue_type": null,
+    "labels": [],
+    "number": 6453,
+    "pull_request": {},
+    "state": "open",
+    "title": "Revert to using existing merge flow when standalone compactors isnt explicitly enabled",
+    "updated_at": "2026-05-19T19:54:13Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-19T19:48:48Z",
+    "draft": false,
+    "id": 3711558870,
+    "issue_type": null,
+    "labels": [],
+    "number": 6452,
+    "pull_request": {},
+    "state": "open",
+    "title": "Exclude known split ids; double merge concurrency",
+    "updated_at": "2026-05-19T19:48:48Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-19T19:43:46Z",
+    "draft": false,
+    "id": 3711526033,
+    "issue_type": null,
+    "labels": [],
+    "number": 6451,
+    "pull_request": {},
+    "state": "open",
+    "title": "Performance improvements: multipart upload, parallel gets, spans",
+    "updated_at": "2026-05-19T19:43:46Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-19T19:08:54Z",
+    "draft": false,
+    "id": 3711325696,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6450,
+    "pull_request": {},
+    "state": "open",
+    "title": "build(deps): bump the rust-dependencies group across 1 directory with 13 updates",
+    "updated_at": "2026-05-19T19:08:55Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-19T18:46:25Z",
+    "draft": false,
+    "id": 3711191580,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "2b67c6",
+        "description": "Pull requests that update Python code",
+        "id": 8461682516318345188,
+        "name": "python"
+      }
+    ],
+    "number": 6449,
+    "pull_request": {},
+    "state": "open",
+    "title": "build(deps): bump idna from 3.11 to 3.15 in /quickwit/rest-api-tests in the pip group across 1 directory",
+    "updated_at": "2026-05-19T18:46:26Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-19T17:11:45Z",
+    "draft": false,
+    "id": 3710635765,
+    "issue_type": null,
+    "labels": [],
+    "number": 6448,
+    "pull_request": {},
+    "state": "open",
+    "title": "Initialize metrics when tokio-console is enabled",
+    "updated_at": "2026-05-19T17:18:50Z",
+    "user": {
+      "login": "shuheiktgw"
+    }
+  },
+  {
+    "closed_at": "2026-05-19T14:45:41Z",
+    "created_at": "2026-05-19T14:00:12Z",
+    "draft": false,
+    "id": 3709417553,
+    "issue_type": null,
+    "labels": [],
+    "number": 6446,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update the instruction set used to build our images",
+    "updated_at": "2026-05-19T14:45:44Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-19T13:40:48Z",
+    "draft": false,
+    "id": 3709291708,
+    "issue_type": null,
+    "labels": [],
+    "number": 6445,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(metrics): add configurable system prefix and separator",
+    "updated_at": "2026-05-19T16:03:12Z",
+    "user": {
+      "login": "Mallets"
+    }
+  },
+  {
+    "closed_at": "2026-05-19T12:09:06Z",
+    "created_at": "2026-05-19T11:32:54Z",
+    "draft": false,
+    "id": 3708524953,
+    "issue_type": null,
+    "labels": [],
+    "number": 6444,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump tantivy to 46b3fb9 (main)",
+    "updated_at": "2026-05-19T12:09:08Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-18T23:23:51Z",
+    "draft": true,
+    "id": 3705394835,
+    "issue_type": null,
+    "labels": [],
+    "number": 6443,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(_mapping): timestamp pushdown + column-hints fast path (on top of #6439)",
+    "updated_at": "2026-05-19T20:26:45Z",
+    "user": {
+      "login": "congx4"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-18T20:23:23Z",
+    "draft": false,
+    "id": 3704607057,
+    "issue_type": null,
+    "labels": [],
+    "number": 6442,
+    "pull_request": {},
+    "state": "open",
+    "title": "Use CRC32C for checksums instead of MD5",
+    "updated_at": "2026-05-19T19:28:26Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-05-19T12:55:44Z",
+    "created_at": "2026-05-18T16:38:45Z",
+    "draft": false,
+    "id": 3703352829,
+    "issue_type": null,
+    "labels": [],
+    "number": 6441,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(merge-executor): YAML flag to route regular merges through streaming engine (default off, no-op rollout)",
+    "updated_at": "2026-05-19T12:55:47Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-19T19:55:30Z",
+    "created_at": "2026-05-17T20:07:49Z",
+    "draft": false,
+    "id": 3698274739,
+    "issue_type": null,
+    "labels": [],
+    "number": 6439,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Optimize list fields",
+    "updated_at": "2026-05-19T19:55:33Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-16T08:29:05Z",
+    "draft": false,
+    "id": 3694014532,
+    "issue_type": null,
+    "labels": [],
+    "number": 6438,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(cli): correct merge command description",
+    "updated_at": "2026-05-16T08:29:06Z",
+    "user": {
+      "login": "singhvishalkr"
+    }
+  },
+  {
+    "closed_at": "2026-05-19T19:08:29Z",
+    "created_at": "2026-05-15T16:17:11Z",
+    "draft": false,
+    "id": 3690761282,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6437,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump the rust-dependencies group across 1 directory with 12 updates",
+    "updated_at": "2026-05-19T19:08:31Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-15T14:53:19Z",
+    "draft": false,
+    "id": 3690324269,
+    "issue_type": null,
+    "labels": [],
+    "number": 6436,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(_mapping): timestamp pushdown + column-hints fast path",
+    "updated_at": "2026-05-15T15:30:58Z",
+    "user": {
+      "login": "congx4"
+    }
+  },
+  {
+    "closed_at": "2026-05-15T15:08:27Z",
+    "created_at": "2026-05-15T14:40:31Z",
+    "draft": false,
+    "id": 3690252729,
+    "issue_type": null,
+    "labels": [],
+    "number": 6435,
+    "pull_request": {},
+    "state": "closed",
+    "title": "refactor: box large oneof variants to drop clippy allows",
+    "updated_at": "2026-05-15T15:08:29Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-05-15T09:04:32Z",
+    "created_at": "2026-05-15T08:31:55Z",
+    "draft": false,
+    "id": 3688324061,
+    "issue_type": null,
+    "labels": [],
+    "number": 6434,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore: make fix",
+    "updated_at": "2026-05-15T09:05:17Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-14T20:32:52Z",
+    "draft": false,
+    "id": 3685476145,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "168700",
+        "description": "Pull requests that update Javascript code",
+        "id": 7497603665844062961,
+        "name": "javascript"
+      }
+    ],
+    "number": 6433,
+    "pull_request": {},
+    "state": "open",
+    "title": "build(deps): bump vite from 7.3.1 to 7.3.2 in /quickwit/quickwit-ui in the npm_and_yarn group across 1 directory",
+    "updated_at": "2026-05-14T20:32:52Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-05-15T15:32:44Z",
+    "created_at": "2026-05-14T19:13:33Z",
+    "draft": false,
+    "id": 3685064465,
+    "issue_type": null,
+    "labels": [],
+    "number": 6432,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Upgrade Rust and dependencies",
+    "updated_at": "2026-05-15T15:32:46Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-05-15T14:47:54Z",
+    "created_at": "2026-05-14T18:17:07Z",
+    "draft": false,
+    "id": 3684782286,
+    "issue_type": null,
+    "labels": [],
+    "number": 6431,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove telemetry",
+    "updated_at": "2026-05-15T14:47:57Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-05-19T18:45:11Z",
+    "created_at": "2026-05-13T21:58:01Z",
+    "draft": false,
+    "id": 3679220619,
+    "issue_type": null,
+    "labels": [],
+    "number": 6429,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add IO metrics",
+    "updated_at": "2026-05-19T18:45:13Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-05-19T08:41:41Z",
+    "created_at": "2026-05-13T18:00:25Z",
+    "draft": false,
+    "id": 3678064862,
+    "issue_type": null,
+    "labels": [],
+    "number": 6428,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(merge): adversarial-review test coverage (F4/F5/F7) + F14 sub-region engine fix",
+    "updated_at": "2026-05-19T08:41:45Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-13T16:01:20Z",
+    "draft": false,
+    "id": 3677417934,
+    "issue_type": null,
+    "labels": [],
+    "number": 6427,
+    "pull_request": {},
+    "state": "open",
+    "title": "bugfix: dont schedule indexing tasks on retiring indexers",
+    "updated_at": "2026-05-15T10:03:26Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": "2026-05-18T18:14:58Z",
+    "created_at": "2026-05-13T15:24:20Z",
+    "draft": false,
+    "id": 3677208858,
+    "issue_type": null,
+    "labels": [],
+    "number": 6426,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(merge): adversarial-review hardening — CS-1, adapter self-verify, chunk-level test verifier",
+    "updated_at": "2026-05-18T18:15:01Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-18T13:37:28Z",
+    "created_at": "2026-05-13T15:23:56Z",
+    "draft": false,
+    "id": 3677206176,
+    "issue_type": null,
+    "labels": [],
+    "number": 6425,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(legacy-adapter): prefix-aware output with caller-supplied target_prefix_len",
+    "updated_at": "2026-05-18T13:37:31Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-18T13:18:19Z",
+    "created_at": "2026-05-13T15:23:40Z",
+    "draft": false,
+    "id": 3677204392,
+    "issue_type": null,
+    "labels": [],
+    "number": 6424,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(streaming-merge): per-region engine + multi-output sorted_series splitting",
+    "updated_at": "2026-05-18T13:18:24Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-18T18:15:31Z",
+    "created_at": "2026-05-13T15:13:37Z",
+    "draft": false,
+    "id": 3677145913,
+    "issue_type": null,
+    "labels": [],
+    "number": 6423,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(merge): legacy promotion path + body-col schema evolution",
+    "updated_at": "2026-05-18T18:15:36Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-13T12:30:41Z",
+    "created_at": "2026-05-13T12:30:29Z",
+    "draft": false,
+    "id": 3676126145,
+    "issue_type": null,
+    "labels": [],
+    "number": 6422,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Retry AWS (S3) requests for network errors",
+    "updated_at": "2026-05-13T12:31:28Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": "2026-05-12T13:48:48Z",
+    "created_at": "2026-05-12T13:03:33Z",
+    "draft": false,
+    "id": 3668878250,
+    "issue_type": null,
+    "labels": [],
+    "number": 6421,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs(claude): note review-reply threading hygiene",
+    "updated_at": "2026-05-12T13:48:50Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-12T08:37:07Z",
+    "created_at": "2026-05-11T16:26:47Z",
+    "draft": false,
+    "id": 3663017287,
+    "issue_type": null,
+    "labels": [],
+    "number": 6419,
+    "pull_request": {},
+    "state": "closed",
+    "title": "integration test for graceful shutdown on a single indexer cluster",
+    "updated_at": "2026-05-12T08:37:09Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": "2026-05-11T17:59:42Z",
+    "created_at": "2026-05-11T16:22:30Z",
+    "draft": false,
+    "id": 3662993338,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "2b67c6",
+        "description": "Pull requests that update Python code",
+        "id": 8461682516318345188,
+        "name": "python"
+      }
+    ],
+    "number": 6418,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump the pip group across 2 directories with 1 update",
+    "updated_at": "2026-05-11T17:59:45Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-05-15T16:16:47Z",
+    "created_at": "2026-05-11T11:42:33Z",
+    "draft": false,
+    "id": 3661318730,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6417,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump the rust-dependencies group across 1 directory with 27 updates",
+    "updated_at": "2026-05-15T16:16:50Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-05-15T09:13:37Z",
+    "created_at": "2026-05-11T11:01:38Z",
+    "draft": false,
+    "id": 3661095031,
+    "issue_type": null,
+    "labels": [],
+    "number": 6416,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: track resource stats across split, leaf and root search",
+    "updated_at": "2026-05-15T09:13:40Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-05-10T20:13:17Z",
+    "created_at": "2026-05-10T20:13:06Z",
+    "draft": false,
+    "id": 3658145761,
+    "issue_type": null,
+    "labels": [],
+    "number": 6415,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Change max_num_concurrent_split_searches from warmup limit to processing limit",
+    "updated_at": "2026-05-10T20:13:17Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": "2026-05-11T10:46:25Z",
+    "created_at": "2026-05-09T15:17:17Z",
+    "draft": false,
+    "id": 3655164594,
+    "issue_type": null,
+    "labels": [],
+    "number": 6414,
+    "pull_request": {},
+    "state": "closed",
+    "title": "ci: allow GHSA-2f9f-gq7v-9h6m (thrift 0.17 excessive allocation)",
+    "updated_at": "2026-05-11T10:46:27Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-08T15:02:42Z",
+    "draft": false,
+    "id": 3650386454,
+    "issue_type": null,
+    "labels": [],
+    "number": 6412,
+    "pull_request": {},
+    "state": "open",
+    "title": "Score merge operations like before; restructure MergeOperation",
+    "updated_at": "2026-05-12T15:13:53Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-08T14:06:40Z",
+    "draft": false,
+    "id": 3650086248,
+    "issue_type": null,
+    "labels": [],
+    "number": 6411,
+    "pull_request": {},
+    "state": "open",
+    "title": "Wire up shared indexing split cache between indexers and compactors",
+    "updated_at": "2026-05-12T15:13:53Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-05-13T15:24:33Z",
+    "created_at": "2026-05-08T12:11:22Z",
+    "draft": true,
+    "id": 3649473947,
+    "issue_type": null,
+    "labels": [],
+    "number": 6410,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: per-merge-region streaming engine — multi-RG inputs + outputs (PR-6c.2)",
+    "updated_at": "2026-05-13T15:24:33Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-14T18:06:44Z",
+    "created_at": "2026-05-08T02:04:10Z",
+    "draft": false,
+    "id": 3646839221,
+    "issue_type": null,
+    "labels": [],
+    "number": 6409,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: streaming column-major merge engine with page-bounded body cols (PR-6b.2)",
+    "updated_at": "2026-05-14T18:06:48Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-12T11:05:50Z",
+    "created_at": "2026-05-08T01:17:43Z",
+    "draft": false,
+    "id": 3646689783,
+    "issue_type": null,
+    "labels": [],
+    "number": 6408,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: legacy multi-RG input adapter for ColumnPageStream (PR-5)",
+    "updated_at": "2026-05-12T11:05:51Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-14T17:12:19Z",
+    "created_at": "2026-05-08T01:11:08Z",
+    "draft": false,
+    "id": 3646668433,
+    "issue_type": null,
+    "labels": [],
+    "number": 6407,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: page-bounded Arrow decoder per data page (PR-6a.2)",
+    "updated_at": "2026-05-14T17:12:24Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-11T18:06:39Z",
+    "created_at": "2026-05-08T00:00:58Z",
+    "draft": false,
+    "id": 3646431515,
+    "issue_type": null,
+    "labels": [],
+    "number": 6406,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: ColumnPageStream trait — single contract for streaming + legacy inputs (PR-5a)",
+    "updated_at": "2026-05-11T18:06:43Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-07T20:58:54Z",
+    "created_at": "2026-05-07T20:58:40Z",
+    "draft": false,
+    "id": 3645802339,
+    "issue_type": null,
+    "labels": [],
+    "number": 6405,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fetch docs in batches",
+    "updated_at": "2026-05-07T20:58:54Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": "2026-05-12T15:06:05Z",
+    "created_at": "2026-05-07T19:54:22Z",
+    "draft": false,
+    "id": 3645480118,
+    "issue_type": null,
+    "labels": [],
+    "number": 6404,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Improvements from live testing",
+    "updated_at": "2026-05-12T15:06:09Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-05-14T18:44:07Z",
+    "created_at": "2026-05-07T19:33:57Z",
+    "draft": false,
+    "id": 3645383703,
+    "issue_type": null,
+    "labels": [],
+    "number": 6403,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add distributed tracing to gRPC stack",
+    "updated_at": "2026-05-14T18:44:09Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-07T13:44:27Z",
+    "draft": false,
+    "id": 3643446623,
+    "issue_type": null,
+    "labels": [],
+    "number": 6402,
+    "pull_request": {},
+    "state": "open",
+    "title": "Route DataFusion scan tasks by file affinity",
+    "updated_at": "2026-05-10T15:58:35Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-06T19:20:13Z",
+    "draft": true,
+    "id": 3638824527,
+    "issue_type": null,
+    "labels": [],
+    "number": 6401,
+    "pull_request": {},
+    "state": "open",
+    "title": "[WIP] Matthew.kim/split merges parquet",
+    "updated_at": "2026-05-12T20:04:03Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-06T18:55:13Z",
+    "draft": true,
+    "id": 3638709316,
+    "issue_type": null,
+    "labels": [],
+    "number": 6400,
+    "pull_request": {},
+    "state": "open",
+    "title": "parquet compaction metrics",
+    "updated_at": "2026-05-06T19:04:15Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-06T18:19:44Z",
+    "draft": false,
+    "id": 3638557386,
+    "issue_type": null,
+    "labels": [],
+    "number": 6399,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix: set maturity on parquet splits",
+    "updated_at": "2026-05-07T16:21:00Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-05-06T16:33:11Z",
+    "created_at": "2026-05-06T14:52:55Z",
+    "draft": false,
+    "id": 3637560721,
+    "issue_type": null,
+    "labels": [],
+    "number": 6398,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore: restore setup_metrics() in quickwit-cli, relocate recorder into quickwit-dst",
+    "updated_at": "2026-05-06T16:33:11Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-11T11:01:52Z",
+    "created_at": "2026-05-06T13:44:32Z",
+    "draft": true,
+    "id": 3637127366,
+    "issue_type": null,
+    "labels": [],
+    "number": 6397,
+    "pull_request": {},
+    "state": "closed",
+    "title": "root resource stats",
+    "updated_at": "2026-05-11T11:01:52Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-05-06T11:49:58Z",
+    "created_at": "2026-05-06T11:49:27Z",
+    "draft": false,
+    "id": 3636468845,
+    "issue_type": null,
+    "labels": [],
+    "number": 6396,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removed quickwit-core from byoc dirs",
+    "updated_at": "2026-05-06T11:50:01Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-05-06T14:29:12Z",
+    "created_at": "2026-05-06T11:48:17Z",
+    "draft": false,
+    "id": 3636462508,
+    "issue_type": null,
+    "labels": [],
+    "number": 6395,
+    "pull_request": {},
+    "state": "closed",
+    "title": "clean up docs",
+    "updated_at": "2026-05-06T15:15:10Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-06T11:50:18Z",
+    "created_at": "2026-05-06T11:45:45Z",
+    "draft": false,
+    "id": 3636450271,
+    "issue_type": null,
+    "labels": [],
+    "number": 6394,
+    "pull_request": {},
+    "state": "closed",
+    "title": "testing PR touchign byoc metrics",
+    "updated_at": "2026-05-06T11:50:18Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-05-06T11:45:07Z",
+    "created_at": "2026-05-06T11:37:27Z",
+    "draft": false,
+    "id": 3636413749,
+    "issue_type": null,
+    "labels": [],
+    "number": 6393,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Test pr review",
+    "updated_at": "2026-05-06T11:45:23Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-05-06T11:32:10Z",
+    "created_at": "2026-05-06T11:31:59Z",
+    "draft": false,
+    "id": 3636388597,
+    "issue_type": null,
+    "labels": [],
+    "number": 6392,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added a CODEOWNERS file to restrict byoc-metrics team approval scope.",
+    "updated_at": "2026-05-06T11:32:13Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-05-06T11:00:01Z",
+    "created_at": "2026-05-06T10:19:53Z",
+    "draft": false,
+    "id": 3636015319,
+    "issue_type": null,
+    "labels": [],
+    "number": 6391,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added a CODEOWNERS file to restrict byoc-metrics team approval scope.",
+    "updated_at": "2026-05-06T11:00:04Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-06T10:08:43Z",
+    "draft": false,
+    "id": 3635958192,
+    "issue_type": null,
+    "labels": [],
+    "number": 6390,
+    "pull_request": {},
+    "state": "open",
+    "title": "use current node load estimation when placing search jobs",
+    "updated_at": "2026-05-11T11:06:13Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-06T03:11:50Z",
+    "draft": false,
+    "id": 3634226356,
+    "issue_type": null,
+    "labels": [],
+    "number": 6389,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add blob range caching for DataFusion metrics scans",
+    "updated_at": "2026-05-13T10:43:43Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-06T02:00:57Z",
+    "draft": false,
+    "id": 3634015867,
+    "issue_type": null,
+    "labels": [],
+    "number": 6388,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add Parquet footer metadata cache for metrics scans",
+    "updated_at": "2026-05-13T11:12:10Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-05-07T17:25:50Z",
+    "created_at": "2026-05-06T01:45:05Z",
+    "draft": false,
+    "id": 3633970770,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6387,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump openssl from 0.10.78 to 0.10.79 in /quickwit",
+    "updated_at": "2026-05-07T17:25:52Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-05-11T18:34:32Z",
+    "created_at": "2026-05-05T21:09:13Z",
+    "draft": false,
+    "id": 3633078168,
+    "issue_type": null,
+    "labels": [],
+    "number": 6386,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: column-major streaming Parquet reader primitive",
+    "updated_at": "2026-05-11T18:34:34Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-05T20:06:37Z",
+    "draft": false,
+    "id": 3632812299,
+    "issue_type": null,
+    "labels": [],
+    "number": 6385,
+    "pull_request": {},
+    "state": "open",
+    "title": "refactor list splits pagination, env var to skip initial seeding",
+    "updated_at": "2026-05-06T18:40:10Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-05-11T11:10:00Z",
+    "created_at": "2026-05-05T19:26:49Z",
+    "draft": false,
+    "id": 3632626106,
+    "issue_type": null,
+    "labels": [],
+    "number": 6384,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: column-major streaming Parquet writer primitive",
+    "updated_at": "2026-05-11T11:10:02Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-05T20:37:04Z",
+    "created_at": "2026-05-05T18:54:58Z",
+    "draft": false,
+    "id": 3632475294,
+    "issue_type": null,
+    "labels": [],
+    "number": 6383,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Improve ingester lock instrumentation",
+    "updated_at": "2026-05-05T20:37:06Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-05-07T07:52:43Z",
+    "created_at": "2026-05-05T12:05:23Z",
+    "draft": false,
+    "id": 3630280269,
+    "issue_type": null,
+    "labels": [],
+    "number": 6382,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): docker release - bump cross images to focal base for newer libclang",
+    "updated_at": "2026-05-07T07:52:44Z",
+    "user": {
+      "login": "PSeitz-dd"
+    }
+  },
+  {
+    "closed_at": "2026-05-11T11:41:44Z",
+    "created_at": "2026-05-05T10:19:36Z",
+    "draft": false,
+    "id": 3629776460,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6381,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump the rust-dependencies group across 1 directory with 22 updates",
+    "updated_at": "2026-05-11T11:41:46Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-05-05T09:48:46Z",
+    "created_at": "2026-05-05T08:53:25Z",
+    "draft": false,
+    "id": 3629339254,
+    "issue_type": null,
+    "labels": [],
+    "number": 6380,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump tantivy to edfb02b",
+    "updated_at": "2026-05-05T09:48:48Z",
+    "user": {
+      "login": "PSeitz-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-04T23:51:42Z",
+    "draft": false,
+    "id": 3627379849,
+    "issue_type": null,
+    "labels": [],
+    "number": 6379,
+    "pull_request": {},
+    "state": "open",
+    "title": "Assume dictionary encoding in metrics read",
+    "updated_at": "2026-05-04T23:51:42Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-04T20:52:22Z",
+    "draft": true,
+    "id": 3626625655,
+    "issue_type": null,
+    "labels": [],
+    "number": 6378,
+    "pull_request": {},
+    "state": "open",
+    "title": "Remove legacy DataFusion service wrappers",
+    "updated_at": "2026-05-04T20:52:22Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-05-08T20:45:14Z",
+    "created_at": "2026-05-04T18:36:48Z",
+    "draft": false,
+    "id": 3625918804,
+    "issue_type": null,
+    "labels": [],
+    "number": 6377,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: enable page-level Parquet stats + add rg_partition_prefix_len marker",
+    "updated_at": "2026-05-08T20:45:16Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-05T18:12:29Z",
+    "created_at": "2026-05-04T13:21:50Z",
+    "draft": false,
+    "id": 3624304050,
+    "issue_type": null,
+    "labels": [],
+    "number": 6376,
+    "pull_request": {},
+    "state": "closed",
+    "title": "separate index/merge upload semaphores, pass around merge task instead of just the permit",
+    "updated_at": "2026-05-05T18:12:30Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-05-04T15:09:42Z",
+    "created_at": "2026-05-04T10:11:11Z",
+    "draft": false,
+    "id": 3623221957,
+    "issue_type": null,
+    "labels": [],
+    "number": 6375,
+    "pull_request": {},
+    "state": "closed",
+    "title": "init openssl before spawning threads",
+    "updated_at": "2026-05-04T15:09:45Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-05-19T08:31:49Z",
+    "created_at": "2026-05-04T09:36:38Z",
+    "draft": false,
+    "id": 3623039311,
+    "issue_type": null,
+    "labels": [],
+    "number": 6374,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Migrate Quickwit metrics to metrics-rs",
+    "updated_at": "2026-05-19T08:31:53Z",
+    "user": {
+      "login": "shuheiktgw"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-04T08:53:06Z",
+    "draft": false,
+    "id": 3622814400,
+    "issue_type": null,
+    "labels": [],
+    "number": 6373,
+    "pull_request": {},
+    "state": "open",
+    "title": "docs(CLAUDE.md): instruct Claude not to write Cargo.lock manually",
+    "updated_at": "2026-05-04T12:42:19Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-05-04T08:02:29Z",
+    "created_at": "2026-05-04T08:01:45Z",
+    "draft": false,
+    "id": 3622566844,
+    "issue_type": null,
+    "labels": [],
+    "number": 6372,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the github-actions group with 6 updates",
+    "updated_at": "2026-05-04T08:02:29Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-05-02T22:03:02Z",
+    "draft": true,
+    "id": 3618792536,
+    "issue_type": null,
+    "labels": [],
+    "number": 6371,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add interpolation node to Quickwit-DataFusion",
+    "updated_at": "2026-05-02T22:03:02Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-05-05T10:18:43Z",
+    "created_at": "2026-05-02T02:04:32Z",
+    "draft": false,
+    "id": 3616754575,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6370,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump the rust-dependencies group in /quickwit with 20 updates",
+    "updated_at": "2026-05-05T10:18:46Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-05-07T17:00:59Z",
+    "created_at": "2026-05-02T01:53:40Z",
+    "draft": false,
+    "id": 3616731127,
+    "issue_type": null,
+    "labels": [],
+    "number": 6369,
+    "pull_request": {},
+    "state": "closed",
+    "title": "test: Parquet merge pipeline verification suite",
+    "updated_at": "2026-05-07T17:01:00Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-01T19:53:13Z",
+    "created_at": "2026-05-01T18:53:45Z",
+    "draft": false,
+    "id": 3615576714,
+    "issue_type": null,
+    "labels": [],
+    "number": 6368,
+    "pull_request": {},
+    "state": "closed",
+    "title": "paginate metric splits during query execution",
+    "updated_at": "2026-05-01T19:53:14Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-05-01T23:21:41Z",
+    "created_at": "2026-05-01T18:42:58Z",
+    "draft": false,
+    "id": 3615531340,
+    "issue_type": null,
+    "labels": [],
+    "number": 6367,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: wire ParquetMergePipeline into IndexingService",
+    "updated_at": "2026-05-01T23:21:43Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-04T09:33:25Z",
+    "created_at": "2026-04-30T13:06:52Z",
+    "draft": true,
+    "id": 3608975700,
+    "issue_type": null,
+    "labels": [],
+    "number": 6366,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Migrate Quickwit metrics to metrics-rs",
+    "updated_at": "2026-05-04T09:33:26Z",
+    "user": {
+      "login": "shuheiktgw"
+    }
+  },
+  {
+    "closed_at": "2026-04-30T08:26:10Z",
+    "created_at": "2026-04-30T06:48:34Z",
+    "draft": false,
+    "id": 3606916716,
+    "issue_type": null,
+    "labels": [],
+    "number": 6365,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update tantivy",
+    "updated_at": "2026-04-30T08:26:13Z",
+    "user": {
+      "login": "PSeitz-dd"
+    }
+  },
+  {
+    "closed_at": "2026-05-06T02:32:38Z",
+    "created_at": "2026-04-30T00:38:00Z",
+    "draft": false,
+    "id": 3605744777,
+    "issue_type": null,
+    "labels": [],
+    "number": 6364,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Expose Substrait execution metadata",
+    "updated_at": "2026-05-06T02:32:38Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-05-06T01:42:30Z",
+    "created_at": "2026-04-29T22:41:50Z",
+    "draft": false,
+    "id": 3605372900,
+    "issue_type": null,
+    "labels": [],
+    "number": 6363,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Zone Map Pruning for Metrics",
+    "updated_at": "2026-05-06T01:42:31Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-04-30T20:27:30Z",
+    "created_at": "2026-04-29T20:36:15Z",
+    "draft": false,
+    "id": 3604857422,
+    "issue_type": null,
+    "labels": [],
+    "number": 6362,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: add configurable ParquetMergePolicyConfig to index settings",
+    "updated_at": "2026-04-30T20:27:33Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-29T16:40:03Z",
+    "draft": false,
+    "id": 3603691563,
+    "issue_type": null,
+    "labels": [],
+    "number": 6361,
+    "pull_request": {},
+    "state": "open",
+    "title": "Use automaton for multi term query warmups",
+    "updated_at": "2026-05-01T17:24:36Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": "2026-04-29T17:38:19Z",
+    "created_at": "2026-04-29T16:33:34Z",
+    "draft": false,
+    "id": 3603661036,
+    "issue_type": null,
+    "labels": [],
+    "number": 6360,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump tantivy to ca139d8",
+    "updated_at": "2026-04-29T17:38:20Z",
+    "user": {
+      "login": "Abdul-Andha"
+    }
+  },
+  {
+    "closed_at": "2026-04-30T20:43:10Z",
+    "created_at": "2026-04-29T15:25:36Z",
+    "draft": false,
+    "id": 3603312729,
+    "issue_type": null,
+    "labels": [],
+    "number": 6359,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: compute per-output split metadata in merge engine",
+    "updated_at": "2026-04-30T20:43:12Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-01T17:56:22Z",
+    "created_at": "2026-04-29T14:07:19Z",
+    "draft": false,
+    "id": 3602826306,
+    "issue_type": null,
+    "labels": [],
+    "number": 6358,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: Phase 3c — ParquetMergeExecutor + full downloader",
+    "updated_at": "2026-05-01T17:56:24Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-01T18:12:25Z",
+    "created_at": "2026-04-29T14:07:03Z",
+    "draft": false,
+    "id": 3602824761,
+    "issue_type": null,
+    "labels": [],
+    "number": 6357,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: Phase 3b — ParquetMergePlanner, scheduler extension, downloader stub",
+    "updated_at": "2026-05-01T18:12:27Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-01T21:26:12Z",
+    "created_at": "2026-04-29T13:48:09Z",
+    "draft": false,
+    "id": 3602714366,
+    "issue_type": null,
+    "labels": [],
+    "number": 6356,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: Phase 3f — comprehensive end-to-end integration test",
+    "updated_at": "2026-05-01T21:26:14Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-15T17:07:17Z",
+    "created_at": "2026-04-29T13:27:56Z",
+    "draft": false,
+    "id": 3602592288,
+    "issue_type": null,
+    "labels": [],
+    "number": 6355,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(elasticsearch_api): pushdown start/end timestamp on _mapping endpoint",
+    "updated_at": "2026-05-15T17:07:17Z",
+    "user": {
+      "login": "congx4"
+    }
+  },
+  {
+    "closed_at": "2026-05-01T19:13:22Z",
+    "created_at": "2026-04-29T13:00:42Z",
+    "draft": false,
+    "id": 3602436637,
+    "issue_type": null,
+    "labels": [],
+    "number": 6354,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: Phase 3d+3e — ParquetMergePipeline supervisor + publisher feedback",
+    "updated_at": "2026-05-01T19:13:25Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-30T06:47:08Z",
+    "created_at": "2026-04-29T11:49:35Z",
+    "draft": false,
+    "id": 3602055870,
+    "issue_type": null,
+    "labels": [],
+    "number": 6353,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update tantivy",
+    "updated_at": "2026-04-30T06:47:08Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-05-01T16:19:28Z",
+    "created_at": "2026-04-28T21:49:50Z",
+    "draft": false,
+    "id": 3598745743,
+    "issue_type": null,
+    "labels": [],
+    "number": 6352,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: Phase 3a — merge metadata aggregation, message types, replaced_split_ids",
+    "updated_at": "2026-05-01T16:19:30Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-29T21:04:40Z",
+    "created_at": "2026-04-28T14:40:17Z",
+    "draft": false,
+    "id": 3596648240,
+    "issue_type": null,
+    "labels": [],
+    "number": 6351,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: add Parquet merge policy for compaction (Phase 2)",
+    "updated_at": "2026-04-29T21:04:43Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-12T14:51:04Z",
+    "created_at": "2026-04-27T21:16:30Z",
+    "draft": false,
+    "id": 3592317627,
+    "issue_type": null,
+    "labels": [],
+    "number": 6350,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add compaction metrics",
+    "updated_at": "2026-05-12T14:51:08Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-29T23:26:37Z",
+    "created_at": "2026-04-27T21:16:22Z",
+    "draft": false,
+    "id": 3592317164,
+    "issue_type": null,
+    "labels": [],
+    "number": 6349,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add UDF's for sketch support",
+    "updated_at": "2026-04-29T23:26:37Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-04-27T20:18:17Z",
+    "created_at": "2026-04-27T18:27:07Z",
+    "draft": false,
+    "id": 3591549724,
+    "issue_type": null,
+    "labels": [],
+    "number": 6348,
+    "pull_request": {},
+    "state": "closed",
+    "title": "compute timeseries_id for sketches",
+    "updated_at": "2026-04-27T20:18:20Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-04-29T22:15:12Z",
+    "created_at": "2026-04-27T18:04:37Z",
+    "draft": false,
+    "id": 3591450277,
+    "issue_type": null,
+    "labels": [],
+    "number": 6347,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Support sorted series column for DF metrics",
+    "updated_at": "2026-04-29T22:15:12Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-05-12T14:48:00Z",
+    "created_at": "2026-04-27T16:38:49Z",
+    "draft": false,
+    "id": 3591024035,
+    "issue_type": null,
+    "labels": [],
+    "number": 6346,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove merge code from indexers; Renaming and cleanup",
+    "updated_at": "2026-05-12T14:48:05Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-27T17:50:58Z",
+    "created_at": "2026-04-27T16:24:55Z",
+    "draft": false,
+    "id": 3590955019,
+    "issue_type": null,
+    "labels": [],
+    "number": 6345,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix CI workflow + accept layered Router's",
+    "updated_at": "2026-04-27T17:50:58Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-04-27T15:04:12Z",
+    "created_at": "2026-04-26T21:02:38Z",
+    "draft": false,
+    "id": 3586458304,
+    "issue_type": null,
+    "labels": [],
+    "number": 6344,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: wire shared invariant functions into all production check_invariant! calls",
+    "updated_at": "2026-04-27T15:04:14Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-27T14:53:58Z",
+    "created_at": "2026-04-26T20:25:39Z",
+    "draft": false,
+    "id": 3586397276,
+    "issue_type": null,
+    "labels": [],
+    "number": 6343,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix: SS-2 invariant — nulls always sort last, regardless of direction",
+    "updated_at": "2026-04-27T14:54:00Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-27T16:49:41Z",
+    "created_at": "2026-04-26T19:45:11Z",
+    "draft": false,
+    "id": 3586332832,
+    "issue_type": null,
+    "labels": [],
+    "number": 6342,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(deps): update rustls-webpki to 0.103.13 (RUSTSEC-2026-0104)",
+    "updated_at": "2026-04-27T16:49:43Z",
+    "user": {
+      "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": "2026-05-14T20:30:51Z",
+    "created_at": "2026-04-26T19:13:25Z",
+    "draft": false,
+    "id": 3586280401,
+    "issue_type": null,
+    "labels": [],
+    "number": 6341,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ui): upgrade yarn dependencies to reduce security vulnerabilities",
+    "updated_at": "2026-05-14T20:30:53Z",
+    "user": {
+      "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": "2026-04-30T13:34:57Z",
+    "created_at": "2026-04-24T18:30:48Z",
+    "draft": false,
+    "id": 3580773259,
+    "issue_type": null,
+    "labels": [],
+    "number": 6340,
+    "pull_request": {},
+    "state": "closed",
+    "title": "enable partitioning for metrics data",
+    "updated_at": "2026-04-30T13:34:59Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-04-27T21:40:56Z",
+    "created_at": "2026-04-24T14:24:47Z",
+    "draft": false,
+    "id": 3579675802,
+    "issue_type": null,
+    "labels": [],
+    "number": 6339,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add config option for disabling S3 SDK stalled stream protection",
+    "updated_at": "2026-04-27T21:40:58Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-04-28T13:32:37Z",
+    "created_at": "2026-04-24T02:36:50Z",
+    "draft": false,
+    "id": 3576699817,
+    "issue_type": null,
+    "labels": [],
+    "number": 6338,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix: encode descending sort columns correctly in sorted_series key",
+    "updated_at": "2026-04-28T13:32:38Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-23T20:08:31Z",
+    "created_at": "2026-04-23T20:02:05Z",
+    "draft": false,
+    "id": 3575343021,
+    "issue_type": null,
+    "labels": [],
+    "number": 6337,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Indexing pipeline crashloop failure fixes",
+    "updated_at": "2026-04-23T20:08:31Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-27T17:13:36Z",
+    "created_at": "2026-04-23T17:12:09Z",
+    "draft": false,
+    "id": 3574540093,
+    "issue_type": null,
+    "labels": [],
+    "number": 6336,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make `Storage::get_slice` zero copy for single-segment bodies",
+    "updated_at": "2026-04-27T17:13:37Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-04-28T12:44:42Z",
+    "created_at": "2026-04-23T15:24:48Z",
+    "draft": false,
+    "id": 3574062220,
+    "issue_type": null,
+    "labels": [],
+    "number": 6335,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: add k-way sorted merge engine for Parquet compaction",
+    "updated_at": "2026-04-28T12:44:44Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-05-04T08:02:56Z",
+    "created_at": "2026-04-23T00:25:43Z",
+    "draft": false,
+    "id": 3570224345,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 5360838874641212329,
+        "name": "github_actions"
+      }
+    ],
+    "number": 6334,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump the github-actions group across 1 directory with 9 updates",
+    "updated_at": "2026-05-04T08:02:58Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-23T00:20:22Z",
+    "created_at": "2026-04-22T20:45:18Z",
+    "draft": false,
+    "id": 3569561406,
+    "issue_type": null,
+    "labels": [],
+    "number": 6333,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Set up diesel-guard",
+    "updated_at": "2026-04-23T00:20:24Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-04-22T15:17:37Z",
+    "created_at": "2026-04-22T15:17:04Z",
+    "draft": false,
+    "id": 3568064582,
+    "issue_type": null,
+    "labels": [],
+    "number": 6332,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remerge multi day splits",
+    "updated_at": "2026-04-22T15:17:37Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-22T13:16:08Z",
+    "draft": false,
+    "id": 3567409222,
+    "issue_type": null,
+    "labels": [],
+    "number": 6331,
+    "pull_request": {},
+    "state": "open",
+    "title": "Reduce mem usage lookups when indexing",
+    "updated_at": "2026-04-29T11:49:57Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-04-23T13:58:45Z",
+    "created_at": "2026-04-21T15:07:06Z",
+    "draft": false,
+    "id": 3562556140,
+    "issue_type": null,
+    "labels": [],
+    "number": 6330,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update lambda version",
+    "updated_at": "2026-04-23T13:58:46Z",
+    "user": {
+      "login": "Abdul-Andha"
+    }
+  },
+  {
+    "closed_at": "2026-05-05T06:47:37Z",
+    "created_at": "2026-04-21T13:52:26Z",
+    "draft": false,
+    "id": 3562152579,
+    "issue_type": null,
+    "labels": [],
+    "number": 6328,
+    "pull_request": {},
+    "state": "closed",
+    "title": "refactor: migrate metrics from prometheus crate to metrics-rs facade",
+    "updated_at": "2026-05-05T06:47:43Z",
+    "user": {
+      "login": "shuheiktgw"
+    }
+  },
+  {
+    "closed_at": "2026-04-21T16:22:59Z",
+    "created_at": "2026-04-21T12:04:50Z",
+    "draft": false,
+    "id": 3561633436,
+    "issue_type": null,
+    "labels": [],
+    "number": 6327,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update tantivy",
+    "updated_at": "2026-04-21T16:23:01Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-04-20T18:59:30Z",
+    "created_at": "2026-04-20T14:40:11Z",
+    "draft": false,
+    "id": 3556578872,
+    "issue_type": null,
+    "labels": [],
+    "number": 6325,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Document `disable_checksums` storage config parameter",
+    "updated_at": "2026-04-20T18:59:32Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-04-20T10:15:36Z",
+    "created_at": "2026-04-20T09:29:37Z",
+    "draft": false,
+    "id": 3554973582,
+    "issue_type": null,
+    "labels": [],
+    "number": 6323,
+    "pull_request": {},
+    "state": "closed",
+    "title": "bumped chitchat version",
+    "updated_at": "2026-04-20T10:15:38Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-04-20T09:55:01Z",
+    "created_at": "2026-04-20T09:07:06Z",
+    "draft": false,
+    "id": 3554859620,
+    "issue_type": null,
+    "labels": [],
+    "number": 6321,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix wrong keyword in doc",
+    "updated_at": "2026-04-20T09:55:03Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-05-14T20:32:46Z",
+    "created_at": "2026-04-20T08:46:07Z",
+    "draft": false,
+    "id": 3554749673,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "168700",
+        "description": "Pull requests that update Javascript code",
+        "id": 7497603665844062961,
+        "name": "javascript"
+      }
+    ],
+    "number": 6320,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the npm_and_yarn group across 1 directory with 4 updates",
+    "updated_at": "2026-05-14T20:32:48Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-19T21:31:38Z",
+    "draft": true,
+    "id": 3552881213,
+    "issue_type": null,
+    "labels": [],
+    "number": 6319,
+    "pull_request": {},
+    "state": "open",
+    "title": "explore: foyer hybrid cache for search (memory + disk)",
+    "updated_at": "2026-05-16T07:59:25Z",
+    "user": {
+      "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": "2026-05-05T08:47:27Z",
+    "created_at": "2026-04-19T17:21:26Z",
+    "draft": false,
+    "id": 3552447621,
+    "issue_type": null,
+    "labels": [],
+    "number": 6318,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(lambda): rate-limit retry warn log to avoid log storms",
+    "updated_at": "2026-05-05T08:47:29Z",
+    "user": {
+      "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": "2026-04-23T00:25:30Z",
+    "created_at": "2026-04-19T13:41:42Z",
+    "draft": false,
+    "id": 3552045039,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 5360838874641212329,
+        "name": "github_actions"
+      }
+    ],
+    "number": 6317,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the github-actions group across 1 directory with 8 updates",
+    "updated_at": "2026-04-23T00:25:32Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-19T08:55:16Z",
+    "draft": false,
+    "id": 3551595996,
+    "issue_type": null,
+    "labels": [],
+    "number": 6316,
+    "pull_request": {},
+    "state": "open",
+    "title": "Release 0.9.0",
+    "updated_at": "2026-05-14T20:35:01Z",
+    "user": {
+      "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": "2026-04-27T16:19:35Z",
+    "created_at": "2026-04-18T21:03:09Z",
+    "draft": false,
+    "id": 3550671045,
+    "issue_type": null,
+    "labels": [],
+    "number": 6315,
+    "pull_request": {},
+    "state": "closed",
+    "title": "truncate split lists in error logs using PrettySample",
+    "updated_at": "2026-04-27T16:19:37Z",
+    "user": {
+      "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": "2026-04-17T13:37:20Z",
+    "created_at": "2026-04-17T13:23:25Z",
+    "draft": false,
+    "id": 3545520067,
+    "issue_type": null,
+    "labels": [],
+    "number": 6314,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Elasticsearch api add aggregations alias",
+    "updated_at": "2026-04-17T13:37:23Z",
+    "user": {
+      "login": "Abdul-Andha"
+    }
+  },
+  {
+    "closed_at": "2026-04-17T09:33:50Z",
+    "created_at": "2026-04-17T09:33:32Z",
+    "draft": false,
+    "id": 3544353534,
+    "issue_type": null,
+    "labels": [],
+    "number": 6313,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removing bazel link that were commited by mistake.",
+    "updated_at": "2026-04-17T09:33:52Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-04-16T19:09:15Z",
+    "created_at": "2026-04-15T16:09:02Z",
+    "draft": false,
+    "id": 3534948320,
+    "issue_type": null,
+    "labels": [],
+    "number": 6311,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make ReportStatus gRPC from compactors",
+    "updated_at": "2026-04-16T19:09:18Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-16T18:51:01Z",
+    "created_at": "2026-04-15T15:05:48Z",
+    "draft": false,
+    "id": 3534665369,
+    "issue_type": null,
+    "labels": [],
+    "number": 6310,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Merge planner part 2: gRPCs",
+    "updated_at": "2026-04-16T18:51:04Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-15T12:20:06Z",
+    "draft": false,
+    "id": 3533838121,
+    "issue_type": null,
+    "labels": [],
+    "number": 6309,
+    "pull_request": {},
+    "state": "open",
+    "title": "Make fast-field normalizers truncate large token instead of dropping",
+    "updated_at": "2026-04-20T14:15:04Z",
+    "user": {
+      "login": "evance-br"
+    }
+  },
+  {
+    "closed_at": "2026-04-15T07:54:27Z",
+    "created_at": "2026-04-15T07:54:20Z",
+    "draft": false,
+    "id": 3532552220,
+    "issue_type": null,
+    "labels": [],
+    "number": 6308,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Upgrade tantivy to 0.26",
+    "updated_at": "2026-04-15T07:54:44Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": "2026-04-20T14:29:54Z",
+    "created_at": "2026-04-14T20:13:09Z",
+    "draft": false,
+    "id": 3530365964,
+    "issue_type": null,
+    "labels": [],
+    "number": 6307,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Upgrade some dependencies",
+    "updated_at": "2026-04-20T14:29:57Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-04-14T16:47:40Z",
+    "created_at": "2026-04-14T16:45:32Z",
+    "draft": false,
+    "id": 3529563070,
+    "issue_type": null,
+    "labels": [],
+    "number": 6306,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(ci): add Harbor docker image publish workflow for centreon fork",
+    "updated_at": "2026-04-14T16:49:47Z",
+    "user": {
+      "login": "Tpo76"
+    }
+  },
+  {
+    "closed_at": "2026-04-16T18:49:00Z",
+    "created_at": "2026-04-14T16:00:53Z",
+    "draft": false,
+    "id": 3529368073,
+    "issue_type": null,
+    "labels": [],
+    "number": 6305,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Merge planner part 1: Metastore",
+    "updated_at": "2026-04-16T18:49:04Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-14T15:07:34Z",
+    "created_at": "2026-04-14T14:45:19Z",
+    "draft": false,
+    "id": 3528992091,
+    "issue_type": null,
+    "labels": [],
+    "number": 6304,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix typos in metrics.md",
+    "updated_at": "2026-04-14T15:07:36Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": "2026-04-15T10:08:54Z",
+    "created_at": "2026-04-14T09:09:28Z",
+    "draft": false,
+    "id": 3527445046,
+    "issue_type": null,
+    "labels": [],
+    "number": 6303,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): pin localstack to 4.14.0",
+    "updated_at": "2026-04-15T10:08:56Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-04-19T13:36:44Z",
+    "created_at": "2026-04-14T08:57:29Z",
+    "draft": false,
+    "id": 3527389319,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6301,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 24 updates",
+    "updated_at": "2026-04-19T13:36:46Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-14T08:27:48Z",
+    "created_at": "2026-04-14T08:27:00Z",
+    "draft": false,
+    "id": 3527263348,
+    "issue_type": null,
+    "labels": [],
+    "number": 6300,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump tantivy to 58aa4b7",
+    "updated_at": "2026-04-14T08:27:52Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-04-20T10:17:02Z",
+    "created_at": "2026-04-14T01:08:29Z",
+    "draft": false,
+    "id": 3525927757,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6299,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump rand from 0.9.2 to 0.10.0 in /quickwit",
+    "updated_at": "2026-04-20T10:17:04Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-14T08:29:20Z",
+    "created_at": "2026-04-14T01:07:13Z",
+    "draft": false,
+    "id": 3525923570,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6298,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump lru from 0.16.3 to 0.16.4 in /quickwit",
+    "updated_at": "2026-04-14T08:29:22Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-13T18:56:56Z",
+    "created_at": "2026-04-13T16:48:04Z",
+    "draft": false,
+    "id": 3524068734,
+    "issue_type": null,
+    "labels": [],
+    "number": 6297,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Implement compactor pipeline update logic",
+    "updated_at": "2026-04-13T18:56:58Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-13T14:10:09Z",
+    "created_at": "2026-04-13T12:38:43Z",
+    "draft": false,
+    "id": 3522850949,
+    "issue_type": null,
+    "labels": [],
+    "number": 6296,
+    "pull_request": {},
+    "state": "closed",
+    "title": "rename source to ddsource",
+    "updated_at": "2026-04-13T14:10:09Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-04-22T20:44:30Z",
+    "created_at": "2026-04-13T11:24:31Z",
+    "draft": false,
+    "id": 3522539121,
+    "issue_type": null,
+    "labels": [],
+    "number": 6295,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: port zonemap package and wire into Parquet pipeline",
+    "updated_at": "2026-04-22T20:44:32Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-11T18:08:16Z",
+    "created_at": "2026-04-11T17:47:43Z",
+    "draft": false,
+    "id": 3517969688,
+    "issue_type": null,
+    "labels": [],
+    "number": 6293,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Mature merger",
+    "updated_at": "2026-04-11T18:08:56Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": "2026-04-21T21:43:25Z",
+    "created_at": "2026-04-10T20:32:28Z",
+    "draft": false,
+    "id": 3515884401,
+    "issue_type": null,
+    "labels": [],
+    "number": 6292,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: extract and populate RowKeys from sorted batches",
+    "updated_at": "2026-04-21T21:43:28Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-13T17:44:50Z",
+    "created_at": "2026-04-10T18:48:57Z",
+    "draft": false,
+    "id": 3515520128,
+    "issue_type": null,
+    "labels": [],
+    "number": 6291,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Wire up compactor service",
+    "updated_at": "2026-04-13T17:44:53Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-21T19:39:42Z",
+    "created_at": "2026-04-10T14:09:39Z",
+    "draft": false,
+    "id": 3514342289,
+    "issue_type": null,
+    "labels": [],
+    "number": 6290,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: add sorted_series column for DataFusion streaming aggregation",
+    "updated_at": "2026-04-21T19:39:45Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-10T17:16:44Z",
+    "created_at": "2026-04-10T13:54:22Z",
+    "draft": false,
+    "id": 3514270903,
+    "issue_type": null,
+    "labels": [],
+    "number": 6289,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update tantivy to latest (04beab3b29)",
+    "updated_at": "2026-04-10T17:16:45Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-04-13T23:41:28Z",
+    "created_at": "2026-04-10T11:06:49Z",
+    "draft": false,
+    "id": 3513578853,
+    "issue_type": null,
+    "labels": [],
+    "number": 6287,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: enforce physical column ordering in Parquet files",
+    "updated_at": "2026-04-13T23:41:30Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-15T22:27:53Z",
+    "created_at": "2026-04-09T21:15:48Z",
+    "draft": false,
+    "id": 3510793677,
+    "issue_type": null,
+    "labels": [],
+    "number": 6286,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: compute deterministic timeseries_id column at ingest",
+    "updated_at": "2026-04-15T22:27:56Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-20T08:43:33Z",
+    "created_at": "2026-04-09T20:37:11Z",
+    "draft": false,
+    "id": 3510649349,
+    "issue_type": null,
+    "labels": [],
+    "number": 6285,
+    "pull_request": {},
+    "state": "closed",
+    "title": "trying to isolate code metrics code",
+    "updated_at": "2026-04-20T08:43:35Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-04-13T17:43:51Z",
+    "created_at": "2026-04-09T20:08:51Z",
+    "draft": false,
+    "id": 3510540852,
+    "issue_type": null,
+    "labels": [],
+    "number": 6284,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Spawn merge pipeline from new compactor",
+    "updated_at": "2026-04-13T17:43:54Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-09T20:36:59Z",
+    "created_at": "2026-04-09T19:50:22Z",
+    "draft": true,
+    "id": 3510472346,
+    "issue_type": null,
+    "labels": [],
+    "number": 6283,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Isolating metrics",
+    "updated_at": "2026-04-09T20:36:59Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-04-13T17:37:23Z",
+    "created_at": "2026-04-09T18:41:46Z",
+    "draft": false,
+    "id": 3510208910,
+    "issue_type": null,
+    "labels": [],
+    "number": 6282,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Scaffold Compactor supervisor and pipeline",
+    "updated_at": "2026-04-13T17:37:26Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-10T10:57:40Z",
+    "created_at": "2026-04-09T11:23:58Z",
+    "draft": false,
+    "id": 3508265090,
+    "issue_type": null,
+    "labels": [],
+    "number": 6281,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: enforce physical column ordering in Parquet files for two-GET streaming merge",
+    "updated_at": "2026-04-10T10:59:15Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-08T21:09:55Z",
+    "created_at": "2026-04-08T20:22:07Z",
+    "draft": false,
+    "id": 3505195362,
+    "issue_type": null,
+    "labels": [],
+    "number": 6280,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix: improve delete_metrics_splits error handling and doc comments",
+    "updated_at": "2026-04-08T21:09:57Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-14T08:56:35Z",
+    "created_at": "2026-04-08T19:30:30Z",
+    "draft": false,
+    "id": 3504984925,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6279,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 23 updates",
+    "updated_at": "2026-04-14T08:56:36Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-08T19:29:43Z",
+    "created_at": "2026-04-08T12:20:34Z",
+    "draft": false,
+    "id": 3503090562,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6278,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 21 updates",
+    "updated_at": "2026-04-08T19:29:45Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-27T18:39:25Z",
+    "created_at": "2026-04-07T18:57:00Z",
+    "draft": false,
+    "id": 3499588271,
+    "issue_type": null,
+    "labels": [],
+    "number": 6277,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: case-insensitive regex for lowercasing tokenizers",
+    "updated_at": "2026-04-27T18:39:25Z",
+    "user": {
+      "login": "congx4"
+    }
+  },
+  {
+    "closed_at": "2026-04-24T20:35:35Z",
+    "created_at": "2026-04-07T16:46:47Z",
+    "draft": false,
+    "id": 3499073556,
+    "issue_type": null,
+    "labels": [],
+    "number": 6276,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(datafusion): DataFusion metrics query layer",
+    "updated_at": "2026-04-24T20:35:35Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-04-07T17:20:44Z",
+    "created_at": "2026-04-07T16:46:21Z",
+    "draft": false,
+    "id": 3499071576,
+    "issue_type": null,
+    "labels": [],
+    "number": 6275,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(datafusion): add QuickwitSubstraitConsumer",
+    "updated_at": "2026-04-07T17:20:44Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-04-07T17:20:44Z",
+    "created_at": "2026-04-07T16:45:56Z",
+    "draft": false,
+    "id": 3499069782,
+    "issue_type": null,
+    "labels": [],
+    "number": 6274,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(datafusion): add MetricsDataSource for OSS parquet metrics",
+    "updated_at": "2026-04-07T17:20:44Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-04-07T17:20:44Z",
+    "created_at": "2026-04-07T16:45:00Z",
+    "draft": false,
+    "id": 3499066146,
+    "issue_type": null,
+    "labels": [],
+    "number": 6273,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(datafusion): add quickwit-datafusion core execution framework",
+    "updated_at": "2026-04-07T17:20:44Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-04-07T18:54:32Z",
+    "created_at": "2026-04-07T00:50:38Z",
+    "draft": false,
+    "id": 3495591053,
+    "issue_type": null,
+    "labels": [],
+    "number": 6271,
+    "pull_request": {},
+    "state": "closed",
+    "title": "refactor: extract ES-compat handler logic into reusable functions",
+    "updated_at": "2026-04-07T18:54:35Z",
+    "user": {
+      "login": "congx4"
+    }
+  },
+  {
+    "closed_at": "2026-04-08T20:38:02Z",
+    "created_at": "2026-04-06T20:03:29Z",
+    "draft": true,
+    "id": 3494759447,
+    "issue_type": null,
+    "labels": [],
+    "number": 6270,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add quickwit-datafusion crate",
+    "updated_at": "2026-04-08T20:38:02Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-04-09T18:43:07Z",
+    "created_at": "2026-04-06T19:25:57Z",
+    "draft": false,
+    "id": 3494618492,
+    "issue_type": null,
+    "labels": [],
+    "number": 6269,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Create compaction planner service stub; wire up serving layer",
+    "updated_at": "2026-04-09T18:43:10Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-06T19:48:31Z",
+    "created_at": "2026-04-06T17:45:31Z",
+    "draft": true,
+    "id": 3494215747,
+    "issue_type": null,
+    "labels": [],
+    "number": 6268,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: DataFusion query layer for parquet metrics",
+    "updated_at": "2026-04-06T19:48:31Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-04-06T19:48:30Z",
+    "created_at": "2026-04-06T17:29:28Z",
+    "draft": true,
+    "id": 3494157355,
+    "issue_type": null,
+    "labels": [],
+    "number": 6267,
+    "pull_request": {},
+    "state": "closed",
+    "title": "PR1: adding quickwit-parquet-engine-crate, defining parquet schema, p…",
+    "updated_at": "2026-04-06T19:48:30Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-04-06T17:38:15Z",
+    "created_at": "2026-04-06T15:51:54Z",
+    "draft": false,
+    "id": 3493801783,
+    "issue_type": null,
+    "labels": [],
+    "number": 6266,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make MergeSchedulerService optional",
+    "updated_at": "2026-04-06T18:18:16Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-04-05T17:22:59Z",
+    "draft": false,
+    "id": 3490714457,
+    "issue_type": null,
+    "labels": [],
+    "number": 6265,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat: add Nix flake with package, devShell, and NixOS module",
+    "updated_at": "2026-04-07T02:32:38Z",
+    "user": {
+      "login": "jmikedupont2"
+    }
+  },
+  {
+    "closed_at": "2026-04-09T18:59:14Z",
+    "created_at": "2026-04-03T19:27:27Z",
+    "draft": false,
+    "id": 3487296298,
+    "issue_type": null,
+    "labels": [],
+    "number": 6263,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove `once_cell` dependency",
+    "updated_at": "2026-04-09T18:59:16Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-05-18T07:33:10Z",
+    "created_at": "2026-04-03T13:58:50Z",
+    "draft": false,
+    "id": 3486420392,
+    "issue_type": null,
+    "labels": [],
+    "number": 6262,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add OTel metrics dual export alongside Prometheus",
+    "updated_at": "2026-05-18T07:33:15Z",
+    "user": {
+      "login": "shuheiktgw"
+    }
+  },
+  {
+    "closed_at": "2026-04-20T08:46:12Z",
+    "created_at": "2026-04-02T18:02:23Z",
+    "draft": false,
+    "id": 3483476504,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "168700",
+        "description": "Pull requests that update Javascript code",
+        "id": 7497603665844062961,
+        "name": "javascript"
+      }
+    ],
+    "number": 6260,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump lodash from 4.17.23 to 4.18.1 in /quickwit/quickwit-ui in the npm_and_yarn group across 1 directory",
+    "updated_at": "2026-04-20T08:46:14Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-02T17:29:07Z",
+    "created_at": "2026-04-02T02:43:39Z",
+    "draft": false,
+    "id": 3480086226,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 5360838874641212329,
+        "name": "github_actions"
+      }
+    ],
+    "number": 6259,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the github-actions group with 4 updates",
+    "updated_at": "2026-04-02T17:29:09Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-08T13:37:02Z",
+    "created_at": "2026-03-31T21:42:44Z",
+    "draft": false,
+    "id": 3474137656,
+    "issue_type": null,
+    "labels": [],
+    "number": 6258,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[phase-31 2/4] Compaction metadata types",
+    "updated_at": "2026-04-08T13:37:05Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-20T17:07:57Z",
+    "created_at": "2026-03-31T15:14:07Z",
+    "draft": false,
+    "id": 3472626195,
+    "issue_type": null,
+    "labels": [],
+    "number": 6257,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[metrics] Support DDSketch in the parquet pipeline",
+    "updated_at": "2026-04-20T17:07:59Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-03-31T15:26:01Z",
+    "created_at": "2026-03-31T14:55:01Z",
+    "draft": false,
+    "id": 3472533054,
+    "issue_type": null,
+    "labels": [],
+    "number": 6256,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix coverage job",
+    "updated_at": "2026-03-31T15:26:03Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-04-02T14:06:54Z",
+    "created_at": "2026-03-31T14:06:58Z",
+    "draft": false,
+    "id": 3472299192,
+    "issue_type": null,
+    "labels": [],
+    "number": 6255,
+    "pull_request": {},
+    "state": "closed",
+    "title": "differentiate leaf and root timeout",
+    "updated_at": "2026-04-02T14:06:55Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-04-03T12:36:20Z",
+    "created_at": "2026-03-31T12:50:14Z",
+    "draft": false,
+    "id": 3471925984,
+    "issue_type": null,
+    "labels": [],
+    "number": 6254,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Support configurable OTLP exporter protocol for traces and logs",
+    "updated_at": "2026-04-03T12:36:22Z",
+    "user": {
+      "login": "shuheiktgw"
+    }
+  },
+  {
+    "closed_at": "2026-03-31T12:44:42Z",
+    "created_at": "2026-03-31T12:44:08Z",
+    "draft": false,
+    "id": 3471899052,
+    "issue_type": null,
+    "labels": [],
+    "number": 6253,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Support configurable OTLP exporter protocol for traces and logs",
+    "updated_at": "2026-03-31T12:44:49Z",
+    "user": {
+      "login": "shuheiktgw"
+    }
+  },
+  {
+    "closed_at": "2026-04-14T08:04:32Z",
+    "created_at": "2026-03-31T12:24:48Z",
+    "draft": true,
+    "id": 3471811854,
+    "issue_type": null,
+    "labels": [],
+    "number": 6252,
+    "pull_request": {},
+    "state": "closed",
+    "title": "remove styled-icons dependency",
+    "updated_at": "2026-04-14T08:04:32Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-03-31T14:21:44Z",
+    "created_at": "2026-03-31T09:17:37Z",
+    "draft": false,
+    "id": 3470971843,
+    "issue_type": null,
+    "labels": [],
+    "number": 6251,
+    "pull_request": {},
+    "state": "closed",
+    "title": "allow deprecated calls to prost",
+    "updated_at": "2026-03-31T14:21:46Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-03-31T17:38:04Z",
+    "created_at": "2026-03-30T19:54:53Z",
+    "draft": false,
+    "id": 3468491735,
+    "issue_type": null,
+    "labels": [],
+    "number": 6249,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix bug when deploying new routing table",
+    "updated_at": "2026-03-31T17:38:06Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-23T18:12:02Z",
+    "created_at": "2026-03-30T18:59:05Z",
+    "draft": false,
+    "id": 3468221057,
+    "issue_type": null,
+    "labels": [],
+    "number": 6248,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[metrics] Janitor cleanup for parquet files",
+    "updated_at": "2026-04-23T18:12:04Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-04-13T23:16:12Z",
+    "created_at": "2026-03-30T18:43:18Z",
+    "draft": false,
+    "id": 3468145758,
+    "issue_type": null,
+    "labels": [],
+    "number": 6247,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs: add CLAUDE.md, architecture docs, and /sesh-mode skill",
+    "updated_at": "2026-04-13T23:16:15Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-08T19:02:13Z",
+    "created_at": "2026-03-30T18:36:07Z",
+    "draft": false,
+    "id": 3468110870,
+    "issue_type": null,
+    "labels": [],
+    "number": 6246,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(31): shared invariants module in quickwit-dst",
+    "updated_at": "2026-04-08T19:02:19Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-08T15:24:25Z",
+    "created_at": "2026-03-30T17:22:06Z",
+    "draft": false,
+    "id": 3467740178,
+    "issue_type": null,
+    "labels": [],
+    "number": 6245,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[phase-31 4/4] PostgreSQL metastore — migration + compaction columns",
+    "updated_at": "2026-04-08T15:24:29Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-08T14:17:08Z",
+    "created_at": "2026-03-30T17:21:48Z",
+    "draft": false,
+    "id": 3467738719,
+    "issue_type": null,
+    "labels": [],
+    "number": 6244,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[phase-31 3/4] Writer + pipeline wiring",
+    "updated_at": "2026-04-08T14:17:12Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-03-31T21:31:03Z",
+    "created_at": "2026-03-30T17:21:30Z",
+    "draft": false,
+    "id": 3467737231,
+    "issue_type": null,
+    "labels": [],
+    "number": 6243,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[phase-31 2/4] Compaction metadata types",
+    "updated_at": "2026-04-01T16:21:32Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-08T11:55:10Z",
+    "created_at": "2026-03-30T17:21:18Z",
+    "draft": false,
+    "id": 3467736190,
+    "issue_type": null,
+    "labels": [],
+    "number": 6242,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[phase-31 1/4] Sort schema foundation",
+    "updated_at": "2026-04-08T11:55:14Z",
+    "user": {
+      "login": "g-talbot"
+    }
+  },
+  {
+    "closed_at": "2026-04-08T12:20:01Z",
+    "created_at": "2026-03-30T16:16:46Z",
+    "draft": false,
+    "id": 3467409226,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6241,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 20 updates",
+    "updated_at": "2026-04-08T12:20:04Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-31T07:40:15Z",
+    "created_at": "2026-03-30T16:03:45Z",
+    "draft": false,
+    "id": 3467349467,
+    "issue_type": null,
+    "labels": [],
+    "number": 6240,
+    "pull_request": {},
+    "state": "closed",
+    "title": "acknowledge localstack changes",
+    "updated_at": "2026-03-31T07:40:17Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-03-30T15:50:49Z",
+    "created_at": "2026-03-30T15:17:12Z",
+    "draft": false,
+    "id": 3467129874,
+    "issue_type": null,
+    "labels": [],
+    "number": 6239,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update deps",
+    "updated_at": "2026-03-30T15:50:53Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-03-30T16:15:53Z",
+    "created_at": "2026-03-30T14:23:29Z",
+    "draft": false,
+    "id": 3466848604,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6238,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 39 updates",
+    "updated_at": "2026-03-30T16:15:55Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-06T19:48:25Z",
+    "created_at": "2026-03-30T13:59:36Z",
+    "draft": false,
+    "id": 3466711299,
+    "issue_type": null,
+    "labels": [],
+    "number": 6237,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[metrics] Materialize all metrics tags into top level columns",
+    "updated_at": "2026-04-06T19:48:29Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-05-04T08:21:05Z",
+    "created_at": "2026-03-30T13:07:49Z",
+    "draft": false,
+    "id": 3466440108,
+    "issue_type": null,
+    "labels": [],
+    "number": 6236,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(cross): bump libclang from 3.9 to 12 in cross images",
+    "updated_at": "2026-05-04T08:21:05Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-04-19T13:36:36Z",
+    "created_at": "2026-03-30T09:35:38Z",
+    "draft": false,
+    "id": 3465408421,
+    "issue_type": null,
+    "labels": [],
+    "number": 6235,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update dependabot cooldown",
+    "updated_at": "2026-04-19T13:36:37Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-27T19:21:02Z",
+    "draft": true,
+    "id": 3458454343,
+    "issue_type": null,
+    "labels": [],
+    "number": 6233,
+    "pull_request": {},
+    "state": "open",
+    "title": "[draft] wide metrics schema",
+    "updated_at": "2026-03-30T13:51:01Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-03-30T14:21:54Z",
+    "created_at": "2026-03-27T18:25:00Z",
+    "draft": false,
+    "id": 3458257873,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6232,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 37 updates",
+    "updated_at": "2026-03-30T14:21:56Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-30T13:50:58Z",
+    "created_at": "2026-03-27T14:17:51Z",
+    "draft": false,
+    "id": 3457190943,
+    "issue_type": null,
+    "labels": [],
+    "number": 6231,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Metrics indexing pipeline",
+    "updated_at": "2026-03-30T13:51:01Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": "2026-03-27T18:23:54Z",
+    "created_at": "2026-03-26T15:18:56Z",
+    "draft": false,
+    "id": 3452134619,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6230,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 37 updates",
+    "updated_at": "2026-03-27T18:23:55Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-30T09:43:47Z",
+    "created_at": "2026-03-26T15:13:27Z",
+    "draft": false,
+    "id": 3452104292,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "168700",
+        "description": "Pull requests that update Javascript code",
+        "id": 7497603665844062961,
+        "name": "javascript"
+      }
+    ],
+    "number": 6229,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the npm_and_yarn group across 1 directory with 6 updates",
+    "updated_at": "2026-03-30T09:43:49Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-26T15:07:28Z",
+    "created_at": "2026-03-26T14:55:36Z",
+    "draft": false,
+    "id": 3451999802,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 5360838874641212329,
+        "name": "github_actions"
+      }
+    ],
+    "number": 6228,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the github-actions group across 1 directory with 13 updates",
+    "updated_at": "2026-03-26T15:07:30Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-26T14:49:35Z",
+    "created_at": "2026-03-26T14:13:28Z",
+    "draft": false,
+    "id": 3451723527,
+    "issue_type": null,
+    "labels": [],
+    "number": 6227,
+    "pull_request": {},
+    "state": "closed",
+    "title": "enable dependabot cooldown",
+    "updated_at": "2026-03-26T14:49:37Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-26T13:53:46Z",
+    "draft": false,
+    "id": 3451599354,
+    "issue_type": null,
+    "labels": [],
+    "number": 6226,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(search): list fields with filter field with \"contains\" behavior",
+    "updated_at": "2026-03-26T15:04:30Z",
+    "user": {
+      "login": "Totodore"
+    }
+  },
+  {
+    "closed_at": "2026-03-26T13:45:13Z",
+    "created_at": "2026-03-26T13:09:55Z",
+    "draft": true,
+    "id": 3451330016,
+    "issue_type": null,
+    "labels": [],
+    "number": 6225,
+    "pull_request": {},
+    "state": "closed",
+    "title": "ci: Harden GitHub Actions workflows",
+    "updated_at": "2026-03-26T13:46:14Z",
+    "user": {
+      "login": "gcl-sekoia"
+    }
+  },
+  {
+    "closed_at": "2026-04-14T18:38:19Z",
+    "created_at": "2026-03-26T12:54:54Z",
+    "draft": false,
+    "id": 3451244951,
+    "issue_type": null,
+    "labels": [],
+    "number": 6224,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Extract W3C traceparent header and set it as Span parent for http request",
+    "updated_at": "2026-04-14T18:38:21Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": "2026-03-26T08:23:39Z",
+    "created_at": "2026-03-26T08:23:35Z",
+    "draft": false,
+    "id": 3449824613,
+    "issue_type": null,
+    "labels": [],
+    "number": 6222,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Merge upstream from 92a526b6fc9e80864a1b4713b9a26c8ee4079b3f",
+    "updated_at": "2026-03-26T08:28:41Z",
+    "user": {
+      "login": "Totodore"
+    }
+  },
+  {
+    "closed_at": "2026-03-26T14:55:20Z",
+    "created_at": "2026-03-25T20:41:04Z",
+    "draft": false,
+    "id": 3447420236,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 5360838874641212329,
+        "name": "github_actions"
+      }
+    ],
+    "number": 6221,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the github-actions group across 1 directory with 19 updates",
+    "updated_at": "2026-03-26T14:55:22Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-26T14:49:43Z",
+    "created_at": "2026-03-25T20:04:04Z",
+    "draft": false,
+    "id": 3447261390,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6220,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 42 updates",
+    "updated_at": "2026-03-26T14:49:45Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-27T14:11:57Z",
+    "created_at": "2026-03-25T19:33:24Z",
+    "draft": false,
+    "id": 3447127254,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "2b67c6",
+        "description": "Pull requests that update Python code",
+        "id": 8461682516318345188,
+        "name": "python"
+      }
+    ],
+    "number": 6219,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump requests from 2.32.4 to 2.33.0 in /quickwit/rest-api-tests in the pip group across 1 directory",
+    "updated_at": "2026-04-27T14:12:00Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-25T17:47:16Z",
+    "created_at": "2026-03-25T17:46:04Z",
+    "draft": false,
+    "id": 3446596997,
+    "issue_type": null,
+    "labels": [],
+    "number": 6218,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Set `searcher.warmup_single_split_initial_allocation` default to 300 MB",
+    "updated_at": "2026-03-25T17:47:17Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-03-25T19:32:02Z",
+    "created_at": "2026-03-25T17:04:07Z",
+    "draft": false,
+    "id": 3446397428,
+    "issue_type": null,
+    "labels": [],
+    "number": 6217,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix index reincarnation routing bug",
+    "updated_at": "2026-03-25T19:32:04Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-03-24T15:31:28Z",
+    "created_at": "2026-03-24T15:23:43Z",
+    "draft": false,
+    "id": 3440100788,
+    "issue_type": null,
+    "labels": [],
+    "number": 6216,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Indexing plan visualization through the control plane",
+    "updated_at": "2026-03-24T15:31:28Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-04-01T14:43:19Z",
+    "created_at": "2026-03-24T07:29:23Z",
+    "draft": false,
+    "id": 3437809075,
+    "issue_type": null,
+    "labels": [],
+    "number": 6215,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add new JSON log formatter QW_LOG_FORMAT=DDG",
+    "updated_at": "2026-04-01T14:43:19Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-03-27T17:53:00Z",
+    "created_at": "2026-03-23T18:50:21Z",
+    "draft": false,
+    "id": 3435532548,
+    "issue_type": null,
+    "labels": [],
+    "number": 6214,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add composite aggregation",
+    "updated_at": "2026-03-27T17:53:02Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-03-23T15:05:47Z",
+    "created_at": "2026-03-23T12:30:56Z",
+    "draft": false,
+    "id": 3433770452,
+    "issue_type": null,
+    "labels": [],
+    "number": 6213,
+    "pull_request": {},
+    "state": "closed",
+    "title": "reserve in ingester.proto",
+    "updated_at": "2026-03-23T15:05:47Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-03-25T20:02:59Z",
+    "created_at": "2026-03-23T05:03:54Z",
+    "draft": false,
+    "id": 3432123562,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6212,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 40 updates",
+    "updated_at": "2026-03-25T20:03:00Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-19T20:13:08Z",
+    "created_at": "2026-03-18T15:20:03Z",
+    "draft": false,
+    "id": 3415480240,
+    "issue_type": null,
+    "labels": [],
+    "number": 6208,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(es-compat): support regexp shorthand, expose concatenate fields, map text to keyword in _mapping",
+    "updated_at": "2026-03-19T20:13:08Z",
+    "user": {
+      "login": "congx4"
+    }
+  },
+  {
+    "closed_at": "2026-03-24T13:27:34Z",
+    "created_at": "2026-03-16T21:24:55Z",
+    "draft": false,
+    "id": 3406492861,
+    "issue_type": null,
+    "labels": [],
+    "number": 6207,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Ease deployment from old routing table to new",
+    "updated_at": "2026-03-24T13:27:37Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-03-23T04:32:21Z",
+    "created_at": "2026-03-16T20:50:20Z",
+    "draft": false,
+    "id": 3406377678,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6206,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump lz4_flex from 0.11.5 to 0.11.6 in /quickwit",
+    "updated_at": "2026-03-23T04:32:22Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-23T05:02:46Z",
+    "created_at": "2026-03-16T16:18:00Z",
+    "draft": false,
+    "id": 3405320104,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6205,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 38 updates",
+    "updated_at": "2026-03-23T05:02:49Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-16T15:47:12Z",
+    "created_at": "2026-03-12T17:31:11Z",
+    "draft": false,
+    "id": 3390912047,
+    "issue_type": null,
+    "labels": [],
+    "number": 6203,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Merge feature node based routing",
+    "updated_at": "2026-03-16T15:47:15Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-03-12T14:24:14Z",
+    "created_at": "2026-03-12T11:05:12Z",
+    "draft": false,
+    "id": 3388914210,
+    "issue_type": null,
+    "labels": [],
+    "number": 6202,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Improve cluster sizing doc on control plane/metastore/janitor",
+    "updated_at": "2026-03-12T14:24:15Z",
+    "user": {
+      "login": "osyniakov"
+    }
+  },
+  {
+    "closed_at": "2026-04-28T17:02:40Z",
+    "created_at": "2026-03-12T09:50:52Z",
+    "draft": false,
+    "id": 3388554539,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6201,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Timestamp field bound precision",
+    "updated_at": "2026-04-28T17:02:41Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": "2026-03-12T09:48:00Z",
+    "created_at": "2026-03-12T09:46:47Z",
+    "draft": false,
+    "id": 3388533482,
+    "issue_type": null,
+    "labels": [],
+    "number": 6200,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Timestamp field bound precision",
+    "updated_at": "2026-03-12T09:52:33Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-11T20:42:50Z",
+    "draft": true,
+    "id": 3386148702,
+    "issue_type": null,
+    "labels": [],
+    "number": 6199,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add MySQL metastore backend",
+    "updated_at": "2026-03-11T20:42:50Z",
+    "user": {
+      "login": "saliagadotcom"
+    }
+  },
+  {
+    "closed_at": "2026-03-27T18:01:29Z",
+    "created_at": "2026-03-11T00:24:26Z",
+    "draft": false,
+    "id": 3381349191,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6198,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump quinn-proto from 0.11.13 to 0.11.14 in /quickwit",
+    "updated_at": "2026-03-27T18:01:31Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-10T10:10:34Z",
+    "created_at": "2026-03-10T10:10:20Z",
+    "draft": false,
+    "id": 3377850470,
+    "issue_type": null,
+    "labels": [],
+    "number": 6197,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix: Support datetime with timezone and with millis",
+    "updated_at": "2026-03-10T10:10:34Z",
+    "user": {
+      "login": "Darkheir"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-03-09T19:59:32Z",
+    "draft": false,
+    "id": 3375192830,
+    "issue_type": null,
+    "labels": [],
+    "number": 6196,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix: Properly shutdown quickwit-serve when subcomponents panic or otherwise error.",
+    "updated_at": "2026-03-31T08:31:01Z",
+    "user": {
+      "login": "philip-wernersbach"
+    }
+  },
+  {
+    "closed_at": "2026-03-09T13:12:22Z",
+    "created_at": "2026-03-06T11:21:45Z",
+    "draft": false,
+    "id": 3363394800,
+    "issue_type": null,
+    "labels": [],
+    "number": 6195,
+    "pull_request": {},
+    "state": "closed",
+    "title": "follow aws hints for lambda retries",
+    "updated_at": "2026-03-09T13:12:24Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-03-05T20:50:21Z",
+    "created_at": "2026-03-04T20:07:44Z",
+    "draft": false,
+    "id": 3355030685,
+    "issue_type": null,
+    "labels": [],
+    "number": 6194,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add az-awareness to ingest metrics",
+    "updated_at": "2026-03-05T20:50:23Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-03-09T18:57:43Z",
+    "created_at": "2026-03-04T16:14:54Z",
+    "draft": false,
+    "id": 3354118698,
+    "issue_type": null,
+    "labels": [],
+    "number": 6193,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove old routing table; Take both disk and memory WAL readings",
+    "updated_at": "2026-03-09T18:57:44Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-03-05T16:59:27Z",
+    "created_at": "2026-03-04T11:10:05Z",
+    "draft": false,
+    "id": 3352908805,
+    "issue_type": null,
+    "labels": [],
+    "number": 6191,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Redact sensitive information in developer API debug output. Closes #6132",
+    "updated_at": "2026-03-05T16:59:27Z",
+    "user": {
+      "login": "osyniakov"
+    }
+  },
+  {
+    "closed_at": "2026-03-16T16:16:35Z",
+    "created_at": "2026-03-04T10:04:54Z",
+    "draft": false,
+    "id": 3352666069,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6190,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 35 updates",
+    "updated_at": "2026-03-16T16:16:37Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-09T18:47:24Z",
+    "created_at": "2026-03-03T18:38:44Z",
+    "draft": false,
+    "id": 3350156388,
+    "issue_type": null,
+    "labels": [],
+    "number": 6189,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add availability zone awareness to node based routing",
+    "updated_at": "2026-03-09T18:47:27Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-03-10T08:40:05Z",
+    "created_at": "2026-03-03T08:02:10Z",
+    "draft": false,
+    "id": 3347673904,
+    "issue_type": null,
+    "labels": [],
+    "number": 6188,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix e2e tests: navigate to /ui instead of /",
+    "updated_at": "2026-03-10T08:40:05Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-03-02T14:38:47Z",
+    "created_at": "2026-03-02T14:14:37Z",
+    "draft": false,
+    "id": 3344443156,
+    "issue_type": null,
+    "labels": [],
+    "number": 6187,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix rustfmt compatibility with nightly 1.96",
+    "updated_at": "2026-03-02T14:38:47Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-03-02T16:37:03Z",
+    "created_at": "2026-03-02T13:04:22Z",
+    "draft": false,
+    "id": 3344145456,
+    "issue_type": null,
+    "labels": [],
+    "number": 6186,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update UI deps and CI workflow",
+    "updated_at": "2026-03-02T16:37:03Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-03-11T13:17:38Z",
+    "created_at": "2026-03-02T11:39:44Z",
+    "draft": false,
+    "id": 3343827877,
+    "issue_type": null,
+    "labels": [],
+    "number": 6185,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Rebalance shards when ingester status changes",
+    "updated_at": "2026-03-11T13:17:38Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": "2026-03-02T14:39:40Z",
+    "created_at": "2026-03-02T10:21:29Z",
+    "draft": true,
+    "id": 3343517685,
+    "issue_type": null,
+    "labels": [],
+    "number": 6183,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Refactor UI CI: replace matrix with dedicated jobs",
+    "updated_at": "2026-03-02T14:39:40Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-03-02T14:39:40Z",
+    "created_at": "2026-03-02T10:20:45Z",
+    "draft": true,
+    "id": 3343515102,
+    "issue_type": null,
+    "labels": [],
+    "number": 6182,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Migrate e2e tests from Cypress to Playwright",
+    "updated_at": "2026-03-02T14:39:40Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-03-02T14:39:39Z",
+    "created_at": "2026-03-02T10:17:39Z",
+    "draft": false,
+    "id": 3343502649,
+    "issue_type": null,
+    "labels": [],
+    "number": 6181,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update quickwit-ui dependencies",
+    "updated_at": "2026-03-02T14:39:39Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T10:03:52Z",
+    "created_at": "2026-03-01T22:41:23Z",
+    "draft": false,
+    "id": 3341863216,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6180,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 34 updates",
+    "updated_at": "2026-03-04T10:03:53Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-01T12:24:50Z",
+    "created_at": "2026-03-01T12:24:26Z",
+    "draft": false,
+    "id": 3340674446,
+    "issue_type": null,
+    "labels": [],
+    "number": 6179,
+    "pull_request": {},
+    "state": "closed",
+    "title": "support windows natively",
+    "updated_at": "2026-03-01T12:24:50Z",
+    "user": {
+      "login": "akioyamamoto1977"
+    }
+  },
+  {
+    "closed_at": "2026-03-25T20:40:43Z",
+    "created_at": "2026-02-27T18:33:35Z",
+    "draft": false,
+    "id": 3336858806,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 5360838874641212329,
+        "name": "github_actions"
+      }
+    ],
+    "number": 6178,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the github-actions group across 1 directory with 13 updates",
+    "updated_at": "2026-03-25T20:40:45Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-27T18:29:48Z",
+    "created_at": "2026-02-27T16:05:01Z",
+    "draft": true,
+    "id": 3336350972,
+    "issue_type": null,
+    "labels": [],
+    "number": 6177,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Refactor UI CI: replace matrix with dedicated jobs",
+    "updated_at": "2026-02-27T18:29:48Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-02-27T18:29:44Z",
+    "created_at": "2026-02-27T14:59:35Z",
+    "draft": false,
+    "id": 3336088710,
+    "issue_type": null,
+    "labels": [],
+    "number": 6176,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix and optimize CI",
+    "updated_at": "2026-02-27T18:29:46Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-02-27T18:29:47Z",
+    "created_at": "2026-02-27T14:26:45Z",
+    "draft": true,
+    "id": 3335961957,
+    "issue_type": null,
+    "labels": [],
+    "number": 6175,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update quickwit-ui dependencies",
+    "updated_at": "2026-02-27T18:29:47Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-02-27T18:29:47Z",
+    "created_at": "2026-02-27T13:39:55Z",
+    "draft": true,
+    "id": 3335791447,
+    "issue_type": null,
+    "labels": [],
+    "number": 6174,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Migrate e2e tests from Cypress to Playwright",
+    "updated_at": "2026-03-02T10:20:27Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-03-03T18:28:39Z",
+    "created_at": "2026-02-26T21:59:54Z",
+    "draft": false,
+    "id": 3333106993,
+    "issue_type": null,
+    "labels": [],
+    "number": 6173,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Piggyback routing update on persist response",
+    "updated_at": "2026-03-03T18:28:42Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-02-25T17:47:04Z",
+    "created_at": "2026-02-25T17:46:44Z",
+    "draft": true,
+    "id": 3326904807,
+    "issue_type": null,
+    "labels": [],
+    "number": 6172,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(search): add list fields endpoint + pagination",
+    "updated_at": "2026-02-25T17:47:04Z",
+    "user": {
+      "login": "Totodore"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T09:35:12Z",
+    "created_at": "2026-02-25T16:43:24Z",
+    "draft": false,
+    "id": 3326641280,
+    "issue_type": null,
+    "labels": [],
+    "number": 6171,
+    "pull_request": {},
+    "state": "closed",
+    "title": "lambda improvements",
+    "updated_at": "2026-03-04T09:35:13Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T16:41:35Z",
+    "created_at": "2026-02-24T20:11:13Z",
+    "draft": false,
+    "id": 3322412774,
+    "issue_type": null,
+    "labels": [],
+    "number": 6170,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Gate node based routing behind config",
+    "updated_at": "2026-03-04T16:41:36Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-03-03T19:10:38Z",
+    "created_at": "2026-02-24T16:58:22Z",
+    "draft": false,
+    "id": 3321701850,
+    "issue_type": null,
+    "labels": [],
+    "number": 6169,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Cleanup old unused code",
+    "updated_at": "2026-03-03T19:10:42Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T16:11:46Z",
+    "created_at": "2026-02-24T16:23:20Z",
+    "draft": false,
+    "id": 3321563215,
+    "issue_type": null,
+    "labels": [],
+    "number": 6168,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add ES-compatible endpoints for Trino connector support",
+    "updated_at": "2026-03-04T16:11:48Z",
+    "user": {
+      "login": "congx4"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T22:04:43Z",
+    "created_at": "2026-02-24T10:32:04Z",
+    "draft": false,
+    "id": 3319983326,
+    "issue_type": null,
+    "labels": [],
+    "number": 6166,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Exclude decomissioning nodes when opening new shards, using gRPC stream",
+    "updated_at": "2026-03-04T22:04:43Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": "2026-03-04T22:04:46Z",
+    "created_at": "2026-02-20T17:32:41Z",
+    "draft": false,
+    "id": 3308823557,
+    "issue_type": null,
+    "labels": [],
+    "number": 6165,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Exclude decomissioning nodes when opening new shards, using chitchat",
+    "updated_at": "2026-03-04T22:04:46Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": "2026-02-20T14:19:22Z",
+    "created_at": "2026-02-20T11:59:37Z",
+    "draft": false,
+    "id": 3307600719,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6164,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump keccak from 0.1.5 to 0.1.6 in /quickwit",
+    "updated_at": "2026-02-20T14:19:24Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-26T18:56:54Z",
+    "created_at": "2026-02-19T19:42:54Z",
+    "draft": false,
+    "id": 3304639439,
+    "issue_type": null,
+    "labels": [],
+    "number": 6163,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Use new node based routing table for routing decisions",
+    "updated_at": "2026-02-26T18:56:57Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-03-01T22:40:13Z",
+    "created_at": "2026-02-19T12:57:38Z",
+    "draft": false,
+    "id": 3302978726,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6162,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 30 updates",
+    "updated_at": "2026-03-01T22:40:15Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-14T16:15:14Z",
+    "created_at": "2026-02-14T17:57:06Z",
+    "draft": true,
+    "id": 3285090755,
+    "issue_type": null,
+    "labels": [],
+    "number": 6160,
+    "pull_request": {},
+    "state": "closed",
+    "title": "QuickwitDatafusion",
+    "updated_at": "2026-04-14T16:15:14Z",
+    "user": {
+      "login": "alexanderbianchi"
+    }
+  },
+  {
+    "closed_at": "2026-02-19T18:44:03Z",
+    "created_at": "2026-02-13T20:16:42Z",
+    "draft": false,
+    "id": 3282496402,
+    "issue_type": null,
+    "labels": [],
+    "number": 6159,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Implement node based routing table",
+    "updated_at": "2026-02-19T18:44:05Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-02-19T12:31:01Z",
+    "created_at": "2026-02-12T12:49:18Z",
+    "draft": false,
+    "id": 3276110076,
+    "issue_type": null,
+    "labels": [],
+    "number": 6157,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Offload leaf search work to AWS Lambda functions",
+    "updated_at": "2026-02-19T12:31:02Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-02-19T12:56:45Z",
+    "created_at": "2026-02-12T12:13:11Z",
+    "draft": false,
+    "id": 3275963948,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6156,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 28 updates",
+    "updated_at": "2026-02-19T12:56:47Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-12T11:48:50Z",
+    "created_at": "2026-02-12T10:56:56Z",
+    "draft": false,
+    "id": 3275637690,
+    "issue_type": null,
+    "labels": [],
+    "number": 6154,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove unused multilang tokenizer feature",
+    "updated_at": "2026-02-12T11:48:52Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-02-12T10:10:07Z",
+    "created_at": "2026-02-12T10:09:19Z",
+    "draft": false,
+    "id": 3275447534,
+    "issue_type": null,
+    "labels": [],
+    "number": 6153,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add Claude Code configuration for the Quickwit project",
+    "updated_at": "2026-02-12T10:10:09Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-02-17T16:45:55Z",
+    "created_at": "2026-02-11T21:11:19Z",
+    "draft": false,
+    "id": 3273551073,
+    "issue_type": null,
+    "labels": [],
+    "number": 6152,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Implement IngesterAffinity broadcast",
+    "updated_at": "2026-02-17T16:45:58Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-02-18T15:24:33Z",
+    "created_at": "2026-02-11T14:29:13Z",
+    "draft": false,
+    "id": 3271915417,
+    "issue_type": null,
+    "labels": [],
+    "number": 6151,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: Make elastic TermsQuery use TermSetQuery internally",
+    "updated_at": "2026-02-18T15:24:33Z",
+    "user": {
+      "login": "Darkheir"
+    }
+  },
+  {
+    "closed_at": "2026-02-12T12:52:37Z",
+    "created_at": "2026-02-10T14:18:09Z",
+    "draft": false,
+    "id": 3267459303,
+    "issue_type": null,
+    "labels": [],
+    "number": 6148,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Offloading search to lambdas.",
+    "updated_at": "2026-02-27T20:14:18Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-02-09T14:03:34Z",
+    "created_at": "2026-02-09T14:03:11Z",
+    "draft": true,
+    "id": 3263036949,
+    "issue_type": null,
+    "labels": [],
+    "number": 6147,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Debugging build",
+    "updated_at": "2026-02-09T14:06:24Z",
+    "user": {
+      "login": "evance-br"
+    }
+  },
+  {
+    "closed_at": "2026-02-10T18:35:13Z",
+    "created_at": "2026-02-06T19:32:13Z",
+    "draft": false,
+    "id": 3255932371,
+    "issue_type": null,
+    "labels": [],
+    "number": 6145,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(search): add skip_aggregation_finalization to SearchRequest",
+    "updated_at": "2026-02-10T18:35:15Z",
+    "user": {
+      "login": "congx4"
+    }
+  },
+  {
+    "closed_at": "2026-02-12T12:12:16Z",
+    "created_at": "2026-02-05T20:31:59Z",
+    "draft": false,
+    "id": 3251862551,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6144,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 27 updates",
+    "updated_at": "2026-02-12T12:12:18Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-05T20:08:44Z",
+    "created_at": "2026-02-05T18:58:44Z",
+    "draft": false,
+    "id": 3251507962,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6143,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump time from 0.3.44 to 0.3.47 in /quickwit",
+    "updated_at": "2026-02-05T20:08:46Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-03-09T19:57:51Z",
+    "created_at": "2026-02-04T16:07:23Z",
+    "draft": false,
+    "id": 3246461886,
+    "issue_type": null,
+    "labels": [],
+    "number": 6142,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(obs): export internal logs with otlp exporter",
+    "updated_at": "2026-03-09T20:48:46Z",
+    "user": {
+      "login": "Totodore"
+    }
+  },
+  {
+    "closed_at": "2026-03-05T09:55:19Z",
+    "created_at": "2026-02-04T09:08:40Z",
+    "draft": false,
+    "id": 3244896169,
+    "issue_type": null,
+    "labels": [],
+    "number": 6141,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix typo in metrics name in metrics.md",
+    "updated_at": "2026-03-05T09:55:20Z",
+    "user": {
+      "login": "ncoiffier-celonis"
+    }
+  },
+  {
+    "closed_at": "2026-02-05T20:47:11Z",
+    "created_at": "2026-02-03T19:42:42Z",
+    "draft": false,
+    "id": 3242650945,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6140,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump bytes from 1.11.0 to 1.11.1 in /quickwit",
+    "updated_at": "2026-02-05T20:47:14Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-10T13:48:04Z",
+    "created_at": "2026-02-03T16:36:34Z",
+    "draft": false,
+    "id": 3242002344,
+    "issue_type": null,
+    "labels": [],
+    "number": 6139,
+    "pull_request": {},
+    "state": "closed",
+    "title": "silence vite warning about \"use client\" in material UI",
+    "updated_at": "2026-02-10T13:48:04Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-02-05T19:54:59Z",
+    "created_at": "2026-02-02T16:53:37Z",
+    "draft": false,
+    "id": 3237482459,
+    "issue_type": null,
+    "labels": [],
+    "number": 6137,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add shard-level ingestion metrics",
+    "updated_at": "2026-02-05T19:54:59Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-02-03T11:12:17Z",
+    "created_at": "2026-02-02T13:22:39Z",
+    "draft": false,
+    "id": 3236545994,
+    "issue_type": null,
+    "labels": [],
+    "number": 6136,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update tantivy",
+    "updated_at": "2026-02-03T11:12:19Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-02-05T20:30:58Z",
+    "created_at": "2026-02-01T22:40:05Z",
+    "draft": false,
+    "id": 3234154573,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6135,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group in /quickwit with 26 updates",
+    "updated_at": "2026-02-05T20:31:00Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-27T18:33:18Z",
+    "created_at": "2026-02-01T22:18:14Z",
+    "draft": false,
+    "id": 3234109044,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 5360838874641212329,
+        "name": "github_actions"
+      }
+    ],
+    "number": 6134,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the github-actions group with 7 updates",
+    "updated_at": "2026-02-27T18:33:20Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-30T19:31:07Z",
+    "created_at": "2026-01-30T18:08:31Z",
+    "draft": false,
+    "id": 3228803685,
+    "issue_type": null,
+    "labels": [],
+    "number": 6133,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Always refill permits on rate limiter; use governor clock instead of std",
+    "updated_at": "2026-01-30T19:31:08Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-02-10T08:52:58Z",
+    "created_at": "2026-01-30T17:01:45Z",
+    "draft": false,
+    "id": 3228599943,
+    "issue_type": null,
+    "labels": [],
+    "number": 6131,
+    "pull_request": {},
+    "state": "closed",
+    "title": "enforce yarn version in quickwit-ui",
+    "updated_at": "2026-02-10T09:08:50Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-01-30T17:04:01Z",
+    "created_at": "2026-01-30T16:11:00Z",
+    "draft": false,
+    "id": 3228422764,
+    "issue_type": null,
+    "labels": [],
+    "number": 6129,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Attempt to fix build",
+    "updated_at": "2026-01-30T17:04:03Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-01-30T16:03:24Z",
+    "created_at": "2026-01-30T15:58:56Z",
+    "draft": false,
+    "id": 3228378154,
+    "issue_type": null,
+    "labels": [],
+    "number": 6128,
+    "pull_request": {},
+    "state": "closed",
+    "title": "use the multi-arch version on node image",
+    "updated_at": "2026-01-30T16:03:24Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-01-29T19:18:42Z",
+    "created_at": "2026-01-29T18:47:14Z",
+    "draft": false,
+    "id": 3224671564,
+    "issue_type": null,
+    "labels": [],
+    "number": 6127,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump bytesize major version; fix backwards incompatible changes",
+    "updated_at": "2026-01-29T19:18:43Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-01-29T08:46:43Z",
+    "created_at": "2026-01-29T08:24:01Z",
+    "draft": false,
+    "id": 3222333845,
+    "issue_type": null,
+    "labels": [],
+    "number": 6126,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove quickwit-opentelemetry dependency from quickwit-search",
+    "updated_at": "2026-01-29T08:46:46Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-01-29T08:28:41Z",
+    "created_at": "2026-01-28T17:24:57Z",
+    "draft": false,
+    "id": 3219758861,
+    "issue_type": null,
+    "labels": [],
+    "number": 6125,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove unused features from 6 dependencies",
+    "updated_at": "2026-01-29T08:28:43Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-01-28T17:56:28Z",
+    "created_at": "2026-01-28T16:44:53Z",
+    "draft": false,
+    "id": 3219596840,
+    "issue_type": null,
+    "labels": [],
+    "number": 6124,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Re-order CI steps",
+    "updated_at": "2026-01-28T17:56:30Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-02-10T14:20:27Z",
+    "created_at": "2026-01-28T10:40:29Z",
+    "draft": true,
+    "id": 3218218524,
+    "issue_type": null,
+    "labels": [],
+    "number": 6123,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Lambda",
+    "updated_at": "2026-02-10T14:20:27Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-01-27T18:15:44Z",
+    "created_at": "2026-01-27T18:12:04Z",
+    "draft": false,
+    "id": 3215668064,
+    "issue_type": null,
+    "labels": [],
+    "number": 6122,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add Claude Code skills for bump-tantivy and simple-pr workflows",
+    "updated_at": "2026-01-27T18:15:46Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-01-27T18:12:54Z",
+    "created_at": "2026-01-27T17:56:28Z",
+    "draft": false,
+    "id": 3215618297,
+    "issue_type": null,
+    "labels": [],
+    "number": 6121,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump tantivy to 9b61999",
+    "updated_at": "2026-01-27T18:12:56Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-01-27T01:25:01Z",
+    "created_at": "2026-01-27T01:02:05Z",
+    "draft": false,
+    "id": 3212640994,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6120,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump oneshot from 0.1.11 to 0.1.12 in /quickwit",
+    "updated_at": "2026-01-27T01:25:03Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-02-10T13:27:58Z",
+    "created_at": "2026-01-26T18:10:59Z",
+    "draft": false,
+    "id": 3211532829,
+    "issue_type": null,
+    "labels": [],
+    "number": 6119,
+    "pull_request": {},
+    "state": "closed",
+    "title": "grant permits in SRTF fashion",
+    "updated_at": "2026-02-10T13:28:00Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-01-27T22:53:07Z",
+    "created_at": "2026-01-26T16:45:56Z",
+    "draft": false,
+    "id": 3211263644,
+    "issue_type": null,
+    "labels": [],
+    "number": 6118,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Node-level shard lookup for persist requests",
+    "updated_at": "2026-01-27T22:53:08Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-02-17T16:25:43Z",
+    "created_at": "2026-01-23T20:36:29Z",
+    "draft": true,
+    "id": 3204765862,
+    "issue_type": null,
+    "labels": [],
+    "number": 6117,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[Draft] Rework routing to be node based rather than shard based",
+    "updated_at": "2026-02-17T16:25:43Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-01-24T15:54:16Z",
+    "created_at": "2026-01-23T20:24:12Z",
+    "draft": false,
+    "id": 3204725697,
+    "issue_type": null,
+    "labels": [],
+    "number": 6116,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Upgrade to Rust 1.93",
+    "updated_at": "2026-01-24T15:54:17Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-01-23T20:29:32Z",
+    "created_at": "2026-01-23T20:20:15Z",
+    "draft": false,
+    "id": 3204714466,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6115,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 19 updates",
+    "updated_at": "2026-01-23T20:29:42Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-23T19:56:56Z",
+    "created_at": "2026-01-23T17:52:51Z",
+    "draft": false,
+    "id": 3204252738,
+    "issue_type": null,
+    "labels": [],
+    "number": 6114,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump tantivy to fix fatal bug in intersection",
+    "updated_at": "2026-01-23T19:56:59Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-01-24T14:53:22Z",
+    "created_at": "2026-01-23T16:27:52Z",
+    "draft": false,
+    "id": 3203962425,
+    "issue_type": null,
+    "labels": [],
+    "number": 6113,
+    "pull_request": {},
+    "state": "closed",
+    "title": "UI warning when statistics are wrong",
+    "updated_at": "2026-01-24T14:54:01Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": "2026-01-23T14:36:32Z",
+    "created_at": "2026-01-23T10:40:28Z",
+    "draft": false,
+    "id": 3202812866,
+    "issue_type": null,
+    "labels": [],
+    "number": 6112,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix: Set max gRPC message size for OTLP services",
+    "updated_at": "2026-01-23T14:37:22Z",
+    "user": {
+      "login": "Totodore"
+    }
+  },
+  {
+    "closed_at": "2026-01-23T20:36:12Z",
+    "created_at": "2026-01-22T16:58:25Z",
+    "draft": true,
+    "id": 3200152205,
+    "issue_type": null,
+    "labels": [],
+    "number": 6111,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[Draft] Have node pick candidate shard rather than receiving in Persist request",
+    "updated_at": "2026-01-23T20:36:12Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-03-26T15:13:32Z",
+    "created_at": "2026-01-22T01:05:52Z",
+    "draft": false,
+    "id": 3197436020,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "168700",
+        "description": "Pull requests that update Javascript code",
+        "id": 7497603665844062961,
+        "name": "javascript"
+      }
+    ],
+    "number": 6110,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump lodash from 4.17.21 to 4.17.23 in /quickwit/quickwit-ui in the npm_and_yarn group across 1 directory",
+    "updated_at": "2026-03-26T15:13:34Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-23T22:23:55Z",
+    "created_at": "2026-01-21T19:41:06Z",
+    "draft": false,
+    "id": 3196560892,
+    "issue_type": null,
+    "labels": [],
+    "number": 6109,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Catch empty AZ env vars",
+    "updated_at": "2026-01-23T22:23:57Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-01-21T20:25:57Z",
+    "created_at": "2026-01-21T16:46:58Z",
+    "draft": false,
+    "id": 3196009422,
+    "issue_type": null,
+    "labels": [],
+    "number": 6108,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: field name as sort in elasticsearch endpoints",
+    "updated_at": "2026-01-21T20:25:57Z",
+    "user": {
+      "login": "Darkheir"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-01-21T14:43:46Z",
+    "draft": false,
+    "id": 3195539670,
+    "issue_type": null,
+    "labels": [],
+    "number": 6107,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix: Support datetime with timezone and with millis",
+    "updated_at": "2026-01-21T16:41:40Z",
+    "user": {
+      "login": "Darkheir"
+    }
+  },
+  {
+    "closed_at": "2026-01-20T14:10:39Z",
+    "created_at": "2026-01-20T11:20:35Z",
+    "draft": false,
+    "id": 3190873012,
+    "issue_type": null,
+    "labels": [],
+    "number": 6105,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Use gRPC Tonic transport for exporting OTEL spans.",
+    "updated_at": "2026-01-20T14:10:43Z",
+    "user": {
+      "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": "2026-01-23T20:19:22Z",
+    "created_at": "2026-01-20T10:50:54Z",
+    "draft": false,
+    "id": 3190775940,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6104,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 18 updates",
+    "updated_at": "2026-01-23T20:19:24Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-20T10:28:04Z",
+    "created_at": "2026-01-18T16:54:31Z",
+    "draft": false,
+    "id": 3185508183,
+    "issue_type": null,
+    "labels": [],
+    "number": 6103,
+    "pull_request": {},
+    "state": "closed",
+    "title": "improve in memory cache",
+    "updated_at": "2026-01-20T10:28:04Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-03-10T09:29:09Z",
+    "created_at": "2026-01-17T09:41:30Z",
+    "draft": false,
+    "id": 3183658463,
+    "issue_type": null,
+    "labels": [],
+    "number": 6102,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(es-compat): add index_filter support for field capabilities API",
+    "updated_at": "2026-03-10T09:29:09Z",
+    "user": {
+      "login": "ruoliu2"
+    }
+  },
+  {
+    "closed_at": "2026-01-20T18:16:55Z",
+    "created_at": "2026-01-16T10:53:13Z",
+    "draft": false,
+    "id": 3180807680,
+    "issue_type": null,
+    "labels": [],
+    "number": 6100,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update devcontainer config",
+    "updated_at": "2026-01-20T18:16:55Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-01-16T17:57:35Z",
+    "created_at": "2026-01-16T09:12:48Z",
+    "draft": false,
+    "id": 3180452125,
+    "issue_type": null,
+    "labels": [],
+    "number": 6099,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Dependabot/docker/node 25",
+    "updated_at": "2026-01-16T17:57:35Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-01-15T17:26:41Z",
+    "created_at": "2026-01-15T12:40:27Z",
+    "draft": false,
+    "id": 3177176167,
+    "issue_type": null,
+    "labels": [],
+    "number": 6098,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Revert lenient start and end anchors #6089",
+    "updated_at": "2026-01-15T17:26:43Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": "2026-01-15T21:00:51Z",
+    "created_at": "2026-01-15T10:22:07Z",
+    "draft": false,
+    "id": 3176776902,
+    "issue_type": null,
+    "labels": [],
+    "number": 6097,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix: Add support for numbers on TermsQuery",
+    "updated_at": "2026-01-15T21:00:51Z",
+    "user": {
+      "login": "Darkheir"
+    }
+  },
+  {
+    "closed_at": "2026-01-20T10:50:06Z",
+    "created_at": "2026-01-13T22:43:15Z",
+    "draft": false,
+    "id": 3171502728,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6096,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 13 updates",
+    "updated_at": "2026-01-20T10:50:09Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-16T14:48:20Z",
+    "created_at": "2026-01-13T22:38:16Z",
+    "draft": false,
+    "id": 3171494153,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "168700",
+        "description": "Pull requests that update Javascript code",
+        "id": 7497603665844062961,
+        "name": "javascript"
+      }
+    ],
+    "number": 6095,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the npm_and_yarn group across 1 directory with 2 updates",
+    "updated_at": "2026-01-16T14:48:23Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-13T22:53:42Z",
+    "created_at": "2026-01-13T22:29:39Z",
+    "draft": false,
+    "id": 3171476356,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "2b67c6",
+        "description": "Pull requests that update Python code",
+        "id": 8461682516318345188,
+        "name": "python"
+      }
+    ],
+    "number": 6094,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the pip group across 3 directories with 3 updates",
+    "updated_at": "2026-01-13T22:53:44Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-14T18:39:36Z",
+    "created_at": "2026-01-13T22:25:10Z",
+    "draft": false,
+    "id": 3171465891,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 5360838874641212329,
+        "name": "github_actions"
+      }
+    ],
+    "number": 6093,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump taiki-e/install-action from 2.66.2 to 2.66.3 in the github-actions group",
+    "updated_at": "2026-01-14T18:39:38Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-14T22:47:02Z",
+    "created_at": "2026-01-13T18:59:31Z",
+    "draft": false,
+    "id": 3170859099,
+    "issue_type": null,
+    "labels": [],
+    "number": 6092,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Initial stab at AZ awareness",
+    "updated_at": "2026-01-14T22:47:03Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-01-13T22:20:04Z",
+    "created_at": "2026-01-13T02:40:56Z",
+    "draft": false,
+    "id": 3167975193,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 5360838874641212329,
+        "name": "github_actions"
+      }
+    ],
+    "number": 6091,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the github-actions group with 4 updates",
+    "updated_at": "2026-01-13T22:20:06Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-01-13T02:39:13Z",
+    "draft": false,
+    "id": 3167971767,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "21ceff",
+        "description": "Pull requests that update Docker code",
+        "id": 1303953488049839776,
+        "name": "docker"
+      }
+    ],
+    "number": 6090,
+    "pull_request": {},
+    "state": "open",
+    "title": "Bump debian from `e899040` to `94c4d59`",
+    "updated_at": "2026-01-30T16:04:23Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-13T17:14:37Z",
+    "created_at": "2026-01-12T15:23:24Z",
+    "draft": false,
+    "id": 3166296784,
+    "issue_type": null,
+    "labels": [],
+    "number": 6089,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make regex lenient to start and end anchors",
+    "updated_at": "2026-01-13T17:57:35Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-01-11T13:44:37Z",
+    "draft": false,
+    "id": 3163236939,
+    "issue_type": null,
+    "labels": [],
+    "number": 6088,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(qw-search): TopHits aggregations because of unsupported OwnedValue deser with postcard",
+    "updated_at": "2026-01-20T17:54:41Z",
+    "user": {
+      "login": "Totodore"
+    }
+  },
+  {
+    "closed_at": "2026-01-09T20:09:47Z",
+    "created_at": "2026-01-09T20:09:19Z",
+    "draft": false,
+    "id": 3160780230,
+    "issue_type": null,
+    "labels": [],
+    "number": 6086,
+    "pull_request": {},
+    "state": "closed",
+    "title": "api: Export Hotcache Building APIs for Memory-Bounded Hotcache Generation",
+    "updated_at": "2026-01-09T20:10:38Z",
+    "user": {
+      "login": "schenksj"
+    }
+  },
+  {
+    "closed_at": "2026-01-09T10:09:06Z",
+    "created_at": "2026-01-09T10:08:21Z",
+    "draft": false,
+    "id": 3159133184,
+    "issue_type": null,
+    "labels": [],
+    "number": 6085,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Restricted stemming to the multilang feature",
+    "updated_at": "2026-01-09T10:09:08Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-01-23T22:32:04Z",
+    "created_at": "2026-01-08T21:56:28Z",
+    "draft": false,
+    "id": 3157635843,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6084,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump aws-sdk-s3 from 1.62.0 to 1.112.0 in /quickwit",
+    "updated_at": "2026-01-23T22:32:13Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-13T22:42:44Z",
+    "created_at": "2026-01-08T19:18:32Z",
+    "draft": false,
+    "id": 3157200434,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6083,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 12 updates",
+    "updated_at": "2026-01-13T22:42:45Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-08T20:00:13Z",
+    "created_at": "2026-01-08T19:17:26Z",
+    "draft": false,
+    "id": 3157196528,
+    "issue_type": null,
+    "labels": [],
+    "number": 6082,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Chitchat update fixing bug that was triggering many gossip grpc",
+    "updated_at": "2026-04-08T06:34:53Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-01-08T18:58:54Z",
+    "created_at": "2026-01-08T16:56:44Z",
+    "draft": false,
+    "id": 3156813684,
+    "issue_type": null,
+    "labels": [],
+    "number": 6081,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Updating tantivy and bitpacking.",
+    "updated_at": "2026-01-08T18:58:55Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-01-08T19:00:21Z",
+    "created_at": "2026-01-07T20:44:18Z",
+    "draft": false,
+    "id": 3153906949,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6079,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump lru from 0.16.2 to 0.16.3 in /quickwit",
+    "updated_at": "2026-01-08T19:00:22Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-08T19:57:49Z",
+    "created_at": "2026-01-07T19:56:51Z",
+    "draft": false,
+    "id": 3153790270,
+    "issue_type": null,
+    "labels": [],
+    "number": 6078,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix infinite loop OOM bug caused by rebalancing shards from inactive ingesters",
+    "updated_at": "2026-01-08T19:57:50Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-01-08T19:17:52Z",
+    "created_at": "2026-01-06T19:15:22Z",
+    "draft": false,
+    "id": 3150403934,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6077,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 14 updates",
+    "updated_at": "2026-01-08T19:17:54Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-06T18:55:42Z",
+    "created_at": "2026-01-06T18:23:19Z",
+    "draft": false,
+    "id": 3150280238,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6076,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump rsa from 0.9.9 to 0.9.10 in /quickwit",
+    "updated_at": "2026-01-06T18:55:44Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-06T19:14:46Z",
+    "created_at": "2026-01-05T22:22:39Z",
+    "draft": false,
+    "id": 3147620497,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6075,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump the rust-dependencies group across 1 directory with 13 updates",
+    "updated_at": "2026-01-06T19:14:48Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-01-06T10:21:23Z",
+    "created_at": "2026-01-05T17:18:31Z",
+    "draft": false,
+    "id": 3146945365,
+    "issue_type": null,
+    "labels": [],
+    "number": 6074,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix f64 not working properly with concat fields",
+    "updated_at": "2026-01-06T13:15:47Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2026-01-05T16:56:55Z",
+    "created_at": "2026-01-05T16:48:41Z",
+    "draft": false,
+    "id": 3146870140,
+    "issue_type": null,
+    "labels": [],
+    "number": 6073,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Failing linter",
+    "updated_at": "2026-01-05T16:56:57Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-01-23T22:32:09Z",
+    "created_at": "2026-01-02T15:28:00Z",
+    "draft": true,
+    "id": 3142327259,
+    "issue_type": null,
+    "labels": [],
+    "number": 6072,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add index_routing_rules table and create / get methods",
+    "updated_at": "2026-01-23T22:32:09Z",
+    "user": {
+      "login": "Platane"
+    }
+  }
+]

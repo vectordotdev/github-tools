@@ -1,0 +1,163 @@
+[
+  {
+    "author": {
+      "login": "complib2891"
+    },
+    "bodyText": "just wondering, why this project doesn't do frequent release since 2024... is this project dead? or pending license-pull?",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2026-05-12T03:11:39Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 6420,
+    "stateReason": null,
+    "title": "no github release beyond v0.8.2, is this project dead?",
+    "updatedAt": "2026-05-14T10:38:15Z",
+    "upvoteCount": 0,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/6420"
+  },
+  {
+    "author": {
+      "login": "oleksandr-zhyhalo"
+    },
+    "bodyText": "Hey everyone,\nWanted to share a recent project of mine — Logwiz. It's a full-stack application powered by Quickwit for log search.\n👉 https://github.com/oleksandr-zhyhalo/logwiz\nSome of the features it brings:\n\nAuthentication, including Google SSO\nAuthenticated OTEL forwarding endpoints to Quickwit(WIP)\nFrequency charts\nQuick filters powered by aggregations\n…and much more.\n\nThe focus is on logs for now, but traces are also on the roadmap.\nIt's already been adopted at my company (Beewise), where it helps us centralize logs from thousands of IoT devices :)\nAny feedback is much appreciated!",
+    "category": {
+      "name": "Show and tell"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2026-04-21T13:53:34Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 6329,
+    "stateReason": null,
+    "title": "Logwiz - self-hosted log platform based on Quickwit.",
+    "updatedAt": "2026-04-21T13:54:10Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/6329"
+  },
+  {
+    "author": {
+      "login": "gitarns"
+    },
+    "bodyText": "Hello,\nJust a personal project: https://github.com/gitarns/qwui",
+    "category": {
+      "name": "Show and tell"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-03-31T07:27:41Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 6250,
+    "stateReason": null,
+    "title": "UI",
+    "updatedAt": "2026-04-01T01:33:45Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/6250"
+  },
+  {
+    "author": {
+      "login": "Kimishu"
+    },
+    "bodyText": "I have a service that automatically handles quickwit index existence. If quickwit index doesn't exist, it automatically creates index + kafka-source for it via REST API. The problem is that I decided to check kafka topic's consumers and it's empty.\nHere is my kafka-source config:\n{\n  \"version\": \"0.8\",\n  \"source_id\": \"kafka-test\",\n  \"source_type\": \"kafka\",\n  \"params\": {\n    \"topic\": \"test\",\n    \"client_params\": {\n      \"bootstrap.servers\": \"kafka:9092\"\n    }\n  }\n}\nI don't know where the problem is. If i'm right, quickwit has 1 consumer by default, and I don't want it to have more consumers to reduce hardware load.\nAlso, I pinged kafka in the quickwit docker-container and it worked, the domain name resolved successfully, so quickwit sees kafka.\nMaybe I missed something?",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2026-03-04T12:56:00Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 6192,
+    "stateReason": null,
+    "title": "Kafka source doesn't start consuming after creation via REST API",
+    "updatedAt": "2026-03-04T12:56:00Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/6192"
+  },
+  {
+    "author": {
+      "login": "patelvp"
+    },
+    "bodyText": "Hi,\nI’m currently evaluating a migration of our OpenSearch cluster, which contains approximately 1 billion documents distributed across 40,000 tenants. The primary motivation for this migration is cost optimization.\nAt the moment, OpenSearch keeps all data live at all times. Since each tenant has a distinct access pattern, I believe an architecture that allows us to load or activate tenant data only when needed could significantly reduce costs for our users. Additionally, our usage is heavily concentrated between 9 a.m. and 5 p.m., so the ability to scale compute resources based on demand would further improve cost efficiency.\nBased on my understanding of this architecture, it seems that both of these goals may be achievable. However, I would appreciate expert suggestions on the best way to use Quickwit in our case:\nA) Single index for all tenants\nB) One index per tenant\nC) An index pool model\nIn my local tests I noticed option B performs better but it was only for 100 tenants. I wonder what happens when you reach 40k tenants. Opensearch for instance does not allow you to create that many index per tenant it just breaks with the overhead on index management.\nOur tenants can sign up and leave at any time, and we do not archive data. Our two primary search patterns are:\n•\tA quick search on two fields across 13 document types\n•\tA full-text search across all fields\nI would greatly appreciate your recommendations on the most suitable approach for our workload.",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-03-02T11:25:44Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 6184,
+    "stateReason": null,
+    "title": "Best strategy for handling multi-tenancy at scale",
+    "updatedAt": "2026-03-02T11:31:03Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/6184"
+  },
+  {
+    "author": {
+      "login": "complib2891"
+    },
+    "bodyText": "https://github.com/jaegertracing/jaeger/tree/main/internal/storage/v2/grpc\njust wondering if there's any plan to be compliance with jaeger v2 grpc remote storage spec, as jaeger v1 has be deprecated on dec2025",
+    "category": {
+      "name": "New features"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-02-11T04:42:57Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 6149,
+    "stateReason": null,
+    "title": "jaeger v2 grpc remote storage support",
+    "updatedAt": "2026-02-12T01:02:37Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/6149"
+  },
+  {
+    "author": {
+      "login": "ElSamhaa"
+    },
+    "bodyText": "Hello, thanks for the great project. I tried browsing the docs to find if there is a way to declaratively provision indexes in quickwit in line with GitOps setups, but couldn't find any.\nAre you considering to implement this?",
+    "category": {
+      "name": "New features"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2026-01-10T12:23:27Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 6087,
+    "stateReason": null,
+    "title": "Declarative index configuration",
+    "updatedAt": "2026-01-10T12:23:27Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/6087"
+  }
+]
