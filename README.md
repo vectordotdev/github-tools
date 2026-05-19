@@ -155,6 +155,10 @@ Audit logs written to `out/purge/` (local only).
 
 ![Top Integration PRs By Label Total Count](data/images/vectordotdev_vector_pull_requests.open_closed_total_label_count.png)
 
+---
+
+![Top 10 PR Contributors (last 12 months)](data/images/vectordotdev_vector_pull_requests.contributors_top10_12m.png)
+
 ##### Discussions
 
 ![Monthly Discussions](data/images/vectordotdev_vector_discussions.monthly_trend.png)
@@ -186,6 +190,10 @@ Audit logs written to `out/purge/` (local only).
 ---
 
 ![PR Label Counts](data/images/vectordotdev_vrl_pull_requests.label_counts.png)
+
+---
+
+![Top 10 PR Contributors (last 12 months)](data/images/vectordotdev_vrl_pull_requests.contributors_top10_12m.png)
 
 ##### Discussions
 
