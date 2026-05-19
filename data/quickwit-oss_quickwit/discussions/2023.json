@@ -1,0 +1,255 @@
+[
+  {
+    "author": {
+      "login": "batmilkyway"
+    },
+    "bodyText": "As an SRE/platform/cloud/whatever engineer I'd like to self-host my observability tools to reduce costs (DataDog, New Relic, etc are quite costly). One of the pain points with self-hosting is that tools are either fragmented, or require heavy infrastructure investment.\nFor example, the LGTM stack requires deploying Loki, Tempo, and Mimir (or other Prometheus compatible store) to capture logs, metrics, and traces.\nOther projects like SigNoz or Uptrace, which do support a unified observability store, do it with ClickHouse, which can be pretty resource hungry and also incurs operational overhead.\nQuickwit already supports logs and traces, will it also support metrics?",
+    "category": {
+      "name": "New features"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 3
+    },
+    "createdAt": "2023-09-08T20:58:15Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 3843,
+    "stateReason": null,
+    "title": "Will quickwit support storing Prometheus metrics?",
+    "updatedAt": "2025-04-16T07:27:04Z",
+    "upvoteCount": 9,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/3843"
+  },
+  {
+    "author": {
+      "login": "camerondavison"
+    },
+    "bodyText": "I think that this has been touched on by some previous discussions, so I apologize if it is a duplicate question, but I just want to be more explicit with my question.\nIs there a way to replace a document with new data in Quickwit? The old document would be marked deleted, and the new document would be the only one that is searchable.\nTo give some context, we have an event driven architecture (somewhat event sourced). I started using Quickwit to index all the events so that it would be easy to search and find what is happening in the system. Quickwit seems purpose built for this use case, and it works great (easy to get up and running quickly consuming from kafka). I also want to reduce these events down and provide a view of some of the documents that is a merged copy of a bunch of these events. Currently we store this view as jsonb in a postgres database so it is easy to get back out one at a time, but I want to allow quick searching over these documents. I looked into some other systems for this (such as meilisearch, which also worked well) but I think it could be too difficult for me to have to learn the eccentricities of both of these systems at the same time. I think it would be ideal for me to use quickwit for both of these cases.",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2023-09-27T14:38:14Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 3886,
+    "stateReason": null,
+    "title": "Way to replace documents in a quickwit index?",
+    "updatedAt": "2024-08-29T06:10:29Z",
+    "upvoteCount": 3,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/3886"
+  },
+  {
+    "author": {
+      "login": "fmassot"
+    },
+    "bodyText": "Here is the screenshot shared by a very happy Quickwit user ❤️.\nSetup:\n\nK8S cluster with graviton instances\nSource: Kafka\n14 indexers, 3500 mCPUs each\nGraviton instances",
+    "category": {
+      "name": "Show and tell"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2023-11-20T12:59:46Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 4165,
+    "stateReason": null,
+    "title": "Indexing logs at 540MB/s with Kafka and 14 indexers",
+    "updatedAt": "2023-11-20T12:59:47Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/4165"
+  },
+  {
+    "author": {
+      "login": "fmassot"
+    },
+    "bodyText": "I indexed traces in Quickwit with tracegen with 4 quickwit nodes started with docker-compose on 1 instance i5-13600K.\nIt's pretty easy to play with tracegen + Quickwit and docker-compose so I just wanted to share the results and config.\nIndexing throughput\nI progressively increased the number of spans sent to Quickwit, thus the increasing ramp until reaching the plateau.\n\nMemory consumption\nIt's the total RSS of the 4 quickwit nodes.\n\nQuickwit config\n4 nodes with Docker compose\nversion: \"3\"\n\nnetworks:\n  default:\n    name: quickwit-network\n    ipam:\n      config:\n      - subnet: 172.16.7.0/24\n        gateway: 172.16.7.1\n\nservices:\n  quickwit-01:\n    image: quickwit/quickwit:edge\n    networks:\n      default:\n        aliases:\n          - quickwit\n    volumes:\n      - ./qwdata/indexes:/quickwit/qwdata/indexes\n      - ./../config/quickwit.yaml:/quickwit/config/quickwit.yaml\n    ports:\n      - 7280:7280\n    command: [\"run\"]\n    environment:\n      - QW_NODE_ID=quickwit-01\n      - QW_DISABLE_TELEMETRY=1\n\n  quickwit-02:\n    image: quickwit/quickwit:edge\n    networks:\n      default:\n        aliases:\n          - quickwit\n    volumes:\n      - ./qwdata/indexes:/quickwit/qwdata/indexes\n      - ./../config/quickwit.yaml:/quickwit/config/quickwit.yaml\n    environment:\n      - QW_NODE_ID=quickwit-02\n      - QW_DISABLE_TELEMETRY=1\n      - QW_PEER_SEEDS=quickwit-01\n    command: [\"run\", \"--service\", \"indexer\", \"--service\", \"searcher\"]\n\n  quickwit-03:\n    image: quickwit/quickwit:edge\n    networks:\n      default:\n        aliases:\n          - quickwit\n    volumes:\n      - ./qwdata/indexes:/quickwit/qwdata/indexes\n      - ./../config/quickwit.yaml:/quickwit/config/quickwit.yaml\n    environment:\n      - QW_NODE_ID=quickwit-03\n      - QW_DISABLE_TELEMETRY=1\n      - QW_PEER_SEEDS=quickwit-01,quickwit-02\n    command: [\"run\", \"--service\", \"indexer\", \"--service\", \"searcher\"]\n\n  quickwit-04:\n    image: quickwit/quickwit:edge\n    networks:\n      default:\n        aliases:\n          - quickwit\n    volumes:\n      - ./qwdata/indexes:/quickwit/qwdata/indexes\n      - ./../config/quickwit.yaml:/quickwit/config/quickwit.yaml\n    environment:\n      - QW_NODE_ID=quickwit-04\n      - QW_DISABLE_TELEMETRY=1\n      - QW_PEER_SEEDS=quickwit-01,quickwit-02,quickwit-03\n    command: [\"run\", \"--service\", \"indexer\", \"--service\", \"searcher\"]\n\nTrace gen config\nFor each node in [quickwit-01, quickwit-02, quickwit-03, quickwit-04], execute the command:\ndocker run -e OTEL_EXPORTER_OTLP_ENDPOINT=http://${NODE_ID}:7281 --net quickwit-network jaegertracing/jaeger-tracegen -trace-exporter otlp-grpc -service quickwit-test -traces 100000000 -workers 20 -spans 100\n\nIndex config\nversion: 0.6\n\nindex_id: otel-traces-v0_6\n\ndoc_mapping:\n  mode: strict\n  field_mappings:\n    - name: trace_id\n      type: bytes\n      fast: true\n    - name: trace_state\n      type: text\n      indexed: false\n    - name: service_name\n      type: text\n      tokenizer: raw\n    - name: resource_attributes\n      type: json\n      tokenizer: raw\n    - name: resource_dropped_attributes_count\n      type: u64\n      indexed: false\n    - name: scope_name\n      type: text\n      indexed: false\n    - name: scope_version\n      type: text\n      indexed: false\n    - name: scope_attributes\n      type: json\n      indexed: false\n    - name: scope_dropped_attributes_count\n      type: u64\n      indexed: false\n    - name: span_id\n      type: bytes\n    - name: span_kind\n      type: u64\n    - name: span_name\n      type: text\n      tokenizer: raw\n    - name: span_fingerprint\n      type: text\n      tokenizer: raw\n    - name: span_start_timestamp_nanos\n      type: datetime\n      input_formats: [unix_timestamp]\n      output_format: unix_timestamp_nanos\n      indexed: false\n      fast: true\n      fast_precision: milliseconds\n    - name: span_end_timestamp_nanos\n      type: datetime\n      input_formats: [unix_timestamp]\n      output_format: unix_timestamp_nanos\n      indexed: false\n      fast: false\n    - name: span_duration_millis\n      type: u64\n      indexed: false\n      fast: true\n      stored: false\n    - name: span_attributes\n      type: json\n      tokenizer: raw\n    - name: span_dropped_attributes_count\n      type: u64\n      indexed: false\n    - name: span_dropped_events_count\n      type: u64\n      indexed: false\n    - name: span_dropped_links_count\n      type: u64\n      indexed: false\n    - name: span_status\n      type: json\n      indexed: true\n    - name: parent_span_id\n      type: bytes\n      indexed: false\n    - name: events\n      type: array<json>\n      tokenizer: raw\n    - name: event_names\n      type: array<text>\n      tokenizer: default\n      record: position\n      stored: false\n    - name: links\n      type: array<json>\n      tokenizer: raw\n\n  timestamp_field: span_start_timestamp_nanos\n\n  # partition_key: hash_mod(service_name, 100)\n  # tag_fields: [service_name]\n\nindexing_settings:\n  commit_timeout_secs: 30\n  split_num_docs_target: 3000000\n  merge_policy:\n    type: no_merge\n\nsearch_settings:\n  default_search_fields: []\n\nNode config\nversion: 0.6\n\ningest_api:\n  max_queue_memory_usage: 4G\n  max_queue_disk_usage: 8G",
+    "category": {
+      "name": "Show and tell"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2023-11-12T13:03:40Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 4120,
+    "stateReason": null,
+    "title": "Indexing traces into Quickwit with tracegen on i5-13600K",
+    "updatedAt": "2023-11-12T21:35:52Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/4120"
+  },
+  {
+    "author": {
+      "login": "mustafa0x"
+    },
+    "bodyText": "How to emulate keyword repeat in quickwit/tantivy?\n\nIf placed before a stemmer, the result will be that you will get the unstemmed token preserved on the same position as the stemmed one. Queries matching the original exact term will get a better score while still maintaining the recall benefit of stemming. Another advantage of keeping the original token is that wildcard truncation will work as expected.\n\nhttps://solr.apache.org/guide/solr/latest/indexing-guide/language-analysis.html#keywordrepeatfilterfactory",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2023-11-02T04:56:05Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 4072,
+    "stateReason": null,
+    "title": "Keyword repeat",
+    "updatedAt": "2023-11-02T06:13:55Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/4072"
+  },
+  {
+    "author": {
+      "login": "trinity-1686a"
+    },
+    "bodyText": "I ran some small benchmarks of ingestion on different types of amazon instances, including their Graviton (ARM) cpus. Here are the results summarized:\n\nI choose C5 as the reference point for comparison as that's what's used in most posts on quickwit.io. All instances are xlarge (4 cores, 8GB ram).\nThe results seems to indicate the best bang for the buck with Quickwit is to use either C6a or C7g instances. C6g is sadly much slower, but as it's the cheapest, it can be useful if you workload can fit in a single node. The C7a and C7i are the fastest available instances, but they are less cost efficient (you can run 5 C7g for the price of 4 C7i or 3.5 C7a), so it's not really worth it for something that distributes well such as Quickwit.\ntldr: you should probably use either c6a or c7g for indexing your data with Quickwit.\nNote on the protocol: I ingested the hdfs dataset using v0.6.4, with the ingest API (single pipeline workload), and without merges. You can't make a good estimate of $ per TB ingested from that, merges would slow things down, and multiple pipelines would speed them up. But those effects should have the same impact for any instance, so relative comparison makes sens.\n(edit: there was some misconfiguration doing the benches, so I reran the numbers and updated the conclusions)",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2023-10-24T14:31:22Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 4020,
+    "stateReason": null,
+    "title": "Performance and cost efficiency on AWS Graviton",
+    "updatedAt": "2023-11-12T20:53:46Z",
+    "upvoteCount": 4,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/4020"
+  },
+  {
+    "author": {
+      "login": "kepatopoc"
+    },
+    "bodyText": "Is it possible now in quickwit to update a field on a document? Like in Elastic\n{'doc_id':1, 'text':'it is not possible to update a document field in this database','tag_name':[]}\nafter UPDATE add tag 'negative' and 'feature'\n{'doc_id':1, 'text':'...', 'tag_name':['negative','feature']}\nIf not, is it planned in the future?",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2023-05-27T20:53:10Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 3421,
+    "stateReason": null,
+    "title": "Document field update",
+    "updatedAt": "2023-06-10T11:32:32Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/3421"
+  },
+  {
+    "author": {
+      "login": "braco"
+    },
+    "bodyText": "My documentation idea\nIt seems like all of the messaging is about ingesting logs.\nElasticsearch is also very useful as a regular search engine against entity databases, like a movie database for example.\nIs quickwit applicable to this kind of use? What are the pros and cons?\nYou can see vastly different, consumer-oriented messaging from Meili:\nhttps://www.meilisearch.com/",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2023-06-01T22:39:02Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 3471,
+    "stateReason": null,
+    "title": "Documentation: suitability as a regular search engine",
+    "updatedAt": "2023-06-01T23:00:43Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/3471"
+  },
+  {
+    "author": {
+      "login": "valyagolev"
+    },
+    "bodyText": "I forked the quickwit-actors framework here: https://github.com/valyagolev/witty-actors , and published it as a crate (that's how much I like it). I vendored the needed quickwit dependencies. I hope it's alright.\nIt's a tiny bit of work so just putting it here so that whoever needs it, can find it.",
+    "category": {
+      "name": "Show and tell"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2023-05-30T22:41:26Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 3447,
+    "stateReason": null,
+    "title": "Fork of the actors framework",
+    "updatedAt": "2023-05-30T23:10:52Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/3447"
+  },
+  {
+    "author": {
+      "login": "dipakdotyadav"
+    },
+    "bodyText": "I am planning to use Quickwit for log ingestion (currently using Elasticsearch), I want to know if I can setup HA and DR",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": true,
+    "closedAt": "2023-05-15T22:31:23Z",
+    "comments": {
+      "totalCount": 3
+    },
+    "createdAt": "2023-02-17T04:05:45Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 2833,
+    "stateReason": "RESOLVED",
+    "title": "I want to setup HA and DR",
+    "updatedAt": "2023-05-15T22:31:23Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/2833"
+  },
+  {
+    "author": {
+      "login": "geek-frio"
+    },
+    "bodyText": "I have briefly reviewed the Quickwit code, and based on my understanding, Quickwit processes data obtained from an HTTP or grpc service through batching, transforming it into splits that are uploaded to OSS (Object Storage Service). Once a split enters the \"Published\" state, it can be queried by a Searcher based on OSS. Given this logic, I also don't fully understand why Quickwit doesn't support deploying multiple Indexer nodes to serve HTTP/grpc write requests. The official documentation states that multiple Indexer nodes are supported only in the context of Kafka-based data ingestion. I have performed a simple test of multiple Indexer nodes writing data via HTTP locally, and I haven't encountered any issues. Could you explain why Quickwit does not support multiple Indexer nodes for writing, apart from Kafka-based scenarios?",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 8
+    },
+    "createdAt": "2023-05-15T08:16:59Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 3336,
+    "stateReason": null,
+    "title": "Why quickwit does not support multiple indexer with http source write?",
+    "updatedAt": "2023-05-15T22:20:09Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/3336"
+  }
+]

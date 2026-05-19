@@ -1,0 +1,416 @@
+[
+  {
+    "author": {
+      "login": "nbari"
+    },
+    "bodyText": "This is my otel-collector config:\n---\nreceivers:\n  otlp:\n    protocols:\n      grpc:\n        endpoint: 0.0.0.0:4317\n      http:\n        endpoint: 0.0.0.0:4318\n\nprocessors:\n  batch:\n\n  attributes/dev:\n    actions:\n      - key: deployment.environment\n        value: development\n        action: insert\n\nexporters:\n  otlp/quickwit:\n    endpoint: 10.10.0.83:7281\n    tls:\n      insecure: true\n\nservice:\n  pipelines:\n    logs:\n      receivers:\n        - otlp\n      processors:\n        - batch\n      exporters:\n        - otlp/quickwit\n\n    traces:\n      receivers:\n        - otlp\n      processors:\n        - batch\n        - attributes/dev\n      exporters:\n        - otlp/quickwit\n\nin the otel-collector I see this error:\nwarn        otlpexporter@v0.107.0/otlp.go:126        Partial success response        {\"kind\": \"exporter\", \"data_type\": \"logs\", \"name\": \"otlp/quickwit\", \"message\": \"\", \"dropped_log_records\": 10}\n\nIn quickwit I get this error:\nERROR ingest_logs:parse_logs: quickwit_opentelemetry::otlp::logs: skipping record\n\nIf I try to send logs via HTTP Instead of dropped_log_records being 10 is 2, this is the code I am using:\nuse anyhow::Result;\nuse opentelemetry::{global, trace::TracerProvider, KeyValue};\nuse opentelemetry_appender_tracing::layer;\nuse opentelemetry_otlp::WithExportConfig;\nuse opentelemetry_sdk::{runtime::Tokio, trace::Config, Resource};\nuse std::time::Duration;\nuse tracing_opentelemetry::OpenTelemetryLayer;\nuse tracing_subscriber::{fmt, layer::SubscriberExt, EnvFilter, Registry};\n\n/// Start the telemetry layer\n/// # Errors\n/// Will return an error if the telemetry layer fails to start\npub fn init(verbosity_level: tracing::Level) -> Result<()> {\n    let tracer_provider = opentelemetry_otlp::new_pipeline()\n        .tracing()\n        .with_exporter(\n            opentelemetry_otlp::new_exporter()\n                .tonic()\n                .with_timeout(Duration::from_secs(3)),\n        )\n        .with_trace_config(Config::default().with_resource(Resource::new(vec![\n            KeyValue::new(\"service.name\", env!(\"CARGO_PKG_NAME\")),\n            KeyValue::new(\"service.version\", env!(\"CARGO_PKG_VERSION\")),\n        ])))\n        .install_batch(Tokio)?;\n\n    let tracer = tracer_provider\n        .tracer_builder(env!(\"CARGO_PKG_NAME\"))\n        .with_version(env!(\"CARGO_PKG_VERSION\"))\n        .build();\n\n    global::set_tracer_provider(tracer_provider);\n\n    let otel_trace_layer = OpenTelemetryLayer::new(tracer);\n\n    let logger = opentelemetry_otlp::new_pipeline()\n        .logging()\n        .with_resource(Resource::new(vec![KeyValue::new(\n            env!(\"CARGO_PKG_NAME\"),\n            env!(\"CARGO_PKG_VERSION\"),\n        )]))\n        .with_exporter(opentelemetry_otlp::new_exporter().tonic())\n        .install_batch(Tokio)?;\n\n    let otel_logs_layer = layer::OpenTelemetryTracingBridge::new(&logger);\n\n    let fmt_layer = fmt::layer()\n        .with_file(true)\n        .with_line_number(true)\n        .with_thread_ids(false)\n        .with_thread_names(false)\n        .with_target(false)\n        .json();\n\n    // RUST_LOG=\n    let env_filter = EnvFilter::builder()\n        .with_default_directive(verbosity_level.into())\n        .from_env_lossy();\n\n    let subscriber = Registry::default()\n        .with(fmt_layer)\n        .with(otel_trace_layer)\n        .with(otel_logs_layer)\n        .with(env_filter);\n\n    Ok(tracing::subscriber::set_global_default(subscriber)?)\n}\nAny idea of what could it be wrong ?",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2024-08-26T06:48:15Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 5342,
+    "stateReason": null,
+    "title": "sending logs via otel-collector -- dropped_log_records",
+    "updatedAt": "2025-07-03T09:12:33Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5342"
+  },
+  {
+    "author": {
+      "login": "guilload"
+    },
+    "bodyText": "There is no API to do so in Quickwit 0.8.",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 3
+    },
+    "createdAt": "2024-10-22T18:25:46Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 5513,
+    "stateReason": null,
+    "title": "How to manually update the retention policy of an index (Quickwit 0.8)",
+    "updatedAt": "2025-03-17T22:09:19Z",
+    "upvoteCount": 3,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5513"
+  },
+  {
+    "author": {
+      "login": "reberhardt7"
+    },
+    "bodyText": "Is there a way to search for byte sequences in arbitrary binary blobs using quickwit? I'm not entirely sure how indexing would work, but I'm curious if it's possible to do this, even if it has bad performance.",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2024-11-02T00:10:49Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 5536,
+    "stateReason": null,
+    "title": "Searching binary blobs with quickwit?",
+    "updatedAt": "2024-11-02T00:10:49Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5536"
+  },
+  {
+    "author": {
+      "login": "zywsky"
+    },
+    "bodyText": "When I am trying below kind of postgres url as the metastore_uri value, and met \"database error: error with configurationn: invalid port number\" error.\npostgres://host1:123,host2:456/mydb\n\n  \n    \n      quickwit/docs/configuration/metastore-config.md\n    \n    \n         Line 38\n      in\n      1be6991\n    \n  \n  \n    \n\n        \n          \n           postgres://host1:123,host2:456/mydb \n        \n    \n  \n\n\nDo you know the reason? seems it's not supported for this kind of configuration.",
+    "category": {
+      "name": "General"
+    },
+    "closed": true,
+    "closedAt": "2024-10-23T19:55:59Z",
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2024-10-23T15:50:04Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5520,
+    "stateReason": "RESOLVED",
+    "title": "postgres - database error: error with configurationn: invalid port number",
+    "updatedAt": "2024-10-23T19:56:00Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5520"
+  },
+  {
+    "author": {
+      "login": "YangTao0"
+    },
+    "bodyText": "I'm a quickwit newbie。in my case, We have about 50T of data a day。We need to store this data in different indexes according to servername classification to facilitate quick query.\nAt the beginning we used vector to get data from kafka and then parsed and sent the large Ingest API source，like this:\n[sinks.to_quickwit_applogs]\ntype = \"http\"\nmethod = \"post\"\ninputs = [ \"app_pod_parser_qw\",\"app_vm_parser_qw\"]\nencoding.codec = \"json\"\nframing.method = \"newline_delimited\"\nuri = \"http://127.0.0.1:7280/api/v1/{{ servicename }}/ingest\"\nbatch.max_bytes = 102400\n\nBut  Ingest API does not support HA, and the performance is not satisfactory。\nSo We try to use kafka data source，I'm not sure how to configure，We have multiple topics and multiple brokers in different clusters：\nversion: 0.8\nsource_id: app_k8s_vm\nsource_type: kafka\nnum_pipelines: 4\nparams:\n  topic: app_k8s_vm\n  client_params:\n    bootstrap.servers: example01.com:9092,example02.com:9092\ntransform:\n  script: |\n    .message = downcase(string!(.message))\n    .timestamp = to_unix_timestamp(parse_timestamp!(.@timestamp, format: \"%+\"),\"milliseconds\")",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 3
+    },
+    "createdAt": "2024-09-26T02:45:03Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 5453,
+    "stateReason": null,
+    "title": "How to create one kafka source, multiple indexes",
+    "updatedAt": "2024-09-26T14:09:07Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5453"
+  },
+  {
+    "author": {
+      "login": "anshulgoel27"
+    },
+    "bodyText": "Does quickwit support fuzzy query feature similar to what lucene offers like the max_exapansion and prefixLength?\nhttps://lucene.apache.org/core/7_1_0/core/org/apache/lucene/search/FuzzyQuery.html#:~:text=Learn%20how%20to%20use%20FuzzyQuery%20to%20perform%20fuzzy%20search%20with",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2024-09-25T13:36:17Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5449,
+    "stateReason": null,
+    "title": "Fuzzy max_expansion and prefixlength support",
+    "updatedAt": "2024-09-25T14:06:41Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5449"
+  },
+  {
+    "author": {
+      "login": "mzupan"
+    },
+    "bodyText": "I have the following index\nNumber of published documents:\n119,144,410,710\nSize of published documents (uncompressed):\n313,456,623.89 MB\nNumber of published splits:\n9999\nSize of published splits:\n33,896,928.36 MB\n\nThe index mapping is\n{\n  \"field_mappings\": [\n    {\n      \"name\": \"timestamp\",\n      \"type\": \"datetime\",\n      \"fast\": true,\n      \"fast_precision\": \"seconds\",\n      \"indexed\": true,\n      \"input_formats\": [\n        \"iso8601\"\n      ],\n      \"output_format\": \"unix_timestamp_secs\",\n      \"stored\": true\n    },\n    {\n      \"name\": \"message\",\n      \"type\": \"text\",\n      \"fast\": false,\n      \"fieldnorms\": false,\n      \"indexed\": true,\n      \"record\": \"position\",\n      \"stored\": true,\n      \"tokenizer\": \"default\"\n    }\n  ],\n  \"tag_fields\": [],\n  \"store_source\": false,\n  \"index_field_presence\": false,\n  \"timestamp_field\": \"timestamp\",\n  \"mode\": \"dynamic\",\n  \"dynamic_mapping\": {\n    \"indexed\": true,\n    \"tokenizer\": \"raw\",\n    \"record\": \"basic\",\n    \"stored\": true,\n    \"expand_dots\": true,\n    \"fast\": {\n      \"normalizer\": \"raw\"\n    }\n  },\n  \"max_num_partitions\": 200,\n  \"tokenizers\": []\n}\n\nRight now its all kubernetes logs so looking to do a lot of needle/haystack type searches in it like as follows\ncluster:nameHere message:user@gmail.com\n\nMy grafana query looks like\n{\n  \"request\": {\n    \"url\": \"api/ds/query?ds_type=quickwit-quickwit-datasource&requestId=explore_66g\",\n    \"method\": \"POST\",\n    \"data\": {\n      \"queries\": [\n        {\n          \"refId\": \"A\",\n          \"datasource\": {\n            \"type\": \"quickwit-quickwit-datasource\",\n            \"uid\": \"a278d508-3294-473a-934d-65f398cb9b3e\"\n          },\n          \"query\": \"message:\\\"user@gmail.com\\\"\",\n          \"alias\": \"\",\n          \"metrics\": [\n            {\n              \"type\": \"logs\",\n              \"id\": \"3\",\n              \"settings\": {\n                \"limit\": \"100\",\n                \"sortDirection\": \"desc\"\n              }\n            }\n          ],\n          \"bucketAggs\": [\n            {\n              \"type\": \"date_histogram\",\n              \"id\": \"2\",\n              \"settings\": {\n                \"interval\": \"auto\"\n              },\n              \"field\": \"\"\n            }\n          ],\n          \"timeField\": \"\",\n          \"datasourceId\": 32,\n          \"intervalMs\": 900000,\n          \"maxDataPoints\": 1906\n        }\n      ],\n      \"from\": \"1721631600000\",\n      \"to\": \"1723273199000\"\n    },\n    \"hideFromInspector\": false\n  },\n  \"response\": {\n    \"message\": \"An error occurred within the plugin\",\n    \"messageId\": \"plugin.downstreamError\",\n    \"statusCode\": 500,\n    \"traceID\": \"\"\n  }\n}\n\nI'd be fine with like 2 week search if possible but right now its OOMing a search node each time I do it\nsearcher:\n  aggregation_memory_limit: 2G\n  fast_field_cache_capacity: 4G\n  split_footer_cache_capacity: 1500M\n  partial_request_cache_capacity: 256M\n  split_cache:\n    max_num_bytes: 2G\n    max_num_splits: 20000\n    num_concurrent_downloads: 2\n\nEach searcher node right now is 10Gi of Ram",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 7
+    },
+    "createdAt": "2024-08-13T21:18:05Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5314,
+    "stateReason": null,
+    "title": "Quickwit performance over large index",
+    "updatedAt": "2024-08-19T15:37:02Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5314"
+  },
+  {
+    "author": {
+      "login": "nbari"
+    },
+    "bodyText": "Hi, how could TLS be configured?  this is my current working configuration but I would like to enable/add my certs (private CA):\n---\nversion: 0.8\nnode_id: node-1\nlisten_address: 0.0.0.0\nmetastore_uri: postgres://user:pass@host/quickwit\n\nmetastore:\n  postgres:\n    min_connections: 0\n    max_connections: 10\n    acquire_connection_timeout: 10s\n    idle_connection_timeout: 10min\n    max_connection_lifetime: 30min\n\n\nindexer:\n  enable_otlp_endpoint: true\n\njaeger:\n  enable_endpoint: true",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2024-08-16T13:55:10Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5317,
+    "stateReason": null,
+    "title": "how to enable TLS",
+    "updatedAt": "2024-08-16T13:56:50Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5317"
+  },
+  {
+    "author": {
+      "login": "dtherhtun"
+    },
+    "bodyText": "According to docs, I couldn't update index setting on existing index except search_settings and retention. But I only see create an index using POST method (https://quickwit.io/docs/reference/rest-api#create-an-index). I tried using PATCH to update retention but it didn't work as expected. I really confuse to update retention configuration on existing index. I saw this PR (#4832) and tried it but quickwit didn't support to make update operation from cli in 8.2. How can i update retention policy in simplest way?",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2024-07-05T06:09:21Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 5195,
+    "stateReason": null,
+    "title": "How can I update retention policy on existing index?",
+    "updatedAt": "2024-07-05T06:09:21Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5195"
+  },
+  {
+    "author": {
+      "login": "tahayk"
+    },
+    "bodyText": "I've recently started trying Quickwit, the performance is super awesome, great job.\nBut now I'm stuck trying to write a search query to perform the following:\n\ncontext: I have created an index with dynamic mapping, this index contains random JSONs, totally unpredictable, and can be nested\nquestion1: how can I search for a value in all fields without knowing its name in advance ?\nquestion2: if I know part of the field's name, how can I search in these fields ?\n\nThank you in advance.",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2024-06-26T17:21:29Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5172,
+    "stateReason": null,
+    "title": "Search in all fields",
+    "updatedAt": "2024-06-27T10:26:35Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5172"
+  },
+  {
+    "author": {
+      "login": "bjernie"
+    },
+    "bodyText": "So I am currently working on this issue (#4431) using this as a template. I got it up and running and everything worked like it was supposed to.\nI then tried to use the Lambda beta 04 instead of beta 01 that is used in the example. Using that makes the searcher lambda throw this error:\nINFO searcher request: quickwit_lambda::searcher::api: new request method=\"POST\" route=\"/\" request_id=\"3790f8ef-2edb-44f5-89b0-fbe041a790b7\"\n\nERROR searcher request: quickwit_lambda::searcher::api: request rejected rejection=Rejection(NotFound) request_id=\"3790f8ef-2edb-44f5-89b0-fbe041a790b7\"\n\nINFO searcher request: quickwit_lambda::searcher::api: request completed status=\"404\" request_id=\"3790f8ef-2edb-44f5-89b0-fbe041a790b7\"\n\nI tried to add route, which would use the search route, to the input payload like the following (I remade the test CLI in go):\npayload, err := json.Marshal(map[string]interface{}{\n\t\t\"headers\": map[string]string{\n\t\t\t\"Content-Type\": \"application/json\",\n\t\t},\n\t\t\"requestContext\": map[string]interface{}{\n\t\t\t\"http\": map[string]string{\n\t\t\t\t\"method\": \"POST\",\n\t\t\t\t\"route\":  \"/api/v1/hdfs-logs/search\",\n\t\t\t},\n\t\t},\n\t\t\"body\":            jsonQuery,\n\t\t\"isBase64Encoded\": false,\n\t})\n\nIn the logs the route is still set as route=\"/\"\nDoes anybody know how to make the lambda beta 04 work?",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2024-05-29T20:40:20Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 5047,
+    "stateReason": null,
+    "title": "AWS Lambda beta 04 makes searcher lambda throw a \"route not found\" error",
+    "updatedAt": "2024-05-29T20:40:20Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5047"
+  },
+  {
+    "author": {
+      "login": "ibotty"
+    },
+    "bodyText": "If not is it somehow in scope?  It would make some things way easier.\nSee https://opster.com/guides/opensearch/opensearch-data-architecture/how-to-model-relationships-between-documents-in-opensearch-using-join/#How-to-use-the-join-field-type for an example.",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2024-05-24T13:48:53Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5031,
+    "stateReason": null,
+    "title": "Does quickwit support OpenSearch's `join_field`?",
+    "updatedAt": "2024-05-24T14:33:20Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5031"
+  },
+  {
+    "author": {
+      "login": "zbalkan"
+    },
+    "bodyText": "Hi all,\nI wonder how one should manage the retention period of the data written into Quickwit. Assume that we are focusing on PCI DSS compliance, and we must retain logs \"at least 12 months, with at least the most recent three months immediately available for analysis.\". We can call it hot and cold state, then removal. Should we solve it by the application using it? Or is there a best practice around it?\nShould we export data from Quickwit to another instance or to text files for cold storage/archiving?\nOne more question. If we use immutable splits, how can we delete data for retention?",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2024-04-25T11:50:08Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 4911,
+    "stateReason": null,
+    "title": "How one should manage the retention policy with Quickwit?",
+    "updatedAt": "2024-04-27T13:22:55Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/4911"
+  },
+  {
+    "author": {
+      "login": "nh2"
+    },
+    "bodyText": "I have a 100 GB log file and wanted to explore whether quickwit can help me do quieries against it faster than grep.\nI followed https://quickwit.io/docs/ingest-data/ingest-local-file after installing quickwit from my linux distribution (nix-shell -p quickwit).\nI hit the following obstacles I want to share:\nIt says to run quickwit run. When I do that, I get:\nquickwit run\n✘ Command failed: Failed to load node config.\n\nCaused by:\n    0: StorageError(kind=NotFound, source=No such file or directory (os error 2))\n    1: No such file or directory (os error 2)\n    2: Failed to read file file:///home/niklas/tmp/quickwit/config/quickwit.yaml\n\nThe tutorial does not explain where to get that config/quickwit.yaml from.\nI eventually figured that probably a default config is in the Github repo (it was), but it would be nice if it was somehow clearer where I can get the default config from, from either the tutorial or the CLI output.\nNext, I used the proposed stackoverflow-schemaless-config.yaml.\nI'm assuming \"schemaless\" will allow me to ingest any kind of text file.\nWhen I run quickwit tool local-ingest on a 500 KB file, I get this output:\n% quickwit tool local-ingest --index stackoverflow-schemaless --input-path /var/log/mylog.log\n❯ Ingesting documents locally...\n\n---------------------------------------------------\n Connectivity checklist \n ✔ metastore storage\n ✔ metastore\n ✔ index storage\n ✔ _ingest-cli-source\n\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  2.04MB/s Time 00:00:02\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  1.36MB/s Time 00:00:03\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  1.02MB/s Time 00:00:04\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.81MB/s Time 00:00:05\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:06\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:07\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:08\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:09\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:10\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:11\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:12\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:13\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:14\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:15\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:16\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:17\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:18\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:19\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:20\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:21\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:22\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:23\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:24\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:25\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:26\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:27\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:28\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:29\n Num docs   32068 Parse errs 32068 PublSplits   0 Input size     4MB Thrghput  0.00MB/s Time 00:00:30\n\nIndexed 0 out of 32,068 documents in 30s. Failed to index 32,068 document(s). (100.0% error rate)\n\nClearing local cache directory...\n✔ Local cache directory cleared.\n✘ Command failed: Failed to ingest all the documents.\n\nI'm immediately confused by the fact that this invocation runs for, and only fails after, 30 seconds even though my file is only 500 KB and it apparently parsed everything in the first line of output.\nWhat is it doing in those 30 seconds? Unclear.\nAlso the fact that some lines show e.g. 1.36MB/s when it probably isn't doing anything, is confusing. Probably some rolling average causing it (it's weird that the rolling average counts on when the program is apparently already done with the file).\nWhy is it failing to parse the file? Unclear. I have plenty of Parse errs but the UX is not discoverable in the sense that there's no clue what I should do next to investigate those errors.\nIs schema-less not what I expected? It would be nice if the tutorial could explain that if that's the case.\nI hope this is useful feedback regarding \"let's try this tool out quickly\" experience, thanks!",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 3
+    },
+    "createdAt": "2024-02-07T13:31:39Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 4534,
+    "stateReason": null,
+    "title": "Quick first feedback from trying to index a local log file",
+    "updatedAt": "2024-04-01T08:53:20Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/4534"
+  },
+  {
+    "author": {
+      "login": "Elexy"
+    },
+    "bodyText": "Would this be worth a try to replace our Solr indexes? We index many large JSON documents in there with many properties and some very big HTML or text properties. We do keep an archive already in S3 so this spiked my interest. The main use case is to find matches for strings in those documents and then return not only the document but preferably metadata on where in the document the match is and perhaps even a snippet.",
+    "category": {
+      "name": "General"
+    },
+    "closed": true,
+    "closedAt": "2024-03-28T06:56:05Z",
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2024-03-27T15:24:07Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 4803,
+    "stateReason": "RESOLVED",
+    "title": "Replacing Solr for full text search",
+    "updatedAt": "2024-03-28T07:26:25Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/4803"
+  },
+  {
+    "author": {
+      "login": "eratio08"
+    },
+    "bodyText": "Just FYI quickwit and other service utilizing jemalloc are currently not working on the Raspberry Pi 5 if the 16K page size is used.\nSee raspberrypi/bookworm-feedback#107 for a workaround (switch back to 4K page size)\nThe error message will look like\n <jemalloc>: Unsupported system page size\n <jemalloc>: Unsupported system page size\n memory allocation of 5 bytes failed\nthe workaround is to add the following to the boot/config.txt\nkernel=kernel8.img",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2024-01-26T22:06:31Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 4468,
+    "stateReason": null,
+    "title": "jemalloc issue on rpi5",
+    "updatedAt": "2024-03-26T09:25:26Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/4468"
+  },
+  {
+    "author": {
+      "login": "ibotty"
+    },
+    "bodyText": "Hi!\nI am investigating using Quickwit for our customer facing search. We do have a problem that our (source) data is not that great. It is full of spam and it's unfeasible to clean it up but it should still find the right things.\nAn example might illustrate our problem.\nWe do have many documents with the string chapter somewhere in the indexed field among many other strings. It cannot be a stopword though, because we also do have the field The Chapter which should be found.\nHow can this be achieved?\nWe also do have some fields with extra characters that are part of the input search. Think M*A*S*H which ideally should be found by the search string m*a*s*h as well as mash.\nIs this possible? If so, how?\nThank you in advance!",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2024-01-31T09:56:34Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 4482,
+    "stateReason": null,
+    "title": "Designing Search index for general user search",
+    "updatedAt": "2024-02-12T03:42:19Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/4482"
+  },
+  {
+    "author": {
+      "login": "eratio08"
+    },
+    "bodyText": "Hello, I'm new to using quickwit. I was wondering how I can set the log level of the quickwit service running in the Docker container? I could not find any information in the docs and searching the code I only found \n  \n    \n      quickwit/quickwit/quickwit-cli/src/main.rs\n    \n    \n         Line 66\n      in\n      7458bbf\n    \n  \n  \n    \n\n        \n          \n           setup_logging_and_tracing(command.default_log_level(), ansi_colors, build_info)?; \n        \n    \n  \n\n which seems to always pick the default log level of info.\nIs there any way to set the log level of the run command?",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 3
+    },
+    "createdAt": "2024-01-14T13:04:18Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 4377,
+    "stateReason": null,
+    "title": "Set the log level of `run` command",
+    "updatedAt": "2024-01-19T14:44:38Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/4377"
+  }
+]
