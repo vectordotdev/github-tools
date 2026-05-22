@@ -33,6 +33,10 @@
 
 ![Top 10 PR Contributors (last 12 months)](../data/images/quickwit-oss_quickwit_pull_requests.contributors_top10_12m.png)
 
+---
+
+![Unique PR Contributors (new vs returning)](../data/images/quickwit-oss_quickwit_pull_requests.unique_contributors.png)
+
 ## Discussions
 
 ![Monthly Discussions](../data/images/quickwit-oss_quickwit_discussions.monthly_trend.png)
