@@ -178,6 +178,9 @@ def main():
             output_path = os.path.join(OUTPUT_DIR, f"{prefix}.contributors_top10_12m.png")
             plot_contributor_heatmap(contributor_csv, table, output_path)
 
+            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.unique_contributors.png")
+            plot_unique_contributors(contributor_csv, table, output_path)
+
     # Discussion trends
     disc_prefix = f"{env['REPO_OWNER']}_{env['REPO_NAME']}_discussions"
     disc_csv = os.path.join(args.input_dir, f"{disc_prefix}.monthly_summary.csv")
@@ -539,6 +542,107 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
         plt.close()
     except Exception as e:
         logging.warning(f"[{table}] Could not generate contributor heatmap: {e}")
+
+
+def plot_unique_contributors(path, table, output_path, window_months=12):
+    try:
+        df = pd.read_csv(path)
+        if df.empty:
+            logging.warning(f"[{table}] Contributor CSV is empty: {path}")
+            return
+
+        df = df[~df["user_login"].str.endswith("[bot]", na=False)]
+        df = df.dropna(subset=["month", "user_login"])
+        if df.empty:
+            logging.warning(f"[{table}] No non-bot contributors in {path}")
+            return
+
+        # First-ever month a user appears (across the entire history, not the window)
+        first_month = df.groupby("user_login")["month"].min()
+
+        months_all = sorted(df["month"].unique())
+        window = months_all[-window_months:]
+        if not window:
+            logging.warning(f"[{table}] No contributor data for unique-contributors plot")
+            return
+
+        df_window = df[df["month"].isin(window)].copy()
+        df_window["is_new"] = df_window.apply(
+            lambda r: first_month[r["user_login"]] == r["month"], axis=1
+        )
+
+        # Per-month unique counts split into new vs returning
+        per_month = (
+            df_window.groupby(["month", "is_new"])["user_login"]
+            .nunique()
+            .unstack(fill_value=0)
+            .reindex(window, fill_value=0)
+        )
+        new_counts = per_month.get(True, pd.Series(0, index=window))
+        returning_counts = per_month.get(False, pd.Series(0, index=window))
+
+        def window_stats(n_months):
+            recent = window[-n_months:]
+            sub = df_window[df_window["month"].isin(recent)]
+            total = sub["user_login"].nunique()
+            new_users = sub.loc[sub["is_new"], "user_login"].nunique()
+            return total, new_users, total - new_users
+
+        s12 = window_stats(12)
+        s6 = window_stats(6)
+        s1 = window_stats(1)
+
+        fig, (ax, ax_stats) = plt.subplots(
+            1, 2, figsize=(14, 6), gridspec_kw={"width_ratios": [3.2, 1]}
+        )
+
+        x = np.arange(len(window))
+        ax.bar(x, returning_counts.values, color="#8E5CE6", label="Returning")
+        ax.bar(x, new_counts.values, bottom=returning_counts.values,
+               color="#36B37E", label="New")
+
+        totals = returning_counts.values + new_counts.values
+        for i, t in enumerate(totals):
+            if t > 0:
+                ax.text(i, t, str(int(t)), ha="center", va="bottom", fontsize=9)
+
+        ax.set_xticks(x)
+        ax.set_xticklabels(window, rotation=45, ha="right")
+        ax.yaxis.set_major_locator(MaxNLocator(integer=True))
+        set_axis_labels(ax, "Month", "Unique contributors")
+        ax.set_title(f"Unique {table} contributors (last {len(window)} months)", fontsize=16)
+        ax.legend(loc="upper left")
+
+        ax_stats.axis("off")
+        ax_stats.set_title("Window totals", fontsize=14)
+
+        def fmt(label, stats):
+            total, new_users, returning_users = stats
+            return (
+                f"{label}\n"
+                f"  total:     {total}\n"
+                f"  new:       {new_users}\n"
+                f"  returning: {returning_users}\n"
+            )
+
+        text = "\n".join([
+            fmt("Last 12 months", s12),
+            fmt("Last 6 months", s6),
+            fmt("Last month", s1),
+        ])
+        ax_stats.text(
+            0.0, 0.95, text,
+            ha="left", va="top",
+            family="monospace", fontsize=11,
+            transform=ax_stats.transAxes,
+        )
+
+        plt.tight_layout()
+        plt.savefig(output_path)
+        logging.info(f"Saved plot to {output_path}")
+        plt.close()
+    except Exception as e:
+        logging.warning(f"[{table}] Could not generate unique-contributors plot: {e}")
 
 
 if __name__ == "__main__":
