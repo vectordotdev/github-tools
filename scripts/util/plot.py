@@ -597,7 +597,7 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
         )
 
         x = np.arange(len(window))
-        ax.bar(x, returning_counts.values, color="#4C9AFF", label="Returning")
+        ax.bar(x, returning_counts.values, color="#8E5CE6", label="Returning")
         ax.bar(x, new_counts.values, bottom=returning_counts.values,
                color="#36B37E", label="New")
 
