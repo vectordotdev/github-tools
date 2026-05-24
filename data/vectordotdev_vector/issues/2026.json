@@ -2199,6 +2199,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 7036930517801581248,
+        "name": "source: aws_s3",
+        "color": "5ED9F6",
+        "description": "Anything `aws_s3` source related"
       }
     ],
     "number": 25182,
@@ -2807,6 +2813,12 @@
         "description": "",
         "id": 9142189789878127939,
         "name": "under_review"
+      },
+      {
+        "id": 1963617647073758968,
+        "name": "sink: aws_s3",
+        "color": "5ED9F6",
+        "description": "Anything `aws_s3` sink related"
       }
     ],
     "number": 25156,
@@ -2914,6 +2926,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 3392094781726188481,
+        "name": "source: gcp_pubsub",
+        "color": "5ED9F6",
+        "description": "Anything `gcp_pubsub` source related"
       }
     ],
     "number": 25149,
@@ -3117,6 +3135,12 @@
         "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
         "name": "domain: ci"
+      },
+      {
+        "id": 3416928857745703519,
+        "name": "sink: honeycomb",
+        "color": "5ED9F6",
+        "description": "Anything `honeycomb` sink related"
       }
     ],
     "number": 25141,
@@ -3292,6 +3316,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 5855082884786344119,
+        "name": "source: kafka",
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related"
       }
     ],
     "number": 25130,
@@ -3315,6 +3345,12 @@
         "description": "Anything related to the Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain: sinks"
+      },
+      {
+        "id": 7130733453807572296,
+        "name": "sink: aws_cloudwatch_logs",
+        "color": "5ED9F6",
+        "description": "Anything `aws_cloudwatch_logs` sink related"
       }
     ],
     "number": 25128,
@@ -3727,6 +3763,12 @@
         "description": "",
         "id": 81604373089705258,
         "name": "work in progress"
+      },
+      {
+        "id": 4345892752843924220,
+        "name": "source: http_server",
+        "color": "5ED9F6",
+        "description": "Anything `http_server` source related"
       }
     ],
     "number": 25108,
@@ -4034,6 +4076,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 8167791065221546555,
+        "name": "source: prometheus_scrape",
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_scrape` source related"
       }
     ],
     "number": 25095,
@@ -4553,6 +4601,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 4345892752843924220,
+        "name": "source: http_server",
+        "color": "5ED9F6",
+        "description": "Anything `http_server` source related"
       }
     ],
     "number": 25073,
@@ -4750,6 +4804,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 5874407929034104147,
+        "name": "sink: postgres",
+        "color": "5ED9F6",
+        "description": ""
       }
     ],
     "number": 25065,
@@ -4824,6 +4884,12 @@
         "description": "Anything related to the Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain: sinks"
+      },
+      {
+        "id": 4295137245507014621,
+        "name": "sink: aws_cloudwatch_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `aws_cloudwatch_metrics` sink related"
       }
     ],
     "number": 25060,
@@ -5005,6 +5071,12 @@
         "description": "Anything related to the Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain: sinks"
+      },
+      {
+        "id": 8712994079615624380,
+        "name": "sink: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new sink"
       }
     ],
     "number": 25055,
@@ -5202,7 +5274,14 @@
     "draft": false,
     "id": 3446150477,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "id": 7582498524073248249,
+        "name": "source: nats",
+        "color": "5ED9F6",
+        "description": "Anything `nats` source related"
+      }
+    ],
     "number": 25042,
     "pull_request": {},
     "state": "open",
@@ -7238,6 +7317,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 6088961677013045117,
+        "name": "sink: gcp_stackdriver_logs",
+        "color": "5ED9F6",
+        "description": "Anything `gcp_stackdriver_logs` sink related"
       }
     ],
     "number": 24968,
@@ -7348,6 +7433,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 6326138185091387078,
+        "name": "source: statsd",
+        "color": "5ED9F6",
+        "description": "Anything `statsd` source related"
       }
     ],
     "number": 24963,
@@ -8321,6 +8412,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 5855082884786344119,
+        "name": "source: kafka",
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related"
       }
     ],
     "number": 24918,
@@ -8356,6 +8453,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 8095085639320294242,
+        "name": "sink: vector",
+        "color": "5ED9F6",
+        "description": "Anything `vector` sink related"
       }
     ],
     "number": 24917,
@@ -8408,6 +8511,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 7297509477484979924,
+        "name": "source: dnstap",
+        "color": "5ED9F6",
+        "description": "Anything `dnstap` source related"
       }
     ],
     "number": 24915,
@@ -8437,6 +8546,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 5470723790526904733,
+        "name": "source: aws_kinesis_firehose",
+        "color": "5ED9F6",
+        "description": "Anything `aws_kinesis_firehose` source related"
       }
     ],
     "number": 24914,
@@ -8785,6 +8900,12 @@
         "description": "",
         "id": 3011780820511428781,
         "name": "editorial review"
+      },
+      {
+        "id": 2424438130306630529,
+        "name": "sink: opentelemetry",
+        "color": "5ED9F6",
+        "description": "Anything `opentelemetry` sink related"
       }
     ],
     "number": 24897,
@@ -10126,6 +10247,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 7585563506872185314,
+        "name": "transform: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new transform"
       }
     ],
     "number": 24839,
@@ -10569,6 +10696,12 @@
         "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
         "name": "domain: ci"
+      },
+      {
+        "id": 1086792363740752897,
+        "name": "source: host_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `host_metrics` source related"
       }
     ],
     "number": 24819,
@@ -10598,6 +10731,12 @@
         "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
         "name": "domain: ci"
+      },
+      {
+        "id": 1086792363740752897,
+        "name": "source: host_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `host_metrics` source related"
       }
     ],
     "number": 24818,
@@ -11955,6 +12094,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 8712994079615624380,
+        "name": "sink: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new sink"
       }
     ],
     "number": 24770,
@@ -13668,6 +13813,12 @@
         "description": "",
         "id": 81604373089705258,
         "name": "work in progress"
+      },
+      {
+        "id": 1963617647073758968,
+        "name": "sink: aws_s3",
+        "color": "5ED9F6",
+        "description": "Anything `aws_s3` sink related"
       }
     ],
     "number": 24706,
@@ -13761,6 +13912,12 @@
         "description": "",
         "id": 3011780820511428781,
         "name": "editorial review"
+      },
+      {
+        "id": 7404388270640183005,
+        "name": "transform: throttle",
+        "color": "5ED9F6",
+        "description": "Anything `throttle` transform related"
       }
     ],
     "number": 24702,
@@ -14057,6 +14214,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 5681977139403082215,
+        "name": "sink: aws_sqs",
+        "color": "5ED9F6",
+        "description": "Anything `aws_sqs` sink related"
       }
     ],
     "number": 24689,
@@ -14464,6 +14627,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 7036930517801581248,
+        "name": "source: aws_s3",
+        "color": "5ED9F6",
+        "description": "Anything `aws_s3` source related"
       }
     ],
     "number": 24670,
@@ -14499,6 +14668,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 1086792363740752897,
+        "name": "source: host_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `host_metrics` source related"
       }
     ],
     "number": 24666,
@@ -14678,6 +14853,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 2424784285363771579,
+        "name": "source: syslog",
+        "color": "5ED9F6",
+        "description": "Anything `syslog` source related"
       }
     ],
     "number": 24657,
@@ -14713,6 +14894,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 8825930965265129634,
+        "name": "sink: websocket",
+        "color": "5ED9F6",
+        "description": "Anything `websocket` sink related"
       }
     ],
     "number": 24654,
@@ -14887,7 +15074,14 @@
     "draft": false,
     "id": 3275493210,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "id": 5855082884786344119,
+        "name": "source: kafka",
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related"
+      }
+    ],
     "number": 24647,
     "pull_request": {},
     "state": "open",
@@ -14979,6 +15173,12 @@
         "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
         "name": "domain: ci"
+      },
+      {
+        "id": 8167791065221546555,
+        "name": "source: prometheus_scrape",
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_scrape` source related"
       }
     ],
     "number": 24644,
@@ -15158,6 +15358,12 @@
         "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
         "name": "domain: ci"
+      },
+      {
+        "id": 8712994079615624380,
+        "name": "sink: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new sink"
       }
     ],
     "number": 24633,
@@ -15226,6 +15432,12 @@
         "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
         "name": "domain: ci"
+      },
+      {
+        "id": 2516345231450418203,
+        "name": "source: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new source"
       }
     ],
     "number": 24628,
@@ -15447,6 +15659,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 7036930517801581248,
+        "name": "source: aws_s3",
+        "color": "5ED9F6",
+        "description": "Anything `aws_s3` source related"
       }
     ],
     "number": 24616,
@@ -16439,6 +16657,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 8167791065221546555,
+        "name": "source: prometheus_scrape",
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_scrape` source related"
       }
     ],
     "number": 24570,
@@ -16462,6 +16686,12 @@
         "description": "Anything related to Vector's transform components",
         "id": 4876837993745139454,
         "name": "domain: transforms"
+      },
+      {
+        "id": 308046406784353022,
+        "name": "transform: reduce",
+        "color": "5ED9F6",
+        "description": "Anything `reduce` transform related"
       }
     ],
     "number": 24568,
@@ -16485,6 +16715,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 5855082884786344119,
+        "name": "source: kafka",
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related"
       }
     ],
     "number": 24566,
@@ -16839,6 +17075,12 @@
         "description": "Anything related to the Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain: sinks"
+      },
+      {
+        "id": 6859036421233790357,
+        "name": "sink: new_relic",
+        "color": "5ED9F6",
+        "description": "Anything `new_relic` sink related"
       }
     ],
     "number": 24553,
@@ -16884,6 +17126,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 5855082884786344119,
+        "name": "source: kafka",
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related"
       }
     ],
     "number": 24550,
@@ -16936,6 +17184,12 @@
         "description": "Anything related to Vector's transform components",
         "id": 4876837993745139454,
         "name": "domain: transforms"
+      },
+      {
+        "id": 7585563506872185314,
+        "name": "transform: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new transform"
       }
     ],
     "number": 24547,
@@ -18057,6 +18311,12 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
         "name": "no-changelog"
+      },
+      {
+        "id": 1380913784685102377,
+        "name": "sink: axiom",
+        "color": "5ED9F6",
+        "description": "Anything `axiom` sink related"
       }
     ],
     "number": 24489,
@@ -19110,6 +19370,12 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 1951021668007277535,
         "name": "meta: awaiting author"
+      },
+      {
+        "id": 3167616327810328810,
+        "name": "source: file",
+        "color": "5ED9F6",
+        "description": "Anything `file` source related"
       }
     ],
     "number": 24440,
