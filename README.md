@@ -99,6 +99,9 @@ Promote charts to commit:
 cp out/images/*.png data/images/
 ```
 
+> [!NOTE]
+> This copy is intentionally manual — `generate-all` and `plot.py` will not do it for you. Review the regenerated charts in `out/images/` first; only promote to `data/images/` once you're happy with what will appear on the trend pages.
+
 ## 3. (Optional) Purge stale container images
 
 ```shell

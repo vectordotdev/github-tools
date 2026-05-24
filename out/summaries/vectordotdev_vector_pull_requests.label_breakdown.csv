@@ -1,181 +1,198 @@
 label_name,count
-domain: deps,2679
-domain: external docs,1269
-domain: sinks,1124
-domain: core,1058
-domain: sources,986
-domain: vrl,617
-domain: ci,587
-domain: transforms,414
-type: tech debt,381
-type: enhancement,358
-domain: topology,266
-type: bug,242
-domain: observability,197
-domain: vdev,183
-domain: releasing,170
-domain: tests,154
-domain: codecs,110
-domain: config,102
-domain: metrics,81
-type: feature,80
-domain: performance,66
-type: task,60
-dependencies,59
-domain: dev,58
-domain: data model,50
-source: file,42
+domain: deps,3810
+no-changelog,2697
+domain: external docs,1555
+domain: core,1355
+domain: sinks,1285
+domain: sources,1120
+domain: ci,872
+domain: vrl,623
+domain: transforms,471
+domain: vdev,452
+type: tech debt,445
+type: enhancement,362
+domain: topology,298
+domain: releasing,256
+type: bug,247
+domain: observability,206
+domain: tests,176
+domain: codecs,124
+dependencies,116
+domain: config,114
+meta: awaiting author,109
+domain: metrics,82
+type: feature,81
+domain: performance,73
+type: task,62
+domain: dev,62
+javascript,52
+source: file,51
+domain: data model,51
+domain: rfc,46
 domain: networking,41
-domain: rfc,40
-sink: elasticsearch,37
-domain: buffers,35
-transform: remap,33
-source: journald,33
+sink: elasticsearch,40
+domain: buffers,39
+transform: remap,36
+source: kafka,34
+source: journald,34
+domain: security,33
+source: internal_metrics,32
 provider: aws,32
 domain: cli,32
-source: internal_metrics,30
-domain: security,30
-domain: api,28
-source: kafka,27
-source: http_server,26
-sink: loki,24
-sink: kafka,24
-sink: http,24
-meta: breaking change,23
-domain: internal docs,23
+source: http_server,31
+domain: api,30
+sink: loki,26
+sink: kafka,26
+sink: http,25
+meta: breaking change,24
+domain: internal docs,24
+sink: datadog_metrics,23
+sink: datadog_logs,23
+meta: regression,23
+source: host_metrics,22
+source: datadog_agent,22
+sink: aws_s3,22
+sink: aws_cloudwatch_logs,22
+source: splunk_hec,21
 source: socket,21
-meta: regression,21
-sink: datadog_metrics,20
-sink: aws_s3,20
-sink: aws_cloudwatch_logs,20
+meta: blocked,21
+editorial review,21
+sink: vector,20
+platform: kubernetes,20
 needs: docs,20
-meta: blocked,20
-source: splunk_hec,19
-source: host_metrics,19
-sink: datadog_logs,19
+source: kubernetes_logs,19
 provider: gcp,19
-sink: vector,18
-source: datadog_agent,17
-sink: pulsar,17
-platform: docker,17
-sink: splunk_hec,16
+sink: splunk_hec,18
+sink: pulsar,18
+platform: docker,18
+platform: windows,17
 sink: influxdb_metrics,16
-platform: windows,16
-platform: kubernetes,16
 source: vector,15
-source: syslog,14
-source: kubernetes_logs,14
+source: syslog,15
+source: opentelemetry,15
+source: aws_s3,15
+sink: aws_kinesis_streams,15
 sink: statsd,14
-sink: aws_kinesis_streams,14
+sink: aws_cloudwatch_metrics,14
+domain: schemas,14
 sink: socket,13
-sink: aws_cloudwatch_metrics,13
-javascript,13
-editorial review,13
+sink: datadog_traces,13
+provider: datadog,13
 domain: unit tests,13
 domain: logs,13
 domain: administration,13
-source: opentelemetry,12
-source: aws_s3,12
+source: gcp_pubsub,12
 sink: prometheus_remote_write,12
 sink: gcp_cloud_storage,12
-sink: datadog_traces,12
 platform: rpm,12
 platform: helm,12
 platform: debian,12
-source: gcp_pubsub,11
+source: statsd,11
+sink: new,11
+sink: file,11
+sink: clickhouse,11
 sink: aws_kinesis_firehose,11
 domain: startup,11
-domain: schemas,11
 transform: log_to_metric,10
+source: prometheus_scrape,10
 source: logstash,10
 source: docker_logs,10
 sink: prometheus_exporter,10
 sink: papertrail,10
+sink: influxdb_logs,10
+sink: gcp_stackdriver_logs,10
 sink: gcp_pubsub,10
-sink: file,10
 domain: reload,10
-sink: influxdb_logs,9
-sink: gcp_stackdriver_logs,9
-sink: clickhouse,9
-provider: datadog,9
+source: heroku_logs,9
+do not merge,9
 transform: route,8
 transform: lua,8
 transform: filter,8
-source: statsd,8
-source: heroku_logs,8
+sink: humio_logs,8
+sink: aws_sqs,8
+vrl: playground,7
+transform: sample,7
+transform: reduce,7
+transform: aws_ec2_metadata,7
+source: postgresql_metrics,7
+source: new,7
+source: nats,7
 source: fluent,7
-sink: humio_logs,7
+sink: datadog_events,7
+sink: azure_blob,7
 domain: parsing,7
 domain: architecture,7
-vrl: playground,6
-transform: sample,6
-transform: aws_ec2_metadata,6
-source: postgresql_metrics,6
-source: nats,6
+vrl: stdlib,6
 source: mongodb_metrics,6
 source: internal_logs,6
+source: http_client,6
 source: aws_sqs,6
-sink: new,6
-sink: datadog_events,6
-sink: azure_blob,6
-sink: aws_sqs,6
+sink: opentelemetry,6
+sink: new_relic,6
+sink: honeycomb,6
 needs: approval,6
-transform: reduce,5
-source: http_client,5
-sink: new_relic,5
+website: css,5
+source: dnstap,5
+source: aws_kinesis_firehose,5
 sink: nats,5
 sink: blackhole,5
+sink: amqp,5
 provider: humio,5
 needs: tests,5
 domain: setup,5
 domain: platforms,5
 domain: healthchecks,5
+domain: enrichment_tables,5
 domain: auth,5
-do not merge,5
+source: websocket,4
 source: stdin,4
-source: prometheus_scrape,4
+source: redis,4
+source: prometheus_remote_write,4
 source: nginx_metrics,4
-source: new,4
 source: mqtt,4
-source: dnstap,4
-source: aws_kinesis_firehose,4
 sink: sematext_metrics,4
-sink: opentelemetry,4
-sink: honeycomb,4
+sink: redis,4
 sink: console,4
-sink: amqp,4
 rust,4
+provider: azure,4
+domain: traces,4
 domain: templating,4
 domain: shutdown,4
 domain: delivery,4
 website:aesthetics-only,3
-website: css,3
-source: websocket,3
-source: redis,3
-source: prometheus_remote_write,3
+transform: aggregate,3
+source: okta,3
 source: exec,3
 source: aws_ecs_metrics,3
 source: apache_metrics,3
+sink: websocket,3
+sink: gcp_chronicle,3
+sink: appsignal,3
 provider: splunk,3
 provider: elastic,3
-provider: azure,3
-domain: traces,3
+gira,3
 domain: processing,3
+domain: filtering,3
+complexity: simple,3
 work in progress,2
+website: releases,2
 vrl: typedef,2
-vrl: stdlib,2
 under_review,2
+transform: throttle,2
 transform: tag_cardinality_limit,2
+transform: new,2
 transform: metric_to_log,2
+transform: dedupe,2
 source: file_descriptor,2
 source: datadog_logs,2
 source: amqp,2
-sink: redis,2
+sink: postgres,2
 sink: new_relic_logs,2
-sink: gcp_chronicle,2
+sink: humio_metrics,2
+sink: greptimedb,2
 sink: datadog_archives,2
 sink: azure_monitor_logs,2
-sink: appsignal,2
+sink: axiom,2
 ruby,2
 provider: sematext,2
 provider: heroku,2
@@ -184,31 +201,28 @@ platform: macos,2
 platform: centos,2
 platform: arm64,2
 meta: idea,2
+domain: website,2
 domain: soak tests,2
 domain: reliability,2
-domain: filtering,2
+domain: opentelemetry,2
 domain: enterprise,2
-domain: enrichment_tables,2
+domain: enriching,2
+codex,2
 website: template,1
-website: releases,1
+website: operations,1
 website: javascript,1
 website: highlights,1
+website: guides,1
 website: blog,1
 type: help,1
-transform: throttle,1
-transform: dedupe,1
-source: okta,1
+transform: exclusive_route,1
+source: prometheus_pushgateway,1
 source: eventstoredb_metrics,1
 source: demo_logs,1
-sink: websocket,1
 sink: sematext_logs,1
-sink: postgres,1
 sink: mqtt,1
-sink: humio_metrics,1
-sink: greptimedb,1
 sink: gcp_stackdriver_metrics,1
 sink: databend,1
-sink: axiom,1
 provider: new relic,1
 provider: influxdata,1
 provider: honeycomb,1
@@ -222,12 +236,8 @@ have: should,1
 have: must,1
 hacktoberfest,1
 github_actions,1
-gira,1
-domain: website,1
-domain: opentelemetry,1
+enrichment_table: csv,1
+domain: validation,1
 domain: memory,1
-domain: enriching,1
 domain: compression,1
 domain: ARC,1
-complexity: simple,1
-codex,1

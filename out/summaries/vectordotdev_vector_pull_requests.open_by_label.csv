@@ -1,175 +1,193 @@
 label_name,open_count,closed_count
-domain: external docs,44,1225
-domain: sources,40,946
-domain: sinks,36,1088
-domain: ci,22,565
-domain: transforms,10,404
-domain: core,8,1050
-domain: topology,4,262
-editorial review,4,9
-domain: releasing,3,167
-sink: opentelemetry,2,2
+no-changelog,63,2634
+domain: external docs,58,1497
+domain: sinks,58,1227
+domain: sources,57,1063
+meta: awaiting author,56,53
+domain: deps,40,3770
+domain: ci,33,839
+domain: core,18,1337
+domain: transforms,14,457
+domain: vdev,6,446
+source: kafka,6,28
+domain: topology,5,293
+domain: releasing,5,251
+source: file,4,47
+editorial review,4,17
+sink: new,4,7
+source: prometheus_scrape,4,6
+sink: opentelemetry,4,2
+source: http_server,3,28
+source: host_metrics,3,19
+source: aws_s3,3,12
+source: new,3,4
+transform: aggregate,3,0
+type: tech debt,2,443
+domain: rfc,2,44
+sink: loki,2,24
+sink: aws_cloudwatch_logs,2,20
+sink: aws_s3,2,20
+source: kubernetes_logs,2,17
+sink: clickhouse,2,9
+source: statsd,2,9
+do not merge,2,7
+transform: reduce,2,5
+sink: redis,2,2
+domain: opentelemetry,2,0
+transform: new,2,0
 under_review,2,0
 work in progress,2,0
-type: bug,1,241
-domain: codecs,1,109
-domain: config,1,101
-domain: metrics,1,80
-domain: rfc,1,39
-domain: buffers,1,34
-domain: api,1,27
-sink: http,1,23
-platform: kubernetes,1,15
-do not merge,1,4
-source: http_client,1,4
+type: bug,1,246
+domain: codecs,1,123
+dependencies,1,115
+domain: config,1,113
+domain: metrics,1,81
+domain: performance,1,72
+javascript,1,51
+domain: buffers,1,38
+source: internal_metrics,1,31
+domain: api,1,29
+sink: kafka,1,25
+sink: http,1,24
+source: splunk_hec,1,20
+platform: kubernetes,1,19
+sink: vector,1,19
+sink: pulsar,1,17
+sink: splunk_hec,1,17
+sink: aws_kinesis_streams,1,14
+source: opentelemetry,1,14
+source: syslog,1,14
+sink: aws_cloudwatch_metrics,1,13
+source: gcp_pubsub,1,11
+sink: gcp_stackdriver_logs,1,9
+sink: aws_sqs,1,7
+source: nats,1,6
+source: postgresql_metrics,1,6
+sink: honeycomb,1,5
+sink: new_relic,1,5
+source: http_client,1,5
+domain: enrichment_tables,1,4
+source: aws_kinesis_firehose,1,4
+source: dnstap,1,4
+domain: traces,1,3
 source: mqtt,1,3
-source: new,1,3
-domain: opentelemetry,1,0
-sink: greptimedb,1,0
-domain: deps,0,2679
-domain: vrl,0,617
-type: tech debt,0,381
-type: enhancement,0,358
-domain: observability,0,197
-domain: vdev,0,183
-domain: tests,0,154
-type: feature,0,80
-domain: performance,0,66
-type: task,0,60
-dependencies,0,59
-domain: dev,0,58
-domain: data model,0,50
-source: file,0,42
+source: redis,1,3
+complexity: simple,1,2
+sink: websocket,1,2
+sink: axiom,1,1
+sink: greptimedb,1,1
+sink: postgres,1,1
+transform: throttle,1,1
+domain: vrl,0,623
+type: enhancement,0,362
+domain: observability,0,206
+domain: tests,0,176
+type: feature,0,81
+domain: dev,0,62
+type: task,0,62
+domain: data model,0,51
 domain: networking,0,41
-sink: elasticsearch,0,37
-source: journald,0,33
-transform: remap,0,33
+sink: elasticsearch,0,40
+transform: remap,0,36
+source: journald,0,34
+domain: security,0,33
 domain: cli,0,32
 provider: aws,0,32
-domain: security,0,30
-source: internal_metrics,0,30
-source: kafka,0,27
-source: http_server,0,26
-sink: kafka,0,24
-sink: loki,0,24
-domain: internal docs,0,23
-meta: breaking change,0,23
-meta: regression,0,21
+domain: internal docs,0,24
+meta: breaking change,0,24
+meta: regression,0,23
+sink: datadog_logs,0,23
+sink: datadog_metrics,0,23
+source: datadog_agent,0,22
+meta: blocked,0,21
 source: socket,0,21
-meta: blocked,0,20
 needs: docs,0,20
-sink: aws_cloudwatch_logs,0,20
-sink: aws_s3,0,20
-sink: datadog_metrics,0,20
 provider: gcp,0,19
-sink: datadog_logs,0,19
-source: host_metrics,0,19
-source: splunk_hec,0,19
-sink: vector,0,18
-platform: docker,0,17
-sink: pulsar,0,17
-source: datadog_agent,0,17
-platform: windows,0,16
+platform: docker,0,18
+platform: windows,0,17
 sink: influxdb_metrics,0,16
-sink: splunk_hec,0,16
 source: vector,0,15
-sink: aws_kinesis_streams,0,14
+domain: schemas,0,14
 sink: statsd,0,14
-source: kubernetes_logs,0,14
-source: syslog,0,14
 domain: administration,0,13
 domain: logs,0,13
 domain: unit tests,0,13
-javascript,0,13
-sink: aws_cloudwatch_metrics,0,13
+provider: datadog,0,13
+sink: datadog_traces,0,13
 sink: socket,0,13
 platform: debian,0,12
 platform: helm,0,12
 platform: rpm,0,12
-sink: datadog_traces,0,12
 sink: gcp_cloud_storage,0,12
 sink: prometheus_remote_write,0,12
-source: aws_s3,0,12
-source: opentelemetry,0,12
-domain: schemas,0,11
 domain: startup,0,11
 sink: aws_kinesis_firehose,0,11
-source: gcp_pubsub,0,11
+sink: file,0,11
 domain: reload,0,10
-sink: file,0,10
 sink: gcp_pubsub,0,10
+sink: influxdb_logs,0,10
 sink: papertrail,0,10
 sink: prometheus_exporter,0,10
 source: docker_logs,0,10
 source: logstash,0,10
 transform: log_to_metric,0,10
-provider: datadog,0,9
-sink: clickhouse,0,9
-sink: gcp_stackdriver_logs,0,9
-sink: influxdb_logs,0,9
-source: heroku_logs,0,8
-source: statsd,0,8
+source: heroku_logs,0,9
+sink: humio_logs,0,8
 transform: filter,0,8
 transform: lua,0,8
 transform: route,0,8
 domain: architecture,0,7
 domain: parsing,0,7
-sink: humio_logs,0,7
+sink: azure_blob,0,7
+sink: datadog_events,0,7
 source: fluent,0,7
+transform: aws_ec2_metadata,0,7
+transform: sample,0,7
+vrl: playground,0,7
 needs: approval,0,6
-sink: aws_sqs,0,6
-sink: azure_blob,0,6
-sink: datadog_events,0,6
-sink: new,0,6
 source: aws_sqs,0,6
 source: internal_logs,0,6
 source: mongodb_metrics,0,6
-source: nats,0,6
-source: postgresql_metrics,0,6
-transform: aws_ec2_metadata,0,6
-transform: sample,0,6
-vrl: playground,0,6
+vrl: stdlib,0,6
 domain: auth,0,5
 domain: healthchecks,0,5
 domain: platforms,0,5
 domain: setup,0,5
 needs: tests,0,5
 provider: humio,0,5
+sink: amqp,0,5
 sink: blackhole,0,5
 sink: nats,0,5
-sink: new_relic,0,5
-transform: reduce,0,5
+website: css,0,5
 domain: delivery,0,4
 domain: shutdown,0,4
 domain: templating,0,4
+provider: azure,0,4
 rust,0,4
-sink: amqp,0,4
 sink: console,0,4
-sink: honeycomb,0,4
 sink: sematext_metrics,0,4
-source: aws_kinesis_firehose,0,4
-source: dnstap,0,4
 source: nginx_metrics,0,4
-source: prometheus_scrape,0,4
+source: prometheus_remote_write,0,4
 source: stdin,0,4
+source: websocket,0,4
+domain: filtering,0,3
 domain: processing,0,3
-domain: traces,0,3
-provider: azure,0,3
+gira,0,3
 provider: elastic,0,3
 provider: splunk,0,3
+sink: appsignal,0,3
+sink: gcp_chronicle,0,3
 source: apache_metrics,0,3
 source: aws_ecs_metrics,0,3
 source: exec,0,3
-source: prometheus_remote_write,0,3
-source: redis,0,3
-source: websocket,0,3
-website: css,0,3
+source: okta,0,3
 website:aesthetics-only,0,3
-domain: enrichment_tables,0,2
+codex,0,2
+domain: enriching,0,2
 domain: enterprise,0,2
-domain: filtering,0,2
 domain: reliability,0,2
 domain: soak tests,0,2
+domain: website,0,2
 meta: idea,0,2
 platform: arm64,0,2
 platform: centos,0,2
@@ -178,27 +196,23 @@ platform: x86_64,0,2
 provider: heroku,0,2
 provider: sematext,0,2
 ruby,0,2
-sink: appsignal,0,2
 sink: azure_monitor_logs,0,2
 sink: datadog_archives,0,2
-sink: gcp_chronicle,0,2
+sink: humio_metrics,0,2
 sink: new_relic_logs,0,2
-sink: redis,0,2
 source: amqp,0,2
 source: datadog_logs,0,2
 source: file_descriptor,0,2
+transform: dedupe,0,2
 transform: metric_to_log,0,2
 transform: tag_cardinality_limit,0,2
-vrl: stdlib,0,2
 vrl: typedef,0,2
-codex,0,1
-complexity: simple,0,1
+website: releases,0,2
 domain: ARC,0,1
 domain: compression,0,1
-domain: enriching,0,1
 domain: memory,0,1
-domain: website,0,1
-gira,0,1
+domain: validation,0,1
+enrichment_table: csv,0,1
 github_actions,0,1
 hacktoberfest,0,1
 have: must,0,1
@@ -212,22 +226,18 @@ platform: ubuntu,0,1
 provider: honeycomb,0,1
 provider: influxdata,0,1
 provider: new relic,0,1
-sink: axiom,0,1
 sink: databend,0,1
 sink: gcp_stackdriver_metrics,0,1
-sink: humio_metrics,0,1
 sink: mqtt,0,1
-sink: postgres,0,1
 sink: sematext_logs,0,1
-sink: websocket,0,1
 source: demo_logs,0,1
 source: eventstoredb_metrics,0,1
-source: okta,0,1
-transform: dedupe,0,1
-transform: throttle,0,1
+source: prometheus_pushgateway,0,1
+transform: exclusive_route,0,1
 type: help,0,1
 website: blog,0,1
+website: guides,0,1
 website: highlights,0,1
 website: javascript,0,1
-website: releases,0,1
+website: operations,0,1
 website: template,0,1

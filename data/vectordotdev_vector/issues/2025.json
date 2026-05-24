@@ -13413,6 +13413,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 2331044872657461066,
+        "name": "transform: aggregate",
+        "color": "5ED9F6",
+        "description": "Anything `aggregate` transform related"
       }
     ],
     "number": 24421,
@@ -13494,6 +13500,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 3597518471828487572,
+        "name": "sink: clickhouse",
+        "color": "5ED9F6",
+        "description": "Anything `clickhouse` sink related"
       }
     ],
     "number": 24412,
@@ -13703,6 +13715,12 @@
         "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
         "name": "domain: ci"
+      },
+      {
+        "id": 7446686954895602327,
+        "name": "source: splunk_hec",
+        "color": "5ED9F6",
+        "description": "Anything `splunk_hec` source related"
       }
     ],
     "number": 24401,
@@ -13911,6 +13929,12 @@
         "description": "Anything related to the Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain: sinks"
+      },
+      {
+        "id": 3514198389626329120,
+        "name": "sink: aws_kinesis_streams",
+        "color": "5ED9F6",
+        "description": "Anything `aws_kinesis_streams` sink related"
       }
     ],
     "number": 24382,
@@ -13940,6 +13964,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 3597518471828487572,
+        "name": "sink: clickhouse",
+        "color": "5ED9F6",
+        "description": "Anything `clickhouse` sink related"
       }
     ],
     "number": 24381,
@@ -13969,6 +13999,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 6326138185091387078,
+        "name": "source: statsd",
+        "color": "5ED9F6",
+        "description": "Anything `statsd` source related"
       }
     ],
     "number": 24380,
@@ -14068,6 +14104,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 3167616327810328810,
+        "name": "source: file",
+        "color": "5ED9F6",
+        "description": "Anything `file` source related"
       }
     ],
     "number": 24377,
@@ -14935,6 +14977,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 7130733453807572296,
+        "name": "sink: aws_cloudwatch_logs",
+        "color": "5ED9F6",
+        "description": "Anything `aws_cloudwatch_logs` sink related"
       }
     ],
     "number": 24328,
@@ -15531,6 +15579,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 2243487783603638370,
+        "name": "sink: redis",
+        "color": "5ED9F6",
+        "description": "Anything `redis` sink related"
       }
     ],
     "number": 24287,
@@ -18244,6 +18298,12 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 1951021668007277535,
         "name": "meta: awaiting author"
+      },
+      {
+        "id": 7804543468253826248,
+        "name": "sink: loki",
+        "color": "5ED9F6",
+        "description": "Anything `loki` sink related"
       }
     ],
     "number": 24155,
@@ -19420,6 +19480,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 210342434853879155,
+        "name": "source: redis",
+        "color": "5ED9F6",
+        "description": "Anything `redis` source related"
       }
     ],
     "number": 24100,
@@ -20459,6 +20525,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 2516345231450418203,
+        "name": "source: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new source"
       }
     ],
     "number": 24044,
@@ -21246,6 +21318,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs",
+        "color": "5ED9F6",
+        "description": "Anything `kubernetes_logs` source related"
       }
     ],
     "number": 24007,
@@ -21478,6 +21556,12 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "id": 2331044872657461066,
+        "name": "transform: aggregate",
+        "color": "5ED9F6",
+        "description": "Anything `aggregate` transform related"
       }
     ],
     "number": 23994,
@@ -25361,6 +25445,12 @@
         "description": "Anything related to the Vector's sources",
         "id": 2021938762883471635,
         "name": "domain: sources"
+      },
+      {
+        "id": 5016304788044877220,
+        "name": "source: internal_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `internal_metrics` source related"
       }
     ],
     "number": 23793,
@@ -27105,6 +27195,12 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 1951021668007277535,
         "name": "meta: awaiting author"
+      },
+      {
+        "id": 2331044872657461066,
+        "name": "transform: aggregate",
+        "color": "5ED9F6",
+        "description": "Anything `aggregate` transform related"
       }
     ],
     "number": 23694,
@@ -30036,6 +30132,12 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 1951021668007277535,
         "name": "meta: awaiting author"
+      },
+      {
+        "id": 4998124825918820514,
+        "name": "source: postgresql_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `postgresql_metrics` source related"
       }
     ],
     "number": 23544,
@@ -37240,6 +37342,12 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 1951021668007277535,
         "name": "meta: awaiting author"
+      },
+      {
+        "id": 6845382385514977530,
+        "name": "sink: splunk_hec",
+        "color": "5ED9F6",
+        "description": "Anything `splunk_hec` sink related"
       }
     ],
     "number": 23156,
