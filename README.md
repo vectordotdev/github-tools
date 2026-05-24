@@ -12,12 +12,11 @@ src/             # Rust source (single binary: github-tools)
 scripts/util/    # Python: plot.py (charts), json_to_csv.py (utility)
 data/            # Committed snapshots: JSON inputs and PNG charts
   {owner}_{repo}/issues/  # Issues/PRs JSON split by year (2024.json, 2025.json, ...)
-  images/        # Committed PNG charts (promoted from out/images/)
+  images/        # Committed PNG charts (written directly by plot.py)
 out/             # Gitignored — all generated and local-only files
   historical/    # Raw JSON fetched from GitHub API
   db/            # SQLite databases
   summaries/     # Generated CSVs
-  images/        # Generated PNG charts (promote to data/images/ to commit)
   purge/         # Purge audit logs (local only)
 ```
 
@@ -93,14 +92,7 @@ python -m scripts.util.plot --env-file vector.env --input-dir out/summaries \
   --exclude-labels "no-changelog,meta: awaiting author"
 ```
 
-Promote charts to commit:
-
-```shell
-cp out/images/*.png data/images/
-```
-
-> [!NOTE]
-> This copy is intentionally manual — `generate-all` and `plot.py` will not do it for you. Review the regenerated charts in `out/images/` first; only promote to `data/images/` once you're happy with what will appear on the trend pages.
+Charts are written directly into `data/images/`. Review the diff before committing.
 
 ## 3. (Optional) Purge stale container images
 
