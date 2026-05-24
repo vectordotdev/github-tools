@@ -63,6 +63,9 @@ def setup_styles():
     plt.rcParams["grid.alpha"] = 0.5
     plt.rcParams["grid.linestyle"] = "--"  # make all grids dashed
     plt.rcParams["grid.linewidth"] = 0.7
+    plt.rcParams["savefig.dpi"] = 150
+    plt.rcParams["savefig.bbox"] = "tight"
+    plt.rcParams["savefig.pad_inches"] = 0.2
 
 
 def set_axis_labels(ax, xlabel, ylabel):
