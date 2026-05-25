@@ -5,6 +5,7 @@ import os
 
 import matplotlib.pyplot as plt
 import numpy as np
+import numpy.ma as ma
 import pandas as pd
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import MaxNLocator
@@ -19,6 +20,23 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Very dark — used in place of pure black for less harsh contrast on slides.
 DARK = "#1a1a1a"
+
+# Known bot logins that don't carry the "[bot]" suffix in older snapshots.
+KNOWN_BOT_LOGINS = {
+    "dependabot",
+    "dependabot-preview",
+    "renovate",
+    "handlerbot",
+    "step-security-bot",
+    "tronboto",
+}
+
+
+def is_bot_login(login: str) -> bool:
+    return (
+        isinstance(login, str)
+        and (login.endswith("[bot]") or login in KNOWN_BOT_LOGINS)
+    )
 
 # Custom label color overrides
 COLOR_MAP = {
@@ -570,7 +588,7 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
             logging.warning(f"[{table}] Contributor CSV is empty: {path}")
             return
 
-        df = df[~df["user_login"].str.endswith("[bot]", na=False)]
+        df = df[~df["user_login"].map(is_bot_login)]
         if df.empty:
             logging.warning(f"[{table}] No non-bot contributors in {path}")
             return
@@ -596,7 +614,12 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
         pivot = pivot.sort_values(by=[last_month, "_total"], ascending=False).drop(columns="_total")
 
         fig, ax = plt.subplots(figsize=(12, 5))
-        im = ax.imshow(pivot.values, aspect="auto", cmap="YlOrRd")
+        # Zero cells masked so the plain axes background shows through
+        # instead of the colormap's low end tint.
+        cmap = plt.get_cmap("YlOrRd").copy()
+        cmap.set_bad(color="white")
+        masked = ma.masked_where(pivot.values == 0, pivot.values)
+        im = ax.imshow(masked, aspect="auto", cmap=cmap)
 
         ax.set_xticks(np.arange(len(window)))
         ax.set_xticklabels(window, rotation=45, ha="right")
@@ -608,7 +631,7 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
             for j in range(pivot.shape[1]):
                 v = pivot.values[i, j]
                 if v > 0:
-                    color = "white" if v > vmax * 0.5 else "black"
+                    color = "white" if v > vmax * 0.6 else DARK
                     ax.text(j, i, int(v), ha="center", va="center", color=color, fontsize=9)
 
         cbar = fig.colorbar(im, ax=ax)
@@ -633,7 +656,7 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
             logging.warning(f"[{table}] Contributor CSV is empty: {path}")
             return
 
-        df = df[~df["user_login"].str.endswith("[bot]", na=False)]
+        df = df[~df["user_login"].map(is_bot_login)]
         df = df.dropna(subset=["month", "user_login"])
         if df.empty:
             logging.warning(f"[{table}] No non-bot contributors in {path}")

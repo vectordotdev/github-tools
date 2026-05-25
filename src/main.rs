@@ -54,8 +54,6 @@ enum Command {
         db: String,
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
-        #[arg(long, help = "Comma-separated labels to exclude")]
-        exclude_labels: Option<String>,
     },
     /// Fetch issues+discussions for all repos (replaces fetch_all_slow.sh)
     FetchAll {
@@ -68,8 +66,6 @@ enum Command {
     GenerateAll {
         #[arg(long, required = true)]
         env_file: Vec<String>,
-        #[arg(long)]
-        exclude_labels: Option<String>,
         #[arg(long, help = "Only include data from this YYYY-MM date forward (passed to plot.py). Defaults to 12 months ago.")]
         start: Option<String>,
     },
@@ -198,9 +194,8 @@ fn main() -> Result<()> {
         Command::FetchAll { env_file, since } => workflows::fetch_all(&env_file, since.as_deref()),
         Command::GenerateAll {
             env_file,
-            exclude_labels,
             start,
-        } => workflows::generate_all(&env_file, exclude_labels.as_deref(), start.as_deref()),
+        } => workflows::generate_all(&env_file, start.as_deref()),
         Command::PurgeAll {
             env_file,
             older_than,
@@ -223,13 +218,9 @@ fn main() -> Result<()> {
             let config = Config::load(env_file.as_deref())?;
             delete_stale_branches::run(&config, dry_run, yes)
         }
-        Command::GenerateSummaries {
-            db,
-            env_file,
-            exclude_labels,
-        } => {
+        Command::GenerateSummaries { db, env_file } => {
             let config = Config::load(env_file.as_deref())?;
-            generate_summaries::run(&db, &config, exclude_labels.as_deref())
+            generate_summaries::run(&db, &config)
         }
         Command::RemoveLegacyLabel {
             repo,

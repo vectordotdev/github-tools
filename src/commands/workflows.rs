@@ -29,7 +29,7 @@ pub fn fetch_all(env_files: &[String], since: Option<&str>) -> Result<()> {
 
 /// Ports generate_all.sh: build-db + generate-summaries for each env/input pair.
 /// plot.py is kept in Python — this workflow prints the exact commands to run it.
-pub fn generate_all(env_files: &[String], exclude_labels: Option<&str>, start: Option<&str>) -> Result<()> {
+pub fn generate_all(env_files: &[String], start: Option<&str>) -> Result<()> {
     for env_file in env_files {
         println!("\n=== Generating for env: {env_file} ===");
         let config = Config::load(Some(env_file))?;
@@ -63,7 +63,7 @@ pub fn generate_all(env_files: &[String], exclude_labels: Option<&str>, start: O
             build_db::load_discussions_from_path(&conn, disc_path)?;
         }
 
-        generate_summaries::run(&db, &config, exclude_labels)?;
+        generate_summaries::run(&db, &config)?;
     }
 
     // Compute default: first day of current month minus 12 months (matches generate_all.sh)
@@ -76,13 +76,9 @@ pub fn generate_all(env_files: &[String], exclude_labels: Option<&str>, start: O
 
     println!("\nTo regenerate charts, run plot.py for each repo:");
     for env_file in env_files {
-        let mut cmd = format!(
-            "python -m scripts.util.plot --env-file {env_file} --input-dir out/summaries --start {start_arg}"
+        println!(
+            "  python -m scripts.util.plot --env-file {env_file} --input-dir out/summaries --start {start_arg} --exclude-labels \"no-changelog,meta: awaiting author\""
         );
-        if let Some(labels) = exclude_labels {
-            cmd.push_str(&format!(" --exclude-labels \"{labels}\""));
-        }
-        println!("  {cmd}");
     }
     Ok(())
 }
