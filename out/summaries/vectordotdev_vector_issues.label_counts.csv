@@ -3787,7 +3787,7 @@ month,label_name,count
 2023-05,domain: compression,1
 2023-05,domain: ci,1
 2023-05,Epic,1
-2023-06,type: bug,28
+2023-06,type: bug,27
 2023-06,type: feature,9
 2023-06,domain: observability,4
 2023-06,type: enhancement,2
@@ -3809,7 +3809,6 @@ month,label_name,count
 2023-06,sink: elasticsearch,1
 2023-06,sink: datadog_traces,1
 2023-06,platform: windows,1
-2023-06,meta: awaiting author,1
 2023-06,domain: sinks,1
 2023-06,domain: reload,1
 2023-06,domain: releasing,1
@@ -3943,7 +3942,7 @@ month,label_name,count
 2023-09,domain: dev,1
 2023-09,domain: data model,1
 2023-09,domain: architecture,1
-2023-10,type: bug,32
+2023-10,type: bug,31
 2023-10,type: feature,19
 2023-10,source: file,5
 2023-10,meta: confirmed,3
@@ -3969,7 +3968,6 @@ month,label_name,count
 2023-10,sink: aws_cloudwatch_metrics,1
 2023-10,sink: amqp,1
 2023-10,meta: regression,1
-2023-10,meta: awaiting author,1
 2023-10,domain: vrl,1
 2023-10,domain: vdev,1
 2023-10,domain: reload,1
@@ -4068,14 +4066,12 @@ month,label_name,count
 2023-12,domain: topology,1
 2023-12,domain: processing,1
 2023-12,domain: compression,1
-2024-01,type: bug,35
+2024-01,type: bug,33
 2024-01,type: feature,18
 2024-01,domain: config,5
 2024-01,domain: codecs,4
 2024-01,domain: buffers,3
 2024-01,source: http_server,2
-2024-01,sink: aws_s3,2
-2024-01,meta: awaiting author,2
 2024-01,domain: releasing,2
 2024-01,domain: observability,2
 2024-01,vrl: stdlib,1
@@ -4091,6 +4087,7 @@ month,label_name,count
 2024-01,sink: gcp_stackdriver_logs,1
 2024-01,sink: gcp_pubsub,1
 2024-01,sink: azure_blob,1
+2024-01,sink: aws_s3,1
 2024-01,provider: aws,1
 2024-01,good first issue,1
 2024-01,enrichment_table: csv,1
@@ -4161,13 +4158,12 @@ month,label_name,count
 2024-03,domain: enrichment_tables,1
 2024-03,domain: config,1
 2024-03,domain: codecs,1
-2024-04,type: bug,17
+2024-04,type: bug,15
 2024-04,type: feature,9
 2024-04,domain: observability,3
 2024-04,domain: config,3
 2024-04,source: kafka,2
 2024-04,source: http_server,2
-2024-04,meta: awaiting author,2
 2024-04,good first issue,2
 2024-04,domain: unit tests,2
 2024-04,domain: releasing,2
@@ -4179,7 +4175,6 @@ month,label_name,count
 2024-04,source: new,1
 2024-04,source: gcp_pubsub,1
 2024-04,source: exec,1
-2024-04,source: docker_logs,1
 2024-04,source: aws_s3,1
 2024-04,sink: splunk_hec,1
 2024-04,sink: file,1
@@ -4191,13 +4186,11 @@ month,label_name,count
 2024-04,platform: windows,1
 2024-04,domain: processing,1
 2024-04,domain: codecs,1
-2024-05,type: bug,23
+2024-05,type: bug,22
 2024-05,type: feature,6
-2024-05,domain: observability,4
 2024-05,domain: config,4
+2024-05,domain: observability,3
 2024-05,source: host_metrics,2
-2024-05,sink: loki,2
-2024-05,meta: awaiting author,2
 2024-05,domain: reliability,2
 2024-05,domain: performance,2
 2024-05,domain: cli,2
@@ -4210,7 +4203,7 @@ month,label_name,count
 2024-05,source: file,1
 2024-05,source: aws_s3,1
 2024-05,sink: prometheus_remote_write,1
-2024-05,sink: clickhouse,1
+2024-05,sink: loki,1
 2024-05,sink: aws_kinesis_streams,1
 2024-05,good first issue,1
 2024-05,domain: releasing,1
@@ -4313,15 +4306,13 @@ month,label_name,count
 2024-08,domain: releasing,1
 2024-08,domain: delivery,1
 2024-08,domain: cli,1
-2024-09,type: bug,14
+2024-09,type: bug,12
 2024-09,type: feature,8
 2024-09,domain: observability,4
-2024-09,source: syslog,3
 2024-09,source: kafka,3
-2024-09,meta: awaiting author,3
 2024-09,domain: releasing,3
+2024-09,source: syslog,2
 2024-09,sink: new,2
-2024-09,domain: unit tests,2
 2024-09,domain: config,2
 2024-09,domain: cli,2
 2024-09,type: tech debt,1
@@ -4329,7 +4320,6 @@ month,label_name,count
 2024-09,source: kubernetes_logs,1
 2024-09,source: http_server,1
 2024-09,source: host_metrics,1
-2024-09,source: file,1
 2024-09,sink: webhdfs,1
 2024-09,sink: mqtt,1
 2024-09,sink: loki,1
@@ -4340,6 +4330,7 @@ month,label_name,count
 2024-09,sink: aws_s3,1
 2024-09,platform: kubernetes,1
 2024-09,meta: regression,1
+2024-09,domain: unit tests,1
 2024-09,domain: security,1
 2024-09,domain: logs,1
 2024-09,domain: enrichment_tables,1
@@ -4382,7 +4373,7 @@ month,label_name,count
 2024-10,domain: metrics,1
 2024-10,domain: codecs,1
 2024-10,complexity: high,1
-2024-11,type: bug,12
+2024-11,type: bug,11
 2024-11,type: feature,9
 2024-11,domain: config,4
 2024-11,domain: releasing,3
@@ -4404,7 +4395,6 @@ month,label_name,count
 2024-11,sink: elasticsearch,1
 2024-11,sink: azure_blob,1
 2024-11,sink: aws_cloudwatch_metrics,1
-2024-11,meta: awaiting author,1
 2024-11,good first issue,1
 2024-11,domain: vrl,1
 2024-11,domain: platforms,1
@@ -4436,12 +4426,12 @@ month,label_name,count
 2024-12,sink: kafka,1
 2024-12,sink: aws_cloudwatch_logs,1
 2024-12,domain: releasing,1
-2025-01,type: bug,24
+2025-01,type: bug,23
 2025-01,type: feature,8
 2025-01,domain: external docs,5
-2025-01,source: file,4
 2025-01,sink: opentelemetry,4
 2025-01,type: enhancement,3
+2025-01,source: file,3
 2025-01,domain: config,3
 2025-01,source: kubernetes_logs,2
 2025-01,source: http_server,2
@@ -4461,7 +4451,6 @@ month,label_name,count
 2025-01,sink: azure_blob,1
 2025-01,sink: aws_kinesis_streams,1
 2025-01,sink: amqp,1
-2025-01,meta: awaiting author,1
 2025-01,domain: traces,1
 2025-01,domain: security,1
 2025-01,domain: metrics,1
