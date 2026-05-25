@@ -469,6 +469,7 @@ def plot_label_count(path, table, output_path, top_n=8, start_date=None, exclude
                     x_positions.append(x)
                     heights.append(row[label])
             ax.bar(x_positions, heights, width=bar_width, label=label, color=colors[label])
+        round_bars(ax)
 
         # Axes styling
         ax.set_xticks(np.arange(len(months)))
@@ -517,7 +518,6 @@ def plot_label_state_counts(path, table, output_path, top_n, exclude_labels=None
         fig, ax = plt.subplots(figsize=(12, 6))
         ax.barh(df["label_name"], df["closed_count"], label="Closed", color=DARK)
         ax.barh(df["label_name"], df["open_count"], left=df["closed_count"], label="Open", color="green")
-        round_bars(ax)
 
         # Inline "closed / open" labels at the end of each bar
         x_pad = df["total"].max() * 0.01
@@ -662,7 +662,6 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
         ax.bar(x, returning_counts.values, color="#8E5CE6", label="Returning")
         ax.bar(x, new_counts.values, bottom=returning_counts.values,
                color="#36B37E", label="New")
-        round_bars(ax)
 
         totals = returning_counts.values + new_counts.values
         for i, t in enumerate(totals):
