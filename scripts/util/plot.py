@@ -2,12 +2,11 @@ import argparse
 import hashlib
 import logging
 import os
-import random
 
-import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import MaxNLocator
 
 from scripts.logging.custom_logging import setup_logger
@@ -62,21 +61,16 @@ TYPE_OVERLAYS = [
 
 
 def setup_styles():
-    plt.rcParams["font.family"] = "DejaVu Sans"
+    # Base look-and-feel: matplotlib's seaborn whitegrid. Provides white
+    # background, soft gray grid, and modern font/color defaults.
+    plt.style.use("seaborn-v0_8-whitegrid")
+
+    # Layer our own overrides on top.
     plt.rcParams["font.size"] = 12
     plt.rcParams["axes.titlesize"] = 16
     plt.rcParams["axes.labelsize"] = 12
     plt.rcParams["xtick.labelsize"] = 10
     plt.rcParams["ytick.labelsize"] = 10
-    plt.rcParams["axes.spines.top"] = False
-    plt.rcParams["axes.spines.right"] = False
-    plt.rcParams["axes.spines.left"] = True
-    plt.rcParams["axes.spines.bottom"] = True
-    plt.rcParams["axes.axisbelow"] = True
-    plt.rcParams["axes.grid"] = True
-    plt.rcParams["grid.alpha"] = 0.5
-    plt.rcParams["grid.linestyle"] = "--"  # make all grids dashed
-    plt.rcParams["grid.linewidth"] = 0.7
     plt.rcParams["savefig.dpi"] = 150
     plt.rcParams["savefig.bbox"] = "tight"
     plt.rcParams["savefig.pad_inches"] = 0.2
@@ -87,6 +81,43 @@ def set_axis_labels(ax, xlabel, ylabel):
         ax.set_xlabel(xlabel, fontsize=12, fontstyle='italic')
     if ylabel:
         ax.set_ylabel(ylabel, fontsize=12, fontstyle='italic')
+
+
+def round_bars(ax, radius_frac=0.5):
+    """Replace every Rectangle bar in `ax` with a rounded FancyBboxPatch.
+
+    Works for both horizontal and vertical bars — radius is derived from
+    the smaller dimension of each bar (so the bar reads as a pill in its
+    narrow direction). radius_frac=0.5 produces full rounding; lower
+    values produce a softer rectangle. Preserves labels for legend.
+    """
+    for patch in list(ax.patches):
+        if not hasattr(patch, "get_xy"):
+            continue
+        x, y = patch.get_xy()
+        w = patch.get_width()
+        h = patch.get_height()
+        if w == 0 or h == 0:
+            continue
+        # boxstyle "round,pad=R,rounding_size=R" expands the bbox by R on
+        # every side, so shrink the inner rect by R to keep the final
+        # shape the same physical size as the original Rectangle.
+        r = min(abs(w), abs(h)) * radius_frac
+        color = patch.get_facecolor()
+        label = patch.get_label()
+        patch.remove()
+        new = FancyBboxPatch(
+            (x + r, y + r),
+            w - 2 * r,
+            h - 2 * r,
+            boxstyle=f"round,pad={r},rounding_size={r}",
+            linewidth=0,
+            facecolor=color,
+            mutation_aspect=1,
+        )
+        if label and not label.startswith("_"):
+            new.set_label(label)
+        ax.add_patch(new)
 
 
 def parse_args():
@@ -208,14 +239,34 @@ def main():
         plot_discussion_trend(disc_csv, output_path, start_date=args.start)
 
 
+# Curated categorical palette for auto-assigned label colors. Hand-picked
+# from tab10/Dark2/Set1 to keep neighbouring bars clearly distinguishable;
+# CSS4_COLORS (the old source) contained many pale pastels that washed out.
+_AUTO_PALETTE = [
+    "#1f77b4",  # blue
+    "#d62728",  # red
+    "#2ca02c",  # green
+    "#ff7f0e",  # orange
+    "#9467bd",  # purple
+    "#8c564b",  # brown
+    "#e377c2",  # pink
+    "#17becf",  # cyan
+    "#bcbd22",  # olive
+    "#7f7f7f",  # gray
+    "#a6761d",  # dark gold
+    "#666666",  # dim gray
+    "#1b9e77",  # teal
+    "#d95f02",  # rust
+    "#7570b3",  # indigo
+]
+
+
 def get_label_color(label_name):
     if label_name in COLOR_MAP:
         return COLOR_MAP[label_name]
 
-    all_colors = list(mcolors.CSS4_COLORS.values())
     seed = int(hashlib.md5(label_name.encode()).hexdigest(), 16)
-    random.seed(seed)
-    return random.choice(all_colors)
+    return _AUTO_PALETTE[seed % len(_AUTO_PALETTE)]
 
 
 def plot_monthly_summary_basic(path, table, output_path, start_date=None):
@@ -375,8 +426,9 @@ def plot_label_breakdown(path, table, output_path, top_n=20, start_date=None, ex
 
         plt.figure(figsize=(10, 6))
         plt.barh(df["label_name"], df["count"], color=colors)
-        plt.title(f"Top {top_n} Labels by Frequency ({pretty_table(table)})", fontsize=16)
         ax = plt.gca()
+        round_bars(ax)
+        plt.title(f"Top {top_n} Labels by Frequency ({pretty_table(table)})", fontsize=16)
         set_axis_labels(ax, "Count", None)
         ax.invert_yaxis()
         plt.tight_layout()
@@ -437,6 +489,7 @@ def plot_label_count(path, table, output_path, top_n=8, start_date=None, exclude
                     x_positions.append(x)
                     heights.append(row[label])
             ax.bar(x_positions, heights, width=bar_width, label=label, color=colors[label])
+        round_bars(ax)
 
         # Axes styling
         ax.set_xticks(np.arange(len(months)))
