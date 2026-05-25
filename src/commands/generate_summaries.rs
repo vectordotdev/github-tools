@@ -1,24 +1,9 @@
 use crate::config::Config;
 use anyhow::{Context, Result};
 use chrono::Utc;
-use rusqlite::{Connection, OptionalExtension};
+use rusqlite::Connection;
 use std::fs;
 use std::path::Path;
-
-/// Month of the most recent `created_at` in the given table (or discussions).
-/// Used as the cutoff for "exclude partial month" — the latest month in
-/// the data may be partial because the fetch happened mid-month, not
-/// because the calendar month is incomplete.
-fn latest_data_month(conn: &Connection, table: &str) -> Result<String> {
-    let month: Option<String> = conn
-        .query_row(
-            &format!("SELECT substr(MAX(created_at), 1, 7) FROM {table}"),
-            [],
-            |r| r.get(0),
-        )
-        .optional()?;
-    Ok(month.unwrap_or_else(|| Utc::now().format("%Y-%m").to_string()))
-}
 
 pub fn run(db: &str, config: &Config, exclude_labels: Option<&str>) -> Result<()> {
     let conn = Connection::open(db).with_context(|| format!("Failed to open database: {db}"))?;
@@ -131,8 +116,8 @@ fn export_monthly_summary(
     let (wc, params) = build_where(table, exclude_labels, &[]);
     let (wc_closed, params_closed) = build_where(table, exclude_labels, &["closed_at IS NOT NULL"]);
 
-    let current_month = latest_data_month(conn, table)?;
-    eprintln!("Warning: excluding latest (possibly partial) month ({current_month}) from monthly summary for {table}");
+    let current_month = Utc::now().format("%Y-%m").to_string();
+    eprintln!("Warning: excluding current incomplete month ({current_month}) from monthly summary for {table}");
 
     // Get all distinct label names for this table (respecting exclude filter)
     let label_names: Vec<String> = {
@@ -342,7 +327,7 @@ fn export_contributor_monthly(
     exclude_labels: Option<&[String]>,
 ) -> Result<()> {
     let (wc, params) = build_where(table, exclude_labels, &["user_login IS NOT NULL"]);
-    let current_month = latest_data_month(conn, table)?;
+    let current_month = Utc::now().format("%Y-%m").to_string();
     let query = format!(
         "SELECT substr({table}.created_at, 1, 7) AS month,
                 {table}.user_login AS user_login,
@@ -366,7 +351,7 @@ fn export_discussion_monthly_summary(
     out_dir: &Path,
     config: &Config,
 ) -> Result<()> {
-    let current_month = latest_data_month(conn, "discussions")?;
+    let current_month = Utc::now().format("%Y-%m").to_string();
 
     let query = format!(
         "SELECT
