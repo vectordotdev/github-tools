@@ -46,6 +46,23 @@
 
 ![Unique PR Contributors (new vs returning)](../data/images/quickwit-oss_quickwit_pull_requests.unique_contributors.png)
 
+![Unique PR Contributors by year](../data/images/quickwit-oss_quickwit_pull_requests.unique_contributors_yearly.png)
+
+**Unique PR contributors by year**
+
+<!-- AUTO:yearly-contributors:start -->
+
+| Year | Unique | New | Returning |
+|------|--------|-----|-----------|
+| 2021 | 12 | 12 | 0 |
+| 2022 | 30 | 24 | 6 |
+| 2023 | 38 | 27 | 11 |
+| 2024 | 36 | 27 | 9 |
+| 2025 | 30 | 22 | 8 |
+| 2026 (YTD, 4mo) | 27 | 13 | 14 |
+
+<!-- AUTO:yearly-contributors:end -->
+
 *Draft PRs and known bot accounts excluded.*
 
 ## Discussions

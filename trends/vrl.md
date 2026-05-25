@@ -46,6 +46,21 @@
 
 ![Unique PR Contributors (new vs returning)](../data/images/vectordotdev_vrl_pull_requests.unique_contributors.png)
 
+![Unique PR Contributors by year](../data/images/vectordotdev_vrl_pull_requests.unique_contributors_yearly.png)
+
+**Unique PR contributors by year**
+
+<!-- AUTO:yearly-contributors:start -->
+
+| Year | Unique | New | Returning |
+|------|--------|-----|-----------|
+| 2023 | 26 | 26 | 0 |
+| 2024 | 30 | 26 | 4 |
+| 2025 | 29 | 23 | 6 |
+| 2026 (YTD, 4mo) | 12 | 9 | 3 |
+
+<!-- AUTO:yearly-contributors:end -->
+
 *Draft PRs and known bot accounts excluded.*
 
 ## Discussions
