@@ -62,21 +62,16 @@ TYPE_OVERLAYS = [
 
 
 def setup_styles():
-    plt.rcParams["font.family"] = "DejaVu Sans"
+    # Base look-and-feel: matplotlib's seaborn whitegrid. Provides white
+    # background, soft gray grid, and modern font/color defaults.
+    plt.style.use("seaborn-v0_8-whitegrid")
+
+    # Layer our own overrides on top.
     plt.rcParams["font.size"] = 12
     plt.rcParams["axes.titlesize"] = 16
     plt.rcParams["axes.labelsize"] = 12
     plt.rcParams["xtick.labelsize"] = 10
     plt.rcParams["ytick.labelsize"] = 10
-    plt.rcParams["axes.spines.top"] = False
-    plt.rcParams["axes.spines.right"] = False
-    plt.rcParams["axes.spines.left"] = True
-    plt.rcParams["axes.spines.bottom"] = True
-    plt.rcParams["axes.axisbelow"] = True
-    plt.rcParams["axes.grid"] = True
-    plt.rcParams["grid.alpha"] = 0.5
-    plt.rcParams["grid.linestyle"] = "--"  # make all grids dashed
-    plt.rcParams["grid.linewidth"] = 0.7
     plt.rcParams["savefig.dpi"] = 150
     plt.rcParams["savefig.bbox"] = "tight"
     plt.rcParams["savefig.pad_inches"] = 0.2
