@@ -8,6 +8,7 @@ import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import MaxNLocator
 
 from scripts.logging.custom_logging import setup_logger
@@ -82,6 +83,41 @@ def set_axis_labels(ax, xlabel, ylabel):
         ax.set_xlabel(xlabel, fontsize=12, fontstyle='italic')
     if ylabel:
         ax.set_ylabel(ylabel, fontsize=12, fontstyle='italic')
+
+
+def round_bars(ax, radius_frac=0.35):
+    """Replace every Rectangle bar in `ax` with a rounded FancyBboxPatch.
+
+    Works for both horizontal and vertical bars — radius is derived from
+    the smaller dimension of each bar. Preserves labels for legend.
+    """
+    for patch in list(ax.patches):
+        if not hasattr(patch, "get_xy"):
+            continue
+        x, y = patch.get_xy()
+        w = patch.get_width()
+        h = patch.get_height()
+        if w == 0 or h == 0:
+            continue
+        # boxstyle "round,pad=R,rounding_size=R" expands the bbox by R on
+        # every side, so shrink the inner rect by R to keep the final
+        # shape the same physical size as the original Rectangle.
+        r = min(abs(w), abs(h)) * radius_frac
+        color = patch.get_facecolor()
+        label = patch.get_label()
+        patch.remove()
+        new = FancyBboxPatch(
+            (x + r, y + r),
+            w - 2 * r,
+            h - 2 * r,
+            boxstyle=f"round,pad={r},rounding_size={r}",
+            linewidth=0,
+            facecolor=color,
+            mutation_aspect=1,
+        )
+        if label and not label.startswith("_"):
+            new.set_label(label)
+        ax.add_patch(new)
 
 
 def parse_args():
@@ -370,8 +406,9 @@ def plot_label_breakdown(path, table, output_path, top_n=20, start_date=None, ex
 
         plt.figure(figsize=(10, 6))
         plt.barh(df["label_name"], df["count"], color=colors)
-        plt.title(f"Top {top_n} Labels by Frequency ({pretty_table(table)})", fontsize=16)
         ax = plt.gca()
+        round_bars(ax)
+        plt.title(f"Top {top_n} Labels by Frequency ({pretty_table(table)})", fontsize=16)
         set_axis_labels(ax, "Count", None)
         ax.invert_yaxis()
         plt.tight_layout()
@@ -480,6 +517,7 @@ def plot_label_state_counts(path, table, output_path, top_n, exclude_labels=None
         fig, ax = plt.subplots(figsize=(12, 6))
         ax.barh(df["label_name"], df["closed_count"], label="Closed", color=DARK)
         ax.barh(df["label_name"], df["open_count"], left=df["closed_count"], label="Open", color="green")
+        round_bars(ax)
 
         # Inline "closed / open" labels at the end of each bar
         x_pad = df["total"].max() * 0.01
@@ -624,6 +662,7 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
         ax.bar(x, returning_counts.values, color="#8E5CE6", label="Returning")
         ax.bar(x, new_counts.values, bottom=returning_counts.values,
                color="#36B37E", label="New")
+        round_bars(ax)
 
         totals = returning_counts.values + new_counts.values
         for i, t in enumerate(totals):
