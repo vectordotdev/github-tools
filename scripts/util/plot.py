@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import numpy.ma as ma
 import pandas as pd
-from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import MaxNLocator
 
@@ -615,11 +614,9 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
         pivot = pivot.sort_values(by=[last_month, "_total"], ascending=False).drop(columns="_total")
 
         fig, ax = plt.subplots(figsize=(12, 5))
-        # Green→yellow→red gradient; zero cells masked so the plain axes
-        # background shows through instead of the colormap's low end.
-        cmap = LinearSegmentedColormap.from_list(
-            "green_red", ["#36B37E", "#F1C232", "#D62728"]
-        )
+        # Zero cells masked so the plain axes background shows through
+        # instead of the colormap's low end tint.
+        cmap = plt.get_cmap("YlOrRd").copy()
         cmap.set_bad(color="white")
         masked = ma.masked_where(pivot.values == 0, pivot.values)
         im = ax.imshow(masked, aspect="auto", cmap=cmap)
