@@ -2,6 +2,7 @@ import argparse
 import hashlib
 import logging
 import os
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -248,6 +249,14 @@ def main():
 
             output_path = os.path.join(OUTPUT_DIR, f"{prefix}.unique_contributors.png")
             plot_unique_contributors(contributor_csv, table, output_path)
+
+            output_path = os.path.join(OUTPUT_DIR, f"{prefix}.unique_contributors_yearly.png")
+            plot_yearly_contributors(contributor_csv, table, output_path)
+
+            # Same data as the yearly chart, also written as a markdown
+            # table into trends/{repo}.md between AUTO markers.
+            trends_md = Path(SCRIPT_DIR).resolve().parents[1] / "trends" / f"{env['REPO_NAME']}.md"
+            update_yearly_contributors_table(contributor_csv, table, trends_md)
 
     # Discussion trends
     disc_prefix = f"{env['REPO_OWNER']}_{env['REPO_NAME']}_discussions"
@@ -686,20 +695,7 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
         new_counts = per_month.get(True, pd.Series(0, index=window))
         returning_counts = per_month.get(False, pd.Series(0, index=window))
 
-        def window_stats(n_months):
-            recent = window[-n_months:]
-            sub = df_window[df_window["month"].isin(recent)]
-            total = sub["user_login"].nunique()
-            new_users = sub.loc[sub["is_new"], "user_login"].nunique()
-            return total, new_users, total - new_users
-
-        s12 = window_stats(12)
-        s6 = window_stats(6)
-        s1 = window_stats(1)
-
-        fig, (ax, ax_stats) = plt.subplots(
-            1, 2, figsize=(14, 6), gridspec_kw={"width_ratios": [3.2, 1]}
-        )
+        fig, ax = plt.subplots(figsize=(12, 6))
 
         x = np.arange(len(window))
         ax.bar(x, returning_counts.values, color="#8E5CE6", label="Returning")
@@ -715,32 +711,11 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
         ax.set_xticklabels(window, rotation=45, ha="right")
         ax.yaxis.set_major_locator(MaxNLocator(integer=True))
         set_axis_labels(ax, "Month", "Unique contributors")
-        ax.set_title(f"Unique {pretty_table(table)} contributors (last {len(window)} months)", fontsize=16)
-        ax.legend(loc="upper left")
-
-        ax_stats.axis("off")
-        ax_stats.set_title("Window totals", fontsize=14)
-
-        def fmt(label, stats):
-            total, new_users, returning_users = stats
-            return (
-                f"{label}\n"
-                f"  total:     {total}\n"
-                f"  new:       {new_users}\n"
-                f"  returning: {returning_users}\n"
-            )
-
-        text = "\n".join([
-            fmt("Last 12 months", s12),
-            fmt("Last 6 months", s6),
-            fmt("Last month", s1),
-        ])
-        ax_stats.text(
-            0.0, 0.95, text,
-            ha="left", va="top",
-            family="monospace", fontsize=11,
-            transform=ax_stats.transAxes,
+        ax.set_title(
+            f"Unique {pretty_table(table)} contributors (last {len(window)} months)",
+            fontsize=16,
         )
+        ax.legend(loc="upper left")
 
         plt.tight_layout()
         plt.savefig(output_path)
@@ -748,6 +723,166 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
         plt.close()
     except Exception as e:
         logging.warning(f"[{table}] Could not generate unique-contributors plot: {e}")
+
+
+def _yearly_contributor_rows(path):
+    """Compute per-year (year, label, total, new, returning, partial) rows
+    from contributor_monthly.csv. Excludes bots. `partial` is True when
+    the year hasn't fully elapsed yet (typically just the current year)."""
+    df = pd.read_csv(path)
+    if df.empty:
+        return []
+    df = df[~df["user_login"].map(is_bot_login)]
+    df = df.dropna(subset=["month", "user_login"])
+    if df.empty:
+        return []
+
+    df["month"] = df["month"].astype(str)
+    df["year"] = df["month"].str[:4]
+    first_year_by_user = df.groupby("user_login")["month"].min().str[:4]
+
+    today_year = pd.Timestamp.utcnow().year
+    rows = []
+    for year, group in df.groupby("year"):
+        users = group["user_login"].unique()
+        new_c = sum(first_year_by_user[u] == year for u in users)
+        total = len(users)
+        months_seen = group["month"].nunique()
+        partial = int(year) == today_year and months_seen < 12
+        label = f"{year} (YTD, {months_seen}mo)" if partial else f"{year}"
+        rows.append((year, label, total, new_c, total - new_c, partial))
+    rows.sort(key=lambda r: r[0])
+    return rows
+
+
+def plot_yearly_contributors(path, table, output_path, max_years=6):
+    """Horizontal stacked bars: one row per year (last `max_years`),
+    split into new (green) vs returning (purple), with totals annotated."""
+    try:
+        rows = _yearly_contributor_rows(path)
+        if not rows:
+            return
+        rows = rows[-max_years:]
+
+        labels = [r[1] for r in rows]
+        new_vals = np.array([r[3] for r in rows])
+        ret_vals = np.array([r[4] for r in rows])
+        partials = [r[5] for r in rows]
+        totals = new_vals + ret_vals
+
+        fig, ax = plt.subplots(figsize=(10, max(3.5, 0.7 * len(rows) + 1.5)))
+        y = np.arange(len(labels))
+        # Per-row alpha: partial (YTD) years are muted to avoid suggesting
+        # they're directly comparable to full years.
+        alphas = [0.35 if p else 1.0 for p in partials]
+        # Squared edges — rounding stacked segments leaves gaps at the
+        # junction.
+        for i, a in enumerate(alphas):
+            ax.barh(y[i], ret_vals[i], color="#8E5CE6", height=0.55, alpha=a)
+            ax.barh(y[i], new_vals[i], left=ret_vals[i], color="#36B37E",
+                    height=0.55, alpha=a)
+
+        x_pad = max(totals.max() * 0.015, 0.5)
+        for i, (n, r, t, p) in enumerate(zip(new_vals, ret_vals, totals, partials)):
+            text_color_inner = "white"
+            text_color_outer = DARK
+            if p:
+                # Inner labels become dark grey on muted bars so they stay
+                # readable against the lighter fill.
+                text_color_inner = "#555555"
+                text_color_outer = "#555555"
+            if r > 0:
+                ax.text(r / 2, i, str(int(r)), ha="center", va="center",
+                        color=text_color_inner, fontsize=12, fontweight="bold")
+            if n > 0:
+                ax.text(r + n / 2, i, str(int(n)), ha="center", va="center",
+                        color=text_color_inner, fontsize=12, fontweight="bold")
+            ax.text(t + x_pad, i, f"{int(t)} total",
+                    va="center", fontsize=12, color=text_color_outer,
+                    fontweight="bold",
+                    fontstyle="italic" if p else "normal")
+
+        ax.set_yticks(y)
+        ax.set_yticklabels(labels, fontsize=12)
+        for tick, p in zip(ax.get_yticklabels(), partials):
+            if p:
+                tick.set_fontstyle("italic")
+                tick.set_color("#555555")
+        ax.invert_yaxis()
+        ax.set_xlim(right=totals.max() * 1.28)
+
+        ax.set_xticks([])
+        ax.xaxis.set_visible(False)
+        for spine in ("top", "right", "bottom"):
+            ax.spines[spine].set_visible(False)
+        ax.grid(False)
+
+        adj = {"pull_requests": "PR", "issues": "Issue", "discussions": "Discussion"}.get(table, table)
+        ax.set_title(
+            f"Unique {adj} contributors by year",
+            fontsize=18, pad=14,
+        )
+        from matplotlib.patches import Patch
+        ax.legend(
+            handles=[
+                Patch(facecolor="#8E5CE6", label="Returning"),
+                Patch(facecolor="#36B37E", label="New"),
+            ],
+            loc="lower right", frameon=False,
+        )
+
+        plt.tight_layout()
+        plt.savefig(output_path)
+        logging.info(f"Saved plot to {output_path}")
+        plt.close()
+    except Exception as e:
+        logging.warning(f"[{table}] Could not generate yearly contributors chart: {e}")
+
+
+def update_yearly_contributors_table(path, table, trends_md_path):
+    """Compute per-year unique-contributor stats (total / new / returning)
+    and rewrite the section in trends/{repo}.md between the markers
+    <!-- AUTO:yearly-contributors:start --> and ...:end -->."""
+    try:
+        rows = _yearly_contributor_rows(path)
+        if not rows:
+            return
+
+        lines = [
+            "| Year | Unique | New | Returning |",
+            "|------|--------|-----|-----------|",
+        ]
+        for _, label, total, new_c, ret_c, _partial in rows:
+            lines.append(f"| {label} | {total} | {new_c} | {ret_c} |")
+        table_md = "\n".join(lines)
+
+        marker_start = "<!-- AUTO:yearly-contributors:start -->"
+        marker_end = "<!-- AUTO:yearly-contributors:end -->"
+
+        if not trends_md_path.exists():
+            logging.warning(
+                f"[{table}] Trends file not found, skipping yearly table: {trends_md_path}"
+            )
+            return
+        content = trends_md_path.read_text()
+        if marker_start not in content or marker_end not in content:
+            logging.warning(
+                f"[{table}] Markers not found in {trends_md_path}; "
+                f"add a section bracketed by {marker_start} / {marker_end}"
+            )
+            return
+
+        import re
+        pattern = re.compile(
+            re.escape(marker_start) + r".*?" + re.escape(marker_end),
+            re.DOTALL,
+        )
+        replacement = f"{marker_start}\n\n{table_md}\n\n{marker_end}"
+        content = pattern.sub(replacement, content)
+        trends_md_path.write_text(content)
+        logging.info(f"Updated yearly-contributors table in {trends_md_path}")
+    except Exception as e:
+        logging.warning(f"[{table}] Could not update yearly-contributors table: {e}")
 
 
 if __name__ == "__main__":
