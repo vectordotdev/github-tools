@@ -2,9 +2,7 @@ import argparse
 import hashlib
 import logging
 import os
-import random
 
-import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -241,14 +239,34 @@ def main():
         plot_discussion_trend(disc_csv, output_path, start_date=args.start)
 
 
+# Curated categorical palette for auto-assigned label colors. Hand-picked
+# from tab10/Dark2/Set1 to keep neighbouring bars clearly distinguishable;
+# CSS4_COLORS (the old source) contained many pale pastels that washed out.
+_AUTO_PALETTE = [
+    "#1f77b4",  # blue
+    "#d62728",  # red
+    "#2ca02c",  # green
+    "#ff7f0e",  # orange
+    "#9467bd",  # purple
+    "#8c564b",  # brown
+    "#e377c2",  # pink
+    "#17becf",  # cyan
+    "#bcbd22",  # olive
+    "#7f7f7f",  # gray
+    "#a6761d",  # dark gold
+    "#666666",  # dim gray
+    "#1b9e77",  # teal
+    "#d95f02",  # rust
+    "#7570b3",  # indigo
+]
+
+
 def get_label_color(label_name):
     if label_name in COLOR_MAP:
         return COLOR_MAP[label_name]
 
-    all_colors = list(mcolors.CSS4_COLORS.values())
     seed = int(hashlib.md5(label_name.encode()).hexdigest(), 16)
-    random.seed(seed)
-    return random.choice(all_colors)
+    return _AUTO_PALETTE[seed % len(_AUTO_PALETTE)]
 
 
 def plot_monthly_summary_basic(path, table, output_path, start_date=None):
