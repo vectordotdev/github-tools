@@ -1,10 +1,10 @@
 label_name,count
-type: bug,2238
+type: bug,2227
 type: enhancement,1792
 type: feature,1062
 type: task,705
 domain: vrl,558
-domain: observability,480
+domain: observability,479
 domain: config,414
 domain: external docs,390
 needs: approval,360
@@ -16,7 +16,7 @@ domain: tests,234
 domain: metrics,231
 domain: sources,211
 platform: kubernetes,206
-source: file,204
+source: file,202
 meta: idea,168
 domain: codecs,166
 domain: ci,166
@@ -29,8 +29,8 @@ needs: requirements,148
 domain: logs,148
 source: kubernetes_logs,144
 sink: elasticsearch,135
-sink: aws_s3,127
 domain: networking,127
+sink: aws_s3,126
 have: must,117
 transform: remap,109
 domain: topology,104
@@ -46,8 +46,8 @@ meta: regression,87
 domain: cli,86
 type: help,85
 sink: aws_cloudwatch_logs,79
-sink: loki,78
 sink: prometheus_exporter,77
+sink: loki,77
 sink: splunk_hec,75
 domain: setup,74
 sink: http,72
@@ -59,28 +59,28 @@ sink: vector,64
 source: vector,62
 source: http_server,62
 needs: rfc,62
-source: syslog,61
+source: syslog,60
 source: socket,60
 sink: socket,58
 domain: api,58
 needs: more demand,57
-sink: clickhouse,56
+sink: clickhouse,55
 domain: dev,55
 transform: lua,53
 source: prometheus_scrape,53
 sink: new,52
 source: host_metrics,50
-domain: unit tests,50
 source: internal_metrics,49
 sink: datadog_logs,49
 platform: docker,49
+domain: unit tests,49
 domain: parsing,49
 source: datadog_agent,47
 sink: aws_kinesis_streams,47
 domain: reload,47
 source: splunk_hec,44
-source: docker_logs,43
 meta: blocked,43
+source: docker_logs,42
 sink: prometheus_remote_write,41
 domain: reliability,41
 transform: log_to_metric,40
@@ -145,7 +145,6 @@ transform: new,14
 source: nats,14
 sink: aws_sqs,14
 source: aws_ecs_metrics,13
-meta: awaiting author,13
 domain: vdev,13
 domain: enrichment_tables,13
 domain: architecture,13

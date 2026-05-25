@@ -18,6 +18,9 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../data/images"))
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+# Very dark — used in place of pure black for less harsh contrast on slides.
+DARK = "#1a1a1a"
+
 # Custom label color overrides
 COLOR_MAP = {
     "type: bug": "#FF4C4C",
@@ -30,11 +33,22 @@ COLOR_MAP = {
     "domain: sources": "#2dbcbc",
     "domain: transforms": "#8615bf",
     "domain: sinks": "#ad4f47",
-    "created_issues": "#070707",
+    "created_issues": DARK,
     "closed_issues": "#27b01c",
-    "created_pull_requests": "#070707",
+    "created_pull_requests": DARK,
     "closed_pull_requests": "#27b01c",
 }
+
+# Pretty table-name in titles ("pull_requests" -> "PRs", etc.)
+TABLE_PRETTY = {
+    "pull_requests": "PRs",
+    "issues": "Issues",
+    "discussions": "Discussions",
+}
+
+
+def pretty_table(table: str) -> str:
+    return TABLE_PRETTY.get(table, table)
 
 # Type overlay lines for the monthly trend chart.
 # Each entry: (display_label, color, list_of_possible_column_names)
@@ -69,8 +83,10 @@ def setup_styles():
 
 
 def set_axis_labels(ax, xlabel, ylabel):
-    ax.set_xlabel(xlabel, fontsize=12, fontstyle='italic')
-    ax.set_ylabel(ylabel, fontsize=12, fontstyle='italic')
+    if xlabel:
+        ax.set_xlabel(xlabel, fontsize=12, fontstyle='italic')
+    if ylabel:
+        ax.set_ylabel(ylabel, fontsize=12, fontstyle='italic')
 
 
 def parse_args():
@@ -212,12 +228,12 @@ def plot_monthly_summary_basic(path, table, output_path, start_date=None):
         plt.figure(figsize=(12, 6))
 
         created_key = f"created_{table}"
-        plt.plot(df["month"], df[created_key], label=f"Created {table}", color=COLOR_MAP.get(created_key), linewidth=3,
+        plt.plot(df["month"], df[created_key], label=f"Created {pretty_table(table)}", color=COLOR_MAP.get(created_key), linewidth=3,
                  marker='o')
         plt.xticks(rotation=45)  # Rotate month labels
 
         closed_key = f"closed_{table}"
-        plt.plot(df["month"], df[closed_key], label=f"Closed {table}",
+        plt.plot(df["month"], df[closed_key], label=f"Closed {pretty_table(table)}",
                  color=COLOR_MAP.get(closed_key),
                  linewidth=3,
                  marker='o')
@@ -228,7 +244,7 @@ def plot_monthly_summary_basic(path, table, output_path, start_date=None):
                          label=display_label, color=color,
                          linewidth=2, linestyle="--")
 
-        plt.title(f"Monthly GitHub Trends ({table})", fontsize=16)
+        plt.title(f"Monthly GitHub Trends ({pretty_table(table)})", fontsize=16)
         ax = plt.gca()
         set_axis_labels(ax, "Month", "Count")
 
@@ -252,7 +268,7 @@ def plot_discussion_trend(path, output_path, start_date=None):
         plt.figure(figsize=(12, 6))
 
         plt.plot(df["month"], df["created_discussions"],
-                 label="Created", color="#070707", linewidth=3, marker='o')
+                 label="Created", color=DARK, linewidth=3, marker='o')
         plt.plot(df["month"], df["closed_discussions"],
                  label="Closed", color="#27b01c", linewidth=3, marker='o')
         plt.plot(df["month"], df["answered_discussions"],
@@ -319,7 +335,7 @@ def plot_integration_trends(csv_path, table, output_path, start_date=None, exclu
 
     ax.yaxis.set_major_locator(MaxNLocator(integer=True))
     set_axis_labels(ax, "Month", "Count")
-    ax.set_title(f"Integrations Top {top_n} Trend ({table})", fontsize=16)
+    ax.set_title(f"Integrations Top {top_n} Trend ({pretty_table(table)})", fontsize=16)
 
     # Legend outside on the right
     ax.legend(
@@ -359,9 +375,9 @@ def plot_label_breakdown(path, table, output_path, top_n=20, start_date=None, ex
 
         plt.figure(figsize=(10, 6))
         plt.barh(df["label_name"], df["count"], color=colors)
-        plt.title(f"Top {top_n} Labels by Frequency ({table})", fontsize=16)
+        plt.title(f"Top {top_n} Labels by Frequency ({pretty_table(table)})", fontsize=16)
         ax = plt.gca()
-        set_axis_labels(ax, "Count", "Label")
+        set_axis_labels(ax, "Count", None)
         ax.invert_yaxis()
         plt.tight_layout()
 
@@ -425,9 +441,9 @@ def plot_label_count(path, table, output_path, top_n=8, start_date=None, exclude
         # Axes styling
         ax.set_xticks(np.arange(len(months)))
         ax.set_xticklabels(months, rotation=45)
-        set_axis_labels(ax, "Month", "Label")
+        set_axis_labels(ax, "Month", "Count")
 
-        ax.set_title(f"Top {top_n} Labels Over Time ({table})", fontsize=16)
+        ax.set_title(f"Top {top_n} Labels Over Time ({pretty_table(table)})", fontsize=16)
 
         # Legend sorted by total volume
         label_totals = pivot_df.sum().to_dict()
@@ -467,12 +483,22 @@ def plot_label_state_counts(path, table, output_path, top_n, exclude_labels=None
 
         # Plot
         fig, ax = plt.subplots(figsize=(12, 6))
-        ax.barh(df["label_name"], df["closed_count"], label="Closed", color="black")
+        ax.barh(df["label_name"], df["closed_count"], label="Closed", color=DARK)
         ax.barh(df["label_name"], df["open_count"], left=df["closed_count"], label="Open", color="green")
 
-        set_axis_labels(ax, "Count", "Label")
+        # Inline "closed / open" labels at the end of each bar
+        x_pad = df["total"].max() * 0.01
+        for _, row in df.iterrows():
+            ax.text(
+                row["total"] + x_pad, row["label_name"],
+                f"{int(row['closed_count'])} / {int(row['open_count'])}",
+                va="center", fontsize=9, color=DARK,
+            )
+        ax.set_xlim(right=df["total"].max() * 1.12)
 
-        ax.set_title(f"Top {top_n} Integrations Label Count ({table})", fontsize=16)
+        set_axis_labels(ax, "Count", None)
+
+        ax.set_title(f"Top {top_n} Integrations Label Count ({pretty_table(table)})", fontsize=16)
         ax.legend(loc="lower right")
         plt.tight_layout()
         plt.gca().invert_yaxis()  # highest total on top
@@ -533,9 +559,9 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
                     ax.text(j, i, int(v), ha="center", va="center", color=color, fontsize=9)
 
         cbar = fig.colorbar(im, ax=ax)
-        cbar.set_label(f"{table} opened")
+        cbar.set_label(f"{pretty_table(table)} opened")
 
-        ax.set_title(f"Top {top_n} {table} contributors (last {window_months} months)", fontsize=16)
+        ax.set_title(f"Top {top_n} {pretty_table(table)} contributors (last {window_months} months)", fontsize=16)
         set_axis_labels(ax, "Month", "Contributor")
         ax.grid(False)
 
@@ -613,7 +639,7 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
         ax.set_xticklabels(window, rotation=45, ha="right")
         ax.yaxis.set_major_locator(MaxNLocator(integer=True))
         set_axis_labels(ax, "Month", "Unique contributors")
-        ax.set_title(f"Unique {table} contributors (last {len(window)} months)", fontsize=16)
+        ax.set_title(f"Unique {pretty_table(table)} contributors (last {len(window)} months)", fontsize=16)
         ax.legend(loc="upper left")
 
         ax_stats.axis("off")

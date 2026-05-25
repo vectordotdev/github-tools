@@ -1,12 +1,12 @@
 label_name,open_count,closed_count
 type: enhancement,378,1414
 type: feature,292,770
-type: bug,195,2043
+type: bug,194,2033
 domain: config,131,283
 needs: approval,124,236
 domain: external docs,107,283
-domain: observability,104,376
-source: file,83,121
+domain: observability,103,376
+source: file,82,120
 domain: performance,81,220
 domain: sinks,80,175
 type: tech debt,78,256
@@ -27,7 +27,7 @@ domain: vrl,43,515
 sink: new,43,9
 source: kafka,38,61
 domain: releasing,37,119
-sink: aws_s3,34,93
+sink: aws_s3,34,92
 domain: logs,33,115
 provider: aws,32,67
 domain: networking,31,96
@@ -35,7 +35,7 @@ sink: elasticsearch,30,105
 source: http_server,30,32
 needs: more demand,29,28
 good first issue,28,129
-domain: unit tests,28,22
+domain: unit tests,28,21
 domain: transforms,27,67
 domain: security,26,77
 sink: kafka,25,64
@@ -51,10 +51,10 @@ sink: vector,19,45
 domain: reliability,19,22
 Epic,18,136
 domain: api,18,40
-sink: clickhouse,18,38
 domain: dev,18,37
+sink: clickhouse,18,37
 source: prometheus_scrape,18,35
-source: docker_logs,18,25
+source: docker_logs,18,24
 sink: prometheus_remote_write,18,23
 sink: splunk_hec,17,58
 meta: feedback,17,51
@@ -63,17 +63,17 @@ source: socket,17,43
 source: datadog_agent,17,30
 platform: windows,17,19
 provider: gcp,17,17
-sink: loki,16,62
 sink: datadog_metrics,16,56
 domain: reload,16,31
 source: aws_s3,16,24
 sink: gcp_cloud_storage,16,22
+sink: loki,15,62
 source: vector,15,47
 platform: docker,15,34
 source: internal_metrics,15,34
 sink: file,15,24
 sink: socket,14,44
-source: syslog,13,48
+source: syslog,13,47
 transform: lua,13,40
 domain: core,13,11
 domain: schemas,13,8
@@ -149,7 +149,6 @@ sink: humio_logs,3,21
 platform: debian,3,13
 source: heroku_logs,3,12
 domain: architecture,3,10
-meta: awaiting author,3,10
 source: aws_ecs_metrics,3,10
 sink: new_relic_logs,3,8
 source: aws_sqs,3,8
