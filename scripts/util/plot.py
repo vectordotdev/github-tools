@@ -85,11 +85,13 @@ def set_axis_labels(ax, xlabel, ylabel):
         ax.set_ylabel(ylabel, fontsize=12, fontstyle='italic')
 
 
-def round_bars(ax, radius_frac=0.35):
+def round_bars(ax, radius_frac=0.5):
     """Replace every Rectangle bar in `ax` with a rounded FancyBboxPatch.
 
     Works for both horizontal and vertical bars — radius is derived from
-    the smaller dimension of each bar. Preserves labels for legend.
+    the smaller dimension of each bar (so the bar reads as a pill in its
+    narrow direction). radius_frac=0.5 produces full rounding; lower
+    values produce a softer rectangle. Preserves labels for legend.
     """
     for patch in list(ax.patches):
         if not hasattr(patch, "get_xy"):
