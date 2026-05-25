@@ -83,10 +83,10 @@ Writes to `out/historical/`. The fetched JSON must be split by year and promoted
 
 ```shell
 github-tools generate-all \
-  --env-file vector.env --env-file vrl.env --env-file quickwit.env \
-  --exclude-labels "no-changelog,meta: awaiting author"
+  --env-file vector.env --env-file vrl.env --env-file quickwit.env
 
-# Charts (still Python):
+# Charts (still Python). --exclude-labels hides those label series from
+# label-frequency charts only; the underlying PR/issue counts are unaffected.
 python -m scripts.util.plot --env-file vector.env --input-dir out/summaries \
   --start $(date -d "$(date +%Y-%m-01) -12 months" +%Y-%m) \
   --exclude-labels "no-changelog,meta: awaiting author"
@@ -111,5 +111,4 @@ Per-repo trend pages with all charts:
 - [VRL](trends/vrl.md)
 - [Quickwit](trends/quickwit.md)
 
-> [!NOTE]
-> Issues and PRs with the following labels are excluded from all charts: `no-changelog`, `meta: awaiting author`.
+Exclusions are now per-chart; see the note below each chart on the trends pages.
