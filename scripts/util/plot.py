@@ -21,6 +21,21 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Very dark — used in place of pure black for less harsh contrast on slides.
 DARK = "#1a1a1a"
+MUTED = "#555555"
+WHITE = "white"
+
+# Semantic palette. Reuse these instead of hardcoding colors at call sites.
+CLOSED = "#006400"           # closed issues/PRs/discussions
+OPEN = "#FF8C00"             # open issues/PRs (darkorange)
+ANSWERED = "#4C9AFF"         # answered discussions; also "type: feature"
+BUG = "#FF4C4C"              # "type: bug"
+ENHANCEMENT = "#36B37E"      # "type: enhancement"; also new contributors
+TASK = "#FFA500"             # "type: task"
+RETURNING_CONTRIBUTOR = "#8E5CE6"
+NEW_CONTRIBUTOR = ENHANCEMENT
+
+# Heatmap colormap for contributor activity chart.
+HEATMAP_CMAP = "YlOrRd"
 
 # Known bot logins that don't carry the "[bot]" suffix in older snapshots.
 KNOWN_BOT_LOGINS = {
@@ -41,9 +56,9 @@ def is_bot_login(login: str) -> bool:
 
 # Custom label color overrides
 COLOR_MAP = {
-    "type: bug": "#FF4C4C",
-    "type: feature": "#4C9AFF",
-    "type: enhancement": "#36B37E",
+    "type: bug": BUG,
+    "type: feature": ANSWERED,
+    "type: enhancement": ENHANCEMENT,
     "domain: external docs": "#afab7e",
     "domain: ci": "#d6c720",
     "domain: deps": "#1f3f18",
@@ -52,9 +67,9 @@ COLOR_MAP = {
     "domain: transforms": "#8615bf",
     "domain: sinks": "#ad4f47",
     "created_issues": DARK,
-    "closed_issues": "#27b01c",
+    "closed_issues": CLOSED,
     "created_pull_requests": DARK,
-    "closed_pull_requests": "#27b01c",
+    "closed_pull_requests": CLOSED,
 }
 
 # Pretty table-name in titles ("pull_requests" -> "PRs", etc.)
@@ -72,10 +87,10 @@ def pretty_table(table: str) -> str:
 # Each entry: (display_label, color, list_of_possible_column_names)
 # The first matching column found in the CSV will be used.
 TYPE_OVERLAYS = [
-    ("Bugs",         "#FF4C4C", ["type: bug",         "Bug"]),
-    ("Features",     "#4C9AFF", ["type: feature",      "Feature"]),
-    ("Enhancements", "#36B37E", ["type: enhancement",  "Enhancement"]),
-    ("Tasks",        "#FFA500", ["type: task",          "Task"]),
+    ("Bugs",         BUG,         ["type: bug",         "Bug"]),
+    ("Features",     ANSWERED,    ["type: feature",     "Feature"]),
+    ("Enhancements", ENHANCEMENT, ["type: enhancement", "Enhancement"]),
+    ("Tasks",        TASK,        ["type: task",        "Task"]),
 ]
 
 
@@ -348,9 +363,9 @@ def plot_discussion_trend(path, output_path, start_date=None):
         plt.plot(df["month"], df["created_discussions"],
                  label="Created", color=DARK, linewidth=3, marker='o')
         plt.plot(df["month"], df["closed_discussions"],
-                 label="Closed", color="#27b01c", linewidth=3, marker='o')
+                 label="Closed", color=CLOSED, linewidth=3, marker='o')
         plt.plot(df["month"], df["answered_discussions"],
-                 label="Answered", color="#4C9AFF", linewidth=2, linestyle="--")
+                 label="Answered", color=ANSWERED, linewidth=2, linestyle="--")
 
         plt.title("Monthly Discussion Trends", fontsize=16)
         ax = plt.gca()
@@ -563,8 +578,8 @@ def plot_label_state_counts(path, table, output_path, top_n, exclude_labels=None
 
         # Plot
         fig, ax = plt.subplots(figsize=(12, 6))
-        ax.barh(df["label_name"], df["closed_count"], label="Closed", color=DARK)
-        ax.barh(df["label_name"], df["open_count"], left=df["closed_count"], label="Open", color="green")
+        ax.barh(df["label_name"], df["closed_count"], label="Closed", color=CLOSED)
+        ax.barh(df["label_name"], df["open_count"], left=df["closed_count"], label="Open", color=OPEN)
 
         # Inline "closed / open" labels at the end of each bar
         x_pad = df["total"].max() * 0.01
@@ -625,8 +640,8 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
         fig, ax = plt.subplots(figsize=(12, 5))
         # Zero cells masked so the plain axes background shows through
         # instead of the colormap's low end tint.
-        cmap = plt.get_cmap("YlOrRd").copy()
-        cmap.set_bad(color="white")
+        cmap = plt.get_cmap(HEATMAP_CMAP).copy()
+        cmap.set_bad(color=WHITE)
         masked = ma.masked_where(pivot.values == 0, pivot.values)
         im = ax.imshow(masked, aspect="auto", cmap=cmap)
 
@@ -640,7 +655,7 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
             for j in range(pivot.shape[1]):
                 v = pivot.values[i, j]
                 if v > 0:
-                    color = "white" if v > vmax * 0.6 else DARK
+                    color = WHITE if v > vmax * 0.6 else DARK
                     ax.text(j, i, int(v), ha="center", va="center", color=color, fontsize=9)
 
         cbar = fig.colorbar(im, ax=ax)
@@ -698,9 +713,9 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
         fig, ax = plt.subplots(figsize=(12, 6))
 
         x = np.arange(len(window))
-        ax.bar(x, returning_counts.values, color="#8E5CE6", label="Returning")
+        ax.bar(x, returning_counts.values, color=RETURNING_CONTRIBUTOR, label="Returning")
         ax.bar(x, new_counts.values, bottom=returning_counts.values,
-               color="#36B37E", label="New")
+               color=NEW_CONTRIBUTOR, label="New")
 
         totals = returning_counts.values + new_counts.values
         for i, t in enumerate(totals):
@@ -778,19 +793,19 @@ def plot_yearly_contributors(path, table, output_path, max_years=6):
         # Squared edges — rounding stacked segments leaves gaps at the
         # junction.
         for i, a in enumerate(alphas):
-            ax.barh(y[i], ret_vals[i], color="#8E5CE6", height=0.55, alpha=a)
-            ax.barh(y[i], new_vals[i], left=ret_vals[i], color="#36B37E",
+            ax.barh(y[i], ret_vals[i], color=RETURNING_CONTRIBUTOR, height=0.55, alpha=a)
+            ax.barh(y[i], new_vals[i], left=ret_vals[i], color=NEW_CONTRIBUTOR,
                     height=0.55, alpha=a)
 
         x_pad = max(totals.max() * 0.015, 0.5)
         for i, (n, r, t, p) in enumerate(zip(new_vals, ret_vals, totals, partials)):
-            text_color_inner = "white"
+            text_color_inner = WHITE
             text_color_outer = DARK
             if p:
                 # Inner labels become dark grey on muted bars so they stay
                 # readable against the lighter fill.
-                text_color_inner = "#555555"
-                text_color_outer = "#555555"
+                text_color_inner = MUTED
+                text_color_outer = MUTED
             if r > 0:
                 ax.text(r / 2, i, str(int(r)), ha="center", va="center",
                         color=text_color_inner, fontsize=12, fontweight="bold")
@@ -807,7 +822,7 @@ def plot_yearly_contributors(path, table, output_path, max_years=6):
         for tick, p in zip(ax.get_yticklabels(), partials):
             if p:
                 tick.set_fontstyle("italic")
-                tick.set_color("#555555")
+                tick.set_color(MUTED)
         ax.invert_yaxis()
         ax.set_xlim(right=totals.max() * 1.28)
 
@@ -825,8 +840,8 @@ def plot_yearly_contributors(path, table, output_path, max_years=6):
         from matplotlib.patches import Patch
         ax.legend(
             handles=[
-                Patch(facecolor="#8E5CE6", label="Returning"),
-                Patch(facecolor="#36B37E", label="New"),
+                Patch(facecolor=RETURNING_CONTRIBUTOR, label="Returning"),
+                Patch(facecolor=NEW_CONTRIBUTOR, label="New"),
             ],
             loc="lower right", frameon=False,
         )
