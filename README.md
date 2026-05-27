@@ -106,7 +106,7 @@ github-tools purge-all --env-file vector.env  # omit --dry-run to execute
 
 Audit logs written to `out/purge/` (local only).
 
-## 4. (Optional) AI-assisted review stats
+## 4. AI-assisted review stats
 
 Measures how contributors react to automated review bot comments (👍 liked / 👎 disliked / no signal).
 
