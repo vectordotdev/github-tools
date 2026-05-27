@@ -2,8 +2,9 @@ use anyhow::Result;
 use clap::{Parser, Subcommand};
 use github_tools::{
     commands::{
-        build_db, close_old_prs, compact, delete_stale_branches, fetch_discussions, fetch_issues,
-        fetch_labels, generate_summaries, purge, remove_legacy_label, workflows,
+        build_db, close_old_prs, compact, delete_stale_branches, fetch_automated_review_stats,
+        fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge,
+        remove_legacy_label, workflows,
     },
     config::Config,
 };
@@ -121,6 +122,16 @@ enum Command {
         #[arg(long)]
         limit: Option<usize>,
     },
+    /// Count automated review comments by reaction (liked / disliked / no reaction).
+    /// Omit --bot-login to list all review comment authors and discover the right login.
+    AutomatedReviewStats {
+        #[arg(long, help = "Path to .env file")]
+        env_file: Option<String>,
+        #[arg(long, help = "GitHub login of the review bot; omit to list all authors")]
+        bot_login: Option<String>,
+        #[arg(long, help = "Only scan PRs merged since this date (ISO, YYYY-MM, or relative: 3m, 1y, 30d)")]
+        since: Option<String>,
+    },
     /// Deduplicate JSON year files in a data directory
     Compact {
         #[arg(help = "Path to directory containing year JSON files (e.g. data/vectordotdev_vector/issues)")]
@@ -189,6 +200,14 @@ fn main() -> Result<()> {
         Command::BuildDb { input, env_file } => {
             let config = Config::load(env_file.as_deref())?;
             build_db::run(&input, &config)
+        }
+        Command::AutomatedReviewStats {
+            env_file,
+            bot_login,
+            since,
+        } => {
+            let config = Config::load(env_file.as_deref())?;
+            fetch_automated_review_stats::run(&config, bot_login.as_deref(), since.as_deref())
         }
         Command::Compact { dir } => compact::run(&dir),
         Command::FetchAll { env_file, since } => workflows::fetch_all(&env_file, since.as_deref()),

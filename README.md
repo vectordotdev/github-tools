@@ -61,6 +61,9 @@ Purge:
   purge untagged     Purge untagged GitHub container images
   purge vector-dev   Purge old vector-dev images from Docker Hub
 
+AI review:
+  automated-review-stats  Count review bot comments by reaction (liked / disliked / no signal)
+
 Maintenance:
   close-old-prs          Close PRs with 'meta: awaiting author' older than 6 months
   delete-stale-branches  Delete branches with no commits in 4 years
@@ -102,6 +105,26 @@ github-tools purge-all --env-file vector.env  # omit --dry-run to execute
 ```
 
 Audit logs written to `out/purge/` (local only).
+
+## 4. AI-assisted review stats
+
+Measures how contributors react to automated review bot comments (👍 liked / 👎 disliked / no signal).
+
+```shell
+# Discover the bot's GitHub login (lists all review comment authors by frequency)
+github-tools automated-review-stats --env-file vector.env --since 3m
+
+# Produce stats + update trends/vector.md
+github-tools automated-review-stats \
+  --env-file vector.env \
+  --bot-login "chatgpt-codex-connector" \
+  --since 2026-01-01
+```
+
+Outputs:
+- Console summary (like rate, dislike rate)
+- `out/automated-review-stats/{owner}_{repo}.csv` — per-comment table with URL and reaction (gitignored)
+- `trends/{repo}.md` — two summary tables updated in place via `AUTO:` markers
 
 # Trends
 
