@@ -91,3 +91,24 @@
 ## Discussions
 
 ![Monthly Discussions](../data/images/vectordotdev_vector_discussions.monthly_trend.png)
+
+## AI-Assisted Code Review
+
+<!-- AUTO:automated-review-stats:start -->
+**All comments** (169 merged PRs, bot: `chatgpt-codex-connector`, since: 2026-01-01T00:00:00Z)
+
+| Reaction | Count | Share |
+|----------|------:|------:|
+| Liked 👍 | 125 | 54.1% |
+| Disliked 👎 | 26 | 11.3% |
+| No reaction | 80 | 34.6% |
+| **Total** | **231** | |
+
+**Reacted comments only** (excludes no reaction)
+
+| Reaction | Count | Share |
+|----------|------:|------:|
+| Liked 👍 | 125 | 82.8% |
+| Disliked 👎 | 26 | 17.2% |
+| **Total** | **151** | |
+<!-- AUTO:automated-review-stats:end -->
