@@ -53,6 +53,7 @@ struct Stats {
     liked: u64,
     disliked: u64,
     no_signal: u64, // no reaction + mixed (both thumbs): no clear verdict
+    truncated: bool, // true if any nested connection hit its page limit
 }
 
 /// Omit `bot_login` to run in discovery mode: lists all review comment authors.
@@ -62,7 +63,7 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
 
     let discovery = bot_login.is_none();
     let mut authors: HashMap<String, u64> = HashMap::new();
-    let mut stats = Stats { prs_scanned: 0, total: 0, liked: 0, disliked: 0, no_signal: 0 };
+    let mut stats = Stats { prs_scanned: 0, total: 0, liked: 0, disliked: 0, no_signal: 0, truncated: false };
     let mut rows: Vec<(String, &'static str)> = Vec::new();
     let mut after: Option<String> = None;
     let mut page = 1;
@@ -130,12 +131,14 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
 
             if pr["reviewThreads"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
                 eprintln!("Warning: PR #{pr_number} has >50 review threads; counts may be incomplete.");
+                stats.truncated = true;
             }
 
             let threads = pr["reviewThreads"]["nodes"].as_array().cloned().unwrap_or_default();
             for thread in &threads {
                 if thread["comments"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
                     eprintln!("Warning: PR #{pr_number} has a thread with >20 comments; counts may be incomplete.");
+                    stats.truncated = true;
                 }
 
                 let comments = thread["comments"]["nodes"].as_array().cloned().unwrap_or_default();
@@ -153,6 +156,7 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
 
                     if comment["reactions"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
                         eprintln!("Warning: a comment on PR #{pr_number} has >30 reactions; counts may be incomplete.");
+                        stats.truncated = true;
                     }
 
                     stats.total += 1;
@@ -233,7 +237,9 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
         println!("Full table written to {}", csv_path.display());
     }
 
-    if stats.total > 0 {
+    if stats.truncated {
+        eprintln!("Trends not updated: results are incomplete due to nested pagination limits.");
+    } else {
         update_trends(config, login, since_ts.as_deref(), &stats)?;
     }
 
@@ -247,8 +253,29 @@ fn update_trends(config: &Config, bot_login: &str, since_ts: Option<&str>, stats
         return Ok(());
     }
 
-    let reacted = stats.liked + stats.disliked;
     let since_label = since_ts.map(|ts| &ts[..10]).unwrap_or("all time");
+
+    if stats.total == 0 {
+        let new_content = format!(
+            "\n*No bot comments found (bot: `{bot_login}`, since: {since_label}).*\n"
+        );
+        const START: &str = "<!-- AUTO:automated-review-stats:start -->";
+        const END: &str = "<!-- AUTO:automated-review-stats:end -->";
+        let existing = fs::read_to_string(&trends_path)?;
+        let updated = match (existing.find(START), existing.find(END)) {
+            (Some(start_pos), Some(end_pos)) => {
+                let before = &existing[..start_pos + START.len()];
+                let after = &existing[end_pos..];
+                format!("{before}{new_content}{after}")
+            }
+            _ => format!("{existing}\n## AI-Assisted Code Review\n\n{START}{new_content}{END}\n"),
+        };
+        fs::write(&trends_path, updated)?;
+        println!("Trends updated at {}", trends_path.display());
+        return Ok(());
+    }
+
+    let reacted = stats.liked + stats.disliked;
 
     let reacted_table = if reacted > 0 {
         format!(
