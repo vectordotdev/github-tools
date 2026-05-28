@@ -253,28 +253,12 @@ fn update_trends(config: &Config, bot_login: &str, since_ts: Option<&str>, stats
         return Ok(());
     }
 
-    let since_label = since_ts.map(|ts| &ts[..10]).unwrap_or("all time");
-
     if stats.total == 0 {
-        let new_content = format!(
-            "\n*No bot comments found (bot: `{bot_login}`, since: {since_label}).*\n"
-        );
-        const START: &str = "<!-- AUTO:automated-review-stats:start -->";
-        const END: &str = "<!-- AUTO:automated-review-stats:end -->";
-        let existing = fs::read_to_string(&trends_path)?;
-        let updated = match (existing.find(START), existing.find(END)) {
-            (Some(start_pos), Some(end_pos)) => {
-                let before = &existing[..start_pos + START.len()];
-                let after = &existing[end_pos..];
-                format!("{before}{new_content}{after}")
-            }
-            _ => format!("{existing}\n## AI-Assisted Code Review\n\n{START}{new_content}{END}\n"),
-        };
-        fs::write(&trends_path, updated)?;
-        println!("Trends updated at {}", trends_path.display());
+        println!("No bot comments found, skipping trends update.");
         return Ok(());
     }
 
+    let since_label = since_ts.map(|ts| &ts[..10]).unwrap_or("all time");
     let reacted = stats.liked + stats.disliked;
 
     let reacted_table = if reacted > 0 {
