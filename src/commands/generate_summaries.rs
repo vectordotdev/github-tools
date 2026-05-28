@@ -91,11 +91,7 @@ fn export_monthly_summary(
 
     let label_columns_sql = label_names
         .iter()
-        .map(|l| {
-            let escaped_val = l.replace('\'', "''");
-            let escaped_col = l.replace('"', "\"\"");
-            format!("SUM(CASE WHEN lc.label_name = '{escaped_val}' THEN 1 ELSE 0 END) AS \"{escaped_col}\"")
-        })
+        .map(|l| format!("SUM(CASE WHEN lc.label_name = '{l}' THEN 1 ELSE 0 END) AS \"{l}\""))
         .collect::<Vec<_>>()
         .join(",\n        ");
 
@@ -123,11 +119,7 @@ fn export_monthly_summary(
     } else {
         let cols = issue_type_names
             .iter()
-            .map(|t| {
-                let escaped_val = t.replace('\'', "''");
-                let escaped_col = t.replace('"', "\"\"");
-                format!("SUM(CASE WHEN it.issue_type = '{escaped_val}' AND e.event = 'created' THEN 1 ELSE 0 END) AS \"{escaped_col}\"")
-            })
+            .map(|t| format!("SUM(CASE WHEN it.issue_type = '{t}' AND e.event = 'created' THEN 1 ELSE 0 END) AS \"{t}\""))
             .collect::<Vec<_>>()
             .join(",\n            ");
         format!(",\n            {cols}")
