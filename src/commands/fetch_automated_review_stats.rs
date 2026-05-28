@@ -23,15 +23,15 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
         number
         updatedAt
         mergedAt
-        reviewThreads(first: 50) {
+        reviewThreads(first: 100) {
           pageInfo { hasNextPage }
           nodes {
-            comments(first: 50) {
+            comments(first: 100) {
               pageInfo { hasNextPage }
               nodes {
                 url
                 author { login }
-                reactions(first: 50) {
+                reactions(first: 100) {
                   pageInfo { hasNextPage }
                   nodes {
                     content
@@ -53,7 +53,7 @@ struct Stats {
     liked: u64,
     disliked: u64,
     no_signal: u64, // no reaction + mixed (both thumbs): no clear verdict
-    incomplete: bool, // true if any nested connection hit the 50-item page limit
+    incomplete: bool, // true if any nested connection hit the 100-item page limit
 }
 
 /// Omit `bot_login` to run in discovery mode: lists all review comment authors.
@@ -130,14 +130,14 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
             let pr_number = pr["number"].as_u64().unwrap_or(0);
 
             if pr["reviewThreads"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
-                eprintln!("Warning: PR #{pr_number} has >50 review threads; counts may be incomplete.");
+                eprintln!("Warning: PR #{pr_number} has >100 review threads; counts may be incomplete.");
                 stats.incomplete = true;
             }
 
             let threads = pr["reviewThreads"]["nodes"].as_array().cloned().unwrap_or_default();
             for thread in &threads {
                 if thread["comments"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
-                    eprintln!("Warning: PR #{pr_number} has a thread with >50 comments; counts may be incomplete.");
+                    eprintln!("Warning: PR #{pr_number} has a thread with >100 comments; counts may be incomplete.");
                     stats.incomplete = true;
                 }
 
@@ -155,7 +155,7 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
                     }
 
                     if comment["reactions"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
-                        eprintln!("Warning: a comment on PR #{pr_number} has >50 reactions; counts may be incomplete.");
+                        eprintln!("Warning: a comment on PR #{pr_number} has >100 reactions; counts may be incomplete.");
                         stats.incomplete = true;
                     }
 
