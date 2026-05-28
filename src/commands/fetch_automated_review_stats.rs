@@ -26,12 +26,12 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
         reviewThreads(first: 50) {
           pageInfo { hasNextPage }
           nodes {
-            comments(first: 20) {
+            comments(first: 50) {
               pageInfo { hasNextPage }
               nodes {
                 url
                 author { login }
-                reactions(first: 30) {
+                reactions(first: 50) {
                   pageInfo { hasNextPage }
                   nodes {
                     content
@@ -53,7 +53,7 @@ struct Stats {
     liked: u64,
     disliked: u64,
     no_signal: u64, // no reaction + mixed (both thumbs): no clear verdict
-    truncated: bool, // true if any nested connection hit its page limit
+    incomplete: bool, // true if any nested connection hit the 50-item page limit
 }
 
 /// Omit `bot_login` to run in discovery mode: lists all review comment authors.
@@ -63,7 +63,7 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
 
     let discovery = bot_login.is_none();
     let mut authors: HashMap<String, u64> = HashMap::new();
-    let mut stats = Stats { prs_scanned: 0, total: 0, liked: 0, disliked: 0, no_signal: 0, truncated: false };
+    let mut stats = Stats { prs_scanned: 0, total: 0, liked: 0, disliked: 0, no_signal: 0, incomplete: false };
     let mut rows: Vec<(String, &'static str)> = Vec::new();
     let mut after: Option<String> = None;
     let mut page = 1;
@@ -131,14 +131,14 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
 
             if pr["reviewThreads"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
                 eprintln!("Warning: PR #{pr_number} has >50 review threads; counts may be incomplete.");
-                stats.truncated = true;
+                stats.incomplete = true;
             }
 
             let threads = pr["reviewThreads"]["nodes"].as_array().cloned().unwrap_or_default();
             for thread in &threads {
                 if thread["comments"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
-                    eprintln!("Warning: PR #{pr_number} has a thread with >20 comments; counts may be incomplete.");
-                    stats.truncated = true;
+                    eprintln!("Warning: PR #{pr_number} has a thread with >50 comments; counts may be incomplete.");
+                    stats.incomplete = true;
                 }
 
                 let comments = thread["comments"]["nodes"].as_array().cloned().unwrap_or_default();
@@ -155,8 +155,8 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
                     }
 
                     if comment["reactions"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
-                        eprintln!("Warning: a comment on PR #{pr_number} has >30 reactions; counts may be incomplete.");
-                        stats.truncated = true;
+                        eprintln!("Warning: a comment on PR #{pr_number} has >50 reactions; counts may be incomplete.");
+                        stats.incomplete = true;
                     }
 
                     stats.total += 1;
@@ -237,7 +237,7 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
         println!("Full table written to {}", csv_path.display());
     }
 
-    if stats.truncated {
+    if stats.incomplete {
         eprintln!("Trends not updated: results are incomplete due to nested pagination limits.");
     } else {
         update_trends(config, login, since_ts.as_deref(), &stats)?;
