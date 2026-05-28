@@ -95,16 +95,16 @@
 ## AI-Assisted Code Review
 
 <!-- AUTO:automated-review-stats:start -->
-**All comments** (169 merged PRs, bot: `chatgpt-codex-connector`, since: 2026-01-01T00:00:00Z)
+**All comments** (169 merged PRs, bot: `chatgpt-codex-connector`, since: 2026-01-01)
 
 | Reaction | Count | Share |
 |----------|------:|------:|
 | Liked 👍 | 125 | 54.1% |
 | Disliked 👎 | 26 | 11.3% |
-| No reaction | 80 | 34.6% |
+| No signal | 80 | 34.6% |
 | **Total** | **231** | |
 
-**Reacted comments only** (excludes no reaction)
+**Reacted comments only** (excludes no signal)
 
 | Reaction | Count | Share |
 |----------|------:|------:|
