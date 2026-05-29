@@ -57,8 +57,13 @@ def is_bot_login(login: str) -> bool:
 # Custom label color overrides
 COLOR_MAP = {
     "type: bug": BUG,
+    "Bug": BUG,
     "type: feature": ANSWERED,
+    "Feature": ANSWERED,
     "type: enhancement": ENHANCEMENT,
+    "Enhancement": ENHANCEMENT,
+    "type: task": TASK,
+    "Task": TASK,
     "domain: external docs": "#afab7e",
     "domain: ci": "#d6c720",
     "domain: deps": "#1f3f18",
@@ -331,11 +336,13 @@ def plot_monthly_summary_basic(path, table, output_path, start_date=None):
                  linewidth=3,
                  marker='o')
         for display_label, color, candidates in TYPE_OVERLAYS:
-            col = next((c for c in candidates if c in df.columns), None)
-            if col is not None:
-                plt.plot(df["month"], df[col],
-                         label=display_label, color=color,
-                         linewidth=2, linestyle="--")
+            matching = [c for c in candidates if c in df.columns]
+            if not matching:
+                continue
+            combined = df[matching].sum(axis=1)
+            plt.plot(df["month"], combined,
+                     label=display_label, color=color,
+                     linewidth=2, linestyle="--")
 
         plt.title(f"Monthly GitHub Trends ({pretty_table(table)})", fontsize=16)
         ax = plt.gca()

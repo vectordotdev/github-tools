@@ -21,33 +21,6 @@
     }
   },
   {
-    "closed_at": "2023-09-25T22:04:21Z",
-    "created_at": "2022-11-17T13:19:52Z",
-    "id": 1703965340,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the standard library",
-        "id": 8863369235281820815,
-        "name": "vrl: stdlib"
-      }
-    ],
-    "number": 227,
-    "state": "closed",
-    "title": "AWS VPC FLOW logs fields missing",
-    "updated_at": "2023-09-25T22:04:22Z",
-    "user": {
-      "login": "voyc-geoffrey"
-    }
-  },
-  {
     "closed_at": null,
     "created_at": "2022-11-16T16:26:05Z",
     "id": 1643909430,
@@ -161,33 +134,6 @@
     "updated_at": "2023-03-28T13:06:40Z",
     "user": {
       "login": "JeanMertz"
-    }
-  },
-  {
-    "closed_at": "2023-07-05T14:54:42Z",
-    "created_at": "2022-10-04T10:26:37Z",
-    "id": 1700632716,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the standard library",
-        "id": 8863369235281820815,
-        "name": "vrl: stdlib"
-      }
-    ],
-    "number": 226,
-    "state": "closed",
-    "title": "`parse_nginx_log` fails for various logged bot requests",
-    "updated_at": "2023-07-05T14:54:42Z",
-    "user": {
-      "login": "hashworks"
     }
   },
   {
@@ -388,60 +334,6 @@
     }
   },
   {
-    "closed_at": "2023-07-31T16:43:15Z",
-    "created_at": "2022-09-22T16:45:30Z",
-    "id": 1703965714,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the standard library",
-        "id": 8863369235281820815,
-        "name": "vrl: stdlib"
-      }
-    ],
-    "number": 228,
-    "state": "closed",
-    "title": "Vector does not parse RFC5424 structured data with some escape characters",
-    "updated_at": "2023-07-31T16:43:15Z",
-    "user": {
-      "login": "saidsalihefendic"
-    }
-  },
-  {
-    "closed_at": null,
-    "created_at": "2022-09-21T10:15:25Z",
-    "id": 1767678611,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the standard library",
-        "id": 8863369235281820815,
-        "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
-      }
-    ],
-    "number": 270,
-    "state": "open",
-    "title": "Add an optional parameter to the parse_linux_authorization function to specify a timezone",
-    "updated_at": "2023-06-27T17:36:35Z",
-    "user": {
-      "login": "Qazeer"
-    }
-  },
-  {
     "closed_at": "2023-11-14T20:42:33Z",
     "created_at": "2022-09-16T13:28:32Z",
     "id": 1643925480,
@@ -599,33 +491,6 @@
   },
   {
     "closed_at": null,
-    "created_at": "2022-09-05T11:32:50Z",
-    "id": 1767679552,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the standard library",
-        "id": 8863369235281820815,
-        "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
-      }
-    ],
-    "number": 271,
-    "state": "open",
-    "title": "improve parse_key_value to support nesting , match with encode_key_value",
-    "updated_at": "2023-06-21T14:03:36Z",
-    "user": {
-      "login": "ccmsi"
-    }
-  },
-  {
-    "closed_at": null,
     "created_at": "2022-08-29T09:25:27Z",
     "id": 1643930188,
     "issue_type": null,
@@ -760,45 +625,6 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-08-10T14:17:05Z",
-    "id": 1658877408,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code change that enhances its existing functionality",
-        "id": 2640581176510094373,
-        "name": "type: enhancement"
-      },
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the compiler",
-        "id": 8770318842022581189,
-        "name": "vrl: compiler"
-      },
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the type system",
-        "id": 4415283568476322878,
-        "name": "vrl: typedef"
-      }
-    ],
-    "number": 186,
-    "state": "open",
-    "title": "VRL `Target` methods should be infallible",
-    "updated_at": "2023-05-01T20:52:24Z",
-    "user": {
-      "login": "fuchsnj"
-    }
-  },
-  {
     "closed_at": "2023-03-29T03:50:00Z",
     "created_at": "2022-08-09T03:31:12Z",
     "id": 1643934948,
@@ -853,7 +679,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-05-01T20:53:46Z",
     "created_at": "2022-08-01T19:39:48Z",
     "id": 1643936942,
     "issue_type": null,
@@ -878,42 +704,9 @@
       }
     ],
     "number": 36,
-    "state": "open",
+    "state": "closed",
     "title": "VRL: Diagnostics point to wrong expression for fallibility error",
-    "updated_at": "2023-03-28T13:19:43Z",
-    "user": {
-      "login": "fuchsnj"
-    }
-  },
-  {
-    "closed_at": null,
-    "created_at": "2022-08-01T15:20:42Z",
-    "id": 1675378539,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the compiler",
-        "id": 8770318842022581189,
-        "name": "vrl: compiler"
-      },
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the type system",
-        "id": 4415283568476322878,
-        "name": "vrl: typedef"
-      }
-    ],
-    "number": 197,
-    "state": "open",
-    "title": "Closures are compiled assuming they only run exactly once",
-    "updated_at": "2023-04-19T18:06:48Z",
+    "updated_at": "2026-05-01T20:53:46Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -1267,27 +1060,6 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-06-29T13:49:59Z",
-    "id": 1703966182,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      }
-    ],
-    "number": 229,
-    "state": "open",
-    "title": "Vector crashes when using `abort` inside a `for_each` function",
-    "updated_at": "2023-05-10T13:42:05Z",
-    "user": {
-      "login": "marcojck"
-    }
-  },
-  {
     "closed_at": "2025-01-06T18:09:01Z",
     "created_at": "2022-06-28T19:19:40Z",
     "id": 1643947260,
@@ -1498,7 +1270,7 @@
     "number": 56,
     "state": "open",
     "title": "Add `any` and `all` enumeration functions to VRL",
-    "updated_at": "2024-05-21T05:59:24Z",
+    "updated_at": "2026-05-29T15:12:16Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -1970,33 +1742,6 @@
   },
   {
     "closed_at": null,
-    "created_at": "2022-03-21T21:36:38Z",
-    "id": 1644103010,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the syntax parser",
-        "id": 2718643081589140411,
-        "name": "vrl: parser"
-      }
-    ],
-    "number": 148,
-    "state": "open",
-    "title": "vrl: null and unicode escapes not working in string literals",
-    "updated_at": "2025-02-26T16:53:49Z",
-    "user": {
-      "login": "hhromic"
-    }
-  },
-  {
-    "closed_at": null,
     "created_at": "2022-03-11T16:27:03Z",
     "id": 1643982320,
     "issue_type": null,
@@ -2023,7 +1768,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-05-01T18:28:50Z",
     "created_at": "2022-03-08T06:13:46Z",
     "id": 1643982873,
     "issue_type": null,
@@ -2042,9 +1787,9 @@
       }
     ],
     "number": 75,
-    "state": "open",
+    "state": "closed",
     "title": "Multiple adjacent control characters in a string cause parsing to produce incorrect results",
-    "updated_at": "2023-03-28T13:42:37Z",
+    "updated_at": "2026-05-01T18:28:50Z",
     "user": {
       "login": "darora"
     }
@@ -2134,54 +1879,6 @@
     "updated_at": "2023-03-28T13:44:19Z",
     "user": {
       "login": null
-    }
-  },
-  {
-    "closed_at": null,
-    "created_at": "2022-02-25T11:03:19Z",
-    "id": 1842195893,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the standard library",
-        "id": 8863369235281820815,
-        "name": "vrl: stdlib"
-      }
-    ],
-    "number": 376,
-    "state": "open",
-    "title": "parse_url doesn't support duplicated query parameters",
-    "updated_at": "2023-08-08T22:35:34Z",
-    "user": {
-      "login": "anas-aso"
-    }
-  },
-  {
-    "closed_at": null,
-    "created_at": "2022-02-10T15:26:50Z",
-    "id": 1644103832,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "C2E0C6",
-        "description": "Changes to the compiler",
-        "id": 8770318842022581189,
-        "name": "vrl: compiler"
-      }
-    ],
-    "number": 149,
-    "state": "open",
-    "title": "Change VRL to support compile-time-only functions, needed for semantic meaning functions",
-    "updated_at": "2023-03-28T14:40:03Z",
-    "user": {
-      "login": "JeanMertz"
     }
   },
   {
@@ -2338,6 +2035,309 @@
     "updated_at": "2023-03-28T13:47:01Z",
     "user": {
       "login": "roganartu"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2022-03-21T21:36:38Z",
+    "id": 1644103010,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      },
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the syntax parser",
+        "id": 2718643081589140411,
+        "name": "vrl: parser"
+      }
+    ],
+    "number": 148,
+    "state": "open",
+    "title": "vrl: null and unicode escapes not working in string literals",
+    "updated_at": "2025-02-26T16:53:49Z",
+    "user": {
+      "login": "hhromic"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2022-02-10T15:26:50Z",
+    "id": 1644103832,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the compiler",
+        "id": 8770318842022581189,
+        "name": "vrl: compiler"
+      }
+    ],
+    "number": 149,
+    "state": "open",
+    "title": "Change VRL to support compile-time-only functions, needed for semantic meaning functions",
+    "updated_at": "2023-03-28T14:40:03Z",
+    "user": {
+      "login": "JeanMertz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2022-08-10T14:17:05Z",
+    "id": 1658877408,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      },
+      {
+        "color": "BF72F6",
+        "description": "A value-adding code change that enhances its existing functionality",
+        "id": 2640581176510094373,
+        "name": "type: enhancement"
+      },
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the compiler",
+        "id": 8770318842022581189,
+        "name": "vrl: compiler"
+      },
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the type system",
+        "id": 4415283568476322878,
+        "name": "vrl: typedef"
+      }
+    ],
+    "number": 186,
+    "state": "open",
+    "title": "VRL `Target` methods should be infallible",
+    "updated_at": "2023-05-01T20:52:24Z",
+    "user": {
+      "login": "fuchsnj"
+    }
+  },
+  {
+    "closed_at": "2026-05-01T19:13:01Z",
+    "created_at": "2022-08-01T15:20:42Z",
+    "id": 1675378539,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      },
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the compiler",
+        "id": 8770318842022581189,
+        "name": "vrl: compiler"
+      },
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the type system",
+        "id": 4415283568476322878,
+        "name": "vrl: typedef"
+      }
+    ],
+    "number": 197,
+    "state": "closed",
+    "title": "Closures are compiled assuming they only run exactly once",
+    "updated_at": "2026-05-01T19:13:01Z",
+    "user": {
+      "login": "fuchsnj"
+    }
+  },
+  {
+    "closed_at": "2023-07-05T14:54:42Z",
+    "created_at": "2022-10-04T10:26:37Z",
+    "id": 1700632716,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      },
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the standard library",
+        "id": 8863369235281820815,
+        "name": "vrl: stdlib"
+      }
+    ],
+    "number": 226,
+    "state": "closed",
+    "title": "`parse_nginx_log` fails for various logged bot requests",
+    "updated_at": "2023-07-05T14:54:42Z",
+    "user": {
+      "login": "hashworks"
+    }
+  },
+  {
+    "closed_at": "2023-09-25T22:04:21Z",
+    "created_at": "2022-11-17T13:19:52Z",
+    "id": 1703965340,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      },
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the standard library",
+        "id": 8863369235281820815,
+        "name": "vrl: stdlib"
+      }
+    ],
+    "number": 227,
+    "state": "closed",
+    "title": "AWS VPC FLOW logs fields missing",
+    "updated_at": "2023-09-25T22:04:22Z",
+    "user": {
+      "login": "voyc-geoffrey"
+    }
+  },
+  {
+    "closed_at": "2023-07-31T16:43:15Z",
+    "created_at": "2022-09-22T16:45:30Z",
+    "id": 1703965714,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      },
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the standard library",
+        "id": 8863369235281820815,
+        "name": "vrl: stdlib"
+      }
+    ],
+    "number": 228,
+    "state": "closed",
+    "title": "Vector does not parse RFC5424 structured data with some escape characters",
+    "updated_at": "2023-07-31T16:43:15Z",
+    "user": {
+      "login": "saidsalihefendic"
+    }
+  },
+  {
+    "closed_at": "2026-05-01T18:24:56Z",
+    "created_at": "2022-06-29T13:49:59Z",
+    "id": 1703966182,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      }
+    ],
+    "number": 229,
+    "state": "closed",
+    "title": "Vector crashes when using `abort` inside a `for_each` function",
+    "updated_at": "2026-05-01T18:24:56Z",
+    "user": {
+      "login": "marcojck"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2022-09-21T10:15:25Z",
+    "id": 1767678611,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the standard library",
+        "id": 8863369235281820815,
+        "name": "vrl: stdlib"
+      },
+      {
+        "color": "BF72F6",
+        "description": "A value-adding code addition that introduce new functionality.",
+        "id": 6071513945365121417,
+        "name": "type: feature"
+      }
+    ],
+    "number": 270,
+    "state": "open",
+    "title": "Add an optional parameter to the parse_linux_authorization function to specify a timezone",
+    "updated_at": "2023-06-27T17:36:35Z",
+    "user": {
+      "login": "Qazeer"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2022-09-05T11:32:50Z",
+    "id": 1767679552,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the standard library",
+        "id": 8863369235281820815,
+        "name": "vrl: stdlib"
+      },
+      {
+        "color": "BF72F6",
+        "description": "A value-adding code addition that introduce new functionality.",
+        "id": 6071513945365121417,
+        "name": "type: feature"
+      }
+    ],
+    "number": 271,
+    "state": "open",
+    "title": "improve parse_key_value to support nesting , match with encode_key_value",
+    "updated_at": "2023-06-21T14:03:36Z",
+    "user": {
+      "login": "ccmsi"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2022-02-25T11:03:19Z",
+    "id": 1842195893,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "F6707D",
+        "description": "A code related bug",
+        "id": 4322318380088294743,
+        "name": "type: bug"
+      },
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the standard library",
+        "id": 8863369235281820815,
+        "name": "vrl: stdlib"
+      }
+    ],
+    "number": 376,
+    "state": "open",
+    "title": "parse_url doesn't support duplicated query parameters",
+    "updated_at": "2023-08-08T22:35:34Z",
+    "user": {
+      "login": "anas-aso"
     }
   }
 ]

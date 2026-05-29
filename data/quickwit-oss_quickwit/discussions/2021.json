@@ -1,49 +1,26 @@
 [
   {
     "author": {
-      "login": "vtripolitakis"
+      "login": "fmassot"
     },
-    "bodyText": "Hello and congrats for your great work.\nAs per #140 I see that for the time being, range queries are not supported. Is any plan on the roadmap to add such support?\nThanks in advance.",
+    "bodyText": "Dataset description\nDataset containing 40 millions of hdfs log entries, available here.\nSize: 13GB.\nExample of a log entry formatted for quickwit\n{\n  \"timestamp\": 1460530013,\n  \"severity_text\": \"INFO\",\n  \"body\": \"PacketResponder: BP-108841162-10.10.34.11-1440074360971:blk_1074072698_331874, type=HAS_DOWNSTREAM_IN_PIPELINE terminating\",\n  \"resource\": {\n    \"service\": \"datanode/01\"\n  },\n  \"attributes\": {\n    \"class\": \"org.apache.hadoop.hdfs.server.datanode.DataNode\"\n  }\n}\n\nIndexing performance\n\nDocuments Read: 40069452 Parse Errors: 0  Published Splits: 9 Dataset Size: 14003MB Throughput: 45.32MB/s\nIndexed 40069452 documents in 5.15min\n\nSplit generated: 8 with 5 million docs and 1 with 69452 docs on apple M1.\nTypically, for 1 split, we have:\n\n.term: 11MB\n.fast: 13MB\nhotcache: 129MB\n.store: 413MB\n.idx: 108MB\n\nLocal search performance\nTODO\nConfiguration\nDoc mapper\n{\n    \"store_source\": true,\n    \"default_search_fields\": [\"body\", \"severity_text\"],\n    \"timestamp_field\": \"timestamp\",\n    \"field_mappings\": [\n        {\n            \"name\": \"timestamp\",\n            \"type\": \"i64\",\n            \"fast\": true\n        },\n        {\n            \"name\": \"severity_text\",\n            \"type\": \"text\"\n        },\n        {\n            \"name\": \"body\",\n            \"type\": \"text\"\n        },\n        {\n            \"name\": \"resource\",\n            \"type\": \"object\",\n            \"field_mappings\": [\n                {\n                    \"name\": \"service\",\n                    \"type\": \"text\"\n                }\n            ]\n        },\n        {\n            \"name\": \"attributes\",\n            \"type\": \"object\",\n            \"field_mappings\": [\n                {\n                    \"name\": \"class\",\n                    \"type\": \"text\"\n                }\n            ]\n        }\n    ]\n}",
     "category": {
-      "name": "Q&A"
+      "name": "Show and tell"
     },
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 2
+      "totalCount": 0
     },
-    "createdAt": "2021-11-26T12:18:16Z",
-    "isAnswered": true,
+    "createdAt": "2021-07-06T19:11:31Z",
+    "isAnswered": null,
     "locked": false,
-    "number": 817,
-    "stateReason": "REOPENED",
-    "title": "Support for range queries",
-    "updatedAt": "2023-05-15T22:35:29Z",
-    "upvoteCount": 2,
-    "url": "https://github.com/quickwit-oss/quickwit/discussions/817"
-  },
-  {
-    "author": {
-      "login": "oronsh"
-    },
-    "bodyText": "I've noticed that tantivy holds a thread pool per IndexWriter so I suppose each indexing server will open NUMBER_OF_INDEXES * NUM_THREADS_PER_INDEX threads?\nIt sounds like a lot of threads to me, am I missing something?\nThanks a lot! :)",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2021-11-03T18:49:35Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 724,
+    "number": 200,
     "stateReason": null,
-    "title": "Is indexing server going to support multi tenancy?",
-    "updatedAt": "2023-05-15T22:36:28Z",
+    "title": "Index and search on HDFS log dataset",
+    "updatedAt": "2022-06-27T01:43:33Z",
     "upvoteCount": 1,
-    "url": "https://github.com/quickwit-oss/quickwit/discussions/724"
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/200"
   },
   {
     "author": {
@@ -70,25 +47,48 @@
   },
   {
     "author": {
-      "login": "fmassot"
+      "login": "oronsh"
     },
-    "bodyText": "Dataset description\nDataset containing 40 millions of hdfs log entries, available here.\nSize: 13GB.\nExample of a log entry formatted for quickwit\n{\n  \"timestamp\": 1460530013,\n  \"severity_text\": \"INFO\",\n  \"body\": \"PacketResponder: BP-108841162-10.10.34.11-1440074360971:blk_1074072698_331874, type=HAS_DOWNSTREAM_IN_PIPELINE terminating\",\n  \"resource\": {\n    \"service\": \"datanode/01\"\n  },\n  \"attributes\": {\n    \"class\": \"org.apache.hadoop.hdfs.server.datanode.DataNode\"\n  }\n}\n\nIndexing performance\n\nDocuments Read: 40069452 Parse Errors: 0  Published Splits: 9 Dataset Size: 14003MB Throughput: 45.32MB/s\nIndexed 40069452 documents in 5.15min\n\nSplit generated: 8 with 5 million docs and 1 with 69452 docs on apple M1.\nTypically, for 1 split, we have:\n\n.term: 11MB\n.fast: 13MB\nhotcache: 129MB\n.store: 413MB\n.idx: 108MB\n\nLocal search performance\nTODO\nConfiguration\nDoc mapper\n{\n    \"store_source\": true,\n    \"default_search_fields\": [\"body\", \"severity_text\"],\n    \"timestamp_field\": \"timestamp\",\n    \"field_mappings\": [\n        {\n            \"name\": \"timestamp\",\n            \"type\": \"i64\",\n            \"fast\": true\n        },\n        {\n            \"name\": \"severity_text\",\n            \"type\": \"text\"\n        },\n        {\n            \"name\": \"body\",\n            \"type\": \"text\"\n        },\n        {\n            \"name\": \"resource\",\n            \"type\": \"object\",\n            \"field_mappings\": [\n                {\n                    \"name\": \"service\",\n                    \"type\": \"text\"\n                }\n            ]\n        },\n        {\n            \"name\": \"attributes\",\n            \"type\": \"object\",\n            \"field_mappings\": [\n                {\n                    \"name\": \"class\",\n                    \"type\": \"text\"\n                }\n            ]\n        }\n    ]\n}",
+    "bodyText": "I've noticed that tantivy holds a thread pool per IndexWriter so I suppose each indexing server will open NUMBER_OF_INDEXES * NUM_THREADS_PER_INDEX threads?\nIt sounds like a lot of threads to me, am I missing something?\nThanks a lot! :)",
     "category": {
-      "name": "Show and tell"
+      "name": "Q&A"
     },
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
-    "createdAt": "2021-07-06T19:11:31Z",
-    "isAnswered": null,
+    "createdAt": "2021-11-03T18:49:35Z",
+    "isAnswered": true,
     "locked": false,
-    "number": 200,
+    "number": 724,
     "stateReason": null,
-    "title": "Index and search on HDFS log dataset",
-    "updatedAt": "2022-06-27T01:43:33Z",
+    "title": "Is indexing server going to support multi tenancy?",
+    "updatedAt": "2023-05-15T22:36:28Z",
     "upvoteCount": 1,
-    "url": "https://github.com/quickwit-oss/quickwit/discussions/200"
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/724"
+  },
+  {
+    "author": {
+      "login": "vtripolitakis"
+    },
+    "bodyText": "Hello and congrats for your great work.\nAs per #140 I see that for the time being, range queries are not supported. Is any plan on the roadmap to add such support?\nThanks in advance.",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2021-11-26T12:18:16Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 817,
+    "stateReason": "REOPENED",
+    "title": "Support for range queries",
+    "updatedAt": "2023-05-15T22:35:29Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/817"
   }
 ]

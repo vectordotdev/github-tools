@@ -75,13 +75,30 @@ fn export_monthly_summary(
     let current_month = Utc::now().format("%Y-%m").to_string();
     eprintln!("Warning: excluding current incomplete month ({current_month}) from monthly summary for {table}");
 
+    // When issue_type is set on an issue, prefer it over a matching "type: <x>" label
+    // to avoid double-counting when both are set on the same issue.
+    let has_issue_type = conn
+        .prepare(&format!("SELECT issue_type FROM {table} LIMIT 0"))
+        .is_ok();
+
+    let wc_label = if has_issue_type {
+        let cond = format!(
+            "({table}.issue_type IS NULL \
+             OR (lower(labels.name) != lower({table}.issue_type) \
+             AND lower(labels.name) != 'type: ' || lower({table}.issue_type)))"
+        );
+        build_where(table, &[cond.as_str()])
+    } else {
+        build_where(table, &[])
+    };
+
     let label_names: Vec<String> = {
         let label_query = format!(
             "SELECT DISTINCT labels.name
              FROM issue_labels
              JOIN labels ON labels.id = issue_labels.label_id
              JOIN {table} ON {table}.id = issue_labels.issue_id
-             {wc}
+             {wc_label}
              ORDER BY labels.name"
         );
         let mut stmt = conn.prepare(&label_query)?;
@@ -101,9 +118,6 @@ fn export_monthly_summary(
         format!(",\n            {label_columns_sql}")
     };
 
-    let has_issue_type = conn
-        .prepare(&format!("SELECT issue_type FROM {table} LIMIT 0"))
-        .is_ok();
     let issue_type_names: Vec<String> = if has_issue_type {
         let type_wc = build_where(table, &["issue_type IS NOT NULL"]);
         let mut stmt = conn.prepare(&format!(
@@ -144,7 +158,7 @@ fn export_monthly_summary(
             FROM issue_labels
             JOIN labels ON labels.id = issue_labels.label_id
             JOIN {table} ON {table}.id = issue_labels.issue_id
-            {wc}
+            {wc_label}
         )
         SELECT
             e.month,
@@ -171,16 +185,51 @@ fn export_label_breakdown(
     config: &Config,
     table: &str,
 ) -> Result<()> {
-    let wc = build_where(table, &[]);
-    let query = format!(
-        "SELECT labels.name AS label_name, COUNT(*) AS count
-         FROM issue_labels
-         JOIN labels ON labels.id = issue_labels.label_id
-         JOIN {table} ON {table}.id = issue_labels.issue_id
-         {wc}
-         GROUP BY labels.name
-         ORDER BY count DESC"
-    );
+    let has_issue_type = conn
+        .prepare(&format!("SELECT issue_type FROM {table} LIMIT 0"))
+        .is_ok();
+
+    let query = if !has_issue_type {
+        let wc = build_where(table, &[]);
+        format!(
+            "SELECT labels.name AS label_name, COUNT(*) AS count
+             FROM issue_labels
+             JOIN labels ON labels.id = issue_labels.label_id
+             JOIN {table} ON {table}.id = issue_labels.issue_id
+             {wc}
+             GROUP BY labels.name
+             ORDER BY count DESC"
+        )
+    } else {
+        let draft_and = if table == "pull_requests" { "AND is_draft = 0" } else { "" };
+        format!(
+            "SELECT label_name, SUM(count) AS count FROM (
+                 SELECT labels.name AS label_name, COUNT(*) AS count
+                 FROM {table}
+                 JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                 JOIN labels ON labels.id = issue_labels.label_id
+                 WHERE {table}.issue_type IS NULL {draft_and}
+                 GROUP BY labels.name
+                 UNION ALL
+                 SELECT labels.name AS label_name, COUNT(*) AS count
+                 FROM {table}
+                 JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                 JOIN labels ON labels.id = issue_labels.label_id
+                 WHERE {table}.issue_type IS NOT NULL {draft_and}
+                 AND lower(labels.name) != lower({table}.issue_type)
+                 AND lower(labels.name) != 'type: ' || lower({table}.issue_type)
+                 GROUP BY labels.name
+                 UNION ALL
+                 SELECT issue_type AS label_name, COUNT(*) AS count
+                 FROM {table}
+                 WHERE issue_type IS NOT NULL {draft_and}
+                 GROUP BY issue_type
+             )
+             GROUP BY label_name
+             ORDER BY count DESC"
+        )
+    };
+
     write_query_to_csv(
         conn,
         &query,
@@ -195,16 +244,51 @@ fn export_label_timeseries(
     config: &Config,
     table: &str,
 ) -> Result<()> {
-    let wc = build_where(table, &[]);
-    let query = format!(
-        "SELECT substr({table}.created_at, 1, 7) AS month, labels.name AS label_name, COUNT(*) AS count
-         FROM {table}
-         JOIN issue_labels ON {table}.id = issue_labels.issue_id
-         JOIN labels ON labels.id = issue_labels.label_id
-         {wc}
-         GROUP BY month, label_name
-         ORDER BY month, count DESC"
-    );
+    let has_issue_type = conn
+        .prepare(&format!("SELECT issue_type FROM {table} LIMIT 0"))
+        .is_ok();
+
+    let query = if !has_issue_type {
+        let wc = build_where(table, &[]);
+        format!(
+            "SELECT substr({table}.created_at, 1, 7) AS month, labels.name AS label_name, COUNT(*) AS count
+             FROM {table}
+             JOIN issue_labels ON {table}.id = issue_labels.issue_id
+             JOIN labels ON labels.id = issue_labels.label_id
+             {wc}
+             GROUP BY month, label_name
+             ORDER BY month, count DESC"
+        )
+    } else {
+        let draft_and = if table == "pull_requests" { "AND is_draft = 0" } else { "" };
+        format!(
+            "SELECT month, label_name, SUM(count) AS count FROM (
+                 SELECT substr({table}.created_at, 1, 7) AS month, labels.name AS label_name, COUNT(*) AS count
+                 FROM {table}
+                 JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                 JOIN labels ON labels.id = issue_labels.label_id
+                 WHERE {table}.issue_type IS NULL {draft_and}
+                 GROUP BY month, labels.name
+                 UNION ALL
+                 SELECT substr({table}.created_at, 1, 7) AS month, labels.name AS label_name, COUNT(*) AS count
+                 FROM {table}
+                 JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                 JOIN labels ON labels.id = issue_labels.label_id
+                 WHERE {table}.issue_type IS NOT NULL {draft_and}
+                 AND lower(labels.name) != lower({table}.issue_type)
+                 AND lower(labels.name) != 'type: ' || lower({table}.issue_type)
+                 GROUP BY month, labels.name
+                 UNION ALL
+                 SELECT substr(created_at, 1, 7) AS month, issue_type AS label_name, COUNT(*) AS count
+                 FROM {table}
+                 WHERE issue_type IS NOT NULL {draft_and}
+                 GROUP BY month, issue_type
+             )
+             GROUP BY month, label_name
+             ORDER BY month, count DESC"
+        )
+    };
+
     write_query_to_csv(
         conn,
         &query,

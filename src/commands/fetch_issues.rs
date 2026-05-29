@@ -156,7 +156,7 @@ pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) ->
     fs::create_dir_all(&out_dir)?;
     let written = write_year_bucketed(&all_items, &out_dir, "created_at")?;
     for (year, count) in &written {
-        println!("  {year}.json: appended {count} items");
+        println!("  {year}.json: wrote {count} items");
     }
 
     Ok(())
@@ -217,17 +217,27 @@ fn write_year_bucketed(items: &[Value], out_dir: &Path, date_field: &str) -> Res
     for (year, new_items) in &by_year {
         let path = out_dir.join(format!("{year}.json"));
 
-        // Load existing items if file exists
-        let mut existing: Vec<Value> = if path.exists() {
+        // Merge: existing items keyed by number; fresh fetch wins for duplicates.
+        let mut by_number: std::collections::HashMap<u64, Value> = if path.exists() {
             let json = fs::read_to_string(&path)?;
-            serde_json::from_str(&json).unwrap_or_default()
+            let existing: Vec<Value> = serde_json::from_str(&json).unwrap_or_default();
+            existing.into_iter()
+                .filter_map(|v| v["number"].as_u64().map(|n| (n, v)))
+                .collect()
         } else {
-            Vec::new()
+            std::collections::HashMap::new()
         };
 
-        existing.extend(new_items.iter().cloned());
+        for item in new_items {
+            if let Some(n) = item["number"].as_u64() {
+                by_number.insert(n, item.clone());
+            }
+        }
 
-        let json_str = serde_json::to_string_pretty(&existing)?;
+        let mut merged: Vec<Value> = by_number.into_values().collect();
+        merged.sort_by_key(|v| v["number"].as_u64().unwrap_or(0));
+
+        let json_str = serde_json::to_string_pretty(&merged)?;
         fs::write(&path, json_str)?;
         counts.insert(year.clone(), new_items.len());
     }
