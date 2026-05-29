@@ -56,6 +56,12 @@ fn build_where(table: &str, extra: &[&str]) -> String {
     }
 }
 
+/// Returns a SQL CASE expression that normalises legacy label aliases to their
+/// canonical form. Currently: "dependencies" → "domain: deps".
+fn normalize_label_sql(col: &str) -> String {
+    format!("CASE {col} WHEN 'domain: deps' THEN 'dependencies' ELSE {col} END")
+}
+
 fn csv_path(out_dir: &Path, config: &Config, table: &str, suffix: &str) -> std::path::PathBuf {
     out_dir.join(format!(
         "{}_{}_{}.{}.csv",
@@ -92,14 +98,15 @@ fn export_monthly_summary(
         build_where(table, &[])
     };
 
+    let norm = normalize_label_sql("labels.name");
     let label_names: Vec<String> = {
         let label_query = format!(
-            "SELECT DISTINCT labels.name
+            "SELECT DISTINCT {norm} AS norm_name
              FROM issue_labels
              JOIN labels ON labels.id = issue_labels.label_id
              JOIN {table} ON {table}.id = issue_labels.issue_id
              {wc_label}
-             ORDER BY labels.name"
+             ORDER BY norm_name"
         );
         let mut stmt = conn.prepare(&label_query)?;
         stmt.query_map([], |row| row.get(0))?
@@ -154,7 +161,7 @@ fn export_monthly_summary(
             FROM {table} {wc_closed}
         ),
         label_counts AS (
-            SELECT issue_labels.issue_id, labels.name AS label_name
+            SELECT DISTINCT issue_labels.issue_id, {norm} AS label_name
             FROM issue_labels
             JOIN labels ON labels.id = issue_labels.label_id
             JOIN {table} ON {table}.id = issue_labels.issue_id
@@ -191,34 +198,40 @@ fn export_label_breakdown(
 
     let query = if !has_issue_type {
         let wc = build_where(table, &[]);
+        let norm = normalize_label_sql("labels.name");
         format!(
-            "SELECT labels.name AS label_name, COUNT(*) AS count
-             FROM issue_labels
-             JOIN labels ON labels.id = issue_labels.label_id
-             JOIN {table} ON {table}.id = issue_labels.issue_id
-             {wc}
-             GROUP BY labels.name
+            "SELECT label_name, COUNT(*) AS count FROM (
+                 SELECT DISTINCT issue_labels.issue_id, {norm} AS label_name
+                 FROM issue_labels
+                 JOIN labels ON labels.id = issue_labels.label_id
+                 JOIN {table} ON {table}.id = issue_labels.issue_id
+                 {wc}
+             )
+             GROUP BY label_name
              ORDER BY count DESC"
         )
     } else {
         let draft_and = if table == "pull_requests" { "AND is_draft = 0" } else { "" };
+        let norm = normalize_label_sql("labels.name");
         format!(
             "SELECT label_name, SUM(count) AS count FROM (
-                 SELECT labels.name AS label_name, COUNT(*) AS count
-                 FROM {table}
-                 JOIN issue_labels ON {table}.id = issue_labels.issue_id
-                 JOIN labels ON labels.id = issue_labels.label_id
-                 WHERE {table}.issue_type IS NULL {draft_and}
-                 GROUP BY labels.name
+                 SELECT label_name, COUNT(*) AS count FROM (
+                     SELECT DISTINCT {table}.id, {norm} AS label_name
+                     FROM {table}
+                     JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                     JOIN labels ON labels.id = issue_labels.label_id
+                     WHERE {table}.issue_type IS NULL {draft_and}
+                 ) GROUP BY label_name
                  UNION ALL
-                 SELECT labels.name AS label_name, COUNT(*) AS count
-                 FROM {table}
-                 JOIN issue_labels ON {table}.id = issue_labels.issue_id
-                 JOIN labels ON labels.id = issue_labels.label_id
-                 WHERE {table}.issue_type IS NOT NULL {draft_and}
-                 AND lower(labels.name) != lower({table}.issue_type)
-                 AND lower(labels.name) != 'type: ' || lower({table}.issue_type)
-                 GROUP BY labels.name
+                 SELECT label_name, COUNT(*) AS count FROM (
+                     SELECT DISTINCT {table}.id, {norm} AS label_name
+                     FROM {table}
+                     JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                     JOIN labels ON labels.id = issue_labels.label_id
+                     WHERE {table}.issue_type IS NOT NULL {draft_and}
+                     AND lower(labels.name) != lower({table}.issue_type)
+                     AND lower(labels.name) != 'type: ' || lower({table}.issue_type)
+                 ) GROUP BY label_name
                  UNION ALL
                  SELECT issue_type AS label_name, COUNT(*) AS count
                  FROM {table}
@@ -250,34 +263,40 @@ fn export_label_timeseries(
 
     let query = if !has_issue_type {
         let wc = build_where(table, &[]);
+        let norm = normalize_label_sql("labels.name");
         format!(
-            "SELECT substr({table}.created_at, 1, 7) AS month, labels.name AS label_name, COUNT(*) AS count
-             FROM {table}
-             JOIN issue_labels ON {table}.id = issue_labels.issue_id
-             JOIN labels ON labels.id = issue_labels.label_id
-             {wc}
+            "SELECT month, label_name, COUNT(*) AS count FROM (
+                 SELECT DISTINCT substr({table}.created_at, 1, 7) AS month, {table}.id, {norm} AS label_name
+                 FROM {table}
+                 JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                 JOIN labels ON labels.id = issue_labels.label_id
+                 {wc}
+             )
              GROUP BY month, label_name
              ORDER BY month, count DESC"
         )
     } else {
         let draft_and = if table == "pull_requests" { "AND is_draft = 0" } else { "" };
+        let norm = normalize_label_sql("labels.name");
         format!(
             "SELECT month, label_name, SUM(count) AS count FROM (
-                 SELECT substr({table}.created_at, 1, 7) AS month, labels.name AS label_name, COUNT(*) AS count
-                 FROM {table}
-                 JOIN issue_labels ON {table}.id = issue_labels.issue_id
-                 JOIN labels ON labels.id = issue_labels.label_id
-                 WHERE {table}.issue_type IS NULL {draft_and}
-                 GROUP BY month, labels.name
+                 SELECT month, label_name, COUNT(*) AS count FROM (
+                     SELECT DISTINCT substr({table}.created_at, 1, 7) AS month, {table}.id, {norm} AS label_name
+                     FROM {table}
+                     JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                     JOIN labels ON labels.id = issue_labels.label_id
+                     WHERE {table}.issue_type IS NULL {draft_and}
+                 ) GROUP BY month, label_name
                  UNION ALL
-                 SELECT substr({table}.created_at, 1, 7) AS month, labels.name AS label_name, COUNT(*) AS count
-                 FROM {table}
-                 JOIN issue_labels ON {table}.id = issue_labels.issue_id
-                 JOIN labels ON labels.id = issue_labels.label_id
-                 WHERE {table}.issue_type IS NOT NULL {draft_and}
-                 AND lower(labels.name) != lower({table}.issue_type)
-                 AND lower(labels.name) != 'type: ' || lower({table}.issue_type)
-                 GROUP BY month, labels.name
+                 SELECT month, label_name, COUNT(*) AS count FROM (
+                     SELECT DISTINCT substr({table}.created_at, 1, 7) AS month, {table}.id, {norm} AS label_name
+                     FROM {table}
+                     JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                     JOIN labels ON labels.id = issue_labels.label_id
+                     WHERE {table}.issue_type IS NOT NULL {draft_and}
+                     AND lower(labels.name) != lower({table}.issue_type)
+                     AND lower(labels.name) != 'type: ' || lower({table}.issue_type)
+                 ) GROUP BY month, label_name
                  UNION ALL
                  SELECT substr(created_at, 1, 7) AS month, issue_type AS label_name, COUNT(*) AS count
                  FROM {table}
@@ -304,15 +323,22 @@ fn export_open_by_label(
     table: &str,
 ) -> Result<()> {
     let wc = build_where(table, &[]);
+    let norm = normalize_label_sql("labels.name");
     let query = format!(
-        "SELECT labels.name AS label_name,
-                SUM(CASE WHEN {table}.state = 'open' THEN 1 ELSE 0 END) AS open_count,
-                SUM(CASE WHEN {table}.state = 'closed' THEN 1 ELSE 0 END) AS closed_count
-         FROM {table}
-         JOIN issue_labels ON {table}.id = issue_labels.issue_id
-         JOIN labels ON labels.id = issue_labels.label_id
-         {wc}
-         GROUP BY labels.name
+        "SELECT label_name,
+                SUM(open_count) AS open_count,
+                SUM(closed_count) AS closed_count
+         FROM (
+             SELECT DISTINCT {table}.id,
+                    {norm} AS label_name,
+                    CASE WHEN {table}.state = 'open' THEN 1 ELSE 0 END AS open_count,
+                    CASE WHEN {table}.state = 'closed' THEN 1 ELSE 0 END AS closed_count
+             FROM {table}
+             JOIN issue_labels ON {table}.id = issue_labels.issue_id
+             JOIN labels ON labels.id = issue_labels.label_id
+             {wc}
+         )
+         GROUP BY label_name
          ORDER BY open_count DESC, closed_count DESC"
     );
     write_query_to_csv(
