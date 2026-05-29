@@ -37,7 +37,6 @@ NEW_CONTRIBUTOR = ENHANCEMENT
 # Heatmap colormap for contributor activity chart.
 HEATMAP_CMAP = "YlOrRd"
 
-# Known bot logins that don't carry the "[bot]" suffix in older snapshots.
 KNOWN_BOT_LOGINS = {
     "dependabot",
     "dependabot-preview",
@@ -53,6 +52,7 @@ def is_bot_login(login: str) -> bool:
         isinstance(login, str)
         and (login.endswith("[bot]") or login in KNOWN_BOT_LOGINS)
     )
+
 
 # Custom label color overrides
 COLOR_MAP = {
@@ -627,11 +627,6 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
             logging.warning(f"[{table}] Contributor CSV is empty: {path}")
             return
 
-        df = df[~df["user_login"].map(is_bot_login)]
-        if df.empty:
-            logging.warning(f"[{table}] No non-bot contributors in {path}")
-            return
-
         months_all = sorted(df["month"].dropna().unique())
         window = months_all[-window_months:]
         df = df[df["month"].isin(window)]
@@ -757,8 +752,8 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
 
 def _yearly_contributor_rows(path):
     """Compute per-year (year, label, total, new, returning, partial) rows
-    from contributor_monthly.csv. Excludes bots. `partial` is True when
-    the year hasn't fully elapsed yet (typically just the current year)."""
+    from contributor_monthly.csv. `partial` is True when the year hasn't
+    fully elapsed yet (typically just the current year)."""
     df = pd.read_csv(path)
     if df.empty:
         return []
