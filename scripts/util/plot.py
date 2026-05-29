@@ -37,6 +37,23 @@ NEW_CONTRIBUTOR = ENHANCEMENT
 # Heatmap colormap for contributor activity chart.
 HEATMAP_CMAP = "YlOrRd"
 
+KNOWN_BOT_LOGINS = {
+    "dependabot",
+    "dependabot-preview",
+    "renovate",
+    "handlerbot",
+    "step-security-bot",
+    "tronboto",
+}
+
+
+def is_bot_login(login: str) -> bool:
+    return (
+        isinstance(login, str)
+        and (login.endswith("[bot]") or login in KNOWN_BOT_LOGINS)
+    )
+
+
 # Custom label color overrides
 COLOR_MAP = {
     "type: bug": BUG,
@@ -610,6 +627,11 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
             logging.warning(f"[{table}] Contributor CSV is empty: {path}")
             return
 
+        df = df[~df["user_login"].map(is_bot_login)]
+        if df.empty:
+            logging.warning(f"[{table}] No non-bot contributors in {path}")
+            return
+
         months_all = sorted(df["month"].dropna().unique())
         window = months_all[-window_months:]
         df = df[df["month"].isin(window)]
@@ -673,9 +695,10 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
             logging.warning(f"[{table}] Contributor CSV is empty: {path}")
             return
 
+        df = df[~df["user_login"].map(is_bot_login)]
         df = df.dropna(subset=["month", "user_login"])
         if df.empty:
-            logging.warning(f"[{table}] No contributors in {path}")
+            logging.warning(f"[{table}] No non-bot contributors in {path}")
             return
 
         # First-ever month a user appears (across the entire history, not the window)
@@ -739,6 +762,7 @@ def _yearly_contributor_rows(path):
     df = pd.read_csv(path)
     if df.empty:
         return []
+    df = df[~df["user_login"].map(is_bot_login)]
     df = df.dropna(subset=["month", "user_login"])
     if df.empty:
         return []
