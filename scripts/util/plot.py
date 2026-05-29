@@ -627,11 +627,6 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
             logging.warning(f"[{table}] Contributor CSV is empty: {path}")
             return
 
-        df = df[~df["user_login"].map(is_bot_login)]
-        if df.empty:
-            logging.warning(f"[{table}] No non-bot contributors in {path}")
-            return
-
         months_all = sorted(df["month"].dropna().unique())
         window = months_all[-window_months:]
         df = df[df["month"].isin(window)]
