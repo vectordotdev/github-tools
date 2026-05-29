@@ -178,19 +178,28 @@ pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) ->
 
     for (year, items) in &by_year {
         let path = out_dir.join(format!("{year}.json"));
-        let mut existing: Vec<Value> = if path.exists() {
+
+        // Merge: existing items keyed by number; fresh fetch wins for duplicates.
+        let mut by_number: std::collections::HashMap<u64, Value> = if path.exists() {
             let json = fs::read_to_string(&path)?;
-            serde_json::from_str(&json).unwrap_or_default()
+            let existing: Vec<Value> = serde_json::from_str(&json).unwrap_or_default();
+            existing.into_iter()
+                .filter_map(|v| v["number"].as_u64().map(|n| (n, v)))
+                .collect()
         } else {
-            Vec::new()
+            std::collections::HashMap::new()
         };
-        let new_values: Vec<Value> = items.iter()
-            .map(|d| serde_json::to_value(d).unwrap())
-            .collect();
-        existing.extend(new_values);
-        let json_str = serde_json::to_string_pretty(&existing)?;
+
+        for d in items {
+            by_number.insert(d.number, serde_json::to_value(d).unwrap());
+        }
+
+        let mut merged: Vec<Value> = by_number.into_values().collect();
+        merged.sort_by_key(|v| v["number"].as_u64().unwrap_or(0));
+
+        let json_str = serde_json::to_string_pretty(&merged)?;
         fs::write(&path, json_str)?;
-        println!("  {year}.json: appended {} discussions", items.len());
+        println!("  {year}.json: wrote {} discussions", items.len());
     }
 
     Ok(())

@@ -1,236 +1,6 @@
 [
   {
     "author": {
-      "login": "ptr1120"
-    },
-    "bodyText": "Hello,\nI'm working with Vector and have a query regarding its regex capabilities in the remap language, specifically about compilation and caching. In my setup, I use various regex patterns within a remap transform, as shown below:\nlogFormat = .kubernetes.pod_annotations.\"my-company.io/log-format\"\nif logFormat == \"format1\" {\n    pattern = r'...'\n    . |= parse_regex!(.message, pattern)\n} else if logFormat == \"format2\" {\n    pattern = r'...'\n    . |= parse_regex!(.message, pattern)\n}\n\nI plan to introduce more patterns and am concerned about potential performance impacts. My questions are:\n\nAre regexes compiled and/or cached in Vector to enhance performance?\nIf regexes are not inherently cached, is there a way to precompile them or store them in a compiled format using an enrichment_table or similar feature?\n\nYour insights would be greatly appreciated.\nBest regards,\nPeter",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2023-12-15T08:32:26Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 599,
-    "stateReason": null,
-    "title": "Regex performance question",
-    "updatedAt": "2023-12-15T13:39:54Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/599"
-  },
-  {
-    "author": {
-      "login": "LinTechSo"
-    },
-    "bodyText": "Hi,\nDescription:\nWhen attempting to generate a lockfile using Cargo for Vector Dev Version 0.33.0 and VRL Version 0.8.1, the process encounters an issue related to resolving the lalrpop dependency version. The error message indicates that it failed to select a suitable version for the requirement lalrpop = \"^0.20.1\". The relevant details of the error are as follows:\ncargo generate-lockfile\n    Updating git repository `https://github.com/vectordotdev/vector`\n    Updating crates.io index\n    Updating git repository `https://github.com/vectordotdev/vrl`\nerror: failed to select a version for the requirement `lalrpop = \"^0.20.1\"`\ncandidate versions found which didn't match: 0.20.0, 0.19.12, 0.19.11, ...\nlocation searched: crates.io index\nrequired by package `vrl v0.8.0 (https://github.com/vectordotdev/vrl?rev=v0.8.0#fb02bfdd)`\n    ... which satisfies git dependency `vrl` of package `vrl-server v0.1.0 (/Users/parham/work/hamravesh9/pipelineoperator-client/images/vrl_validator)`\nperhaps a crate was updated and forgotten to be re-vendored?\n\n\nSteps to Reproduce:\nUse Vector Dev Version 0.33.0.\nUse VRL Version 0.8.1.\nRun cargo generate-lockfile command.\n\nExpected Behavior:\nThe cargo generate-lockfile command should complete successfully, resolving the lalrpop dependency to version ^0.20.1 without errors.\nActual Behavior:\nThe process encounters an error while attempting to select a version for the lalrpop requirement.\nAdditional Information:\nmy cargo.toml configuration:\n[package]\nname = \"vrl-server\"\nversion = \"0.1.0\"\nedition = \"2021\"\n\n[dependencies]\nhttp = \"0.2.9\"\nserde = { version = \"1.0.188\", default-features = false, features = [\"derive\"] }\nserde_json = \"1.0.107\"\nstructopt = { version = \"0.3.26\", default-features = false }\ntokio = { version = \"1.32.0\", default-features = false, features = [\"full\"] }\nwarp = \"0.3.5\"\npretty_env_logger = \"0.4.0\"\n\nvrl = { git = \"https://github.com/vectordotdev/vrl\", rev = \"v0.8.1\" }\nserde-wasm-bindgen = \"0.5\"\ngloo-utils = { version = \"0.1\", features = [\"serde\"] }\ngetrandom = { version = \"0.2\", features = [\"js\"] }\nvector-vrl-functions = { git = \"https://github.com/vectordotdev/vector\", tag = \"v0.33.1\"}\nenrichment = { git = \"https://github.com/vectordotdev/vector\", tag = \"v0.33.1\"}\nvector-common = { git = \"https://github.com/vectordotdev/vector\", tag = \"v0.33.1\"}",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2023-11-07T11:41:03Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 547,
-    "stateReason": null,
-    "title": "package version conflict error from cargo generate-lockfile command",
-    "updatedAt": "2023-11-07T15:44:15Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/547"
-  },
-  {
-    "author": {
-      "login": "MohamedEHJ"
-    },
-    "bodyText": "Hi,\nI got the \"input is not enough for unique date and time\" when i want to parse a custom timestamp:\n-> vector vrl --timezone Europe/Paris 'parse_timestamp!(\"20231029025935\", format: \"%Y%m%d%H%M%S\")'\nfunction call error for \"parse_timestamp\" at (0:58): Invalid timestamp \"20231029025935\": input is not enough for unique date and time\nI think it's related to the timezone defined, but i dont understand the behavior\nThanks!\ncf discord issue: https://discord.com/channels/742820443487993987/1168498617842159626",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2023-10-30T12:40:48Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 534,
-    "stateReason": null,
-    "title": "Error since the switch to daylight saving time.",
-    "updatedAt": "2023-10-31T10:10:52Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/534"
-  },
-  {
-    "author": {
-      "login": "camilisette"
-    },
-    "bodyText": "I have this VRL where the grok pattern for the log is based on the value of .fields.application. However, I am getting an error when using a variable for the pattern arguement.\nLog sample:\n{\n  \"message\": \"INFO - Application started successfully.\",\n  \"fields\": {\n    \"application\": \"app2\"\n  }\n}\nVRL:\ndictionary = [\n{ \"parsing_type\": \"grok\", \"application\": \"app1\", \"pattern\": \"%{DATA:first_field},%{DATA:second_field},%{DATA:third_field}\"},\n{ \"parsing_type\": \"grok\", \"application\": \"app2\", \"pattern\": \"%{LOGLEVEL:loglevel} - %{GREEDYDATA:message}\"},\n{ \"parsing_type\": \"grok\", \"application\": \"app3\", \"pattern\": \"%{IPORHOST:ip}:%{NUMBER:port}\"}\n]\n\nfilter = filter(dictionary) -> |_index, value| {\n    value.application == .fields.application\n}\n\nif length(filter) > 0 {\n    config = filter[0]\n\n    if config.parsing_type == \"grok\" {\n        .log,err = parse_grok(.message, config.pattern)\n    }\n\n}\n\nThe error that I'm getting:\n2023-09-18 18:06:55 15 │         .log,err = parse_grok(.message, config.pattern)\n2023-09-18 18:06:55    │                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n2023-09-18 18:06:55    │                    │\n2023-09-18 18:06:55    │                    unexpected expression for argument \"pattern\"\n2023-09-18 18:06:55    │                    expected: literal\n2023-09-18 18:06:55    │                    received: query\n\nTried different things with no luck. Any suggestions on how I can work around this?",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 2
-    },
-    "createdAt": "2023-09-18T22:39:32Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 459,
-    "stateReason": null,
-    "title": "variable as value for grok pattern",
-    "updatedAt": "2023-10-16T17:56:31Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/459"
-  },
-  {
-    "author": {
-      "login": "alexpts"
-    },
-    "bodyText": "I want generate logs with fake date between {from: \"iso8601\", to \"iso8601\"}.\nCan I make fake date in VRL script?",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2023-10-05T11:28:16Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 494,
-    "stateReason": null,
-    "title": "Fake date generator",
-    "updatedAt": "2023-10-06T12:06:24Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/494"
-  },
-  {
-    "author": {
-      "login": "camilisette"
-    },
-    "bodyText": "Has anyone been able to convert an object to a json string?\nFor example this incoming log:\n{\n  \"timestamp\": \"2022-06-17T16:31:26.123Z\",\n  \"level\": \"info\",\n  \"message\": \"User login successful\",\n  \"user\": {\n    \"id\": \"12345\",\n    \"name\": \"johndoe\",\n    \"details\": {\n      \"country\": \"USA\",\n      \"city\": \"New York\"\n    }\n  },\n  \"request\": {\n    \"ip\": \"192.168.1.1\",\n    \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537\"\n  }\n}\nWill be converted to this:\n{\n  \"timestamp\": \"2022-06-17T16:31:26.123Z\",\n  \"level\": \"info\",\n  \"message\": \"User login successful\",\n  \"user\": \"{\\\"id\\\": \\\"12345\\\", \\\"name\\\": \\\"johndoe\\\", \\\"details\\\": {\\\"country\\\": \\\"USA\\\", \\\"city\\\": \\\"New York\\\"}}\",\n  \"request\": {\n    \"ip\": \"192.168.1.1\",\n    \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537\"\n  }\n}",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2023-10-02T21:43:51Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 488,
-    "stateReason": null,
-    "title": "convert object to json string",
-    "updatedAt": "2023-10-03T15:04:08Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/488"
-  },
-  {
-    "author": {
-      "login": "StefanSa"
-    },
-    "bodyText": "Hi there,\nhave here this part of a syslog message:\nset-cookie=\\\"MapiRouting=UlVNOjkwYzZlMGVmLTdiMTctNDA0ZC05YWEyLTE3ZWU0MmY2ZjBlODppBu888bjbCA==; path=/mapi/; secure; HttpOnly, MapiSequence=18-YtLoPw==; path=/mapi/emsmdb; secure; HttpOnly, MapiContext=MAPIAAAAAOin9NmQxOm/8q\"\n\nbut i get with . = set!(., path: [\"sophos\", \"utm\"], data: parse_key_value!(.message))  only some parts of it extracted.\n\"set-cookie\": \"\\\"MapiRouting=UlVNOjkwYzZlMGVmLTdiMTctNDA0ZC05YWEyLTE3ZWU0MmY2ZjBlODppBu888bjbCA==;\"\n\"HttpOnly,\": true,\n\"secure;\": true,\n\"MapiContext\": \"MAPIAAAAAOin9NmQxOm/8q\",\n\"MapiSequence\": \"18-YtLoPw==;\",\n\ncorrect would be here:\nset-cookie=\\\"MapiRouting=UlVNOjkwYzZlMGVmLTdiMTctNDA0ZC05YWEyLTE3ZWU0MmY2ZjBlODppBu888bjbCA==; path=/mapi/; secure; HttpOnly, MapiSequence=18-YtLoPw==; path=/mapi/emsmdb; secure; HttpOnly, MapiContext=MAPIAAAAAOin9NmQxOm/8q\"\n\ni think the problem is the key set-cookie with a content of ==;\nIs there a chance to extract this key correctly with parse_key_value ?\nthx for any help here\nStefan",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 2
-    },
-    "createdAt": "2023-09-19T09:55:34Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 463,
-    "stateReason": null,
-    "title": "[parse_key_value] does not extract some logfiles correctly",
-    "updatedAt": "2023-09-21T15:16:56Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/463"
-  },
-  {
-    "author": {
-      "login": "teeohhem"
-    },
-    "bodyText": "When using the flatten operation, referencing a field (that contains an object) from an event results in a no-op. This is because when you reference a field from a vector event, you are just given the value, which in this case, is just an object without a key. Therefore, obviously, there is nothing to flatten.\nI personally would expect the flatten operation to \"just work\" and flatten with the key into the main event.\nHere's an example:\nEvent\n{\n    \"timestamp\": 1245542,\n    \"errors\": {\n        \"code\": 1234,\n        \"message\": \"invalid type\",\n        \"class\": \"EventHelper\"\n    },\n    \"otherKey:\" {\n        \"id\": 1\n    }\n}\n\nVRL\n    flattened,err = flatten(.errors)\n\nExpected:\n{\n    \"timestamp\": 1245542,\n    \"errors.code\": 1234,\n    \"errors.message\": \"Invalid type\",\n    \"errors.class\": \"EventHelper\",\n    \"otherKey:\" {\n        \"id\": 1\n    }\n}\n\nActual:\nNo change to the event.",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 4
-    },
-    "createdAt": "2023-08-14T17:02:08Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 387,
-    "stateReason": null,
-    "title": "Flatten does not work as expected when using a top-level field from a vector message",
-    "updatedAt": "2023-08-16T17:21:52Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/387"
-  },
-  {
-    "author": {
-      "login": "yuzhichang"
-    },
-    "bodyText": "I'm evaluating if Vector remap perform better than Flink on ordinary fields extracting/renaming of JSON record.\nKafka cluster consists of 3 node on seperate machines.\nSoure and sink topics are all 3-partitions.\nVector version: 1.31.0, runs on one node of the Kafka cluster.\nFlink version: 1.12, runs on other place.  I developed the JSON transform in pure Java.\n\n\n\n\nthroughtput(events/second)\nCPU\nMemory\n\n\n\n\nVector\n52K(reported by vector top)\n7 vcpu\n900MB\n\n\nFink\n39K(reported by Grafana)\n1.3 vcpu\n200MB\n\n\n\nMy vector config is:\n[api]\nenabled = true\n\n[sources.pod2_source]\ntype = \"kafka\"\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ntopics = [ \"pod_metric\" ]\ngroup_id = \"vector_pod23\"\nauto_offset_reset = \"smallest\"\ndecoding.codec = \"json\"\n\n[transforms.pod2_transform]\ntype = \"remap\"\ninputs = [ \"pod2_source\" ]\ndrop_on_abort = true\ndrop_on_error = true\nreroute_dropped = true\nmetric_tag_values = \"single\"\nsource = \"\"\"\nmsg = parse_json!(string!(.message))\nmsg.\"k8s.cluster.name\" = msg.metric.cluster_id\nmsg.\"k8s.node.name\" = msg.metric.node\nmsg.\"k8s.namespace.name\" = msg.metric.namespace\nmsg.\"k8s.pod.ip\" = split!(msg.metric.instance, \":\", 2)[0]\nmsg.\"k8s.pod.name\" = msg.metric.pod_name\nmsg.__name__ = msg.metric.__name__\nmsg.timestamp = to_timestamp!(msg.value[0])\nmsg.value = to_float!(msg.value[1])\nmsg.__object_id__ = seahash(join!([msg.\"k8s.cluster.name\", msg.\"k8s.pod.ip\"], \", \"))\ndel(msg.metric)\n. = msg\n\"\"\"\ntimezone = \"local\"\n\n[sinks.pod2_sink]\ntype = \"kafka\"\ninputs = [ \"pod2_transform\" ]\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ncompression = \"none\"\nencoding.codec = \"json\"\ntopic = \"pod_metric_ok\"\nkey_field = \"k8s.pod.ip\"\n\n[sinks.pod2_sink2]\ntype = \"kafka\"\ninputs = [ \"pod2_transform.dropped\" ]\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ncompression = \"none\"\nencoding.codec = \"json\"\ntopic = \"pod_metric_dropped\"\n\nAn example source Json record is:\n{\n\t\"host\": \"leno\",\n\t\"message\": \"{\\\"metric\\\":{\\\"container\\\":\\\"dcsp-mid-midbu\\\",\\\"image\\\":\\\"21.33.12.47/dcsp-spec1/dcsp-mid-midbu@sha256:4d5af5d3df7853326a6b871c2fcdd497534b787cda67894694ed38db7568e79f\\\",\\\"instance\\\":\\\"21.33.30.114:10250\\\",\\\"pod\\\":\\\"dcsp-mid-midbu-77744c7558-mwgkj\\\",\\\"metrics_path\\\":\\\"/metrics/cadvisor\\\",\\\"pod_name\\\":\\\"dcsp-mid-midbu-77744c7558-mwgkj\\\",\\\"node\\\":\\\"k8phyzlb01w09\\\",\\\"cluster_id\\\":\\\"k8-phyzl-b01\\\",\\\"endpoint\\\":\\\"https-metrics\\\",\\\"container_name\\\":\\\"dcsp-mid-midbu\\\",\\\"__name__\\\":\\\"pod_memory_usage\\\",\\\"service\\\":\\\"kubelet\\\",\\\"name\\\":\\\"k8s_dcsp-mid-midbu_dcsp-mid-midbu-77744c7558-mwgkj_dcsp-spec1-bu02_5d33b581-3ba6-4421-b00f-9c0c267b6523_0\\\",\\\"namespace\\\":\\\"dcsp-spec1-bu02\\\",\\\"id\\\":\\\"/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod5d33b581_3ba6_4421_b00f_9c0c267b6523.slice/docker-c93101381553f2e2d8d895bf3fc1fc75f934b030af6858f003baee74987f7bd6.scope\\\",\\\"prometheus\\\":\\\"monitoring/k8s\\\",\\\"job\\\":\\\"kubelet\\\"},\\\"value\\\":[1677828485.757,\\\"21.69208526611328\\\"]}\",\n\t\"source_type\": \"stdin\",\n\t\"timestamp\": \"2023-07-11T10:02:05.847397443Z\"\n}\n\nAn example sink Json record is:\n{\n\t\"__name__\": \"pod_cpu_usage\",\n\t\"__object_id__\": 7642464300114087328,\n\t\"k8s.cluster.name\": \"k8-phyzl-b01\",\n\t\"k8s.namespace.name\": \"dcsp-spec1-bu06\",\n\t\"k8s.node.name\": \"k8phyzlb01w05\",\n\t\"k8s.pod.ip\": \"21.33.30.61\",\n\t\"k8s.pod.name\": \"dcsp-dcf-serverbu-655954c97-zf8cz\",\n\t\"timestamp\": \"2023-03-03T07:32:12.513000011Z\",\n\t\"value\": 0.3450426123877763\n}\n\nI'm surprised with the test result. I assumed Vector will win since Vrl is compiled to native code, Any thoughts?",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 2
-    },
-    "createdAt": "2023-07-19T10:23:17Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 342,
-    "stateReason": null,
-    "title": "Benchmark vs Flink",
-    "updatedAt": "2023-08-02T03:22:03Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/342"
-  },
-  {
-    "author": {
-      "login": "yuzhichang"
-    },
-    "bodyText": "I have another question on parse_json.\nBackground:\nVector version 0.30.0, 0.31.0\nEvents in Kafka topic look like:\n{\n\t\"host\": \"leno\",\n\t\"message\": \"{\\\"metric\\\":{\\\"container\\\":\\\"dcsp-mid-midbu\\\",\\\"image\\\":\\\"21.33.12.47/dcsp-spec1/dcsp-mid-midbu@sha256:4d5af5d3df7853326a6b871c2fcdd497534b787cda67894694ed38db7568e79f\\\",\\\"instance\\\":\\\"21.33.30.114:10250\\\",\\\"pod\\\":\\\"dcsp-mid-midbu-77744c7558-mwgkj\\\",\\\"metrics_path\\\":\\\"/metrics/cadvisor\\\",\\\"pod_name\\\":\\\"dcsp-mid-midbu-77744c7558-mwgkj\\\",\\\"node\\\":\\\"k8phyzlb01w09\\\",\\\"cluster_id\\\":\\\"k8-phyzl-b01\\\",\\\"endpoint\\\":\\\"https-metrics\\\",\\\"container_name\\\":\\\"dcsp-mid-midbu\\\",\\\"__name__\\\":\\\"pod_memory_usage\\\",\\\"service\\\":\\\"kubelet\\\",\\\"name\\\":\\\"k8s_dcsp-mid-midbu_dcsp-mid-midbu-77744c7558-mwgkj_dcsp-spec1-bu02_5d33b581-3ba6-4421-b00f-9c0c267b6523_0\\\",\\\"namespace\\\":\\\"dcsp-spec1-bu02\\\",\\\"id\\\":\\\"/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod5d33b581_3ba6_4421_b00f_9c0c267b6523.slice/docker-c93101381553f2e2d8d895bf3fc1fc75f934b030af6858f003baee74987f7bd6.scope\\\",\\\"prometheus\\\":\\\"monitoring/k8s\\\",\\\"job\\\":\\\"kubelet\\\"},\\\"value\\\":[1677828485.757,\\\"21.69208526611328\\\"]}\",\n\t\"source_type\": \"stdin\",\n\t\"timestamp\": \"2023-07-11T10:02:05.847397443Z\"\n}\n\nVector config file:\n[sources.pod2_source]\ntype = \"kafka\"\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ntopics = [ \"pod_metric\" ]\ngroup_id = \"vector_pod2\"\n\n[transforms.pod2_transform]\ntype = \"remap\"\ninputs = [ \"pod2_source\" ]\ndrop_on_abort = true\ndrop_on_error = true\nreroute_dropped = true\nmetric_tag_values = \"single\"\nsource = \"\"\"\nmsg = parse_json!(string!(.message))\nlog(msg)\nmsg.\"k8s.cluster.name\" = msg.metric.cluster_id\nmsg.\"k8s.node.name\" = msg.metric.node\nmsg.\"k8s.namespace.name\" = msg.metric.namespace\nmsg.\"k8s.pod.ip\" = split!(msg.metric.instance, \":\", 2)[0]\nmsg.\"k8s.pod.name\" = msg.metric.pod_name\nmsg.__name__ = msg.metric.__name__\nmsg.timestamp = to_timestamp!(msg.value[0])\nmsg.value = to_float!(msg.value[1])\nmsg.__object_id__ = seahash(join!([msg.\"k8s.cluster.name\", msg.\"k8s.pod.ip\"], \", \"))\ndel(msg.metric)\n. = msg\n\"\"\"\ntimezone = \"local\"\n\n[sinks.pod2_sink]\ntype = \"kafka\"\ninputs = [ \"pod2_transform\" ]\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ncompression = \"none\"\nencoding.codec = \"json\"\ntopic = \"pod_metric_ok\"\nkey_field = \"k8s.pod.ip\"\n\n[sinks.pod2_sink2]\ntype = \"kafka\"\ninputs = [ \"pod2_transform.dropped\" ]\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ncompression = \"none\"\nencoding.codec = \"json\"\ntopic = \"pod_metric_dropped\"\n\nThe vector output:\n2023-07-13T03:04:41.829230Z  INFO transform{component_kind=\"transform\" component_id=pod2_transform component_type=remap component_name=pod2_transform}: vrl::stdlib::log: {\"host\":\"leno\",\"message\":\"{\\\"metric\\\":{\\\"container\\\":\\\"dcsp-mid-midbu\\\",\\\"image\\\":\\\"21.33.12.47/dcsp-spec1/dcsp-mid-midbu@sha256:4d5af5d3df7853326a6b871c2fcdd497534b787cda67894694ed38db7568e79f\\\",\\\"instance\\\":\\\"21.33.30.145:10250\\\",\\\"pod\\\":\\\"dcsp-mid-midbu-5f7c5c9bcf-gl925\\\",\\\"metrics_path\\\":\\\"/metrics/cadvisor\\\",\\\"pod_name\\\":\\\"dcsp-mid-midbu-5f7c5c9bcf-gl925\\\",\\\"node\\\":\\\"k8phyzlb01w15\\\",\\\"cluster_id\\\":\\\"k8-phyzl-b01\\\",\\\"endpoint\\\":\\\"https-metrics\\\",\\\"container_name\\\":\\\"dcsp-mid-midbu\\\",\\\"__name__\\\":\\\"pod_cpu_usage\\\",\\\"service\\\":\\\"kubelet\\\",\\\"name\\\":\\\"k8s_dcsp-mid-midbu_dcsp-mid-midbu-5f7c5c9bcf-gl925_dcsp-spec1-bu03_66a3948b-2b9f-4b00-a8fa-740091230129_0\\\",\\\"namespace\\\":\\\"dcsp-spec1-bu03\\\",\\\"id\\\":\\\"/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod66a3948b_2b9f_4b00_a8fa_740091230129.slice/docker-dfc547dea28858374ba6ef194ea77989dd163cfcd04be07b5301fffd8f8466fa.scope\\\",\\\"prometheus\\\":\\\"monitoring/k8s\\\",\\\"job\\\":\\\"kubelet\\\"},\\\"value\\\":[1677828666.669,\\\"1.069477013669307\\\"]}\",\"source_type\":\"stdin\",\"timestamp\":\"2023-07-11T10:08:29.069551056Z\"} internal_log_rate_secs=1 vrl_position=37\n\nRun similar script in vrl shell:\n$ . = {\"host\":\"leno\",\"message\":\"{\\\"metric\\\":{\\\"cluster_id\\\":\\\"k8-phyzl-b01\\\",\\\"pod\\\":\\\"dcsp-dcf-serverbu-6f7f8dc74b-2sdbj\\\",\\\"__name__\\\":\\\"pod_filesystem_usage\\\",\\\"namespace\\\":\\\"dcsp-spec1-bu01\\\"},\\\"value\\\":[1677828783.807,\\\"0.00977301845002288\\\"]}\",\"source_type\":\"stdin\",\"timestamp\":\"2023-07-11T10:04:48.745189657Z\"}\n$ parse_json!(string(.message))                                                                                                                                     \n{ \"metric\": { \"__name__\": \"pod_filesystem_usage\", \"cluster_id\": \"k8-phyzl-b01\", \"namespace\": \"dcsp-spec1-bu01\", \"pod\": \"dcsp-dcf-serverbu-6f7f8dc74b-2sdbj\" }, \"value\": [1677828783.807, \"0.00977301845002288\"] }\n\nQuestion:\nThe output indicates that msg equals to . instead of decoded .message. This behavor doesn't match with the vrl schell.",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": true,
-    "closedAt": "2023-08-02T03:39:32Z",
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2023-07-13T04:39:40Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 323,
-    "stateReason": "RESOLVED",
-    "title": "parse_json deosn't work",
-    "updatedAt": "2023-08-02T03:39:32Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/323"
-  },
-  {
-    "author": {
       "login": "ffcactus"
     },
     "bodyText": "Java client send the encrypted message by using\nimport package javax.crypto.Cipher;\n\nval cipher = Cipher.getInstance(\"AES/CTR/NoPadding\");",
@@ -277,187 +47,26 @@
   },
   {
     "author": {
-      "login": "ptr1120"
+      "login": "yuzhichang"
     },
-    "bodyText": "Hello,\nI'm working with Vector and have a query regarding its regex capabilities in the remap language, specifically about compilation and caching. In my setup, I use various regex patterns within a remap transform, as shown below:\nlogFormat = .kubernetes.pod_annotations.\"my-company.io/log-format\"\nif logFormat == \"format1\" {\n    pattern = r'...'\n    . |= parse_regex!(.message, pattern)\n} else if logFormat == \"format2\" {\n    pattern = r'...'\n    . |= parse_regex!(.message, pattern)\n}\n\nI plan to introduce more patterns and am concerned about potential performance impacts. My questions are:\n\nAre regexes compiled and/or cached in Vector to enhance performance?\nIf regexes are not inherently cached, is there a way to precompile them or store them in a compiled format using an enrichment_table or similar feature?\n\nYour insights would be greatly appreciated.\nBest regards,\nPeter",
+    "bodyText": "I have another question on parse_json.\nBackground:\nVector version 0.30.0, 0.31.0\nEvents in Kafka topic look like:\n{\n\t\"host\": \"leno\",\n\t\"message\": \"{\\\"metric\\\":{\\\"container\\\":\\\"dcsp-mid-midbu\\\",\\\"image\\\":\\\"21.33.12.47/dcsp-spec1/dcsp-mid-midbu@sha256:4d5af5d3df7853326a6b871c2fcdd497534b787cda67894694ed38db7568e79f\\\",\\\"instance\\\":\\\"21.33.30.114:10250\\\",\\\"pod\\\":\\\"dcsp-mid-midbu-77744c7558-mwgkj\\\",\\\"metrics_path\\\":\\\"/metrics/cadvisor\\\",\\\"pod_name\\\":\\\"dcsp-mid-midbu-77744c7558-mwgkj\\\",\\\"node\\\":\\\"k8phyzlb01w09\\\",\\\"cluster_id\\\":\\\"k8-phyzl-b01\\\",\\\"endpoint\\\":\\\"https-metrics\\\",\\\"container_name\\\":\\\"dcsp-mid-midbu\\\",\\\"__name__\\\":\\\"pod_memory_usage\\\",\\\"service\\\":\\\"kubelet\\\",\\\"name\\\":\\\"k8s_dcsp-mid-midbu_dcsp-mid-midbu-77744c7558-mwgkj_dcsp-spec1-bu02_5d33b581-3ba6-4421-b00f-9c0c267b6523_0\\\",\\\"namespace\\\":\\\"dcsp-spec1-bu02\\\",\\\"id\\\":\\\"/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod5d33b581_3ba6_4421_b00f_9c0c267b6523.slice/docker-c93101381553f2e2d8d895bf3fc1fc75f934b030af6858f003baee74987f7bd6.scope\\\",\\\"prometheus\\\":\\\"monitoring/k8s\\\",\\\"job\\\":\\\"kubelet\\\"},\\\"value\\\":[1677828485.757,\\\"21.69208526611328\\\"]}\",\n\t\"source_type\": \"stdin\",\n\t\"timestamp\": \"2023-07-11T10:02:05.847397443Z\"\n}\n\nVector config file:\n[sources.pod2_source]\ntype = \"kafka\"\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ntopics = [ \"pod_metric\" ]\ngroup_id = \"vector_pod2\"\n\n[transforms.pod2_transform]\ntype = \"remap\"\ninputs = [ \"pod2_source\" ]\ndrop_on_abort = true\ndrop_on_error = true\nreroute_dropped = true\nmetric_tag_values = \"single\"\nsource = \"\"\"\nmsg = parse_json!(string!(.message))\nlog(msg)\nmsg.\"k8s.cluster.name\" = msg.metric.cluster_id\nmsg.\"k8s.node.name\" = msg.metric.node\nmsg.\"k8s.namespace.name\" = msg.metric.namespace\nmsg.\"k8s.pod.ip\" = split!(msg.metric.instance, \":\", 2)[0]\nmsg.\"k8s.pod.name\" = msg.metric.pod_name\nmsg.__name__ = msg.metric.__name__\nmsg.timestamp = to_timestamp!(msg.value[0])\nmsg.value = to_float!(msg.value[1])\nmsg.__object_id__ = seahash(join!([msg.\"k8s.cluster.name\", msg.\"k8s.pod.ip\"], \", \"))\ndel(msg.metric)\n. = msg\n\"\"\"\ntimezone = \"local\"\n\n[sinks.pod2_sink]\ntype = \"kafka\"\ninputs = [ \"pod2_transform\" ]\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ncompression = \"none\"\nencoding.codec = \"json\"\ntopic = \"pod_metric_ok\"\nkey_field = \"k8s.pod.ip\"\n\n[sinks.pod2_sink2]\ntype = \"kafka\"\ninputs = [ \"pod2_transform.dropped\" ]\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ncompression = \"none\"\nencoding.codec = \"json\"\ntopic = \"pod_metric_dropped\"\n\nThe vector output:\n2023-07-13T03:04:41.829230Z  INFO transform{component_kind=\"transform\" component_id=pod2_transform component_type=remap component_name=pod2_transform}: vrl::stdlib::log: {\"host\":\"leno\",\"message\":\"{\\\"metric\\\":{\\\"container\\\":\\\"dcsp-mid-midbu\\\",\\\"image\\\":\\\"21.33.12.47/dcsp-spec1/dcsp-mid-midbu@sha256:4d5af5d3df7853326a6b871c2fcdd497534b787cda67894694ed38db7568e79f\\\",\\\"instance\\\":\\\"21.33.30.145:10250\\\",\\\"pod\\\":\\\"dcsp-mid-midbu-5f7c5c9bcf-gl925\\\",\\\"metrics_path\\\":\\\"/metrics/cadvisor\\\",\\\"pod_name\\\":\\\"dcsp-mid-midbu-5f7c5c9bcf-gl925\\\",\\\"node\\\":\\\"k8phyzlb01w15\\\",\\\"cluster_id\\\":\\\"k8-phyzl-b01\\\",\\\"endpoint\\\":\\\"https-metrics\\\",\\\"container_name\\\":\\\"dcsp-mid-midbu\\\",\\\"__name__\\\":\\\"pod_cpu_usage\\\",\\\"service\\\":\\\"kubelet\\\",\\\"name\\\":\\\"k8s_dcsp-mid-midbu_dcsp-mid-midbu-5f7c5c9bcf-gl925_dcsp-spec1-bu03_66a3948b-2b9f-4b00-a8fa-740091230129_0\\\",\\\"namespace\\\":\\\"dcsp-spec1-bu03\\\",\\\"id\\\":\\\"/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod66a3948b_2b9f_4b00_a8fa_740091230129.slice/docker-dfc547dea28858374ba6ef194ea77989dd163cfcd04be07b5301fffd8f8466fa.scope\\\",\\\"prometheus\\\":\\\"monitoring/k8s\\\",\\\"job\\\":\\\"kubelet\\\"},\\\"value\\\":[1677828666.669,\\\"1.069477013669307\\\"]}\",\"source_type\":\"stdin\",\"timestamp\":\"2023-07-11T10:08:29.069551056Z\"} internal_log_rate_secs=1 vrl_position=37\n\nRun similar script in vrl shell:\n$ . = {\"host\":\"leno\",\"message\":\"{\\\"metric\\\":{\\\"cluster_id\\\":\\\"k8-phyzl-b01\\\",\\\"pod\\\":\\\"dcsp-dcf-serverbu-6f7f8dc74b-2sdbj\\\",\\\"__name__\\\":\\\"pod_filesystem_usage\\\",\\\"namespace\\\":\\\"dcsp-spec1-bu01\\\"},\\\"value\\\":[1677828783.807,\\\"0.00977301845002288\\\"]}\",\"source_type\":\"stdin\",\"timestamp\":\"2023-07-11T10:04:48.745189657Z\"}\n$ parse_json!(string(.message))                                                                                                                                     \n{ \"metric\": { \"__name__\": \"pod_filesystem_usage\", \"cluster_id\": \"k8-phyzl-b01\", \"namespace\": \"dcsp-spec1-bu01\", \"pod\": \"dcsp-dcf-serverbu-6f7f8dc74b-2sdbj\" }, \"value\": [1677828783.807, \"0.00977301845002288\"] }\n\nQuestion:\nThe output indicates that msg equals to . instead of decoded .message. This behavor doesn't match with the vrl schell.",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2023-08-02T03:39:32Z",
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2023-12-15T08:32:26Z",
+    "createdAt": "2023-07-13T04:39:40Z",
     "isAnswered": true,
     "locked": false,
-    "number": 599,
-    "stateReason": null,
-    "title": "Regex performance question",
-    "updatedAt": "2023-12-15T13:39:54Z",
+    "number": 323,
+    "stateReason": "RESOLVED",
+    "title": "parse_json deosn't work",
+    "updatedAt": "2023-08-02T03:39:32Z",
     "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/599"
-  },
-  {
-    "author": {
-      "login": "LinTechSo"
-    },
-    "bodyText": "Hi,\nDescription:\nWhen attempting to generate a lockfile using Cargo for Vector Dev Version 0.33.0 and VRL Version 0.8.1, the process encounters an issue related to resolving the lalrpop dependency version. The error message indicates that it failed to select a suitable version for the requirement lalrpop = \"^0.20.1\". The relevant details of the error are as follows:\ncargo generate-lockfile\n    Updating git repository `https://github.com/vectordotdev/vector`\n    Updating crates.io index\n    Updating git repository `https://github.com/vectordotdev/vrl`\nerror: failed to select a version for the requirement `lalrpop = \"^0.20.1\"`\ncandidate versions found which didn't match: 0.20.0, 0.19.12, 0.19.11, ...\nlocation searched: crates.io index\nrequired by package `vrl v0.8.0 (https://github.com/vectordotdev/vrl?rev=v0.8.0#fb02bfdd)`\n    ... which satisfies git dependency `vrl` of package `vrl-server v0.1.0 (/Users/parham/work/hamravesh9/pipelineoperator-client/images/vrl_validator)`\nperhaps a crate was updated and forgotten to be re-vendored?\n\n\nSteps to Reproduce:\nUse Vector Dev Version 0.33.0.\nUse VRL Version 0.8.1.\nRun cargo generate-lockfile command.\n\nExpected Behavior:\nThe cargo generate-lockfile command should complete successfully, resolving the lalrpop dependency to version ^0.20.1 without errors.\nActual Behavior:\nThe process encounters an error while attempting to select a version for the lalrpop requirement.\nAdditional Information:\nmy cargo.toml configuration:\n[package]\nname = \"vrl-server\"\nversion = \"0.1.0\"\nedition = \"2021\"\n\n[dependencies]\nhttp = \"0.2.9\"\nserde = { version = \"1.0.188\", default-features = false, features = [\"derive\"] }\nserde_json = \"1.0.107\"\nstructopt = { version = \"0.3.26\", default-features = false }\ntokio = { version = \"1.32.0\", default-features = false, features = [\"full\"] }\nwarp = \"0.3.5\"\npretty_env_logger = \"0.4.0\"\n\nvrl = { git = \"https://github.com/vectordotdev/vrl\", rev = \"v0.8.1\" }\nserde-wasm-bindgen = \"0.5\"\ngloo-utils = { version = \"0.1\", features = [\"serde\"] }\ngetrandom = { version = \"0.2\", features = [\"js\"] }\nvector-vrl-functions = { git = \"https://github.com/vectordotdev/vector\", tag = \"v0.33.1\"}\nenrichment = { git = \"https://github.com/vectordotdev/vector\", tag = \"v0.33.1\"}\nvector-common = { git = \"https://github.com/vectordotdev/vector\", tag = \"v0.33.1\"}",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2023-11-07T11:41:03Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 547,
-    "stateReason": null,
-    "title": "package version conflict error from cargo generate-lockfile command",
-    "updatedAt": "2023-11-07T15:44:15Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/547"
-  },
-  {
-    "author": {
-      "login": "MohamedEHJ"
-    },
-    "bodyText": "Hi,\nI got the \"input is not enough for unique date and time\" when i want to parse a custom timestamp:\n-> vector vrl --timezone Europe/Paris 'parse_timestamp!(\"20231029025935\", format: \"%Y%m%d%H%M%S\")'\nfunction call error for \"parse_timestamp\" at (0:58): Invalid timestamp \"20231029025935\": input is not enough for unique date and time\nI think it's related to the timezone defined, but i dont understand the behavior\nThanks!\ncf discord issue: https://discord.com/channels/742820443487993987/1168498617842159626",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2023-10-30T12:40:48Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 534,
-    "stateReason": null,
-    "title": "Error since the switch to daylight saving time.",
-    "updatedAt": "2023-10-31T10:10:52Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/534"
-  },
-  {
-    "author": {
-      "login": "camilisette"
-    },
-    "bodyText": "I have this VRL where the grok pattern for the log is based on the value of .fields.application. However, I am getting an error when using a variable for the pattern arguement.\nLog sample:\n{\n  \"message\": \"INFO - Application started successfully.\",\n  \"fields\": {\n    \"application\": \"app2\"\n  }\n}\nVRL:\ndictionary = [\n{ \"parsing_type\": \"grok\", \"application\": \"app1\", \"pattern\": \"%{DATA:first_field},%{DATA:second_field},%{DATA:third_field}\"},\n{ \"parsing_type\": \"grok\", \"application\": \"app2\", \"pattern\": \"%{LOGLEVEL:loglevel} - %{GREEDYDATA:message}\"},\n{ \"parsing_type\": \"grok\", \"application\": \"app3\", \"pattern\": \"%{IPORHOST:ip}:%{NUMBER:port}\"}\n]\n\nfilter = filter(dictionary) -> |_index, value| {\n    value.application == .fields.application\n}\n\nif length(filter) > 0 {\n    config = filter[0]\n\n    if config.parsing_type == \"grok\" {\n        .log,err = parse_grok(.message, config.pattern)\n    }\n\n}\n\nThe error that I'm getting:\n2023-09-18 18:06:55 15 │         .log,err = parse_grok(.message, config.pattern)\n2023-09-18 18:06:55    │                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n2023-09-18 18:06:55    │                    │\n2023-09-18 18:06:55    │                    unexpected expression for argument \"pattern\"\n2023-09-18 18:06:55    │                    expected: literal\n2023-09-18 18:06:55    │                    received: query\n\nTried different things with no luck. Any suggestions on how I can work around this?",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 2
-    },
-    "createdAt": "2023-09-18T22:39:32Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 459,
-    "stateReason": null,
-    "title": "variable as value for grok pattern",
-    "updatedAt": "2023-10-16T17:56:31Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/459"
-  },
-  {
-    "author": {
-      "login": "alexpts"
-    },
-    "bodyText": "I want generate logs with fake date between {from: \"iso8601\", to \"iso8601\"}.\nCan I make fake date in VRL script?",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2023-10-05T11:28:16Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 494,
-    "stateReason": null,
-    "title": "Fake date generator",
-    "updatedAt": "2023-10-06T12:06:24Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/494"
-  },
-  {
-    "author": {
-      "login": "camilisette"
-    },
-    "bodyText": "Has anyone been able to convert an object to a json string?\nFor example this incoming log:\n{\n  \"timestamp\": \"2022-06-17T16:31:26.123Z\",\n  \"level\": \"info\",\n  \"message\": \"User login successful\",\n  \"user\": {\n    \"id\": \"12345\",\n    \"name\": \"johndoe\",\n    \"details\": {\n      \"country\": \"USA\",\n      \"city\": \"New York\"\n    }\n  },\n  \"request\": {\n    \"ip\": \"192.168.1.1\",\n    \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537\"\n  }\n}\nWill be converted to this:\n{\n  \"timestamp\": \"2022-06-17T16:31:26.123Z\",\n  \"level\": \"info\",\n  \"message\": \"User login successful\",\n  \"user\": \"{\\\"id\\\": \\\"12345\\\", \\\"name\\\": \\\"johndoe\\\", \\\"details\\\": {\\\"country\\\": \\\"USA\\\", \\\"city\\\": \\\"New York\\\"}}\",\n  \"request\": {\n    \"ip\": \"192.168.1.1\",\n    \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537\"\n  }\n}",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 1
-    },
-    "createdAt": "2023-10-02T21:43:51Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 488,
-    "stateReason": null,
-    "title": "convert object to json string",
-    "updatedAt": "2023-10-03T15:04:08Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/488"
-  },
-  {
-    "author": {
-      "login": "StefanSa"
-    },
-    "bodyText": "Hi there,\nhave here this part of a syslog message:\nset-cookie=\\\"MapiRouting=UlVNOjkwYzZlMGVmLTdiMTctNDA0ZC05YWEyLTE3ZWU0MmY2ZjBlODppBu888bjbCA==; path=/mapi/; secure; HttpOnly, MapiSequence=18-YtLoPw==; path=/mapi/emsmdb; secure; HttpOnly, MapiContext=MAPIAAAAAOin9NmQxOm/8q\"\n\nbut i get with . = set!(., path: [\"sophos\", \"utm\"], data: parse_key_value!(.message))  only some parts of it extracted.\n\"set-cookie\": \"\\\"MapiRouting=UlVNOjkwYzZlMGVmLTdiMTctNDA0ZC05YWEyLTE3ZWU0MmY2ZjBlODppBu888bjbCA==;\"\n\"HttpOnly,\": true,\n\"secure;\": true,\n\"MapiContext\": \"MAPIAAAAAOin9NmQxOm/8q\",\n\"MapiSequence\": \"18-YtLoPw==;\",\n\ncorrect would be here:\nset-cookie=\\\"MapiRouting=UlVNOjkwYzZlMGVmLTdiMTctNDA0ZC05YWEyLTE3ZWU0MmY2ZjBlODppBu888bjbCA==; path=/mapi/; secure; HttpOnly, MapiSequence=18-YtLoPw==; path=/mapi/emsmdb; secure; HttpOnly, MapiContext=MAPIAAAAAOin9NmQxOm/8q\"\n\ni think the problem is the key set-cookie with a content of ==;\nIs there a chance to extract this key correctly with parse_key_value ?\nthx for any help here\nStefan",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 2
-    },
-    "createdAt": "2023-09-19T09:55:34Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 463,
-    "stateReason": null,
-    "title": "[parse_key_value] does not extract some logfiles correctly",
-    "updatedAt": "2023-09-21T15:16:56Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/463"
-  },
-  {
-    "author": {
-      "login": "teeohhem"
-    },
-    "bodyText": "When using the flatten operation, referencing a field (that contains an object) from an event results in a no-op. This is because when you reference a field from a vector event, you are just given the value, which in this case, is just an object without a key. Therefore, obviously, there is nothing to flatten.\nI personally would expect the flatten operation to \"just work\" and flatten with the key into the main event.\nHere's an example:\nEvent\n{\n    \"timestamp\": 1245542,\n    \"errors\": {\n        \"code\": 1234,\n        \"message\": \"invalid type\",\n        \"class\": \"EventHelper\"\n    },\n    \"otherKey:\" {\n        \"id\": 1\n    }\n}\n\nVRL\n    flattened,err = flatten(.errors)\n\nExpected:\n{\n    \"timestamp\": 1245542,\n    \"errors.code\": 1234,\n    \"errors.message\": \"Invalid type\",\n    \"errors.class\": \"EventHelper\",\n    \"otherKey:\" {\n        \"id\": 1\n    }\n}\n\nActual:\nNo change to the event.",
-    "category": {
-      "name": "Q&A"
-    },
-    "closed": false,
-    "closedAt": null,
-    "comments": {
-      "totalCount": 4
-    },
-    "createdAt": "2023-08-14T17:02:08Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 387,
-    "stateReason": null,
-    "title": "Flatten does not work as expected when using a top-level field from a vector message",
-    "updatedAt": "2023-08-16T17:21:52Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/387"
+    "url": "https://github.com/vectordotdev/vrl/discussions/323"
   },
   {
     "author": {
@@ -484,32 +93,78 @@
   },
   {
     "author": {
-      "login": "yuzhichang"
+      "login": "teeohhem"
     },
-    "bodyText": "I have another question on parse_json.\nBackground:\nVector version 0.30.0, 0.31.0\nEvents in Kafka topic look like:\n{\n\t\"host\": \"leno\",\n\t\"message\": \"{\\\"metric\\\":{\\\"container\\\":\\\"dcsp-mid-midbu\\\",\\\"image\\\":\\\"21.33.12.47/dcsp-spec1/dcsp-mid-midbu@sha256:4d5af5d3df7853326a6b871c2fcdd497534b787cda67894694ed38db7568e79f\\\",\\\"instance\\\":\\\"21.33.30.114:10250\\\",\\\"pod\\\":\\\"dcsp-mid-midbu-77744c7558-mwgkj\\\",\\\"metrics_path\\\":\\\"/metrics/cadvisor\\\",\\\"pod_name\\\":\\\"dcsp-mid-midbu-77744c7558-mwgkj\\\",\\\"node\\\":\\\"k8phyzlb01w09\\\",\\\"cluster_id\\\":\\\"k8-phyzl-b01\\\",\\\"endpoint\\\":\\\"https-metrics\\\",\\\"container_name\\\":\\\"dcsp-mid-midbu\\\",\\\"__name__\\\":\\\"pod_memory_usage\\\",\\\"service\\\":\\\"kubelet\\\",\\\"name\\\":\\\"k8s_dcsp-mid-midbu_dcsp-mid-midbu-77744c7558-mwgkj_dcsp-spec1-bu02_5d33b581-3ba6-4421-b00f-9c0c267b6523_0\\\",\\\"namespace\\\":\\\"dcsp-spec1-bu02\\\",\\\"id\\\":\\\"/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod5d33b581_3ba6_4421_b00f_9c0c267b6523.slice/docker-c93101381553f2e2d8d895bf3fc1fc75f934b030af6858f003baee74987f7bd6.scope\\\",\\\"prometheus\\\":\\\"monitoring/k8s\\\",\\\"job\\\":\\\"kubelet\\\"},\\\"value\\\":[1677828485.757,\\\"21.69208526611328\\\"]}\",\n\t\"source_type\": \"stdin\",\n\t\"timestamp\": \"2023-07-11T10:02:05.847397443Z\"\n}\n\nVector config file:\n[sources.pod2_source]\ntype = \"kafka\"\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ntopics = [ \"pod_metric\" ]\ngroup_id = \"vector_pod2\"\n\n[transforms.pod2_transform]\ntype = \"remap\"\ninputs = [ \"pod2_source\" ]\ndrop_on_abort = true\ndrop_on_error = true\nreroute_dropped = true\nmetric_tag_values = \"single\"\nsource = \"\"\"\nmsg = parse_json!(string!(.message))\nlog(msg)\nmsg.\"k8s.cluster.name\" = msg.metric.cluster_id\nmsg.\"k8s.node.name\" = msg.metric.node\nmsg.\"k8s.namespace.name\" = msg.metric.namespace\nmsg.\"k8s.pod.ip\" = split!(msg.metric.instance, \":\", 2)[0]\nmsg.\"k8s.pod.name\" = msg.metric.pod_name\nmsg.__name__ = msg.metric.__name__\nmsg.timestamp = to_timestamp!(msg.value[0])\nmsg.value = to_float!(msg.value[1])\nmsg.__object_id__ = seahash(join!([msg.\"k8s.cluster.name\", msg.\"k8s.pod.ip\"], \", \"))\ndel(msg.metric)\n. = msg\n\"\"\"\ntimezone = \"local\"\n\n[sinks.pod2_sink]\ntype = \"kafka\"\ninputs = [ \"pod2_transform\" ]\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ncompression = \"none\"\nencoding.codec = \"json\"\ntopic = \"pod_metric_ok\"\nkey_field = \"k8s.pod.ip\"\n\n[sinks.pod2_sink2]\ntype = \"kafka\"\ninputs = [ \"pod2_transform.dropped\" ]\nbootstrap_servers = \"192.168.101.94:9092,192.168.101.96:9092,192.168.101.98:9092\"\ncompression = \"none\"\nencoding.codec = \"json\"\ntopic = \"pod_metric_dropped\"\n\nThe vector output:\n2023-07-13T03:04:41.829230Z  INFO transform{component_kind=\"transform\" component_id=pod2_transform component_type=remap component_name=pod2_transform}: vrl::stdlib::log: {\"host\":\"leno\",\"message\":\"{\\\"metric\\\":{\\\"container\\\":\\\"dcsp-mid-midbu\\\",\\\"image\\\":\\\"21.33.12.47/dcsp-spec1/dcsp-mid-midbu@sha256:4d5af5d3df7853326a6b871c2fcdd497534b787cda67894694ed38db7568e79f\\\",\\\"instance\\\":\\\"21.33.30.145:10250\\\",\\\"pod\\\":\\\"dcsp-mid-midbu-5f7c5c9bcf-gl925\\\",\\\"metrics_path\\\":\\\"/metrics/cadvisor\\\",\\\"pod_name\\\":\\\"dcsp-mid-midbu-5f7c5c9bcf-gl925\\\",\\\"node\\\":\\\"k8phyzlb01w15\\\",\\\"cluster_id\\\":\\\"k8-phyzl-b01\\\",\\\"endpoint\\\":\\\"https-metrics\\\",\\\"container_name\\\":\\\"dcsp-mid-midbu\\\",\\\"__name__\\\":\\\"pod_cpu_usage\\\",\\\"service\\\":\\\"kubelet\\\",\\\"name\\\":\\\"k8s_dcsp-mid-midbu_dcsp-mid-midbu-5f7c5c9bcf-gl925_dcsp-spec1-bu03_66a3948b-2b9f-4b00-a8fa-740091230129_0\\\",\\\"namespace\\\":\\\"dcsp-spec1-bu03\\\",\\\"id\\\":\\\"/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod66a3948b_2b9f_4b00_a8fa_740091230129.slice/docker-dfc547dea28858374ba6ef194ea77989dd163cfcd04be07b5301fffd8f8466fa.scope\\\",\\\"prometheus\\\":\\\"monitoring/k8s\\\",\\\"job\\\":\\\"kubelet\\\"},\\\"value\\\":[1677828666.669,\\\"1.069477013669307\\\"]}\",\"source_type\":\"stdin\",\"timestamp\":\"2023-07-11T10:08:29.069551056Z\"} internal_log_rate_secs=1 vrl_position=37\n\nRun similar script in vrl shell:\n$ . = {\"host\":\"leno\",\"message\":\"{\\\"metric\\\":{\\\"cluster_id\\\":\\\"k8-phyzl-b01\\\",\\\"pod\\\":\\\"dcsp-dcf-serverbu-6f7f8dc74b-2sdbj\\\",\\\"__name__\\\":\\\"pod_filesystem_usage\\\",\\\"namespace\\\":\\\"dcsp-spec1-bu01\\\"},\\\"value\\\":[1677828783.807,\\\"0.00977301845002288\\\"]}\",\"source_type\":\"stdin\",\"timestamp\":\"2023-07-11T10:04:48.745189657Z\"}\n$ parse_json!(string(.message))                                                                                                                                     \n{ \"metric\": { \"__name__\": \"pod_filesystem_usage\", \"cluster_id\": \"k8-phyzl-b01\", \"namespace\": \"dcsp-spec1-bu01\", \"pod\": \"dcsp-dcf-serverbu-6f7f8dc74b-2sdbj\" }, \"value\": [1677828783.807, \"0.00977301845002288\"] }\n\nQuestion:\nThe output indicates that msg equals to . instead of decoded .message. This behavor doesn't match with the vrl schell.",
+    "bodyText": "When using the flatten operation, referencing a field (that contains an object) from an event results in a no-op. This is because when you reference a field from a vector event, you are just given the value, which in this case, is just an object without a key. Therefore, obviously, there is nothing to flatten.\nI personally would expect the flatten operation to \"just work\" and flatten with the key into the main event.\nHere's an example:\nEvent\n{\n    \"timestamp\": 1245542,\n    \"errors\": {\n        \"code\": 1234,\n        \"message\": \"invalid type\",\n        \"class\": \"EventHelper\"\n    },\n    \"otherKey:\" {\n        \"id\": 1\n    }\n}\n\nVRL\n    flattened,err = flatten(.errors)\n\nExpected:\n{\n    \"timestamp\": 1245542,\n    \"errors.code\": 1234,\n    \"errors.message\": \"Invalid type\",\n    \"errors.class\": \"EventHelper\",\n    \"otherKey:\" {\n        \"id\": 1\n    }\n}\n\nActual:\nNo change to the event.",
     "category": {
       "name": "Q&A"
     },
-    "closed": true,
-    "closedAt": "2023-08-02T03:39:32Z",
+    "closed": false,
+    "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 4
     },
-    "createdAt": "2023-07-13T04:39:40Z",
-    "isAnswered": true,
+    "createdAt": "2023-08-14T17:02:08Z",
+    "isAnswered": false,
     "locked": false,
-    "number": 323,
-    "stateReason": "RESOLVED",
-    "title": "parse_json deosn't work",
-    "updatedAt": "2023-08-02T03:39:32Z",
+    "number": 387,
+    "stateReason": null,
+    "title": "Flatten does not work as expected when using a top-level field from a vector message",
+    "updatedAt": "2023-08-16T17:21:52Z",
     "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/323"
+    "url": "https://github.com/vectordotdev/vrl/discussions/387"
   },
   {
     "author": {
-      "login": "ffcactus"
+      "login": "camilisette"
     },
-    "bodyText": "Java client send the encrypted message by using\nimport package javax.crypto.Cipher;\n\nval cipher = Cipher.getInstance(\"AES/CTR/NoPadding\");",
+    "bodyText": "I have this VRL where the grok pattern for the log is based on the value of .fields.application. However, I am getting an error when using a variable for the pattern arguement.\nLog sample:\n{\n  \"message\": \"INFO - Application started successfully.\",\n  \"fields\": {\n    \"application\": \"app2\"\n  }\n}\nVRL:\ndictionary = [\n{ \"parsing_type\": \"grok\", \"application\": \"app1\", \"pattern\": \"%{DATA:first_field},%{DATA:second_field},%{DATA:third_field}\"},\n{ \"parsing_type\": \"grok\", \"application\": \"app2\", \"pattern\": \"%{LOGLEVEL:loglevel} - %{GREEDYDATA:message}\"},\n{ \"parsing_type\": \"grok\", \"application\": \"app3\", \"pattern\": \"%{IPORHOST:ip}:%{NUMBER:port}\"}\n]\n\nfilter = filter(dictionary) -> |_index, value| {\n    value.application == .fields.application\n}\n\nif length(filter) > 0 {\n    config = filter[0]\n\n    if config.parsing_type == \"grok\" {\n        .log,err = parse_grok(.message, config.pattern)\n    }\n\n}\n\nThe error that I'm getting:\n2023-09-18 18:06:55 15 \u2502         .log,err = parse_grok(.message, config.pattern)\n2023-09-18 18:06:55    \u2502                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n2023-09-18 18:06:55    \u2502                    \u2502\n2023-09-18 18:06:55    \u2502                    unexpected expression for argument \"pattern\"\n2023-09-18 18:06:55    \u2502                    expected: literal\n2023-09-18 18:06:55    \u2502                    received: query\n\nTried different things with no luck. Any suggestions on how I can work around this?",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2023-09-18T22:39:32Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 459,
+    "stateReason": null,
+    "title": "variable as value for grok pattern",
+    "updatedAt": "2023-10-16T17:56:31Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vrl/discussions/459"
+  },
+  {
+    "author": {
+      "login": "StefanSa"
+    },
+    "bodyText": "Hi there,\nhave here this part of a syslog message:\nset-cookie=\\\"MapiRouting=UlVNOjkwYzZlMGVmLTdiMTctNDA0ZC05YWEyLTE3ZWU0MmY2ZjBlODppBu888bjbCA==; path=/mapi/; secure; HttpOnly, MapiSequence=18-YtLoPw==; path=/mapi/emsmdb; secure; HttpOnly, MapiContext=MAPIAAAAAOin9NmQxOm/8q\"\n\nbut i get with . = set!(., path: [\"sophos\", \"utm\"], data: parse_key_value!(.message))  only some parts of it extracted.\n\"set-cookie\": \"\\\"MapiRouting=UlVNOjkwYzZlMGVmLTdiMTctNDA0ZC05YWEyLTE3ZWU0MmY2ZjBlODppBu888bjbCA==;\"\n\"HttpOnly,\": true,\n\"secure;\": true,\n\"MapiContext\": \"MAPIAAAAAOin9NmQxOm/8q\",\n\"MapiSequence\": \"18-YtLoPw==;\",\n\ncorrect would be here:\nset-cookie=\\\"MapiRouting=UlVNOjkwYzZlMGVmLTdiMTctNDA0ZC05YWEyLTE3ZWU0MmY2ZjBlODppBu888bjbCA==; path=/mapi/; secure; HttpOnly, MapiSequence=18-YtLoPw==; path=/mapi/emsmdb; secure; HttpOnly, MapiContext=MAPIAAAAAOin9NmQxOm/8q\"\n\ni think the problem is the key set-cookie with a content of ==;\nIs there a chance to extract this key correctly with parse_key_value ?\nthx for any help here\nStefan",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2023-09-19T09:55:34Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 463,
+    "stateReason": null,
+    "title": "[parse_key_value] does not extract some logfiles correctly",
+    "updatedAt": "2023-09-21T15:16:56Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vrl/discussions/463"
+  },
+  {
+    "author": {
+      "login": "camilisette"
+    },
+    "bodyText": "Has anyone been able to convert an object to a json string?\nFor example this incoming log:\n{\n  \"timestamp\": \"2022-06-17T16:31:26.123Z\",\n  \"level\": \"info\",\n  \"message\": \"User login successful\",\n  \"user\": {\n    \"id\": \"12345\",\n    \"name\": \"johndoe\",\n    \"details\": {\n      \"country\": \"USA\",\n      \"city\": \"New York\"\n    }\n  },\n  \"request\": {\n    \"ip\": \"192.168.1.1\",\n    \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537\"\n  }\n}\nWill be converted to this:\n{\n  \"timestamp\": \"2022-06-17T16:31:26.123Z\",\n  \"level\": \"info\",\n  \"message\": \"User login successful\",\n  \"user\": \"{\\\"id\\\": \\\"12345\\\", \\\"name\\\": \\\"johndoe\\\", \\\"details\\\": {\\\"country\\\": \\\"USA\\\", \\\"city\\\": \\\"New York\\\"}}\",\n  \"request\": {\n    \"ip\": \"192.168.1.1\",\n    \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537\"\n  }\n}",
     "category": {
       "name": "Q&A"
     },
@@ -518,21 +173,21 @@
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2023-07-03T02:27:55Z",
+    "createdAt": "2023-10-02T21:43:51Z",
     "isAnswered": true,
     "locked": false,
-    "number": 291,
+    "number": 488,
     "stateReason": null,
-    "title": "What the decrypt method for AES/CTR/NoPadding ?",
-    "updatedAt": "2023-08-07T13:19:25Z",
+    "title": "convert object to json string",
+    "updatedAt": "2023-10-03T15:04:08Z",
     "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/291"
+    "url": "https://github.com/vectordotdev/vrl/discussions/488"
   },
   {
     "author": {
-      "login": "alisa101rs"
+      "login": "alexpts"
     },
-    "bodyText": "I have been looking through this PR and related issues/proposals,\nbut I can't find any reasoning about using Ctr64LE vs Ctr64BE as a \"default\" implementation of AES-ddd-CTR encryption/decryption.\nI have a case where I want to encrypt generated messages in vector with \"AES-128-CTR\" encryption\nand consume it from the java backend service. I use java's Cipher.getInstance(\"AES/CTR/NoPadding\")\nto decrypt message, however the deciphered payload does not match the payload that was encrypted in the vector.\nI played a little with rust's aes and ctr crates and found that Ctr64BE::<aes::Aes128> matches with the java's \"AES/CTR/NoPadding\", but vector is using \"Ctr64LE::<aes::Aes128>.\nSo my question is why vector using Ctr64LE? Is java's solution incorrect?",
+    "bodyText": "I want generate logs with fake date between {from: \"iso8601\", to \"iso8601\"}.\nCan I make fake date in VRL script?",
     "category": {
       "name": "Q&A"
     },
@@ -541,14 +196,83 @@
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2023-07-05T03:09:30Z",
+    "createdAt": "2023-10-05T11:28:16Z",
     "isAnswered": true,
     "locked": false,
-    "number": 297,
+    "number": 494,
     "stateReason": null,
-    "title": "Endianness in AES-*-CTR encryption/decryption",
-    "updatedAt": "2023-07-05T23:37:45Z",
+    "title": "Fake date generator",
+    "updatedAt": "2023-10-06T12:06:24Z",
     "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vrl/discussions/297"
+    "url": "https://github.com/vectordotdev/vrl/discussions/494"
+  },
+  {
+    "author": {
+      "login": "MohamedEHJ"
+    },
+    "bodyText": "Hi,\nI got the \"input is not enough for unique date and time\" when i want to parse a custom timestamp:\n-> vector vrl --timezone Europe/Paris 'parse_timestamp!(\"20231029025935\", format: \"%Y%m%d%H%M%S\")'\nfunction call error for \"parse_timestamp\" at (0:58): Invalid timestamp \"20231029025935\": input is not enough for unique date and time\nI think it's related to the timezone defined, but i dont understand the behavior\nThanks!\ncf discord issue: https://discord.com/channels/742820443487993987/1168498617842159626",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2023-10-30T12:40:48Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 534,
+    "stateReason": null,
+    "title": "Error since the switch to daylight saving time.",
+    "updatedAt": "2023-10-31T10:10:52Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vrl/discussions/534"
+  },
+  {
+    "author": {
+      "login": "LinTechSo"
+    },
+    "bodyText": "Hi,\nDescription:\nWhen attempting to generate a lockfile using Cargo for Vector Dev Version 0.33.0 and VRL Version 0.8.1, the process encounters an issue related to resolving the lalrpop dependency version. The error message indicates that it failed to select a suitable version for the requirement lalrpop = \"^0.20.1\". The relevant details of the error are as follows:\ncargo generate-lockfile\n    Updating git repository `https://github.com/vectordotdev/vector`\n    Updating crates.io index\n    Updating git repository `https://github.com/vectordotdev/vrl`\nerror: failed to select a version for the requirement `lalrpop = \"^0.20.1\"`\ncandidate versions found which didn't match: 0.20.0, 0.19.12, 0.19.11, ...\nlocation searched: crates.io index\nrequired by package `vrl v0.8.0 (https://github.com/vectordotdev/vrl?rev=v0.8.0#fb02bfdd)`\n    ... which satisfies git dependency `vrl` of package `vrl-server v0.1.0 (/Users/parham/work/hamravesh9/pipelineoperator-client/images/vrl_validator)`\nperhaps a crate was updated and forgotten to be re-vendored?\n\n\nSteps to Reproduce:\nUse Vector Dev Version 0.33.0.\nUse VRL Version 0.8.1.\nRun cargo generate-lockfile command.\n\nExpected Behavior:\nThe cargo generate-lockfile command should complete successfully, resolving the lalrpop dependency to version ^0.20.1 without errors.\nActual Behavior:\nThe process encounters an error while attempting to select a version for the lalrpop requirement.\nAdditional Information:\nmy cargo.toml configuration:\n[package]\nname = \"vrl-server\"\nversion = \"0.1.0\"\nedition = \"2021\"\n\n[dependencies]\nhttp = \"0.2.9\"\nserde = { version = \"1.0.188\", default-features = false, features = [\"derive\"] }\nserde_json = \"1.0.107\"\nstructopt = { version = \"0.3.26\", default-features = false }\ntokio = { version = \"1.32.0\", default-features = false, features = [\"full\"] }\nwarp = \"0.3.5\"\npretty_env_logger = \"0.4.0\"\n\nvrl = { git = \"https://github.com/vectordotdev/vrl\", rev = \"v0.8.1\" }\nserde-wasm-bindgen = \"0.5\"\ngloo-utils = { version = \"0.1\", features = [\"serde\"] }\ngetrandom = { version = \"0.2\", features = [\"js\"] }\nvector-vrl-functions = { git = \"https://github.com/vectordotdev/vector\", tag = \"v0.33.1\"}\nenrichment = { git = \"https://github.com/vectordotdev/vector\", tag = \"v0.33.1\"}\nvector-common = { git = \"https://github.com/vectordotdev/vector\", tag = \"v0.33.1\"}",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2023-11-07T11:41:03Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 547,
+    "stateReason": null,
+    "title": "package version conflict error from cargo generate-lockfile command",
+    "updatedAt": "2023-11-07T15:44:15Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vrl/discussions/547"
+  },
+  {
+    "author": {
+      "login": "ptr1120"
+    },
+    "bodyText": "Hello,\nI'm working with Vector and have a query regarding its regex capabilities in the remap language, specifically about compilation and caching. In my setup, I use various regex patterns within a remap transform, as shown below:\nlogFormat = .kubernetes.pod_annotations.\"my-company.io/log-format\"\nif logFormat == \"format1\" {\n    pattern = r'...'\n    . |= parse_regex!(.message, pattern)\n} else if logFormat == \"format2\" {\n    pattern = r'...'\n    . |= parse_regex!(.message, pattern)\n}\n\nI plan to introduce more patterns and am concerned about potential performance impacts. My questions are:\n\nAre regexes compiled and/or cached in Vector to enhance performance?\nIf regexes are not inherently cached, is there a way to precompile them or store them in a compiled format using an enrichment_table or similar feature?\n\nYour insights would be greatly appreciated.\nBest regards,\nPeter",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2023-12-15T08:32:26Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 599,
+    "stateReason": null,
+    "title": "Regex performance question",
+    "updatedAt": "2023-12-15T13:39:54Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vrl/discussions/599"
   }
 ]
