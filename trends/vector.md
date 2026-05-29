@@ -2,6 +2,11 @@
 
 [← back to README](../README.md)
 
+## Data notes
+
+- **Label normalizations**: `domain: deps` is merged into `dependencies` across all label charts. Issues or PRs carrying both labels are counted once.
+- **Issue type normalizations**: GitHub native issue types (`Bug`, `Feature`, `Enhancement`, `Task`) are treated as equivalent to their legacy label counterparts (`type: bug`, `type: feature`, `type: enhancement`, `type: task`). Issues carrying both are counted once.
+
 ## Issues
 
 ![Monthly Issues](../data/images/vectordotdev_vector_issues.monthly_trend.png)
