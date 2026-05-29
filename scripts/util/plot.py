@@ -66,6 +66,7 @@ COLOR_MAP = {
     "Task": TASK,
     "domain: external docs": "#afab7e",
     "domain: ci": "#d6c720",
+    "dependencies": "#1f3f18",
     "domain: deps": "#1f3f18",
     "domain: core": "#b50036",
     "domain: sources": "#2dbcbc",
