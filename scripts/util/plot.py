@@ -348,7 +348,14 @@ def plot_monthly_summary_basic(path, table, output_path, start_date=None):
         ax = plt.gca()
         set_axis_labels(ax, "Month", "Count")
 
-        plt.legend()
+        ax.legend(
+            loc="upper left",
+            bbox_to_anchor=(1.01, 1),
+            borderaxespad=0.,
+            frameon=True,
+            framealpha=0.5,
+            fontsize=10,
+        )
         plt.tight_layout()
 
         plt.savefig(output_path)
