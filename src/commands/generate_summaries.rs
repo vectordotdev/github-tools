@@ -57,7 +57,7 @@ fn build_where(table: &str, extra: &[&str]) -> String {
 }
 
 /// Returns a SQL CASE expression that normalises legacy label aliases to their
-/// canonical form. Currently: "dependencies" → "domain: deps".
+/// canonical form. Currently: "domain: deps" → "dependencies".
 fn normalize_label_sql(col: &str) -> String {
     format!("CASE {col} WHEN 'domain: deps' THEN 'dependencies' ELSE {col} END")
 }
