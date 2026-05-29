@@ -1,48 +1,94 @@
 [
   {
-    "number": 5472,
-    "title": "Welcome to Vector Discussions!",
-    "bodyText": "Welcome to the Vector community\nWelcome to Vector's Github Discussions! We are trying Discussions to help organize support for Vector. Please use the following guidelines to get the most out of the Vector community:\nCommunity is very important to Vector, we value feedback and take pride in Vector's user experience. Engaging with users is an important feedback loop for the project; please feel free to share everything (good and bad). Thank you!\nEdited: See Vector support policy in: https://vector.dev/community/",
-    "url": "https://github.com/vectordotdev/vector/discussions/5472",
-    "createdAt": "2020-12-10T02:52:48Z",
-    "updatedAt": "2026-01-26T17:50:04Z",
-    "closedAt": null,
-    "closed": false,
-    "stateReason": null,
-    "isAnswered": null,
-    "locked": false,
     "author": {
       "login": "binarylogic"
     },
+    "bodyText": "Welcome to the Vector community\nWelcome to Vector's Github Discussions! We are trying Discussions to help organize support for Vector. Please use the following guidelines to get the most out of the Vector community:\nCommunity is very important to Vector, we value feedback and take pride in Vector's user experience. Engaging with users is an important feedback loop for the project; please feel free to share everything (good and bad). Thank you!\nEdited: See Vector support policy in: https://vector.dev/community/",
     "category": {
       "name": "Announcements"
     },
+    "closed": false,
+    "closedAt": null,
     "comments": {
       "totalCount": 0
     },
-    "upvoteCount": 1
+    "createdAt": "2020-12-10T02:52:48Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5472,
+    "stateReason": null,
+    "title": "Welcome to Vector Discussions!",
+    "updatedAt": "2026-01-26T17:50:04Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/5472"
   },
   {
-    "number": 13834,
-    "title": "Split logs by docker container label",
-    "bodyText": "There are several running docker containers with labels.\nAll logs records go through common transforms and then I need to split stream based on label.\nBut I can't find right condition for swimlanes transform\nvector.toml\n[sources.in]\n  type = \"docker\"\n  include_labels = [\"com.atuko.log_shipping=junk\", \"com.atuko.log_shipping=elastic\"]\n\n[transforms.json]\n  type = \"json_parser\"\n  inputs = [\"in\"]\n  drop_invalid = true\n\n[transforms.remove_tokens]\n  type = \"lua\"\n  inputs = [\"json\"]\n  version = \"2\"\n\n  hooks.process = \"\"\"\n  function (event, emit)\n    if event.log.request ~= nil then\n      r = event.log.request:gsub('X%-System%-Token:.*', '')\n      r = r:gsub('Authorization:.*', '')\n      event.log.request = r\n    end\n\n    emit(event)\n  end\n  \"\"\"\n\n[transforms.split]\n  type = \"swimlanes\"\n  inputs = [\"remove_tokens\"]\n\n  # Lanes\n  [transforms.split.lanes.files]\n    type = \"check_fields\"\n    \"com.atuko.log_shipping.eq\" = \"junk\"\n\n  [transforms.split.lanes.elastic]\n    type = \"check_fields\"\n    \"com.atuko.log_shipping.eq\" = \"elastic\"\n\n[sinks.http]\n  type = \"http\"\n  inputs = [\"split.files\"]\n  uri = \"10.1.1.1:80\"\n  encoding.codec = \"ndjson\"\n\n[sinks.elastic]\n  type = \"elasticsearch\"\n  inputs = [\"split.elastic\"]\n  host = \"10.1.1.1:9000\"\n  index = \"vector-%F\"\n\nvector.log\nJul 23 07:52:51.315  INFO vector: Vector is starting. version=\"0.10.0\" git_version=\"v0.9.0-266-g5e5d806\" released=\"Thu, 25 Jun 2020 14:43:00 +0000\" arch=\"x86_64\"\nJul 23 07:52:51.346 TRACE source{name=in type=docker}: vector::sources::docker: Found already running container id=2e6e4e80c1566e3c526bab2f2dabb60d2e539b4a165ea94e4ce4c030b0760057 names=[\"/target-actions\"]\nJul 23 07:52:51.348  INFO vector::sources::docker: Started listening logs on docker container id=2e6e4e80c1566e3c526bab2f2dabb60d2e539b4a165ea94e4ce4c030b0760057\nJul 23 07:53:08.330 TRACE vector::sources::docker: Received one event. event=Log(LogEvent { fields: {\"container_created_at\": Timestamp(2020-07-23T07:49:25.591113769Z), \"container_id\": Bytes(b\"2e6e4e80c1566e3c526bab2f2dabb60d2e539b4a165ea94e4ce4c030b0760057\"), \"container_name\": Bytes(b\"target-actions\"), \"image\": Bytes(b\"target-actions:debug\"), \"label\": Map({\"com\": Map({\"atuko\": Map({\"log_shipping\": Bytes(b\"junk\")})}), \"logs_enabled\": Bytes(b\"true\")}), \"message\": Bytes(b\"{\\\"level\\\":\\\"info\\\",\\\"host\\\":\\\"d4\\\",\\\"service\\\":\\\"target-actions\\\",\\\"event_type\\\":\\\"debug\\\",\\\"response\\\":\\\"HTTP/1.1 204 No Content\\\",\\\"response_code\\\":204,\\\"time\\\":\\\"2020-07-23T10:53:08+03:00\\\",\\\"message\\\":\\\"ok\\\"}\"), \"source_type\": Bytes(b\"docker\"), \"stream\": Bytes(b\"stderr\"), \"timestamp\": Timestamp(2020-07-23T07:53:08.325606575Z)} })",
-    "url": "https://github.com/vectordotdev/vector/discussions/13834",
-    "createdAt": "2020-07-23T08:20:01Z",
-    "updatedAt": "2022-08-16T11:13:33Z",
-    "closedAt": null,
-    "closed": false,
-    "stateReason": null,
-    "isAnswered": true,
-    "locked": false,
     "author": {
       "login": "andrew4fr"
     },
+    "bodyText": "There are several running docker containers with labels.\nAll logs records go through common transforms and then I need to split stream based on label.\nBut I can't find right condition for swimlanes transform\nvector.toml\n[sources.in]\n  type = \"docker\"\n  include_labels = [\"com.atuko.log_shipping=junk\", \"com.atuko.log_shipping=elastic\"]\n\n[transforms.json]\n  type = \"json_parser\"\n  inputs = [\"in\"]\n  drop_invalid = true\n\n[transforms.remove_tokens]\n  type = \"lua\"\n  inputs = [\"json\"]\n  version = \"2\"\n\n  hooks.process = \"\"\"\n  function (event, emit)\n    if event.log.request ~= nil then\n      r = event.log.request:gsub('X%-System%-Token:.*', '')\n      r = r:gsub('Authorization:.*', '')\n      event.log.request = r\n    end\n\n    emit(event)\n  end\n  \"\"\"\n\n[transforms.split]\n  type = \"swimlanes\"\n  inputs = [\"remove_tokens\"]\n\n  # Lanes\n  [transforms.split.lanes.files]\n    type = \"check_fields\"\n    \"com.atuko.log_shipping.eq\" = \"junk\"\n\n  [transforms.split.lanes.elastic]\n    type = \"check_fields\"\n    \"com.atuko.log_shipping.eq\" = \"elastic\"\n\n[sinks.http]\n  type = \"http\"\n  inputs = [\"split.files\"]\n  uri = \"10.1.1.1:80\"\n  encoding.codec = \"ndjson\"\n\n[sinks.elastic]\n  type = \"elasticsearch\"\n  inputs = [\"split.elastic\"]\n  host = \"10.1.1.1:9000\"\n  index = \"vector-%F\"\n\nvector.log\nJul 23 07:52:51.315  INFO vector: Vector is starting. version=\"0.10.0\" git_version=\"v0.9.0-266-g5e5d806\" released=\"Thu, 25 Jun 2020 14:43:00 +0000\" arch=\"x86_64\"\nJul 23 07:52:51.346 TRACE source{name=in type=docker}: vector::sources::docker: Found already running container id=2e6e4e80c1566e3c526bab2f2dabb60d2e539b4a165ea94e4ce4c030b0760057 names=[\"/target-actions\"]\nJul 23 07:52:51.348  INFO vector::sources::docker: Started listening logs on docker container id=2e6e4e80c1566e3c526bab2f2dabb60d2e539b4a165ea94e4ce4c030b0760057\nJul 23 07:53:08.330 TRACE vector::sources::docker: Received one event. event=Log(LogEvent { fields: {\"container_created_at\": Timestamp(2020-07-23T07:49:25.591113769Z), \"container_id\": Bytes(b\"2e6e4e80c1566e3c526bab2f2dabb60d2e539b4a165ea94e4ce4c030b0760057\"), \"container_name\": Bytes(b\"target-actions\"), \"image\": Bytes(b\"target-actions:debug\"), \"label\": Map({\"com\": Map({\"atuko\": Map({\"log_shipping\": Bytes(b\"junk\")})}), \"logs_enabled\": Bytes(b\"true\")}), \"message\": Bytes(b\"{\\\"level\\\":\\\"info\\\",\\\"host\\\":\\\"d4\\\",\\\"service\\\":\\\"target-actions\\\",\\\"event_type\\\":\\\"debug\\\",\\\"response\\\":\\\"HTTP/1.1 204 No Content\\\",\\\"response_code\\\":204,\\\"time\\\":\\\"2020-07-23T10:53:08+03:00\\\",\\\"message\\\":\\\"ok\\\"}\"), \"source_type\": Bytes(b\"docker\"), \"stream\": Bytes(b\"stderr\"), \"timestamp\": Timestamp(2020-07-23T07:53:08.325606575Z)} })",
     "category": {
       "name": "Q&A"
     },
+    "closed": false,
+    "closedAt": null,
     "comments": {
       "totalCount": 2
     },
-    "upvoteCount": 1
+    "createdAt": "2020-07-23T08:20:01Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 13834,
+    "stateReason": null,
+    "title": "Split logs by docker container label",
+    "updatedAt": "2022-08-16T11:13:33Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/13834"
+  },
+  {
+    "author": {
+      "login": "binarylogic"
+    },
+    "bodyText": "Welcome to the Vector community\nWelcome to Vector's Github Discussions! We are trying Discussions to help organize support for Vector. Please use the following guidelines to get the most out of the Vector community:\nCommunity is very important to Vector, we value feedback and take pride in Vector's user experience. Engaging with users is an important feedback loop for the project; please feel free to share everything (good and bad). Thank you!\nEdited: See Vector support policy in: https://vector.dev/community/",
+    "category": {
+      "name": "Announcements"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2020-12-10T02:52:48Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5472,
+    "stateReason": null,
+    "title": "Welcome to Vector Discussions!",
+    "updatedAt": "2026-01-26T17:50:04Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/5472"
+  },
+  {
+    "author": {
+      "login": "andrew4fr"
+    },
+    "bodyText": "There are several running docker containers with labels.\nAll logs records go through common transforms and then I need to split stream based on label.\nBut I can't find right condition for swimlanes transform\nvector.toml\n[sources.in]\n  type = \"docker\"\n  include_labels = [\"com.atuko.log_shipping=junk\", \"com.atuko.log_shipping=elastic\"]\n\n[transforms.json]\n  type = \"json_parser\"\n  inputs = [\"in\"]\n  drop_invalid = true\n\n[transforms.remove_tokens]\n  type = \"lua\"\n  inputs = [\"json\"]\n  version = \"2\"\n\n  hooks.process = \"\"\"\n  function (event, emit)\n    if event.log.request ~= nil then\n      r = event.log.request:gsub('X%-System%-Token:.*', '')\n      r = r:gsub('Authorization:.*', '')\n      event.log.request = r\n    end\n\n    emit(event)\n  end\n  \"\"\"\n\n[transforms.split]\n  type = \"swimlanes\"\n  inputs = [\"remove_tokens\"]\n\n  # Lanes\n  [transforms.split.lanes.files]\n    type = \"check_fields\"\n    \"com.atuko.log_shipping.eq\" = \"junk\"\n\n  [transforms.split.lanes.elastic]\n    type = \"check_fields\"\n    \"com.atuko.log_shipping.eq\" = \"elastic\"\n\n[sinks.http]\n  type = \"http\"\n  inputs = [\"split.files\"]\n  uri = \"10.1.1.1:80\"\n  encoding.codec = \"ndjson\"\n\n[sinks.elastic]\n  type = \"elasticsearch\"\n  inputs = [\"split.elastic\"]\n  host = \"10.1.1.1:9000\"\n  index = \"vector-%F\"\n\nvector.log\nJul 23 07:52:51.315  INFO vector: Vector is starting. version=\"0.10.0\" git_version=\"v0.9.0-266-g5e5d806\" released=\"Thu, 25 Jun 2020 14:43:00 +0000\" arch=\"x86_64\"\nJul 23 07:52:51.346 TRACE source{name=in type=docker}: vector::sources::docker: Found already running container id=2e6e4e80c1566e3c526bab2f2dabb60d2e539b4a165ea94e4ce4c030b0760057 names=[\"/target-actions\"]\nJul 23 07:52:51.348  INFO vector::sources::docker: Started listening logs on docker container id=2e6e4e80c1566e3c526bab2f2dabb60d2e539b4a165ea94e4ce4c030b0760057\nJul 23 07:53:08.330 TRACE vector::sources::docker: Received one event. event=Log(LogEvent { fields: {\"container_created_at\": Timestamp(2020-07-23T07:49:25.591113769Z), \"container_id\": Bytes(b\"2e6e4e80c1566e3c526bab2f2dabb60d2e539b4a165ea94e4ce4c030b0760057\"), \"container_name\": Bytes(b\"target-actions\"), \"image\": Bytes(b\"target-actions:debug\"), \"label\": Map({\"com\": Map({\"atuko\": Map({\"log_shipping\": Bytes(b\"junk\")})}), \"logs_enabled\": Bytes(b\"true\")}), \"message\": Bytes(b\"{\\\"level\\\":\\\"info\\\",\\\"host\\\":\\\"d4\\\",\\\"service\\\":\\\"target-actions\\\",\\\"event_type\\\":\\\"debug\\\",\\\"response\\\":\\\"HTTP/1.1 204 No Content\\\",\\\"response_code\\\":204,\\\"time\\\":\\\"2020-07-23T10:53:08+03:00\\\",\\\"message\\\":\\\"ok\\\"}\"), \"source_type\": Bytes(b\"docker\"), \"stream\": Bytes(b\"stderr\"), \"timestamp\": Timestamp(2020-07-23T07:53:08.325606575Z)} })",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2020-07-23T08:20:01Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 13834,
+    "stateReason": null,
+    "title": "Split logs by docker container label",
+    "updatedAt": "2022-08-16T11:13:33Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/13834"
   }
 ]

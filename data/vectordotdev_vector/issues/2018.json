@@ -685,5 +685,692 @@
     "user": {
       "login": "michaelfairley"
     }
+  },
+  {
+    "closed_at": "2019-06-19T22:51:13Z",
+    "created_at": "2018-12-18T22:43:47Z",
+    "id": 392367290,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `lua` transform related",
+        "id": 299908738200752377,
+        "name": "transform: lua"
+      },
+      {
+        "color": "BF72F6",
+        "description": "A value-adding code addition that introduce new functionality.",
+        "id": 6628384246314085318,
+        "name": "type: feature"
+      }
+    ],
+    "number": 61,
+    "state": "closed",
+    "title": "Initial Lua integration for transforms",
+    "updated_at": "2020-06-16T16:46:02Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2019-04-08T17:46:10Z",
+    "created_at": "2018-12-18T22:10:57Z",
+    "id": 392357390,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's internal tests",
+        "id": 5489522564843688803,
+        "name": "domain: tests"
+      }
+    ],
+    "number": 60,
+    "state": "closed",
+    "title": "Failure testing",
+    "updated_at": "2019-04-08T17:46:10Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2019-05-11T15:54:13Z",
+    "created_at": "2018-12-10T16:34:09Z",
+    "id": 389383831,
+    "issue_type": null,
+    "labels": [],
+    "number": 51,
+    "state": "closed",
+    "title": "Initial docs setup",
+    "updated_at": "2020-03-26T00:02:47Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-12-18T16:44:16Z",
+    "created_at": "2018-12-06T22:40:37Z",
+    "id": 388428883,
+    "issue_type": null,
+    "labels": [],
+    "number": 49,
+    "state": "closed",
+    "title": "Samplers should add sampling rate as field to records",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-12-11T21:23:49Z",
+    "created_at": "2018-12-06T22:30:44Z",
+    "id": 388425902,
+    "issue_type": null,
+    "labels": [],
+    "number": 48,
+    "state": "closed",
+    "title": "Automated performance testing",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-12-10T18:41:09Z",
+    "created_at": "2018-12-06T22:27:14Z",
+    "id": 388424806,
+    "issue_type": null,
+    "labels": [],
+    "number": 47,
+    "state": "closed",
+    "title": "Initial config file implementation",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-12-10T18:41:05Z",
+    "created_at": "2018-11-27T19:57:10Z",
+    "id": 384960954,
+    "issue_type": null,
+    "labels": [],
+    "number": 40,
+    "state": "closed",
+    "title": "Dynamic topologies",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-12-10T18:39:42Z",
+    "created_at": "2018-11-27T19:04:21Z",
+    "id": 384941759,
+    "issue_type": null,
+    "labels": [],
+    "number": 39,
+    "state": "closed",
+    "title": "Improve integration testing story",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-12-05T22:06:35Z",
+    "created_at": "2018-11-27T18:47:19Z",
+    "id": 384935319,
+    "issue_type": null,
+    "labels": [],
+    "number": 38,
+    "state": "closed",
+    "title": "Simple first parsing component",
+    "updated_at": "2019-06-19T20:39:20Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-11-27T21:28:39Z",
+    "created_at": "2018-11-27T18:32:02Z",
+    "id": 384929879,
+    "issue_type": null,
+    "labels": [],
+    "number": 37,
+    "state": "closed",
+    "title": "Make a first pass at structuring data internally",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-11-27T18:50:18Z",
+    "created_at": "2018-11-27T14:52:33Z",
+    "id": 384832221,
+    "issue_type": null,
+    "labels": [],
+    "number": 35,
+    "state": "closed",
+    "title": "Consistent sampling",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2019-03-20T19:30:17Z",
+    "created_at": "2018-11-05T16:01:59Z",
+    "id": 377466048,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `elasticsearch` sink related",
+        "id": 3276119148680691006,
+        "name": "sink: elasticsearch"
+      }
+    ],
+    "number": 34,
+    "state": "closed",
+    "title": "ES sink support",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "zsherman"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2018-11-05T16:01:50Z",
+    "id": 377465997,
+    "issue_type": "Feature",
+    "labels": [
+      {
+        "color": "FFF068",
+        "description": "Needs review & approval before work can begin.",
+        "id": 389285363867189610,
+        "name": "needs: approval"
+      },
+      {
+        "color": "FFF068",
+        "description": "Needs a a list of requirements before work can be begin",
+        "id": 1231413994313482691,
+        "name": "needs: requirements"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to the Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain: sources"
+      },
+      {
+        "color": "5EAAF6",
+        "description": "Anything `aws` service provider related",
+        "id": 7964646415162525070,
+        "name": "provider: aws"
+      },
+      {
+        "color": "F69049",
+        "description": "We should have this feature, but is not required. It is medium priority.",
+        "id": 6848739542623159481,
+        "name": "have: should"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's log events",
+        "id": 1603740098990692642,
+        "name": "domain: logs"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new source",
+        "id": 2516345231450418203,
+        "name": "source: new"
+      }
+    ],
+    "number": 33,
+    "state": "open",
+    "title": "New `aws_kinesis_streams` source",
+    "updated_at": "2026-02-21T21:01:34Z",
+    "user": {
+      "login": "zsherman"
+    }
+  },
+  {
+    "closed_at": "2018-11-02T16:18:59Z",
+    "created_at": "2018-10-29T15:39:00Z",
+    "id": 375078939,
+    "issue_type": null,
+    "labels": [],
+    "number": 32,
+    "state": "closed",
+    "title": "Move components that make sense to tokio stack",
+    "updated_at": "2018-11-02T16:19:00Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-10-29T15:37:14Z",
+    "created_at": "2018-10-11T18:15:33Z",
+    "id": 369244234,
+    "issue_type": null,
+    "labels": [],
+    "number": 30,
+    "state": "closed",
+    "title": "Splunk raw TCP source first pass",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-11-05T16:02:34Z",
+    "created_at": "2018-10-01T14:45:19Z",
+    "id": 365496131,
+    "issue_type": null,
+    "labels": [],
+    "number": 29,
+    "state": "closed",
+    "title": "Expose metrics for important router processes",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "zsherman"
+    }
+  },
+  {
+    "closed_at": "2018-10-29T15:37:15Z",
+    "created_at": "2018-10-01T14:42:30Z",
+    "id": 365494788,
+    "issue_type": null,
+    "labels": [],
+    "number": 28,
+    "state": "closed",
+    "title": "Test with Splunk",
+    "updated_at": "2018-10-29T15:37:15Z",
+    "user": {
+      "login": "zsherman"
+    }
+  },
+  {
+    "closed_at": "2018-10-29T15:37:16Z",
+    "created_at": "2018-10-01T14:38:31Z",
+    "id": 365492912,
+    "issue_type": null,
+    "labels": [],
+    "number": 27,
+    "state": "closed",
+    "title": "Add test harness",
+    "updated_at": "2019-03-20T20:11:10Z",
+    "user": {
+      "login": "zsherman"
+    }
+  },
+  {
+    "closed_at": "2018-10-29T15:37:10Z",
+    "created_at": "2018-09-21T23:17:15Z",
+    "id": 362801098,
+    "issue_type": null,
+    "labels": [],
+    "number": 21,
+    "state": "closed",
+    "title": "In-process data plane",
+    "updated_at": "2018-10-29T15:37:10Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2019-03-20T19:30:07Z",
+    "created_at": "2018-09-21T23:03:05Z",
+    "id": 362799000,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `aws_s3` sink related",
+        "id": 1963617647073758968,
+        "name": "sink: aws_s3"
+      }
+    ],
+    "number": 20,
+    "state": "closed",
+    "title": "Build S3 sink",
+    "updated_at": "2019-03-20T19:30:07Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-12-21T22:55:55Z",
+    "created_at": "2018-09-21T23:00:07Z",
+    "id": 362798485,
+    "issue_type": null,
+    "labels": [],
+    "number": 19,
+    "state": "closed",
+    "title": "Build Splunk sink",
+    "updated_at": "2018-12-21T22:55:55Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-10-29T15:37:10Z",
+    "created_at": "2018-09-21T22:56:01Z",
+    "id": 362797822,
+    "issue_type": null,
+    "labels": [],
+    "number": 18,
+    "state": "closed",
+    "title": "Build sampling transform",
+    "updated_at": "2018-10-29T15:37:11Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-10-29T15:37:17Z",
+    "created_at": "2018-09-21T22:55:00Z",
+    "id": 362797643,
+    "issue_type": null,
+    "labels": [],
+    "number": 17,
+    "state": "closed",
+    "title": "Decide on initial source",
+    "updated_at": "2018-10-29T15:37:18Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2019-01-03T16:59:11Z",
+    "created_at": "2018-12-22T00:54:41Z",
+    "draft": false,
+    "id": 240606668,
+    "issue_type": null,
+    "labels": [],
+    "number": 63,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Gzip splunk HEC requests bodies",
+    "updated_at": "2019-01-03T16:59:13Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-21T16:40:17Z",
+    "created_at": "2018-12-20T22:31:05Z",
+    "draft": false,
+    "id": 240320773,
+    "issue_type": null,
+    "labels": [],
+    "number": 62,
+    "pull_request": {},
+    "state": "closed",
+    "title": "First pass S3 Sink",
+    "updated_at": "2020-09-05T21:11:25Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-18T16:44:16Z",
+    "created_at": "2018-12-14T21:13:25Z",
+    "draft": false,
+    "id": 238843857,
+    "issue_type": null,
+    "labels": [],
+    "number": 59,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Record the sample rate onto sampled records",
+    "updated_at": "2018-12-18T16:44:20Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-17T15:57:13Z",
+    "created_at": "2018-12-14T20:28:13Z",
+    "draft": false,
+    "id": 238833936,
+    "issue_type": null,
+    "labels": [],
+    "number": 58,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Disable some clippy lints",
+    "updated_at": "2018-12-17T16:04:35Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-17T22:58:05Z",
+    "created_at": "2018-12-14T16:52:23Z",
+    "draft": false,
+    "id": 238781847,
+    "issue_type": null,
+    "labels": [],
+    "number": 57,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Splunk HEC",
+    "updated_at": "2018-12-17T22:58:50Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-12T15:40:38Z",
+    "created_at": "2018-12-11T21:07:09Z",
+    "draft": false,
+    "id": 237827430,
+    "issue_type": null,
+    "labels": [],
+    "number": 56,
+    "pull_request": {},
+    "state": "closed",
+    "title": "2018 Edition",
+    "updated_at": "2018-12-12T15:40:45Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-12-11T19:41:42Z",
+    "created_at": "2018-12-11T19:41:37Z",
+    "draft": false,
+    "id": 237803608,
+    "issue_type": null,
+    "labels": [],
+    "number": 55,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Benchmark different between static and dynamic topologies",
+    "updated_at": "2018-12-11T20:23:38Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-11T19:26:49Z",
+    "created_at": "2018-12-11T16:48:26Z",
+    "draft": false,
+    "id": 237751682,
+    "issue_type": null,
+    "labels": [],
+    "number": 54,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Increase internal buffer size",
+    "updated_at": "2018-12-11T19:29:26Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-11T16:15:36Z",
+    "created_at": "2018-12-11T16:13:08Z",
+    "draft": false,
+    "id": 237738812,
+    "issue_type": null,
+    "labels": [],
+    "number": 53,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Benchmark joining entire topology into single large task",
+    "updated_at": "2018-12-11T19:29:58Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-11T19:24:18Z",
+    "created_at": "2018-12-11T16:13:03Z",
+    "draft": false,
+    "id": 237738785,
+    "issue_type": null,
+    "labels": [],
+    "number": 52,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Simple benchmarks of a few topologies",
+    "updated_at": "2018-12-11T20:37:34Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-10T18:39:42Z",
+    "created_at": "2018-12-07T21:57:59Z",
+    "draft": false,
+    "id": 237005167,
+    "issue_type": null,
+    "labels": [],
+    "number": 50,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Topology config",
+    "updated_at": "2018-12-10T18:39:45Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-05T22:06:08Z",
+    "created_at": "2018-12-03T23:00:11Z",
+    "draft": false,
+    "id": 235622286,
+    "issue_type": null,
+    "labels": [],
+    "number": 46,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Simple regex parser + parsed field filter",
+    "updated_at": "2018-12-05T22:06:11Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-12-10T18:40:46Z",
+    "created_at": "2018-12-03T20:28:01Z",
+    "draft": false,
+    "id": 235581826,
+    "issue_type": null,
+    "labels": [],
+    "number": 45,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Runtime topology creation",
+    "updated_at": "2018-12-11T19:29:18Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-11-30T18:57:25Z",
+    "created_at": "2018-11-30T18:18:55Z",
+    "draft": false,
+    "id": 235073874,
+    "issue_type": null,
+    "labels": [],
+    "number": 44,
+    "pull_request": {},
+    "state": "closed",
+    "title": "More testing",
+    "updated_at": "2018-11-30T20:04:52Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-11-30T00:29:05Z",
+    "created_at": "2018-11-29T22:41:26Z",
+    "draft": false,
+    "id": 234811559,
+    "issue_type": null,
+    "labels": [],
+    "number": 43,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Basic test",
+    "updated_at": "2018-11-30T00:29:18Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-11-30T23:20:09Z",
+    "created_at": "2018-11-29T21:09:47Z",
+    "draft": false,
+    "id": 234786985,
+    "issue_type": null,
+    "labels": [],
+    "number": 42,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add retries and concurrent requests to ES sink",
+    "updated_at": "2018-11-30T23:20:13Z",
+    "user": {
+      "login": "lukesteensen"
+    }
+  },
+  {
+    "closed_at": "2018-11-27T21:28:39Z",
+    "created_at": "2018-11-27T20:57:05Z",
+    "draft": false,
+    "id": 234057454,
+    "issue_type": null,
+    "labels": [],
+    "number": 41,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add basic structured record type",
+    "updated_at": "2018-11-27T21:28:42Z",
+    "user": {
+      "login": "michaelfairley"
+    }
+  },
+  {
+    "closed_at": "2018-11-27T18:50:19Z",
+    "created_at": "2018-11-27T17:32:29Z",
+    "draft": false,
+    "id": 233999594,
+    "issue_type": null,
+    "labels": [],
+    "number": 36,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Consistent sampling",
+    "updated_at": "2018-11-27T18:50:25Z",
+    "user": {
+      "login": "michaelfairley"
+    }
   }
 ]

@@ -57,8 +57,13 @@ def is_bot_login(login: str) -> bool:
 # Custom label color overrides
 COLOR_MAP = {
     "type: bug": BUG,
+    "Bug": BUG,
     "type: feature": ANSWERED,
+    "Feature": ANSWERED,
     "type: enhancement": ENHANCEMENT,
+    "Enhancement": ENHANCEMENT,
+    "type: task": TASK,
+    "Task": TASK,
     "domain: external docs": "#afab7e",
     "domain: ci": "#d6c720",
     "domain: deps": "#1f3f18",

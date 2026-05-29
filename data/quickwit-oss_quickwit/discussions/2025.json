@@ -251,5 +251,258 @@
     "updatedAt": "2025-01-06T09:38:50Z",
     "upvoteCount": 1,
     "url": "https://github.com/quickwit-oss/quickwit/discussions/5598"
+  },
+  {
+    "author": {
+      "login": "putrasattvika2"
+    },
+    "bodyText": "We're currently running a delete task in v0.8.2, and it is progressing very slowly. We'd like to scale Janitor to speed up the process but we're not sure how.\nIssue #5872 says that \"A cluster must have only one Janitor\" so we tried vertically scaling the Janitor pod but it doesn't seem to be capable of utilizing more than 1 CPU core.",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2025-12-23T07:45:56Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 6040,
+    "stateReason": null,
+    "title": "How to scale the Janitor?",
+    "updatedAt": "2025-12-23T07:45:56Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/6040"
+  },
+  {
+    "author": {
+      "login": "silentsokolov"
+    },
+    "bodyText": "As promised, here’s a short story about how we upgraded from v8 to v9.\nLet’s start with the reason - the first and the last one: unstable behavior of large clusters #5819 when nodes go down often.\nWe have a pretty big cluster (12 indexers and 8 searchers), and to save some cost we run it on spot instances. Because of that, after 1–2 months of uptime, the cluster could suddenly fail to recover, and we had to do a full restart. As you can imagine, that’s pretty painful.\nWe saw on Discord/Github that qw-airmail-20250522-hotfix version was one of the most stable, and more importantly, it fixed the exact bug we were hitting. So we decided to upgrade.\nFor testing, we spun up a much smaller cluster and ran some basic tests. We just could not physically reproduce the same production load - something we later really regretted. But anyway, the tests passed fine :)\nFirst, if you use the official Helm chart be aware there’s a bug with affinity merging: #133. So just be careful when configuring that.\nSecond, during the first startup, the metastore runs migrations and there are no logs about that, not even on debug level. On large indexes, migrations take a long time and don’t finish within the startup probe window. Because of that, the metastore pod gets killed before migrations finish and starts again. And so it goes in a loop. On one hand it’s obvious something’s happening, but on the other - there’s zero feedback. We spent more than an hour finding the real cause. On our test environment we didn’t see this because indexes were much smaller.\nThird, we use the bulk API for log delivery. The new version introduced a new ingestion mode - ingest_v2. Unfortunately, it’s... not great. Seriously. On our test cluster, we could not reach even half the throughput we had with ingest_v1. We tried tons of configuration combinations - nothing helped. Thankfully, it’s possible to disable it. I guess we might be missing something and should dig deeper into the code, but still — that’s the reality.\nFourth, and the most painful one. We spent a week fighting this. Basically, at random times indexing would just stop. We called it “stop the world.”\nYou can see the pattern on the screenshot. First, we found it happens only when one specific index is active. If we stop ingestion for that index - the problem disappears. The only big difference was that it used partitioning.\n\nWe first thought the issue was related to the number of partitions (not even that big - only 20). We managed to remove partitioning completely - it helped, but only for a while: the gaps between “STW” just got longer.\nThen we suspected merge settings and tweaked them - no luck either.\nDuring this whole research we found this bug: #5240 but didn’t pay much attention - 1) it was about ingest_v2, and 2) we used to deliver large messages just fine. But as a last resort, we decided to cut off all messages larger than 1MB.\nAnd guess what - it worked! Everything went back to normal. We didn’t even bother bringing partitions back - turns out we like it more without them.\nQuickwit is still the best thing that happened to logs in recent years. We’ve been using it for over a year now, and nothing else gives the same performance/cost ratio.\nWhat’s above isn’t really a complaint - it’s feedback, so others who try Quickwit don’t fall into the same traps. I really hope the dev team keeps pushing it forward - the community deserves a solid tool for serious workloads.\nThank you!",
+    "category": {
+      "name": "Show and tell"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2025-11-03T14:59:01Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5961,
+    "stateReason": null,
+    "title": "Journey to v9",
+    "updatedAt": "2025-11-06T23:21:18Z",
+    "upvoteCount": 3,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5961"
+  },
+  {
+    "author": {
+      "login": "silentsokolov"
+    },
+    "bodyText": "Hey all\nWe have been using version 8.1 of the product for a year, but decided to upgrade (qw-airmail-20250522-hotfix) in order to fix issue #5819. After the upgrade, we started noticing strange behavior let’s call it a “stop the world”. During this time, the cluster stops accepting and indexing documents. According to the metrics, it doesn’t seem to be doing anything at all\nFrom issue #4925, I understand that this might be related to merge splits, but according to the metrics, the number of merges doesn’t increase, memory usage stays the same, it’s just a complete “stop the world” situation. At the same time, the cluster is healthy, all nodes are fine - they just don’t do anything\nCould you please explain what might be causing this and how we can avoid it?\n\n\n\n\n\n\n\n\n\nSettings\n          indexer:\n            split_store_max_num_bytes: 100G\n            split_store_max_num_splits: 5000\n            cpu_capacity: 12\n            merge_concurrency: 8\n\n          ingest_api:\n            max_queue_memory_usage: 32GB\n            max_queue_disk_usage: 48GB\n\nThe indexes (5) have default policy merge",
+    "category": {
+      "name": "General"
+    },
+    "closed": true,
+    "closedAt": "2025-11-03T14:59:26Z",
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2025-10-23T17:38:41Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5948,
+    "stateReason": "RESOLVED",
+    "title": "Stop the world",
+    "updatedAt": "2025-11-03T14:59:26Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5948"
+  },
+  {
+    "author": {
+      "login": "akshayjain3450"
+    },
+    "bodyText": "The last release of quickwit: 0.8.2 was more than a year back, and since then I have seen development was still active but no release was made.\nCan some one help me out when is the new release scheduled for?",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2025-10-15T07:49:57Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5934,
+    "stateReason": null,
+    "title": "Latest Release",
+    "updatedAt": "2025-10-15T08:23:40Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5934"
+  },
+  {
+    "author": {
+      "login": "geekboood"
+    },
+    "bodyText": "Hi, I was inspired by your article on processing Common Crawl data (https://quickwit.io/blog/commoncrawl) and I'm working on a similar, smaller-scale project.\nI'm having trouble with quickwit index ingest directly from my S3-compatible object store due to its instability. The import process often fails and causes data duplication upon retry.\nIs it possible to generate the index and data files locally first and then upload them to the S3 store? This would help me avoid the ingestion issues.",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2025-07-11T14:07:56Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5835,
+    "stateReason": null,
+    "title": "Best practice to ingest large amount of data?",
+    "updatedAt": "2025-07-11T14:07:57Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5835"
+  },
+  {
+    "author": {
+      "login": "azharprabudi"
+    },
+    "bodyText": "Hello everyone,\nIs anyone else experiencing the same issue with Quickwit running on version 0.8.2?\nError log:\n2025-06-24T12:56:33.488Z ERROR quickwit_indexing::actors::indexing_pipeline: Indexing pipeline failure. \npipeline_id=IndexingPipelineId { node_id: \"xxxxxxxxxxxx\", index_uid: IndexUid { index_id: \"xxxxxxxxxxxx\", incarnation_id: Ulid(2111614674913088029481757961785957061) }, source_id: \"xxxxxxxxxxxx\", pipeline_uid: Pipeline(01JYH04PBD671DDN9ERS4GC4JT) } \ngeneration=1 \nhealthy_actors=[\"quickwit_indexing::actors::index_serializer::IndexSerializer-divine-rkWv\"] \nfailed_or_unhealthy_actors=[\"SourceActor-polished-WOIC\", \"quickwit_indexing::actors::doc_processor::DocProcessor-winter-injJ\", \"Indexer-wild-jV9A\"] \nsuccess_actors=[\"Packager-purple-cIqb\", \"IndexUploader-ancient-Ppq1\", \"quickwit_indexing::actors::sequencer::Sequencer<quickwit_indexing::actors::publisher::Publisher>-late-4Rw0\", \"Publisher-cold-VSE0\"]\n\nI’m using Kafka as the source. Under normal traffic conditions, everything works fine. However, during heavy traffic or when there’s an external security scan, the Quickwit indexer pipeline encounters errors and fails to consume data from Kafka, which causes the log stream to become stuck.\nI’ve tried skipping offsets from the Kafka consumer group, but it didn’t work. From what I’ve read in other GitHub issues, it seems there’s no built-in way to skip Kafka offsets in Quickwit.\nQuestions:\nIs it true that there’s currently no way to skip Kafka offsets in Quickwit?\nIs there any recommended approach or best practice to prevent the logs from getting stuck in this scenario?\nAny advice or workaround would be greatly appreciated.\nThank you!",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2025-06-24T15:10:09Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 5818,
+    "stateReason": null,
+    "title": "Indexer Pipeline Fails Under Heavy Traffic — Log Stream Stuck (v0.8.2)",
+    "updatedAt": "2025-06-30T10:37:54Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5818"
+  },
+  {
+    "author": {
+      "login": "gn-viet-n"
+    },
+    "bodyText": "Hi,\nI have got issue described in here #5796 so not sure if any one successfully use latest version of Quickwit with EKS pod identity ? Thanks\nBest Regards,\nVietNC",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2025-06-13T00:00:11Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 5800,
+    "stateReason": null,
+    "title": "Does Quickwit support pod identity in latest version ?",
+    "updatedAt": "2025-06-13T00:00:11Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5800"
+  },
+  {
+    "author": {
+      "login": "adriangb"
+    },
+    "bodyText": "I'm interested in using Quickwit as an index for an existing system.\nOne complexity of a system like this is consistency: especially since Quickwit does async commits it's possible that a document is logically present in the system but absent from Quickwit search results.\nWould it be have some way for the /search and/or /search/stream APIs to return a notion of which documents were scanned?\nThat way if I get back matches for documents 1, 2 & 3 and a scan but no matches for document 4 I'm sure I can exclude document 4 from my query. Otherwise I don't know if I got no results for document 4 because it didn't match the query or because it isn't available for search in Quickwit yet.\nObviously it can't just return every document that didn't match, something like two searches is needed.\nThe most obvious solution I can think of is something like:\n\nPerform the actual search e.g. indexed_table:123 AND message:abc\nDo a followup search with only indexed_table:123\nTake the difference, anything in search (2) that is not in search (1) is present in Quickwit but didn't match the search term.",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2025-03-29T14:40:11Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 5723,
+    "stateReason": null,
+    "title": "Return searched documents with no matches",
+    "updatedAt": "2025-03-29T14:44:12Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5723"
+  },
+  {
+    "author": {
+      "login": "systemslife"
+    },
+    "bodyText": "I can perform full-text searches on fields indexed via field_mappings in Quickwit, but I am unable to search on fields indexed through dynamic_mapping. For example, with the schema below, I can search directly on fields like levelname or trace_id, but I cannot search on plan_name because it is indexed through dynamic_mapping.\nExample query:\n\nquery=ERROR: This search returns the document successfully.\nquery=basic: This search does not return any results because plan_name is indexed using dynamic_mapping.\n\nHow can I perform a search on fields indexed through dynamic_mapping (like plan_name) in the same way as field_mappings?\nExample Schema:\n{\n  \"@timestamp\": \"2025-02-09T10:25:34.745128Z\",\n  \"plan_name\": \"basic\", \n  \"levelname\": \"DEBUG\", \n  \"message\": \"[ERROR]\",\n  \"time\": \"2025-02-09T10:25:34.744697Z\",\n  \"trace_id\": \"b5ab2adc-e8c2-41de-bce6-069b734b66b1\"\n}\nIndexing Configuration:\nversion: 0.7\n\nindex_id: app-logs\n\ndoc_mapping:\n  mode: dynamic\n  dynamic_mapping:\n    indexed: true\n    tokenizer: default\n    record: position\n    stored: true\n  field_mappings:\n    - name: \"@timestamp\"\n      type: datetime\n      input_formats:\n        - \"%Y-%m-%dT%H:%M:%S.%fZ\"\n      fast: true\n    - name: levelname\n      type: text\n      tokenizer: raw\n    - name: trace_id\n      type: text\n      tokenizer: raw\n    - name: message\n      type: text\n      tokenizer: default\n      record: position\n      stored: true\n  timestamp_field: \"@timestamp\"\n  store_source: true\n\nindexing_settings:\n  commit_timeout_secs: 10\n\nsearch_settings:\n  default_search_fields: [\"message\"]",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 3
+    },
+    "createdAt": "2025-02-09T11:40:01Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 5673,
+    "stateReason": null,
+    "title": "Unable to Perform Full-Text Search on Fields Indexed via dynamic_mapping in Quickwit",
+    "updatedAt": "2025-02-11T09:14:32Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5673"
+  },
+  {
+    "author": {
+      "login": "jptmoore"
+    },
+    "bodyText": "Hi, I am struggling to get snippet_fields working for a schema such as:\nversion: \"0.8\"\n\ndoc_mapping:\n  mode: dynamic\n  dynamic_mapping:\n    indexed: true\n    stored: true\n    tokenizer: default\n    record: position\n    expand_dots: true\n    fast: true\n\nMy JSON data has a property called 'body' which could be an object containing 'value' e.g { \"value\": \"foo\" } or could also be within in an array e.g [{ \"value\": \"foo\" }] and I would like to generate snippets for \"value\".\nIf I do something like:\nhttp 'http://localhost:7280/api/v1/foobar/search' query='body.value:foo' snippet_fields='body.value' \nIt generates a 500 response:\n{ \"message\": \"internal error: The field does not exist: 'body.value'\"} \nI am not sure how to handle this within the dynamic schema.\nThanks.",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2025-01-22T17:45:22Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 5640,
+    "stateReason": null,
+    "title": "Generating snippet_fields when mode is dynamic",
+    "updatedAt": "2025-01-22T17:45:23Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5640"
+  },
+  {
+    "author": {
+      "login": "Owned333"
+    },
+    "bodyText": "Hello,\nFrom the documentation, I see that Quickwit supports Load-balancing:\n\nLoad-balancing is made with rendezvous hashing to allow for efficient caching.\n\nhttps://quickwit.io/docs/overview/architecture#searchers\nHowever, no details on setting it up.\nCould somebody please specify how to add supporting for Load-balancing? Or send links / code examples where this is done?",
+    "category": {
+      "name": "General"
+    },
+    "closed": true,
+    "closedAt": "2025-01-06T09:38:50Z",
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2025-01-06T08:33:27Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 5598,
+    "stateReason": "RESOLVED",
+    "title": "Support for load-balancing",
+    "updatedAt": "2025-01-06T09:38:50Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/5598"
   }
 ]
