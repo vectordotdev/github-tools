@@ -222,6 +222,7 @@ fn export_label_breakdown(
     } else {
         let draft_and = if table == "pull_requests" { "AND is_draft = 0" } else { "" };
         let norm = normalize_label_sql("labels.name");
+        let norm_it = normalize_label_sql(&format!("{table}.issue_type"));
         format!(
             "SELECT label_name, SUM(count) AS count FROM (
                  SELECT label_name, COUNT(*) AS count FROM (
@@ -242,10 +243,10 @@ fn export_label_breakdown(
                      AND lower(labels.name) != 'type: ' || lower({table}.issue_type)
                  ) GROUP BY label_name
                  UNION ALL
-                 SELECT issue_type AS label_name, COUNT(*) AS count
+                 SELECT {norm_it} AS label_name, COUNT(*) AS count
                  FROM {table}
                  WHERE issue_type IS NOT NULL {draft_and}
-                 GROUP BY issue_type
+                 GROUP BY label_name
              )
              GROUP BY label_name
              ORDER BY count DESC"
@@ -287,6 +288,7 @@ fn export_label_timeseries(
     } else {
         let draft_and = if table == "pull_requests" { "AND is_draft = 0" } else { "" };
         let norm = normalize_label_sql("labels.name");
+        let norm_it = normalize_label_sql(&format!("{table}.issue_type"));
         format!(
             "SELECT month, label_name, SUM(count) AS count FROM (
                  SELECT month, label_name, COUNT(*) AS count FROM (
@@ -307,10 +309,10 @@ fn export_label_timeseries(
                      AND lower(labels.name) != 'type: ' || lower({table}.issue_type)
                  ) GROUP BY month, label_name
                  UNION ALL
-                 SELECT substr(created_at, 1, 7) AS month, issue_type AS label_name, COUNT(*) AS count
+                 SELECT substr(created_at, 1, 7) AS month, {norm_it} AS label_name, COUNT(*) AS count
                  FROM {table}
                  WHERE issue_type IS NOT NULL {draft_and}
-                 GROUP BY month, issue_type
+                 GROUP BY month, label_name
              )
              GROUP BY month, label_name
              ORDER BY month, count DESC"
