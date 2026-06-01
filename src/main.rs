@@ -101,14 +101,16 @@ enum Command {
     },
     /// Remove a legacy type label from issues/PRs, optionally setting the type field
     RemoveLegacyLabel {
-        #[arg(long, required = true, help = "Repository owner/name (repeatable)")]
-        repo: Vec<String>,
+        #[arg(long, help = "Path to .env file")]
+        env_file: String,
         #[arg(long, required = true)]
         legacy_label: String,
         #[arg(long, default_value = "open")]
         state: String,
         #[arg(long)]
         set_type_field: bool,
+        #[arg(long, help = "Overwrite existing type field if already set to a different value")]
+        overwrite_type: bool,
         #[arg(long)]
         require_type_field: bool,
         #[arg(long)]
@@ -242,10 +244,11 @@ fn main() -> Result<()> {
             generate_summaries::run(&db, &config)
         }
         Command::RemoveLegacyLabel {
-            repo,
+            env_file,
             legacy_label,
             state,
             set_type_field,
+            overwrite_type,
             require_type_field,
             case_insensitive,
             dry_run,
@@ -253,22 +256,17 @@ fn main() -> Result<()> {
             since,
             limit,
         } => {
-            let token = std::env::var("GITHUB_TOKEN")
-                .or_else(|_| std::env::var("GH_TOKEN"))
-                .unwrap_or_default();
-            if token.is_empty() {
-                anyhow::bail!(
-                    "GITHUB_TOKEN environment variable is required for remove-legacy-label"
-                );
-            }
+            let config = Config::load(Some(&env_file))?;
+            let repo = format!("{}/{}", config.repo_owner, config.repo_name);
             remove_legacy_label::run(&remove_legacy_label::Args {
-                repos: repo,
+                repos: vec![repo],
                 legacy_label,
                 state,
                 set_type_field,
+                overwrite_type,
                 require_type_field,
                 case_insensitive,
-                token,
+                token: config.github_token,
                 dry_run,
                 since,
                 limit,
