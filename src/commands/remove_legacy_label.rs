@@ -12,6 +12,7 @@ pub struct Args {
     pub legacy_label: String,
     pub state: String,
     pub set_type_field: bool,
+    pub overwrite_type: bool,
     pub require_type_field: bool,
     pub case_insensitive: bool,
     pub token: String,
@@ -28,6 +29,7 @@ struct TypeInfo {
 fn type_mapping() -> HashMap<&'static str, TypeInfo> {
     HashMap::from([
         ("type: bug", TypeInfo { name: "Bug" }),
+        ("type: enhancement", TypeInfo { name: "Enhancement" }),
         ("type: feature", TypeInfo { name: "Feature" }),
         ("type: task", TypeInfo { name: "Task" }),
     ])
@@ -320,6 +322,7 @@ pub fn run(args: &Args) -> Result<()> {
             // Check current type field
             let current_type_name = item["type"]["name"].as_str().unwrap_or("");
             let has_correct_type = current_type_name == type_info.name;
+            let has_different_type = !current_type_name.is_empty() && !has_correct_type;
 
             if args.require_type_field && !has_correct_type {
                 total_skipped += 1;
@@ -330,10 +333,18 @@ pub fn run(args: &Args) -> Result<()> {
                 continue;
             }
 
+            // If a different type is already set, only overwrite when --overwrite-type was passed.
+            if args.set_type_field && has_different_type && !args.overwrite_type {
+                println!(
+                    "#{number}  WARN: type already set to '{current_type_name}', skipping type change (pass --overwrite-type to overwrite)  {title}"
+                );
+                // Still remove the legacy label — it's stale regardless.
+            }
+
             processed_count += 1;
 
             let mut set_ok = true;
-            if args.set_type_field && !has_correct_type {
+            if args.set_type_field && !has_correct_type && (!has_different_type || args.overwrite_type) {
                 let (ok, msg) = set_type_field(
                     &client,
                     repo,
