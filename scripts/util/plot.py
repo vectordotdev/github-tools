@@ -60,7 +60,7 @@ COLOR_MAP = {
     "Bug": BUG,
     "type: feature": ANSWERED,
     "Feature": ANSWERED,
-    "enhancement": ENHANCEMENT,
+    "type: enhancement": ENHANCEMENT,
     "Enhancement": ENHANCEMENT,
     "type: task": TASK,
     "Task": TASK,
@@ -95,7 +95,7 @@ def pretty_table(table: str) -> str:
 TYPE_OVERLAYS = [
     ("Bugs",         BUG,         ["type: bug",         "Bug"]),
     ("Features",     ANSWERED,    ["type: feature",     "Feature"]),
-    ("Enhancements", ENHANCEMENT, ["enhancement", "Enhancement"]),
+    ("Enhancements", ENHANCEMENT, ["type: enhancement", "Enhancement"]),
     ("Tasks",        TASK,        ["type: task",        "Task"]),
 ]
 

@@ -64,7 +64,7 @@ fn normalize_label_sql(col: &str) -> String {
         "CASE \
          WHEN {col} = 'domain: deps' THEN 'dependencies' \
          WHEN lower({col}) = 'bug' THEN 'type: bug' \
-         WHEN lower({col}) = 'type: enhancement' THEN 'enhancement' \
+         WHEN lower({col}) = 'enhancement' THEN 'type: enhancement' \
          WHEN lower({col}) = 'feature' THEN 'type: feature' \
          WHEN lower({col}) = 'task' THEN 'type: task' \
          ELSE {col} END"
