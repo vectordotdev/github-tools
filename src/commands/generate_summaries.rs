@@ -57,9 +57,18 @@ fn build_where(table: &str, extra: &[&str]) -> String {
 }
 
 /// Returns a SQL CASE expression that normalises legacy label aliases to their
-/// canonical form. Currently: "domain: deps" → "dependencies".
+/// canonical form. Bare type labels (e.g. "bug", "Bug") are folded into their
+/// "type: x" equivalents so all repos produce consistent column names and colors.
 fn normalize_label_sql(col: &str) -> String {
-    format!("CASE {col} WHEN 'domain: deps' THEN 'dependencies' ELSE {col} END")
+    format!(
+        "CASE \
+         WHEN {col} = 'domain: deps' THEN 'dependencies' \
+         WHEN lower({col}) = 'bug' THEN 'type: bug' \
+         WHEN lower({col}) = 'enhancement' THEN 'type: enhancement' \
+         WHEN lower({col}) = 'feature' THEN 'type: feature' \
+         WHEN lower({col}) = 'task' THEN 'type: task' \
+         ELSE {col} END"
+    )
 }
 
 fn csv_path(out_dir: &Path, config: &Config, table: &str, suffix: &str) -> std::path::PathBuf {
