@@ -1,0 +1,1402 @@
+[
+  {
+    "closed_at": "2016-08-15T06:53:40Z",
+    "created_at": "2016-08-15T06:50:51Z",
+    "draft": false,
+    "id": 81276136,
+    "issue_type": null,
+    "labels": [],
+    "number": 1,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix typos in README",
+    "updated_at": "2016-08-15T06:53:44Z",
+    "user": {
+      "login": "aheart"
+    }
+  },
+  {
+    "closed_at": "2016-08-15T08:12:15Z",
+    "created_at": "2016-08-15T07:15:39Z",
+    "id": 171120081,
+    "issue_type": null,
+    "labels": [],
+    "number": 2,
+    "state": "closed",
+    "title": "Does it index french text?",
+    "updated_at": "2016-08-15T08:12:15Z",
+    "user": {
+      "login": "LeMoussel"
+    }
+  },
+  {
+    "closed_at": "2016-08-22T00:38:21Z",
+    "created_at": "2016-08-16T00:53:15Z",
+    "id": 171296403,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 3,
+    "state": "closed",
+    "title": "Remove the autocommit behavior",
+    "updated_at": "2016-08-22T00:38:21Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-10-16T14:35:04Z",
+    "created_at": "2016-08-16T00:54:57Z",
+    "id": 171296579,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 4,
+    "state": "closed",
+    "title": "Add merge policy",
+    "updated_at": "2016-10-16T14:35:04Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2023-08-08T13:41:30Z",
+    "created_at": "2016-08-16T00:56:33Z",
+    "id": 171296737,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 5,
+    "state": "closed",
+    "title": "Add a lenient mode to QueryParser",
+    "updated_at": "2023-08-08T13:41:31Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-10-12T09:24:35Z",
+    "created_at": "2016-08-16T00:58:37Z",
+    "id": 171297017,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      },
+      {
+        "color": "A11EC6",
+        "description": "",
+        "id": 2457496829795096406,
+        "name": "Hacktoberfest"
+      }
+    ],
+    "number": 6,
+    "state": "closed",
+    "title": "Add a macro to define document simply.",
+    "updated_at": "2016-10-12T09:24:35Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2016-08-16T01:01:09Z",
+    "id": 171297327,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": null,
+        "id": 1411261257320120064,
+        "name": "performance"
+      },
+      {
+        "color": "F9D0C4",
+        "description": "",
+        "id": 2979943018382971391,
+        "name": "low priority"
+      }
+    ],
+    "number": 7,
+    "state": "open",
+    "title": "Somehow find a way to make cascading writing to disk",
+    "updated_at": "2019-05-10T22:47:02Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-09-15T00:26:40Z",
+    "created_at": "2016-08-16T01:03:02Z",
+    "id": 171297556,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 8,
+    "state": "closed",
+    "title": "Replace the `Vec`s in SegmentWriter",
+    "updated_at": "2016-09-15T00:26:40Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-10-04T05:29:43Z",
+    "created_at": "2016-08-16T01:06:12Z",
+    "id": 171297995,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      },
+      {
+        "color": "A11EC6",
+        "description": "",
+        "id": 2457496829795096406,
+        "name": "Hacktoberfest"
+      }
+    ],
+    "number": 9,
+    "state": "closed",
+    "title": "Make sure IndexWriter \"locks\" the directory",
+    "updated_at": "2016-10-04T05:29:43Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-11-04T05:27:52Z",
+    "created_at": "2016-08-16T01:12:09Z",
+    "id": 171298582,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 10,
+    "state": "closed",
+    "title": "Implement PhraseQuery",
+    "updated_at": "2016-11-04T05:27:52Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2018-02-19T01:47:56Z",
+    "created_at": "2016-08-16T01:14:50Z",
+    "id": 171298823,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      },
+      {
+        "color": "A11EC6",
+        "description": "",
+        "id": 2457496829795096406,
+        "name": "Hacktoberfest"
+      }
+    ],
+    "number": 11,
+    "state": "closed",
+    "title": "Reproducable benchmark against Lucene",
+    "updated_at": "2018-02-19T01:47:56Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-08-16T10:00:45Z",
+    "created_at": "2016-08-16T01:21:07Z",
+    "id": 171299475,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 12,
+    "state": "closed",
+    "title": "Parse multivalues",
+    "updated_at": "2016-08-16T10:00:45Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-08-23T13:22:46Z",
+    "created_at": "2016-08-16T01:31:48Z",
+    "id": 171300888,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 13,
+    "state": "closed",
+    "title": "Stop copying Schema around",
+    "updated_at": "2016-08-23T13:22:46Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-08-27T09:26:47Z",
+    "created_at": "2016-08-16T01:33:56Z",
+    "id": 171301276,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 14,
+    "state": "closed",
+    "title": "File lifetime",
+    "updated_at": "2016-08-27T09:26:47Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-08-16T10:23:45Z",
+    "created_at": "2016-08-16T06:39:35Z",
+    "id": 171336190,
+    "issue_type": null,
+    "labels": [],
+    "number": 15,
+    "state": "closed",
+    "title": "Use it to measure similarity between texts?",
+    "updated_at": "2016-08-16T10:23:45Z",
+    "user": {
+      "login": "LeMoussel"
+    }
+  },
+  {
+    "closed_at": "2016-08-18T01:43:33Z",
+    "created_at": "2016-08-17T00:18:22Z",
+    "id": 171547710,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 16,
+    "state": "closed",
+    "title": "Stop copying Vec<u8> around in the RAMDirectory",
+    "updated_at": "2016-08-18T01:43:33Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-08-19T15:08:28Z",
+    "created_at": "2016-08-18T14:32:40Z",
+    "id": 171915856,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 17,
+    "state": "closed",
+    "title": "Clean up and document the Directory interface.",
+    "updated_at": "2016-08-19T15:08:28Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2016-08-22T00:40:48Z",
+    "id": 172351355,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 18,
+    "state": "open",
+    "title": "Add auto-publish",
+    "updated_at": "2016-10-17T00:46:10Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-08-24T01:55:17Z",
+    "created_at": "2016-08-22T02:17:13Z",
+    "id": 172357588,
+    "issue_type": null,
+    "labels": [],
+    "number": 19,
+    "state": "closed",
+    "title": "Create an example directory",
+    "updated_at": "2016-08-24T01:55:17Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-08-27T09:26:36Z",
+    "created_at": "2016-08-24T01:56:27Z",
+    "id": 172847651,
+    "issue_type": null,
+    "labels": [],
+    "number": 20,
+    "state": "closed",
+    "title": "Rethink searchers",
+    "updated_at": "2016-08-27T09:26:36Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-09-06T01:17:06Z",
+    "created_at": "2016-09-05T09:02:05Z",
+    "id": 175026282,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 21,
+    "state": "closed",
+    "title": "Remove the 64 bits padding in fastfields",
+    "updated_at": "2016-09-06T01:17:06Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-25T00:33:29Z",
+    "created_at": "2016-09-15T00:27:28Z",
+    "id": 177057541,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 22,
+    "state": "closed",
+    "title": "Rewrite the stacker without unsafe",
+    "updated_at": "2019-01-25T00:33:29Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-11-17T14:28:21Z",
+    "created_at": "2016-09-15T15:20:12Z",
+    "id": 177206589,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 23,
+    "state": "closed",
+    "title": "MUST term in the query parser does not play well with multifield.",
+    "updated_at": "2016-11-17T14:28:21Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-09-18T14:12:18Z",
+    "created_at": "2016-09-17T15:19:33Z",
+    "id": 177584185,
+    "issue_type": null,
+    "labels": [],
+    "number": 24,
+    "state": "closed",
+    "title": "Compilation error: missing simdcomp",
+    "updated_at": "2017-01-26T02:04:26Z",
+    "user": {
+      "login": "Fiedzia"
+    }
+  },
+  {
+    "closed_at": "2018-06-13T01:44:53Z",
+    "created_at": "2016-09-20T06:04:45Z",
+    "id": 177972467,
+    "issue_type": null,
+    "labels": [],
+    "number": 25,
+    "state": "closed",
+    "title": "asciicinema terminal screencast ",
+    "updated_at": "2018-06-13T01:44:53Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2018-02-21T02:32:49Z",
+    "created_at": "2016-09-20T14:54:53Z",
+    "id": 178083853,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 26,
+    "state": "closed",
+    "title": "Optimize the query in the presence of MUST terms",
+    "updated_at": "2018-02-21T02:32:49Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2017-01-26T02:02:49Z",
+    "created_at": "2016-09-20T14:55:13Z",
+    "id": 178083955,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 27,
+    "state": "closed",
+    "title": "Make MUST a possible default in the query parser",
+    "updated_at": "2018-08-13T00:03:40Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2017-02-19T02:30:36Z",
+    "created_at": "2016-09-20T15:17:28Z",
+    "id": 178090508,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 28,
+    "state": "closed",
+    "title": "Replace the DocStore's anonymous memory index",
+    "updated_at": "2017-02-19T02:30:49Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-06-28T02:13:24Z",
+    "created_at": "2016-09-20T15:20:03Z",
+    "id": 178091249,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      },
+      {
+        "color": "bfdadc",
+        "description": "",
+        "id": 3953077493583612538,
+        "name": "qw"
+      }
+    ],
+    "number": 29,
+    "state": "closed",
+    "title": "Allocate docIds in a way that is monotonic with some fast field",
+    "updated_at": "2021-06-28T02:13:24Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-09-27T08:57:38Z",
+    "created_at": "2016-09-21T04:44:43Z",
+    "id": 178245058,
+    "issue_type": null,
+    "labels": [],
+    "number": 30,
+    "state": "closed",
+    "title": "Use `flame` instead of `TimerTree`",
+    "updated_at": "2016-09-27T08:58:22Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2022-02-01T02:46:46Z",
+    "created_at": "2016-09-29T10:28:07Z",
+    "id": 180011143,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 31,
+    "state": "closed",
+    "title": "Watch changes to the meta.json file",
+    "updated_at": "2022-02-01T02:46:47Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-09-30T15:33:04Z",
+    "created_at": "2016-09-30T15:20:24Z",
+    "draft": false,
+    "id": 87513616,
+    "issue_type": null,
+    "labels": [],
+    "number": 32,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Pedantry",
+    "updated_at": "2016-09-30T15:38:02Z",
+    "user": {
+      "login": "currymj"
+    }
+  },
+  {
+    "closed_at": "2016-10-04T05:29:43Z",
+    "created_at": "2016-10-03T02:13:30Z",
+    "draft": false,
+    "id": 87656031,
+    "issue_type": null,
+    "labels": [],
+    "number": 33,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Lockfile",
+    "updated_at": "2016-10-04T05:29:44Z",
+    "user": {
+      "login": "currymj"
+    }
+  },
+  {
+    "closed_at": "2016-10-12T09:24:35Z",
+    "created_at": "2016-10-12T08:50:40Z",
+    "draft": false,
+    "id": 88976198,
+    "issue_type": null,
+    "labels": [],
+    "number": 34,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added a macro to define document simply",
+    "updated_at": "2016-10-12T09:24:39Z",
+    "user": {
+      "login": "White-Oak"
+    }
+  },
+  {
+    "closed_at": "2016-10-16T14:35:03Z",
+    "created_at": "2016-10-16T14:34:42Z",
+    "draft": false,
+    "id": 89527440,
+    "issue_type": null,
+    "labels": [],
+    "number": 35,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bug/4",
+    "updated_at": "2016-10-16T14:35:03Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-06T01:03:57Z",
+    "created_at": "2016-10-17T00:32:48Z",
+    "id": 183303642,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 36,
+    "state": "closed",
+    "title": "Reintroduce query explain",
+    "updated_at": "2019-06-06T01:03:57Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2018-06-13T01:42:42Z",
+    "created_at": "2016-10-17T00:34:00Z",
+    "id": 183303708,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "ffffff",
+        "description": null,
+        "id": 6685970577310621721,
+        "name": "wontfix"
+      }
+    ],
+    "number": 37,
+    "state": "closed",
+    "title": "DocValue for other types",
+    "updated_at": "2018-06-13T01:42:42Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-10-24T13:34:39Z",
+    "created_at": "2016-10-17T00:34:39Z",
+    "id": 183303743,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 38,
+    "state": "closed",
+    "title": "Use skip list in docstore",
+    "updated_at": "2016-10-24T13:34:39Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2018-06-13T01:42:09Z",
+    "created_at": "2016-10-17T00:39:17Z",
+    "id": 183304020,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cccccc",
+        "description": null,
+        "id": 6473935039886488015,
+        "name": "duplicate"
+      },
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 39,
+    "state": "closed",
+    "title": "Index frequent bigrams",
+    "updated_at": "2018-06-13T01:42:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2016-10-17T00:41:00Z",
+    "id": 183304111,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 40,
+    "state": "open",
+    "title": "Reconsider  the way to encode the field in the term",
+    "updated_at": "2016-10-17T00:41:00Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2016-10-17T00:44:48Z",
+    "id": 183304319,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 41,
+    "state": "open",
+    "title": "Create mechanism to define collectors as aggregate function",
+    "updated_at": "2016-10-17T00:45:16Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-09-06T23:41:02Z",
+    "created_at": "2016-10-17T00:45:06Z",
+    "id": 183304341,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 42,
+    "state": "closed",
+    "title": "Implement date field type.",
+    "updated_at": "2019-09-06T23:41:02Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2017-02-25T10:36:29Z",
+    "created_at": "2016-10-17T00:46:26Z",
+    "id": 183304450,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 43,
+    "state": "closed",
+    "title": "Implement deletes",
+    "updated_at": "2017-02-25T10:36:29Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2016-10-17T00:48:38Z",
+    "id": 183304627,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 44,
+    "state": "open",
+    "title": "Geo-search",
+    "updated_at": "2024-08-16T02:33:14Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2022-03-07T02:43:16Z",
+    "created_at": "2016-10-17T00:49:54Z",
+    "id": 183304728,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 45,
+    "state": "closed",
+    "title": "Implement WAND algorithm",
+    "updated_at": "2022-03-07T02:43:17Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-11-04T08:54:19Z",
+    "created_at": "2016-10-18T21:42:32Z",
+    "id": 183810933,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "A11EC6",
+        "description": "",
+        "id": 2457496829795096406,
+        "name": "Hacktoberfest"
+      }
+    ],
+    "number": 46,
+    "state": "closed",
+    "title": "LogMergePolicy",
+    "updated_at": "2016-11-04T09:06:17Z",
+    "user": {
+      "login": "currymj"
+    }
+  },
+  {
+    "closed_at": "2016-10-26T11:25:19Z",
+    "created_at": "2016-10-25T02:02:28Z",
+    "id": 185000123,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 47,
+    "state": "closed",
+    "title": "Error introduced in merge",
+    "updated_at": "2016-10-26T11:25:19Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2017-02-18T04:22:55Z",
+    "created_at": "2016-10-26T01:15:56Z",
+    "id": 185273353,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "ffffff",
+        "description": null,
+        "id": 6685970577310621721,
+        "name": "wontfix"
+      }
+    ],
+    "number": 48,
+    "state": "closed",
+    "title": "optimize stacking store doc",
+    "updated_at": "2017-02-18T04:22:55Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-11-04T08:53:51Z",
+    "created_at": "2016-10-27T16:28:16Z",
+    "draft": false,
+    "id": 91236136,
+    "issue_type": null,
+    "labels": [],
+    "number": 49,
+    "pull_request": {},
+    "state": "closed",
+    "title": "WIP: Issue/46 LogMergePolicy",
+    "updated_at": "2016-11-04T08:53:51Z",
+    "user": {
+      "login": "currymj"
+    }
+  },
+  {
+    "closed_at": "2016-11-04T05:25:45Z",
+    "created_at": "2016-10-29T03:48:41Z",
+    "id": 186057369,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 50,
+    "state": "closed",
+    "title": "Refactor `Query` to introduce `Weight` or `Scorer`",
+    "updated_at": "2016-11-04T05:25:45Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-10-30T00:15:12Z",
+    "created_at": "2016-10-29T18:21:07Z",
+    "draft": false,
+    "id": 91497377,
+    "issue_type": null,
+    "labels": [],
+    "number": 51,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix some typos",
+    "updated_at": "2016-10-30T00:27:35Z",
+    "user": {
+      "login": "mre"
+    }
+  },
+  {
+    "closed_at": "2016-11-04T03:32:57Z",
+    "created_at": "2016-11-03T14:06:14Z",
+    "draft": false,
+    "id": 92159858,
+    "issue_type": null,
+    "labels": [],
+    "number": 52,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/50",
+    "updated_at": "2018-03-20T03:15:48Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-04-24T20:00:06Z",
+    "created_at": "2016-11-04T08:11:43Z",
+    "id": 187274958,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 53,
+    "state": "closed",
+    "title": "Introduce an `IndexReader`",
+    "updated_at": "2019-04-24T20:00:07Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2017-04-08T08:54:19Z",
+    "created_at": "2016-11-04T08:12:15Z",
+    "id": 187275019,
+    "issue_type": null,
+    "labels": [],
+    "number": 54,
+    "state": "closed",
+    "title": "Rather than creating N searchers",
+    "updated_at": "2017-04-08T09:09:51Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2017-02-18T04:19:14Z",
+    "created_at": "2016-11-08T03:51:24Z",
+    "id": 187895543,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 55,
+    "state": "closed",
+    "title": "Alternative bit packer not using SIMD and not using C",
+    "updated_at": "2017-02-18T04:20:18Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-11-17T14:28:21Z",
+    "created_at": "2016-11-08T11:39:03Z",
+    "id": 187970038,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 56,
+    "state": "closed",
+    "title": "Plug the query parser to the PhraseQuery",
+    "updated_at": "2016-11-17T14:28:21Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-11-17T14:28:21Z",
+    "created_at": "2016-11-09T00:50:53Z",
+    "id": 188143887,
+    "issue_type": null,
+    "labels": [],
+    "number": 57,
+    "state": "closed",
+    "title": "Rewrite QueryParser with an intermediary AST",
+    "updated_at": "2016-11-17T14:28:21Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-11-17T14:21:38Z",
+    "created_at": "2016-11-13T16:30:52Z",
+    "draft": false,
+    "id": 93478005,
+    "issue_type": null,
+    "labels": [],
+    "number": 58,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add a Gitter chat badge to README.md",
+    "updated_at": "2016-11-17T14:21:38Z",
+    "user": {
+      "login": "gitter-badger"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2016-11-17T00:46:17Z",
+    "id": 189899263,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 59,
+    "state": "open",
+    "title": "Ignore phrase query when the field does not have positions.",
+    "updated_at": "2018-12-02T00:12:22Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2018-05-06T23:04:14Z",
+    "created_at": "2016-11-17T01:06:29Z",
+    "id": 189903277,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 60,
+    "state": "closed",
+    "title": "Add timer to response",
+    "updated_at": "2018-05-06T23:04:48Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-11-17T14:28:21Z",
+    "created_at": "2016-11-17T14:23:10Z",
+    "draft": false,
+    "id": 94176462,
+    "issue_type": null,
+    "labels": [],
+    "number": 61,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/57",
+    "updated_at": "2018-03-20T03:15:49Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2016-12-04T06:19:41Z",
+    "id": 193334688,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 62,
+    "state": "open",
+    "title": "make the fst term map cache cache-friendly",
+    "updated_at": "2017-02-19T02:35:12Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-12-12T01:17:27Z",
+    "created_at": "2016-12-10T17:09:16Z",
+    "draft": false,
+    "id": 97431235,
+    "issue_type": null,
+    "labels": [],
+    "number": 63,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix for build instructions",
+    "updated_at": "2016-12-12T01:17:27Z",
+    "user": {
+      "login": "vandenoever"
+    }
+  },
+  {
+    "closed_at": "2017-02-25T11:41:39Z",
+    "created_at": "2016-12-12T00:00:18Z",
+    "id": 194867247,
+    "issue_type": null,
+    "labels": [],
+    "number": 64,
+    "state": "closed",
+    "title": "improve index_writer creation API",
+    "updated_at": "2017-02-25T11:41:39Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2017-05-06T14:15:30Z",
+    "created_at": "2016-12-12T00:26:15Z",
+    "id": 194868914,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 65,
+    "state": "closed",
+    "title": "Remove u32 fast field and replace them by u64 fast fields",
+    "updated_at": "2017-05-06T14:15:30Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-25T00:29:42Z",
+    "created_at": "2016-12-12T00:29:04Z",
+    "id": 194869103,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 66,
+    "state": "closed",
+    "title": "Improve indexing memory usage",
+    "updated_at": "2019-01-25T00:29:42Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-12-20T10:27:20Z",
+    "created_at": "2016-12-15T10:56:00Z",
+    "id": 195775100,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 67,
+    "state": "closed",
+    "title": "Properly expose enumeration over the terms of a field.",
+    "updated_at": "2016-12-20T10:27:20Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2016-12-20T10:27:05Z",
+    "created_at": "2016-12-20T10:24:52Z",
+    "draft": false,
+    "id": 98721800,
+    "issue_type": null,
+    "labels": [],
+    "number": 68,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/67",
+    "updated_at": "2016-12-20T10:39:45Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  }
+]

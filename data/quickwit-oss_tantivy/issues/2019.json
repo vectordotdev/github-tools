@@ -1,0 +1,4995 @@
+[
+  {
+    "closed_at": "2019-02-04T12:20:23Z",
+    "created_at": "2019-01-07T07:26:45Z",
+    "id": 396376579,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 461,
+    "state": "closed",
+    "title": "MultiValued Fast field  should not use u32 for indexing the values.",
+    "updated_at": "2019-02-04T12:20:23Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-13T05:41:56Z",
+    "created_at": "2019-01-11T08:28:37Z",
+    "draft": false,
+    "id": 243943977,
+    "issue_type": null,
+    "labels": [],
+    "number": 462,
+    "pull_request": {},
+    "state": "closed",
+    "title": "More efficient indexing",
+    "updated_at": "2019-01-13T05:42:00Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-13T05:51:19Z",
+    "created_at": "2019-01-13T05:45:51Z",
+    "draft": false,
+    "id": 244260532,
+    "issue_type": null,
+    "labels": [],
+    "number": 463,
+    "pull_request": {},
+    "state": "closed",
+    "title": "More efficient indexing",
+    "updated_at": "2021-08-16T21:36:22Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-01-13T16:32:11Z",
+    "id": 398674400,
+    "issue_type": null,
+    "labels": [],
+    "number": 464,
+    "state": "open",
+    "title": "Multifields and arrays",
+    "updated_at": "2023-07-14T01:27:55Z",
+    "user": {
+      "login": "usamec"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-01-14T19:58:18Z",
+    "id": 399049853,
+    "issue_type": null,
+    "labels": [],
+    "number": 465,
+    "state": "open",
+    "title": "Memory footprint stats for benchmarks?",
+    "updated_at": "2019-01-15T00:17:24Z",
+    "user": {
+      "login": "gnewton"
+    }
+  },
+  {
+    "closed_at": "2019-01-26T02:10:31Z",
+    "created_at": "2019-01-15T21:40:41Z",
+    "id": 399547686,
+    "issue_type": null,
+    "labels": [],
+    "number": 466,
+    "state": "closed",
+    "title": "Outdated documentation for MultiCollector",
+    "updated_at": "2019-01-26T02:10:31Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2019-01-16T01:28:20Z",
+    "created_at": "2019-01-16T00:21:57Z",
+    "draft": false,
+    "id": 244983479,
+    "issue_type": null,
+    "labels": [],
+    "number": 467,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes 466. Removing mentions of the chain collector.",
+    "updated_at": "2021-08-16T21:36:23Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-02-04T08:30:07Z",
+    "created_at": "2019-01-17T00:35:41Z",
+    "id": 400060464,
+    "issue_type": null,
+    "labels": [],
+    "number": 468,
+    "state": "closed",
+    "title": "When available switch to posix advisory lock for our two locks. ",
+    "updated_at": "2019-02-04T08:30:07Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-05-31T14:15:02Z",
+    "created_at": "2019-01-18T04:03:50Z",
+    "id": 400563854,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      },
+      {
+        "color": "c5def5",
+        "description": null,
+        "id": 1411261257320120064,
+        "name": "performance"
+      }
+    ],
+    "number": 469,
+    "state": "closed",
+    "title": "Optimize term merging",
+    "updated_at": "2021-05-31T14:15:02Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-01-18T04:05:29Z",
+    "id": 400564138,
+    "issue_type": null,
+    "labels": [],
+    "number": 470,
+    "state": "open",
+    "title": "Evolve schemas",
+    "updated_at": "2019-08-20T03:15:03Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-27T03:19:02Z",
+    "created_at": "2019-01-20T00:14:02Z",
+    "id": 401048097,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "ffe6c9",
+        "description": "",
+        "id": 6340364912440921554,
+        "name": "refactoring"
+      }
+    ],
+    "number": 471,
+    "state": "closed",
+    "title": "Rely on RIIA for removing writing segments from segment_manager",
+    "updated_at": "2019-01-27T03:19:02Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-23T23:58:57Z",
+    "created_at": "2019-01-20T18:44:17Z",
+    "draft": false,
+    "id": 246127014,
+    "issue_type": null,
+    "labels": [],
+    "number": 472,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Tantivy-288",
+    "updated_at": "2019-01-24T04:44:35Z",
+    "user": {
+      "login": "barrotsteindev"
+    }
+  },
+  {
+    "closed_at": "2019-01-23T13:24:33Z",
+    "created_at": "2019-01-21T02:20:25Z",
+    "draft": false,
+    "id": 246154479,
+    "issue_type": null,
+    "labels": [],
+    "number": 473,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Allow stemmers in languages other than English",
+    "updated_at": "2019-01-23T13:24:50Z",
+    "user": {
+      "login": "pentlander"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-01-21T13:42:28Z",
+    "id": 401359096,
+    "issue_type": null,
+    "labels": [],
+    "number": 474,
+    "state": "open",
+    "title": "Node bindings",
+    "updated_at": "2021-06-03T10:31:02Z",
+    "user": {
+      "login": "Frando"
+    }
+  },
+  {
+    "closed_at": "2019-05-06T22:51:07Z",
+    "created_at": "2019-01-21T23:05:29Z",
+    "id": 401538653,
+    "issue_type": null,
+    "labels": [],
+    "number": 475,
+    "state": "closed",
+    "title": "Automatically `.load_searchers()` when `meta.json` is updated.",
+    "updated_at": "2019-05-06T22:51:07Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-23T01:21:48Z",
+    "created_at": "2019-01-21T23:21:03Z",
+    "id": 401541571,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      },
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 476,
+    "state": "closed",
+    "title": "Merge consumes the delete queue entirely, instead of stopping at the current commit opstamp.",
+    "updated_at": "2019-01-23T01:21:48Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-24T00:00:22Z",
+    "created_at": "2019-01-22T11:58:29Z",
+    "draft": false,
+    "id": 246578392,
+    "issue_type": null,
+    "labels": [],
+    "number": 477,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bug/476",
+    "updated_at": "2019-01-24T00:00:27Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-23T13:21:00Z",
+    "created_at": "2019-01-23T13:20:45Z",
+    "draft": false,
+    "id": 246965658,
+    "issue_type": null,
+    "labels": [],
+    "number": 478,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Pentlander stemming",
+    "updated_at": "2019-01-23T13:21:05Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-18T01:13:35Z",
+    "created_at": "2019-01-24T23:46:33Z",
+    "id": 402945274,
+    "issue_type": null,
+    "labels": [],
+    "number": 479,
+    "state": "closed",
+    "title": "Create an helper to tweak the scoring function of a query",
+    "updated_at": "2019-07-18T01:13:35Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-01-25T00:17:42Z",
+    "id": 402952455,
+    "issue_type": null,
+    "labels": [],
+    "number": 480,
+    "state": "open",
+    "title": "Add the notion of input schema mapping",
+    "updated_at": "2021-06-13T03:20:39Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-27T03:19:00Z",
+    "created_at": "2019-01-26T19:09:25Z",
+    "draft": false,
+    "id": 247907766,
+    "issue_type": null,
+    "labels": [],
+    "number": 481,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/471",
+    "updated_at": "2019-01-27T03:19:06Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-27T11:32:21Z",
+    "created_at": "2019-01-27T04:41:13Z",
+    "draft": false,
+    "id": 247931772,
+    "issue_type": null,
+    "labels": [],
+    "number": 482,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/468b",
+    "updated_at": "2019-01-27T11:32:32Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-31T07:10:51Z",
+    "created_at": "2019-01-28T08:52:12Z",
+    "id": 403706145,
+    "issue_type": null,
+    "labels": [],
+    "number": 483,
+    "state": "closed",
+    "title": "switch to downcast_rs",
+    "updated_at": "2019-01-31T07:10:51Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-01-28T10:43:43Z",
+    "created_at": "2019-01-28T10:43:34Z",
+    "draft": false,
+    "id": 248091569,
+    "issue_type": null,
+    "labels": [],
+    "number": 484,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/483",
+    "updated_at": "2019-01-28T10:43:43Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-02-23T14:46:58Z",
+    "created_at": "2019-01-29T20:14:36Z",
+    "draft": false,
+    "id": 248642941,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 485,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update crossbeam requirement from 0.5 to 0.7",
+    "updated_at": "2019-02-23T14:47:09Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-02-01T05:30:50Z",
+    "created_at": "2019-01-30T19:48:19Z",
+    "draft": false,
+    "id": 249006192,
+    "issue_type": null,
+    "labels": [],
+    "number": 486,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add Greek stemmer",
+    "updated_at": "2019-02-01T11:23:25Z",
+    "user": {
+      "login": "takistakis"
+    }
+  },
+  {
+    "closed_at": "2019-03-15T13:10:38Z",
+    "created_at": "2019-02-02T22:49:13Z",
+    "draft": false,
+    "id": 249842443,
+    "issue_type": null,
+    "labels": [],
+    "number": 487,
+    "pull_request": {},
+    "state": "closed",
+    "title": "WIP: date field",
+    "updated_at": "2019-03-15T13:10:38Z",
+    "user": {
+      "login": "barrotsteindev"
+    }
+  },
+  {
+    "closed_at": "2019-02-04T12:20:21Z",
+    "created_at": "2019-02-04T12:20:12Z",
+    "draft": false,
+    "id": 250031950,
+    "issue_type": null,
+    "labels": [],
+    "number": 488,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #461",
+    "updated_at": "2019-02-04T12:20:24Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-02-04T12:24:01Z",
+    "created_at": "2019-02-04T12:21:44Z",
+    "draft": false,
+    "id": 250032312,
+    "issue_type": null,
+    "labels": [],
+    "number": 489,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #461",
+    "updated_at": "2019-02-04T12:24:05Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-02-05T22:34:07Z",
+    "created_at": "2019-02-05T21:40:41Z",
+    "draft": false,
+    "id": 250561936,
+    "issue_type": null,
+    "labels": [],
+    "number": 490,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add integer range search example",
+    "updated_at": "2019-02-05T22:42:36Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-02-12T21:54:03Z",
+    "created_at": "2019-02-05T23:03:13Z",
+    "draft": false,
+    "id": 250583042,
+    "issue_type": null,
+    "labels": [],
+    "number": 491,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Replace MsQueue with SegQueue",
+    "updated_at": "2019-04-11T19:36:31Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-02-18T15:08:12Z",
+    "created_at": "2019-02-06T00:18:00Z",
+    "id": 407031625,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      },
+      {
+        "color": "0052cc",
+        "description": null,
+        "id": 5094590151523322998,
+        "name": "newfeature"
+      }
+    ],
+    "number": 492,
+    "state": "closed",
+    "title": "Add groups of operations",
+    "updated_at": "2019-02-18T15:08:12Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-02-13T23:56:02Z",
+    "created_at": "2019-02-06T03:37:49Z",
+    "draft": false,
+    "id": 250625129,
+    "issue_type": null,
+    "labels": [],
+    "number": 493,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add grouped operations",
+    "updated_at": "2019-02-13T23:56:02Z",
+    "user": {
+      "login": "elbow-jason"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-02-07T01:06:49Z",
+    "id": 407501698,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "0052cc",
+        "description": null,
+        "id": 5094590151523322998,
+        "name": "newfeature"
+      }
+    ],
+    "number": 494,
+    "state": "open",
+    "title": "Near Real Time indexing.",
+    "updated_at": "2025-06-25T18:30:57Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-02-23T00:06:51Z",
+    "created_at": "2019-02-12T21:53:54Z",
+    "draft": false,
+    "id": 252484850,
+    "issue_type": null,
+    "labels": [],
+    "number": 495,
+    "pull_request": {},
+    "state": "closed",
+    "title": "MsQueue to channel",
+    "updated_at": "2019-04-11T19:36:29Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-02-14T17:28:21Z",
+    "created_at": "2019-02-13T21:55:04Z",
+    "id": 410021463,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      },
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 496,
+    "state": "closed",
+    "title": "Backport build for non x86_64 to 0.8",
+    "updated_at": "2019-02-14T23:26:28Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-02-16T01:34:23Z",
+    "id": 411010482,
+    "issue_type": null,
+    "labels": [],
+    "number": 497,
+    "state": "open",
+    "title": "Test for race conditions with loom",
+    "updated_at": "2019-02-16T01:34:23Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-11T23:24:48Z",
+    "created_at": "2019-02-16T02:01:23Z",
+    "id": 411013257,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      },
+      {
+        "color": "F9D0C4",
+        "description": "",
+        "id": 2979943018382971391,
+        "name": "low priority"
+      },
+      {
+        "color": "0052cc",
+        "description": null,
+        "id": 5094590151523322998,
+        "name": "newfeature"
+      }
+    ],
+    "number": 498,
+    "state": "closed",
+    "title": "Support for elastic search syntax for unbounded RangeQuery",
+    "updated_at": "2019-08-11T23:24:48Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-02-18T00:16:24Z",
+    "id": 411255347,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 499,
+    "state": "open",
+    "title": "Add a `caching` directory.",
+    "updated_at": "2025-06-25T18:30:31Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-03-19T23:39:25Z",
+    "created_at": "2019-02-18T01:13:42Z",
+    "id": 411262491,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      },
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 500,
+    "state": "closed",
+    "title": "Mmap are never removed from cache in processes that are only \"reading\".",
+    "updated_at": "2019-03-19T23:39:25Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-02-18T15:25:19Z",
+    "created_at": "2019-02-18T14:58:32Z",
+    "draft": false,
+    "id": 253946343,
+    "issue_type": null,
+    "labels": [],
+    "number": 501,
+    "pull_request": {},
+    "state": "closed",
+    "title": "updated changelog",
+    "updated_at": "2019-02-18T15:31:19Z",
+    "user": {
+      "login": "elbow-jason"
+    }
+  },
+  {
+    "closed_at": "2019-02-23T01:34:00Z",
+    "created_at": "2019-02-23T01:33:44Z",
+    "draft": false,
+    "id": 255579512,
+    "issue_type": null,
+    "labels": [],
+    "number": 502,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Partially addresses #500",
+    "updated_at": "2019-02-23T01:34:07Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-02-28T00:23:01Z",
+    "created_at": "2019-02-23T20:05:38Z",
+    "draft": false,
+    "id": 255636389,
+    "issue_type": null,
+    "labels": [],
+    "number": 503,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove note about panicking in get_field docs",
+    "updated_at": "2019-02-28T00:23:01Z",
+    "user": {
+      "login": "mauri870"
+    }
+  },
+  {
+    "closed_at": "2019-02-25T13:35:05Z",
+    "created_at": "2019-02-24T03:57:14Z",
+    "draft": false,
+    "id": 255658098,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 504,
+    "pull_request": {},
+    "state": "closed",
+    "title": "prove bug with facets",
+    "updated_at": "2019-02-25T13:35:06Z",
+    "user": {
+      "login": "jannickj"
+    }
+  },
+  {
+    "closed_at": "2019-03-11T10:01:18Z",
+    "created_at": "2019-02-25T04:54:02Z",
+    "id": 413932578,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      },
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 505,
+    "state": "closed",
+    "title": "UnorderedTermOrdinal system bugs when the term hashmap gets resized.",
+    "updated_at": "2019-03-11T10:01:18Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-02-25T05:03:54Z",
+    "id": 413934251,
+    "issue_type": null,
+    "labels": [],
+    "number": 506,
+    "state": "open",
+    "title": "Switch to 64 bit hashes in the term hashmap.",
+    "updated_at": "2019-02-25T05:03:54Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-09-07T10:40:23Z",
+    "created_at": "2019-02-25T05:04:28Z",
+    "id": 413934337,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      },
+      {
+        "color": "c5def5",
+        "description": null,
+        "id": 1411261257320120064,
+        "name": "performance"
+      }
+    ],
+    "number": 507,
+    "state": "closed",
+    "title": "Use Fnvhashmap to map unordered temr id to ordered term id.",
+    "updated_at": "2019-09-07T10:40:23Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-02-25T13:33:18Z",
+    "created_at": "2019-02-25T13:33:06Z",
+    "draft": false,
+    "id": 255890917,
+    "issue_type": null,
+    "labels": [],
+    "number": 508,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Jannickj prove bug with facets",
+    "updated_at": "2019-02-25T13:33:22Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-02-28T00:20:43Z",
+    "created_at": "2019-02-27T12:46:56Z",
+    "draft": false,
+    "id": 256666331,
+    "issue_type": null,
+    "labels": [],
+    "number": 509,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove semicolon from doc! expansion",
+    "updated_at": "2019-02-28T05:54:07Z",
+    "user": {
+      "login": "torkleyy"
+    }
+  },
+  {
+    "closed_at": "2019-06-12T00:40:06Z",
+    "created_at": "2019-02-27T14:34:40Z",
+    "id": 415154985,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 510,
+    "state": "closed",
+    "title": "Add a method to clear the index",
+    "updated_at": "2019-06-12T00:40:07Z",
+    "user": {
+      "login": "torkleyy"
+    }
+  },
+  {
+    "closed_at": "2019-04-02T10:42:53Z",
+    "created_at": "2019-02-28T08:52:04Z",
+    "draft": false,
+    "id": 256980599,
+    "issue_type": null,
+    "labels": [],
+    "number": 511,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Derive `Debug` for `Schema` and `SchemaInner`",
+    "updated_at": "2019-04-02T10:42:53Z",
+    "user": {
+      "login": "torkleyy"
+    }
+  },
+  {
+    "closed_at": "2019-03-06T01:40:54Z",
+    "created_at": "2019-03-04T22:37:04Z",
+    "draft": false,
+    "id": 258114993,
+    "issue_type": null,
+    "labels": [],
+    "number": 512,
+    "pull_request": {},
+    "state": "closed",
+    "title": "WIP: compiling to wasm",
+    "updated_at": "2019-03-11T16:41:32Z",
+    "user": {
+      "login": "jonfk"
+    }
+  },
+  {
+    "closed_at": "2019-03-07T00:39:32Z",
+    "created_at": "2019-03-06T11:36:29Z",
+    "id": 417759388,
+    "issue_type": null,
+    "labels": [],
+    "number": 513,
+    "state": "closed",
+    "title": "Remove INT_INDEXED and INT_STORED",
+    "updated_at": "2019-03-07T00:39:32Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-03-07T00:39:30Z",
+    "created_at": "2019-03-07T00:39:20Z",
+    "draft": false,
+    "id": 258932387,
+    "issue_type": null,
+    "labels": [],
+    "number": 514,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/513",
+    "updated_at": "2019-03-07T00:39:34Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-03-12T00:36:41Z",
+    "id": 419747434,
+    "issue_type": null,
+    "labels": [],
+    "number": 515,
+    "state": "open",
+    "title": "Reexport IntFacetCollector",
+    "updated_at": "2019-03-23T08:07:25Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-04-19T00:34:41Z",
+    "created_at": "2019-03-14T16:37:43Z",
+    "id": 421126777,
+    "issue_type": null,
+    "labels": [],
+    "number": 516,
+    "state": "closed",
+    "title": "Add Date Field Support for Range Queries",
+    "updated_at": "2021-04-19T00:34:41Z",
+    "user": {
+      "login": "barrotsteindev"
+    }
+  },
+  {
+    "closed_at": "2019-03-19T23:39:23Z",
+    "created_at": "2019-03-15T14:32:10Z",
+    "draft": false,
+    "id": 261574330,
+    "issue_type": null,
+    "labels": [],
+    "number": 517,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Feature/reader",
+    "updated_at": "2019-03-19T23:44:57Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-03-23T08:07:11Z",
+    "created_at": "2019-03-19T17:05:12Z",
+    "id": 422849811,
+    "issue_type": null,
+    "labels": [],
+    "number": 518,
+    "state": "closed",
+    "title": "Latest release uses downcast-rs that is incompatible with nightly Rust",
+    "updated_at": "2019-03-23T08:07:11Z",
+    "user": {
+      "login": "kornelski"
+    }
+  },
+  {
+    "closed_at": "2019-03-20T13:10:06Z",
+    "created_at": "2019-03-20T01:33:28Z",
+    "draft": false,
+    "id": 262689133,
+    "issue_type": null,
+    "labels": [],
+    "number": 519,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Linear simd",
+    "updated_at": "2019-03-20T13:11:39Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-03-24T16:04:39Z",
+    "created_at": "2019-03-23T15:01:24Z",
+    "id": 424509444,
+    "issue_type": null,
+    "labels": [],
+    "number": 520,
+    "state": "closed",
+    "title": "Upgrading docs?",
+    "updated_at": "2019-03-24T16:04:39Z",
+    "user": {
+      "login": "kornelski"
+    }
+  },
+  {
+    "closed_at": "2019-03-26T23:54:16Z",
+    "created_at": "2019-03-26T22:17:13Z",
+    "draft": false,
+    "id": 264714607,
+    "issue_type": null,
+    "labels": [],
+    "number": 521,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix non english stemmers",
+    "updated_at": "2019-03-27T06:32:06Z",
+    "user": {
+      "login": "takistakis"
+    }
+  },
+  {
+    "closed_at": "2019-04-08T18:01:01Z",
+    "created_at": "2019-04-07T20:41:50Z",
+    "id": 430190046,
+    "issue_type": null,
+    "labels": [],
+    "number": 522,
+    "state": "closed",
+    "title": "Unknown error while starting watching directory",
+    "updated_at": "2019-04-08T18:01:01Z",
+    "user": {
+      "login": "elegaanz"
+    }
+  },
+  {
+    "closed_at": "2019-04-10T23:34:47Z",
+    "created_at": "2019-04-10T20:53:34Z",
+    "id": 431711431,
+    "issue_type": null,
+    "labels": [],
+    "number": 523,
+    "state": "closed",
+    "title": "cargo build fails",
+    "updated_at": "2019-04-11T08:07:38Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-06-12T00:43:45Z",
+    "created_at": "2019-04-11T19:35:51Z",
+    "draft": false,
+    "id": 269728355,
+    "issue_type": null,
+    "labels": [],
+    "number": 524,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Enables clearing the index",
+    "updated_at": "2019-06-12T00:43:45Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-04-26T01:31:24Z",
+    "created_at": "2019-04-13T00:16:51Z",
+    "draft": false,
+    "id": 270186688,
+    "issue_type": null,
+    "labels": [],
+    "number": 525,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add ascii folding support",
+    "updated_at": "2021-08-16T21:36:31Z",
+    "user": {
+      "login": "drusellers"
+    }
+  },
+  {
+    "closed_at": "2019-04-24T11:59:51Z",
+    "created_at": "2019-04-14T08:37:30Z",
+    "id": 432947389,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 526,
+    "state": "closed",
+    "title": "Potential memory corruption in exponentially unrolled linked list",
+    "updated_at": "2019-04-28T05:41:28Z",
+    "user": {
+      "login": "ashfordneil"
+    }
+  },
+  {
+    "closed_at": "2019-04-19T00:19:53Z",
+    "created_at": "2019-04-18T00:22:25Z",
+    "id": 434538986,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 527,
+    "state": "closed",
+    "title": "`query.count(...)` returns a wrong result when there are deletes.",
+    "updated_at": "2019-04-19T00:19:53Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-04-28T05:39:52Z",
+    "created_at": "2019-04-18T19:12:16Z",
+    "id": 434917773,
+    "issue_type": null,
+    "labels": [],
+    "number": 528,
+    "state": "closed",
+    "title": "Tokenizer and accentued language",
+    "updated_at": "2019-04-28T05:39:52Z",
+    "user": {
+      "login": "julienfastre"
+    }
+  },
+  {
+    "closed_at": "2019-04-19T00:19:51Z",
+    "created_at": "2019-04-19T00:19:37Z",
+    "draft": false,
+    "id": 271873872,
+    "issue_type": null,
+    "labels": [],
+    "number": 529,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #527.",
+    "updated_at": "2019-04-19T00:19:58Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-04-30T11:42:33Z",
+    "created_at": "2019-04-19T09:52:06Z",
+    "id": 435120682,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cc317c",
+        "description": null,
+        "id": 1860757118907805835,
+        "name": "question"
+      }
+    ],
+    "number": 530,
+    "state": "closed",
+    "title": "is tantivy production ready?",
+    "updated_at": "2019-05-01T14:44:32Z",
+    "user": {
+      "login": "tinycedar"
+    }
+  },
+  {
+    "closed_at": "2019-04-20T23:02:28Z",
+    "created_at": "2019-04-19T22:22:06Z",
+    "draft": false,
+    "id": 272105908,
+    "issue_type": null,
+    "labels": [],
+    "number": 531,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Delete files from target/ dir to avoid caching them on CI",
+    "updated_at": "2019-04-26T07:50:58Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-04-23T00:54:03Z",
+    "created_at": "2019-04-23T00:53:55Z",
+    "draft": false,
+    "id": 272549260,
+    "issue_type": null,
+    "labels": [],
+    "number": 532,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Clippy comments",
+    "updated_at": "2019-04-23T00:54:07Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-04-26T00:51:56Z",
+    "created_at": "2019-04-23T20:08:41Z",
+    "draft": false,
+    "id": 272874417,
+    "issue_type": null,
+    "labels": [],
+    "number": 533,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add tests for ascii folding",
+    "updated_at": "2019-04-26T00:51:56Z",
+    "user": {
+      "login": "julienfastre"
+    }
+  },
+  {
+    "closed_at": "2019-04-24T03:31:33Z",
+    "created_at": "2019-04-24T03:31:23Z",
+    "draft": false,
+    "id": 272962581,
+    "issue_type": null,
+    "labels": [],
+    "number": 534,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Clippy2",
+    "updated_at": "2019-04-24T03:31:40Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-04-24T11:59:49Z",
+    "created_at": "2019-04-24T11:58:45Z",
+    "draft": false,
+    "id": 273098285,
+    "issue_type": null,
+    "labels": [],
+    "number": 535,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #526",
+    "updated_at": "2019-04-24T11:59:52Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-05-08T01:02:14Z",
+    "created_at": "2019-04-24T19:50:39Z",
+    "draft": false,
+    "id": 273275457,
+    "issue_type": null,
+    "labels": [],
+    "number": 536,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Tidied up the Stamper module and upgraded to Rust 1.34",
+    "updated_at": "2019-05-08T01:02:15Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-06-06T01:23:14Z",
+    "created_at": "2019-04-24T20:12:19Z",
+    "draft": false,
+    "id": 273282256,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 537,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update winapi requirement from 0.2 to 0.3",
+    "updated_at": "2019-06-06T01:23:18Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-04-26T00:23:29Z",
+    "created_at": "2019-04-26T00:22:46Z",
+    "draft": false,
+    "id": 273723713,
+    "issue_type": null,
+    "labels": [],
+    "number": 538,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added logging when token is dropped.",
+    "updated_at": "2019-04-26T00:23:29Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-04-26T01:25:08Z",
+    "created_at": "2019-04-26T01:24:45Z",
+    "draft": false,
+    "id": 273732200,
+    "issue_type": null,
+    "labels": [],
+    "number": 539,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Dds merged",
+    "updated_at": "2021-08-16T21:36:27Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-04-30T15:10:37Z",
+    "created_at": "2019-04-29T20:30:37Z",
+    "id": 438494394,
+    "issue_type": null,
+    "labels": [],
+    "number": 540,
+    "state": "closed",
+    "title": "What is the right way to query a bytes field of a document?",
+    "updated_at": "2019-04-30T15:10:37Z",
+    "user": {
+      "login": "teovoinea"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-04-29T22:05:19Z",
+    "id": 438527643,
+    "issue_type": null,
+    "labels": [],
+    "number": 541,
+    "state": "open",
+    "title": "wasm RFC",
+    "updated_at": "2023-06-05T08:49:15Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-05-08T00:21:00Z",
+    "created_at": "2019-05-01T01:58:50Z",
+    "id": 439044869,
+    "issue_type": null,
+    "labels": [],
+    "number": 542,
+    "state": "closed",
+    "title": "Loading segment should load all fast field reader ",
+    "updated_at": "2019-05-08T00:21:00Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-05-05T04:52:44Z",
+    "created_at": "2019-05-05T04:50:53Z",
+    "draft": false,
+    "id": 275968454,
+    "issue_type": null,
+    "labels": [],
+    "number": 543,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/542",
+    "updated_at": "2019-05-05T04:52:48Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-30T04:38:09Z",
+    "created_at": "2019-05-08T00:24:38Z",
+    "id": 441498666,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      }
+    ],
+    "number": 544,
+    "state": "closed",
+    "title": "Avoid watching for changes on `meta.json` until a watcher is added.",
+    "updated_at": "2019-07-30T04:38:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2022-03-07T02:46:09Z",
+    "created_at": "2019-05-08T00:28:19Z",
+    "id": 441499312,
+    "issue_type": null,
+    "labels": [],
+    "number": 545,
+    "state": "closed",
+    "title": "Improve search performance via for_each() specialization",
+    "updated_at": "2022-03-07T02:46:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-22T06:37:03Z",
+    "created_at": "2019-05-14T20:32:18Z",
+    "id": 444111323,
+    "issue_type": null,
+    "labels": [],
+    "number": 546,
+    "state": "closed",
+    "title": "documentation for the master branch doesn't update. ",
+    "updated_at": "2019-07-22T06:37:03Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2020-02-19T02:04:40Z",
+    "created_at": "2019-05-17T16:45:07Z",
+    "id": 445528654,
+    "issue_type": null,
+    "labels": [],
+    "number": 547,
+    "state": "closed",
+    "title": "Specify field importance via weight",
+    "updated_at": "2020-02-19T02:04:40Z",
+    "user": {
+      "login": "kkonevets"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-05-20T22:34:32Z",
+    "id": 446339311,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 548,
+    "state": "open",
+    "title": "Pluggable compressor support, or at least just zstd?",
+    "updated_at": "2023-04-27T09:49:04Z",
+    "user": {
+      "login": "rw"
+    }
+  },
+  {
+    "closed_at": "2019-05-24T00:31:11Z",
+    "created_at": "2019-05-21T10:14:42Z",
+    "id": 446534439,
+    "issue_type": null,
+    "labels": [],
+    "number": 549,
+    "state": "closed",
+    "title": "Bypass WORM arcitechture",
+    "updated_at": "2019-05-24T00:31:11Z",
+    "user": {
+      "login": "kkonevets"
+    }
+  },
+  {
+    "closed_at": "2019-06-17T00:59:25Z",
+    "created_at": "2019-05-22T00:59:53Z",
+    "id": 446885968,
+    "issue_type": null,
+    "labels": [],
+    "number": 550,
+    "state": "closed",
+    "title": "Make it possible to write the index from independent thread easily.",
+    "updated_at": "2019-08-29T12:58:24Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-05-28T01:26:01Z",
+    "created_at": "2019-05-22T01:29:41Z",
+    "draft": false,
+    "id": 281002224,
+    "issue_type": null,
+    "labels": [],
+    "number": 551,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove mut in add_document and delete_term. Made stamper ordering rel…",
+    "updated_at": "2021-08-16T21:36:28Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-17T06:10:42Z",
+    "created_at": "2019-05-23T16:35:59Z",
+    "id": 447763716,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 552,
+    "state": "closed",
+    "title": "garbage_collect_files works only on second try",
+    "updated_at": "2019-06-17T07:35:55Z",
+    "user": {
+      "login": "kkonevets"
+    }
+  },
+  {
+    "closed_at": "2019-05-28T00:27:50Z",
+    "created_at": "2019-05-27T20:40:12Z",
+    "draft": false,
+    "id": 282609715,
+    "issue_type": null,
+    "labels": [],
+    "number": 553,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make IndexMeta public",
+    "updated_at": "2019-05-28T00:27:50Z",
+    "user": {
+      "login": "hntd187"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-05-29T05:32:35Z",
+    "id": 449605710,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 554,
+    "state": "open",
+    "title": "Correct way of quering against \"title\" and \"body\"",
+    "updated_at": "2019-07-27T19:41:08Z",
+    "user": {
+      "login": "kkonevets"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-05-30T21:13:38Z",
+    "id": 450509229,
+    "issue_type": null,
+    "labels": [],
+    "number": 555,
+    "state": "open",
+    "title": "Dynamic Field feature like Solr",
+    "updated_at": "2021-04-23T12:26:44Z",
+    "user": {
+      "login": "umitgunduz"
+    }
+  },
+  {
+    "closed_at": "2019-05-30T21:38:44Z",
+    "created_at": "2019-05-30T21:20:20Z",
+    "id": 450511838,
+    "issue_type": null,
+    "labels": [],
+    "number": 556,
+    "state": "closed",
+    "title": "More documentation and more examples",
+    "updated_at": "2019-05-31T01:52:21Z",
+    "user": {
+      "login": "umitgunduz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-06-02T17:47:02Z",
+    "id": 451216405,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 557,
+    "state": "open",
+    "title": "Read only mode",
+    "updated_at": "2026-04-29T19:27:58Z",
+    "user": {
+      "login": "Rigellute"
+    }
+  },
+  {
+    "closed_at": "2019-09-06T08:59:51Z",
+    "created_at": "2019-06-03T12:46:53Z",
+    "draft": false,
+    "id": 284548451,
+    "issue_type": null,
+    "labels": [],
+    "number": 558,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[RFC] Python bindings",
+    "updated_at": "2019-09-06T11:26:35Z",
+    "user": {
+      "login": "poljar"
+    }
+  },
+  {
+    "closed_at": "2019-06-06T01:03:55Z",
+    "created_at": "2019-06-05T00:42:35Z",
+    "draft": false,
+    "id": 285191403,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 559,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/36",
+    "updated_at": "2019-06-06T01:04:01Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-06T00:24:32Z",
+    "created_at": "2019-06-05T13:12:52Z",
+    "draft": false,
+    "id": 285368597,
+    "issue_type": null,
+    "labels": [],
+    "number": 560,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Comments for IndexMeta",
+    "updated_at": "2019-06-06T00:24:36Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-08T22:44:02Z",
+    "created_at": "2019-06-06T00:58:48Z",
+    "id": 452782322,
+    "issue_type": null,
+    "labels": [],
+    "number": 561,
+    "state": "closed",
+    "title": "Does not build on aarch64",
+    "updated_at": "2019-06-08T22:44:02Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-08T20:34:00Z",
+    "created_at": "2019-06-08T05:51:50Z",
+    "id": 453760097,
+    "issue_type": null,
+    "labels": [],
+    "number": 562,
+    "state": "closed",
+    "title": "Index::open_in_dir adds \\ for some reason on MacOs",
+    "updated_at": "2019-06-08T22:40:35Z",
+    "user": {
+      "login": "madmaxio"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-06-10T10:52:02Z",
+    "id": 454111461,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 563,
+    "state": "open",
+    "title": "score fuzzy term by distance",
+    "updated_at": "2026-04-07T13:41:32Z",
+    "user": {
+      "login": "buster"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-06-11T01:10:40Z",
+    "id": 454435609,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 564,
+    "state": "open",
+    "title": "Rollback and Delete all docs should get their own opstamp",
+    "updated_at": "2019-06-11T01:10:45Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-12T00:30:10Z",
+    "created_at": "2019-06-11T20:31:08Z",
+    "draft": false,
+    "id": 287250775,
+    "issue_type": null,
+    "labels": [],
+    "number": 565,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Resume uploading docs to gh-pages",
+    "updated_at": "2019-06-12T00:30:10Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-06-12T00:40:04Z",
+    "created_at": "2019-06-12T00:39:54Z",
+    "draft": false,
+    "id": 287309191,
+    "issue_type": null,
+    "labels": [],
+    "number": 566,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Petr tik n510 clear index",
+    "updated_at": "2019-06-12T00:40:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-16T02:22:52Z",
+    "created_at": "2019-06-16T02:22:43Z",
+    "draft": false,
+    "id": 288593606,
+    "issue_type": null,
+    "labels": [],
+    "number": 567,
+    "pull_request": {},
+    "state": "closed",
+    "title": "trying to fix  doc upload",
+    "updated_at": "2019-06-16T02:22:56Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-16T02:59:27Z",
+    "created_at": "2019-06-16T02:57:33Z",
+    "draft": false,
+    "id": 288594740,
+    "issue_type": null,
+    "labels": [],
+    "number": 568,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Tryingtofix doc",
+    "updated_at": "2019-06-16T02:59:31Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-09-09T01:08:58Z",
+    "created_at": "2019-06-16T04:03:43Z",
+    "id": 456599416,
+    "issue_type": null,
+    "labels": [],
+    "number": 569,
+    "state": "closed",
+    "title": "Refactor the `SegmentMeta` inventory.",
+    "updated_at": "2019-09-09T01:08:58Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-16T05:12:14Z",
+    "created_at": "2019-06-16T04:25:05Z",
+    "draft": false,
+    "id": 288597618,
+    "issue_type": null,
+    "labels": [],
+    "number": 570,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #552",
+    "updated_at": "2019-06-16T05:12:19Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-16T05:12:02Z",
+    "created_at": "2019-06-16T05:11:44Z",
+    "draft": false,
+    "id": 288599206,
+    "issue_type": null,
+    "labels": [],
+    "number": 571,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Disabling travis on OSX",
+    "updated_at": "2019-06-16T05:12:30Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-06-18T02:19:07Z",
+    "created_at": "2019-06-17T19:25:39Z",
+    "draft": false,
+    "id": 288988124,
+    "issue_type": null,
+    "labels": [],
+    "number": 572,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add crates.io shield to the README",
+    "updated_at": "2019-06-18T02:19:07Z",
+    "user": {
+      "login": "acatton"
+    }
+  },
+  {
+    "closed_at": "2019-06-27T00:57:38Z",
+    "created_at": "2019-06-20T11:30:15Z",
+    "draft": false,
+    "id": 290175778,
+    "issue_type": null,
+    "labels": [],
+    "number": 573,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix typo",
+    "updated_at": "2019-06-27T00:57:38Z",
+    "user": {
+      "login": "qrilka"
+    }
+  },
+  {
+    "closed_at": "2019-06-27T00:59:08Z",
+    "created_at": "2019-06-25T20:58:26Z",
+    "draft": false,
+    "id": 291729384,
+    "issue_type": null,
+    "labels": [],
+    "number": 574,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add instructions for contributors",
+    "updated_at": "2019-06-27T00:59:08Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-06-27T00:39:27Z",
+    "created_at": "2019-06-26T20:14:03Z",
+    "draft": false,
+    "id": 292142414,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 575,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update bitpacking requirement from 0.6 to 0.7",
+    "updated_at": "2019-06-27T00:39:44Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-06-27T00:44:13Z",
+    "id": 461245606,
+    "issue_type": null,
+    "labels": [],
+    "number": 576,
+    "state": "open",
+    "title": "Index size comparison against Lucene",
+    "updated_at": "2019-06-27T00:55:30Z",
+    "user": {
+      "login": "diwu1989"
+    }
+  },
+  {
+    "closed_at": "2019-06-27T00:48:53Z",
+    "created_at": "2019-06-27T00:48:46Z",
+    "draft": false,
+    "id": 292213454,
+    "issue_type": null,
+    "labels": [],
+    "number": 577,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixed CHANGELOG and disable one test on windows",
+    "updated_at": "2021-08-16T21:36:37Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-07T08:12:32Z",
+    "created_at": "2019-06-27T01:04:10Z",
+    "draft": false,
+    "id": 292215484,
+    "issue_type": null,
+    "labels": [],
+    "number": 578,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/479",
+    "updated_at": "2019-07-07T08:12:36Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-01T01:03:32Z",
+    "created_at": "2019-06-28T03:38:31Z",
+    "draft": false,
+    "id": 292675490,
+    "issue_type": null,
+    "labels": [],
+    "number": 579,
+    "pull_request": {},
+    "state": "closed",
+    "title": "rust 2018",
+    "updated_at": "2019-07-01T01:03:32Z",
+    "user": {
+      "login": "uvd"
+    }
+  },
+  {
+    "closed_at": "2020-01-31T19:45:37Z",
+    "created_at": "2019-06-28T14:57:05Z",
+    "id": 462075255,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      },
+      {
+        "color": "A11EC6",
+        "description": "",
+        "id": 2457496829795096406,
+        "name": "Hacktoberfest"
+      }
+    ],
+    "number": 580,
+    "state": "closed",
+    "title": "Correct way to recover original Path from Facet?",
+    "updated_at": "2020-01-31T19:45:37Z",
+    "user": {
+      "login": "teovoinea"
+    }
+  },
+  {
+    "closed_at": "2019-06-29T04:12:00Z",
+    "created_at": "2019-06-28T20:12:39Z",
+    "draft": false,
+    "id": 292955854,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 581,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update rand requirement from 0.6 to 0.7",
+    "updated_at": "2019-06-29T04:12:04Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-06-29T04:11:42Z",
+    "created_at": "2019-06-29T03:37:49Z",
+    "draft": false,
+    "id": 293010773,
+    "issue_type": null,
+    "labels": [],
+    "number": 582,
+    "pull_request": {},
+    "state": "closed",
+    "title": "updating rand",
+    "updated_at": "2019-06-29T04:11:45Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-01T01:01:46Z",
+    "created_at": "2019-07-01T01:01:37Z",
+    "draft": false,
+    "id": 293147690,
+    "issue_type": null,
+    "labels": [],
+    "number": 583,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Tiqb feature/2018",
+    "updated_at": "2019-07-01T01:01:50Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-03T01:12:33Z",
+    "created_at": "2019-07-03T01:12:22Z",
+    "draft": false,
+    "id": 293966978,
+    "issue_type": null,
+    "labels": [],
+    "number": 584,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Seek not required in Directory's write anymore",
+    "updated_at": "2019-07-03T01:12:37Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-07T08:09:05Z",
+    "created_at": "2019-07-07T08:05:50Z",
+    "draft": false,
+    "id": 295086400,
+    "issue_type": null,
+    "labels": [],
+    "number": 585,
+    "pull_request": {},
+    "state": "closed",
+    "title": "2018",
+    "updated_at": "2019-07-10T10:28:02Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-13T05:32:56Z",
+    "created_at": "2019-07-07T08:14:35Z",
+    "id": 464926965,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "ffe6c9",
+        "description": "",
+        "id": 6340364912440921554,
+        "name": "refactoring"
+      }
+    ],
+    "number": 586,
+    "state": "closed",
+    "title": "Use once_cell in place of lazy_static",
+    "updated_at": "2019-07-13T05:32:56Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-05T22:12:45Z",
+    "created_at": "2019-07-07T23:16:15Z",
+    "id": 465003468,
+    "issue_type": null,
+    "labels": [],
+    "number": 587,
+    "state": "closed",
+    "title": "Intermittent `PermissionDenied` on commit (Windows, NTFS)",
+    "updated_at": "2023-01-18T20:08:22Z",
+    "user": {
+      "login": "devnought"
+    }
+  },
+  {
+    "closed_at": "2019-07-10T10:25:22Z",
+    "created_at": "2019-07-09T13:28:46Z",
+    "draft": false,
+    "id": 295754704,
+    "issue_type": null,
+    "labels": [],
+    "number": 588,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Use once_cell in place of lazy_static",
+    "updated_at": "2019-07-10T10:25:22Z",
+    "user": {
+      "login": "kompass"
+    }
+  },
+  {
+    "closed_at": "2019-07-10T09:53:47Z",
+    "created_at": "2019-07-10T09:45:47Z",
+    "draft": false,
+    "id": 296093849,
+    "issue_type": null,
+    "labels": [],
+    "number": 589,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Only compile bitpacker4x",
+    "updated_at": "2019-07-10T09:53:51Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-10T10:24:55Z",
+    "created_at": "2019-07-10T10:23:34Z",
+    "draft": false,
+    "id": 296108010,
+    "issue_type": null,
+    "labels": [],
+    "number": 590,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Kompass master",
+    "updated_at": "2019-07-10T10:24:59Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-15T10:35:45Z",
+    "created_at": "2019-07-14T15:37:49Z",
+    "id": 467853648,
+    "issue_type": null,
+    "labels": [],
+    "number": 591,
+    "state": "closed",
+    "title": "Broken link in docs",
+    "updated_at": "2019-07-15T10:35:45Z",
+    "user": {
+      "login": "bedax"
+    }
+  },
+  {
+    "closed_at": "2019-07-15T10:35:45Z",
+    "created_at": "2019-07-15T06:48:12Z",
+    "draft": false,
+    "id": 297488854,
+    "issue_type": null,
+    "labels": [],
+    "number": 592,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixed links",
+    "updated_at": "2019-07-15T10:35:49Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-17T09:51:39Z",
+    "created_at": "2019-07-15T09:52:35Z",
+    "draft": false,
+    "id": 297546406,
+    "issue_type": null,
+    "labels": [],
+    "number": 593,
+    "pull_request": {},
+    "state": "closed",
+    "title": "cargo: update to fail 0.3",
+    "updated_at": "2019-07-17T10:44:12Z",
+    "user": {
+      "login": "lucab"
+    }
+  },
+  {
+    "closed_at": "2019-07-15T23:58:49Z",
+    "created_at": "2019-07-15T20:14:09Z",
+    "draft": false,
+    "id": 297770211,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 594,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update fail requirement from 0.2 to 0.3",
+    "updated_at": "2019-07-15T23:58:53Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-07-16T10:05:23Z",
+    "created_at": "2019-07-15T23:56:32Z",
+    "draft": false,
+    "id": 297827116,
+    "issue_type": null,
+    "labels": [],
+    "number": 595,
+    "pull_request": {},
+    "state": "closed",
+    "title": "disabling caching",
+    "updated_at": "2021-08-16T21:36:38Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-16T23:32:30Z",
+    "created_at": "2019-07-16T21:53:27Z",
+    "draft": false,
+    "id": 298225932,
+    "issue_type": null,
+    "labels": [],
+    "number": 596,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Introduce a small refactoring of the sgment writer.",
+    "updated_at": "2019-07-16T23:32:33Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-17T04:06:45Z",
+    "created_at": "2019-07-16T22:27:32Z",
+    "draft": false,
+    "id": 298239777,
+    "issue_type": null,
+    "labels": [],
+    "number": 597,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Refactor deletes",
+    "updated_at": "2019-07-17T04:06:48Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-18T01:08:41Z",
+    "created_at": "2019-07-17T00:16:26Z",
+    "id": 468927150,
+    "issue_type": null,
+    "labels": [],
+    "number": 598,
+    "state": "closed",
+    "title": "Build broken on Android",
+    "updated_at": "2019-07-18T01:08:42Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-17T04:20:03Z",
+    "created_at": "2019-07-17T04:10:28Z",
+    "draft": false,
+    "id": 298297100,
+    "issue_type": null,
+    "labels": [],
+    "number": 599,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Docbatch smallvec",
+    "updated_at": "2019-07-17T04:20:06Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-22T04:17:22Z",
+    "created_at": "2019-07-22T03:17:31Z",
+    "draft": false,
+    "id": 299700188,
+    "issue_type": null,
+    "labels": [],
+    "number": 600,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Failrs",
+    "updated_at": "2021-08-16T21:36:39Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-22T04:43:01Z",
+    "created_at": "2019-07-22T03:54:01Z",
+    "draft": false,
+    "id": 299705629,
+    "issue_type": null,
+    "labels": [],
+    "number": 601,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added phrase query tests",
+    "updated_at": "2019-07-22T04:43:21Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-07-25T00:45:13Z",
+    "id": 472612809,
+    "issue_type": null,
+    "labels": [],
+    "number": 602,
+    "state": "open",
+    "title": "Remove watching directory introduced in 0.9",
+    "updated_at": "2020-02-17T00:08:13Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-27T08:57:34Z",
+    "created_at": "2019-07-25T22:20:18Z",
+    "draft": false,
+    "id": 301330608,
+    "issue_type": null,
+    "labels": [],
+    "number": 603,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add support for float",
+    "updated_at": "2020-08-20T09:27:24Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2019-07-27T08:58:43Z",
+    "created_at": "2019-07-26T10:12:33Z",
+    "draft": false,
+    "id": 301480242,
+    "issue_type": null,
+    "labels": [],
+    "number": 604,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add to_path for Facet",
+    "updated_at": "2019-07-27T08:58:43Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2019-09-18T09:26:26Z",
+    "created_at": "2019-07-26T17:22:12Z",
+    "draft": false,
+    "id": 301622172,
+    "issue_type": null,
+    "labels": [],
+    "number": 605,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add checksum check in ManagedDirectory",
+    "updated_at": "2019-09-18T09:30:48Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2019-07-30T23:16:03Z",
+    "created_at": "2019-07-27T14:50:17Z",
+    "draft": false,
+    "id": 301764076,
+    "issue_type": null,
+    "labels": [],
+    "number": 606,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Replace unwrap with match and proper Error handling",
+    "updated_at": "2019-07-30T23:16:03Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-07-30T04:38:06Z",
+    "created_at": "2019-07-30T02:57:24Z",
+    "draft": false,
+    "id": 302306943,
+    "issue_type": null,
+    "labels": [],
+    "number": 607,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #544.",
+    "updated_at": "2019-07-30T04:42:42Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-07-30T11:00:38Z",
+    "created_at": "2019-07-30T10:27:40Z",
+    "id": 474503569,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "ffffff",
+        "description": null,
+        "id": 6685970577310621721,
+        "name": "wontfix"
+      }
+    ],
+    "number": 608,
+    "state": "closed",
+    "title": "Feature request: Glob search?",
+    "updated_at": "2019-07-30T11:00:38Z",
+    "user": {
+      "login": "bedax"
+    }
+  },
+  {
+    "closed_at": "2019-08-06T11:33:33Z",
+    "created_at": "2019-07-31T20:20:16Z",
+    "id": 475338385,
+    "issue_type": null,
+    "labels": [],
+    "number": 609,
+    "state": "closed",
+    "title": "Queries with hyphens search just for the part before the hyphen",
+    "updated_at": "2019-08-06T11:33:33Z",
+    "user": {
+      "login": "kornelski"
+    }
+  },
+  {
+    "closed_at": "2019-08-01T08:26:22Z",
+    "created_at": "2019-08-01T08:24:36Z",
+    "draft": false,
+    "id": 303273532,
+    "issue_type": null,
+    "labels": [],
+    "number": 610,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Changes required for python binding",
+    "updated_at": "2019-08-01T08:26:26Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-20T15:39:50Z",
+    "created_at": "2019-08-02T11:31:15Z",
+    "id": 476134732,
+    "issue_type": null,
+    "labels": [],
+    "number": 611,
+    "state": "closed",
+    "title": "Custom rank nested documents using fields as weights",
+    "updated_at": "2019-09-05T22:49:22Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2020-01-22T17:20:51Z",
+    "created_at": "2019-08-03T23:41:31Z",
+    "draft": false,
+    "id": 304031841,
+    "issue_type": null,
+    "labels": [],
+    "number": 612,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Replace deprecated tempdir/atomicwrites dependencies",
+    "updated_at": "2020-01-22T17:20:51Z",
+    "user": {
+      "login": "kornelski"
+    }
+  },
+  {
+    "closed_at": "2019-08-05T13:21:23Z",
+    "created_at": "2019-08-05T11:20:20Z",
+    "draft": false,
+    "id": 304256707,
+    "issue_type": null,
+    "labels": [],
+    "number": 613,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump deps",
+    "updated_at": "2019-08-05T13:46:14Z",
+    "user": {
+      "login": "kornelski"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-08-06T00:29:46Z",
+    "id": 477112389,
+    "issue_type": null,
+    "labels": [],
+    "number": 614,
+    "state": "open",
+    "title": ".NET bindings (through C-FFI)",
+    "updated_at": "2025-01-26T03:20:44Z",
+    "user": {
+      "login": "nazar554"
+    }
+  },
+  {
+    "closed_at": "2020-01-31T19:45:18Z",
+    "created_at": "2019-08-06T07:41:34Z",
+    "id": 477220446,
+    "issue_type": null,
+    "labels": [],
+    "number": 615,
+    "state": "closed",
+    "title": "Add an optional upper limit for the number of docs in a segment that is to be merged with another.",
+    "updated_at": "2020-01-31T19:45:18Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-06T11:33:30Z",
+    "created_at": "2019-08-06T11:33:10Z",
+    "draft": false,
+    "id": 304673130,
+    "issue_type": null,
+    "labels": [],
+    "number": 616,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #609",
+    "updated_at": "2019-08-06T11:33:38Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-08-07T22:09:03Z",
+    "id": 478161208,
+    "issue_type": null,
+    "labels": [],
+    "number": 617,
+    "state": "open",
+    "title": "Add support for Nested documents",
+    "updated_at": "2024-07-21T22:15:46Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-08-08T01:41:51Z",
+    "id": 478209531,
+    "issue_type": null,
+    "labels": [],
+    "number": 618,
+    "state": "open",
+    "title": "Splitting tantivy and call for official maintainers",
+    "updated_at": "2025-06-06T14:36:20Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-08T08:48:22Z",
+    "created_at": "2019-08-08T07:32:04Z",
+    "draft": false,
+    "id": 305446584,
+    "issue_type": null,
+    "labels": [],
+    "number": 619,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Various bugfix in the query parser",
+    "updated_at": "2019-08-08T08:48:25Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-08T11:41:04Z",
+    "created_at": "2019-08-08T08:50:05Z",
+    "id": 478333971,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      },
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 620,
+    "state": "closed",
+    "title": "Negative floating point in range query are probably not handled by the query parser.",
+    "updated_at": "2019-08-08T11:41:04Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-08T11:41:05Z",
+    "created_at": "2019-08-08T09:46:47Z",
+    "draft": false,
+    "id": 305494955,
+    "issue_type": null,
+    "labels": [],
+    "number": 621,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix parsing neg float in range query",
+    "updated_at": "2020-08-20T09:40:07Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2019-08-08T12:54:11Z",
+    "created_at": "2019-08-08T11:56:36Z",
+    "draft": false,
+    "id": 305541932,
+    "issue_type": null,
+    "labels": [],
+    "number": 622,
+    "pull_request": {},
+    "state": "closed",
+    "title": "WTF is this file doing here",
+    "updated_at": "2019-08-08T12:54:15Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-18T22:26:35Z",
+    "created_at": "2019-08-08T22:43:01Z",
+    "id": 478719049,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 623,
+    "state": "closed",
+    "title": "Convert doctest and examples to edition 2018",
+    "updated_at": "2019-08-18T22:26:35Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-11T23:24:48Z",
+    "created_at": "2019-08-10T01:01:01Z",
+    "draft": false,
+    "id": 306173546,
+    "issue_type": null,
+    "labels": [],
+    "number": 624,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Elastic unbounded range query",
+    "updated_at": "2019-08-11T23:24:48Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-08-11T23:25:48Z",
+    "created_at": "2019-08-11T01:29:51Z",
+    "id": 479322184,
+    "issue_type": null,
+    "labels": [],
+    "number": 625,
+    "state": "closed",
+    "title": "Add checks for `cargo fmt` in CI",
+    "updated_at": "2019-08-11T23:25:48Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-08-11T01:31:27Z",
+    "id": 479322266,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "A11EC6",
+        "description": "",
+        "id": 2457496829795096406,
+        "name": "Hacktoberfest"
+      }
+    ],
+    "number": 626,
+    "state": "open",
+    "title": "Migrate benchmark to criterion.",
+    "updated_at": "2019-10-13T20:33:54Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-11T23:25:48Z",
+    "created_at": "2019-08-11T13:55:22Z",
+    "draft": false,
+    "id": 306282452,
+    "issue_type": null,
+    "labels": [],
+    "number": 627,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added cargo-fmt to CI runs",
+    "updated_at": "2019-08-11T23:25:48Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-08-14T08:44:26Z",
+    "created_at": "2019-08-14T00:39:41Z",
+    "draft": false,
+    "id": 307129353,
+    "issue_type": null,
+    "labels": [],
+    "number": 628,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added Schema.from_named_doc",
+    "updated_at": "2019-08-14T08:44:29Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-15T07:37:05Z",
+    "created_at": "2019-08-14T10:11:17Z",
+    "id": 480594733,
+    "issue_type": null,
+    "labels": [],
+    "number": 629,
+    "state": "closed",
+    "title": "Registering a BoxedTokenizer with a TokenizerManager",
+    "updated_at": "2019-08-15T07:37:05Z",
+    "user": {
+      "login": "brainlock"
+    }
+  },
+  {
+    "closed_at": "2019-10-07T01:05:13Z",
+    "created_at": "2019-08-14T21:28:46Z",
+    "draft": false,
+    "id": 307505275,
+    "issue_type": null,
+    "labels": [],
+    "number": 630,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add a doctest to BooleanQuery",
+    "updated_at": "2019-10-07T01:05:13Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-08-15T07:37:05Z",
+    "created_at": "2019-08-15T00:54:27Z",
+    "draft": false,
+    "id": 307547025,
+    "issue_type": null,
+    "labels": [],
+    "number": 631,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Introducing a wrapper struct instead of Boxed<BoxableTokenizer>",
+    "updated_at": "2019-08-15T07:37:08Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-19T01:38:45Z",
+    "created_at": "2019-08-15T14:58:08Z",
+    "draft": false,
+    "id": 307738746,
+    "issue_type": null,
+    "labels": [],
+    "number": 632,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Create segment id from string, expose inventory.",
+    "updated_at": "2019-08-19T01:38:45Z",
+    "user": {
+      "login": "Frando"
+    }
+  },
+  {
+    "closed_at": "2019-08-18T22:26:35Z",
+    "created_at": "2019-08-18T15:21:47Z",
+    "draft": false,
+    "id": 308372501,
+    "issue_type": null,
+    "labels": [],
+    "number": 633,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update import statements in examples, doctests",
+    "updated_at": "2019-08-18T22:26:42Z",
+    "user": {
+      "login": "jbdutton"
+    }
+  },
+  {
+    "closed_at": "2019-08-18T22:24:06Z",
+    "created_at": "2019-08-18T16:26:21Z",
+    "draft": false,
+    "id": 308376682,
+    "issue_type": null,
+    "labels": [],
+    "number": 634,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix typos in basic search example",
+    "updated_at": "2019-08-18T22:24:06Z",
+    "user": {
+      "login": "jbdutton"
+    }
+  },
+  {
+    "closed_at": "2019-08-18T22:25:01Z",
+    "created_at": "2019-08-18T17:37:27Z",
+    "draft": false,
+    "id": 308380986,
+    "issue_type": null,
+    "labels": [],
+    "number": 635,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix trait object in doctest",
+    "updated_at": "2019-08-18T22:25:01Z",
+    "user": {
+      "login": "jbdutton"
+    }
+  },
+  {
+    "closed_at": "2019-08-19T01:37:31Z",
+    "created_at": "2019-08-19T00:48:58Z",
+    "draft": false,
+    "id": 308410011,
+    "issue_type": null,
+    "labels": [],
+    "number": 636,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added segmentid_from_string",
+    "updated_at": "2019-08-19T01:37:35Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-19T01:39:16Z",
+    "created_at": "2019-08-19T00:59:38Z",
+    "draft": false,
+    "id": 308410988,
+    "issue_type": null,
+    "labels": [],
+    "number": 637,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Expose new segment meta from Index",
+    "updated_at": "2021-08-16T21:36:42Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-08-20T00:30:00Z",
+    "id": 482588044,
+    "issue_type": null,
+    "labels": [],
+    "number": 638,
+    "state": "open",
+    "title": "Discussion : Roadmap to 1.0.0",
+    "updated_at": "2020-07-22T07:20:44Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-08-22T07:14:03Z",
+    "created_at": "2019-08-20T07:18:23Z",
+    "id": 482687118,
+    "issue_type": null,
+    "labels": [],
+    "number": 639,
+    "state": "closed",
+    "title": "RegexQuery performance",
+    "updated_at": "2019-08-22T07:14:03Z",
+    "user": {
+      "login": "brainlock"
+    }
+  },
+  {
+    "closed_at": "2019-08-22T06:35:44Z",
+    "created_at": "2019-08-21T06:58:12Z",
+    "draft": true,
+    "id": 309350905,
+    "issue_type": null,
+    "labels": [],
+    "number": 640,
+    "pull_request": {},
+    "state": "closed",
+    "title": "RegexQuery performance: make it possible to cache Regexes",
+    "updated_at": "2019-08-22T07:11:39Z",
+    "user": {
+      "login": "brainlock"
+    }
+  },
+  {
+    "closed_at": "2019-08-22T07:14:02Z",
+    "created_at": "2019-08-22T00:48:28Z",
+    "draft": false,
+    "id": 309739098,
+    "issue_type": null,
+    "labels": [],
+    "number": 641,
+    "pull_request": {},
+    "state": "closed",
+    "title": "RegexQuery performance: make it possible to cache Regexes - remastered by fulmicoton  (Closes #639)",
+    "updated_at": "2019-08-22T07:45:58Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-07T01:10:57Z",
+    "created_at": "2019-08-23T07:23:03Z",
+    "id": 484370707,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      },
+      {
+        "color": "A11EC6",
+        "description": "",
+        "id": 2457496829795096406,
+        "name": "Hacktoberfest"
+      }
+    ],
+    "number": 642,
+    "state": "closed",
+    "title": "External Tokenizers/Pre-tokenized text",
+    "updated_at": "2019-11-07T01:10:57Z",
+    "user": {
+      "login": "acertain"
+    }
+  },
+  {
+    "closed_at": "2019-09-02T22:00:46Z",
+    "created_at": "2019-09-02T20:23:39Z",
+    "draft": false,
+    "id": 313360237,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 643,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update once_cell requirement from 0.2 to 1.0",
+    "updated_at": "2019-09-02T22:01:02Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-09-04T04:10:13Z",
+    "created_at": "2019-09-04T00:32:58Z",
+    "draft": false,
+    "id": 313813967,
+    "issue_type": null,
+    "labels": [],
+    "number": 644,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Lighter regex dependency.",
+    "updated_at": "2021-08-16T21:36:42Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-09-05T00:37:28Z",
+    "created_at": "2019-09-04T09:07:58Z",
+    "draft": false,
+    "id": 313933751,
+    "issue_type": null,
+    "labels": [],
+    "number": 645,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Moving query grammar to a different crate.",
+    "updated_at": "2021-08-16T21:36:43Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-09-07T01:14:38Z",
+    "created_at": "2019-09-06T13:38:33Z",
+    "draft": false,
+    "id": 314959319,
+    "issue_type": null,
+    "labels": [],
+    "number": 646,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixed clippy warning: unneeded return statement",
+    "updated_at": "2019-09-07T02:57:19Z",
+    "user": {
+      "login": "imor"
+    }
+  },
+  {
+    "closed_at": "2019-09-07T10:40:22Z",
+    "created_at": "2019-09-07T04:03:30Z",
+    "draft": false,
+    "id": 315164287,
+    "issue_type": null,
+    "labels": [],
+    "number": 647,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Using FnvHashMap for mapping UnorderedTermId to TermOrdinal. Fixes #507",
+    "updated_at": "2019-09-07T12:17:41Z",
+    "user": {
+      "login": "imor"
+    }
+  },
+  {
+    "closed_at": "2019-09-07T06:08:45Z",
+    "created_at": "2019-09-07T04:32:27Z",
+    "draft": false,
+    "id": 315165812,
+    "issue_type": null,
+    "labels": [],
+    "number": 648,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Occur debug interface",
+    "updated_at": "2021-08-16T21:36:44Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-09-08T21:36:05Z",
+    "created_at": "2019-09-08T07:02:20Z",
+    "id": 490718950,
+    "issue_type": null,
+    "labels": [],
+    "number": 649,
+    "state": "closed",
+    "title": "Duplicate methods in IndexRecordOption?",
+    "updated_at": "2019-09-08T21:36:05Z",
+    "user": {
+      "login": "imor"
+    }
+  },
+  {
+    "closed_at": "2019-09-08T21:36:05Z",
+    "created_at": "2019-09-08T15:25:51Z",
+    "draft": false,
+    "id": 315283815,
+    "issue_type": null,
+    "labels": [],
+    "number": 650,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Remove unnecessary duplicate methods",
+    "updated_at": "2019-09-08T21:36:05Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-09-08T22:00:22Z",
+    "id": 490811690,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      },
+      {
+        "color": "A11EC6",
+        "description": "",
+        "id": 2457496829795096406,
+        "name": "Hacktoberfest"
+      }
+    ],
+    "number": 651,
+    "state": "open",
+    "title": "Explain the purpose of the query-grammar subcrate",
+    "updated_at": "2019-09-09T00:53:54Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-11-07T01:26:09Z",
+    "created_at": "2019-09-08T22:33:12Z",
+    "id": 490817050,
+    "issue_type": null,
+    "labels": [],
+    "number": 652,
+    "state": "closed",
+    "title": "Redesign the core/executor",
+    "updated_at": "2019-11-07T01:26:09Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-09-10T13:30:39Z",
+    "id": 491673940,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4d76ae",
+        "description": "questions and requests for documenting the internals of tantivy",
+        "id": 4716749802550701126,
+        "name": "documentation"
+      }
+    ],
+    "number": 653,
+    "state": "open",
+    "title": "Documentation",
+    "updated_at": "2019-11-14T00:14:10Z",
+    "user": {
+      "login": "jeffsmith82"
+    }
+  },
+  {
+    "closed_at": "2019-09-11T08:12:09Z",
+    "created_at": "2019-09-11T08:03:22Z",
+    "draft": false,
+    "id": 316321884,
+    "issue_type": null,
+    "labels": [],
+    "number": 654,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix documentation errors",
+    "updated_at": "2019-09-11T08:13:54Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2019-09-11T09:49:36Z",
+    "created_at": "2019-09-11T09:46:57Z",
+    "draft": false,
+    "id": 316362250,
+    "issue_type": null,
+    "labels": [],
+    "number": 655,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix Term documentation",
+    "updated_at": "2019-09-11T09:49:36Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2019-10-01T00:52:16Z",
+    "created_at": "2019-09-22T06:28:39Z",
+    "id": 496739538,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 656,
+    "state": "closed",
+    "title": "Memory leak",
+    "updated_at": "2019-10-01T00:52:16Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-10-01T15:23:07Z",
+    "created_at": "2019-09-26T01:54:26Z",
+    "draft": false,
+    "id": 321503063,
+    "issue_type": null,
+    "labels": [],
+    "number": 657,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Address #656",
+    "updated_at": "2019-10-01T15:23:07Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-09-26T15:52:54Z",
+    "id": 498973842,
+    "issue_type": null,
+    "labels": [],
+    "number": 658,
+    "state": "open",
+    "title": "Searching in a subset of the documents / SetMembership Query",
+    "updated_at": "2019-10-28T17:06:11Z",
+    "user": {
+      "login": "brainlock"
+    }
+  },
+  {
+    "closed_at": "2019-10-01T01:10:44Z",
+    "created_at": "2019-09-27T12:55:51Z",
+    "id": 499429745,
+    "issue_type": null,
+    "labels": [],
+    "number": 659,
+    "state": "closed",
+    "title": "warning: variant is never constructed: `UnknownVersion`",
+    "updated_at": "2019-10-01T01:10:44Z",
+    "user": {
+      "login": "dazzag24"
+    }
+  },
+  {
+    "closed_at": "2019-10-01T00:51:52Z",
+    "created_at": "2019-09-27T14:49:52Z",
+    "id": 499490503,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 660,
+    "state": "closed",
+    "title": "directory::tests::test_mmap_directory' panicked at 'assertion failed: `(left == right)`",
+    "updated_at": "2019-10-01T00:51:52Z",
+    "user": {
+      "login": "dazzag24"
+    }
+  },
+  {
+    "closed_at": "2019-10-04T03:10:02Z",
+    "created_at": "2019-10-02T00:57:50Z",
+    "draft": false,
+    "id": 323535486,
+    "issue_type": null,
+    "labels": [],
+    "number": 661,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fmt",
+    "updated_at": "2019-10-04T03:10:06Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-14T00:14:35Z",
+    "created_at": "2019-10-03T01:20:42Z",
+    "id": 501802350,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 662,
+    "state": "closed",
+    "title": "Return an error if the foot version is incompatible with tantivy's version",
+    "updated_at": "2019-12-14T00:14:35Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-10-04T08:07:49Z",
+    "created_at": "2019-10-04T07:36:33Z",
+    "draft": false,
+    "id": 324552269,
+    "issue_type": null,
+    "labels": [],
+    "number": 663,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix bench",
+    "updated_at": "2019-10-04T08:07:49Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-10-22T00:34:11Z",
+    "created_at": "2019-10-08T18:56:41Z",
+    "id": 504218507,
+    "issue_type": null,
+    "labels": [],
+    "number": 664,
+    "state": "closed",
+    "title": "Documentation Error:: tantivy::schema::Field is not an u8",
+    "updated_at": "2019-10-22T00:34:12Z",
+    "user": {
+      "login": "matthiasbeyer"
+    }
+  },
+  {
+    "closed_at": "2019-10-21T20:12:00Z",
+    "created_at": "2019-10-18T20:12:44Z",
+    "draft": false,
+    "id": 329906460,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 665,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update uuid requirement from 0.7.2 to 0.8.0",
+    "updated_at": "2019-10-21T20:12:02Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-10-21T05:17:54Z",
+    "created_at": "2019-10-19T08:50:27Z",
+    "id": 509418925,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cc317c",
+        "description": null,
+        "id": 1860757118907805835,
+        "name": "question"
+      }
+    ],
+    "number": 666,
+    "state": "closed",
+    "title": "memory usage too high",
+    "updated_at": "2019-10-21T06:19:53Z",
+    "user": {
+      "login": "dearsxx0918"
+    }
+  },
+  {
+    "closed_at": "2019-10-22T00:34:10Z",
+    "created_at": "2019-10-19T21:51:24Z",
+    "draft": false,
+    "id": 330061400,
+    "issue_type": null,
+    "labels": [],
+    "number": 667,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixed #664",
+    "updated_at": "2019-10-22T00:34:13Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-10-21T01:50:53Z",
+    "created_at": "2019-10-20T18:48:39Z",
+    "draft": false,
+    "id": 330145353,
+    "issue_type": null,
+    "labels": [],
+    "number": 668,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix grammar / punctuation",
+    "updated_at": "2019-10-21T01:50:54Z",
+    "user": {
+      "login": "andrewbanchich"
+    }
+  },
+  {
+    "closed_at": "2019-11-07T01:10:57Z",
+    "created_at": "2019-10-21T18:15:50Z",
+    "draft": false,
+    "id": 330591388,
+    "issue_type": null,
+    "labels": [],
+    "number": 669,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added handling of pre-tokenized text fields (#642).",
+    "updated_at": "2019-11-07T07:39:40Z",
+    "user": {
+      "login": "kkoziara"
+    }
+  },
+  {
+    "closed_at": "2019-10-24T01:31:57Z",
+    "created_at": "2019-10-21T20:11:58Z",
+    "draft": false,
+    "id": 330663193,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 670,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update uuid requirement from 0.7.2 to 0.8.1",
+    "updated_at": "2019-10-24T01:32:11Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-10-26T06:27:26Z",
+    "created_at": "2019-10-23T12:24:30Z",
+    "id": 511287346,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 671,
+    "state": "closed",
+    "title": "Unstable ordering of TopCollector results with the same score",
+    "updated_at": "2020-06-22T18:23:34Z",
+    "user": {
+      "login": "brainlock"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-10-23T13:18:22Z",
+    "id": 511317324,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "F9D0C4",
+        "description": "",
+        "id": 2979943018382971391,
+        "name": "low priority"
+      }
+    ],
+    "number": 672,
+    "state": "open",
+    "title": "Regex query doesn't return snippets.",
+    "updated_at": "2022-08-22T15:32:13Z",
+    "user": {
+      "login": "noelzubin"
+    }
+  },
+  {
+    "closed_at": "2019-10-25T00:06:45Z",
+    "created_at": "2019-10-24T01:02:10Z",
+    "draft": false,
+    "id": 331805954,
+    "issue_type": null,
+    "labels": [],
+    "number": 673,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Refactoring around Field",
+    "updated_at": "2019-10-25T00:06:45Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-10-25T00:02:00Z",
+    "created_at": "2019-10-24T01:31:39Z",
+    "draft": false,
+    "id": 331811266,
+    "issue_type": null,
+    "labels": [],
+    "number": 674,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Updating uuid to 0.8",
+    "updated_at": "2019-10-25T00:02:01Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-10-26T06:27:25Z",
+    "created_at": "2019-10-24T12:13:50Z",
+    "draft": false,
+    "id": 332014853,
+    "issue_type": null,
+    "labels": [],
+    "number": 675,
+    "pull_request": {},
+    "state": "closed",
+    "title": "TopDocs: ensure stable sorting on equal score",
+    "updated_at": "2019-10-26T07:49:16Z",
+    "user": {
+      "login": "brainlock"
+    }
+  },
+  {
+    "closed_at": "2019-10-26T06:24:47Z",
+    "created_at": "2019-10-25T20:12:53Z",
+    "draft": false,
+    "id": 332663040,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 676,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update base64 requirement from 0.10.0 to 0.11.0",
+    "updated_at": "2019-10-26T06:24:57Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-09-06T14:05:13Z",
+    "created_at": "2019-10-28T11:07:35Z",
+    "id": 513237735,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cc317c",
+        "description": null,
+        "id": 1860757118907805835,
+        "name": "question"
+      }
+    ],
+    "number": 677,
+    "state": "closed",
+    "title": "memory leak problem",
+    "updated_at": "2022-04-27T03:40:18Z",
+    "user": {
+      "login": "vsop-479"
+    }
+  },
+  {
+    "closed_at": "2021-03-25T12:39:14Z",
+    "created_at": "2019-10-30T11:43:22Z",
+    "id": 514601270,
+    "issue_type": null,
+    "labels": [],
+    "number": 678,
+    "state": "closed",
+    "title": "Support async query",
+    "updated_at": "2021-03-25T12:39:14Z",
+    "user": {
+      "login": "dearsxx0918"
+    }
+  },
+  {
+    "closed_at": "2019-10-31T11:59:51Z",
+    "created_at": "2019-10-30T21:13:43Z",
+    "draft": false,
+    "id": 334520007,
+    "issue_type": null,
+    "labels": [],
+    "number": 679,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Use `slice::iter` instead of `into_iter` to avoid future breakage",
+    "updated_at": "2019-10-31T11:59:51Z",
+    "user": {
+      "login": "TethysSvensson"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-10-31T01:06:59Z",
+    "id": 515081806,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 680,
+    "state": "open",
+    "title": "Stale adding documents if there are too many ongoing merge ",
+    "updated_at": "2022-04-28T08:00:50Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-04T06:39:13Z",
+    "created_at": "2019-10-31T13:26:13Z",
+    "id": 515432038,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      },
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 681,
+    "state": "closed",
+    "title": "Crash on commit with deleted documents",
+    "updated_at": "2019-11-04T09:00:33Z",
+    "user": {
+      "login": "brainlock"
+    }
+  },
+  {
+    "closed_at": "2019-11-04T06:39:33Z",
+    "created_at": "2019-10-31T13:30:50Z",
+    "draft": false,
+    "id": 334898421,
+    "issue_type": null,
+    "labels": [],
+    "number": 682,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix crash on commit with deleted documents",
+    "updated_at": "2019-11-04T06:39:33Z",
+    "user": {
+      "login": "brainlock"
+    }
+  },
+  {
+    "closed_at": "2019-11-04T06:39:12Z",
+    "created_at": "2019-11-02T07:30:26Z",
+    "draft": false,
+    "id": 335762835,
+    "issue_type": null,
+    "labels": [],
+    "number": 683,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixing the construction of the DeleteBitset.",
+    "updated_at": "2019-11-04T06:39:12Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-04T04:57:59Z",
+    "created_at": "2019-11-04T02:28:25Z",
+    "draft": false,
+    "id": 336102113,
+    "issue_type": null,
+    "labels": [],
+    "number": 684,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Reduce unnecessary clone.",
+    "updated_at": "2019-11-04T04:57:59Z",
+    "user": {
+      "login": "xiaoniu-578fa6bff964d005"
+    }
+  },
+  {
+    "closed_at": "2019-11-07T01:26:09Z",
+    "created_at": "2019-11-04T16:34:08Z",
+    "draft": false,
+    "id": 336369931,
+    "issue_type": null,
+    "labels": [],
+    "number": 685,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Replace `scoped_pool::Pool` with `rayon::ThreadPool`",
+    "updated_at": "2019-11-07T01:26:09Z",
+    "user": {
+      "login": "kardeiz"
+    }
+  },
+  {
+    "closed_at": "2019-11-07T00:55:34Z",
+    "created_at": "2019-11-04T20:15:57Z",
+    "draft": false,
+    "id": 336457928,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 686,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update smallvec requirement from 0.6 to 1.0",
+    "updated_at": "2019-11-07T00:55:45Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-11-07T22:16:30Z",
+    "created_at": "2019-11-05T01:23:18Z",
+    "draft": false,
+    "id": 336554707,
+    "issue_type": null,
+    "labels": [],
+    "number": 687,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Kkoziara pre tokenized text",
+    "updated_at": "2019-11-07T22:16:30Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-11-05T15:55:55Z",
+    "id": 517861334,
+    "issue_type": null,
+    "labels": [],
+    "number": 688,
+    "state": "open",
+    "title": "The efficient way to get topdocs from int filed",
+    "updated_at": "2019-11-07T01:20:49Z",
+    "user": {
+      "login": "raultang"
+    }
+  },
+  {
+    "closed_at": "2020-01-31T19:44:50Z",
+    "created_at": "2019-11-06T01:04:25Z",
+    "id": 518173413,
+    "issue_type": null,
+    "labels": [],
+    "number": 689,
+    "state": "closed",
+    "title": "Make it possible to iterate backward in the TermDictionary",
+    "updated_at": "2020-01-31T19:44:50Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2022-02-01T03:23:40Z",
+    "created_at": "2019-11-06T05:59:17Z",
+    "id": 518256976,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4d76ae",
+        "description": "questions and requests for documenting the internals of tantivy",
+        "id": 4716749802550701126,
+        "name": "documentation"
+      }
+    ],
+    "number": 690,
+    "state": "closed",
+    "title": "Is there any doc about the file format?",
+    "updated_at": "2022-02-01T03:23:40Z",
+    "user": {
+      "login": "marsqing"
+    }
+  },
+  {
+    "closed_at": "2019-11-15T09:36:44Z",
+    "created_at": "2019-11-06T20:12:58Z",
+    "draft": false,
+    "id": 337554929,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 691,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update futures requirement from 0.1 to 0.3",
+    "updated_at": "2019-11-15T09:36:46Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-11-09T23:12:44Z",
+    "created_at": "2019-11-08T13:10:47Z",
+    "id": 520006546,
+    "issue_type": null,
+    "labels": [],
+    "number": 692,
+    "state": "closed",
+    "title": "Out of bounds slice access",
+    "updated_at": "2019-11-09T23:15:09Z",
+    "user": {
+      "login": "kornelski"
+    }
+  },
+  {
+    "closed_at": "2019-11-09T12:18:52Z",
+    "created_at": "2019-11-09T11:31:24Z",
+    "draft": false,
+    "id": 338992249,
+    "issue_type": null,
+    "labels": [],
+    "number": 693,
+    "pull_request": {},
+    "state": "closed",
+    "title": "SegmentUpdater.add_segment does not need to return true",
+    "updated_at": "2019-11-09T12:18:52Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-10T05:40:40Z",
+    "created_at": "2019-11-09T15:42:55Z",
+    "draft": true,
+    "id": 339048320,
+    "issue_type": null,
+    "labels": [],
+    "number": 694,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add index compatibility check in footer",
+    "updated_at": "2019-11-10T05:40:40Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-11-09T23:16:26Z",
+    "created_at": "2019-11-09T23:12:18Z",
+    "id": 520526475,
+    "issue_type": null,
+    "labels": [],
+    "number": 695,
+    "state": "closed",
+    "title": "Embed version in the index, reject incompatible versions",
+    "updated_at": "2019-11-11T23:20:18Z",
+    "user": {
+      "login": "kornelski"
+    }
+  },
+  {
+    "closed_at": "2019-11-10T05:40:07Z",
+    "created_at": "2019-11-10T04:13:51Z",
+    "draft": false,
+    "id": 339114815,
+    "issue_type": null,
+    "labels": [],
+    "number": 696,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Petr tik n662 errror incompatible footer version",
+    "updated_at": "2019-11-10T05:40:12Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-10T05:39:45Z",
+    "created_at": "2019-11-10T04:14:04Z",
+    "draft": false,
+    "id": 339114832,
+    "issue_type": null,
+    "labels": [],
+    "number": 697,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Adding Value::From<PretokenizedText>",
+    "updated_at": "2019-11-10T05:39:49Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-25T13:39:52Z",
+    "created_at": "2019-11-10T10:51:35Z",
+    "draft": false,
+    "id": 339139021,
+    "issue_type": null,
+    "labels": [],
+    "number": 698,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Prevent tokens from being stored in the document store.",
+    "updated_at": "2019-11-25T13:39:52Z",
+    "user": {
+      "login": "kkoziara"
+    }
+  },
+  {
+    "closed_at": "2019-12-13T22:34:19Z",
+    "created_at": "2019-11-10T18:20:22Z",
+    "draft": true,
+    "id": 339176179,
+    "issue_type": null,
+    "labels": [],
+    "number": 699,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Implementing is_compatible",
+    "updated_at": "2019-12-13T22:34:19Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-11-11T13:28:57Z",
+    "created_at": "2019-11-11T11:30:56Z",
+    "id": 520902643,
+    "issue_type": null,
+    "labels": [],
+    "number": 700,
+    "state": "closed",
+    "title": "Serde not showing in lib.rs",
+    "updated_at": "2019-11-11T14:48:38Z",
+    "user": {
+      "login": "kornelski"
+    }
+  },
+  {
+    "closed_at": "2019-11-15T09:35:32Z",
+    "created_at": "2019-11-13T12:25:13Z",
+    "draft": false,
+    "id": 340429756,
+    "issue_type": null,
+    "labels": [],
+    "number": 701,
+    "pull_request": {},
+    "state": "closed",
+    "title": "First shot",
+    "updated_at": "2019-11-15T09:35:37Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2025-08-01T05:05:55Z",
+    "created_at": "2019-11-14T00:16:09Z",
+    "id": 522547708,
+    "issue_type": null,
+    "labels": [],
+    "number": 702,
+    "state": "closed",
+    "title": "The current search executor is clumsy in  a multiple index setting ",
+    "updated_at": "2025-08-01T05:05:55Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2019-11-14T00:28:55Z",
+    "id": 522551722,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      },
+      {
+        "color": "4d76ae",
+        "description": "questions and requests for documenting the internals of tantivy",
+        "id": 4716749802550701126,
+        "name": "documentation"
+      }
+    ],
+    "number": 703,
+    "state": "open",
+    "title": "Document Score",
+    "updated_at": "2024-01-29T11:26:30Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-11-20T12:18:06Z",
+    "created_at": "2019-11-16T12:05:00Z",
+    "draft": false,
+    "id": 341749879,
+    "issue_type": null,
+    "labels": [],
+    "number": 704,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Thread pool merge",
+    "updated_at": "2019-11-20T12:18:41Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-01-12T02:50:50Z",
+    "created_at": "2019-11-18T10:04:18Z",
+    "id": 524260380,
+    "issue_type": null,
+    "labels": [],
+    "number": 705,
+    "state": "closed",
+    "title": "tantivy needs too many threads when indexing",
+    "updated_at": "2024-01-12T02:50:50Z",
+    "user": {
+      "login": "vsop-479"
+    }
+  },
+  {
+    "closed_at": "2020-01-30T01:14:35Z",
+    "created_at": "2019-11-19T01:02:29Z",
+    "id": 524709340,
+    "issue_type": null,
+    "labels": [],
+    "number": 706,
+    "state": "closed",
+    "title": "Add a maximum segment size for merge policies, Deletes",
+    "updated_at": "2020-01-30T01:14:35Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-20T12:19:17Z",
+    "created_at": "2019-11-19T20:12:23Z",
+    "draft": false,
+    "id": 342869101,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 707,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update census requirement from 0.2 to 0.3",
+    "updated_at": "2019-11-20T12:19:19Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-11-21T02:42:01Z",
+    "created_at": "2019-11-20T14:27:50Z",
+    "id": 525838132,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 708,
+    "state": "closed",
+    "title": "Unit Test Failing directory::tests",
+    "updated_at": "2019-11-25T07:00:53Z",
+    "user": {
+      "login": "stormasm"
+    }
+  },
+  {
+    "closed_at": "2019-11-21T02:41:59Z",
+    "created_at": "2019-11-21T01:31:28Z",
+    "draft": false,
+    "id": 343801054,
+    "issue_type": null,
+    "labels": [],
+    "number": 709,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #708",
+    "updated_at": "2019-11-21T02:42:00Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-13T00:50:02Z",
+    "created_at": "2019-11-21T03:43:38Z",
+    "id": 526346639,
+    "issue_type": null,
+    "labels": [],
+    "number": 710,
+    "state": "closed",
+    "title": "Purge_deletes in commit took too long when there are a lot of segments in the index path",
+    "updated_at": "2019-12-13T00:50:02Z",
+    "user": {
+      "login": "vsop-479"
+    }
+  },
+  {
+    "closed_at": "2019-11-22T04:09:36Z",
+    "created_at": "2019-11-22T03:26:17Z",
+    "draft": false,
+    "id": 344332473,
+    "issue_type": null,
+    "labels": [],
+    "number": 711,
+    "pull_request": {},
+    "state": "closed",
+    "title": "clippy first stab",
+    "updated_at": "2021-08-16T21:36:48Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-25T06:57:31Z",
+    "created_at": "2019-11-22T14:11:36Z",
+    "id": 527219104,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 712,
+    "state": "closed",
+    "title": "Memory leak in the DeleteQueue",
+    "updated_at": "2019-11-25T07:00:27Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-01-30T01:19:31Z",
+    "created_at": "2019-11-23T07:37:20Z",
+    "draft": false,
+    "id": 344785838,
+    "issue_type": null,
+    "labels": [],
+    "number": 713,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added max segment size to consider and option to consider deletes.",
+    "updated_at": "2020-01-30T01:19:31Z",
+    "user": {
+      "login": "hntd187"
+    }
+  },
+  {
+    "closed_at": "2019-11-25T06:57:30Z",
+    "created_at": "2019-11-25T05:22:33Z",
+    "draft": false,
+    "id": 345023979,
+    "issue_type": null,
+    "labels": [],
+    "number": 714,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #712",
+    "updated_at": "2019-11-25T06:59:51Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-25T13:39:13Z",
+    "created_at": "2019-11-25T07:40:19Z",
+    "draft": false,
+    "id": 345067183,
+    "issue_type": null,
+    "labels": [],
+    "number": 715,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Kkoziara remove tokens from doc store",
+    "updated_at": "2021-08-16T21:36:48Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-11-25T13:38:48Z",
+    "created_at": "2019-11-25T09:56:46Z",
+    "draft": false,
+    "id": 345120860,
+    "issue_type": null,
+    "labels": [],
+    "number": 716,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Updated rust-stemmers version to 1.2",
+    "updated_at": "2019-11-26T12:20:11Z",
+    "user": {
+      "login": "chrihunstad"
+    }
+  },
+  {
+    "closed_at": "2019-11-27T12:09:00Z",
+    "created_at": "2019-11-27T10:51:55Z",
+    "draft": false,
+    "id": 346176102,
+    "issue_type": null,
+    "labels": [],
+    "number": 717,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add norwegian stemmer",
+    "updated_at": "2019-11-27T12:09:38Z",
+    "user": {
+      "login": "chrihunstad"
+    }
+  },
+  {
+    "closed_at": "2019-11-29T05:37:51Z",
+    "created_at": "2019-11-29T00:08:54Z",
+    "id": 530104630,
+    "issue_type": null,
+    "labels": [],
+    "number": 718,
+    "state": "closed",
+    "title": "It's extremely hard to search CJK text because of how tokenization is handled for queries",
+    "updated_at": "2019-11-29T06:52:51Z",
+    "user": {
+      "login": "jrothenberg"
+    }
+  },
+  {
+    "closed_at": "2019-12-09T04:31:35Z",
+    "created_at": "2019-12-06T16:40:16Z",
+    "id": 534129937,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 719,
+    "state": "closed",
+    "title": "How to index datetime value with JSON?",
+    "updated_at": "2019-12-09T04:31:35Z",
+    "user": {
+      "login": "mosuka"
+    }
+  },
+  {
+    "closed_at": "2019-12-08T09:10:51Z",
+    "created_at": "2019-12-06T22:36:55Z",
+    "draft": false,
+    "id": 350226501,
+    "issue_type": null,
+    "labels": [],
+    "number": 720,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix outdated reference in documentation",
+    "updated_at": "2019-12-08T09:10:51Z",
+    "user": {
+      "login": "edrevo"
+    }
+  },
+  {
+    "closed_at": "2019-12-09T04:31:36Z",
+    "created_at": "2019-12-09T02:18:31Z",
+    "draft": false,
+    "id": 350488814,
+    "issue_type": null,
+    "labels": [],
+    "number": 721,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixing JSON se/deserialization of dates.",
+    "updated_at": "2019-12-09T04:31:51Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-09T04:40:05Z",
+    "created_at": "2019-12-09T04:23:58Z",
+    "draft": false,
+    "id": 350512573,
+    "issue_type": null,
+    "labels": [],
+    "number": 722,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Some clippy minor fixes",
+    "updated_at": "2019-12-09T04:40:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-13T00:50:01Z",
+    "created_at": "2019-12-10T09:37:25Z",
+    "draft": false,
+    "id": 351289085,
+    "issue_type": null,
+    "labels": [],
+    "number": 723,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Optimize deletes",
+    "updated_at": "2019-12-13T00:50:04Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-14T00:14:34Z",
+    "created_at": "2019-12-12T01:49:02Z",
+    "draft": false,
+    "id": 352193827,
+    "issue_type": null,
+    "labels": [],
+    "number": 724,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make error handling richer in Footer::is_compatible",
+    "updated_at": "2019-12-14T00:14:34Z",
+    "user": {
+      "login": "petr-tik"
+    }
+  },
+  {
+    "closed_at": "2019-12-14T07:50:45Z",
+    "created_at": "2019-12-13T02:14:52Z",
+    "draft": false,
+    "id": 352691115,
+    "issue_type": null,
+    "labels": [],
+    "number": 725,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Petr tik n662 more error handling",
+    "updated_at": "2019-12-14T07:50:50Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-13T14:41:22Z",
+    "created_at": "2019-12-13T10:59:52Z",
+    "draft": false,
+    "id": 352831826,
+    "issue_type": null,
+    "labels": [],
+    "number": 726,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make u64_lenient() handle f64 fast fields too",
+    "updated_at": "2019-12-13T14:47:15Z",
+    "user": {
+      "login": "caio"
+    }
+  },
+  {
+    "closed_at": "2019-12-16T09:53:06Z",
+    "created_at": "2019-12-16T09:44:13Z",
+    "id": 538297023,
+    "issue_type": null,
+    "labels": [],
+    "number": 727,
+    "state": "closed",
+    "title": "Make TokenStream an Iterator",
+    "updated_at": "2019-12-16T09:53:07Z",
+    "user": {
+      "login": "djugei"
+    }
+  },
+  {
+    "closed_at": "2019-12-30T10:55:08Z",
+    "created_at": "2019-12-16T19:57:03Z",
+    "id": 538620512,
+    "issue_type": null,
+    "labels": [],
+    "number": 728,
+    "state": "closed",
+    "title": "Add Lucene++ to the benchmark page",
+    "updated_at": "2019-12-30T10:55:08Z",
+    "user": {
+      "login": "amustafa"
+    }
+  },
+  {
+    "closed_at": "2019-12-17T12:09:10Z",
+    "created_at": "2019-12-17T03:23:14Z",
+    "id": 538809220,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 729,
+    "state": "closed",
+    "title": "Regression on 0.11 - Missing updated documents (deleted + re-added)",
+    "updated_at": "2019-12-17T15:19:45Z",
+    "user": {
+      "login": "appaquet"
+    }
+  },
+  {
+    "closed_at": "2019-12-17T12:09:09Z",
+    "created_at": "2019-12-17T10:20:59Z",
+    "draft": false,
+    "id": 354025164,
+    "issue_type": null,
+    "labels": [],
+    "number": 730,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #729",
+    "updated_at": "2019-12-17T12:09:13Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-19T01:06:03Z",
+    "created_at": "2019-12-18T06:53:01Z",
+    "id": 539488470,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 731,
+    "state": "closed",
+    "title": "Can't impl Directory outsite the crate",
+    "updated_at": "2019-12-19T01:12:33Z",
+    "user": {
+      "login": "darkskygit"
+    }
+  },
+  {
+    "closed_at": "2019-12-18T14:25:24Z",
+    "created_at": "2019-12-18T12:45:34Z",
+    "id": 539659236,
+    "issue_type": null,
+    "labels": [],
+    "number": 732,
+    "state": "closed",
+    "title": "`IndexWriter::merge` should not borrow self.",
+    "updated_at": "2019-12-19T01:07:01Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-18T14:25:23Z",
+    "created_at": "2019-12-18T13:27:56Z",
+    "draft": false,
+    "id": 354612262,
+    "issue_type": null,
+    "labels": [],
+    "number": 733,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #732",
+    "updated_at": "2019-12-18T14:25:30Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-19T01:06:03Z",
+    "created_at": "2019-12-19T01:05:24Z",
+    "draft": false,
+    "id": 354892319,
+    "issue_type": null,
+    "labels": [],
+    "number": 734,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added a constructor for `WatchHandle`",
+    "updated_at": "2021-08-16T21:36:49Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-20T12:22:01Z",
+    "created_at": "2019-12-19T07:41:38Z",
+    "id": 540137065,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 735,
+    "state": "closed",
+    "title": "Merging index fails if DateTime field is included in schema",
+    "updated_at": "2019-12-20T12:46:43Z",
+    "user": {
+      "login": "mosuka"
+    }
+  },
+  {
+    "closed_at": "2019-12-20T12:20:16Z",
+    "created_at": "2019-12-20T03:58:33Z",
+    "draft": false,
+    "id": 355510368,
+    "issue_type": null,
+    "labels": [],
+    "number": 736,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Implement fast field for DateTime.",
+    "updated_at": "2019-12-20T12:20:21Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-01-12T00:59:08Z",
+    "created_at": "2019-12-20T13:05:49Z",
+    "draft": false,
+    "id": 355722453,
+    "issue_type": null,
+    "labels": [],
+    "number": 737,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[RFC] directory: Convert the ReadOnlySource to provide a Read + Seek based …",
+    "updated_at": "2021-01-12T00:59:08Z",
+    "user": {
+      "login": "poljar"
+    }
+  },
+  {
+    "closed_at": "2019-12-25T08:43:34Z",
+    "created_at": "2019-12-20T13:12:56Z",
+    "id": 540988372,
+    "issue_type": null,
+    "labels": [],
+    "number": 738,
+    "state": "closed",
+    "title": "Enable facet search in the QueryParser",
+    "updated_at": "2019-12-25T08:43:34Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-24T20:12:59Z",
+    "created_at": "2019-12-20T20:13:33Z",
+    "draft": false,
+    "id": 355885870,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 739,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update time requirement from 0.1.42 to 0.2.0",
+    "updated_at": "2019-12-24T20:13:01Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-01-08T20:13:02Z",
+    "created_at": "2019-12-24T20:12:56Z",
+    "draft": false,
+    "id": 356695603,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 740,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update time requirement from 0.1.42 to 0.2.1",
+    "updated_at": "2020-01-08T20:13:05Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2019-12-25T08:43:34Z",
+    "created_at": "2019-12-25T04:10:30Z",
+    "draft": false,
+    "id": 356729902,
+    "issue_type": null,
+    "labels": [],
+    "number": 741,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Handle facet search in the QueryParser.",
+    "updated_at": "2019-12-25T08:43:44Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2019-12-25T11:37:35Z",
+    "created_at": "2019-12-25T08:11:33Z",
+    "draft": false,
+    "id": 356761056,
+    "issue_type": null,
+    "labels": [],
+    "number": 742,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make SchemaBuilder::add_field() public",
+    "updated_at": "2019-12-25T11:57:01Z",
+    "user": {
+      "login": "mosuka"
+    }
+  },
+  {
+    "closed_at": "2020-01-05T22:23:31Z",
+    "created_at": "2019-12-27T14:12:15Z",
+    "id": 542887970,
+    "issue_type": null,
+    "labels": [],
+    "number": 743,
+    "state": "closed",
+    "title": "Cannot cross compile for ARMv5TE",
+    "updated_at": "2020-01-05T22:23:31Z",
+    "user": {
+      "login": "davide-romanini"
+    }
+  },
+  {
+    "closed_at": "2019-12-29T13:37:14Z",
+    "created_at": "2019-12-29T10:59:36Z",
+    "draft": false,
+    "id": 357641552,
+    "issue_type": null,
+    "labels": [],
+    "number": 744,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Expose UserOperation as a public type.",
+    "updated_at": "2019-12-29T13:37:25Z",
+    "user": {
+      "login": "knutwalker"
+    }
+  },
+  {
+    "closed_at": "2019-12-30T14:43:00Z",
+    "created_at": "2019-12-29T15:15:29Z",
+    "draft": false,
+    "id": 357715937,
+    "issue_type": null,
+    "labels": [],
+    "number": 745,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add atomic mutex implementation for ARM",
+    "updated_at": "2019-12-30T14:43:00Z",
+    "user": {
+      "login": "davide-romanini"
+    }
+  },
+  {
+    "closed_at": "2019-12-30T14:42:12Z",
+    "created_at": "2019-12-30T14:41:49Z",
+    "draft": false,
+    "id": 358130652,
+    "issue_type": null,
+    "labels": [],
+    "number": 746,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Davide romanini arm atomic mutex",
+    "updated_at": "2019-12-30T14:42:15Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  }
+]
