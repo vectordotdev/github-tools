@@ -77,7 +77,7 @@ Run `github-tools <COMMAND> --help` for full argument details.
 ## 1. (Optional) Fetch fresh data from GitHub
 
 ```shell
-github-tools fetch-all --env-file vector.env --env-file vrl.env --env-file quickwit.env
+github-tools fetch-all --env-file vector.env --env-file vrl.env --env-file quickwit.env --env-file tantivy.env
 ```
 
 Writes to `out/historical/`. The fetched JSON must be split by year and promoted to `data/` to commit as a snapshot. Issues/PRs are stored in `data/{owner}_{repo}/issues/{year}.json`.
@@ -86,7 +86,7 @@ Writes to `out/historical/`. The fetched JSON must be split by year and promoted
 
 ```shell
 github-tools generate-all \
-  --env-file vector.env --env-file vrl.env --env-file quickwit.env
+  --env-file vector.env --env-file vrl.env --env-file quickwit.env --env-file tantivy.env
 
 # Charts (still Python). --exclude-labels hides those label series from
 # label-frequency charts only; the underlying PR/issue counts are unaffected.
@@ -133,5 +133,6 @@ Per-repo trend pages with all charts:
 - [Vector](trends/vector.md)
 - [VRL](trends/vrl.md)
 - [Quickwit](trends/quickwit.md)
+- [Tantivy](trends/tantivy.md)
 
 Exclusions are now per-chart; see the note below each chart on the trends pages.
