@@ -1,0 +1,3629 @@
+[
+  {
+    "closed_at": "2020-01-08T04:41:03Z",
+    "created_at": "2020-01-07T14:06:45Z",
+    "id": 546302803,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 747,
+    "state": "closed",
+    "title": "Ordering by a non existing fast field should not panick.",
+    "updated_at": "2020-01-08T04:41:03Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-01-08T04:41:03Z",
+    "created_at": "2020-01-08T03:39:55Z",
+    "draft": false,
+    "id": 360267430,
+    "issue_type": null,
+    "labels": [],
+    "number": 748,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Return an error instead of panicking when sorting by a non fast field.",
+    "updated_at": "2020-01-08T04:41:07Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-01-20T20:12:50Z",
+    "created_at": "2020-01-08T20:12:58Z",
+    "draft": false,
+    "id": 360634584,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 749,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update time requirement from 0.1.42 to 0.2.2",
+    "updated_at": "2020-01-20T20:12:51Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-01-20T22:57:40Z",
+    "created_at": "2020-01-20T20:12:28Z",
+    "draft": false,
+    "id": 364986700,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 750,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update tantivy-fst requirement from 0.1 to 0.2",
+    "updated_at": "2020-01-20T22:57:45Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-01-21T20:13:53Z",
+    "created_at": "2020-01-20T20:12:47Z",
+    "draft": false,
+    "id": 364986818,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 751,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update time requirement from 0.1.42 to 0.2.3",
+    "updated_at": "2020-01-21T20:13:55Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-02-06T14:04:16Z",
+    "created_at": "2020-01-20T20:13:12Z",
+    "draft": false,
+    "id": 364986946,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 752,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update combine requirement from >=3.6.0,<4.0.0 to >=3.6.0, <5.0.0",
+    "updated_at": "2020-02-06T14:04:18Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-02-03T10:59:33Z",
+    "created_at": "2020-01-20T23:38:51Z",
+    "draft": false,
+    "id": 365037709,
+    "issue_type": null,
+    "labels": [],
+    "number": 753,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Low level Query boost_by",
+    "updated_at": "2020-02-03T10:59:33Z",
+    "user": {
+      "login": "audunhalland"
+    }
+  },
+  {
+    "closed_at": "2020-01-28T20:12:40Z",
+    "created_at": "2020-01-21T20:13:49Z",
+    "draft": false,
+    "id": 365489883,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 754,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update time requirement from 0.1.42 to 0.2.4",
+    "updated_at": "2020-01-28T20:12:42Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-01-29T09:23:38Z",
+    "created_at": "2020-01-23T01:46:46Z",
+    "draft": false,
+    "id": 366144816,
+    "issue_type": null,
+    "labels": [],
+    "number": 755,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Dynamic analyzer",
+    "updated_at": "2020-01-29T09:23:43Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-09-30T10:58:43Z",
+    "created_at": "2020-01-24T10:05:36Z",
+    "draft": false,
+    "id": 366760926,
+    "issue_type": null,
+    "labels": [],
+    "number": 756,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Move from `failure` to `thiserror`",
+    "updated_at": "2020-09-30T10:58:43Z",
+    "user": {
+      "login": "Hirevo"
+    }
+  },
+  {
+    "closed_at": "2020-01-30T00:59:22Z",
+    "created_at": "2020-01-24T10:49:12Z",
+    "draft": false,
+    "id": 366778650,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "ffc6f0",
+        "description": "",
+        "id": 7126553744165829684,
+        "name": "wip"
+      }
+    ],
+    "number": 757,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Backward iteration for termdict range",
+    "updated_at": "2020-01-30T00:59:27Z",
+    "user": {
+      "login": "halvorboe"
+    }
+  },
+  {
+    "closed_at": "2020-02-27T08:59:07Z",
+    "created_at": "2020-01-24T23:02:58Z",
+    "id": 554994994,
+    "issue_type": null,
+    "labels": [],
+    "number": 758,
+    "state": "closed",
+    "title": "Invalid footer causes allocation of 10304235947423694895 bytes",
+    "updated_at": "2020-02-27T08:59:07Z",
+    "user": {
+      "login": "kornelski"
+    }
+  },
+  {
+    "closed_at": "2020-01-30T01:11:30Z",
+    "created_at": "2020-01-25T13:18:34Z",
+    "draft": false,
+    "id": 367117002,
+    "issue_type": null,
+    "labels": [],
+    "number": 759,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Facet path string",
+    "updated_at": "2020-01-30T01:11:34Z",
+    "user": {
+      "login": "halvorboe"
+    }
+  },
+  {
+    "closed_at": "2023-02-20T13:52:19Z",
+    "created_at": "2020-01-25T16:18:18Z",
+    "id": 555103803,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 760,
+    "state": "closed",
+    "title": "Improve integration of errors with `std::error::Error`",
+    "updated_at": "2023-02-20T13:52:20Z",
+    "user": {
+      "login": "Hirevo"
+    }
+  },
+  {
+    "closed_at": "2020-02-03T11:00:47Z",
+    "created_at": "2020-01-27T22:31:52Z",
+    "id": 555873563,
+    "issue_type": null,
+    "labels": [],
+    "number": 761,
+    "state": "closed",
+    "title": "Uniform API for Query construction",
+    "updated_at": "2020-02-03T11:00:47Z",
+    "user": {
+      "login": "audunhalland"
+    }
+  },
+  {
+    "closed_at": "2020-01-29T09:23:39Z",
+    "created_at": "2020-01-28T01:13:12Z",
+    "id": 555927480,
+    "issue_type": null,
+    "labels": [],
+    "number": 762,
+    "state": "closed",
+    "title": "Dynamic dispatch in tokenizers",
+    "updated_at": "2020-01-29T09:23:39Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-01-29T14:26:11Z",
+    "created_at": "2020-01-28T20:12:37Z",
+    "draft": false,
+    "id": 368207150,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 763,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update time requirement from 0.1.42 to 0.2.5",
+    "updated_at": "2020-01-29T14:26:51Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-01-29T13:12:43Z",
+    "created_at": "2020-01-29T12:51:13Z",
+    "draft": false,
+    "id": 368539817,
+    "issue_type": null,
+    "labels": [],
+    "number": 764,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Psuedocode for poll implementation",
+    "updated_at": "2020-01-29T13:12:43Z",
+    "user": {
+      "login": "halvorboe"
+    }
+  },
+  {
+    "closed_at": "2020-01-30T01:14:35Z",
+    "created_at": "2020-01-29T13:53:38Z",
+    "draft": false,
+    "id": 368569098,
+    "issue_type": null,
+    "labels": [],
+    "number": 765,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Maximum size of segment to be considered for merge",
+    "updated_at": "2021-08-16T21:36:50Z",
+    "user": {
+      "login": "halvorboe"
+    }
+  },
+  {
+    "closed_at": "2020-01-30T01:04:59Z",
+    "created_at": "2020-01-29T16:42:02Z",
+    "id": 556983230,
+    "issue_type": null,
+    "labels": [],
+    "number": 766,
+    "state": "closed",
+    "title": "TermDictionary::empty() is too slow",
+    "updated_at": "2020-01-30T01:04:59Z",
+    "user": {
+      "login": "audunhalland"
+    }
+  },
+  {
+    "closed_at": "2020-01-30T01:04:59Z",
+    "created_at": "2020-01-29T18:18:10Z",
+    "draft": false,
+    "id": 368698930,
+    "issue_type": null,
+    "labels": [],
+    "number": 767,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Optimize TermDictionary::empty by lazy data source",
+    "updated_at": "2020-04-26T22:55:39Z",
+    "user": {
+      "login": "audunhalland"
+    }
+  },
+  {
+    "closed_at": "2020-01-31T08:05:08Z",
+    "created_at": "2020-01-30T01:22:18Z",
+    "id": 557213133,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 768,
+    "state": "closed",
+    "title": "Executor not exported",
+    "updated_at": "2020-01-31T08:05:08Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-01-31T06:50:27Z",
+    "created_at": "2020-01-30T09:06:35Z",
+    "draft": false,
+    "id": 368958065,
+    "issue_type": null,
+    "labels": [],
+    "number": 769,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make Executor public so Searcher::search_in_executor method now can be used",
+    "updated_at": "2020-01-31T06:50:27Z",
+    "user": {
+      "login": "anti-social"
+    }
+  },
+  {
+    "closed_at": "2020-02-21T00:50:36Z",
+    "created_at": "2020-01-31T07:02:20Z",
+    "id": 557952339,
+    "issue_type": null,
+    "labels": [],
+    "number": 770,
+    "state": "closed",
+    "title": "Does tantivy support Phonetic Matching or any plan to support it",
+    "updated_at": "2020-02-21T00:50:37Z",
+    "user": {
+      "login": "serak"
+    }
+  },
+  {
+    "closed_at": "2020-01-31T09:47:03Z",
+    "created_at": "2020-01-31T07:58:40Z",
+    "draft": false,
+    "id": 369457804,
+    "issue_type": null,
+    "labels": [],
+    "number": 771,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removed `use::Result`.",
+    "updated_at": "2020-01-31T09:47:08Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-02-19T02:04:38Z",
+    "created_at": "2020-02-03T01:33:13Z",
+    "draft": false,
+    "id": 370084033,
+    "issue_type": null,
+    "labels": [],
+    "number": 772,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[WIP]  Alternative take on boosted queries",
+    "updated_at": "2020-02-19T02:04:42Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-02-03T14:39:56Z",
+    "id": 559126479,
+    "issue_type": null,
+    "labels": [],
+    "number": 773,
+    "state": "open",
+    "title": "A way to know if a fast field has a value for a specific document",
+    "updated_at": "2020-02-03T14:39:56Z",
+    "user": {
+      "login": "anti-social"
+    }
+  },
+  {
+    "closed_at": "2020-03-13T11:18:30Z",
+    "created_at": "2020-02-04T16:07:42Z",
+    "draft": false,
+    "id": 370920797,
+    "issue_type": null,
+    "labels": [],
+    "number": 774,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Simple solution to use polling instead of events",
+    "updated_at": "2020-03-13T11:18:30Z",
+    "user": {
+      "login": "halvorboe"
+    }
+  },
+  {
+    "closed_at": "2020-02-06T14:02:49Z",
+    "created_at": "2020-02-06T13:16:14Z",
+    "draft": false,
+    "id": 371893604,
+    "issue_type": null,
+    "labels": [],
+    "number": 775,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Updating combine to version 4",
+    "updated_at": "2021-08-16T21:36:51Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-02-11T22:59:48Z",
+    "created_at": "2020-02-11T19:16:35Z",
+    "id": 563419154,
+    "issue_type": null,
+    "labels": [],
+    "number": 776,
+    "state": "closed",
+    "title": "Making `TopCollector::limit` optional",
+    "updated_at": "2020-02-12T22:16:02Z",
+    "user": {
+      "login": "kardeiz"
+    }
+  },
+  {
+    "closed_at": "2020-02-17T00:53:40Z",
+    "created_at": "2020-02-12T14:31:54Z",
+    "id": 564039261,
+    "issue_type": null,
+    "labels": [],
+    "number": 777,
+    "state": "closed",
+    "title": "Reloading without creating searchers creates leaky behaviour.",
+    "updated_at": "2020-02-17T08:34:27Z",
+    "user": {
+      "login": "poljar"
+    }
+  },
+  {
+    "closed_at": "2020-02-17T01:02:01Z",
+    "created_at": "2020-02-14T20:12:40Z",
+    "draft": false,
+    "id": 375555263,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 778,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update snap requirement from 0.2 to 1.0",
+    "updated_at": "2020-02-17T01:02:12Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-02-17T00:53:39Z",
+    "created_at": "2020-02-15T02:26:06Z",
+    "draft": false,
+    "id": 375646619,
+    "issue_type": null,
+    "labels": [],
+    "number": 779,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #777",
+    "updated_at": "2020-02-17T00:53:43Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-02-21T00:42:01Z",
+    "created_at": "2020-02-15T13:03:05Z",
+    "id": 565745401,
+    "issue_type": null,
+    "labels": [],
+    "number": 780,
+    "state": "closed",
+    "title": "Outdated documention link",
+    "updated_at": "2020-02-21T00:42:01Z",
+    "user": {
+      "login": "bedax"
+    }
+  },
+  {
+    "closed_at": "2020-02-17T01:41:45Z",
+    "created_at": "2020-02-17T01:02:14Z",
+    "draft": false,
+    "id": 375898440,
+    "issue_type": null,
+    "labels": [],
+    "number": 781,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update snap version to 1.",
+    "updated_at": "2020-02-17T01:41:51Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-01-12T00:59:08Z",
+    "created_at": "2020-02-23T05:21:37Z",
+    "draft": false,
+    "id": 378665182,
+    "issue_type": null,
+    "labels": [],
+    "number": 782,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Segment writer in ram2",
+    "updated_at": "2021-01-12T00:59:08Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-02-27T23:42:38Z",
+    "created_at": "2020-02-27T22:31:12Z",
+    "draft": false,
+    "id": 381106502,
+    "issue_type": null,
+    "labels": [],
+    "number": 783,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Slight re-organization to increase contrast of \"Getting Started\"",
+    "updated_at": "2020-02-27T23:42:39Z",
+    "user": {
+      "login": "nkconnor"
+    }
+  },
+  {
+    "closed_at": "2020-03-02T13:12:43Z",
+    "created_at": "2020-03-02T12:38:44Z",
+    "draft": false,
+    "id": 382361096,
+    "issue_type": null,
+    "labels": [],
+    "number": 784,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Faster compilation",
+    "updated_at": "2020-03-02T13:13:59Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-03-03T11:24:00Z",
+    "created_at": "2020-03-03T10:58:12Z",
+    "draft": false,
+    "id": 382881771,
+    "issue_type": null,
+    "labels": [],
+    "number": 785,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add Lindera to README.md",
+    "updated_at": "2020-03-03T11:24:00Z",
+    "user": {
+      "login": "mosuka"
+    }
+  },
+  {
+    "closed_at": "2020-03-06T14:33:59Z",
+    "created_at": "2020-03-06T14:30:21Z",
+    "draft": false,
+    "id": 384850941,
+    "issue_type": null,
+    "labels": [],
+    "number": 786,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removing serde-derive dependency",
+    "updated_at": "2020-03-06T14:34:02Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-03-08T04:04:22Z",
+    "created_at": "2020-03-08T00:57:17Z",
+    "draft": false,
+    "id": 385211162,
+    "issue_type": null,
+    "labels": [],
+    "number": 787,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Avoid writing a new delete file if there was no actual deletes.",
+    "updated_at": "2020-03-08T04:04:26Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-03-31T12:13:52Z",
+    "created_at": "2020-03-08T10:15:57Z",
+    "id": 577477265,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 788,
+    "state": "closed",
+    "title": "OR not working when using conjunction by default",
+    "updated_at": "2020-03-31T12:13:52Z",
+    "user": {
+      "login": "stefanberndtsson"
+    }
+  },
+  {
+    "closed_at": "2020-03-14T08:05:56Z",
+    "created_at": "2020-03-09T00:41:56Z",
+    "draft": false,
+    "id": 385335710,
+    "issue_type": null,
+    "labels": [],
+    "number": 789,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Moving the StoreWriter out of the SegmentSerializer.",
+    "updated_at": "2020-03-14T08:05:56Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-03-11T08:52:59Z",
+    "created_at": "2020-03-09T20:12:19Z",
+    "draft": false,
+    "id": 385794474,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 790,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update itertools requirement from 0.8 to 0.9",
+    "updated_at": "2020-03-11T08:53:09Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-03-11T08:51:23Z",
+    "created_at": "2020-03-09T20:12:46Z",
+    "draft": false,
+    "id": 385794644,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 791,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update base64 requirement from 0.11.0 to 0.12.0",
+    "updated_at": "2020-03-11T08:51:33Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-03-11T09:41:05Z",
+    "created_at": "2020-03-11T08:52:37Z",
+    "draft": false,
+    "id": 386558054,
+    "issue_type": null,
+    "labels": [],
+    "number": 792,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removed itertools",
+    "updated_at": "2020-03-11T09:41:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-07T03:08:32Z",
+    "created_at": "2020-03-13T10:58:26Z",
+    "draft": false,
+    "id": 387715603,
+    "issue_type": null,
+    "labels": [],
+    "number": 793,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Implemented PollWatcher",
+    "updated_at": "2020-11-07T03:09:18Z",
+    "user": {
+      "login": "halvorboe"
+    }
+  },
+  {
+    "closed_at": "2022-02-01T03:21:17Z",
+    "created_at": "2020-03-13T23:36:12Z",
+    "id": 580932767,
+    "issue_type": null,
+    "labels": [],
+    "number": 794,
+    "state": "closed",
+    "title": "Add a filtering collector",
+    "updated_at": "2022-02-01T03:21:17Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-01-12T00:59:08Z",
+    "created_at": "2020-03-14T14:50:48Z",
+    "draft": false,
+    "id": 388328515,
+    "issue_type": null,
+    "labels": [],
+    "number": 795,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Nrt",
+    "updated_at": "2021-01-12T00:59:08Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-09-01T04:38:53Z",
+    "created_at": "2020-03-17T12:24:23Z",
+    "id": 582975176,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 796,
+    "state": "closed",
+    "title": "Restrict characters in field names or fix query parser. ",
+    "updated_at": "2020-09-01T04:38:53Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-03-19T11:19:32Z",
+    "created_at": "2020-03-19T04:36:16Z",
+    "draft": false,
+    "id": 390791912,
+    "issue_type": null,
+    "labels": [],
+    "number": 797,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix prefix option for FuzzyTermQuery",
+    "updated_at": "2020-03-19T11:19:33Z",
+    "user": {
+      "login": "Peachball"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-03-20T12:14:09Z",
+    "id": 585029851,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4d76ae",
+        "description": "questions and requests for documenting the internals of tantivy",
+        "id": 4716749802550701126,
+        "name": "documentation"
+      }
+    ],
+    "number": 798,
+    "state": "open",
+    "title": "document that doc_freq() includes deletes",
+    "updated_at": "2022-02-01T03:29:00Z",
+    "user": {
+      "login": "brainlock"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-03-20T16:55:19Z",
+    "id": 585202869,
+    "issue_type": null,
+    "labels": [],
+    "number": 799,
+    "state": "open",
+    "title": "Interest in a `MoreLikeThis` query?",
+    "updated_at": "2020-03-25T14:34:33Z",
+    "user": {
+      "login": "kardeiz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-03-27T17:53:18Z",
+    "id": 589304069,
+    "issue_type": null,
+    "labels": [],
+    "number": 800,
+    "state": "open",
+    "title": "Does tantivy has both data and metadata in every segments, just like Lucene does ?",
+    "updated_at": "2020-03-30T13:20:43Z",
+    "user": {
+      "login": "constantOut"
+    }
+  },
+  {
+    "closed_at": "2020-04-01T00:44:16Z",
+    "created_at": "2020-03-30T20:12:45Z",
+    "draft": false,
+    "id": 395874264,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 801,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update levenshtein_automata requirement from 0.1 to 0.2",
+    "updated_at": "2020-04-01T00:44:26Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-03-31T12:13:51Z",
+    "created_at": "2020-03-31T07:52:10Z",
+    "draft": false,
+    "id": 396144205,
+    "issue_type": null,
+    "labels": [],
+    "number": 802,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #788. OR not working when using conjunction by default.",
+    "updated_at": "2020-03-31T12:14:29Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-04-16T14:05:14Z",
+    "created_at": "2020-03-31T14:26:03Z",
+    "id": 591154539,
+    "issue_type": null,
+    "labels": [],
+    "number": 803,
+    "state": "closed",
+    "title": "Dependabot couldn't fetch all your path-based dependencies",
+    "updated_at": "2020-04-16T14:05:14Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-04-03T00:09:01Z",
+    "id": 592992201,
+    "issue_type": null,
+    "labels": [],
+    "number": 804,
+    "state": "open",
+    "title": "Mitigate the perf loss due to dynamic dispatch to the collector",
+    "updated_at": "2020-04-03T00:09:01Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-04-27T03:01:19Z",
+    "created_at": "2020-04-12T17:23:35Z",
+    "id": 598531950,
+    "issue_type": null,
+    "labels": [],
+    "number": 805,
+    "state": "closed",
+    "title": "Use TryInto",
+    "updated_at": "2020-04-27T03:01:19Z",
+    "user": {
+      "login": "elshize"
+    }
+  },
+  {
+    "closed_at": "2020-04-20T13:04:36Z",
+    "created_at": "2020-04-13T05:45:27Z",
+    "id": 598689017,
+    "issue_type": null,
+    "labels": [],
+    "number": 806,
+    "state": "closed",
+    "title": "Make TweakScore and CustomScore mutable at the segment level.",
+    "updated_at": "2020-04-20T13:04:36Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-04-19T06:54:01Z",
+    "created_at": "2020-04-13T13:32:52Z",
+    "draft": false,
+    "id": 402646012,
+    "issue_type": null,
+    "labels": [],
+    "number": 807,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make TweakScore and CustomScore mutable at the segment level",
+    "updated_at": "2020-04-19T06:54:01Z",
+    "user": {
+      "login": "robyoung"
+    }
+  },
+  {
+    "closed_at": "2020-04-16T14:05:13Z",
+    "created_at": "2020-04-13T13:44:01Z",
+    "draft": false,
+    "id": 402650795,
+    "issue_type": null,
+    "labels": [],
+    "number": 808,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Switch fst dependency to git",
+    "updated_at": "2020-04-16T14:05:13Z",
+    "user": {
+      "login": "robyoung"
+    }
+  },
+  {
+    "closed_at": "2020-04-16T19:30:13Z",
+    "created_at": "2020-04-16T19:24:46Z",
+    "draft": false,
+    "id": 404639593,
+    "issue_type": null,
+    "labels": [],
+    "number": 809,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Clippy: unused crate DFAWrapper",
+    "updated_at": "2020-04-16T19:30:14Z",
+    "user": {
+      "login": null
+    }
+  },
+  {
+    "closed_at": "2020-04-16T22:14:20Z",
+    "created_at": "2020-04-16T20:12:34Z",
+    "draft": false,
+    "id": 404685741,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 810,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update fail requirement from 0.3 to 0.4",
+    "updated_at": "2020-04-16T22:14:35Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-04-19T04:45:21Z",
+    "created_at": "2020-04-17T20:03:08Z",
+    "id": 602203826,
+    "issue_type": null,
+    "labels": [],
+    "number": 811,
+    "state": "closed",
+    "title": "How to get values from NamedFieldDocument",
+    "updated_at": "2020-04-19T10:47:24Z",
+    "user": {
+      "login": "Th3Whit3Wolf"
+    }
+  },
+  {
+    "closed_at": "2020-08-19T14:46:57Z",
+    "created_at": "2020-04-17T20:33:57Z",
+    "draft": false,
+    "id": 405328281,
+    "issue_type": null,
+    "labels": [],
+    "number": 812,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Block-Max WAND implementation proof of concept",
+    "updated_at": "2020-08-20T13:12:13Z",
+    "user": {
+      "login": "elshize"
+    }
+  },
+  {
+    "closed_at": "2020-04-18T11:19:23Z",
+    "created_at": "2020-04-18T07:26:12Z",
+    "draft": false,
+    "id": 405458534,
+    "issue_type": null,
+    "labels": [],
+    "number": 813,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removing tantivy-fst conf and removing warning.",
+    "updated_at": "2021-08-16T21:36:53Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-06-06T15:41:44Z",
+    "created_at": "2020-04-19T17:04:05Z",
+    "draft": false,
+    "id": 405698389,
+    "issue_type": null,
+    "labels": [],
+    "number": 814,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Two phase docsets",
+    "updated_at": "2020-06-07T13:19:22Z",
+    "user": {
+      "login": null
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-04-19T17:35:52Z",
+    "id": 602775747,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 815,
+    "state": "open",
+    "title": "(Approximate) Nearest Neighbour / Vector Similarity Search",
+    "updated_at": "2025-04-02T07:13:25Z",
+    "user": {
+      "login": "bloodbare"
+    }
+  },
+  {
+    "closed_at": "2020-04-27T02:07:07Z",
+    "created_at": "2020-04-20T23:35:07Z",
+    "id": 603602551,
+    "issue_type": null,
+    "labels": [],
+    "number": 816,
+    "state": "closed",
+    "title": "benchmark questions",
+    "updated_at": "2020-04-27T02:07:07Z",
+    "user": {
+      "login": "mooreniemi"
+    }
+  },
+  {
+    "closed_at": "2020-04-23T02:03:05Z",
+    "created_at": "2020-04-21T22:40:38Z",
+    "id": 604329828,
+    "issue_type": null,
+    "labels": [],
+    "number": 817,
+    "state": "closed",
+    "title": "Provide something along the lines of `open_or_create` that accepts `&Path`",
+    "updated_at": "2020-04-23T21:20:51Z",
+    "user": {
+      "login": "Gozala"
+    }
+  },
+  {
+    "closed_at": "2020-04-27T02:42:20Z",
+    "created_at": "2020-04-27T02:28:28Z",
+    "draft": false,
+    "id": 409212442,
+    "issue_type": null,
+    "labels": [],
+    "number": 818,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Create the MMapDirectory does not return a Directory.",
+    "updated_at": "2020-04-27T02:42:24Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-04-27T02:56:50Z",
+    "created_at": "2020-04-27T02:41:07Z",
+    "draft": false,
+    "id": 409215637,
+    "issue_type": null,
+    "labels": [],
+    "number": 819,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Format and remove useless import",
+    "updated_at": "2020-04-27T02:56:53Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-04-27T03:01:18Z",
+    "created_at": "2020-04-27T02:56:35Z",
+    "draft": false,
+    "id": 409219634,
+    "issue_type": null,
+    "labels": [],
+    "number": 820,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added TryInto implementation for IndexReaderBuilder",
+    "updated_at": "2020-04-27T03:01:22Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-05-16T01:59:51Z",
+    "created_at": "2020-05-08T06:21:42Z",
+    "id": 614532666,
+    "issue_type": null,
+    "labels": [],
+    "number": 821,
+    "state": "closed",
+    "title": "Make `Field::from_field_id` a `const fn`",
+    "updated_at": "2020-05-16T01:59:51Z",
+    "user": {
+      "login": "fisherdarling"
+    }
+  },
+  {
+    "closed_at": "2020-05-20T13:25:25Z",
+    "created_at": "2020-05-09T00:32:47Z",
+    "id": 615052013,
+    "issue_type": null,
+    "labels": [],
+    "number": 822,
+    "state": "closed",
+    "title": "introduce an offset to the topdocs collector to help pagination",
+    "updated_at": "2020-05-20T13:25:25Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-05-16T01:59:51Z",
+    "created_at": "2020-05-09T22:34:31Z",
+    "draft": false,
+    "id": 415639559,
+    "issue_type": null,
+    "labels": [],
+    "number": 823,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make field methods const fns",
+    "updated_at": "2020-05-16T01:59:51Z",
+    "user": {
+      "login": "fisherdarling"
+    }
+  },
+  {
+    "closed_at": "2020-05-16T07:33:37Z",
+    "created_at": "2020-05-15T14:28:35Z",
+    "draft": false,
+    "id": 418624953,
+    "issue_type": null,
+    "labels": [],
+    "number": 824,
+    "pull_request": {},
+    "state": "closed",
+    "title": "New api",
+    "updated_at": "2020-05-16T07:33:42Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-05-16T01:59:25Z",
+    "created_at": "2020-05-15T19:15:49Z",
+    "draft": false,
+    "id": 418760030,
+    "issue_type": null,
+    "labels": [],
+    "number": 825,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Minor doc and test improvements around fuzzy querying",
+    "updated_at": "2020-05-16T01:59:29Z",
+    "user": {
+      "login": "robyoung"
+    }
+  },
+  {
+    "closed_at": "2020-05-20T13:25:25Z",
+    "created_at": "2020-05-15T20:15:44Z",
+    "draft": false,
+    "id": 418787538,
+    "issue_type": null,
+    "labels": [],
+    "number": 826,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add offset to TopDocsCollector",
+    "updated_at": "2020-05-20T13:27:47Z",
+    "user": {
+      "login": "robyoung"
+    }
+  },
+  {
+    "closed_at": "2020-05-20T13:28:01Z",
+    "created_at": "2020-05-20T13:23:56Z",
+    "draft": false,
+    "id": 420748597,
+    "issue_type": null,
+    "labels": [],
+    "number": 827,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Robyoung introduce offset to top docs",
+    "updated_at": "2020-05-20T13:28:01Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-05-22T07:24:10Z",
+    "created_at": "2020-05-22T04:18:35Z",
+    "id": 622938205,
+    "issue_type": null,
+    "labels": [],
+    "number": 828,
+    "state": "closed",
+    "title": "Index out of bound error in LogMergePolicy",
+    "updated_at": "2020-05-22T07:27:43Z",
+    "user": {
+      "login": "ppodolsky"
+    }
+  },
+  {
+    "closed_at": "2020-05-22T07:24:09Z",
+    "created_at": "2020-05-22T06:42:35Z",
+    "draft": false,
+    "id": 421745762,
+    "issue_type": null,
+    "labels": [],
+    "number": 829,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #828.",
+    "updated_at": "2020-05-22T07:24:12Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-05-25T07:53:11Z",
+    "created_at": "2020-05-22T16:09:15Z",
+    "id": 623313001,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 830,
+    "state": "closed",
+    "title": "User need : Better support for bytes field",
+    "updated_at": "2020-05-25T07:53:24Z",
+    "user": {
+      "login": "sgrust01"
+    }
+  },
+  {
+    "closed_at": "2020-05-25T00:51:25Z",
+    "created_at": "2020-05-23T12:51:05Z",
+    "draft": false,
+    "id": 422270465,
+    "issue_type": null,
+    "labels": [],
+    "number": 831,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Skiprefactoring skipabsolute",
+    "updated_at": "2020-05-25T00:51:29Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-06-28T02:34:11Z",
+    "created_at": "2020-05-25T07:52:35Z",
+    "id": 624116022,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 832,
+    "state": "closed",
+    "title": "Better support for bytes field",
+    "updated_at": "2021-06-28T02:34:11Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-09-06T14:03:18Z",
+    "created_at": "2020-05-25T20:49:22Z",
+    "id": 624479738,
+    "issue_type": null,
+    "labels": [],
+    "number": 833,
+    "state": "closed",
+    "title": "Remove dependency atomicwrites",
+    "updated_at": "2020-09-06T14:03:18Z",
+    "user": {
+      "login": "asafigan"
+    }
+  },
+  {
+    "closed_at": "2020-05-26T23:49:48Z",
+    "created_at": "2020-05-26T14:48:42Z",
+    "draft": false,
+    "id": 423253964,
+    "issue_type": null,
+    "labels": [],
+    "number": 834,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Simplification of the segment postings seek implementation.",
+    "updated_at": "2020-05-26T23:49:52Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-05-30T06:31:56Z",
+    "created_at": "2020-05-29T22:44:37Z",
+    "id": 627583453,
+    "issue_type": null,
+    "labels": [],
+    "number": 835,
+    "state": "closed",
+    "title": "delete_term not removing document",
+    "updated_at": "2020-05-30T06:31:56Z",
+    "user": {
+      "login": "rthomas"
+    }
+  },
+  {
+    "closed_at": "2020-06-01T02:31:19Z",
+    "created_at": "2020-05-31T06:43:43Z",
+    "draft": false,
+    "id": 425570155,
+    "issue_type": null,
+    "labels": [],
+    "number": 836,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Move for_each functions from Scorer to Weight.",
+    "updated_at": "2021-08-16T21:36:55Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-06-05T10:42:52Z",
+    "created_at": "2020-06-02T00:07:19Z",
+    "draft": false,
+    "id": 426276327,
+    "issue_type": null,
+    "labels": [],
+    "number": 837,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Alive doc iterator.",
+    "updated_at": "2020-06-05T10:42:52Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-06-05T10:41:23Z",
+    "created_at": "2020-06-05T09:18:21Z",
+    "draft": false,
+    "id": 428329566,
+    "issue_type": null,
+    "labels": [],
+    "number": 838,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update index.rs",
+    "updated_at": "2020-06-05T10:41:23Z",
+    "user": {
+      "login": "lengyijun"
+    }
+  },
+  {
+    "closed_at": "2020-06-05T10:41:56Z",
+    "created_at": "2020-06-05T10:40:49Z",
+    "draft": false,
+    "id": 428370155,
+    "issue_type": null,
+    "labels": [],
+    "number": 839,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixes build for no-default-features",
+    "updated_at": "2020-06-05T10:41:56Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-06-08T11:01:20Z",
+    "created_at": "2020-06-07T21:07:52Z",
+    "draft": false,
+    "id": 430383692,
+    "issue_type": null,
+    "labels": [],
+    "number": 840,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Boolean query: do not combine excluded scores.",
+    "updated_at": "2020-06-08T11:01:20Z",
+    "user": {
+      "login": null
+    }
+  },
+  {
+    "closed_at": "2020-06-08T12:54:22Z",
+    "created_at": "2020-06-07T21:08:45Z",
+    "id": 633765309,
+    "issue_type": null,
+    "labels": [],
+    "number": 841,
+    "state": "closed",
+    "title": "Boolean query: do not combine excluded scores.",
+    "updated_at": "2020-06-08T12:54:30Z",
+    "user": {
+      "login": null
+    }
+  },
+  {
+    "closed_at": "2020-06-21T01:50:18Z",
+    "created_at": "2020-06-20T14:02:22Z",
+    "id": 642382519,
+    "issue_type": null,
+    "labels": [],
+    "number": 842,
+    "state": "closed",
+    "title": "How to sort more than two fields",
+    "updated_at": "2020-06-21T07:30:36Z",
+    "user": {
+      "login": "ansjsun"
+    }
+  },
+  {
+    "closed_at": "2020-06-23T10:19:10Z",
+    "created_at": "2020-06-22T10:03:21Z",
+    "id": 642933426,
+    "issue_type": null,
+    "labels": [],
+    "number": 843,
+    "state": "closed",
+    "title": "fast field for string by sort",
+    "updated_at": "2020-06-23T10:19:10Z",
+    "user": {
+      "login": "ansjsun"
+    }
+  },
+  {
+    "closed_at": "2020-07-01T01:26:36Z",
+    "created_at": "2020-06-30T22:03:59Z",
+    "draft": false,
+    "id": 442320650,
+    "issue_type": null,
+    "labels": [],
+    "number": 844,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix incorrect SimpleTokenizer link in documentation",
+    "updated_at": "2020-07-01T15:08:21Z",
+    "user": {
+      "login": "sstangl"
+    }
+  },
+  {
+    "closed_at": "2020-07-01T01:25:27Z",
+    "created_at": "2020-07-01T00:47:53Z",
+    "draft": false,
+    "id": 442375502,
+    "issue_type": null,
+    "labels": [],
+    "number": 845,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update mod.rs",
+    "updated_at": "2020-07-01T01:27:03Z",
+    "user": {
+      "login": "lengyijun"
+    }
+  },
+  {
+    "closed_at": "2020-07-02T06:11:39Z",
+    "created_at": "2020-07-02T06:11:02Z",
+    "draft": false,
+    "id": 443297570,
+    "issue_type": null,
+    "labels": [],
+    "number": 846,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update index.rs",
+    "updated_at": "2020-07-02T06:11:39Z",
+    "user": {
+      "login": "lengyijun"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-07-08T02:01:32Z",
+    "id": 652831963,
+    "issue_type": null,
+    "labels": [],
+    "number": 847,
+    "state": "open",
+    "title": "Make an index reader that offers a view over the union of 2 or more indexes.",
+    "updated_at": "2020-07-08T02:01:32Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-07-16T03:33:12Z",
+    "created_at": "2020-07-13T06:08:15Z",
+    "draft": false,
+    "id": 448055739,
+    "issue_type": null,
+    "labels": [],
+    "number": 848,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update segment_updater.rs",
+    "updated_at": "2020-07-16T03:33:12Z",
+    "user": {
+      "login": "lengyijun"
+    }
+  },
+  {
+    "closed_at": "2020-07-16T01:57:52Z",
+    "created_at": "2020-07-14T04:15:21Z",
+    "draft": false,
+    "id": 448631913,
+    "issue_type": null,
+    "labels": [],
+    "number": 849,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bugfix.",
+    "updated_at": "2020-07-16T01:57:56Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-07-16T03:24:56Z",
+    "created_at": "2020-07-16T02:37:30Z",
+    "draft": false,
+    "id": 449854065,
+    "issue_type": null,
+    "labels": [],
+    "number": 850,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removed asserts",
+    "updated_at": "2020-07-16T03:24:59Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-07-16T03:32:46Z",
+    "created_at": "2020-07-16T03:30:56Z",
+    "draft": false,
+    "id": 449870704,
+    "issue_type": null,
+    "labels": [],
+    "number": 851,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix typo in index_meta.rs",
+    "updated_at": "2020-07-16T03:32:46Z",
+    "user": {
+      "login": "aptend"
+    }
+  },
+  {
+    "closed_at": "2020-07-20T05:15:21Z",
+    "created_at": "2020-07-17T05:25:22Z",
+    "draft": false,
+    "id": 450792364,
+    "issue_type": null,
+    "labels": [],
+    "number": 852,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Blockwand",
+    "updated_at": "2020-07-20T05:15:21Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-07-17T07:40:41Z",
+    "created_at": "2020-07-17T05:53:01Z",
+    "draft": false,
+    "id": 450806561,
+    "issue_type": null,
+    "labels": [],
+    "number": 853,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Assert nearly equals macro",
+    "updated_at": "2020-07-17T14:50:41Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-07-20T04:05:06Z",
+    "created_at": "2020-07-20T01:48:46Z",
+    "draft": false,
+    "id": 452947183,
+    "issue_type": null,
+    "labels": [],
+    "number": 854,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added field norm readers",
+    "updated_at": "2020-07-20T04:05:06Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-07-22T07:13:01Z",
+    "id": 663532320,
+    "issue_type": null,
+    "labels": [],
+    "number": 855,
+    "state": "open",
+    "title": "How to impl this analyzer",
+    "updated_at": "2020-08-11T08:44:36Z",
+    "user": {
+      "login": "ansjsun"
+    }
+  },
+  {
+    "closed_at": "2020-08-19T13:36:37Z",
+    "created_at": "2020-07-28T01:02:34Z",
+    "draft": false,
+    "id": 457479108,
+    "issue_type": null,
+    "labels": [],
+    "number": 856,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Block wand",
+    "updated_at": "2020-08-19T13:36:40Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-08-12T07:43:52Z",
+    "created_at": "2020-08-03T16:36:40Z",
+    "id": 672200719,
+    "issue_type": null,
+    "labels": [],
+    "number": 857,
+    "state": "closed",
+    "title": "Index out of bounds on conjunction of term and range queries",
+    "updated_at": "2020-08-12T07:43:52Z",
+    "user": {
+      "login": "ppodolsky"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-08-07T06:28:18Z",
+    "id": 674792272,
+    "issue_type": null,
+    "labels": [],
+    "number": 858,
+    "state": "open",
+    "title": "Allow external executor pool for IndexWriter",
+    "updated_at": "2020-08-07T11:03:23Z",
+    "user": {
+      "login": "raultang"
+    }
+  },
+  {
+    "closed_at": "2020-08-18T05:07:35Z",
+    "created_at": "2020-08-11T06:59:37Z",
+    "draft": false,
+    "id": 465909866,
+    "issue_type": null,
+    "labels": [],
+    "number": 859,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add standard tokenizer",
+    "updated_at": "2020-08-18T05:07:35Z",
+    "user": {
+      "login": "ansjsun"
+    }
+  },
+  {
+    "closed_at": "2020-08-11T22:20:40Z",
+    "created_at": "2020-08-11T22:18:07Z",
+    "draft": false,
+    "id": 466385117,
+    "issue_type": null,
+    "labels": [],
+    "number": 860,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Entirely removes usage of failure and replace it with thiserror",
+    "updated_at": "2020-08-11T22:20:40Z",
+    "user": {
+      "login": "saresend"
+    }
+  },
+  {
+    "closed_at": "2020-08-12T07:06:25Z",
+    "created_at": "2020-08-12T06:46:18Z",
+    "draft": false,
+    "id": 466555575,
+    "issue_type": null,
+    "labels": [],
+    "number": 861,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bugfix",
+    "updated_at": "2020-08-12T07:06:29Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-08-16T01:49:56Z",
+    "created_at": "2020-08-16T01:47:14Z",
+    "draft": false,
+    "id": 468385013,
+    "issue_type": null,
+    "labels": [],
+    "number": 862,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update occur.rs",
+    "updated_at": "2020-08-16T01:49:56Z",
+    "user": {
+      "login": "lengyijun"
+    }
+  },
+  {
+    "closed_at": "2021-01-12T00:59:09Z",
+    "created_at": "2020-08-18T06:24:02Z",
+    "draft": false,
+    "id": 469234816,
+    "issue_type": null,
+    "labels": [],
+    "number": 863,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add standard tokenizer",
+    "updated_at": "2021-01-12T00:59:09Z",
+    "user": {
+      "login": "ansjsun"
+    }
+  },
+  {
+    "closed_at": "2021-01-12T00:59:09Z",
+    "created_at": "2020-08-19T14:23:25Z",
+    "draft": false,
+    "id": 470200272,
+    "issue_type": null,
+    "labels": [],
+    "number": 864,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Githubactions",
+    "updated_at": "2021-01-12T00:59:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-08-21T02:23:10Z",
+    "created_at": "2020-08-21T02:00:49Z",
+    "draft": false,
+    "id": 471330333,
+    "issue_type": null,
+    "labels": [],
+    "number": 865,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update basic_search.rs to remove duplicate text",
+    "updated_at": "2020-08-21T02:23:10Z",
+    "user": {
+      "login": "stephenlagree"
+    }
+  },
+  {
+    "closed_at": "2020-08-21T12:37:06Z",
+    "created_at": "2020-08-21T04:07:58Z",
+    "draft": false,
+    "id": 471364549,
+    "issue_type": null,
+    "labels": [],
+    "number": 866,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removing dependency to atomicwrites",
+    "updated_at": "2020-09-02T14:40:53Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-08-22T10:55:31Z",
+    "created_at": "2020-08-22T07:59:51Z",
+    "id": 683953078,
+    "issue_type": null,
+    "labels": [],
+    "number": 867,
+    "state": "closed",
+    "title": "SnippetGenerator doesn’t work with FuzzyTermQuery",
+    "updated_at": "2020-08-22T10:55:32Z",
+    "user": {
+      "login": "b8591340"
+    }
+  },
+  {
+    "closed_at": "2020-08-27T07:43:40Z",
+    "created_at": "2020-08-22T13:51:27Z",
+    "draft": false,
+    "id": 471990926,
+    "issue_type": null,
+    "labels": [],
+    "number": 868,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixing unit tests.",
+    "updated_at": "2020-08-27T07:43:40Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2022-03-07T02:45:39Z",
+    "created_at": "2020-08-22T13:55:08Z",
+    "id": 684001455,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      },
+      {
+        "color": "c5def5",
+        "description": null,
+        "id": 1411261257320120064,
+        "name": "performance"
+      }
+    ],
+    "number": 869,
+    "state": "closed",
+    "title": "Block WAND on TermQuery",
+    "updated_at": "2022-03-07T02:45:39Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-08-26T00:39:38Z",
+    "created_at": "2020-08-25T16:29:50Z",
+    "id": 685625845,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 870,
+    "state": "closed",
+    "title": "Corrupted term freq",
+    "updated_at": "2020-08-26T09:17:10Z",
+    "user": {
+      "login": "b8591340"
+    }
+  },
+  {
+    "closed_at": "2020-08-26T15:42:41Z",
+    "created_at": "2020-08-26T14:46:45Z",
+    "id": 686382376,
+    "issue_type": null,
+    "labels": [],
+    "number": 871,
+    "state": "closed",
+    "title": "Updates and Deletes",
+    "updated_at": "2020-08-26T15:42:41Z",
+    "user": {
+      "login": "sgrust01"
+    }
+  },
+  {
+    "closed_at": "2020-08-26T22:54:38Z",
+    "created_at": "2020-08-26T22:12:24Z",
+    "draft": false,
+    "id": 474225997,
+    "issue_type": null,
+    "labels": [],
+    "number": 872,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Filter meta.json from validate_checksum",
+    "updated_at": "2020-08-26T22:54:38Z",
+    "user": {
+      "login": "b8591340"
+    }
+  },
+  {
+    "closed_at": "2020-09-01T04:38:53Z",
+    "created_at": "2020-08-30T14:09:27Z",
+    "draft": false,
+    "id": 475916248,
+    "issue_type": null,
+    "labels": [],
+    "number": 874,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Accept dash within field names.",
+    "updated_at": "2021-08-16T21:36:58Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-09-01T01:07:21Z",
+    "id": 689725591,
+    "issue_type": null,
+    "labels": [],
+    "number": 875,
+    "state": "open",
+    "title": "Document the JSON format",
+    "updated_at": "2020-09-01T01:07:21Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-09-06T00:48:33Z",
+    "created_at": "2020-09-02T02:14:47Z",
+    "id": 690660338,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 876,
+    "state": "closed",
+    "title": "atomic_writes do not work if the temp directory and tantivy's directory are not on the same filesystem",
+    "updated_at": "2020-09-06T02:16:29Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-10-05T02:27:28Z",
+    "created_at": "2020-09-02T02:53:02Z",
+    "draft": false,
+    "id": 477534690,
+    "issue_type": null,
+    "labels": [],
+    "number": 877,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Support for indexed bytes fast field",
+    "updated_at": "2020-10-05T02:27:28Z",
+    "user": {
+      "login": "raultang"
+    }
+  },
+  {
+    "closed_at": "2020-09-05T14:06:30Z",
+    "created_at": "2020-09-05T12:40:57Z",
+    "draft": false,
+    "id": 480513435,
+    "issue_type": null,
+    "labels": [],
+    "number": 878,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Creating the tempfile for atomicwrites in the same directory as the M…",
+    "updated_at": "2020-09-05T14:06:34Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-10-01T09:03:19Z",
+    "created_at": "2020-09-06T02:14:42Z",
+    "draft": false,
+    "id": 480632399,
+    "issue_type": null,
+    "labels": [],
+    "number": 879,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Raultang master",
+    "updated_at": "2020-10-01T09:03:23Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-09-07T06:52:36Z",
+    "created_at": "2020-09-07T03:01:23Z",
+    "draft": false,
+    "id": 481000196,
+    "issue_type": null,
+    "labels": [],
+    "number": 880,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Returning Result in some of the API",
+    "updated_at": "2021-08-16T21:36:59Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-09-08T14:11:00Z",
+    "created_at": "2020-09-08T14:06:47Z",
+    "draft": false,
+    "id": 482069313,
+    "issue_type": null,
+    "labels": [],
+    "number": 881,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removing Term Vec allocation",
+    "updated_at": "2020-09-08T14:11:06Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-09-30T08:51:14Z",
+    "created_at": "2020-09-17T20:29:47Z",
+    "id": 703889343,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 882,
+    "state": "closed",
+    "title": "TopDocs support order_by for Date fast fields",
+    "updated_at": "2020-09-30T08:51:14Z",
+    "user": {
+      "login": "erichutchins"
+    }
+  },
+  {
+    "closed_at": "2020-09-19T13:07:57Z",
+    "created_at": "2020-09-19T01:07:49Z",
+    "id": 704729011,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 883,
+    "state": "closed",
+    "title": "File missing after merge in tantivy-cli",
+    "updated_at": "2020-09-19T13:08:34Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-09-19T14:37:17Z",
+    "id": 704893632,
+    "issue_type": null,
+    "labels": [],
+    "number": 884,
+    "state": "open",
+    "title": "Make tantivy's directory `io::Read` friendly.",
+    "updated_at": "2020-09-20T14:57:41Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-10-09T05:51:43Z",
+    "created_at": "2020-09-22T19:12:16Z",
+    "draft": false,
+    "id": 491140370,
+    "issue_type": null,
+    "labels": [],
+    "number": 885,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[tantivy] Add brotli codec for row storage",
+    "updated_at": "2020-10-09T05:51:43Z",
+    "user": {
+      "login": "ppodolsky"
+    }
+  },
+  {
+    "closed_at": "2022-06-16T22:35:14Z",
+    "created_at": "2020-09-23T01:34:35Z",
+    "id": 706858245,
+    "issue_type": null,
+    "labels": [],
+    "number": 886,
+    "state": "closed",
+    "title": "[Feature request] non-hierarchy facets",
+    "updated_at": "2022-06-16T22:35:14Z",
+    "user": {
+      "login": "sbeckeriv"
+    }
+  },
+  {
+    "closed_at": "2020-10-05T01:32:53Z",
+    "created_at": "2020-09-24T20:25:34Z",
+    "id": 708452061,
+    "issue_type": null,
+    "labels": [],
+    "number": 887,
+    "state": "closed",
+    "title": "Design of the Tantivy .store/Document/Schema",
+    "updated_at": "2020-10-05T01:32:53Z",
+    "user": {
+      "login": "ppodolsky"
+    }
+  },
+  {
+    "closed_at": "2021-05-19T09:17:05Z",
+    "created_at": "2020-09-29T02:09:29Z",
+    "draft": false,
+    "id": 494497637,
+    "issue_type": null,
+    "labels": [],
+    "number": 888,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Switch to slog",
+    "updated_at": "2021-05-19T09:17:05Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-09-30T07:34:10Z",
+    "created_at": "2020-09-29T05:35:54Z",
+    "draft": false,
+    "id": 494567257,
+    "issue_type": null,
+    "labels": [],
+    "number": 889,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Hirevo move to thiserror",
+    "updated_at": "2021-08-16T21:37:00Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-09-30T08:51:12Z",
+    "created_at": "2020-09-29T07:39:25Z",
+    "draft": false,
+    "id": 494624410,
+    "issue_type": null,
+    "labels": [],
+    "number": 890,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Issue/822 TopDocs sorted by i64, and date fastfield (in addition to u64)",
+    "updated_at": "2020-09-30T08:51:16Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-04-19T00:32:44Z",
+    "created_at": "2020-09-30T00:10:33Z",
+    "id": 711543234,
+    "issue_type": null,
+    "labels": [],
+    "number": 891,
+    "state": "closed",
+    "title": "Add date range.",
+    "updated_at": "2021-04-19T00:32:44Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-12-15T02:46:09Z",
+    "created_at": "2020-09-30T00:10:53Z",
+    "id": 711543355,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 892,
+    "state": "closed",
+    "title": "Add a FilterCollector wrapper",
+    "updated_at": "2020-12-15T02:46:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-02T00:05:09Z",
+    "created_at": "2020-09-30T00:11:45Z",
+    "id": 711543653,
+    "issue_type": null,
+    "labels": [],
+    "number": 893,
+    "state": "closed",
+    "title": "Add an API to inverse the order of elements on TopDocs.",
+    "updated_at": "2020-11-02T00:05:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-09-30T00:12:42Z",
+    "id": 711543985,
+    "issue_type": null,
+    "labels": [],
+    "number": 894,
+    "state": "open",
+    "title": "Fix the user experience for selecting a range.",
+    "updated_at": "2020-09-30T01:16:01Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-10-01T02:37:36Z",
+    "created_at": "2020-09-30T20:12:52Z",
+    "draft": false,
+    "id": 495761073,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 895,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update base64 requirement from 0.12 to 0.13",
+    "updated_at": "2020-10-01T02:37:44Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-10-01T11:39:47Z",
+    "created_at": "2020-10-01T09:28:17Z",
+    "id": 712666970,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 896,
+    "state": "closed",
+    "title": "Acquiring a FacetReader on a segment where no document contain facets fails.",
+    "updated_at": "2020-10-01T11:39:47Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-01-07T14:39:15Z",
+    "created_at": "2020-10-01T09:34:33Z",
+    "id": 712671865,
+    "issue_type": null,
+    "labels": [],
+    "number": 897,
+    "state": "closed",
+    "title": "Possible index corruption under load",
+    "updated_at": "2021-01-07T14:54:31Z",
+    "user": {
+      "login": "ppodolsky"
+    }
+  },
+  {
+    "closed_at": "2024-05-06T16:44:16Z",
+    "created_at": "2020-10-02T04:12:39Z",
+    "id": 713332143,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 898,
+    "state": "closed",
+    "title": "'cannot execute `LocalPool` executor from within another executor: EnterError' when using futures::executor::block_on()",
+    "updated_at": "2024-05-06T16:44:16Z",
+    "user": {
+      "login": "bbigras"
+    }
+  },
+  {
+    "closed_at": "2021-05-19T01:50:00Z",
+    "created_at": "2020-10-02T15:40:59Z",
+    "draft": false,
+    "id": 496986803,
+    "issue_type": null,
+    "labels": [],
+    "number": 899,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[tantivy] Faster traversing of the whole segment store",
+    "updated_at": "2021-05-19T01:50:00Z",
+    "user": {
+      "login": "ppodolsky"
+    }
+  },
+  {
+    "closed_at": "2020-10-02T22:51:24Z",
+    "created_at": "2020-10-02T21:54:05Z",
+    "id": 713922124,
+    "issue_type": null,
+    "labels": [],
+    "number": 900,
+    "state": "closed",
+    "title": "[feature] remove field from document for updating",
+    "updated_at": "2020-10-03T20:45:20Z",
+    "user": {
+      "login": "sbeckeriv"
+    }
+  },
+  {
+    "closed_at": "2020-10-08T07:36:51Z",
+    "created_at": "2020-10-03T15:21:57Z",
+    "draft": false,
+    "id": 497292589,
+    "issue_type": null,
+    "labels": [],
+    "number": 901,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Large change in the Directory API. Introduction of FileSlice / OwnedBytes.",
+    "updated_at": "2020-10-08T07:36:55Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-10-05T02:24:48Z",
+    "created_at": "2020-10-04T18:25:21Z",
+    "draft": false,
+    "id": 497477182,
+    "issue_type": null,
+    "labels": [],
+    "number": 902,
+    "pull_request": {},
+    "state": "closed",
+    "title": "[tantivy] Fix for schema deserialization error",
+    "updated_at": "2020-10-05T07:37:45Z",
+    "user": {
+      "login": "ppodolsky"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-10-05T01:32:06Z",
+    "id": 714450940,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "159818",
+        "description": null,
+        "id": 6009342136867471565,
+        "name": "help wanted"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 903,
+    "state": "open",
+    "title": "Make the Document binary serialization format more compact.",
+    "updated_at": "2021-01-25T02:39:11Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-05-28T05:57:20Z",
+    "created_at": "2020-10-08T01:04:15Z",
+    "id": 716946352,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 904,
+    "state": "closed",
+    "title": "Dynamic compression format",
+    "updated_at": "2021-05-28T05:57:20Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-10-11T13:22:57Z",
+    "created_at": "2020-10-10T03:04:03Z",
+    "draft": false,
+    "id": 500898073,
+    "issue_type": null,
+    "labels": [],
+    "number": 905,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Refactoring dir",
+    "updated_at": "2020-10-11T13:23:01Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-10-10T15:46:33Z",
+    "id": 718646479,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 906,
+    "state": "open",
+    "title": "Add explicit ascending/descending ordering to order_by_u64_field()",
+    "updated_at": "2020-12-09T14:35:35Z",
+    "user": {
+      "login": "sstangl"
+    }
+  },
+  {
+    "closed_at": "2020-10-12T11:23:42Z",
+    "created_at": "2020-10-10T23:17:21Z",
+    "id": 718720744,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 907,
+    "state": "closed",
+    "title": "negative timings on a served index being built",
+    "updated_at": "2020-10-12T11:23:42Z",
+    "user": {
+      "login": "scampi"
+    }
+  },
+  {
+    "closed_at": "2020-10-13T00:36:01Z",
+    "created_at": "2020-10-12T20:13:07Z",
+    "draft": false,
+    "id": 501789369,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 908,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update crossbeam requirement from 0.7 to 0.8",
+    "updated_at": "2020-10-13T00:36:09Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": "2020-10-13T01:55:51Z",
+    "created_at": "2020-10-13T00:36:18Z",
+    "draft": false,
+    "id": 501899166,
+    "issue_type": null,
+    "labels": [],
+    "number": 909,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Updating crossbeam",
+    "updated_at": "2021-08-16T21:37:02Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-10-13T01:19:31Z",
+    "created_at": "2020-10-13T00:54:44Z",
+    "draft": false,
+    "id": 501904260,
+    "issue_type": null,
+    "labels": [],
+    "number": 910,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Moving HasLen",
+    "updated_at": "2020-10-13T01:19:45Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-10-14T22:49:29Z",
+    "id": 721844965,
+    "issue_type": null,
+    "labels": [],
+    "number": 911,
+    "state": "open",
+    "title": "Is there Serde support for Snippets?",
+    "updated_at": "2020-10-14T22:49:29Z",
+    "user": {
+      "login": "liamwarfield"
+    }
+  },
+  {
+    "closed_at": "2020-10-29T09:10:00Z",
+    "created_at": "2020-10-18T11:27:10Z",
+    "id": 723985801,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 912,
+    "state": "closed",
+    "title": "Add helpers for building BooleanQuery",
+    "updated_at": "2020-10-29T09:10:00Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-10-28T08:38:02Z",
+    "created_at": "2020-10-20T11:47:41Z",
+    "draft": false,
+    "id": 506725731,
+    "issue_type": null,
+    "labels": [],
+    "number": 913,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add helper methods for BooleanQuery",
+    "updated_at": "2020-10-30T17:42:26Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2020-10-27T05:36:03Z",
+    "created_at": "2020-10-21T10:28:19Z",
+    "draft": false,
+    "id": 507427678,
+    "issue_type": null,
+    "labels": [],
+    "number": 914,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Clippy lint",
+    "updated_at": "2020-10-27T05:36:03Z",
+    "user": {
+      "login": "ppodolsky"
+    }
+  },
+  {
+    "closed_at": "2020-10-28T13:29:16Z",
+    "created_at": "2020-10-22T04:50:51Z",
+    "id": 727043348,
+    "issue_type": null,
+    "labels": [],
+    "number": 915,
+    "state": "closed",
+    "title": "[bug] query.explain is erroring",
+    "updated_at": "2020-10-28T13:29:16Z",
+    "user": {
+      "login": "sbeckeriv"
+    }
+  },
+  {
+    "closed_at": "2022-01-03T19:26:30Z",
+    "created_at": "2020-10-25T01:17:49Z",
+    "id": 728914299,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 916,
+    "state": "closed",
+    "title": "The Snippet::fragments member is misleading and needs a rename",
+    "updated_at": "2022-01-03T19:26:31Z",
+    "user": {
+      "login": "liamwarfield"
+    }
+  },
+  {
+    "closed_at": "2020-10-28T08:46:27Z",
+    "created_at": "2020-10-26T05:43:10Z",
+    "id": 729256459,
+    "issue_type": null,
+    "labels": [],
+    "number": 917,
+    "state": "closed",
+    "title": "why pisa is so fast",
+    "updated_at": "2020-10-28T08:46:28Z",
+    "user": {
+      "login": "guotie"
+    }
+  },
+  {
+    "closed_at": "2020-10-28T08:35:35Z",
+    "created_at": "2020-10-28T02:31:41Z",
+    "draft": false,
+    "id": 511231314,
+    "issue_type": null,
+    "labels": [],
+    "number": 918,
+    "pull_request": {},
+    "state": "closed",
+    "title": "(guilload) boolean query helpers",
+    "updated_at": "2020-10-28T08:35:39Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-10-28T06:08:48Z",
+    "created_at": "2020-10-28T05:48:24Z",
+    "draft": false,
+    "id": 511296539,
+    "issue_type": null,
+    "labels": [],
+    "number": 919,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removing Inoperable 'Say Thanks' Links",
+    "updated_at": "2020-10-28T06:08:48Z",
+    "user": {
+      "login": "sbeckeriv"
+    }
+  },
+  {
+    "closed_at": "2020-10-28T13:29:16Z",
+    "created_at": "2020-10-28T11:17:27Z",
+    "draft": false,
+    "id": 511469769,
+    "issue_type": null,
+    "labels": [],
+    "number": 920,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixes a bug in TermQuery::explain.",
+    "updated_at": "2021-08-16T21:37:02Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-10-29T04:04:38Z",
+    "created_at": "2020-10-29T02:25:00Z",
+    "draft": false,
+    "id": 511965963,
+    "issue_type": null,
+    "labels": [],
+    "number": 921,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Exposing API for the hot directory",
+    "updated_at": "2020-10-29T04:04:47Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2022-03-22T07:43:02Z",
+    "created_at": "2020-11-02T04:35:18Z",
+    "id": 734171765,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      },
+      {
+        "color": "006b75",
+        "description": "",
+        "id": 1836260052125601210,
+        "name": "quickwit"
+      }
+    ],
+    "number": 922,
+    "state": "closed",
+    "title": "Make it possible to index a field without fieldnorms",
+    "updated_at": "2022-03-22T07:43:02Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-03T06:49:35Z",
+    "created_at": "2020-11-03T06:40:49Z",
+    "draft": false,
+    "id": 514520259,
+    "issue_type": null,
+    "labels": [],
+    "number": 923,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Minor refactoring postings serializers options.",
+    "updated_at": "2020-11-03T06:49:39Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-06T13:41:27Z",
+    "created_at": "2020-11-06T00:50:40Z",
+    "draft": false,
+    "id": 516425756,
+    "issue_type": null,
+    "labels": [],
+    "number": 924,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Implement FileWatcher",
+    "updated_at": "2020-11-06T13:41:46Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-09T06:58:04Z",
+    "created_at": "2020-11-09T06:08:12Z",
+    "draft": false,
+    "id": 517499829,
+    "issue_type": null,
+    "labels": [],
+    "number": 925,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Postings end offset",
+    "updated_at": "2020-11-09T06:58:13Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-10T08:59:46Z",
+    "created_at": "2020-11-10T02:09:29Z",
+    "draft": false,
+    "id": 518157553,
+    "issue_type": null,
+    "labels": [],
+    "number": 926,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Modified `Directory::exists` API to return `Result<bool, OpenReadError>`",
+    "updated_at": "2020-11-10T08:59:49Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2020-11-17T07:13:45Z",
+    "created_at": "2020-11-10T08:59:10Z",
+    "draft": false,
+    "id": 518330751,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 927,
+    "pull_request": {},
+    "state": "closed",
+    "title": "SkipList object",
+    "updated_at": "2020-11-17T18:08:22Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-11T18:32:01Z",
+    "created_at": "2020-11-10T19:45:52Z",
+    "id": 740193862,
+    "issue_type": null,
+    "labels": [],
+    "number": 928,
+    "state": "closed",
+    "title": "Corrupt index when using index writer in background thread",
+    "updated_at": "2020-11-12T09:20:56Z",
+    "user": {
+      "login": "maufl"
+    }
+  },
+  {
+    "closed_at": "2020-11-12T05:11:54Z",
+    "created_at": "2020-11-11T03:01:05Z",
+    "draft": false,
+    "id": 518909326,
+    "issue_type": null,
+    "labels": [],
+    "number": 929,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make field TermMerger API public",
+    "updated_at": "2020-11-12T05:11:57Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-12T04:22:36Z",
+    "created_at": "2020-11-11T06:32:59Z",
+    "id": 740505475,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 930,
+    "state": "closed",
+    "title": "Race condition in directory::tests::ram_directory_tests::test_watch",
+    "updated_at": "2020-11-12T04:22:36Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-12T04:22:35Z",
+    "created_at": "2020-11-11T06:53:36Z",
+    "draft": false,
+    "id": 518993267,
+    "issue_type": null,
+    "labels": [],
+    "number": 931,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Closes #930 Minor bug.",
+    "updated_at": "2020-11-12T04:22:39Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-13T02:47:16Z",
+    "created_at": "2020-11-12T05:07:32Z",
+    "draft": false,
+    "id": 519623295,
+    "issue_type": null,
+    "labels": [],
+    "number": 932,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixing unit test.",
+    "updated_at": "2020-11-13T02:47:19Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-04-14T03:19:52Z",
+    "created_at": "2020-11-12T21:33:56Z",
+    "id": 741943278,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      },
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 933,
+    "state": "closed",
+    "title": "Panic when reading fields with field searcher",
+    "updated_at": "2021-04-14T03:19:52Z",
+    "user": {
+      "login": "maufl"
+    }
+  },
+  {
+    "closed_at": "2020-11-17T05:25:36Z",
+    "created_at": "2020-11-13T05:13:14Z",
+    "id": 742149006,
+    "issue_type": null,
+    "labels": [],
+    "number": 934,
+    "state": "closed",
+    "title": "Introduce a proper LRU cache for the store reader cache",
+    "updated_at": "2020-11-17T05:26:19Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2022-10-05T07:47:20Z",
+    "created_at": "2020-11-13T07:35:03Z",
+    "id": 742228360,
+    "issue_type": null,
+    "labels": [],
+    "number": 935,
+    "state": "closed",
+    "title": "Remove the searcher pool",
+    "updated_at": "2022-10-05T07:47:20Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-11-14T03:36:13Z",
+    "id": 742915097,
+    "issue_type": null,
+    "labels": [],
+    "number": 936,
+    "state": "open",
+    "title": "Right way to use only TF score for ranking",
+    "updated_at": "2020-12-16T15:23:43Z",
+    "user": {
+      "login": "snakeztc"
+    }
+  },
+  {
+    "closed_at": "2020-11-17T04:45:10Z",
+    "created_at": "2020-11-14T21:21:44Z",
+    "draft": false,
+    "id": 521061999,
+    "issue_type": null,
+    "labels": [],
+    "number": 937,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Cache store reader blocks in an LRU fashion",
+    "updated_at": "2020-11-17T04:45:21Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2021-01-06T08:48:27Z",
+    "created_at": "2020-11-16T01:20:08Z",
+    "id": 743399920,
+    "issue_type": null,
+    "labels": [],
+    "number": 938,
+    "state": "closed",
+    "title": "io Friendly dictionary.",
+    "updated_at": "2021-01-06T08:48:27Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-17T03:08:02Z",
+    "created_at": "2020-11-16T21:15:24Z",
+    "id": 744195384,
+    "issue_type": null,
+    "labels": [],
+    "number": 939,
+    "state": "closed",
+    "title": "Token docs do not match Tokenizer behavior",
+    "updated_at": "2020-11-17T03:08:02Z",
+    "user": {
+      "login": "cormac-obrien"
+    }
+  },
+  {
+    "closed_at": "2020-11-18T02:08:20Z",
+    "created_at": "2020-11-18T01:55:59Z",
+    "draft": false,
+    "id": 522835474,
+    "issue_type": null,
+    "labels": [],
+    "number": 940,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Move `SegmentUpdater::list_files()` to `Index`",
+    "updated_at": "2020-11-18T02:08:24Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2020-11-20T04:54:06Z",
+    "created_at": "2020-11-20T04:53:54Z",
+    "draft": false,
+    "id": 524426251,
+    "issue_type": null,
+    "labels": [],
+    "number": 941,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Revert \"Move `SegmentUpdater::list_files()` to `Index`\"",
+    "updated_at": "2020-11-20T04:54:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-30T02:26:28Z",
+    "created_at": "2020-11-21T16:13:40Z",
+    "draft": false,
+    "id": 525151004,
+    "issue_type": null,
+    "labels": [],
+    "number": 942,
+    "pull_request": {},
+    "state": "closed",
+    "title": "added initial implementation for filter_collector",
+    "updated_at": "2020-11-30T02:26:29Z",
+    "user": {
+      "login": "barrotsteindev"
+    }
+  },
+  {
+    "closed_at": "2020-11-25T00:04:40Z",
+    "created_at": "2020-11-23T18:47:58Z",
+    "draft": false,
+    "id": 525927387,
+    "issue_type": null,
+    "labels": [],
+    "number": 943,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add helper methods for reading u8 and u64 to `OwnedBytes`",
+    "updated_at": "2020-11-25T00:44:43Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2020-11-25T02:54:44Z",
+    "created_at": "2020-11-25T02:23:02Z",
+    "draft": false,
+    "id": 526986933,
+    "issue_type": null,
+    "labels": [],
+    "number": 944,
+    "pull_request": {},
+    "state": "closed",
+    "title": "No filelen problem.",
+    "updated_at": "2020-11-25T02:54:47Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-25T04:57:22Z",
+    "created_at": "2020-11-25T03:57:41Z",
+    "draft": false,
+    "id": 527067575,
+    "issue_type": null,
+    "labels": [],
+    "number": 945,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Replace some `Arc<Box<dyn...` with `Arc<dyn...`",
+    "updated_at": "2020-11-25T04:57:26Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2020-12-01T06:29:51Z",
+    "created_at": "2020-11-25T09:05:55Z",
+    "draft": false,
+    "id": 527290845,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 946,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Attempt to fix bug surfacing sometimes in test.",
+    "updated_at": "2020-12-01T06:29:55Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-11-26T08:49:22Z",
+    "created_at": "2020-11-25T09:47:57Z",
+    "id": 750662943,
+    "issue_type": null,
+    "labels": [],
+    "number": 947,
+    "state": "closed",
+    "title": "Fuzzy matching in query parser",
+    "updated_at": "2020-11-26T08:49:22Z",
+    "user": {
+      "login": "Bendabir"
+    }
+  },
+  {
+    "closed_at": "2020-11-30T23:52:12Z",
+    "created_at": "2020-11-30T04:22:51Z",
+    "draft": false,
+    "id": 529265753,
+    "issue_type": null,
+    "labels": [],
+    "number": 948,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix perf regression in the benchmark for the Count collector.",
+    "updated_at": "2021-08-16T21:37:03Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-12-01T10:12:52Z",
+    "created_at": "2020-12-01T10:08:40Z",
+    "draft": false,
+    "id": 530184936,
+    "issue_type": null,
+    "labels": [],
+    "number": 949,
+    "pull_request": {},
+    "state": "closed",
+    "title": "DocSet is send",
+    "updated_at": "2020-12-01T10:12:56Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-12-01T23:09:32Z",
+    "created_at": "2020-12-01T20:09:04Z",
+    "draft": false,
+    "id": 530545163,
+    "issue_type": null,
+    "labels": [],
+    "number": 950,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix clippy warning",
+    "updated_at": "2020-12-02T12:00:41Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2020-12-03T01:11:40Z",
+    "created_at": "2020-12-03T01:11:05Z",
+    "draft": false,
+    "id": 531388562,
+    "issue_type": null,
+    "labels": [],
+    "number": 951,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fst isolated",
+    "updated_at": "2021-08-16T21:37:03Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-12-10T09:09:31Z",
+    "created_at": "2020-12-09T07:51:59Z",
+    "draft": false,
+    "id": 534983476,
+    "issue_type": null,
+    "labels": [],
+    "number": 952,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Encode blockwand on a single byte.",
+    "updated_at": "2020-12-10T09:10:48Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2020-12-14T01:35:47Z",
+    "created_at": "2020-12-09T07:55:33Z",
+    "draft": false,
+    "id": 534985191,
+    "issue_type": null,
+    "labels": [],
+    "number": 953,
+    "pull_request": {},
+    "state": "closed",
+    "title": "WIP generic filter collector",
+    "updated_at": "2020-12-14T01:35:47Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2021-07-21T00:37:33Z",
+    "created_at": "2020-12-09T14:21:25Z",
+    "draft": false,
+    "id": 535214784,
+    "issue_type": null,
+    "labels": [],
+    "number": 954,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add order_by method",
+    "updated_at": "2021-07-21T00:37:33Z",
+    "user": {
+      "login": "jakeszhong"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-12-10T10:17:17Z",
+    "draft": false,
+    "id": 535823104,
+    "issue_type": null,
+    "labels": [],
+    "number": 955,
+    "pull_request": {},
+    "state": "open",
+    "title": "add score mode into Inverted Index",
+    "updated_at": "2023-02-22T02:24:02Z",
+    "user": {
+      "login": "snakeztc"
+    }
+  },
+  {
+    "closed_at": "2021-01-06T08:48:14Z",
+    "created_at": "2020-12-11T10:25:16Z",
+    "id": 762208206,
+    "issue_type": null,
+    "labels": [],
+    "number": 956,
+    "state": "closed",
+    "title": "Is tantivy suited for 1-5 billions web pages?",
+    "updated_at": "2021-01-06T08:48:14Z",
+    "user": {
+      "login": "mariusa"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-12-12T08:50:41Z",
+    "id": 763467410,
+    "issue_type": null,
+    "labels": [],
+    "number": 957,
+    "state": "open",
+    "title": "crawler recommendation",
+    "updated_at": "2021-03-09T02:08:27Z",
+    "user": {
+      "login": "mariusa"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-12-20T23:18:56Z",
+    "id": 771739803,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 958,
+    "state": "open",
+    "title": "term hashmap memory usage",
+    "updated_at": "2021-01-07T11:23:07Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2021-01-06T09:09:11Z",
+    "created_at": "2020-12-21T20:15:21Z",
+    "draft": false,
+    "id": 543701178,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      }
+    ],
+    "number": 959,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update rand requirement from 0.7 to 0.8",
+    "updated_at": "2021-01-06T09:09:17Z",
+    "user": {
+      "login": "dependabot-preview"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2020-12-25T04:11:20Z",
+    "id": 774620939,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cc317c",
+        "description": null,
+        "id": 1860757118907805835,
+        "name": "question"
+      }
+    ],
+    "number": 960,
+    "state": "open",
+    "title": "Method to get BooleanQuery as text",
+    "updated_at": "2020-12-31T14:29:40Z",
+    "user": {
+      "login": "egorgam"
+    }
+  },
+  {
+    "closed_at": "2021-06-24T10:50:05Z",
+    "created_at": "2020-12-27T11:13:00Z",
+    "id": 775018983,
+    "issue_type": null,
+    "labels": [],
+    "number": 961,
+    "state": "closed",
+    "title": "Removing dynamic dispatch and allocations in tokenizer",
+    "updated_at": "2021-06-24T10:50:05Z",
+    "user": {
+      "login": "troublescooter"
+    }
+  }
+]

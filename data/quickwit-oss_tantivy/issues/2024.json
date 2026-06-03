@@ -1,0 +1,4669 @@
+[
+  {
+    "closed_at": "2024-01-09T13:20:32Z",
+    "created_at": "2024-01-04T12:57:14Z",
+    "id": 2065616520,
+    "issue_type": null,
+    "labels": [],
+    "number": 2289,
+    "state": "closed",
+    "title": "parsing range query with whitespace fails on `0.21` but not `0.20`",
+    "updated_at": "2024-01-09T13:38:59Z",
+    "user": {
+      "login": "ljeub-pometry"
+    }
+  },
+  {
+    "closed_at": "2024-01-06T09:23:06Z",
+    "created_at": "2024-01-06T07:19:20Z",
+    "id": 2068446086,
+    "issue_type": null,
+    "labels": [],
+    "number": 2290,
+    "state": "closed",
+    "title": "Using AsciiFoldingFilter",
+    "updated_at": "2024-01-06T09:23:06Z",
+    "user": {
+      "login": "AndreasMeier12"
+    }
+  },
+  {
+    "closed_at": "2024-01-09T17:28:59Z",
+    "created_at": "2024-01-06T09:55:17Z",
+    "draft": false,
+    "id": 1667226262,
+    "issue_type": null,
+    "labels": [],
+    "number": 2291,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Allow optional whitespace before bound specification in range queries",
+    "updated_at": "2024-01-09T17:29:00Z",
+    "user": {
+      "login": "adamreichold"
+    }
+  },
+  {
+    "closed_at": "2024-01-08T03:44:27Z",
+    "created_at": "2024-01-07T16:38:15Z",
+    "id": 2069197445,
+    "issue_type": null,
+    "labels": [],
+    "number": 2292,
+    "state": "closed",
+    "title": "Potential to modify ordering for state in file_watcher model",
+    "updated_at": "2024-01-08T03:44:27Z",
+    "user": {
+      "login": "wang384670111"
+    }
+  },
+  {
+    "closed_at": "2024-01-09T13:52:22Z",
+    "created_at": "2024-01-08T19:58:19Z",
+    "id": 2071129122,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 2293,
+    "state": "closed",
+    "title": "Range query for optional fast field panics with Index out of bounds in 0.21.1",
+    "updated_at": "2024-01-09T13:52:22Z",
+    "user": {
+      "login": "williamho"
+    }
+  },
+  {
+    "closed_at": "2024-01-11T04:37:46Z",
+    "created_at": "2024-01-09T07:10:10Z",
+    "draft": false,
+    "id": 1670096902,
+    "issue_type": null,
+    "labels": [],
+    "number": 2294,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix off by one in optional index",
+    "updated_at": "2024-01-11T04:37:46Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-01-09T13:52:21Z",
+    "created_at": "2024-01-09T10:16:16Z",
+    "draft": false,
+    "id": 1670361242,
+    "issue_type": null,
+    "labels": [],
+    "number": 2295,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix bug that can cause `get_docids_for_value_range` to panic.",
+    "updated_at": "2024-01-09T18:34:33Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-01-10T11:56:13Z",
+    "id": 2074215630,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      }
+    ],
+    "number": 2296,
+    "state": "open",
+    "title": "accept ip in cidr notation in queries",
+    "updated_at": "2024-01-10T11:56:13Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-01-12T08:12:08Z",
+    "created_at": "2024-01-10T14:48:44Z",
+    "id": 2074538787,
+    "issue_type": null,
+    "labels": [],
+    "number": 2297,
+    "state": "closed",
+    "title": "How can I trigger a search with a minimum character count?",
+    "updated_at": "2024-01-12T08:12:08Z",
+    "user": {
+      "login": "billywatkins"
+    }
+  },
+  {
+    "closed_at": "2024-01-11T06:18:48Z",
+    "created_at": "2024-01-11T03:49:10Z",
+    "draft": false,
+    "id": 1673606734,
+    "issue_type": null,
+    "labels": [],
+    "number": 2298,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add memory arena test",
+    "updated_at": "2024-01-11T06:18:49Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-01-11T09:19:12Z",
+    "created_at": "2024-01-11T07:56:34Z",
+    "draft": false,
+    "id": 1673886211,
+    "issue_type": null,
+    "labels": [],
+    "number": 2299,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Truncate keys to u16::MAX in term hashmap",
+    "updated_at": "2024-01-11T09:19:13Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-01-12T23:51:26Z",
+    "id": 2079896036,
+    "issue_type": null,
+    "labels": [],
+    "number": 2300,
+    "state": "open",
+    "title": "Tantivy Internal Architecture Documentation",
+    "updated_at": "2024-02-08T16:18:10Z",
+    "user": {
+      "login": "kj3moraes"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-01-14T13:20:16Z",
+    "id": 2080726355,
+    "issue_type": null,
+    "labels": [],
+    "number": 2301,
+    "state": "open",
+    "title": "Multiple Snippets on multiple matches on the same document?",
+    "updated_at": "2024-02-07T07:40:23Z",
+    "user": {
+      "login": "inzanez"
+    }
+  },
+  {
+    "closed_at": "2024-01-17T13:38:36Z",
+    "created_at": "2024-01-17T13:35:15Z",
+    "draft": false,
+    "id": 1682990934,
+    "issue_type": null,
+    "labels": [],
+    "number": 2302,
+    "pull_request": {},
+    "state": "closed",
+    "title": "allow newline where we allow space in query parser",
+    "updated_at": "2024-01-17T13:38:37Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-01-18T13:24:33Z",
+    "id": 2088284184,
+    "issue_type": null,
+    "labels": [],
+    "number": 2303,
+    "state": "open",
+    "title": "Ngram + Stemmer combination",
+    "updated_at": "2024-01-19T07:32:22Z",
+    "user": {
+      "login": "ctron"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-01-18T17:03:01Z",
+    "draft": false,
+    "id": 1685229051,
+    "issue_type": null,
+    "labels": [],
+    "number": 2304,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat: add a simple way to chain two tokenizers",
+    "updated_at": "2024-02-05T06:25:40Z",
+    "user": {
+      "login": "ctron"
+    }
+  },
+  {
+    "closed_at": "2024-01-19T08:46:49Z",
+    "created_at": "2024-01-18T22:11:23Z",
+    "draft": false,
+    "id": 1685602584,
+    "issue_type": null,
+    "labels": [],
+    "number": 2305,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Minor improvement of README.md",
+    "updated_at": "2024-01-19T08:46:50Z",
+    "user": {
+      "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": "2024-01-23T15:27:35Z",
+    "created_at": "2024-01-23T15:08:46Z",
+    "draft": false,
+    "id": 1691951558,
+    "issue_type": null,
+    "labels": [],
+    "number": 2306,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add histogram agg test on empty index",
+    "updated_at": "2024-01-23T15:27:35Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-01-26T06:59:22Z",
+    "created_at": "2024-01-26T06:56:54Z",
+    "id": 2101692746,
+    "issue_type": null,
+    "labels": [],
+    "number": 2307,
+    "state": "closed",
+    "title": "Comment and code not align",
+    "updated_at": "2024-01-26T06:59:22Z",
+    "user": {
+      "login": "Milittle"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-01-26T16:34:09Z",
+    "draft": false,
+    "id": 1697433676,
+    "issue_type": null,
+    "labels": [],
+    "number": 2308,
+    "pull_request": {},
+    "state": "open",
+    "title": "Make allocating field names avoidable for range and exists queries.",
+    "updated_at": "2024-04-10T09:36:15Z",
+    "user": {
+      "login": "adamreichold"
+    }
+  },
+  {
+    "closed_at": "2024-01-29T14:23:16Z",
+    "created_at": "2024-01-29T10:15:21Z",
+    "draft": false,
+    "id": 1699644709,
+    "issue_type": null,
+    "labels": [],
+    "number": 2309,
+    "pull_request": {},
+    "state": "closed",
+    "title": "report if a term matched when warming up posting list",
+    "updated_at": "2024-01-29T14:23:17Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-01-31T09:30:21Z",
+    "created_at": "2024-01-30T05:54:04Z",
+    "draft": false,
+    "id": 1701320730,
+    "issue_type": null,
+    "labels": [],
+    "number": 2310,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add fuzz test for hashmap",
+    "updated_at": "2024-01-31T09:30:22Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-03-05T04:49:41Z",
+    "created_at": "2024-02-02T08:25:16Z",
+    "draft": false,
+    "id": 1707953392,
+    "issue_type": null,
+    "labels": [],
+    "number": 2311,
+    "pull_request": {},
+    "state": "closed",
+    "title": "agg: support to deserialize f64 from string",
+    "updated_at": "2024-03-05T04:49:42Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-02-05T08:33:00Z",
+    "created_at": "2024-02-05T05:01:58Z",
+    "draft": false,
+    "id": 1710890034,
+    "issue_type": null,
+    "labels": [],
+    "number": 2312,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add shared search executor",
+    "updated_at": "2024-02-05T08:34:47Z",
+    "user": {
+      "login": "MochiXu"
+    }
+  },
+  {
+    "closed_at": "2024-02-07T11:52:07Z",
+    "created_at": "2024-02-07T06:27:07Z",
+    "draft": false,
+    "id": 1715007941,
+    "issue_type": null,
+    "labels": [],
+    "number": 2313,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix serde for TopNComputer",
+    "updated_at": "2024-02-07T11:52:07Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-02-13T04:56:31Z",
+    "created_at": "2024-02-08T02:51:49Z",
+    "draft": false,
+    "id": 1716774638,
+    "issue_type": null,
+    "labels": [],
+    "number": 2314,
+    "pull_request": {},
+    "state": "closed",
+    "title": "clippy",
+    "updated_at": "2024-02-13T04:56:32Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-02-20T02:22:00Z",
+    "created_at": "2024-02-12T07:53:19Z",
+    "draft": false,
+    "id": 1721449425,
+    "issue_type": null,
+    "labels": [],
+    "number": 2315,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix Clone for TopNComputer, add top_hits bench",
+    "updated_at": "2024-02-20T02:22:01Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-02-13T08:02:08Z",
+    "created_at": "2024-02-13T06:23:24Z",
+    "id": 2131548285,
+    "issue_type": null,
+    "labels": [],
+    "number": 2316,
+    "state": "closed",
+    "title": "Possible performance improvement for very large index (>100M docs): Transparent huge pages?",
+    "updated_at": "2024-02-14T07:55:04Z",
+    "user": {
+      "login": "ellenhp"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-02-14T15:29:12Z",
+    "id": 2134613434,
+    "issue_type": null,
+    "labels": [],
+    "number": 2317,
+    "state": "open",
+    "title": "Occur::MustNot  does not seem to be working as expected",
+    "updated_at": "2026-02-24T09:17:40Z",
+    "user": {
+      "login": "hermeGarcia"
+    }
+  },
+  {
+    "closed_at": "2024-02-20T02:22:22Z",
+    "created_at": "2024-02-15T14:38:17Z",
+    "draft": false,
+    "id": 1727819649,
+    "issue_type": null,
+    "labels": [],
+    "number": 2318,
+    "pull_request": {},
+    "state": "closed",
+    "title": "support bool type in term aggregation",
+    "updated_at": "2024-02-20T02:22:23Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-03-14T08:41:19Z",
+    "created_at": "2024-02-23T03:14:58Z",
+    "draft": false,
+    "id": 1740015979,
+    "issue_type": null,
+    "labels": [],
+    "number": 2319,
+    "pull_request": {},
+    "state": "closed",
+    "title": "handle ip adresses in term aggregation",
+    "updated_at": "2024-03-14T08:41:19Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-02-26T10:35:22Z",
+    "created_at": "2024-02-26T08:13:29Z",
+    "draft": false,
+    "id": 1742842473,
+    "issue_type": null,
+    "labels": [],
+    "number": 2320,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removing split_size and adding split_size and shard_size as segmnet_size",
+    "updated_at": "2024-02-26T10:35:23Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-02-27T02:38:04Z",
+    "created_at": "2024-02-26T20:56:55Z",
+    "draft": false,
+    "id": 1744250549,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2321,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update fs4 requirement from 0.7.0 to 0.8.0",
+    "updated_at": "2024-02-27T02:38:04Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-03-05T03:11:11Z",
+    "created_at": "2024-02-27T21:03:11Z",
+    "draft": false,
+    "id": 1746500039,
+    "issue_type": null,
+    "labels": [],
+    "number": 2322,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make FacetCounts defaultable and cloneable.",
+    "updated_at": "2024-03-05T03:11:12Z",
+    "user": {
+      "login": "adamreichold"
+    }
+  },
+  {
+    "closed_at": "2024-03-07T14:17:48Z",
+    "created_at": "2024-02-28T14:01:15Z",
+    "draft": false,
+    "id": 1747785947,
+    "issue_type": null,
+    "labels": [],
+    "number": 2323,
+    "pull_request": {},
+    "state": "closed",
+    "title": "allow some mixing of occur and bool in strict query parser",
+    "updated_at": "2024-03-07T14:17:49Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-03-15T06:50:34Z",
+    "created_at": "2024-03-04T20:32:17Z",
+    "draft": false,
+    "id": 1755495078,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2324,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update base64 requirement from 0.21.0 to 0.22.0",
+    "updated_at": "2024-03-15T06:50:35Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-03-26T06:36:34Z",
+    "created_at": "2024-03-11T11:21:41Z",
+    "draft": false,
+    "id": 1765463788,
+    "issue_type": null,
+    "labels": [],
+    "number": 2325,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Impl trait `FromStr` for `Language`",
+    "updated_at": "2024-03-26T06:36:34Z",
+    "user": {
+      "login": "MochiXu"
+    }
+  },
+  {
+    "closed_at": "2024-03-15T07:02:08Z",
+    "created_at": "2024-03-12T08:42:34Z",
+    "draft": false,
+    "id": 1767417364,
+    "issue_type": null,
+    "labels": [],
+    "number": 2326,
+    "pull_request": {},
+    "state": "closed",
+    "title": "expose collect_block buffer size",
+    "updated_at": "2024-03-15T07:02:09Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-03-12T16:54:46Z",
+    "draft": true,
+    "id": 1768470883,
+    "issue_type": null,
+    "labels": [],
+    "number": 2327,
+    "pull_request": {},
+    "state": "open",
+    "title": "Speed up searches by removing repeated memsets coming from vec.resize()",
+    "updated_at": "2024-04-22T08:04:06Z",
+    "user": {
+      "login": "RaphaelMarinier"
+    }
+  },
+  {
+    "closed_at": "2024-03-14T03:07:11Z",
+    "created_at": "2024-03-13T09:54:07Z",
+    "draft": false,
+    "id": 1769699074,
+    "issue_type": null,
+    "labels": [],
+    "number": 2328,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add fast path for full columns in fetch_block",
+    "updated_at": "2024-03-14T05:46:03Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-03-13T23:27:25Z",
+    "created_at": "2024-03-13T18:05:46Z",
+    "id": 2184603638,
+    "issue_type": null,
+    "labels": [],
+    "number": 2329,
+    "state": "closed",
+    "title": "How to deal with undesirable stemming?",
+    "updated_at": "2024-03-14T12:02:00Z",
+    "user": {
+      "login": "kornelski"
+    }
+  },
+  {
+    "closed_at": "2024-03-15T07:01:47Z",
+    "created_at": "2024-03-15T01:37:04Z",
+    "draft": false,
+    "id": 1773272109,
+    "issue_type": null,
+    "labels": [],
+    "number": 2330,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add method to fetch block of first vals in columnar",
+    "updated_at": "2024-03-15T07:01:48Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-03-21T08:10:25Z",
+    "created_at": "2024-03-21T04:09:03Z",
+    "draft": false,
+    "id": 1783493479,
+    "issue_type": null,
+    "labels": [],
+    "number": 2331,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add collect_block to BoxableSegmentCollector",
+    "updated_at": "2024-03-21T08:10:26Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-15T08:36:33Z",
+    "created_at": "2024-03-21T09:31:40Z",
+    "id": 2199643841,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0052cc",
+        "description": null,
+        "id": 5094590151523322998,
+        "name": "newfeature"
+      }
+    ],
+    "number": 2332,
+    "state": "closed",
+    "title": "support more syntax for field grouping",
+    "updated_at": "2024-04-15T08:36:33Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-04-15T08:36:32Z",
+    "created_at": "2024-03-21T16:21:27Z",
+    "draft": false,
+    "id": 1784893740,
+    "issue_type": null,
+    "labels": [],
+    "number": 2333,
+    "pull_request": {},
+    "state": "closed",
+    "title": "extend field grouping",
+    "updated_at": "2024-04-15T08:36:33Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-03-25T22:33:51Z",
+    "id": 2206850762,
+    "issue_type": null,
+    "labels": [],
+    "number": 2334,
+    "state": "open",
+    "title": "Be able to use range query with values containing space ",
+    "updated_at": "2024-03-27T14:34:29Z",
+    "user": {
+      "login": "quanghungb"
+    }
+  },
+  {
+    "closed_at": "2024-05-25T10:40:47Z",
+    "created_at": "2024-03-28T18:46:11Z",
+    "id": 2213902852,
+    "issue_type": null,
+    "labels": [],
+    "number": 2335,
+    "state": "closed",
+    "title": "Panic occured while committing writer with sort by text field.",
+    "updated_at": "2024-05-25T10:40:47Z",
+    "user": {
+      "login": "gy0801151351"
+    }
+  },
+  {
+    "closed_at": "2024-04-16T02:42:24Z",
+    "created_at": "2024-03-29T01:36:57Z",
+    "draft": false,
+    "id": 1797166856,
+    "issue_type": null,
+    "labels": [],
+    "number": 2336,
+    "pull_request": {},
+    "state": "closed",
+    "title": "validate sort by field type",
+    "updated_at": "2024-04-16T02:42:25Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-30T23:49:42Z",
+    "created_at": "2024-04-01T13:28:29Z",
+    "draft": false,
+    "id": 1800471114,
+    "issue_type": null,
+    "labels": [],
+    "number": 2337,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: cardinality aggregation",
+    "updated_at": "2024-07-01T08:44:23Z",
+    "user": {
+      "login": "raphaelcoeffic"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-02T15:10:15Z",
+    "id": 2220781767,
+    "issue_type": null,
+    "labels": [],
+    "number": 2338,
+    "state": "open",
+    "title": "Index encryption via Encrypted Directory [reopen]",
+    "updated_at": "2024-04-02T15:10:15Z",
+    "user": {
+      "login": "mcrakhman"
+    }
+  },
+  {
+    "closed_at": "2024-04-12T07:08:57Z",
+    "created_at": "2024-04-02T16:38:19Z",
+    "id": 2220964372,
+    "issue_type": null,
+    "labels": [],
+    "number": 2339,
+    "state": "closed",
+    "title": "Requesting tantivy release to support zstd dependency",
+    "updated_at": "2024-04-12T07:08:57Z",
+    "user": {
+      "login": "xrl"
+    }
+  },
+  {
+    "closed_at": "2024-04-05T07:53:36Z",
+    "created_at": "2024-04-03T07:06:13Z",
+    "id": 2222081201,
+    "issue_type": null,
+    "labels": [],
+    "number": 2340,
+    "state": "closed",
+    "title": "Panic on document of death",
+    "updated_at": "2024-04-05T07:53:36Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-04T11:57:35Z",
+    "id": 2225292888,
+    "issue_type": null,
+    "labels": [],
+    "number": 2341,
+    "state": "open",
+    "title": "MemorySanitizer: use-of-uninitialized-value (probably false positive)",
+    "updated_at": "2024-04-04T11:57:35Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-11T08:02:57Z",
+    "created_at": "2024-04-04T12:52:36Z",
+    "draft": false,
+    "id": 1806955095,
+    "issue_type": null,
+    "labels": [],
+    "number": 2342,
+    "pull_request": {},
+    "state": "closed",
+    "title": "extend indexwriter proptests",
+    "updated_at": "2024-06-11T08:02:58Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-04T13:47:59Z",
+    "draft": false,
+    "id": 1807097858,
+    "issue_type": null,
+    "labels": [],
+    "number": 2343,
+    "pull_request": {},
+    "state": "open",
+    "title": "change debug_assert to assert in term length",
+    "updated_at": "2024-04-09T11:27:14Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-09T04:35:39Z",
+    "created_at": "2024-04-04T15:15:50Z",
+    "draft": false,
+    "id": 1807293421,
+    "issue_type": null,
+    "labels": [],
+    "number": 2344,
+    "pull_request": {},
+    "state": "closed",
+    "title": "uprade dependencies",
+    "updated_at": "2024-04-09T04:35:40Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-05T07:53:35Z",
+    "created_at": "2024-04-05T06:10:39Z",
+    "draft": false,
+    "id": 1808526584,
+    "issue_type": null,
+    "labels": [],
+    "number": 2345,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix null byte handling in JSON paths",
+    "updated_at": "2024-04-05T07:53:35Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-09T04:17:25Z",
+    "created_at": "2024-04-08T04:56:35Z",
+    "draft": false,
+    "id": 1811260126,
+    "issue_type": null,
+    "labels": [],
+    "number": 2346,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix postcard compatibility for top_hits, add postcard test",
+    "updated_at": "2024-04-09T04:17:26Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-09T04:17:27Z",
+    "created_at": "2024-04-08T08:25:14Z",
+    "id": 2230575310,
+    "issue_type": null,
+    "labels": [],
+    "number": 2347,
+    "state": "closed",
+    "title": "Top Hits Agg Performance: Delay fetching `get_document_field_data` in top_hits",
+    "updated_at": "2024-04-09T04:17:27Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-12T03:46:04Z",
+    "created_at": "2024-04-09T04:15:03Z",
+    "id": 2232567602,
+    "issue_type": null,
+    "labels": [],
+    "number": 2348,
+    "state": "closed",
+    "title": "top_hits aggregation parameter validation",
+    "updated_at": "2024-04-12T03:46:04Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-09T05:54:44Z",
+    "created_at": "2024-04-09T04:37:00Z",
+    "draft": false,
+    "id": 1813372538,
+    "issue_type": null,
+    "labels": [],
+    "number": 2349,
+    "pull_request": {},
+    "state": "closed",
+    "title": "clippy",
+    "updated_at": "2024-04-09T05:54:44Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-09T05:16:37Z",
+    "id": 2232619420,
+    "issue_type": null,
+    "labels": [],
+    "number": 2350,
+    "state": "open",
+    "title": "add `top_metrics` aggregation",
+    "updated_at": "2024-04-09T05:17:48Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-10T06:20:53Z",
+    "created_at": "2024-04-09T05:37:44Z",
+    "draft": false,
+    "id": 1813419374,
+    "issue_type": null,
+    "labels": [],
+    "number": 2351,
+    "pull_request": {},
+    "state": "closed",
+    "title": "check unsupported parameters top_hits",
+    "updated_at": "2024-04-10T06:20:53Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-13T07:51:54Z",
+    "created_at": "2024-04-09T13:02:11Z",
+    "id": 2233393502,
+    "issue_type": null,
+    "labels": [],
+    "number": 2352,
+    "state": "closed",
+    "title": "Planned removal of index sorting in 0.23.0",
+    "updated_at": "2024-06-13T07:51:54Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-10T06:09:09Z",
+    "created_at": "2024-04-09T13:04:44Z",
+    "draft": false,
+    "id": 1814098993,
+    "issue_type": null,
+    "labels": [],
+    "number": 2353,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add index sorting deprecation warning",
+    "updated_at": "2024-04-10T06:09:10Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-15T08:07:20Z",
+    "created_at": "2024-04-10T07:45:37Z",
+    "draft": false,
+    "id": 1815512776,
+    "issue_type": null,
+    "labels": [],
+    "number": 2354,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update CHANGELOG, use github API in cliff",
+    "updated_at": "2024-04-15T08:07:21Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-11T22:39:59Z",
+    "created_at": "2024-04-11T15:56:59Z",
+    "id": 2238068636,
+    "issue_type": null,
+    "labels": [],
+    "number": 2355,
+    "state": "closed",
+    "title": "Regular Expression Queries",
+    "updated_at": "2024-04-11T22:40:00Z",
+    "user": {
+      "login": "inzanez"
+    }
+  },
+  {
+    "closed_at": "2024-04-12T05:38:11Z",
+    "created_at": "2024-04-12T05:17:34Z",
+    "id": 2239105213,
+    "issue_type": null,
+    "labels": [],
+    "number": 2356,
+    "state": "closed",
+    "title": "Occur - Phrase query with slop",
+    "updated_at": "2024-04-12T05:38:12Z",
+    "user": {
+      "login": "inzanez"
+    }
+  },
+  {
+    "closed_at": "2024-04-12T09:19:42Z",
+    "created_at": "2024-04-12T08:46:15Z",
+    "id": 2239431310,
+    "issue_type": null,
+    "labels": [],
+    "number": 2357,
+    "state": "closed",
+    "title": "Negative Term ",
+    "updated_at": "2024-04-12T09:19:43Z",
+    "user": {
+      "login": "inzanez"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-12T15:03:31Z",
+    "id": 2240339672,
+    "issue_type": null,
+    "labels": [],
+    "number": 2358,
+    "state": "open",
+    "title": "FuzzyTermQuery, PhrasePrefixQuery, PhraseQuery --> Snippets / actual matches",
+    "updated_at": "2024-04-12T15:03:31Z",
+    "user": {
+      "login": "inzanez"
+    }
+  },
+  {
+    "closed_at": "2024-04-22T10:05:16Z",
+    "created_at": "2024-04-15T02:55:03Z",
+    "draft": false,
+    "id": 1822317107,
+    "issue_type": null,
+    "labels": [],
+    "number": 2359,
+    "pull_request": {},
+    "state": "closed",
+    "title": "improve document docs",
+    "updated_at": "2024-04-22T10:05:17Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-15T13:50:03Z",
+    "created_at": "2024-04-15T10:48:50Z",
+    "draft": false,
+    "id": 1822993101,
+    "issue_type": null,
+    "labels": [],
+    "number": 2360,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix trait bound of StoreReader::iter",
+    "updated_at": "2024-04-15T13:50:03Z",
+    "user": {
+      "login": "adamreichold"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-15T16:31:35Z",
+    "draft": false,
+    "id": 1823693463,
+    "issue_type": null,
+    "labels": [],
+    "number": 2361,
+    "pull_request": {},
+    "state": "open",
+    "title": "Provide StoreReader::enumerate to simplify creation of secondary indexes",
+    "updated_at": "2024-05-23T06:31:11Z",
+    "user": {
+      "login": "adamreichold"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-15T16:59:04Z",
+    "draft": false,
+    "id": 1823758247,
+    "issue_type": null,
+    "labels": [],
+    "number": 2362,
+    "pull_request": {},
+    "state": "open",
+    "title": "Extend DocumentDeserialize with a stateful variant DocumentDeserializeSeed",
+    "updated_at": "2024-05-27T16:52:32Z",
+    "user": {
+      "login": "adamreichold"
+    }
+  },
+  {
+    "closed_at": "2024-04-16T02:27:06Z",
+    "created_at": "2024-04-15T17:13:12Z",
+    "draft": false,
+    "id": 1823778409,
+    "issue_type": null,
+    "labels": [],
+    "number": 2363,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix some of the things current Clippy complains about",
+    "updated_at": "2024-04-16T02:27:06Z",
+    "user": {
+      "login": "adamreichold"
+    }
+  },
+  {
+    "closed_at": "2024-04-22T07:38:05Z",
+    "created_at": "2024-04-19T07:22:43Z",
+    "draft": false,
+    "id": 1830968891,
+    "issue_type": null,
+    "labels": [],
+    "number": 2364,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Owned value relying on Vec instead of BTreeMap",
+    "updated_at": "2024-04-22T07:38:06Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-04-21T14:17:50Z",
+    "created_at": "2024-04-21T13:47:47Z",
+    "id": 2255089680,
+    "issue_type": null,
+    "labels": [],
+    "number": 2365,
+    "state": "closed",
+    "title": "tantivy vs Lucene benchmark confusion",
+    "updated_at": "2024-05-28T04:35:06Z",
+    "user": {
+      "login": "rodion-m"
+    }
+  },
+  {
+    "closed_at": "2025-12-18T07:03:50Z",
+    "created_at": "2024-04-22T01:57:23Z",
+    "draft": false,
+    "id": 1833609752,
+    "issue_type": null,
+    "labels": [],
+    "number": 2366,
+    "pull_request": {},
+    "state": "closed",
+    "title": "split Term into Term and IndexingTerm",
+    "updated_at": "2025-12-18T07:03:50Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-22T10:23:35Z",
+    "created_at": "2024-04-22T07:26:59Z",
+    "draft": false,
+    "id": 1833933320,
+    "issue_type": null,
+    "labels": [],
+    "number": 2367,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add json path constructor to term",
+    "updated_at": "2024-04-22T10:23:36Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-22T10:23:15Z",
+    "created_at": "2024-04-22T07:49:25Z",
+    "draft": false,
+    "id": 1833975678,
+    "issue_type": null,
+    "labels": [],
+    "number": 2368,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix coverage",
+    "updated_at": "2024-04-22T10:23:16Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-05-24T15:39:52Z",
+    "created_at": "2024-04-22T08:14:07Z",
+    "draft": false,
+    "id": 1834021403,
+    "issue_type": null,
+    "labels": [],
+    "number": 2369,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Avoid converting BTreeMap to Vec in TantivyDocument::add_object.",
+    "updated_at": "2024-05-24T15:39:55Z",
+    "user": {
+      "login": "adamreichold"
+    }
+  },
+  {
+    "closed_at": "2024-04-23T02:05:41Z",
+    "created_at": "2024-04-22T11:16:52Z",
+    "draft": false,
+    "id": 1834363524,
+    "issue_type": null,
+    "labels": [],
+    "number": 2370,
+    "pull_request": {},
+    "state": "closed",
+    "title": "make convert_to_fast_value_and_append_to_json_term pub",
+    "updated_at": "2024-04-23T02:05:42Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-23T08:40:00Z",
+    "draft": false,
+    "id": 1836179714,
+    "issue_type": null,
+    "labels": [],
+    "number": 2371,
+    "pull_request": {},
+    "state": "open",
+    "title": "tantivy document memory experiment",
+    "updated_at": "2024-05-20T04:00:58Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-05-09T04:14:43Z",
+    "created_at": "2024-04-24T07:47:01Z",
+    "draft": false,
+    "id": 1838224918,
+    "issue_type": null,
+    "labels": [],
+    "number": 2372,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix ReferenceValue API flaw",
+    "updated_at": "2024-05-09T04:14:43Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-25T02:37:26Z",
+    "created_at": "2024-04-24T07:57:40Z",
+    "id": 2260643850,
+    "issue_type": null,
+    "labels": [],
+    "number": 2373,
+    "state": "closed",
+    "title": "Questions about the details of how Tantivy manages index files.",
+    "updated_at": "2024-04-25T02:37:27Z",
+    "user": {
+      "login": "MochiXu"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-24T08:08:44Z",
+    "id": 2260674563,
+    "issue_type": null,
+    "labels": [],
+    "number": 2374,
+    "state": "open",
+    "title": "Replace PreTokenizedString",
+    "updated_at": "2024-04-24T08:08:44Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-25T08:06:11Z",
+    "created_at": "2024-04-24T09:44:38Z",
+    "draft": false,
+    "id": 1838451703,
+    "issue_type": null,
+    "labels": [],
+    "number": 2375,
+    "pull_request": {},
+    "state": "closed",
+    "title": "modify fastfield range query heuristic",
+    "updated_at": "2024-04-25T08:06:12Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-24T10:24:07Z",
+    "id": 2260950474,
+    "issue_type": null,
+    "labels": [],
+    "number": 2376,
+    "state": "open",
+    "title": "support multiple modes of execution for fastfield range query",
+    "updated_at": "2025-07-18T14:22:30Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-24T11:31:54Z",
+    "id": 2261074836,
+    "issue_type": null,
+    "labels": [],
+    "number": 2377,
+    "state": "open",
+    "title": "Addition of a migration guide from Lucene to Tantivy",
+    "updated_at": "2024-04-24T16:09:21Z",
+    "user": {
+      "login": "beneyal"
+    }
+  },
+  {
+    "closed_at": "2024-05-07T09:29:49Z",
+    "created_at": "2024-04-25T15:04:21Z",
+    "draft": false,
+    "id": 1841124820,
+    "issue_type": null,
+    "labels": [],
+    "number": 2378,
+    "pull_request": {},
+    "state": "closed",
+    "title": "use bingang for agg benchmark",
+    "updated_at": "2024-05-07T09:29:49Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-04-26T04:03:28Z",
+    "created_at": "2024-04-26T03:10:06Z",
+    "draft": false,
+    "id": 1842045837,
+    "issue_type": null,
+    "labels": [],
+    "number": 2379,
+    "pull_request": {},
+    "state": "closed",
+    "title": "remove zero byte check",
+    "updated_at": "2024-04-26T04:03:28Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-10-18T02:50:22Z",
+    "created_at": "2024-04-26T08:50:08Z",
+    "id": 2265289865,
+    "issue_type": null,
+    "labels": [],
+    "number": 2380,
+    "state": "closed",
+    "title": "Store DateTime as nanos in docstore",
+    "updated_at": "2024-10-18T02:50:22Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-04-26T21:13:49Z",
+    "id": 2266515691,
+    "issue_type": null,
+    "labels": [],
+    "number": 2381,
+    "state": "open",
+    "title": "QueryParser raises SyntaxError when combining field prefix with nested searchstring",
+    "updated_at": "2025-09-20T11:56:32Z",
+    "user": {
+      "login": "mrwunderbar666"
+    }
+  },
+  {
+    "closed_at": "2024-05-07T07:59:41Z",
+    "created_at": "2024-04-30T04:32:10Z",
+    "draft": false,
+    "id": 1847028363,
+    "issue_type": null,
+    "labels": [],
+    "number": 2382,
+    "pull_request": {},
+    "state": "closed",
+    "title": "cleanup top level exports",
+    "updated_at": "2024-05-07T07:59:42Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-05-01T10:08:12Z",
+    "created_at": "2024-04-30T08:10:35Z",
+    "draft": false,
+    "id": 1847317423,
+    "issue_type": null,
+    "labels": [],
+    "number": 2383,
+    "pull_request": {},
+    "state": "closed",
+    "title": "allow more JSON values, fix i64 special case",
+    "updated_at": "2024-05-01T10:08:13Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-29T10:41:11Z",
+    "created_at": "2024-05-03T13:23:45Z",
+    "id": 2277677893,
+    "issue_type": null,
+    "labels": [],
+    "number": 2384,
+    "state": "closed",
+    "title": "Random Crash in Bitpacking/Columnar when Merging Segments",
+    "updated_at": "2024-07-29T10:41:11Z",
+    "user": {
+      "login": "fe9lix"
+    }
+  },
+  {
+    "closed_at": "2024-05-05T09:05:31Z",
+    "created_at": "2024-05-04T13:57:16Z",
+    "id": 2279009272,
+    "issue_type": null,
+    "labels": [],
+    "number": 2385,
+    "state": "closed",
+    "title": "Highligh feature not work?",
+    "updated_at": "2024-05-05T09:05:31Z",
+    "user": {
+      "login": "qq253498229"
+    }
+  },
+  {
+    "closed_at": "2024-05-08T10:22:45Z",
+    "created_at": "2024-05-06T15:37:33Z",
+    "draft": false,
+    "id": 1856443889,
+    "issue_type": null,
+    "labels": [],
+    "number": 2386,
+    "pull_request": {},
+    "state": "closed",
+    "title": "run block decompression from executor",
+    "updated_at": "2024-05-08T10:22:45Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-05-08T04:32:52Z",
+    "created_at": "2024-05-07T07:54:31Z",
+    "draft": false,
+    "id": 1857663572,
+    "issue_type": null,
+    "labels": [],
+    "number": 2387,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Removed usage of num_cpus",
+    "updated_at": "2024-05-08T04:32:53Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-05-09T04:15:54Z",
+    "id": 2286857143,
+    "issue_type": null,
+    "labels": [],
+    "number": 2388,
+    "state": "open",
+    "title": "Any plan to support learned sparse vector search?",
+    "updated_at": "2025-01-07T08:35:32Z",
+    "user": {
+      "login": "cyccbxhl"
+    }
+  },
+  {
+    "closed_at": "2024-05-09T07:01:13Z",
+    "created_at": "2024-05-09T04:57:28Z",
+    "draft": false,
+    "id": 1861407362,
+    "issue_type": null,
+    "labels": [],
+    "number": 2389,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Give allocation control to the caller instead of force a clone",
+    "updated_at": "2024-05-09T07:01:14Z",
+    "user": {
+      "login": "adamreichold"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-05-09T15:24:18Z",
+    "id": 2287920409,
+    "issue_type": null,
+    "labels": [],
+    "number": 2390,
+    "state": "open",
+    "title": "Implementing Block WAND optimization for more queries",
+    "updated_at": "2024-07-02T09:22:39Z",
+    "user": {
+      "login": "sujayakar"
+    }
+  },
+  {
+    "closed_at": "2024-05-10T08:19:13Z",
+    "created_at": "2024-05-10T05:54:38Z",
+    "draft": false,
+    "id": 1863266696,
+    "issue_type": null,
+    "labels": [],
+    "number": 2391,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Change in Executor API",
+    "updated_at": "2024-05-10T08:19:13Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-05-10T08:36:00Z",
+    "created_at": "2024-05-10T08:32:41Z",
+    "draft": false,
+    "id": 1863514321,
+    "issue_type": null,
+    "labels": [],
+    "number": 2392,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix compiler warning, cleanup",
+    "updated_at": "2024-05-10T08:36:00Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-11T08:03:50Z",
+    "created_at": "2024-05-10T08:46:57Z",
+    "draft": false,
+    "id": 1863534354,
+    "issue_type": null,
+    "labels": [],
+    "number": 2393,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix compiler warning, cleanup",
+    "updated_at": "2024-06-11T08:03:51Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-05-15T10:25:40Z",
+    "created_at": "2024-05-10T10:22:22Z",
+    "draft": false,
+    "id": 1863672951,
+    "issue_type": null,
+    "labels": [],
+    "number": 2394,
+    "pull_request": {},
+    "state": "closed",
+    "title": "lower contention on AggregationLimits",
+    "updated_at": "2024-05-15T10:25:41Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-12T09:03:51Z",
+    "created_at": "2024-05-12T07:27:02Z",
+    "id": 2291204676,
+    "issue_type": null,
+    "labels": [],
+    "number": 2395,
+    "state": "closed",
+    "title": "Adding Function Score Query",
+    "updated_at": "2024-06-12T09:03:58Z",
+    "user": {
+      "login": "alex-au-922"
+    }
+  },
+  {
+    "closed_at": "2024-06-12T09:02:16Z",
+    "created_at": "2024-05-12T07:28:50Z",
+    "draft": false,
+    "id": 1865192894,
+    "issue_type": null,
+    "labels": [],
+    "number": 2396,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add Function Score Query",
+    "updated_at": "2024-06-12T09:02:17Z",
+    "user": {
+      "login": "alex-au-922"
+    }
+  },
+  {
+    "closed_at": "2024-05-13T06:21:14Z",
+    "created_at": "2024-05-12T20:14:51Z",
+    "draft": false,
+    "id": 1865422737,
+    "issue_type": null,
+    "labels": [],
+    "number": 2397,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Implement `std::io::Read` on `FileSlice`",
+    "updated_at": "2024-05-14T11:22:42Z",
+    "user": {
+      "login": "tontinton"
+    }
+  },
+  {
+    "closed_at": "2024-07-01T10:33:35Z",
+    "created_at": "2024-05-13T09:00:53Z",
+    "id": 2292231830,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "84b6eb",
+        "description": null,
+        "id": 7641015712852752914,
+        "name": "enhancement"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 2398,
+    "state": "closed",
+    "title": "Implement \"minimum number should match\" on BooleanQuery",
+    "updated_at": "2024-07-01T10:34:12Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-05-15T03:40:38Z",
+    "created_at": "2024-05-13T20:05:01Z",
+    "draft": false,
+    "id": 1867462538,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2399,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update binggan requirement from 0.5.2 to 0.6.2",
+    "updated_at": "2024-05-15T03:40:38Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-05-17T00:53:02Z",
+    "created_at": "2024-05-16T20:45:19Z",
+    "draft": false,
+    "id": 1874275723,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2400,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update itertools requirement from 0.12.0 to 0.13.0",
+    "updated_at": "2024-05-17T00:53:03Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-05-17T00:53:25Z",
+    "created_at": "2024-05-16T20:47:12Z",
+    "draft": false,
+    "id": 1874278184,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2401,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update binggan requirement from 0.6.2 to 0.7.0",
+    "updated_at": "2024-05-17T00:53:26Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-05-21T08:16:08Z",
+    "created_at": "2024-05-17T01:59:27Z",
+    "draft": false,
+    "id": 1874591949,
+    "issue_type": null,
+    "labels": [],
+    "number": 2402,
+    "pull_request": {},
+    "state": "closed",
+    "title": "compact doc",
+    "updated_at": "2024-05-21T08:16:09Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-12T02:26:46Z",
+    "created_at": "2024-05-17T12:17:29Z",
+    "id": 2302596527,
+    "issue_type": null,
+    "labels": [],
+    "number": 2403,
+    "state": "closed",
+    "title": "Flaky Test test_cancel_cpu_intensive_tasks",
+    "updated_at": "2024-07-12T02:26:46Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-05-18T16:20:24Z",
+    "created_at": "2024-05-18T16:18:42Z",
+    "draft": false,
+    "id": 1876794483,
+    "issue_type": null,
+    "labels": [],
+    "number": 2404,
+    "pull_request": {},
+    "state": "closed",
+    "title": "WIP:  Add `minimum_matches_required` parameter into booleanquery",
+    "updated_at": "2024-05-18T16:20:24Z",
+    "user": {
+      "login": "LebranceBW"
+    }
+  },
+  {
+    "closed_at": "2024-07-01T07:39:41Z",
+    "created_at": "2024-05-20T03:51:55Z",
+    "draft": false,
+    "id": 1877493103,
+    "issue_type": null,
+    "labels": [],
+    "number": 2405,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(query): Make `BooleanQuery` supports `minimum_number_should_match`",
+    "updated_at": "2024-07-02T00:27:41Z",
+    "user": {
+      "login": "LebranceBW"
+    }
+  },
+  {
+    "closed_at": "2024-05-21T02:36:32Z",
+    "created_at": "2024-05-20T20:45:26Z",
+    "draft": false,
+    "id": 1879066923,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2406,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update binggan requirement from 0.7.0 to 0.8.0",
+    "updated_at": "2024-05-21T02:36:33Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-05-22T01:10:55Z",
+    "created_at": "2024-05-21T12:28:17Z",
+    "draft": false,
+    "id": 1880351144,
+    "issue_type": null,
+    "labels": [],
+    "number": 2407,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixing flaky test",
+    "updated_at": "2024-05-22T01:10:55Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-05-22T09:55:22Z",
+    "created_at": "2024-05-22T05:45:19Z",
+    "id": 2309621893,
+    "issue_type": null,
+    "labels": [],
+    "number": 2408,
+    "state": "closed",
+    "title": "Does tantivy::IndexWriter support multi-process?",
+    "updated_at": "2024-05-22T09:55:22Z",
+    "user": {
+      "login": "cyccbxhl"
+    }
+  },
+  {
+    "closed_at": "2024-06-04T08:04:30Z",
+    "created_at": "2024-05-23T06:54:32Z",
+    "draft": false,
+    "id": 1883878876,
+    "issue_type": null,
+    "labels": [],
+    "number": 2409,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Panicking in spawned Rayon tasks will abort the process by default.",
+    "updated_at": "2024-06-04T08:04:31Z",
+    "user": {
+      "login": "adamreichold"
+    }
+  },
+  {
+    "closed_at": "2024-05-27T05:33:51Z",
+    "created_at": "2024-05-23T09:48:32Z",
+    "draft": false,
+    "id": 1884194549,
+    "issue_type": null,
+    "labels": [],
+    "number": 2410,
+    "pull_request": {},
+    "state": "closed",
+    "title": "return CompactDocValue instead of trait",
+    "updated_at": "2024-05-27T05:33:51Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2025-03-05T09:36:50Z",
+    "created_at": "2024-05-24T00:07:25Z",
+    "id": 2314043817,
+    "issue_type": null,
+    "labels": [],
+    "number": 2411,
+    "state": "closed",
+    "title": "Rayon thread pool abort on panic",
+    "updated_at": "2025-03-05T09:36:50Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-05-27T07:16:48Z",
+    "created_at": "2024-05-26T22:38:36Z",
+    "draft": false,
+    "id": 1889123721,
+    "issue_type": null,
+    "labels": [],
+    "number": 2412,
+    "pull_request": {},
+    "state": "closed",
+    "title": "style: simplify strings with string interpolation",
+    "updated_at": "2025-06-23T18:22:28Z",
+    "user": {
+      "login": "hirehamir"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-05-28T09:16:31Z",
+    "id": 2320549376,
+    "issue_type": null,
+    "labels": [],
+    "number": 2413,
+    "state": "open",
+    "title": "Isolate Aggregations",
+    "updated_at": "2024-05-28T09:16:31Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-05-30T15:29:28Z",
+    "created_at": "2024-05-28T10:23:06Z",
+    "id": 2320690004,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 2414,
+    "state": "closed",
+    "title": "parsing simple quote in query doesn't always give a sensible result",
+    "updated_at": "2024-05-30T15:29:28Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-05-30T15:29:28Z",
+    "created_at": "2024-05-28T11:25:07Z",
+    "id": 2320813955,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0052cc",
+        "description": null,
+        "id": 5094590151523322998,
+        "name": "newfeature"
+      }
+    ],
+    "number": 2415,
+    "state": "closed",
+    "title": "allow escape in query string outside of quotes",
+    "updated_at": "2024-05-30T15:29:28Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-05-30T15:29:27Z",
+    "created_at": "2024-05-28T13:13:40Z",
+    "draft": false,
+    "id": 1891865679,
+    "issue_type": null,
+    "labels": [],
+    "number": 2416,
+    "pull_request": {},
+    "state": "closed",
+    "title": "improve query parser",
+    "updated_at": "2024-05-30T15:29:28Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-05-29T01:49:16Z",
+    "created_at": "2024-05-28T23:50:38Z",
+    "draft": false,
+    "id": 1892803871,
+    "issue_type": null,
+    "labels": [],
+    "number": 2417,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore: fix build as the rev is gone",
+    "updated_at": "2024-05-29T12:34:38Z",
+    "user": {
+      "login": "wsxiaoys"
+    }
+  },
+  {
+    "closed_at": "2024-05-29T03:23:20Z",
+    "created_at": "2024-05-29T03:10:50Z",
+    "id": 2322262482,
+    "issue_type": null,
+    "labels": [],
+    "number": 2418,
+    "state": "closed",
+    "title": "Concurrent commit failed in multi-process environment",
+    "updated_at": "2024-05-29T03:23:20Z",
+    "user": {
+      "login": "cyccbxhl"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-05-30T13:56:35Z",
+    "draft": false,
+    "id": 1896091746,
+    "issue_type": null,
+    "labels": [],
+    "number": 2419,
+    "pull_request": {},
+    "state": "open",
+    "title": "update basic_search example",
+    "updated_at": "2024-05-30T13:56:35Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-05-31T03:07:36Z",
+    "created_at": "2024-05-31T02:42:54Z",
+    "draft": false,
+    "id": 1897081348,
+    "issue_type": null,
+    "labels": [],
+    "number": 2420,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update one_shot",
+    "updated_at": "2024-05-31T03:07:36Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-05-31T20:41:32Z",
+    "id": 2328559028,
+    "issue_type": null,
+    "labels": [],
+    "number": 2421,
+    "state": "open",
+    "title": "Unique field",
+    "updated_at": "2024-09-03T09:25:08Z",
+    "user": {
+      "login": "vBlackOut"
+    }
+  },
+  {
+    "closed_at": "2024-07-03T04:26:43Z",
+    "created_at": "2024-06-02T12:14:06Z",
+    "id": 2329623436,
+    "issue_type": null,
+    "labels": [],
+    "number": 2422,
+    "state": "closed",
+    "title": "Track new FxHash Algorithm",
+    "updated_at": "2024-07-03T04:26:43Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-04T07:50:24Z",
+    "created_at": "2024-06-03T20:59:12Z",
+    "draft": false,
+    "id": 1901664719,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2423,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update sketches-ddsketch requirement from 0.2.1 to 0.3.0",
+    "updated_at": "2024-06-04T07:50:24Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-06-04T08:16:42Z",
+    "created_at": "2024-06-04T08:09:41Z",
+    "draft": false,
+    "id": 1902384607,
+    "issue_type": null,
+    "labels": [],
+    "number": 2424,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix Instances of `if` Being Spelt as `iff` in Documentation",
+    "updated_at": "2024-06-05T07:02:34Z",
+    "user": {
+      "login": "ultrabear"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-06-06T07:11:50Z",
+    "draft": true,
+    "id": 1906580534,
+    "issue_type": null,
+    "labels": [],
+    "number": 2425,
+    "pull_request": {},
+    "state": "open",
+    "title": "Prefix phrase query optim",
+    "updated_at": "2024-06-11T06:54:01Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-06-06T14:32:58Z",
+    "created_at": "2024-06-06T13:47:17Z",
+    "draft": false,
+    "id": 1907307921,
+    "issue_type": null,
+    "labels": [],
+    "number": 2426,
+    "pull_request": {},
+    "state": "closed",
+    "title": "reduce top hits memory consumption",
+    "updated_at": "2024-06-06T14:33:52Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-10T09:19:01Z",
+    "created_at": "2024-06-07T14:19:38Z",
+    "draft": false,
+    "id": 1909343609,
+    "issue_type": null,
+    "labels": [],
+    "number": 2427,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix de-escaping too much in query parser",
+    "updated_at": "2024-06-10T09:19:02Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-06-10T08:26:17Z",
+    "created_at": "2024-06-10T07:06:46Z",
+    "draft": false,
+    "id": 1911442488,
+    "issue_type": null,
+    "labels": [],
+    "number": 2428,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add bench & test for columnar merging",
+    "updated_at": "2024-06-10T08:26:17Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-01T04:01:10Z",
+    "created_at": "2024-06-11T05:18:58Z",
+    "draft": true,
+    "id": 1913571811,
+    "issue_type": null,
+    "labels": [],
+    "number": 2429,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Columnar optionalmask in multivalues",
+    "updated_at": "2024-07-01T04:01:10Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-07-01T04:00:49Z",
+    "created_at": "2024-06-11T12:05:41Z",
+    "draft": false,
+    "id": 1914326865,
+    "issue_type": null,
+    "labels": [],
+    "number": 2430,
+    "pull_request": {},
+    "state": "closed",
+    "title": "skip estimate phase for merge multivalue index",
+    "updated_at": "2024-07-01T04:00:49Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-19T06:54:13Z",
+    "created_at": "2024-06-12T01:02:27Z",
+    "id": 2347553558,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 2431,
+    "state": "closed",
+    "title": "Fix inefficiency on multivalued but sparse column.",
+    "updated_at": "2024-06-19T06:54:13Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-06-12T06:29:16Z",
+    "created_at": "2024-06-12T04:33:58Z",
+    "draft": false,
+    "id": 1915694066,
+    "issue_type": null,
+    "labels": [],
+    "number": 2432,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add access benchmark for columnar",
+    "updated_at": "2024-06-12T06:29:16Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-13T07:04:52Z",
+    "created_at": "2024-06-13T01:40:40Z",
+    "draft": false,
+    "id": 1917651016,
+    "issue_type": null,
+    "labels": [],
+    "number": 2433,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add columnar format compatibiliy tests",
+    "updated_at": "2024-06-13T07:04:53Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-13T07:51:53Z",
+    "created_at": "2024-06-13T06:20:50Z",
+    "draft": false,
+    "id": 1917909404,
+    "issue_type": null,
+    "labels": [],
+    "number": 2434,
+    "pull_request": {},
+    "state": "closed",
+    "title": "remove index sorting",
+    "updated_at": "2024-06-13T07:51:54Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-30T10:36:09Z",
+    "created_at": "2024-06-13T10:42:20Z",
+    "id": 2350809404,
+    "issue_type": null,
+    "labels": [],
+    "number": 2435,
+    "state": "closed",
+    "title": "Add error handling for invalid CustomOrder in term aggregation",
+    "updated_at": "2024-07-30T10:36:09Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-06-13T13:36:02Z",
+    "id": 2351179652,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 2436,
+    "state": "open",
+    "title": "monotonic mapping broken for `get_docids_for_value_range`",
+    "updated_at": "2024-07-29T12:40:51Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-14T00:12:59Z",
+    "created_at": "2024-06-13T19:38:01Z",
+    "draft": false,
+    "id": 1919401437,
+    "issue_type": null,
+    "labels": [],
+    "number": 2437,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add ParadeDB to Companies List",
+    "updated_at": "2024-06-14T00:12:59Z",
+    "user": {
+      "login": "philippemnoel"
+    }
+  },
+  {
+    "closed_at": "2024-06-14T02:42:35Z",
+    "created_at": "2024-06-14T01:42:36Z",
+    "draft": false,
+    "id": 1919755340,
+    "issue_type": null,
+    "labels": [],
+    "number": 2438,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update columnar bench",
+    "updated_at": "2024-06-14T02:42:36Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-06-19T06:54:12Z",
+    "created_at": "2024-06-17T13:16:47Z",
+    "draft": false,
+    "id": 1924228914,
+    "issue_type": null,
+    "labels": [],
+    "number": 2439,
+    "pull_request": {},
+    "state": "closed",
+    "title": "use optional index in multivalued index",
+    "updated_at": "2024-06-19T06:54:12Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-06-18T08:05:19Z",
+    "id": 2359222096,
+    "issue_type": null,
+    "labels": [],
+    "number": 2440,
+    "state": "open",
+    "title": "Possible Codec Between SPARSE and DENSE: CHIMERA",
+    "updated_at": "2024-07-01T13:48:04Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-12-02T20:24:23Z",
+    "created_at": "2024-06-18T20:34:42Z",
+    "draft": false,
+    "id": 1927219465,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2441,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update rustc-hash requirement from 1.1.0 to 2.0.0",
+    "updated_at": "2024-12-02T20:24:25Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-07-01T07:40:09Z",
+    "created_at": "2024-06-21T01:38:50Z",
+    "id": 2365532584,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      },
+      {
+        "color": "C0AE9B",
+        "description": "",
+        "id": 8094174822475245452,
+        "name": "project airmail"
+      }
+    ],
+    "number": 2442,
+    "state": "closed",
+    "title": "keys should be increasing panic",
+    "updated_at": "2024-07-01T07:40:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-06-24T08:11:54Z",
+    "created_at": "2024-06-24T08:09:26Z",
+    "draft": false,
+    "id": 1934909543,
+    "issue_type": null,
+    "labels": [],
+    "number": 2443,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Recycling buffer in PrefixPhraseScorer",
+    "updated_at": "2024-06-24T08:11:54Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-07-01T07:39:56Z",
+    "created_at": "2024-06-25T00:36:13Z",
+    "draft": true,
+    "id": 1936560812,
+    "issue_type": null,
+    "labels": [],
+    "number": 2444,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix out of order bug",
+    "updated_at": "2024-07-01T07:39:56Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-01T07:40:08Z",
+    "created_at": "2024-06-25T05:20:50Z",
+    "draft": false,
+    "id": 1936834343,
+    "issue_type": null,
+    "labels": [],
+    "number": 2445,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixes bug that causes out-of-order sstable key.",
+    "updated_at": "2024-07-01T07:40:09Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-07-02T07:29:00Z",
+    "created_at": "2024-07-01T10:27:45Z",
+    "draft": false,
+    "id": 1946996095,
+    "issue_type": null,
+    "labels": [],
+    "number": 2446,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix cardinality aggregation performance",
+    "updated_at": "2024-07-02T07:29:02Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-03T04:42:59Z",
+    "created_at": "2024-07-02T13:39:10Z",
+    "draft": false,
+    "id": 1949534427,
+    "issue_type": null,
+    "labels": [],
+    "number": 2447,
+    "pull_request": {},
+    "state": "closed",
+    "title": "faster term aggregation fetch terms",
+    "updated_at": "2024-07-03T04:43:01Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-05T04:04:19Z",
+    "created_at": "2024-07-03T05:31:16Z",
+    "draft": false,
+    "id": 1950812786,
+    "issue_type": null,
+    "labels": [],
+    "number": 2448,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix coverage",
+    "updated_at": "2024-07-05T04:04:20Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-08-14T17:21:26Z",
+    "created_at": "2024-07-05T03:02:21Z",
+    "draft": false,
+    "id": 1954353824,
+    "issue_type": null,
+    "labels": [],
+    "number": 2449,
+    "pull_request": {},
+    "state": "closed",
+    "title": "lift clauses in LogicalAst",
+    "updated_at": "2024-08-19T13:21:18Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-09T07:12:22Z",
+    "created_at": "2024-07-09T06:50:33Z",
+    "draft": false,
+    "id": 1959320105,
+    "issue_type": null,
+    "labels": [],
+    "number": 2450,
+    "pull_request": {},
+    "state": "closed",
+    "title": "doc: fix typo in readme",
+    "updated_at": "2024-07-09T07:12:23Z",
+    "user": {
+      "login": "robcaulk"
+    }
+  },
+  {
+    "closed_at": "2024-07-30T10:36:08Z",
+    "created_at": "2024-07-09T09:35:15Z",
+    "draft": false,
+    "id": 1959653239,
+    "issue_type": null,
+    "labels": [],
+    "number": 2451,
+    "pull_request": {},
+    "state": "closed",
+    "title": "extend custom order deserialization",
+    "updated_at": "2024-07-30T10:36:10Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-15T10:08:05Z",
+    "created_at": "2024-07-12T01:16:21Z",
+    "draft": false,
+    "id": 1965684851,
+    "issue_type": null,
+    "labels": [],
+    "number": 2452,
+    "pull_request": {},
+    "state": "closed",
+    "title": "refactor fast field query",
+    "updated_at": "2024-07-15T10:08:07Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-17T01:31:43Z",
+    "created_at": "2024-07-16T02:10:45Z",
+    "draft": false,
+    "id": 1970576020,
+    "issue_type": null,
+    "labels": [],
+    "number": 2453,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add support for str fast field range query",
+    "updated_at": "2024-07-17T01:31:44Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-30T08:40:49Z",
+    "created_at": "2024-07-17T19:19:39Z",
+    "id": 2414375758,
+    "issue_type": null,
+    "labels": [],
+    "number": 2454,
+    "state": "closed",
+    "title": "Merge policy works unexpectedly for uncommitted documents",
+    "updated_at": "2024-07-30T08:40:49Z",
+    "user": {
+      "login": "simunic-cz"
+    }
+  },
+  {
+    "closed_at": "2024-07-24T10:35:53Z",
+    "created_at": "2024-07-19T08:15:26Z",
+    "id": 2418333184,
+    "issue_type": null,
+    "labels": [],
+    "number": 2455,
+    "state": "closed",
+    "title": "Tantivy NDCG Benchmarking Information Retrieval (BEIR)",
+    "updated_at": "2024-07-24T10:35:53Z",
+    "user": {
+      "login": "triandco"
+    }
+  },
+  {
+    "closed_at": "2024-08-01T16:06:50Z",
+    "created_at": "2024-07-24T03:04:01Z",
+    "draft": false,
+    "id": 1984473996,
+    "issue_type": null,
+    "labels": [],
+    "number": 2456,
+    "pull_request": {},
+    "state": "closed",
+    "title": "support ff range queries on json fields",
+    "updated_at": "2024-08-01T16:06:53Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-30T08:37:21Z",
+    "created_at": "2024-07-24T05:46:52Z",
+    "draft": false,
+    "id": 1984622051,
+    "issue_type": null,
+    "labels": [],
+    "number": 2457,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix potential endless loop in merge",
+    "updated_at": "2024-07-30T08:37:23Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-07-25T05:21:07Z",
+    "draft": false,
+    "id": 1986711965,
+    "issue_type": null,
+    "labels": [],
+    "number": 2458,
+    "pull_request": {},
+    "state": "open",
+    "title": "add key_as_string for numbers in term agg",
+    "updated_at": "2024-07-25T05:21:07Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-07-26T10:27:57Z",
+    "id": 2431932156,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d93f0b",
+        "description": "",
+        "id": 1555160031871621062,
+        "name": "high priority"
+      }
+    ],
+    "number": 2459,
+    "state": "open",
+    "title": "calendar_interval in datehistogram",
+    "updated_at": "2025-11-04T09:32:30Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-29T02:39:27Z",
+    "created_at": "2024-07-29T02:33:47Z",
+    "draft": false,
+    "id": 1991241399,
+    "issue_type": null,
+    "labels": [],
+    "number": 2460,
+    "pull_request": {},
+    "state": "closed",
+    "title": "make FastFieldRangeWeight::new pub",
+    "updated_at": "2024-07-29T02:39:29Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-07-29T08:47:44Z",
+    "id": 2434826087,
+    "issue_type": null,
+    "labels": [],
+    "number": 2461,
+    "state": "open",
+    "title": "more ast optimizations arround boolean queries",
+    "updated_at": "2026-01-02T09:37:08Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-07-29T15:03:27Z",
+    "id": 2435672746,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      },
+      {
+        "color": "EF6A63",
+        "description": "",
+        "id": 3113471877336036801,
+        "name": "technical debt"
+      }
+    ],
+    "number": 2462,
+    "state": "open",
+    "title": "Improve incorrect type handling on columnar",
+    "updated_at": "2024-07-30T10:34:05Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-07-30T20:32:28Z",
+    "created_at": "2024-07-29T20:44:03Z",
+    "draft": false,
+    "id": 1993054439,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2463,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update fs4 requirement from 0.8.0 to 0.9.0",
+    "updated_at": "2024-07-30T20:32:30Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-07-30T03:21:24Z",
+    "id": 2436798461,
+    "issue_type": null,
+    "labels": [],
+    "number": 2464,
+    "state": "open",
+    "title": "cardinality aggregation precision_threshold parameter ",
+    "updated_at": "2024-07-30T03:21:24Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-07-30T07:45:49Z",
+    "id": 2437145365,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 2465,
+    "state": "open",
+    "title": "\"Internal error: Couldn't find term_id 25777562 in dict\" for very large dicts (>20mio)",
+    "updated_at": "2024-07-30T10:34:11Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-07-30T10:53:26Z",
+    "id": 2437533560,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "EF6A63",
+        "description": "",
+        "id": 3113471877336036801,
+        "name": "technical debt"
+      }
+    ],
+    "number": 2466,
+    "state": "open",
+    "title": "Improve Date precision truncation handling",
+    "updated_at": "2024-07-30T10:54:01Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-10-08T20:15:55Z",
+    "created_at": "2024-07-30T20:32:25Z",
+    "draft": false,
+    "id": 1995136073,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2467,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update fs4 requirement from 0.8.0 to 0.9.1",
+    "updated_at": "2024-10-08T20:15:56Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-07-31T12:29:32Z",
+    "created_at": "2024-07-31T08:18:21Z",
+    "draft": false,
+    "id": 1995845153,
+    "issue_type": null,
+    "labels": [],
+    "number": 2468,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add Key::I64 and Key::U64 variants in aggregation",
+    "updated_at": "2024-07-31T12:29:34Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-07-31T09:55:00Z",
+    "id": 2439631926,
+    "issue_type": null,
+    "labels": [],
+    "number": 2469,
+    "state": "open",
+    "title": "Consider normalization for cardinality aggregation",
+    "updated_at": "2024-07-31T12:30:27Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-08-19T10:48:10Z",
+    "created_at": "2024-08-01T14:31:46Z",
+    "id": 2442635405,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cc317c",
+        "description": null,
+        "id": 1860757118907805835,
+        "name": "question"
+      }
+    ],
+    "number": 2470,
+    "state": "closed",
+    "title": "Query planner optimization (or AST optimization?)",
+    "updated_at": "2024-08-19T10:48:10Z",
+    "user": {
+      "login": "cjrh"
+    }
+  },
+  {
+    "closed_at": "2025-08-17T01:58:35Z",
+    "created_at": "2024-08-06T12:04:07Z",
+    "draft": false,
+    "id": 2005927823,
+    "issue_type": null,
+    "labels": [],
+    "number": 2471,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fill `position`s in `NgramTokenizer`",
+    "updated_at": "2025-08-17T01:58:35Z",
+    "user": {
+      "login": "darashi"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-08-08T10:16:38Z",
+    "id": 2455420237,
+    "issue_type": null,
+    "labels": [],
+    "number": 2472,
+    "state": "open",
+    "title": "Natural language queries exhibit unexpected behavior when processing Chinese text.",
+    "updated_at": "2024-12-31T11:13:54Z",
+    "user": {
+      "login": "MochiXu"
+    }
+  },
+  {
+    "closed_at": "2024-09-04T04:39:14Z",
+    "created_at": "2024-08-12T12:32:04Z",
+    "id": 2460872037,
+    "issue_type": null,
+    "labels": [],
+    "number": 2473,
+    "state": "closed",
+    "title": "Incorrect range merging in snippet generation",
+    "updated_at": "2024-09-04T04:39:14Z",
+    "user": {
+      "login": "gezihuzi"
+    }
+  },
+  {
+    "closed_at": "2024-09-04T04:39:13Z",
+    "created_at": "2024-08-12T12:40:38Z",
+    "draft": false,
+    "id": 2014974943,
+    "issue_type": null,
+    "labels": [],
+    "number": 2474,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix: Improve collapse_overlapped_ranges function",
+    "updated_at": "2024-09-04T04:40:22Z",
+    "user": {
+      "login": "gezihuzi"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-08-12T20:00:16Z",
+    "id": 2461790258,
+    "issue_type": null,
+    "labels": [],
+    "number": 2475,
+    "state": "open",
+    "title": "Support disabling compression for SSTable based dictionaries",
+    "updated_at": "2024-08-26T09:08:00Z",
+    "user": {
+      "login": "rfairfax"
+    }
+  },
+  {
+    "closed_at": "2024-08-19T13:25:29Z",
+    "created_at": "2024-08-13T15:12:37Z",
+    "draft": false,
+    "id": 2017407378,
+    "issue_type": null,
+    "labels": [],
+    "number": 2476,
+    "pull_request": {},
+    "state": "closed",
+    "title": "make find_field_with_default return json fields without path",
+    "updated_at": "2024-08-19T13:25:31Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-08-19T07:02:00Z",
+    "created_at": "2024-08-16T13:01:44Z",
+    "draft": false,
+    "id": 2022946466,
+    "issue_type": null,
+    "labels": [],
+    "number": 2477,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add FastFieldRangeQuery, rename",
+    "updated_at": "2024-08-19T07:02:02Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-09-03T14:31:51Z",
+    "created_at": "2024-08-17T11:49:51Z",
+    "draft": false,
+    "id": 2023995909,
+    "issue_type": null,
+    "labels": [],
+    "number": 2478,
+    "pull_request": {},
+    "state": "closed",
+    "title": "remove unused trait bounds and outdated doc comment",
+    "updated_at": "2024-09-03T14:31:52Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-09-24T08:49:54Z",
+    "created_at": "2024-08-26T03:57:43Z",
+    "id": 2485816391,
+    "issue_type": null,
+    "labels": [],
+    "number": 2479,
+    "state": "closed",
+    "title": "How to get the match position(s), preferably in bytes, in a document?",
+    "updated_at": "2024-09-24T08:49:55Z",
+    "user": {
+      "login": "kkew3"
+    }
+  },
+  {
+    "closed_at": "2024-09-24T08:46:30Z",
+    "created_at": "2024-08-28T04:18:09Z",
+    "id": 2490948810,
+    "issue_type": null,
+    "labels": [],
+    "number": 2480,
+    "state": "closed",
+    "title": "on android: OS error 38 - function not implemented",
+    "updated_at": "2024-09-24T08:46:31Z",
+    "user": {
+      "login": "Sivan22"
+    }
+  },
+  {
+    "closed_at": "2024-09-24T08:45:44Z",
+    "created_at": "2024-08-28T09:22:23Z",
+    "id": 2491546537,
+    "issue_type": null,
+    "labels": [],
+    "number": 2481,
+    "state": "closed",
+    "title": "Potential memory leak when adding documents to Tantivy",
+    "updated_at": "2024-09-24T08:45:45Z",
+    "user": {
+      "login": "softhuafei"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-08-30T09:50:01Z",
+    "id": 2496761634,
+    "issue_type": null,
+    "labels": [],
+    "number": 2482,
+    "state": "open",
+    "title": "Add Ukrainian stemmer",
+    "updated_at": "2024-08-30T09:50:01Z",
+    "user": {
+      "login": "egorsmkv"
+    }
+  },
+  {
+    "closed_at": "2024-09-04T04:45:31Z",
+    "created_at": "2024-09-02T13:27:38Z",
+    "draft": false,
+    "id": 2049573140,
+    "issue_type": null,
+    "labels": [],
+    "number": 2483,
+    "pull_request": {},
+    "state": "closed",
+    "title": "grammar and misspellings",
+    "updated_at": "2024-09-04T12:58:00Z",
+    "user": {
+      "login": "coplat"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-09-03T13:01:05Z",
+    "id": 2502825609,
+    "issue_type": null,
+    "labels": [],
+    "number": 2484,
+    "state": "open",
+    "title": "Add support for Polish language stemming",
+    "updated_at": "2024-09-05T21:40:33Z",
+    "user": {
+      "login": "asdfMaciej"
+    }
+  },
+  {
+    "closed_at": "2024-09-04T10:26:58Z",
+    "created_at": "2024-09-04T05:37:51Z",
+    "draft": false,
+    "id": 2052567277,
+    "issue_type": null,
+    "labels": [],
+    "number": 2485,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add compat tests",
+    "updated_at": "2024-09-04T10:27:01Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-10-18T02:50:21Z",
+    "created_at": "2024-09-04T14:25:47Z",
+    "draft": false,
+    "id": 2053622786,
+    "issue_type": null,
+    "labels": [],
+    "number": 2486,
+    "pull_request": {},
+    "state": "closed",
+    "title": "store DateTime as nanoseconds in doc store",
+    "updated_at": "2024-10-18T02:50:22Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-09-04T23:01:09Z",
+    "created_at": "2024-09-04T22:52:39Z",
+    "id": 2506440135,
+    "issue_type": null,
+    "labels": [],
+    "number": 2487,
+    "state": "closed",
+    "title": "Tf-idf vectors",
+    "updated_at": "2024-09-04T23:01:09Z",
+    "user": {
+      "login": "I8dNLo"
+    }
+  },
+  {
+    "closed_at": "2024-09-05T12:33:05Z",
+    "created_at": "2024-09-05T09:22:41Z",
+    "draft": false,
+    "id": 2055159771,
+    "issue_type": null,
+    "labels": [],
+    "number": 2488,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix clippy lints from 1.80-1.81",
+    "updated_at": "2024-09-05T12:33:06Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-10-22T00:53:12Z",
+    "created_at": "2024-09-06T03:32:56Z",
+    "draft": false,
+    "id": 2057126133,
+    "issue_type": null,
+    "labels": [],
+    "number": 2489,
+    "pull_request": {},
+    "state": "closed",
+    "title": "clippy + cleanup",
+    "updated_at": "2024-10-22T00:53:12Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-09-09T20:12:28Z",
+    "created_at": "2024-09-06T20:09:04Z",
+    "draft": false,
+    "id": 2058624439,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2490,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update binggan requirement from 0.8.0 to 0.9.1",
+    "updated_at": "2024-09-09T20:12:30Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-09-06T21:53:33Z",
+    "draft": false,
+    "id": 2058729052,
+    "issue_type": null,
+    "labels": [],
+    "number": 2491,
+    "pull_request": {},
+    "state": "open",
+    "title": "Update ARCHITECTURE.md",
+    "updated_at": "2024-09-06T21:53:33Z",
+    "user": {
+      "login": "I8dNLo"
+    }
+  },
+  {
+    "closed_at": "2024-10-16T03:41:33Z",
+    "created_at": "2024-09-09T00:35:05Z",
+    "draft": false,
+    "id": 2059943504,
+    "issue_type": null,
+    "labels": [],
+    "number": 2492,
+    "pull_request": {},
+    "state": "closed",
+    "title": "use binggan for stacker bench",
+    "updated_at": "2024-10-16T03:41:34Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-09-10T06:26:06Z",
+    "created_at": "2024-09-09T20:12:25Z",
+    "draft": false,
+    "id": 2061888419,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2493,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update binggan requirement from 0.8.0 to 0.10.0",
+    "updated_at": "2024-09-10T06:26:07Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-04-25T20:23:31Z",
+    "created_at": "2024-09-11T05:59:56Z",
+    "id": 2518587251,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      },
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
+    "number": 2494,
+    "state": "closed",
+    "title": "Facet returns wrong root ",
+    "updated_at": "2026-04-25T20:23:31Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-09-17T06:25:47Z",
+    "created_at": "2024-09-17T01:41:11Z",
+    "draft": false,
+    "id": 2075195013,
+    "issue_type": null,
+    "labels": [],
+    "number": 2495,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix AggregationLimits",
+    "updated_at": "2024-09-17T06:25:49Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-09-25T02:28:53Z",
+    "created_at": "2024-09-20T06:36:50Z",
+    "draft": false,
+    "id": 2082464775,
+    "issue_type": null,
+    "labels": [],
+    "number": 2496,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update changelog",
+    "updated_at": "2024-09-25T02:28:54Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-09-21T07:16:51Z",
+    "created_at": "2024-09-21T07:15:26Z",
+    "draft": false,
+    "id": 2084300628,
+    "issue_type": null,
+    "labels": [],
+    "number": 2497,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added support for warmup",
+    "updated_at": "2024-09-21T07:19:05Z",
+    "user": {
+      "login": "anshulgoel27"
+    }
+  },
+  {
+    "closed_at": "2026-04-24T07:54:01Z",
+    "created_at": "2024-09-21T19:22:52Z",
+    "id": 2540478056,
+    "issue_type": null,
+    "labels": [],
+    "number": 2498,
+    "state": "closed",
+    "title": "Possible perf regression in Query Parser with deeply nested queries",
+    "updated_at": "2026-04-24T07:54:01Z",
+    "user": {
+      "login": "cjrh"
+    }
+  },
+  {
+    "closed_at": "2024-09-23T04:39:36Z",
+    "created_at": "2024-09-23T02:23:45Z",
+    "draft": false,
+    "id": 2085495395,
+    "issue_type": null,
+    "labels": [],
+    "number": 2499,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: make SegmentMeta.with_max_doc public",
+    "updated_at": "2024-09-23T04:39:36Z",
+    "user": {
+      "login": "triandco"
+    }
+  },
+  {
+    "closed_at": "2024-09-25T09:46:18Z",
+    "created_at": "2024-09-25T05:43:44Z",
+    "draft": false,
+    "id": 2090504736,
+    "issue_type": null,
+    "labels": [],
+    "number": 2500,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update packages",
+    "updated_at": "2024-09-25T09:46:20Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2025-04-09T06:09:42Z",
+    "created_at": "2024-09-25T10:46:05Z",
+    "draft": false,
+    "id": 2091089653,
+    "issue_type": null,
+    "labels": [],
+    "number": 2501,
+    "pull_request": {},
+    "state": "closed",
+    "title": "temp unbump version",
+    "updated_at": "2025-04-09T06:09:43Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-09-26T21:38:03Z",
+    "draft": false,
+    "id": 2094632438,
+    "issue_type": null,
+    "labels": [],
+    "number": 2502,
+    "pull_request": {},
+    "state": "open",
+    "title": "Fix description for QueryParserError::ExpectedFloat",
+    "updated_at": "2024-09-26T21:38:03Z",
+    "user": {
+      "login": "PollRobots"
+    }
+  },
+  {
+    "closed_at": "2025-04-09T11:54:45Z",
+    "created_at": "2024-09-27T18:09:10Z",
+    "id": 2553473614,
+    "issue_type": null,
+    "labels": [],
+    "number": 2503,
+    "state": "closed",
+    "title": "Open to cutting a release?",
+    "updated_at": "2025-04-09T11:54:45Z",
+    "user": {
+      "login": "jamesbraza"
+    }
+  },
+  {
+    "closed_at": "2024-09-30T15:54:58Z",
+    "created_at": "2024-09-28T19:26:47Z",
+    "id": 2554464984,
+    "issue_type": null,
+    "labels": [],
+    "number": 2504,
+    "state": "closed",
+    "title": "Orphaned segments",
+    "updated_at": "2024-11-10T00:01:09Z",
+    "user": {
+      "login": "xrl"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-10-04T05:41:06Z",
+    "id": 2565492017,
+    "issue_type": null,
+    "labels": [],
+    "number": 2505,
+    "state": "open",
+    "title": "Reverse reverse index",
+    "updated_at": "2024-10-07T07:02:54Z",
+    "user": {
+      "login": "NickDarvey"
+    }
+  },
+  {
+    "closed_at": "2024-10-04T20:25:26Z",
+    "created_at": "2024-10-04T19:31:25Z",
+    "id": 2567180568,
+    "issue_type": null,
+    "labels": [],
+    "number": 2506,
+    "state": "closed",
+    "title": "mmap pages for deleted segments remaining in process RAM",
+    "updated_at": "2024-10-04T20:25:59Z",
+    "user": {
+      "login": "rfairfax"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-10-06T19:55:48Z",
+    "id": 2568864483,
+    "issue_type": null,
+    "labels": [],
+    "number": 2507,
+    "state": "open",
+    "title": "Split segments / Export Segments / Import Segments",
+    "updated_at": "2024-10-06T19:55:48Z",
+    "user": {
+      "login": "fhilgers"
+    }
+  },
+  {
+    "closed_at": "2024-10-09T01:40:39Z",
+    "created_at": "2024-10-07T14:40:24Z",
+    "id": 2570648549,
+    "issue_type": null,
+    "labels": [],
+    "number": 2508,
+    "state": "closed",
+    "title": "Exists query does not work",
+    "updated_at": "2024-10-14T02:23:18Z",
+    "user": {
+      "login": "Zhincore"
+    }
+  },
+  {
+    "closed_at": "2024-11-04T20:25:17Z",
+    "created_at": "2024-10-08T20:15:52Z",
+    "draft": false,
+    "id": 2113840304,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2509,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update fs4 requirement from 0.8.0 to 0.10.0",
+    "updated_at": "2024-11-04T20:25:19Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-10-10T01:55:38Z",
+    "created_at": "2024-10-09T02:58:30Z",
+    "draft": false,
+    "id": 2114216865,
+    "issue_type": null,
+    "labels": [],
+    "number": 2510,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Reduce typo count.",
+    "updated_at": "2024-10-10T02:29:30Z",
+    "user": {
+      "login": "waywardmonkeys"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-10-09T06:06:34Z",
+    "draft": false,
+    "id": 2114406832,
+    "issue_type": null,
+    "labels": [],
+    "number": 2511,
+    "pull_request": {},
+    "state": "open",
+    "title": "ci: Switch from actions-rs/toolchain to dtolnay/rust-toolchain",
+    "updated_at": "2024-10-09T06:06:35Z",
+    "user": {
+      "login": "waywardmonkeys"
+    }
+  },
+  {
+    "closed_at": "2024-10-16T02:31:40Z",
+    "created_at": "2024-10-09T15:44:02Z",
+    "draft": false,
+    "id": 2115607673,
+    "issue_type": null,
+    "labels": [],
+    "number": 2512,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix `OwnedBytes` debug panic",
+    "updated_at": "2024-10-16T02:31:40Z",
+    "user": {
+      "login": "b41sh"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-10-10T01:47:01Z",
+    "draft": false,
+    "id": 2116406898,
+    "issue_type": null,
+    "labels": [],
+    "number": 2513,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(QueryParser): add support for patterns like \"field:*\".",
+    "updated_at": "2024-11-19T08:19:16Z",
+    "user": {
+      "login": "LebranceBW"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-10-10T02:08:41Z",
+    "id": 2577330385,
+    "issue_type": null,
+    "labels": [],
+    "number": 2514,
+    "state": "open",
+    "title": "Add support for exists syntax like \"name: *\" pattern for built-in `QueryParser`.",
+    "updated_at": "2024-10-10T02:10:01Z",
+    "user": {
+      "login": "LebranceBW"
+    }
+  },
+  {
+    "closed_at": "2024-10-16T02:32:16Z",
+    "created_at": "2024-10-10T04:52:28Z",
+    "draft": false,
+    "id": 2116629932,
+    "issue_type": null,
+    "labels": [],
+    "number": 2515,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update MSRV to 1.75",
+    "updated_at": "2024-10-16T02:39:45Z",
+    "user": {
+      "login": "waywardmonkeys"
+    }
+  },
+  {
+    "closed_at": "2024-10-21T10:29:17Z",
+    "created_at": "2024-10-10T09:10:57Z",
+    "draft": false,
+    "id": 2117105528,
+    "issue_type": null,
+    "labels": [],
+    "number": 2516,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add RegexPhraseQuery",
+    "updated_at": "2024-10-21T10:43:14Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-10-15T20:05:16Z",
+    "created_at": "2024-10-14T20:54:16Z",
+    "draft": false,
+    "id": 2123887123,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2517,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update binggan requirement from 0.10.0 to 0.11.0",
+    "updated_at": "2024-10-15T20:05:17Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-10-15T09:50:19Z",
+    "id": 2588238325,
+    "issue_type": null,
+    "labels": [],
+    "number": 2518,
+    "state": "open",
+    "title": "Phrase Query Top N Pruning",
+    "updated_at": "2024-10-15T09:50:19Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-10-16T03:36:04Z",
+    "created_at": "2024-10-15T20:05:12Z",
+    "draft": false,
+    "id": 2126097578,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2519,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update binggan requirement from 0.10.0 to 0.12.0",
+    "updated_at": "2024-10-16T03:36:05Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-10-24T11:17:36Z",
+    "created_at": "2024-10-16T14:29:01Z",
+    "draft": false,
+    "id": 2128021821,
+    "issue_type": null,
+    "labels": [],
+    "number": 2520,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat: make `BlockSegmentPostings::open` and `TermInfoStore` public",
+    "updated_at": "2024-10-25T03:27:29Z",
+    "user": {
+      "login": "b41sh"
+    }
+  },
+  {
+    "closed_at": "2024-10-17T00:44:09Z",
+    "created_at": "2024-10-17T00:22:47Z",
+    "id": 2593313046,
+    "issue_type": null,
+    "labels": [],
+    "number": 2521,
+    "state": "closed",
+    "title": "Add `CITATION.cff` to make it easy to cite this in papers",
+    "updated_at": "2024-10-17T01:53:42Z",
+    "user": {
+      "login": "jamesbraza"
+    }
+  },
+  {
+    "closed_at": "2024-10-17T00:43:36Z",
+    "created_at": "2024-10-17T00:42:17Z",
+    "draft": false,
+    "id": 2129048064,
+    "issue_type": null,
+    "labels": [],
+    "number": 2522,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Added citation.cff",
+    "updated_at": "2024-10-17T00:43:37Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-10-17T01:19:50Z",
+    "created_at": "2024-10-17T01:19:37Z",
+    "draft": false,
+    "id": 2129079237,
+    "issue_type": null,
+    "labels": [],
+    "number": 2523,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fixed citation",
+    "updated_at": "2024-10-17T01:19:52Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-10-21T08:59:41Z",
+    "created_at": "2024-10-17T14:49:04Z",
+    "draft": false,
+    "id": 2130395439,
+    "issue_type": null,
+    "labels": [],
+    "number": 2524,
+    "pull_request": {},
+    "state": "closed",
+    "title": "make casing in docs more consistent",
+    "updated_at": "2024-10-21T08:59:41Z",
+    "user": {
+      "login": "marvin-j97"
+    }
+  },
+  {
+    "closed_at": "2024-10-22T00:52:44Z",
+    "created_at": "2024-10-21T07:17:49Z",
+    "id": 2601594788,
+    "issue_type": null,
+    "labels": [],
+    "number": 2525,
+    "state": "closed",
+    "title": "cleanup read_postings_no_deletes",
+    "updated_at": "2024-10-22T00:52:45Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-10-22T00:52:44Z",
+    "created_at": "2024-10-22T00:25:20Z",
+    "draft": false,
+    "id": 2137222215,
+    "issue_type": null,
+    "labels": [],
+    "number": 2526,
+    "pull_request": {},
+    "state": "closed",
+    "title": "remove read_postings_no_deletes",
+    "updated_at": "2024-10-22T00:52:45Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-10-22T01:26:55Z",
+    "created_at": "2024-10-22T00:54:40Z",
+    "draft": false,
+    "id": 2137243103,
+    "issue_type": null,
+    "labels": [],
+    "number": 2527,
+    "pull_request": {},
+    "state": "closed",
+    "title": "clippy",
+    "updated_at": "2024-10-22T01:26:56Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-10-23T12:06:55Z",
+    "created_at": "2024-10-22T10:06:18Z",
+    "draft": false,
+    "id": 2138057365,
+    "issue_type": null,
+    "labels": [],
+    "number": 2528,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Fix some links in architecture docs",
+    "updated_at": "2024-10-23T13:00:21Z",
+    "user": {
+      "login": "jotare"
+    }
+  },
+  {
+    "closed_at": "2024-10-24T00:19:46Z",
+    "created_at": "2024-10-23T15:17:30Z",
+    "id": 2608990661,
+    "issue_type": null,
+    "labels": [],
+    "number": 2529,
+    "state": "closed",
+    "title": "Why `panic!` when field exists on add_field?",
+    "updated_at": "2024-10-24T00:19:46Z",
+    "user": {
+      "login": "zarkone"
+    }
+  },
+  {
+    "closed_at": "2024-10-24T01:41:35Z",
+    "created_at": "2024-10-23T20:10:36Z",
+    "draft": false,
+    "id": 2142020240,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2530,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update binggan requirement from 0.12.0 to 0.14.0",
+    "updated_at": "2024-10-24T01:41:37Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2025-12-30T13:43:26Z",
+    "created_at": "2024-10-25T11:15:00Z",
+    "id": 2613810304,
+    "issue_type": null,
+    "labels": [],
+    "number": 2531,
+    "state": "closed",
+    "title": "Intersection Performance",
+    "updated_at": "2025-12-30T13:43:26Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-11-01T05:46:26Z",
+    "created_at": "2024-11-01T05:19:02Z",
+    "draft": false,
+    "id": 2157509113,
+    "issue_type": null,
+    "labels": [],
+    "number": 2532,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Updating rustc-hash and clippy fixes",
+    "updated_at": "2024-11-01T05:46:27Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2024-12-12T08:06:32Z",
+    "created_at": "2024-11-04T14:49:39Z",
+    "id": 2633027487,
+    "issue_type": null,
+    "labels": [],
+    "number": 2533,
+    "state": "closed",
+    "title": "Hardcoded `NUM_MERGE_THREADS`",
+    "updated_at": "2024-12-12T08:06:32Z",
+    "user": {
+      "login": "Barre"
+    }
+  },
+  {
+    "closed_at": "2024-11-07T20:40:33Z",
+    "created_at": "2024-11-04T20:25:14Z",
+    "draft": false,
+    "id": 2161713392,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2534,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update fs4 requirement from 0.8.0 to 0.11.0",
+    "updated_at": "2024-11-07T20:40:35Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-12-09T08:53:11Z",
+    "created_at": "2024-11-05T13:57:24Z",
+    "draft": false,
+    "id": 2163156558,
+    "issue_type": null,
+    "labels": [],
+    "number": 2535,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make `NUM_MERGE_THREADS` configurable",
+    "updated_at": "2024-12-09T09:05:22Z",
+    "user": {
+      "login": "Barre"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-11-06T08:27:59Z",
+    "id": 2637374273,
+    "issue_type": null,
+    "labels": [],
+    "number": 2536,
+    "state": "open",
+    "title": "Allocation in Intersection::seek",
+    "updated_at": "2024-11-06T08:27:59Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-11-08T20:12:29Z",
+    "created_at": "2024-11-06T20:45:00Z",
+    "draft": false,
+    "id": 2166050605,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2537,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update thiserror requirement from 1.0.30 to 2.0.0",
+    "updated_at": "2024-11-08T20:12:31Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2025-12-30T13:43:25Z",
+    "created_at": "2024-11-07T09:09:03Z",
+    "draft": false,
+    "id": 2166891942,
+    "issue_type": null,
+    "labels": [],
+    "number": 2538,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add seek_into_the_danger_zone on DocSet",
+    "updated_at": "2025-12-31T12:10:02Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-11-07T09:19:54Z",
+    "id": 2640379143,
+    "issue_type": null,
+    "labels": [],
+    "number": 2539,
+    "state": "open",
+    "title": "Proptest Nested Union + Intersection",
+    "updated_at": "2024-11-07T09:19:54Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-11-07T10:43:49Z",
+    "id": 2640621352,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "fc2929",
+        "description": null,
+        "id": 3091165909343518362,
+        "name": "bug"
+      }
+    ],
+    "number": 2540,
+    "state": "open",
+    "title": "Indexer panics ",
+    "updated_at": "2025-02-08T15:23:31Z",
+    "user": {
+      "login": "Barre"
+    }
+  },
+  {
+    "closed_at": "2024-12-02T20:25:29Z",
+    "created_at": "2024-11-07T20:40:31Z",
+    "draft": false,
+    "id": 2168267520,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2541,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update fs4 requirement from 0.8.0 to 0.11.1",
+    "updated_at": "2024-12-02T20:25:30Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-11-09T00:08:35Z",
+    "created_at": "2024-11-08T20:12:26Z",
+    "draft": false,
+    "id": 2170418777,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2542,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update thiserror requirement from 1.0.30 to 2.0.1",
+    "updated_at": "2024-11-09T00:08:36Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2025-03-20T07:01:35Z",
+    "created_at": "2024-11-11T15:32:26Z",
+    "draft": false,
+    "id": 2173087932,
+    "issue_type": null,
+    "labels": [],
+    "number": 2543,
+    "pull_request": {},
+    "state": "closed",
+    "title": "refactor: change 'wait_merging_threads' to take &self instead of self",
+    "updated_at": "2025-03-20T07:01:35Z",
+    "user": {
+      "login": "rustmailer"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-11-13T08:56:48Z",
+    "id": 2654738121,
+    "issue_type": null,
+    "labels": [],
+    "number": 2544,
+    "state": "open",
+    "title": "Add Intersection + Union Benchmarks",
+    "updated_at": "2024-11-13T08:56:48Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-03-31T07:53:22Z",
+    "created_at": "2024-11-14T20:12:51Z",
+    "draft": false,
+    "id": 2180516349,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 3397884688459367338,
+        "name": "github_actions"
+      }
+    ],
+    "number": 2545,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump codecov/codecov-action from 3 to 5",
+    "updated_at": "2026-03-31T07:53:24Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2024-11-27T12:49:35Z",
+    "created_at": "2024-11-20T05:26:00Z",
+    "draft": false,
+    "id": 2189017070,
+    "issue_type": null,
+    "labels": [],
+    "number": 2546,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update CHANGELOG",
+    "updated_at": "2024-11-27T12:49:37Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-12-17T14:27:30Z",
+    "created_at": "2024-11-28T18:45:03Z",
+    "draft": false,
+    "id": 2206241390,
+    "issue_type": null,
+    "labels": [],
+    "number": 2547,
+    "pull_request": {},
+    "state": "closed",
+    "title": "add support for counting non integer in aggregation",
+    "updated_at": "2024-12-17T14:27:32Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-11-29T07:54:59Z",
+    "created_at": "2024-11-29T06:10:12Z",
+    "id": 2704029489,
+    "issue_type": null,
+    "labels": [],
+    "number": 2548,
+    "state": "closed",
+    "title": "hdfs or s3 support",
+    "updated_at": "2024-11-29T07:54:59Z",
+    "user": {
+      "login": "pengzhiwei2018"
+    }
+  },
+  {
+    "closed_at": "2024-11-29T08:08:21Z",
+    "created_at": "2024-11-29T06:50:59Z",
+    "draft": false,
+    "id": 2206775982,
+    "issue_type": null,
+    "labels": [],
+    "number": 2549,
+    "pull_request": {},
+    "state": "closed",
+    "title": "clippy",
+    "updated_at": "2024-11-29T08:08:23Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-12-02T13:17:12Z",
+    "created_at": "2024-12-02T08:02:05Z",
+    "draft": false,
+    "id": 2209712602,
+    "issue_type": null,
+    "labels": [],
+    "number": 2550,
+    "pull_request": {},
+    "state": "closed",
+    "title": "queryparser: add field respecification test",
+    "updated_at": "2024-12-02T13:17:15Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-12-26T09:25:05Z",
+    "created_at": "2024-12-02T20:24:20Z",
+    "draft": false,
+    "id": 2211249347,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2551,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update rustc-hash requirement from 1.1.0 to 2.1.0",
+    "updated_at": "2024-12-26T09:25:06Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2025-02-24T21:30:50Z",
+    "created_at": "2024-12-02T20:25:25Z",
+    "draft": false,
+    "id": 2211251111,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2552,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update fs4 requirement from 0.8.0 to 0.12.0",
+    "updated_at": "2025-02-24T21:30:53Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-12-03T04:14:02Z",
+    "draft": false,
+    "id": 2211822744,
+    "issue_type": null,
+    "labels": [],
+    "number": 2553,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add `has_merging_threads` function to IndexWriter",
+    "updated_at": "2025-04-18T10:07:48Z",
+    "user": {
+      "login": "kryesh"
+    }
+  },
+  {
+    "closed_at": "2024-12-09T20:39:03Z",
+    "created_at": "2024-12-06T02:16:37Z",
+    "id": 2721883713,
+    "issue_type": null,
+    "labels": [],
+    "number": 2554,
+    "state": "closed",
+    "title": "RUSTSEC-2024-0384: Unmaintained transitive dependency",
+    "updated_at": "2024-12-09T20:39:03Z",
+    "user": {
+      "login": "turmanticant"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-12-06T08:39:45Z",
+    "draft": false,
+    "id": 2219492861,
+    "issue_type": null,
+    "labels": [],
+    "number": 2555,
+    "pull_request": {},
+    "state": "open",
+    "title": "accept * as field name",
+    "updated_at": "2025-02-17T02:17:45Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-12-10T09:47:08Z",
+    "created_at": "2024-12-09T15:40:21Z",
+    "draft": false,
+    "id": 2224019046,
+    "issue_type": null,
+    "labels": [],
+    "number": 2556,
+    "pull_request": {},
+    "state": "closed",
+    "title": "update measure_time",
+    "updated_at": "2024-12-10T09:47:08Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2024-12-09T20:39:02Z",
+    "created_at": "2024-12-09T20:32:51Z",
+    "draft": false,
+    "id": 2224683700,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2557,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update measure_time requirement from 0.8.2 to 0.9.0",
+    "updated_at": "2024-12-09T20:39:04Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2025-01-06T09:17:39Z",
+    "created_at": "2024-12-11T14:43:33Z",
+    "draft": false,
+    "id": 2229195141,
+    "issue_type": null,
+    "labels": [],
+    "number": 2558,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Exist queries match subpath fields",
+    "updated_at": "2025-01-06T09:17:41Z",
+    "user": {
+      "login": "rdettai"
+    }
+  },
+  {
+    "closed_at": "2025-01-08T15:35:35Z",
+    "created_at": "2024-12-18T14:51:50Z",
+    "draft": false,
+    "id": 2242446589,
+    "issue_type": null,
+    "labels": [],
+    "number": 2559,
+    "pull_request": {},
+    "state": "closed",
+    "title": "allow warming partially an sstable for an automaton",
+    "updated_at": "2025-01-08T15:35:37Z",
+    "user": {
+      "login": "trinity-1686a"
+    }
+  },
+  {
+    "closed_at": "2024-12-23T09:58:52Z",
+    "created_at": "2024-12-22T04:13:31Z",
+    "id": 2754478553,
+    "issue_type": null,
+    "labels": [],
+    "number": 2560,
+    "state": "closed",
+    "title": "Boolean Query between fields",
+    "updated_at": "2024-12-23T09:58:52Z",
+    "user": {
+      "login": "rconnol"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2024-12-24T04:09:09Z",
+    "id": 2757132905,
+    "issue_type": null,
+    "labels": [],
+    "number": 2561,
+    "state": "open",
+    "title": "vint.rs 97 line error",
+    "updated_at": "2024-12-24T10:59:55Z",
+    "user": {
+      "login": "ddv900"
+    }
+  },
+  {
+    "closed_at": "2025-01-02T08:43:22Z",
+    "created_at": "2024-12-26T22:13:49Z",
+    "draft": false,
+    "id": 2252794600,
+    "issue_type": null,
+    "labels": [],
+    "number": 2562,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Improve `IndexWriter` customisation via builder",
+    "updated_at": "2025-01-02T08:43:23Z",
+    "user": {
+      "login": "ChillFish8"
+    }
+  },
+  {
+    "closed_at": "2025-01-08T16:11:46Z",
+    "created_at": "2024-12-31T20:57:48Z",
+    "draft": false,
+    "id": 2256710918,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3060109781203623155,
+        "name": "rust"
+      }
+    ],
+    "number": 2563,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update itertools requirement from 0.13.0 to 0.14.0",
+    "updated_at": "2025-01-08T16:11:49Z",
+    "user": {
+      "login": "dependabot"
+    }
+  }
+]
