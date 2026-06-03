@@ -1,9 +1,18 @@
 # github-tools
 
 > [!NOTE]
-> This repo is actively developed. Main branch may be rewritten.
+> Experimental repo for gaining insights into open source project health.
 
 Tools for extracting data from GitHub, storing it in a local SQLite database, querying it, and visualizing trends.
+
+# Trends
+
+Per-repo trend pages with all charts:
+
+- [Vector](trends/vector.md)
+- [VRL](trends/vrl.md)
+- [Quickwit](trends/quickwit.md)
+- [Tantivy](trends/tantivy.md)
 
 # Directory Layout
 
@@ -125,14 +134,3 @@ Outputs:
 - Console summary (like rate, dislike rate)
 - `out/automated-review-stats/{owner}_{repo}.csv` — per-comment table with URL and reaction (gitignored)
 - `trends/{repo}.md` — two summary tables updated in place via `AUTO:` markers
-
-# Trends
-
-Per-repo trend pages with all charts:
-
-- [Vector](trends/vector.md)
-- [VRL](trends/vrl.md)
-- [Quickwit](trends/quickwit.md)
-- [Tantivy](trends/tantivy.md)
-
-Exclusions are now per-chart; see the note below each chart on the trends pages.
