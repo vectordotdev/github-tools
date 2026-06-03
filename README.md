@@ -91,7 +91,7 @@ github-tools generate-all \
 # Charts (still Python). --exclude-labels hides those label series from
 # label-frequency charts only; the underlying PR/issue counts are unaffected.
 python -m scripts.util.plot --env-file vector.env --input-dir out/summaries \
-  --start $(date -d "$(date +%Y-%m-01) -12 months" +%Y-%m) \
+  --window 2y \
   --exclude-labels "no-changelog,meta: awaiting author"
 ```
 
