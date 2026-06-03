@@ -2,6 +2,8 @@ import argparse
 import hashlib
 import logging
 import os
+import re
+from datetime import date
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -174,6 +176,10 @@ def parse_args():
         help="Only include data from this YYYY-MM date forward",
     )
     parser.add_argument(
+        "--window",
+        help="Lookback window relative to today, e.g. 3y or 18m. Computes --start automatically; ignored if --start is also given.",
+    )
+    parser.add_argument(
         "--exclude-labels",
         type=str,
         help="Comma-separated list of labels to exclude from the various charts",
@@ -192,6 +198,16 @@ def parse_args():
         args.exclude_labels = labels if labels else None
     else:
         args.exclude_labels = None
+
+    if args.window and not args.start:
+        m = re.fullmatch(r"(\d+)(y|m)", args.window.strip().lower())
+        if not m:
+            parser.error("--window must be like 3y or 18m")
+        amount, unit = int(m.group(1)), m.group(2)
+        months = amount * 12 if unit == "y" else amount
+        today = date.today()
+        total_months = today.year * 12 + today.month - 1 - months
+        args.start = f"{total_months // 12}-{total_months % 12 + 1:02d}"
 
     return args
 
