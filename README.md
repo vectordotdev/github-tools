@@ -1,5 +1,8 @@
 # github-tools
 
+> [!NOTE]
+> Experimental repo for gaining insights into open source project health.
+
 Tools for extracting data from GitHub, storing it in a local SQLite database, querying it, and visualizing trends.
 
 # Trends
