@@ -3260,7 +3260,7 @@
     "number": 6245,
     "pull_request": {},
     "state": "closed",
-    "title": "[phase-31 4/4] PostgreSQL metastore \u2014 migration + compaction columns",
+    "title": "[phase-31 4/4] PostgreSQL metastore — migration + compaction columns",
     "updated_at": "2026-04-08T15:24:29Z",
     "user": {
       "login": "g-talbot"
@@ -3590,7 +3590,7 @@
     "number": 6267,
     "pull_request": {},
     "state": "closed",
-    "title": "PR1: adding quickwit-parquet-engine-crate, defining parquet schema, p\u2026",
+    "title": "PR1: adding quickwit-parquet-engine-crate, defining parquet schema, p…",
     "updated_at": "2026-04-06T19:48:30Z",
     "user": {
       "login": "alexanderbianchi"
@@ -4906,7 +4906,7 @@
     "number": 6343,
     "pull_request": {},
     "state": "closed",
-    "title": "fix: SS-2 invariant \u2014 nulls always sort last, regardless of direction",
+    "title": "fix: SS-2 invariant — nulls always sort last, regardless of direction",
     "updated_at": "2026-04-27T14:54:00Z",
     "user": {
       "login": "g-talbot"
@@ -5050,7 +5050,7 @@
     "number": 6352,
     "pull_request": {},
     "state": "closed",
-    "title": "feat: Phase 3a \u2014 merge metadata aggregation, message types, replaced_split_ids",
+    "title": "feat: Phase 3a — merge metadata aggregation, message types, replaced_split_ids",
     "updated_at": "2026-05-01T16:19:30Z",
     "user": {
       "login": "g-talbot"
@@ -5082,7 +5082,7 @@
     "number": 6354,
     "pull_request": {},
     "state": "closed",
-    "title": "feat: Phase 3d+3e \u2014 ParquetMergePipeline supervisor + publisher feedback",
+    "title": "feat: Phase 3d+3e — ParquetMergePipeline supervisor + publisher feedback",
     "updated_at": "2026-05-01T19:13:25Z",
     "user": {
       "login": "g-talbot"
@@ -5114,7 +5114,7 @@
     "number": 6356,
     "pull_request": {},
     "state": "closed",
-    "title": "feat: Phase 3f \u2014 comprehensive end-to-end integration test",
+    "title": "feat: Phase 3f — comprehensive end-to-end integration test",
     "updated_at": "2026-05-01T21:26:14Z",
     "user": {
       "login": "g-talbot"
@@ -5130,7 +5130,7 @@
     "number": 6357,
     "pull_request": {},
     "state": "closed",
-    "title": "feat: Phase 3b \u2014 ParquetMergePlanner, scheduler extension, downloader stub",
+    "title": "feat: Phase 3b — ParquetMergePlanner, scheduler extension, downloader stub",
     "updated_at": "2026-05-01T18:12:27Z",
     "user": {
       "login": "g-talbot"
@@ -5146,7 +5146,7 @@
     "number": 6358,
     "pull_request": {},
     "state": "closed",
-    "title": "feat: Phase 3c \u2014 ParquetMergeExecutor + full downloader",
+    "title": "feat: Phase 3c — ParquetMergeExecutor + full downloader",
     "updated_at": "2026-05-01T17:56:24Z",
     "user": {
       "login": "g-talbot"
@@ -5595,7 +5595,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-04T13:33:42Z",
     "created_at": "2026-05-05T20:06:37Z",
     "draft": false,
     "id": 3632812299,
@@ -5603,9 +5603,9 @@
     "labels": [],
     "number": 6385,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "refactor list splits pagination, env var to skip initial seeding",
-    "updated_at": "2026-05-29T15:38:55Z",
+    "updated_at": "2026-06-04T13:33:44Z",
     "user": {
       "login": "mattmkim"
     }
@@ -5832,7 +5832,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-04T19:37:59Z",
     "created_at": "2026-05-06T18:19:44Z",
     "draft": false,
     "id": 3638557386,
@@ -5840,9 +5840,9 @@
     "labels": [],
     "number": 6399,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix: set maturity on parquet splits",
-    "updated_at": "2026-05-29T15:57:07Z",
+    "updated_at": "2026-06-04T19:38:01Z",
     "user": {
       "login": "mattmkim"
     }
@@ -5953,7 +5953,7 @@
     "number": 6406,
     "pull_request": {},
     "state": "closed",
-    "title": "feat: ColumnPageStream trait \u2014 single contract for streaming + legacy inputs (PR-5a)",
+    "title": "feat: ColumnPageStream trait — single contract for streaming + legacy inputs (PR-5a)",
     "updated_at": "2026-05-11T18:06:43Z",
     "user": {
       "login": "g-talbot"
@@ -6017,7 +6017,7 @@
     "number": 6410,
     "pull_request": {},
     "state": "closed",
-    "title": "feat: per-merge-region streaming engine \u2014 multi-RG inputs + outputs (PR-6c.2)",
+    "title": "feat: per-merge-region streaming engine — multi-RG inputs + outputs (PR-6c.2)",
     "updated_at": "2026-05-13T15:24:33Z",
     "user": {
       "login": "g-talbot"
@@ -6288,7 +6288,7 @@
     "number": 6426,
     "pull_request": {},
     "state": "closed",
-    "title": "fix(merge): adversarial-review hardening \u2014 CS-1, adapter self-verify, chunk-level test verifier",
+    "title": "fix(merge): adversarial-review hardening — CS-1, adapter self-verify, chunk-level test verifier",
     "updated_at": "2026-05-18T18:15:01Z",
     "user": {
       "login": "g-talbot"
@@ -6450,7 +6450,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-01T13:56:05Z",
     "created_at": "2026-05-15T14:53:19Z",
     "draft": false,
     "id": 3690324269,
@@ -6458,9 +6458,9 @@
     "labels": [],
     "number": 6436,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "feat(_mapping): timestamp pushdown + column-hints fast path",
-    "updated_at": "2026-05-15T15:30:58Z",
+    "updated_at": "2026-06-01T13:56:05Z",
     "user": {
       "login": "congx4"
     }
@@ -6564,7 +6564,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-05-31T20:35:51Z",
     "created_at": "2026-05-18T20:23:23Z",
     "draft": false,
     "id": 3704607057,
@@ -6572,9 +6572,9 @@
     "labels": [],
     "number": 6442,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Use CRC32C for checksums instead of MD5",
-    "updated_at": "2026-05-29T12:30:27Z",
+    "updated_at": "2026-05-31T20:35:53Z",
     "user": {
       "login": "nadav-govari"
     }
@@ -6922,7 +6922,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Merge branch nadav/feature-split-merges into main",
-    "updated_at": "2026-05-29T12:40:51Z",
+    "updated_at": "2026-05-31T20:34:11Z",
     "user": {
       "login": "nadav-govari"
     }
@@ -6985,8 +6985,8 @@
     "number": 6465,
     "pull_request": {},
     "state": "open",
-    "title": "Inline OTLP metrics exporter",
-    "updated_at": "2026-05-26T14:56:37Z",
+    "title": "Implement OTLP metrics bridge",
+    "updated_at": "2026-06-07T19:04:12Z",
     "user": {
       "login": "shuheiktgw"
     }
@@ -7024,7 +7024,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-01T21:47:30Z",
     "created_at": "2026-05-27T16:12:47Z",
     "draft": false,
     "id": 3756407640,
@@ -7045,9 +7045,9 @@
     ],
     "number": 6468,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump the rust-dependencies group across 1 directory with 21 updates",
-    "updated_at": "2026-05-27T16:15:31Z",
+    "updated_at": "2026-06-01T21:47:32Z",
     "user": {
       "login": "dependabot"
     }
@@ -7085,7 +7085,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-05-31T20:21:46Z",
     "created_at": "2026-05-28T14:58:24Z",
     "draft": false,
     "id": 3762840946,
@@ -7093,9 +7093,9 @@
     "labels": [],
     "number": 6471,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Make standalone compactors config top-level",
-    "updated_at": "2026-05-29T12:35:44Z",
+    "updated_at": "2026-05-31T20:21:48Z",
     "user": {
       "login": "nadav-govari"
     }
@@ -7111,7 +7111,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(vrl): add `drop_on_abort` option to VRL transform (#5664)",
-    "updated_at": "2026-05-29T00:31:00Z",
+    "updated_at": "2026-06-02T22:02:04Z",
     "user": {
       "login": "siva-abstract-security"
     }
@@ -7170,6 +7170,491 @@
     "updated_at": "2026-05-29T00:57:02Z",
     "user": {
       "login": "siva-abstract-security"
+    }
+  },
+  {
+    "closed_at": "2026-06-01T21:16:18Z",
+    "created_at": "2026-05-29T22:20:44Z",
+    "id": 4551976409,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6477,
+    "state": "closed",
+    "title": "GCS split uploads fail with invalid URL, scheme is not http since opendal 0.56 (reqwest built without TLS)pr",
+    "updated_at": "2026-06-01T21:16:18Z",
+    "user": {
+      "login": "palkakrzysiek"
+    }
+  },
+  {
+    "closed_at": "2026-06-01T21:16:17Z",
+    "created_at": "2026-05-30T08:34:56Z",
+    "draft": false,
+    "id": 3773506547,
+    "issue_type": null,
+    "labels": [],
+    "number": 6478,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(storage): restore TLS for opendal GCS backend after 0.55→0.56 bump",
+    "updated_at": "2026-06-01T21:16:19Z",
+    "user": {
+      "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": "2026-06-01T21:16:19Z",
+    "created_at": "2026-05-30T12:39:23Z",
+    "draft": true,
+    "id": 3773909219,
+    "issue_type": null,
+    "labels": [],
+    "number": 6479,
+    "pull_request": {},
+    "state": "closed",
+    "title": "test(storage): cover GCS HTTPS OpenDAL TLS regression",
+    "updated_at": "2026-06-01T22:42:55Z",
+    "user": {
+      "login": "palkakrzysiek"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-01T15:42:04Z",
+    "id": 4564409339,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      },
+      {
+        "color": "D93F0B",
+        "description": "",
+        "id": 2266894064615322294,
+        "name": "high-priority"
+      }
+    ],
+    "number": 6480,
+    "state": "open",
+    "title": "ingest: persistent 503s after non-graceful scale-down of indexers",
+    "updated_at": "2026-06-05T14:07:55Z",
+    "user": {
+      "login": "nico34638"
+    }
+  },
+  {
+    "closed_at": "2026-06-02T12:25:34Z",
+    "created_at": "2026-06-01T21:48:01Z",
+    "draft": false,
+    "id": 3783979153,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6481,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump the rust-dependencies group across 1 directory with 18 updates",
+    "updated_at": "2026-06-02T12:25:41Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-06-02T11:53:46Z",
+    "created_at": "2026-06-01T22:07:31Z",
+    "draft": false,
+    "id": 3784061719,
+    "issue_type": null,
+    "labels": [],
+    "number": 6482,
+    "pull_request": {},
+    "state": "closed",
+    "title": "test(storage): cover GCS HTTPS OpenDAL TLS regression",
+    "updated_at": "2026-06-02T11:55:38Z",
+    "user": {
+      "login": "palkakrzysiek"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-02T07:29:29Z",
+    "id": 4569411940,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      },
+      {
+        "color": "0FE242",
+        "description": "",
+        "id": 1815751504052136209,
+        "name": "build"
+      },
+      {
+        "color": "F98124",
+        "description": "Large feature, that is not well designed yet",
+        "id": 1458023019700846056,
+        "name": "biggy"
+      },
+      {
+        "color": "1d76db",
+        "description": "",
+        "id": 579888533335339947,
+        "name": "backlog"
+      },
+      {
+        "color": "81B3D4",
+        "description": "",
+        "id": 5853401112193080692,
+        "name": "chore"
+      }
+    ],
+    "number": 6483,
+    "state": "open",
+    "title": "[test] integration test",
+    "updated_at": "2026-06-03T12:39:50Z",
+    "user": {
+      "login": "hushy"
+    }
+  },
+  {
+    "closed_at": "2026-06-03T12:23:11Z",
+    "created_at": "2026-06-02T12:26:17Z",
+    "draft": false,
+    "id": 3788036903,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6484,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump the rust-dependencies group across 1 directory with 19 updates",
+    "updated_at": "2026-06-03T12:23:14Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-06-02T17:32:42Z",
+    "created_at": "2026-06-02T13:07:15Z",
+    "draft": false,
+    "id": 3788278362,
+    "issue_type": null,
+    "labels": [],
+    "number": 6485,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(storage): set Content-MD5 header for single-part uploads when md5 is configured",
+    "updated_at": "2026-06-02T17:32:45Z",
+    "user": {
+      "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-03T00:29:14Z",
+    "id": 4575933743,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "New feature or request",
+        "id": 1470408430858150435,
+        "name": "enhancement"
+      }
+    ],
+    "number": 6486,
+    "state": "open",
+    "title": "KQL Support",
+    "updated_at": "2026-06-03T00:29:30Z",
+    "user": {
+      "login": "siva-abstract-security"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-03T07:46:52Z",
+    "draft": false,
+    "id": 3793641953,
+    "issue_type": null,
+    "labels": [],
+    "number": 6487,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(config): set MD5 checksums for DigitalOcean and GCS flavors since they don't support CRC32C, and explicitly set CRC32C for MinIO",
+    "updated_at": "2026-06-03T15:17:16Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-03T11:48:40Z",
+    "draft": false,
+    "id": 3795034771,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "21ceff",
+        "description": "Pull requests that update Docker code",
+        "id": 1303953488049839776,
+        "name": "docker"
+      }
+    ],
+    "number": 6488,
+    "pull_request": {},
+    "state": "open",
+    "title": "build(deps): bump node from 24 to 26",
+    "updated_at": "2026-06-03T11:50:02Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-03T11:53:28Z",
+    "draft": false,
+    "id": 3795065887,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 5360838874641212329,
+        "name": "github_actions"
+      }
+    ],
+    "number": 6489,
+    "pull_request": {},
+    "state": "open",
+    "title": "build(deps): bump the github-actions group with 10 updates",
+    "updated_at": "2026-06-03T11:53:30Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-06-04T19:18:08Z",
+    "created_at": "2026-06-03T12:24:01Z",
+    "draft": false,
+    "id": 3795247398,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6490,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump the rust-dependencies group across 1 directory with 20 updates",
+    "updated_at": "2026-06-04T19:18:11Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-03T13:39:52Z",
+    "draft": false,
+    "id": 3795752535,
+    "issue_type": null,
+    "labels": [],
+    "number": 6491,
+    "pull_request": {},
+    "state": "open",
+    "title": " KQL (Kibana Query Language) support",
+    "updated_at": "2026-06-04T23:40:41Z",
+    "user": {
+      "login": "siva-abstract-security"
+    }
+  },
+  {
+    "closed_at": "2026-06-04T17:38:29Z",
+    "created_at": "2026-06-04T12:55:54Z",
+    "draft": false,
+    "id": 3803131258,
+    "issue_type": null,
+    "labels": [],
+    "number": 6492,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(storage): avoid tokio::io::copy memory growth in OpenDAL GCS put",
+    "updated_at": "2026-06-04T17:38:31Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-04T15:01:48Z",
+    "draft": false,
+    "id": 3803915438,
+    "issue_type": null,
+    "labels": [],
+    "number": 6493,
+    "pull_request": {},
+    "state": "open",
+    "title": "make notifying merge planner best effort",
+    "updated_at": "2026-06-04T15:44:55Z",
+    "user": {
+      "login": "mattmkim"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-04T15:06:55Z",
+    "id": 4589810711,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 1525837148569873106,
+        "name": "bug"
+      }
+    ],
+    "number": 6494,
+    "state": "open",
+    "title": "Reduce part size on Google Storage / Opendal",
+    "updated_at": "2026-06-04T15:06:55Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-06-04T18:55:52Z",
+    "created_at": "2026-06-04T18:43:29Z",
+    "draft": false,
+    "id": 3805250785,
+    "issue_type": null,
+    "labels": [],
+    "number": 6495,
+    "pull_request": {},
+    "state": "closed",
+    "title": "bump tantivy to 6270552",
+    "updated_at": "2026-06-04T18:55:54Z",
+    "user": {
+      "login": "Abdul-Andha"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-04T19:18:50Z",
+    "draft": false,
+    "id": 3805432695,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 1961206635060105362,
+        "name": "rust"
+      }
+    ],
+    "number": 6496,
+    "pull_request": {},
+    "state": "open",
+    "title": "build(deps): bump the rust-dependencies group across 1 directory with 21 updates",
+    "updated_at": "2026-06-04T20:14:32Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-06-08T08:57:40Z",
+    "created_at": "2026-06-08T08:57:32Z",
+    "draft": false,
+    "id": 3822269425,
+    "issue_type": null,
+    "labels": [],
+    "number": 6497,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Feat/log metastore failures",
+    "updated_at": "2026-06-08T09:02:11Z",
+    "user": {
+      "login": "Darkheir"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-08T09:06:18Z",
+    "draft": false,
+    "id": 3822318338,
+    "issue_type": null,
+    "labels": [],
+    "number": 6498,
+    "pull_request": {},
+    "state": "open",
+    "title": "Update OpenTelemetry metrics dependencies",
+    "updated_at": "2026-06-08T09:15:17Z",
+    "user": {
+      "login": "shuheiktgw"
     }
   }
 ]

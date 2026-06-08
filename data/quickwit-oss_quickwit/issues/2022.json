@@ -712,7 +712,7 @@
     "number": 1047,
     "pull_request": {},
     "state": "closed",
-    "title": "Put index-uri and index-id in IndexConfig, update --id to --source fo\u2026",
+    "title": "Put index-uri and index-id in IndexConfig, update --id to --source fo…",
     "updated_at": "2022-01-10T10:41:27Z",
     "user": {
       "login": "fmassot"
@@ -936,7 +936,7 @@
     "number": 1059,
     "pull_request": {},
     "state": "closed",
-    "title": "Remove split describe and extract from doc as it's ready from a user \u2026",
+    "title": "Remove split describe and extract from doc as it's ready from a user …",
     "updated_at": "2022-01-11T02:22:43Z",
     "user": {
       "login": "fmassot"
@@ -10385,7 +10385,7 @@
     "number": 1534,
     "pull_request": {},
     "state": "closed",
-    "title": "Add docker commands in quickstart and warn that quickwit installer wo\u2026",
+    "title": "Add docker commands in quickstart and warn that quickwit installer wo…",
     "updated_at": "2022-05-25T14:00:17Z",
     "user": {
       "login": "fmassot"
@@ -13388,7 +13388,7 @@
     "number": 1691,
     "pull_request": {},
     "state": "closed",
-    "title": "Fix bad error message on unsupported fast field type / partition fast\u2026",
+    "title": "Fix bad error message on unsupported fast field type / partition fast…",
     "updated_at": "2022-07-06T09:30:54Z",
     "user": {
       "login": "fmassot"
@@ -13646,7 +13646,7 @@
     ],
     "number": 1703,
     "state": "closed",
-    "title": "Tutorial \u201cIndex a logging dataset locally\u201d is missing attribute \u201ctenant_id\u201d inside example log snippet",
+    "title": "Tutorial “Index a logging dataset locally” is missing attribute “tenant_id” inside example log snippet",
     "updated_at": "2022-07-01T14:26:19Z",
     "user": {
       "login": "laurids-reichardt"
@@ -13667,7 +13667,7 @@
     ],
     "number": 1704,
     "state": "closed",
-    "title": "Tutorial \u201cIndex a logging dataset locally\u201d is missing attribute \u201ctenant_id\u201d inside example log snippet",
+    "title": "Tutorial “Index a logging dataset locally” is missing attribute “tenant_id” inside example log snippet",
     "updated_at": "2022-07-01T13:11:09Z",
     "user": {
       "login": "laurids-reichardt"
@@ -13731,7 +13731,7 @@
     "number": 1708,
     "pull_request": {},
     "state": "closed",
-    "title": "Remove cluster proto and add a REST endpoint to expose the cluster st\u2026",
+    "title": "Remove cluster proto and add a REST endpoint to expose the cluster st…",
     "updated_at": "2022-07-04T22:19:05Z",
     "user": {
       "login": "fmassot"
@@ -14412,7 +14412,7 @@
     "number": 1745,
     "pull_request": {},
     "state": "closed",
-    "title": "Don't fetch timestamp fast field when there is no timestamp filtering\u2026",
+    "title": "Don't fetch timestamp fast field when there is no timestamp filtering…",
     "updated_at": "2022-07-12T01:28:47Z",
     "user": {
       "login": "fmassot"
@@ -14679,7 +14679,7 @@
     "number": 1758,
     "pull_request": {},
     "state": "closed",
-    "title": "Allow to customize region name for a custom region with a user define\u2026",
+    "title": "Allow to customize region name for a custom region with a user define…",
     "updated_at": "2022-07-29T11:41:56Z",
     "user": {
       "login": "fmassot"
@@ -16571,7 +16571,7 @@
     "number": 1853,
     "pull_request": {},
     "state": "closed",
-    "title": "Add a metastore service with a gRPC and a local metastore implementat\u2026",
+    "title": "Add a metastore service with a gRPC and a local metastore implementat…",
     "updated_at": "2023-01-20T02:55:44Z",
     "user": {
       "login": "fmassot"
@@ -16587,7 +16587,7 @@
     "number": 1854,
     "pull_request": {},
     "state": "closed",
-    "title": "Fix quickwit-proto and quickwit-ingest-api crate version in quickwit-\u2026",
+    "title": "Fix quickwit-proto and quickwit-ingest-api crate version in quickwit-…",
     "updated_at": "2022-08-16T17:32:32Z",
     "user": {
       "login": "fmassot"
@@ -16980,7 +16980,7 @@
     "number": 1877,
     "pull_request": {},
     "state": "closed",
-    "title": "Define node readyness based on mestatore and use chitchat ready predi\u2026",
+    "title": "Define node readyness based on mestatore and use chitchat ready predi…",
     "updated_at": "2022-08-25T09:30:59Z",
     "user": {
       "login": "fmassot"
@@ -17337,7 +17337,7 @@
     "number": 1896,
     "pull_request": {},
     "state": "closed",
-    "title": "Add logging message and better error message when there is no metasto\u2026",
+    "title": "Add logging message and better error message when there is no metasto…",
     "updated_at": "2022-09-01T09:01:47Z",
     "user": {
       "login": "fmassot"
@@ -18560,7 +18560,7 @@
     "number": 1958,
     "pull_request": {},
     "state": "closed",
-    "title": "Add janitor service when no service is specified and fix janitor runt\u2026",
+    "title": "Add janitor service when no service is specified and fix janitor runt…",
     "updated_at": "2022-09-15T11:49:27Z",
     "user": {
       "login": "fmassot"
@@ -18933,7 +18933,7 @@
     ],
     "number": 1979,
     "state": "closed",
-    "title": "Chinese search is not supported\uff1f",
+    "title": "Chinese search is not supported？",
     "updated_at": "2022-09-30T07:36:32Z",
     "user": {
       "login": "yangshike"
@@ -19175,7 +19175,7 @@
     "number": 1992,
     "pull_request": {},
     "state": "closed",
-    "title": "Fix metastore error when requesting last index delete opstamp with no\u2026",
+    "title": "Fix metastore error when requesting last index delete opstamp with no…",
     "updated_at": "2022-09-21T17:37:19Z",
     "user": {
       "login": "fmassot"
@@ -20076,7 +20076,7 @@
     "number": 2041,
     "pull_request": {},
     "state": "closed",
-    "title": "Update tutorial following change in Vector. ndjson => json + framing.\u2026",
+    "title": "Update tutorial following change in Vector. ndjson => json + framing.…",
     "updated_at": "2022-09-30T06:23:44Z",
     "user": {
       "login": "yangshike"
@@ -20931,7 +20931,7 @@
     "number": 2086,
     "pull_request": {},
     "state": "closed",
-    "title": "Fix #2085: supervisor gracefully exits when the last supervised actor\u2026",
+    "title": "Fix #2085: supervisor gracefully exits when the last supervised actor…",
     "updated_at": "2022-10-10T11:01:24Z",
     "user": {
       "login": "fmassot"
@@ -22325,7 +22325,7 @@
     "number": 2161,
     "pull_request": {},
     "state": "closed",
-    "title": "The index serializer should set its progress/killswitch on the contro\u2026",
+    "title": "The index serializer should set its progress/killswitch on the contro…",
     "updated_at": "2023-01-26T04:14:36Z",
     "user": {
       "login": "fulmicoton"
@@ -24203,7 +24203,7 @@
     "number": 2263,
     "pull_request": {},
     "state": "closed",
-    "title": "Remove publisher finalize and shut down property a merge pipeline wit\u2026",
+    "title": "Remove publisher finalize and shut down property a merge pipeline wit…",
     "updated_at": "2022-11-08T06:46:09Z",
     "user": {
       "login": "fmassot"
@@ -24610,7 +24610,7 @@
     "number": 2283,
     "pull_request": {},
     "state": "closed",
-    "title": "Check indexing pipeline state instead of health to decide whether a m\u2026",
+    "title": "Check indexing pipeline state instead of health to decide whether a m…",
     "updated_at": "2022-11-10T16:17:16Z",
     "user": {
       "login": "fmassot"
@@ -25892,7 +25892,7 @@
     "number": 2353,
     "pull_request": {},
     "state": "closed",
-    "title": "Skip `batch_builder` argument when instrumenting as it generates a hu\u2026",
+    "title": "Skip `batch_builder` argument when instrumenting as it generates a hu…",
     "updated_at": "2022-11-18T20:43:38Z",
     "user": {
       "login": "fmassot"
@@ -26004,7 +26004,7 @@
     "number": 2360,
     "pull_request": {},
     "state": "closed",
-    "title": "Unify merge & janitor max write throughput paramters into one paramet\u2026",
+    "title": "Unify merge & janitor max write throughput paramters into one paramet…",
     "updated_at": "2022-11-21T18:02:12Z",
     "user": {
       "login": "fmassot"

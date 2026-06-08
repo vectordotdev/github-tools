@@ -24,19 +24,12 @@
     "closed_at": null,
     "created_at": "2022-11-16T16:26:05Z",
     "id": 1643909430,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
-      }
-    ],
+    "issue_type": "Feature",
+    "labels": [],
     "number": 10,
     "state": "open",
     "title": "[Web Playground] Add diff viewer if input isn't JSONL",
-    "updated_at": "2023-03-28T13:04:17Z",
+    "updated_at": "2026-06-01T14:17:31Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -45,25 +38,19 @@
     "closed_at": null,
     "created_at": "2022-11-04T21:04:34Z",
     "id": 1643910101,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 11,
     "state": "open",
     "title": "Add `debug` function to VRL",
-    "updated_at": "2023-03-28T13:04:37Z",
+    "updated_at": "2026-06-01T14:17:28Z",
     "user": {
       "login": "jszwedko"
     }
@@ -72,25 +59,19 @@
     "closed_at": null,
     "created_at": "2022-10-28T11:22:53Z",
     "id": 1643910740,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 12,
     "state": "open",
     "title": "feat(vrl): Add `encode_mime_q` encoding function",
-    "updated_at": "2023-03-28T13:04:58Z",
+    "updated_at": "2026-06-01T14:17:26Z",
     "user": {
       "login": "ktff"
     }
@@ -99,25 +80,19 @@
     "closed_at": null,
     "created_at": "2022-10-13T14:40:59Z",
     "id": 1643912552,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 13,
     "state": "open",
     "title": "add `sort` function",
-    "updated_at": "2023-03-28T13:05:58Z",
+    "updated_at": "2026-06-01T14:17:24Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -358,14 +333,8 @@
     "closed_at": null,
     "created_at": "2022-09-15T19:31:58Z",
     "id": 1643925958,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the REPL",
@@ -376,7 +345,7 @@
     "number": 24,
     "state": "open",
     "title": "Code suggestions can suggest writing to immutable fields",
-    "updated_at": "2023-03-28T13:13:16Z",
+    "updated_at": "2026-06-01T14:06:18Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -385,25 +354,19 @@
     "closed_at": null,
     "created_at": "2022-09-09T19:51:47Z",
     "id": 1643926335,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
         "id": 8770318842022581189,
         "name": "vrl: compiler"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 25,
     "state": "open",
     "title": "Add `query`/`reference` as a first-class VRL type.",
-    "updated_at": "2023-09-12T11:15:11Z",
+    "updated_at": "2026-06-01T14:17:19Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -439,14 +402,8 @@
     "closed_at": null,
     "created_at": "2022-09-08T16:22:41Z",
     "id": 1643927431,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the type system",
@@ -457,7 +414,7 @@
     "number": 27,
     "state": "open",
     "title": "`map_values` function closure argument type def can be invalid when using `recursive: true`",
-    "updated_at": "2023-03-28T13:14:25Z",
+    "updated_at": "2026-06-01T14:06:16Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -466,14 +423,8 @@
     "closed_at": null,
     "created_at": "2022-09-08T16:11:43Z",
     "id": 1643927889,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
@@ -484,7 +435,7 @@
     "number": 28,
     "state": "open",
     "title": "`map_values` can infinitely recurse / stack overflow",
-    "updated_at": "2023-03-28T13:14:25Z",
+    "updated_at": "2026-06-01T14:06:13Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -493,19 +444,13 @@
     "closed_at": null,
     "created_at": "2022-08-29T09:25:27Z",
     "id": 1643930188,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       },
       {
         "color": "DBE0E9",
@@ -517,7 +462,7 @@
     "number": 29,
     "state": "open",
     "title": "Find array/object elements",
-    "updated_at": "2023-03-28T13:15:47Z",
+    "updated_at": "2026-06-01T14:17:14Z",
     "user": {
       "login": "max-arnold"
     }
@@ -574,25 +519,19 @@
     "closed_at": "2023-11-09T15:19:13Z",
     "created_at": "2022-08-12T23:35:24Z",
     "id": 1643933537,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
         "id": 8770318842022581189,
         "name": "vrl: compiler"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 32,
     "state": "closed",
     "title": "VRL: Expand fallibility to include \"always fails\", and generate a compile time error when this happens",
-    "updated_at": "2023-11-09T15:19:13Z",
+    "updated_at": "2026-06-01T14:17:11Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -628,14 +567,8 @@
     "closed_at": "2023-03-29T03:50:00Z",
     "created_at": "2022-08-09T03:31:12Z",
     "id": 1643934948,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -646,7 +579,7 @@
     "number": 34,
     "state": "closed",
     "title": "`split` has odd behavior with negative `limit` parameter",
-    "updated_at": "2023-03-29T03:50:00Z",
+    "updated_at": "2026-06-01T14:06:08Z",
     "user": {
       "login": "briankung"
     }
@@ -655,14 +588,8 @@
     "closed_at": null,
     "created_at": "2022-08-01T19:54:35Z",
     "id": 1643935332,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the type system",
@@ -673,7 +600,7 @@
     "number": 35,
     "state": "open",
     "title": "VRL: Partially fallible blocks can create invalid type definitions",
-    "updated_at": "2023-03-28T13:25:58Z",
+    "updated_at": "2026-06-01T14:06:06Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -682,14 +609,8 @@
     "closed_at": "2026-05-01T20:53:46Z",
     "created_at": "2022-08-01T19:39:48Z",
     "id": 1643936942,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the REPL",
@@ -706,7 +627,7 @@
     "number": 36,
     "state": "closed",
     "title": "VRL: Diagnostics point to wrong expression for fallibility error",
-    "updated_at": "2026-05-01T20:53:46Z",
+    "updated_at": "2026-06-01T14:06:03Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -715,14 +636,8 @@
     "closed_at": null,
     "created_at": "2022-07-29T19:40:45Z",
     "id": 1643938476,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
@@ -733,7 +648,7 @@
     "number": 37,
     "state": "open",
     "title": "VRL: Runtime `abort` is implicitly converted to a fallible error instead of propagating",
-    "updated_at": "2023-03-28T13:20:31Z",
+    "updated_at": "2026-06-01T14:05:59Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -742,14 +657,8 @@
     "closed_at": null,
     "created_at": "2022-07-29T19:21:20Z",
     "id": 1643938796,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the type system",
@@ -760,7 +669,7 @@
     "number": 38,
     "state": "open",
     "title": "VRL: \"success\" value of fallible assignment expressions can have an invalid type def",
-    "updated_at": "2023-03-28T13:42:20Z",
+    "updated_at": "2026-06-01T14:05:56Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -769,14 +678,8 @@
     "closed_at": null,
     "created_at": "2022-07-28T19:33:33Z",
     "id": 1643939409,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
@@ -793,7 +696,7 @@
     "number": 39,
     "state": "open",
     "title": "Function arguments aren't guaranteed to resolve in order",
-    "updated_at": "2023-03-28T13:21:05Z",
+    "updated_at": "2026-06-01T14:05:54Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -829,25 +732,19 @@
     "closed_at": "2023-10-20T19:59:25Z",
     "created_at": "2022-07-20T18:17:32Z",
     "id": 1643940501,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the REPL",
         "id": 863216777893478744,
         "name": "vrl: diagnostic"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 41,
     "state": "closed",
     "title": "add \"must use\" warnings for VRL expressions",
-    "updated_at": "2023-10-20T19:59:25Z",
+    "updated_at": "2026-06-01T14:17:09Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -856,14 +753,8 @@
     "closed_at": null,
     "created_at": "2022-07-18T15:49:22Z",
     "id": 1643941667,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the type system",
@@ -874,7 +765,7 @@
     "number": 42,
     "state": "open",
     "title": "Typedef for `merge` vrl function with deep = true is invalid",
-    "updated_at": "2023-03-28T13:22:20Z",
+    "updated_at": "2026-06-01T14:05:51Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -883,14 +774,8 @@
     "closed_at": null,
     "created_at": "2022-07-15T16:21:37Z",
     "id": 1643942227,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the type system",
@@ -901,7 +786,7 @@
     "number": 43,
     "state": "open",
     "title": "unknown types of the merge operator can be invalid",
-    "updated_at": "2023-03-28T13:22:40Z",
+    "updated_at": "2026-06-01T14:05:49Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -910,14 +795,8 @@
     "closed_at": null,
     "created_at": "2022-07-13T06:25:49Z",
     "id": 1643943438,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax parser",
@@ -934,7 +813,7 @@
     "number": 44,
     "state": "open",
     "title": "vrl_parser::parse - 'begin <= end (1 <= 0) when slicing",
-    "updated_at": "2023-05-13T01:44:48Z",
+    "updated_at": "2026-06-01T14:05:46Z",
     "user": {
       "login": "stasos24"
     }
@@ -943,14 +822,8 @@
     "closed_at": null,
     "created_at": "2022-07-13T06:18:21Z",
     "id": 1643943912,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax parser",
@@ -967,7 +840,7 @@
     "number": 45,
     "state": "open",
     "title": "vrl_parser::parse - invalid escape",
-    "updated_at": "2023-05-12T19:00:33Z",
+    "updated_at": "2026-06-01T14:05:44Z",
     "user": {
       "login": "stasos24"
     }
@@ -976,14 +849,8 @@
     "closed_at": "2023-04-28T17:28:17Z",
     "created_at": "2022-07-13T06:03:47Z",
     "id": 1643944279,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
@@ -1000,7 +867,7 @@
     "number": 46,
     "state": "closed",
     "title": " vrl::compile: attempt to subtract with overflow",
-    "updated_at": "2023-05-13T01:45:47Z",
+    "updated_at": "2026-06-01T14:05:42Z",
     "user": {
       "login": "stasos24"
     }
@@ -1009,25 +876,19 @@
     "closed_at": null,
     "created_at": "2022-07-13T05:36:47Z",
     "id": 1643944900,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
         "id": 8770318842022581189,
         "name": "vrl: compiler"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 47,
     "state": "open",
     "title": "User defined VRL functions",
-    "updated_at": "2023-03-28T13:24:09Z",
+    "updated_at": "2026-06-01T14:17:06Z",
     "user": {
       "login": "mohshami"
     }
@@ -1063,25 +924,19 @@
     "closed_at": "2025-01-06T18:09:01Z",
     "created_at": "2022-06-28T19:19:40Z",
     "id": 1643947260,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 49,
     "state": "closed",
     "title": "VRL function to normalize size units like MiB, KiB, etc. to bytes",
-    "updated_at": "2025-01-06T18:09:01Z",
+    "updated_at": "2026-06-01T14:17:04Z",
     "user": {
       "login": "jblang"
     }
@@ -1117,25 +972,19 @@
     "closed_at": null,
     "created_at": "2022-06-17T00:59:58Z",
     "id": 1643948265,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
         "id": 8770318842022581189,
         "name": "vrl: compiler"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 51,
     "state": "open",
     "title": "Don't allow expressions with side-effects in some contexts",
-    "updated_at": "2023-03-28T13:57:11Z",
+    "updated_at": "2026-06-01T14:17:02Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -1144,25 +993,19 @@
     "closed_at": null,
     "created_at": "2022-06-16T16:46:38Z",
     "id": 1643948865,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the type system",
         "id": 4415283568476322878,
         "name": "vrl: typedef"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 52,
     "state": "open",
     "title": "Add type_def checking to existing VRL tests",
-    "updated_at": "2023-03-28T13:26:11Z",
+    "updated_at": "2026-06-01T14:17:00Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -1171,25 +1014,19 @@
     "closed_at": null,
     "created_at": "2022-06-10T21:20:38Z",
     "id": 1643952154,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 53,
     "state": "open",
     "title": "Add `zip` function to VRL",
-    "updated_at": "2023-03-28T13:27:46Z",
+    "updated_at": "2026-06-01T14:16:57Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1252,25 +1089,19 @@
     "closed_at": null,
     "created_at": "2022-06-08T07:31:27Z",
     "id": 1643959300,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 56,
     "state": "open",
     "title": "Add `any` and `all` enumeration functions to VRL",
-    "updated_at": "2026-05-29T15:12:16Z",
+    "updated_at": "2026-06-01T14:16:55Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -1279,14 +1110,8 @@
     "closed_at": null,
     "created_at": "2022-06-03T19:14:30Z",
     "id": 1643959698,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -1297,7 +1122,7 @@
     "number": 57,
     "state": "open",
     "title": "VRL: `parse_logfmt` seems to actually be infallible",
-    "updated_at": "2023-03-28T13:33:27Z",
+    "updated_at": "2026-06-01T14:05:37Z",
     "user": {
       "login": "spencergilbert"
     }
@@ -1306,25 +1131,19 @@
     "closed_at": null,
     "created_at": "2022-06-02T19:27:44Z",
     "id": 1643960159,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax",
         "id": 5602399637472143240,
         "name": "vrl: syntax"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 58,
     "state": "open",
     "title": "VRL: ||= operator",
-    "updated_at": "2023-03-28T13:31:19Z",
+    "updated_at": "2026-06-01T14:16:53Z",
     "user": {
       "login": "Antiarchitect"
     }
@@ -1360,25 +1179,19 @@
     "closed_at": null,
     "created_at": "2022-05-27T05:41:20Z",
     "id": 1643962349,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the REPL",
         "id": 863216777893478744,
         "name": "vrl: diagnostic"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 60,
     "state": "open",
     "title": "Make \"fallible expression\" error in VRL specific for each expression",
-    "updated_at": "2023-03-28T13:32:37Z",
+    "updated_at": "2026-06-01T14:16:51Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -1387,25 +1200,19 @@
     "closed_at": null,
     "created_at": "2022-05-24T16:33:06Z",
     "id": 1643962855,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the REPL",
         "id": 863216777893478744,
         "name": "vrl: diagnostic"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 61,
     "state": "open",
     "title": "Better diagnostics for unquoted paths containing `-`s",
-    "updated_at": "2023-03-28T13:32:55Z",
+    "updated_at": "2026-06-01T14:16:48Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1414,14 +1221,8 @@
     "closed_at": null,
     "created_at": "2022-05-19T08:32:51Z",
     "id": 1643963687,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -1432,7 +1233,7 @@
     "number": 62,
     "state": "open",
     "title": "`logfmt` does not conform to spec",
-    "updated_at": "2024-03-18T12:46:58Z",
+    "updated_at": "2026-06-01T14:05:34Z",
     "user": {
       "login": "jalaziz"
     }
@@ -1441,14 +1242,8 @@
     "closed_at": null,
     "created_at": "2022-05-18T21:18:36Z",
     "id": 1643968974,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax parser",
@@ -1459,7 +1254,7 @@
     "number": 63,
     "state": "open",
     "title": "Cannot use empty blocks with VRL",
-    "updated_at": "2023-03-28T13:36:20Z",
+    "updated_at": "2026-06-01T14:05:32Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1516,25 +1311,19 @@
     "closed_at": null,
     "created_at": "2022-05-05T12:33:02Z",
     "id": 1643972464,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 66,
     "state": "open",
     "title": "New parser or source for Linux audit logs",
-    "updated_at": "2024-08-24T12:36:44Z",
+    "updated_at": "2026-06-01T14:16:46Z",
     "user": {
       "login": "kierdavis"
     }
@@ -1543,7 +1332,7 @@
     "closed_at": null,
     "created_at": "2022-05-03T11:23:17Z",
     "id": 1643973125,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
@@ -1556,18 +1345,12 @@
         "description": "Changes to the syntax parser",
         "id": 2718643081589140411,
         "name": "vrl: parser"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 67,
     "state": "open",
     "title": "Dedicated dynamic path query syntax in VRL",
-    "updated_at": "2023-03-28T13:37:52Z",
+    "updated_at": "2026-06-01T14:16:43Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -1576,14 +1359,8 @@
     "closed_at": null,
     "created_at": "2022-04-27T19:24:16Z",
     "id": 1643975098,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -1594,7 +1371,7 @@
     "number": 68,
     "state": "open",
     "title": "Syslog parsing overwrites duplicate structured data fields",
-    "updated_at": "2023-03-28T13:38:44Z",
+    "updated_at": "2026-06-01T14:05:29Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1603,14 +1380,8 @@
     "closed_at": null,
     "created_at": "2022-04-22T15:09:57Z",
     "id": 1643975858,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -1621,7 +1392,7 @@
     "number": 69,
     "state": "open",
     "title": "vrl: `truncate()` inconsistency: operates on UTF-8 characters instead of bytes",
-    "updated_at": "2023-03-28T13:39:05Z",
+    "updated_at": "2026-06-01T14:05:27Z",
     "user": {
       "login": "hhromic"
     }
@@ -1657,14 +1428,8 @@
     "closed_at": null,
     "created_at": "2022-04-20T20:51:04Z",
     "id": 1643978173,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax",
@@ -1681,7 +1446,7 @@
     "number": 71,
     "state": "open",
     "title": "Deprecate lookup paths of shape `[42]foo` and `foo.`",
-    "updated_at": "2023-03-28T13:40:10Z",
+    "updated_at": "2026-06-01T14:05:25Z",
     "user": {
       "login": "pablosichert"
     }
@@ -1690,25 +1455,19 @@
     "closed_at": "2025-08-19T17:59:59Z",
     "created_at": "2022-03-31T09:53:00Z",
     "id": 1643978641,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 72,
     "state": "closed",
     "title": "Support xxhash",
-    "updated_at": "2025-08-19T17:59:59Z",
+    "updated_at": "2026-06-01T14:16:40Z",
     "user": {
       "login": "eugene-bright"
     }
@@ -1717,14 +1476,8 @@
     "closed_at": null,
     "created_at": "2022-03-30T20:31:04Z",
     "id": 1643979511,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -1735,7 +1488,7 @@
     "number": 73,
     "state": "open",
     "title": "`parse_grok` VRL function ignores nonmatching characters at the start of the string, `parse_groks` errors",
-    "updated_at": "2023-03-28T13:40:53Z",
+    "updated_at": "2026-06-01T14:05:22Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -1744,14 +1497,8 @@
     "closed_at": null,
     "created_at": "2022-03-11T16:27:03Z",
     "id": 1643982320,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
@@ -1762,7 +1509,7 @@
     "number": 74,
     "state": "open",
     "title": "Merging via `|=` for fallible functions resets the left hand side when there is an error",
-    "updated_at": "2023-03-28T13:42:20Z",
+    "updated_at": "2026-06-01T14:05:18Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1771,14 +1518,8 @@
     "closed_at": "2026-05-01T18:28:50Z",
     "created_at": "2022-03-08T06:13:46Z",
     "id": 1643982873,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -1789,7 +1530,7 @@
     "number": 75,
     "state": "closed",
     "title": "Multiple adjacent control characters in a string cause parsing to produce incorrect results",
-    "updated_at": "2026-05-01T18:28:50Z",
+    "updated_at": "2026-06-01T14:05:15Z",
     "user": {
       "login": "darora"
     }
@@ -1798,7 +1539,7 @@
     "closed_at": null,
     "created_at": "2022-03-02T19:40:27Z",
     "id": 1643983487,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
@@ -1811,18 +1552,12 @@
         "description": "Changes to the syntax parser",
         "id": 2718643081589140411,
         "name": "vrl: parser"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 76,
     "state": "open",
     "title": "Improve VRL parsing error message for unexpected EOF",
-    "updated_at": "2023-03-28T13:43:00Z",
+    "updated_at": "2026-06-01T14:16:38Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1831,14 +1566,8 @@
     "closed_at": null,
     "created_at": "2022-03-01T18:03:06Z",
     "id": 1643985176,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the REPL",
@@ -1849,7 +1578,7 @@
     "number": 77,
     "state": "open",
     "title": "VRL doesn't report fallibility well for statements in blocks",
-    "updated_at": "2023-03-28T13:43:54Z",
+    "updated_at": "2026-06-01T14:05:13Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -1858,25 +1587,19 @@
     "closed_at": null,
     "created_at": "2022-02-25T19:59:45Z",
     "id": 1643985919,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
         "id": 8770318842022581189,
         "name": "vrl: compiler"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 78,
     "state": "open",
     "title": "VRL: operator compare two timestamp objects",
-    "updated_at": "2023-03-28T13:44:19Z",
+    "updated_at": "2026-06-01T14:16:35Z",
     "user": {
       "login": null
     }
@@ -1885,14 +1608,8 @@
     "closed_at": null,
     "created_at": "2022-02-08T12:28:50Z",
     "id": 1643987349,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -1909,7 +1626,7 @@
     "number": 79,
     "state": "open",
     "title": "VRL's `del` function should update type definitions for non-external paths",
-    "updated_at": "2023-03-28T13:45:09Z",
+    "updated_at": "2026-06-01T14:05:08Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -1918,25 +1635,19 @@
     "closed_at": null,
     "created_at": "2022-02-01T18:28:07Z",
     "id": 1643988065,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 80,
     "state": "open",
     "title": "Add function for repeating a string to VRL",
-    "updated_at": "2023-03-28T13:45:20Z",
+    "updated_at": "2026-06-01T14:16:33Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1945,25 +1656,19 @@
     "closed_at": "2024-08-27T21:46:29Z",
     "created_at": "2022-01-27T20:04:51Z",
     "id": 1643990708,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 81,
     "state": "closed",
     "title": "Add `unflatten` function",
-    "updated_at": "2024-08-27T21:46:30Z",
+    "updated_at": "2026-06-01T14:16:31Z",
     "user": {
       "login": "jszwedko"
     }
@@ -2014,25 +1719,19 @@
     "closed_at": null,
     "created_at": "2022-01-13T23:20:40Z",
     "id": 1643991939,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 84,
     "state": "open",
     "title": "Add VRL function: parse_prometheus_text",
-    "updated_at": "2023-03-28T13:47:01Z",
+    "updated_at": "2026-06-01T14:16:29Z",
     "user": {
       "login": "roganartu"
     }
@@ -2041,14 +1740,8 @@
     "closed_at": null,
     "created_at": "2022-03-21T21:36:38Z",
     "id": 1644103010,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax parser",
@@ -2059,7 +1752,7 @@
     "number": 148,
     "state": "open",
     "title": "vrl: null and unicode escapes not working in string literals",
-    "updated_at": "2025-02-26T16:53:49Z",
+    "updated_at": "2026-06-01T14:05:20Z",
     "user": {
       "login": "hhromic"
     }
@@ -2089,14 +1782,8 @@
     "closed_at": null,
     "created_at": "2022-08-10T14:17:05Z",
     "id": 1658877408,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "BF72F6",
         "description": "A value-adding code change that enhances its existing functionality",
@@ -2119,7 +1806,7 @@
     "number": 186,
     "state": "open",
     "title": "VRL `Target` methods should be infallible",
-    "updated_at": "2023-05-01T20:52:24Z",
+    "updated_at": "2026-06-01T14:06:11Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -2128,14 +1815,8 @@
     "closed_at": "2026-05-01T19:13:01Z",
     "created_at": "2022-08-01T15:20:42Z",
     "id": 1675378539,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
@@ -2152,7 +1833,7 @@
     "number": 197,
     "state": "closed",
     "title": "Closures are compiled assuming they only run exactly once",
-    "updated_at": "2026-05-01T19:13:01Z",
+    "updated_at": "2026-06-01T14:06:01Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -2161,14 +1842,8 @@
     "closed_at": "2023-07-05T14:54:42Z",
     "created_at": "2022-10-04T10:26:37Z",
     "id": 1700632716,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -2179,7 +1854,7 @@
     "number": 226,
     "state": "closed",
     "title": "`parse_nginx_log` fails for various logged bot requests",
-    "updated_at": "2023-07-05T14:54:42Z",
+    "updated_at": "2026-06-01T14:06:23Z",
     "user": {
       "login": "hashworks"
     }
@@ -2188,14 +1863,8 @@
     "closed_at": "2023-09-25T22:04:21Z",
     "created_at": "2022-11-17T13:19:52Z",
     "id": 1703965340,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -2206,7 +1875,7 @@
     "number": 227,
     "state": "closed",
     "title": "AWS VPC FLOW logs fields missing",
-    "updated_at": "2023-09-25T22:04:22Z",
+    "updated_at": "2026-06-01T14:06:25Z",
     "user": {
       "login": "voyc-geoffrey"
     }
@@ -2215,14 +1884,8 @@
     "closed_at": "2023-07-31T16:43:15Z",
     "created_at": "2022-09-22T16:45:30Z",
     "id": 1703965714,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -2233,7 +1896,7 @@
     "number": 228,
     "state": "closed",
     "title": "Vector does not parse RFC5424 structured data with some escape characters",
-    "updated_at": "2023-07-31T16:43:15Z",
+    "updated_at": "2026-06-01T14:06:20Z",
     "user": {
       "login": "saidsalihefendic"
     }
@@ -2242,19 +1905,12 @@
     "closed_at": "2026-05-01T18:24:56Z",
     "created_at": "2022-06-29T13:49:59Z",
     "id": 1703966182,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      }
-    ],
+    "issue_type": "Bug",
+    "labels": [],
     "number": 229,
     "state": "closed",
     "title": "Vector crashes when using `abort` inside a `for_each` function",
-    "updated_at": "2026-05-01T18:24:56Z",
+    "updated_at": "2026-06-01T14:05:40Z",
     "user": {
       "login": "marcojck"
     }
@@ -2263,25 +1919,19 @@
     "closed_at": null,
     "created_at": "2022-09-21T10:15:25Z",
     "id": 1767678611,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 270,
     "state": "open",
     "title": "Add an optional parameter to the parse_linux_authorization function to specify a timezone",
-    "updated_at": "2023-06-27T17:36:35Z",
+    "updated_at": "2026-06-01T14:17:22Z",
     "user": {
       "login": "Qazeer"
     }
@@ -2290,25 +1940,19 @@
     "closed_at": null,
     "created_at": "2022-09-05T11:32:50Z",
     "id": 1767679552,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 271,
     "state": "open",
     "title": "improve parse_key_value to support nesting , match with encode_key_value",
-    "updated_at": "2023-06-21T14:03:36Z",
+    "updated_at": "2026-06-01T14:17:16Z",
     "user": {
       "login": "ccmsi"
     }
@@ -2317,14 +1961,8 @@
     "closed_at": null,
     "created_at": "2022-02-25T11:03:19Z",
     "id": 1842195893,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -2335,7 +1973,7 @@
     "number": 376,
     "state": "open",
     "title": "parse_url doesn't support duplicated query parameters",
-    "updated_at": "2023-08-08T22:35:34Z",
+    "updated_at": "2026-06-01T14:05:11Z",
     "user": {
       "login": "anas-aso"
     }
