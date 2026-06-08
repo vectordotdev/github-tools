@@ -138,14 +138,8 @@
     "closed_at": null,
     "created_at": "2021-10-06T21:29:07Z",
     "id": 1643998440,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -156,7 +150,7 @@
     "number": 90,
     "state": "open",
     "title": "`to_timestamp` can fail if numeric values are too big",
-    "updated_at": "2023-03-28T13:49:36Z",
+    "updated_at": "2026-06-01T14:05:06Z",
     "user": {
       "login": "jszwedko"
     }
@@ -192,14 +186,8 @@
     "closed_at": null,
     "created_at": "2021-09-20T16:18:42Z",
     "id": 1644007572,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax parser",
@@ -210,7 +198,7 @@
     "number": 92,
     "state": "open",
     "title": "Dissallow `;` at the end of the last statement in an `if` predicate",
-    "updated_at": "2023-03-28T13:52:58Z",
+    "updated_at": "2026-06-01T14:05:04Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -246,14 +234,8 @@
     "closed_at": null,
     "created_at": "2021-08-26T12:17:25Z",
     "id": 1644011272,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the REPL",
@@ -264,7 +246,7 @@
     "number": 94,
     "state": "open",
     "title": "Invalid \"Exact\" Types Can't Be Fixed",
-    "updated_at": "2023-03-28T13:54:44Z",
+    "updated_at": "2026-06-01T14:05:01Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -354,14 +336,8 @@
     "closed_at": null,
     "created_at": "2021-08-16T15:27:56Z",
     "id": 1644015644,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
@@ -372,7 +348,7 @@
     "number": 98,
     "state": "open",
     "title": "Issue with `del` inside chained functions",
-    "updated_at": "2023-03-28T13:57:10Z",
+    "updated_at": "2026-06-01T14:04:58Z",
     "user": {
       "login": "spencergilbert"
     }
@@ -381,14 +357,8 @@
     "closed_at": null,
     "created_at": "2021-08-06T14:21:27Z",
     "id": 1644017426,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax parser",
@@ -399,7 +369,7 @@
     "number": 99,
     "state": "open",
     "title": "VRL: strange path creation due to double quotes",
-    "updated_at": "2023-03-28T13:57:51Z",
+    "updated_at": "2026-06-01T14:04:56Z",
     "user": {
       "login": "spencergilbert"
     }
@@ -408,14 +378,8 @@
     "closed_at": null,
     "created_at": "2021-08-04T14:38:19Z",
     "id": 1644018560,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax parser",
@@ -426,7 +390,7 @@
     "number": 100,
     "state": "open",
     "title": "No way to access keys with quotes in them in VRL",
-    "updated_at": "2023-03-28T13:58:14Z",
+    "updated_at": "2026-06-01T14:04:54Z",
     "user": {
       "login": "jszwedko"
     }
@@ -489,14 +453,8 @@
     "closed_at": "2024-12-24T22:06:01Z",
     "created_at": "2021-07-23T14:12:00Z",
     "id": 1644029272,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -507,7 +465,7 @@
     "number": 103,
     "state": "closed",
     "title": "Cannot Parse HTTP Error Log with parse_apache_log",
-    "updated_at": "2024-12-24T22:06:01Z",
+    "updated_at": "2026-06-01T14:04:52Z",
     "user": {
       "login": "jszwedko"
     }
@@ -651,25 +609,19 @@
     "closed_at": null,
     "created_at": "2021-06-07T11:00:18Z",
     "id": 1644050554,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 109,
     "state": "open",
     "title": "Add `to_array` coercion function to VRL",
-    "updated_at": "2023-03-28T14:11:35Z",
+    "updated_at": "2026-06-01T14:16:26Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -705,14 +657,8 @@
     "closed_at": null,
     "created_at": "2021-05-26T19:07:31Z",
     "id": 1644054087,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
@@ -723,7 +669,7 @@
     "number": 111,
     "state": "open",
     "title": "confusing error messages in REPL mode regarding string error coalescing",
-    "updated_at": "2023-03-28T14:13:18Z",
+    "updated_at": "2026-06-01T14:04:49Z",
     "user": {
       "login": "jerome-kleinen-kbc-be"
     }
@@ -759,14 +705,8 @@
     "closed_at": null,
     "created_at": "2021-05-12T15:51:11Z",
     "id": 1644060454,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the REPL",
@@ -783,7 +723,7 @@
     "number": 113,
     "state": "open",
     "title": "Unresolvable VRL compiler complaint about fallibility",
-    "updated_at": "2023-03-28T14:17:29Z",
+    "updated_at": "2026-06-01T14:04:47Z",
     "user": {
       "login": "jszwedko"
     }
@@ -819,25 +759,19 @@
     "closed_at": null,
     "created_at": "2021-05-12T13:18:02Z",
     "id": 1644061435,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 115,
     "state": "open",
     "title": "Add `parse_host` function to VRL",
-    "updated_at": "2023-03-28T14:17:07Z",
+    "updated_at": "2026-06-01T14:16:24Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -846,14 +780,8 @@
     "closed_at": null,
     "created_at": "2021-05-11T12:55:37Z",
     "id": 1644062060,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the type system",
@@ -864,7 +792,7 @@
     "number": 116,
     "state": "open",
     "title": "fields extracted using parse_regex imply incorrect type definitions when parse_regex fails",
-    "updated_at": "2023-03-28T14:17:28Z",
+    "updated_at": "2026-06-01T14:04:44Z",
     "user": {
       "login": "jerome-kleinen-kbc-be"
     }
@@ -873,14 +801,8 @@
     "closed_at": null,
     "created_at": "2021-05-06T11:07:48Z",
     "id": 1644062544,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -891,7 +813,7 @@
     "number": 117,
     "state": "open",
     "title": "Unable to parse timestamp of type millisecond since unix epoch",
-    "updated_at": "2023-03-28T14:17:44Z",
+    "updated_at": "2026-06-01T14:04:42Z",
     "user": {
       "login": "jerome-kleinen-kbc-be"
     }
@@ -1008,25 +930,19 @@
     "closed_at": null,
     "created_at": "2021-04-22T21:00:26Z",
     "id": 1644066360,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 122,
     "state": "open",
     "title": "Implement a bit-test function within VRL",
-    "updated_at": "2023-03-28T14:19:49Z",
+    "updated_at": "2026-06-01T14:16:21Z",
     "user": {
       "login": "aphelps"
     }
@@ -1230,25 +1146,19 @@
     "closed_at": null,
     "created_at": "2021-03-29T10:20:03Z",
     "id": 1644079226,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 130,
     "state": "open",
     "title": "Add headers for `parse_csv`",
-    "updated_at": "2024-12-19T15:53:27Z",
+    "updated_at": "2026-06-01T14:16:19Z",
     "user": {
       "login": "vladimir-dd"
     }
@@ -1386,25 +1296,19 @@
     "closed_at": null,
     "created_at": "2021-01-21T02:59:41Z",
     "id": 1644088747,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 136,
     "state": "open",
     "title": "New `parse_<framework>` Remap functions (niche log parsing)",
-    "updated_at": "2023-03-28T14:32:08Z",
+    "updated_at": "2026-06-01T14:16:17Z",
     "user": {
       "login": "binarylogic"
     }
@@ -1413,25 +1317,19 @@
     "closed_at": null,
     "created_at": "2021-01-19T20:08:36Z",
     "id": 1644091610,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 137,
     "state": "open",
     "title": "Add function memoization",
-    "updated_at": "2024-04-22T16:41:48Z",
+    "updated_at": "2026-06-01T14:16:15Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -1467,25 +1365,19 @@
     "closed_at": null,
     "created_at": "2021-01-15T18:37:20Z",
     "id": 1644094965,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 139,
     "state": "open",
     "title": "New `to_hive_partition` Remap function",
-    "updated_at": "2023-03-28T14:35:11Z",
+    "updated_at": "2026-06-01T14:16:12Z",
     "user": {
       "login": "binarylogic"
     }
@@ -1494,25 +1386,19 @@
     "closed_at": null,
     "created_at": "2021-01-15T18:18:55Z",
     "id": 1644095533,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax",
         "id": 5602399637472143240,
         "name": "vrl: syntax"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 140,
     "state": "open",
     "title": "Support for HereDocs in Remap",
-    "updated_at": "2023-03-28T14:35:26Z",
+    "updated_at": "2026-06-01T14:16:10Z",
     "user": {
       "login": "binarylogic"
     }
@@ -1542,25 +1428,19 @@
     "closed_at": "2023-10-10T14:33:17Z",
     "created_at": "2021-01-04T18:59:57Z",
     "id": 1644096155,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 142,
     "state": "closed",
     "title": "New `get_host_ip` Remap function",
-    "updated_at": "2023-10-10T14:33:18Z",
+    "updated_at": "2026-06-01T14:16:08Z",
     "user": {
       "login": "binarylogic"
     }

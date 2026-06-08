@@ -509,25 +509,19 @@
     "closed_at": "2024-02-06T17:02:05Z",
     "created_at": "2024-01-06T04:29:49Z",
     "id": 2073084375,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 633,
     "state": "closed",
     "title": "redact a pattern, but replace with a hash instead of  a string",
-    "updated_at": "2024-02-06T17:02:05Z",
+    "updated_at": "2026-06-01T14:18:25Z",
     "user": {
       "login": "tmccombs"
     }
@@ -713,14 +707,8 @@
     "closed_at": null,
     "created_at": "2024-01-11T02:02:21Z",
     "id": 2079821073,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -731,7 +719,7 @@
     "number": 641,
     "state": "open",
     "title": "`parse_syslog` incorrectly adds the previous year for RFC3464 timestamps when close to the new year and the system timezone is not UTC",
-    "updated_at": "2024-05-22T18:02:12Z",
+    "updated_at": "2026-06-01T14:07:29Z",
     "user": {
       "login": "yangshike"
     }
@@ -899,25 +887,19 @@
     "closed_at": "2024-03-26T13:57:24Z",
     "created_at": "2024-01-22T21:09:13Z",
     "id": 2094755798,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 648,
     "state": "closed",
     "title": "Feature request: decode_protobuf  (parse_protobuf?)",
-    "updated_at": "2024-03-26T13:57:24Z",
+    "updated_at": "2026-06-01T14:18:28Z",
     "user": {
       "login": "johnhtodd"
     }
@@ -1690,19 +1672,12 @@
     "draft": false,
     "id": 1714313730,
     "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      }
-    ],
+    "labels": [],
     "number": 679,
     "pull_request": {},
     "state": "closed",
     "title": "Fix two bugs with exporting paths",
-    "updated_at": "2024-02-06T20:26:47Z",
+    "updated_at": "2026-06-01T14:07:31Z",
     "user": {
       "login": "bruceg"
     }
@@ -2803,14 +2778,8 @@
     "closed_at": "2024-03-13T14:52:51Z",
     "created_at": "2024-01-08T14:04:35Z",
     "id": 2167644322,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -2821,7 +2790,7 @@
     "number": 725,
     "state": "closed",
     "title": "parse_logfmt adds extra fields",
-    "updated_at": "2024-03-13T14:52:51Z",
+    "updated_at": "2026-06-01T14:07:26Z",
     "user": {
       "login": "ofirmad"
     }
@@ -4036,14 +4005,8 @@
     "closed_at": null,
     "created_at": "2024-03-30T01:57:46Z",
     "id": 2216146052,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -4054,7 +4017,7 @@
     "number": 777,
     "state": "open",
     "title": "Parse/Encode logfmt is not idempotent when values have double quotes",
-    "updated_at": "2024-08-09T18:45:00Z",
+    "updated_at": "2026-06-01T14:07:33Z",
     "user": {
       "login": "srstrickland"
     }
@@ -4150,14 +4113,8 @@
     "closed_at": null,
     "created_at": "2024-04-02T07:20:51Z",
     "id": 2219751345,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -4174,7 +4131,7 @@
     "number": 781,
     "state": "open",
     "title": "parse_cef() bug",
-    "updated_at": "2025-09-15T14:16:36Z",
+    "updated_at": "2026-06-01T14:07:36Z",
     "user": {
       "login": "manickamk"
     }
@@ -4413,14 +4370,8 @@
     "closed_at": null,
     "created_at": "2024-04-10T02:21:27Z",
     "id": 2235670598,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -4431,7 +4382,7 @@
     "number": 790,
     "state": "open",
     "title": "parse_timestamp Invalid timestamp error",
-    "updated_at": "2024-04-14T15:22:54Z",
+    "updated_at": "2026-06-01T14:07:38Z",
     "user": {
       "login": "DimDroll"
     }
@@ -5250,25 +5201,19 @@
     "closed_at": null,
     "created_at": "2024-05-06T09:38:04Z",
     "id": 2280904971,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 823,
     "state": "open",
     "title": "from_unix_timestamp float support",
-    "updated_at": "2024-05-06T13:37:59Z",
+    "updated_at": "2026-06-01T14:18:32Z",
     "user": {
       "login": "jpds"
     }
@@ -5822,14 +5767,8 @@
     "closed_at": "2024-10-22T18:28:57Z",
     "created_at": "2024-05-18T20:25:24Z",
     "id": 2304298710,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -5840,7 +5779,7 @@
     "number": 844,
     "state": "closed",
     "title": "parse_xml function : text key added when it should not for single nodes",
-    "updated_at": "2024-10-22T18:28:58Z",
+    "updated_at": "2026-06-01T14:07:40Z",
     "user": {
       "login": "ScriptToddler"
     }
@@ -5936,19 +5875,13 @@
     "closed_at": "2025-01-27T16:21:51Z",
     "created_at": "2024-05-17T13:01:46Z",
     "id": 2306498877,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       },
       {
         "color": "DBE0E9",
@@ -5960,7 +5893,7 @@
     "number": 848,
     "state": "closed",
     "title": "New Remap function for parse_syslog_facility",
-    "updated_at": "2025-01-27T16:21:51Z",
+    "updated_at": "2026-06-01T14:18:34Z",
     "user": {
       "login": "timansky"
     }
@@ -5985,14 +5918,8 @@
     "closed_at": null,
     "created_at": "2024-05-21T07:02:50Z",
     "id": 2307492021,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
@@ -6003,7 +5930,7 @@
     "number": 850,
     "state": "open",
     "title": "for_each doesn't affect type",
-    "updated_at": "2024-05-21T13:29:13Z",
+    "updated_at": "2026-06-01T14:07:45Z",
     "user": {
       "login": "Rajin9601"
     }
@@ -6028,14 +5955,8 @@
     "closed_at": "2024-06-03T20:50:37Z",
     "created_at": "2024-05-22T11:59:23Z",
     "id": 2310349633,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -6046,7 +5967,7 @@
     "number": 852,
     "state": "closed",
     "title": "parse_aws_alb_log failing with new AWS field",
-    "updated_at": "2024-06-07T15:52:19Z",
+    "updated_at": "2026-06-01T14:07:47Z",
     "user": {
       "login": "Alex-Waring"
     }
@@ -6055,14 +5976,8 @@
     "closed_at": null,
     "created_at": "2024-05-19T01:06:36Z",
     "id": 2311165853,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -6073,7 +5988,7 @@
     "number": 853,
     "state": "open",
     "title": "parse_syslog function ignores timezone when rfc3164",
-    "updated_at": "2024-05-22T18:03:37Z",
+    "updated_at": "2026-06-01T14:07:42Z",
     "user": {
       "login": "timansky"
     }
@@ -6359,19 +6274,13 @@
     "closed_at": null,
     "created_at": "2024-06-03T17:11:57Z",
     "id": 2331753474,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       },
       {
         "color": "DBE0E9",
@@ -6383,7 +6292,7 @@
     "number": 865,
     "state": "open",
     "title": "Add `encode_xml` function",
-    "updated_at": "2024-06-03T18:08:11Z",
+    "updated_at": "2026-06-01T14:18:36Z",
     "user": {
       "login": "akshadagrawal"
     }
@@ -7049,14 +6958,8 @@
     "closed_at": "2024-10-01T04:44:35Z",
     "created_at": "2024-06-13T09:14:58Z",
     "id": 2350621664,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -7067,7 +6970,7 @@
     "number": 891,
     "state": "closed",
     "title": "Community ID is incorrect for ICMP",
-    "updated_at": "2024-10-01T04:44:35Z",
+    "updated_at": "2026-06-01T14:07:49Z",
     "user": {
       "login": "DylanRJohnston"
     }
@@ -7105,25 +7008,19 @@
     "closed_at": null,
     "created_at": "2024-04-06T03:16:26Z",
     "id": 2352105694,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 893,
     "state": "open",
     "title": "Add `parse_iana_protocol_number` and `parse_iana_protocol` function to VRL functions.",
-    "updated_at": "2024-06-13T21:35:57Z",
+    "updated_at": "2026-06-01T14:18:30Z",
     "user": {
       "login": "AlexYangYu"
     }
@@ -7654,25 +7551,19 @@
     "closed_at": null,
     "created_at": "2024-06-27T12:47:39Z",
     "id": 2378289140,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 914,
     "state": "open",
     "title": "Add caching option to get_env_var()",
-    "updated_at": "2025-10-03T03:50:10Z",
+    "updated_at": "2026-06-01T14:18:38Z",
     "user": {
       "login": "kaarolch"
     }
@@ -8646,25 +8537,19 @@
     "closed_at": "2024-07-25T12:29:47Z",
     "created_at": "2024-07-22T04:06:34Z",
     "id": 2423061923,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 950,
     "state": "closed",
     "title": "Convert object to string.",
-    "updated_at": "2024-07-25T12:29:47Z",
+    "updated_at": "2026-06-01T14:18:40Z",
     "user": {
       "login": "evanzhang87"
     }
@@ -8893,14 +8778,8 @@
     "closed_at": "2024-07-26T17:42:54Z",
     "created_at": "2024-07-26T15:48:41Z",
     "id": 2432509901,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -8911,7 +8790,7 @@
     "number": 959,
     "state": "closed",
     "title": "Unable to decode base 64 string",
-    "updated_at": "2024-08-09T14:15:48Z",
+    "updated_at": "2026-06-01T14:07:51Z",
     "user": {
       "login": "ManuISEN"
     }
@@ -8965,25 +8844,19 @@
     "closed_at": "2025-01-06T15:51:18Z",
     "created_at": "2024-07-29T21:02:06Z",
     "id": 2436384277,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 962,
     "state": "closed",
     "title": "Add timezone support for parse_timestamp",
-    "updated_at": "2025-01-06T16:05:58Z",
+    "updated_at": "2026-06-01T14:18:43Z",
     "user": {
       "login": "sandervandegeijn"
     }
@@ -9021,14 +8894,8 @@
     "closed_at": "2025-06-18T02:31:41Z",
     "created_at": "2024-07-31T01:28:58Z",
     "id": 2438926683,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
-      },
       {
         "color": "343639",
         "description": "Anything related to the development environment",
@@ -9039,7 +8906,7 @@
     "number": 964,
     "state": "closed",
     "title": "Tree Sitter parser and nvim-treesitter support",
-    "updated_at": "2025-06-18T02:31:41Z",
+    "updated_at": "2026-06-01T14:18:46Z",
     "user": {
       "login": "belltoy"
     }
@@ -9193,25 +9060,19 @@
     "closed_at": "2024-08-07T18:25:04Z",
     "created_at": "2024-08-01T19:51:51Z",
     "id": 2443336186,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 970,
     "state": "closed",
     "title": "include camelCase in VRL",
-    "updated_at": "2024-08-07T18:25:04Z",
+    "updated_at": "2026-06-01T14:18:48Z",
     "user": {
       "login": "leshow"
     }
@@ -9373,14 +9234,8 @@
     "closed_at": "2024-12-09T20:42:20Z",
     "created_at": "2024-08-05T10:03:06Z",
     "id": 2451179013,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -9391,7 +9246,7 @@
     "number": 978,
     "state": "closed",
     "title": "Vector stops with panic at to_unix_timestamp format:nanoseconds VRL function ",
-    "updated_at": "2025-01-31T08:44:12Z",
+    "updated_at": "2026-06-01T14:07:54Z",
     "user": {
       "login": "r3code"
     }
@@ -9843,14 +9698,8 @@
     "closed_at": "2024-09-10T14:24:22Z",
     "created_at": "2024-08-20T04:18:39Z",
     "id": 2475951555,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -9861,7 +9710,7 @@
     "number": 998,
     "state": "closed",
     "title": "Panic when match_datadog_query references key with hyphen",
-    "updated_at": "2024-09-10T14:24:22Z",
+    "updated_at": "2026-06-01T14:07:56Z",
     "user": {
       "login": "dekelpilli"
     }
@@ -9988,19 +9837,12 @@
     "draft": false,
     "id": 2034401329,
     "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      }
-    ],
+    "labels": [],
     "number": 1003,
     "pull_request": {},
     "state": "closed",
     "title": "fix(datadog search): remove Datadog logs intake event structure assumption",
-    "updated_at": "2024-08-23T22:06:52Z",
+    "updated_at": "2026-06-01T14:07:58Z",
     "user": {
       "login": "bruceg"
     }
@@ -11965,14 +11807,8 @@
     "closed_at": null,
     "created_at": "2024-10-22T15:38:37Z",
     "id": 2605820987,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the syntax parser",
@@ -11983,7 +11819,7 @@
     "number": 1084,
     "state": "open",
     "title": "Whitespace required around `!=` operator",
-    "updated_at": "2024-10-22T15:38:38Z",
+    "updated_at": "2026-06-01T14:08:00Z",
     "user": {
       "login": "jszwedko"
     }
@@ -12079,14 +11915,8 @@
     "closed_at": null,
     "created_at": "2024-10-23T14:17:25Z",
     "id": 2608821471,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -12097,7 +11927,7 @@
     "number": 1088,
     "state": "open",
     "title": "parse_key_value parses first field when accept_standalone_key=false",
-    "updated_at": "2024-10-23T14:28:20Z",
+    "updated_at": "2026-06-01T14:08:02Z",
     "user": {
       "login": "pikeas"
     }
@@ -12280,7 +12110,7 @@
     "closed_at": null,
     "created_at": "2024-10-25T17:24:44Z",
     "id": 2614705806,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
@@ -12299,18 +12129,12 @@
         "description": "Changes to the syntax parser",
         "id": 2718643081589140411,
         "name": "vrl: parser"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 1096,
     "state": "open",
     "title": "Having a `match` expression syntax would be useful for inline lookups",
-    "updated_at": "2024-10-25T17:24:45Z",
+    "updated_at": "2026-06-01T14:18:50Z",
     "user": {
       "login": "bruceg"
     }
@@ -12394,25 +12218,19 @@
     "closed_at": "2024-10-30T15:41:31Z",
     "created_at": "2024-10-29T14:57:21Z",
     "id": 2621515317,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 1100,
     "state": "closed",
     "title": "Support for AES-SIV (RFC 5297) to provide Deterministic Encryption/Decryption",
-    "updated_at": "2024-10-30T15:41:31Z",
+    "updated_at": "2026-06-01T14:18:52Z",
     "user": {
       "login": "beardface"
     }
@@ -12512,14 +12330,8 @@
     "closed_at": null,
     "created_at": "2024-10-31T17:29:33Z",
     "id": 2627432532,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -12530,7 +12342,7 @@
     "number": 1105,
     "state": "open",
     "title": "`del` does not compact objects when the requested path does not exist",
-    "updated_at": "2024-10-31T17:30:04Z",
+    "updated_at": "2026-06-01T14:08:04Z",
     "user": {
       "login": "bruceg"
     }
@@ -13329,19 +13141,12 @@
     "closed_at": "2025-10-06T20:22:04Z",
     "created_at": "2024-11-26T02:39:31Z",
     "id": 2692869066,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
-      }
-    ],
+    "issue_type": "Feature",
+    "labels": [],
     "number": 1140,
     "state": "closed",
     "title": "Introduce Community Repository for VRL scripts",
-    "updated_at": "2025-10-06T20:22:04Z",
+    "updated_at": "2026-06-01T14:18:55Z",
     "user": {
       "login": "sonnens"
     }
@@ -13408,25 +13213,19 @@
     "closed_at": "2025-02-03T16:21:22Z",
     "created_at": "2024-11-26T15:41:50Z",
     "id": 2695155422,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the compiler",
         "id": 8770318842022581189,
         "name": "vrl: compiler"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 1143,
     "state": "closed",
     "title": "Make `remove this abort-instruction` a warning instead of an error",
-    "updated_at": "2025-02-03T16:21:22Z",
+    "updated_at": "2026-06-01T14:18:57Z",
     "user": {
       "login": "pront"
     }
@@ -13464,14 +13263,8 @@
     "closed_at": "2024-12-04T15:45:04Z",
     "created_at": "2024-11-27T16:24:44Z",
     "id": 2699123992,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -13488,7 +13281,7 @@
     "number": 1147,
     "state": "closed",
     "title": "The behavior in transformations when I use version 0.40.0 of vector with the del(.) function is returning an empty json",
-    "updated_at": "2024-12-04T15:45:05Z",
+    "updated_at": "2026-06-01T14:08:09Z",
     "user": {
       "login": "madson7"
     }
@@ -13513,19 +13306,12 @@
     "closed_at": "2024-11-27T19:40:27Z",
     "created_at": "2024-11-26T02:13:00Z",
     "id": 2699537526,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      }
-    ],
+    "issue_type": "Bug",
+    "labels": [],
     "number": 1149,
     "state": "closed",
     "title": "VRL compiler warns about the unused result of `set_semantic_meaning`",
-    "updated_at": "2024-11-27T19:40:28Z",
+    "updated_at": "2026-06-01T14:08:06Z",
     "user": {
       "login": "sfackler"
     }
@@ -13637,14 +13423,8 @@
     "closed_at": null,
     "created_at": "2024-11-30T00:02:41Z",
     "id": 2706422259,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the REPL",
@@ -13655,7 +13435,7 @@
     "number": 1154,
     "state": "open",
     "title": "VRL error message for field assignment to non-object has a one-off typo in it",
-    "updated_at": "2024-12-02T21:22:13Z",
+    "updated_at": "2026-06-01T14:08:11Z",
     "user": {
       "login": "bruceg"
     }
@@ -13664,19 +13444,12 @@
     "closed_at": "2024-12-10T15:54:28Z",
     "created_at": "2024-12-01T04:55:44Z",
     "id": 2708509039,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
-      }
-    ],
+    "issue_type": "Feature",
+    "labels": [],
     "number": 1155,
     "state": "closed",
     "title": "feat(stdlib): Function for Converting Character Encodings",
-    "updated_at": "2024-12-10T15:54:28Z",
+    "updated_at": "2026-06-01T14:18:59Z",
     "user": {
       "login": "powerumc"
     }
@@ -13714,25 +13487,19 @@
     "closed_at": "2024-12-05T18:07:03Z",
     "created_at": "2024-12-02T16:52:27Z",
     "id": 2712640027,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 1157,
     "state": "closed",
     "title": "Add functions to map an array into an object",
-    "updated_at": "2024-12-05T18:07:03Z",
+    "updated_at": "2026-06-01T14:19:01Z",
     "user": {
       "login": "bruceg"
     }
@@ -13749,19 +13516,13 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 1158,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): Add `zip` function",
-    "updated_at": "2024-12-02T20:27:55Z",
+    "updated_at": "2026-06-01T14:19:04Z",
     "user": {
       "login": "bruceg"
     }
@@ -13897,19 +13658,13 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 1164,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): Add new `object_from_array` function",
-    "updated_at": "2024-12-04T20:05:55Z",
+    "updated_at": "2026-06-01T14:19:06Z",
     "user": {
       "login": "bruceg"
     }
@@ -14666,14 +14421,8 @@
     "closed_at": null,
     "created_at": "2024-12-19T22:36:17Z",
     "id": 2751551075,
-    "issue_type": null,
+    "issue_type": "Bug",
     "labels": [
-      {
-        "color": "F6707D",
-        "description": "A code related bug",
-        "id": 4322318380088294743,
-        "name": "type: bug"
-      },
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
@@ -14684,7 +14433,7 @@
     "number": 1193,
     "state": "open",
     "title": "parse_aws_alb_log function error failed to get field `client_host`",
-    "updated_at": "2024-12-20T01:06:28Z",
+    "updated_at": "2026-06-01T14:08:13Z",
     "user": {
       "login": "mdesouky"
     }
@@ -14751,25 +14500,19 @@
     "closed_at": "2025-01-03T19:55:31Z",
     "created_at": "2024-12-27T18:36:11Z",
     "id": 2761171094,
-    "issue_type": null,
+    "issue_type": "Feature",
     "labels": [
       {
         "color": "C2E0C6",
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
       }
     ],
     "number": 1196,
     "state": "closed",
     "title": "Allow `parse_duration` function to parse multiple duration similar to Golang's `time.ParseDuration`",
-    "updated_at": "2025-01-03T19:55:31Z",
+    "updated_at": "2026-06-01T14:19:08Z",
     "user": {
       "login": "titaneric"
     }
@@ -14846,19 +14589,12 @@
     "closed_at": null,
     "created_at": "2024-12-31T17:04:32Z",
     "id": 2764547916,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "BF72F6",
-        "description": "A value-adding code addition that introduce new functionality.",
-        "id": 6071513945365121417,
-        "name": "type: feature"
-      }
-    ],
+    "issue_type": "Feature",
+    "labels": [],
     "number": 1200,
     "state": "open",
     "title": "Parsing function for binary data (struct)",
-    "updated_at": "2025-01-31T15:26:20Z",
+    "updated_at": "2026-06-01T14:19:10Z",
     "user": {
       "login": "nomalord"
     }

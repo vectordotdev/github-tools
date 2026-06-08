@@ -1706,7 +1706,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-08T08:48:32Z",
     "created_at": "2026-04-13T20:58:28Z",
     "draft": false,
     "id": 3525164515,
@@ -1727,9 +1727,9 @@
     ],
     "number": 2894,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Update murmurhash32 requirement from 0.3 to 0.4",
-    "updated_at": "2026-05-19T11:30:45Z",
+    "updated_at": "2026-06-08T08:48:34Z",
     "user": {
       "login": "dependabot"
     }
@@ -2137,7 +2137,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-08T08:48:48Z",
     "created_at": "2026-04-28T20:04:38Z",
     "draft": false,
     "id": 3598249343,
@@ -2158,9 +2158,9 @@
     ],
     "number": 2917,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Bump actions/upload-artifact from 7.0.0 to 7.0.1",
-    "updated_at": "2026-04-28T20:04:40Z",
+    "updated_at": "2026-06-08T08:49:51Z",
     "user": {
       "login": "dependabot"
     }
@@ -2189,7 +2189,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Update lru requirement from 0.16.3 to 0.18.0",
-    "updated_at": "2026-04-29T20:04:36Z",
+    "updated_at": "2026-06-04T15:52:37Z",
     "user": {
       "login": "dependabot"
     }
@@ -2218,7 +2218,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Update fs4 requirement from 0.13.1 to 1.1.0",
-    "updated_at": "2026-04-30T20:04:16Z",
+    "updated_at": "2026-06-04T15:52:39Z",
     "user": {
       "login": "dependabot"
     }
@@ -2339,13 +2339,13 @@
     "pull_request": {},
     "state": "open",
     "title": "cleanup AggregationsSegmentCtx",
-    "updated_at": "2026-05-07T09:32:55Z",
+    "updated_at": "2026-06-08T09:46:10Z",
     "user": {
       "login": "PSeitz-dd"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-06T08:22:38Z",
     "created_at": "2026-05-08T04:20:39Z",
     "draft": false,
     "id": 3647269120,
@@ -2353,9 +2353,9 @@
     "labels": [],
     "number": 2927,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "feat: Make BM25 scoring parameters (k1, b) configurable per-index",
-    "updated_at": "2026-05-08T04:20:39Z",
+    "updated_at": "2026-06-06T08:22:38Z",
     "user": {
       "login": "kkkqkx123"
     }
@@ -2536,7 +2536,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Implement exponential search for rank -> docid batch lookup",
-    "updated_at": "2026-05-19T22:51:47Z",
+    "updated_at": "2026-06-08T10:16:53Z",
     "user": {
       "login": "waamm"
     }
@@ -2571,7 +2571,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-04T02:56:46Z",
     "created_at": "2026-05-26T01:33:22Z",
     "draft": false,
     "id": 3745088621,
@@ -2592,15 +2592,15 @@
     ],
     "number": 2939,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Bump github/codeql-action from 4.35.2 to 4.36.0",
-    "updated_at": "2026-05-26T01:33:23Z",
+    "updated_at": "2026-06-04T02:56:48Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-04T15:51:26Z",
     "created_at": "2026-05-27T21:18:23Z",
     "draft": false,
     "id": 3758050408,
@@ -2608,9 +2608,9 @@
     "labels": [],
     "number": 2940,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Add sve + neon filter vec implementation as spotted by Adam",
-    "updated_at": "2026-06-02T15:24:32Z",
+    "updated_at": "2026-06-06T21:09:34Z",
     "user": {
       "login": "fulmicoton"
     }
@@ -2707,6 +2707,138 @@
     "updated_at": "2026-06-02T16:29:02Z",
     "user": {
       "login": "fmassot"
+    }
+  },
+  {
+    "closed_at": "2026-06-06T06:44:52Z",
+    "created_at": "2026-06-03T23:30:18Z",
+    "draft": false,
+    "id": 3799298598,
+    "issue_type": null,
+    "labels": [],
+    "number": 2947,
+    "pull_request": {},
+    "state": "closed",
+    "title": "test(postings): add unit tests for TermFrequencyRecorder",
+    "updated_at": "2026-06-06T06:44:52Z",
+    "user": {
+      "login": "koopatroopa787"
+    }
+  },
+  {
+    "closed_at": "2026-06-08T08:49:05Z",
+    "created_at": "2026-06-04T02:56:42Z",
+    "draft": false,
+    "id": 3800122329,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 3397884688459367338,
+        "name": "github_actions"
+      }
+    ],
+    "number": 2948,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump github/codeql-action from 4.35.2 to 4.36.1",
+    "updated_at": "2026-06-08T08:49:07Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-06-08T08:55:55Z",
+    "created_at": "2026-06-04T02:56:48Z",
+    "draft": false,
+    "id": 3800122761,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 3397884688459367338,
+        "name": "github_actions"
+      }
+    ],
+    "number": 2949,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump actions/checkout from 6.0.2 to 6.0.3",
+    "updated_at": "2026-06-08T08:55:56Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-06-04T08:33:03Z",
+    "created_at": "2026-06-04T08:32:46Z",
+    "id": 4587158597,
+    "issue_type": null,
+    "labels": [],
+    "number": 2950,
+    "state": "closed",
+    "title": "test issue",
+    "updated_at": "2026-06-04T08:33:03Z",
+    "user": {
+      "login": "hushy"
+    }
+  },
+  {
+    "closed_at": "2026-06-04T11:35:17Z",
+    "created_at": "2026-06-04T08:33:13Z",
+    "id": 4587161817,
+    "issue_type": null,
+    "labels": [],
+    "number": 2951,
+    "state": "closed",
+    "title": "test issue 2",
+    "updated_at": "2026-06-04T11:35:17Z",
+    "user": {
+      "login": "hushy"
+    }
+  },
+  {
+    "closed_at": "2026-06-08T08:47:59Z",
+    "created_at": "2026-06-06T21:07:33Z",
+    "draft": false,
+    "id": 3817088953,
+    "issue_type": null,
+    "labels": [],
+    "number": 2952,
+    "pull_request": {},
+    "state": "closed",
+    "title": "CR comments from https://github.com/quickwit-oss/tantivy/pull/2940",
+    "updated_at": "2026-06-08T08:48:00Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-06-08T08:00:36Z",
+    "created_at": "2026-06-08T07:58:26Z",
+    "id": 4611049448,
+    "issue_type": null,
+    "labels": [],
+    "number": 2953,
+    "state": "closed",
+    "title": "test issue",
+    "updated_at": "2026-06-08T08:00:36Z",
+    "user": {
+      "login": "hushy"
     }
   }
 ]

@@ -49,7 +49,7 @@
     "author": {
       "login": "patelvp"
     },
-    "bodyText": "Hi,\nI\u2019m currently evaluating a migration of our OpenSearch cluster, which contains approximately 1 billion documents distributed across 40,000 tenants. The primary motivation for this migration is cost optimization.\nAt the moment, OpenSearch keeps all data live at all times. Since each tenant has a distinct access pattern, I believe an architecture that allows us to load or activate tenant data only when needed could significantly reduce costs for our users. Additionally, our usage is heavily concentrated between 9 a.m. and 5 p.m., so the ability to scale compute resources based on demand would further improve cost efficiency.\nBased on my understanding of this architecture, it seems that both of these goals may be achievable. However, I would appreciate expert suggestions on the best way to use Quickwit in our case:\nA) Single index for all tenants\nB) One index per tenant\nC) An index pool model\nIn my local tests I noticed option B performs better but it was only for 100 tenants. I wonder what happens when you reach 40k tenants. Opensearch for instance does not allow you to create that many index per tenant it just breaks with the overhead on index management.\nOur tenants can sign up and leave at any time, and we do not archive data. Our two primary search patterns are:\n\u2022\tA quick search on two fields across 13 document types\n\u2022\tA full-text search across all fields\nI would greatly appreciate your recommendations on the most suitable approach for our workload.",
+    "bodyText": "Hi,\nI’m currently evaluating a migration of our OpenSearch cluster, which contains approximately 1 billion documents distributed across 40,000 tenants. The primary motivation for this migration is cost optimization.\nAt the moment, OpenSearch keeps all data live at all times. Since each tenant has a distinct access pattern, I believe an architecture that allows us to load or activate tenant data only when needed could significantly reduce costs for our users. Additionally, our usage is heavily concentrated between 9 a.m. and 5 p.m., so the ability to scale compute resources based on demand would further improve cost efficiency.\nBased on my understanding of this architecture, it seems that both of these goals may be achievable. However, I would appreciate expert suggestions on the best way to use Quickwit in our case:\nA) Single index for all tenants\nB) One index per tenant\nC) An index pool model\nIn my local tests I noticed option B performs better but it was only for 100 tenants. I wonder what happens when you reach 40k tenants. Opensearch for instance does not allow you to create that many index per tenant it just breaks with the overhead on index management.\nOur tenants can sign up and leave at any time, and we do not archive data. Our two primary search patterns are:\n•\tA quick search on two fields across 13 document types\n•\tA full-text search across all fields\nI would greatly appreciate your recommendations on the most suitable approach for our workload.",
     "category": {
       "name": "General"
     },
@@ -118,7 +118,7 @@
     "author": {
       "login": "oleksandr-zhyhalo"
     },
-    "bodyText": "Hey everyone,\nWanted to share a recent project of mine \u2014 Logwiz. It's a full-stack application powered by Quickwit for log search.\n\ud83d\udc49 https://github.com/oleksandr-zhyhalo/logwiz\nSome of the features it brings:\n\nAuthentication, including Google SSO\nAuthenticated OTEL forwarding endpoints to Quickwit(WIP)\nFrequency charts\nQuick filters powered by aggregations\n\u2026and much more.\n\nThe focus is on logs for now, but traces are also on the roadmap.\nIt's already been adopted at my company (Beewise), where it helps us centralize logs from thousands of IoT devices :)\nAny feedback is much appreciated!",
+    "bodyText": "Hey everyone,\nWanted to share a recent project of mine — Logwiz. It's a full-stack application powered by Quickwit for log search.\n👉 https://github.com/rootprint/rootprint\nSome of the features it brings:\n\nAuthentication, including Google SSO\nAuthenticated OTEL forwarding endpoints to Quickwit(WIP)\nFrequency charts\nQuick filters powered by aggregations\n…and much more.\n\nThe focus is on logs for now, but traces are also on the roadmap.\nIt's already been adopted at my company (Beewise), where it helps us centralize logs from thousands of IoT devices :)\nAny feedback is much appreciated!",
     "category": {
       "name": "Show and tell"
     },
@@ -132,8 +132,8 @@
     "locked": false,
     "number": 6329,
     "stateReason": null,
-    "title": "Logwiz - self-hosted log platform based on Quickwit.",
-    "updatedAt": "2026-04-21T13:54:10Z",
+    "title": "Rootprint - self-hosted log platform based on Quickwit.",
+    "updatedAt": "2026-06-03T10:30:08Z",
     "upvoteCount": 2,
     "url": "https://github.com/quickwit-oss/quickwit/discussions/6329"
   },
