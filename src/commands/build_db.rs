@@ -20,7 +20,7 @@ pub fn run(input: &str, config: &Config) -> Result<()> {
 
     let out_dir = Path::new("out/db");
     fs::create_dir_all(out_dir)?;
-    let db_path = out_dir.join(format!("{}_{}.db", config.repo_owner, config.repo_name));
+    let db_path = out_dir.join(format!("{}_{}.db", config.org, config.repo));
 
     if db_path.exists() {
         println!("Deleting existing database at {}...", db_path.display());

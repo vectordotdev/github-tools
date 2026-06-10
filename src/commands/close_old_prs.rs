@@ -78,7 +78,7 @@ pub fn run(config: &Config, dry_run: bool, yes: bool) -> Result<()> {
 fn fetch_open_prs(client: &Client, config: &Config) -> Result<Vec<Value>> {
     let url = format!(
         "https://api.github.com/repos/{}/{}/pulls",
-        config.repo_owner, config.repo_name
+        config.org, config.repo
     );
     let mut prs = Vec::new();
     let mut page = 1u32;
@@ -112,7 +112,7 @@ fn fetch_open_prs(client: &Client, config: &Config) -> Result<Vec<Value>> {
 fn add_comment(client: &Client, config: &Config, pr_number: u64, body: &str) -> Result<()> {
     let url = format!(
         "https://api.github.com/repos/{}/{}/issues/{pr_number}/comments",
-        config.repo_owner, config.repo_name
+        config.org, config.repo
     );
     client
         .post(&url)
@@ -130,7 +130,7 @@ fn add_comment(client: &Client, config: &Config, pr_number: u64, body: &str) -> 
 fn close_pr(client: &Client, config: &Config, pr_number: u64) -> Result<()> {
     let url = format!(
         "https://api.github.com/repos/{}/{}/pulls/{pr_number}",
-        config.repo_owner, config.repo_name
+        config.org, config.repo
     );
     client
         .patch(&url)

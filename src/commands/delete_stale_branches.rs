@@ -12,7 +12,7 @@ pub fn run(config: &Config, dry_run: bool, yes: bool) -> Result<()> {
 
     println!(
         "Fetching branches for {}/{}...",
-        config.repo_owner, config.repo_name
+        config.org, config.repo
     );
     let branches = fetch_all_branches(&client, config)?;
     println!("Total branches fetched: {}", branches.len());
@@ -85,7 +85,7 @@ fn is_semver_branch(name: &str) -> bool {
 fn fetch_all_branches(client: &Client, config: &Config) -> Result<Vec<Value>> {
     let url = format!(
         "https://api.github.com/repos/{}/{}/branches",
-        config.repo_owner, config.repo_name
+        config.org, config.repo
     );
     let mut branches = Vec::new();
     let mut page = 1u32;
@@ -128,7 +128,7 @@ fn get_last_commit_date(
 ) -> Result<Option<DateTime<Utc>>> {
     let url = format!(
         "https://api.github.com/repos/{}/{}/commits",
-        config.repo_owner, config.repo_name
+        config.org, config.repo
     );
     let resp = client
         .get(&url)
@@ -150,7 +150,7 @@ fn get_last_commit_date(
 fn delete_branch(client: &Client, config: &Config, branch: &str) -> Result<()> {
     let url = format!(
         "https://api.github.com/repos/{}/{}/git/refs/heads/{}",
-        config.repo_owner, config.repo_name, branch
+        config.org, config.repo, branch
     );
     let resp = client
         .delete(&url)

@@ -151,7 +151,7 @@ pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) ->
 
     println!("Total issues/PRs fetched: {}", all_items.len());
 
-    let repo_prefix = format!("{}_{}", config.repo_owner, config.repo_name);
+    let repo_prefix = format!("{}_{}", config.org, config.repo);
     let out_dir = Path::new("data").join(&repo_prefix).join("issues");
     fs::create_dir_all(&out_dir)?;
     let written = write_year_bucketed(&all_items, &out_dir, "created_at")?;
@@ -260,8 +260,8 @@ fn fetch_paginated(
         let body = json!({
             "query": query,
             "variables": {
-                "owner": config.repo_owner,
-                "name": config.repo_name,
+                "owner": config.org,
+                "name": config.repo,
                 "first": PAGE_SIZE,
                 "after": after,
             }
@@ -336,8 +336,8 @@ fn fetch_paginated_since(
         let body = json!({
             "query": query,
             "variables": {
-                "owner": config.repo_owner,
-                "name": config.repo_name,
+                "owner": config.org,
+                "name": config.repo,
                 "first": PAGE_SIZE,
                 "after": after,
                 "since": since,
@@ -418,8 +418,8 @@ fn fetch_paginated_since_prs(
         let body = json!({
             "query": query,
             "variables": {
-                "owner": config.repo_owner,
-                "name": config.repo_name,
+                "owner": config.org,
+                "name": config.repo,
                 "first": PAGE_SIZE,
                 "after": after,
             }

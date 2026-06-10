@@ -14,7 +14,7 @@ from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import MaxNLocator
 
 from scripts.logging.custom_logging import setup_logger
-from scripts.util.load_env import load_env
+
 
 # Constants
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -185,9 +185,11 @@ def parse_args():
         help="Comma-separated list of labels to exclude from the various charts",
     )
     parser.add_argument(
-        "--env-file",
+        "--repo",
         type=str,
-        help="Path to the .env file to load environment variables from",
+        required=True,
+        metavar="OWNER/NAME",
+        help="Repository in owner/name format, e.g. vectordotdev/vector",
     )
 
     args = parser.parse_args()
@@ -212,24 +214,16 @@ def parse_args():
     return args
 
 
-def main():
-    setup_logger()
-    setup_styles()
-    args = parse_args()
-
-    try:
-        env = load_env(args.env_file)
-    except ValueError as e:
-        print(f"Error loading environment variables: {e}")
-        return 1
+def plot_repo(repo_str, args, env):
+    owner, _, name = repo_str.partition('/')
 
     # source:/transform:/sink: label prefixes only exist in vectordotdev/vector;
     # skip integration-specific charts for every other repo.
-    is_vector = env['REPO_OWNER'] == 'vectordotdev' and env['REPO_NAME'] == 'vector'
+    is_vector = owner == 'vectordotdev' and name == 'vector'
 
     table_names = ["issues", "pull_requests"]
     for table in table_names:
-        prefix = f"{env['REPO_OWNER']}_{env['REPO_NAME']}_{table}"
+        prefix = f"{owner}_{name}_{table}"
         monthly_csv = os.path.join(args.input_dir, f"{prefix}.monthly_summary.csv")
         if os.path.exists(monthly_csv):
             output_path = os.path.join(OUTPUT_DIR, f"{prefix}.monthly_trend.png")
@@ -292,15 +286,23 @@ def main():
 
             # Same data as the yearly chart, also written as a markdown
             # table into trends/{repo}.md between AUTO markers.
-            trends_md = Path(SCRIPT_DIR).resolve().parents[1] / "trends" / f"{env['REPO_NAME']}.md"
+            trends_md = Path(SCRIPT_DIR).resolve().parents[1] / "trends" / f"{name}.md"
             update_yearly_contributors_table(contributor_csv, table, trends_md)
 
     # Discussion trends
-    disc_prefix = f"{env['REPO_OWNER']}_{env['REPO_NAME']}_discussions"
+    disc_prefix = f"{owner}_{name}_discussions"
     disc_csv = os.path.join(args.input_dir, f"{disc_prefix}.monthly_summary.csv")
     if os.path.exists(disc_csv):
         output_path = os.path.join(OUTPUT_DIR, f"{disc_prefix}.monthly_trend.png")
         plot_discussion_trend(disc_csv, output_path, start_date=args.start)
+
+
+def main():
+    setup_logger()
+    setup_styles()
+    args = parse_args()
+
+    plot_repo(args.repo, args, dict(os.environ))
 
 
 # Curated categorical palette for auto-assigned label colors. Hand-picked

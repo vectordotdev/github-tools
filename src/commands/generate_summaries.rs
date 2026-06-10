@@ -74,7 +74,7 @@ fn normalize_label_sql(col: &str) -> String {
 fn csv_path(out_dir: &Path, config: &Config, table: &str, suffix: &str) -> std::path::PathBuf {
     out_dir.join(format!(
         "{}_{}_{}.{}.csv",
-        config.repo_owner, config.repo_name, table, suffix
+        config.org, config.repo, table, suffix
     ))
 }
 

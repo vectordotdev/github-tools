@@ -165,7 +165,7 @@ pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) ->
 
     println!("Total discussions fetched: {}", discussions.len());
 
-    let repo_prefix = format!("{}_{}", config.repo_owner, config.repo_name);
+    let repo_prefix = format!("{}_{}", config.org, config.repo);
     let out_dir = Path::new("data").join(&repo_prefix).join("discussions");
     fs::create_dir_all(&out_dir)?;
 
@@ -216,8 +216,8 @@ fn fetch_discussions_since(client: &Client, config: &Config, since: &str) -> Res
         let body = json!({
             "query": QUERY_SINCE,
             "variables": {
-                "owner": config.repo_owner,
-                "name": config.repo_name,
+                "owner": config.org,
+                "name": config.repo,
                 "first": PAGE_SIZE,
                 "after": after,
             }
@@ -292,8 +292,8 @@ fn fetch_all_discussions(client: &Client, config: &Config) -> Result<Vec<Discuss
         let body = json!({
             "query": QUERY,
             "variables": {
-                "owner": config.repo_owner,
-                "name": config.repo_name,
+                "owner": config.org,
+                "name": config.repo,
                 "first": PAGE_SIZE,
                 "after": after,
             }

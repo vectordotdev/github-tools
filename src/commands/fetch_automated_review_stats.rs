@@ -74,8 +74,8 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
         let body = json!({
             "query": MERGED_PRS_QUERY,
             "variables": {
-                "owner": config.repo_owner,
-                "name": config.repo_name,
+                "owner": config.org,
+                "name": config.repo,
                 "first": PR_PAGE_SIZE,
                 "after": after,
             }
@@ -188,7 +188,7 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
     println!();
 
     if discovery {
-        println!("=== Review Comment Authors ({}/{}) ===", config.repo_owner, config.repo_name);
+        println!("=== Review Comment Authors ({}/{}) ===", config.org, config.repo);
         if let Some(ref ts) = since_ts {
             println!("Since : {}", &ts[..10]);
         }
@@ -203,7 +203,7 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
     }
 
     let login = bot_login.unwrap();
-    println!("=== Automated Review Stats ({}/{}) ===", config.repo_owner, config.repo_name);
+    println!("=== Automated Review Stats ({}/{}) ===", config.org, config.repo);
     println!("Bot login : {login}");
     if let Some(ref ts) = since_ts {
         println!("Since     : {}", &ts[..10]);
@@ -222,7 +222,7 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
     if !rows.is_empty() {
         let out_dir = std::path::Path::new("out/automated-review-stats");
         fs::create_dir_all(out_dir)?;
-        let csv_path = out_dir.join(format!("{}_{}.csv", config.repo_owner, config.repo_name));
+        let csv_path = out_dir.join(format!("{}_{}.csv", config.org, config.repo));
         rows.sort_by_key(|(_, reaction)| match *reaction {
             "no signal"  => 0,
             "disliked"   => 1,
@@ -247,7 +247,7 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
 }
 
 fn update_trends(config: &Config, bot_login: &str, since_ts: Option<&str>, stats: &Stats) -> Result<()> {
-    let trends_path = std::path::Path::new("trends").join(format!("{}.md", config.repo_name));
+    let trends_path = std::path::Path::new("trends").join(format!("{}.md", config.repo));
     if !trends_path.exists() {
         println!("Trends file not found at {}, skipping.", trends_path.display());
         return Ok(());
