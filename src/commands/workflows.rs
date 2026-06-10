@@ -18,7 +18,7 @@ fn dockerhub_vector_dev_repo() -> String {
 /// Fetches issues and discussions for a single repo.
 pub fn fetch_all(repo_str: &str, since: Option<&str>) -> Result<()> {
     let repo = Repo::parse(repo_str)?;
-    let config = Config::for_repo(&repo)?;
+    let config = Config::for_repo(&repo);
     let client = Client::new();
     fetch_issues::run_with_client(&client, &config, since)?;
     fetch_discussions::run_with_client(&client, &config, since)?;
@@ -29,7 +29,7 @@ pub fn fetch_all(repo_str: &str, since: Option<&str>) -> Result<()> {
 /// plot.py is kept in Python — this workflow prints the exact command to run it.
 pub fn generate_all(repo_str: &str, start: Option<&str>) -> Result<()> {
     let repo = Repo::parse(repo_str)?;
-    let config = Config::for_repo(&repo)?;
+    let config = Config::for_repo(&repo);
     let repo_prefix = format!("{}_{}", config.org, config.repo);
     let issues_dir = format!("data/{repo_prefix}/issues");
     let single_file = format!("data/{repo_prefix}_issues.json");

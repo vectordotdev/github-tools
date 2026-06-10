@@ -37,12 +37,13 @@ impl Config {
         })
     }
 
-    /// Read credentials from the current environment (no file loading).
-    pub fn for_repo(repo: &Repo) -> Result<Self> {
-        Ok(Self {
-            github_token: env::var("GITHUB_TOKEN").context("GITHUB_TOKEN not set")?,
+    /// Build config from repo identity only — no credentials required.
+    /// Use this for commands that work entirely on local data (build-db, generate-summaries).
+    pub fn for_repo(repo: &Repo) -> Self {
+        Self {
+            github_token: env::var("GITHUB_TOKEN").unwrap_or_default(),
             org: repo.org.clone(),
             repo: repo.name.clone(),
-        })
+        }
     }
 }
