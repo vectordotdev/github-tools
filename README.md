@@ -105,8 +105,8 @@ Writes to `out/historical/`. The fetched JSON must be split by year and promoted
 
 ```shell
 for repo in vectordotdev/vector vectordotdev/vrl quickwit-oss/quickwit quickwit-oss/tantivy; do
-  op run --env-file secrets.env -- github-tools generate-all --repo "$repo"
-  op run --env-file secrets.env -- python -m scripts.util.plot \
+  github-tools generate-all --repo "$repo"
+  python -m scripts.util.plot \
     --repo "$repo" --input-dir out/summaries \
     --window 2y \
     --exclude-labels "no-changelog,meta: awaiting author"
