@@ -30,7 +30,7 @@ pub fn run(config: &Config) -> Result<()> {
     fs::create_dir_all(out_dir)?;
     let out_file = out_dir.join(format!(
         "{}_{}_labels.json",
-        config.repo_owner, config.repo_name
+        config.org, config.repo
     ));
     let json = serde_json::to_string_pretty(&labels)?;
     fs::write(&out_file, json)?;
@@ -42,7 +42,7 @@ pub fn run(config: &Config) -> Result<()> {
 fn fetch_all_labels(client: &Client, config: &Config) -> Result<Vec<Label>> {
     let url = format!(
         "https://api.github.com/repos/{}/{}/labels",
-        config.repo_owner, config.repo_name
+        config.org, config.repo
     );
 
     let mut labels = Vec::new();

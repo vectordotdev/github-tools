@@ -2,13 +2,15 @@ import os
 
 from dotenv import load_dotenv, find_dotenv
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # Get the directory where this script is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ENV_FILE = os.path.abspath(os.path.join(SCRIPT_DIR, "../vector-default.env"))
 
 
 def load_env(env_file=ENV_FILE) -> dict:
     """
-    Load all environment variables from a .env file and return them as a dictionary.
+    Load environment variables from a .env file.
+    Supports plain values and op:// references (when invoked via `op run --env-file=...`).
+    Already-set environment variables (e.g. injected by `op run`) take precedence.
 
     Args:
         env_file (str): Path to the .env file.
@@ -28,7 +30,6 @@ def load_env(env_file=ENV_FILE) -> dict:
     if not success:
         raise ValueError(f"Failed to load .env file at: {env_file}")
 
-    # Return all current environment variables as a dict (loaded .env will now be in os.environ)
     return {k: v for k, v in os.environ.items() if not k.startswith("_")}
 
 
