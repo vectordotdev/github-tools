@@ -48,6 +48,18 @@ DOCKER_USERNAME=...   # purge commands only
 DOCKER_PASSWORD=...   # purge commands only
 ```
 
+To avoid storing secrets in plaintext, use your password manager's CLI to inject secrets at invocation time. For example, if you use `op` (1Password CLI) or a similar tool that supports secret references:
+
+```dotenv
+GITHUB_TOKEN=op://Vault/Item/field
+DD_API_KEY=op://Vault/Item/field
+```
+
+```sh
+op run --env-file=vector.env -- github-tools fetch-issues --env-file vector.env
+op run --env-file=vector.env -- python -m scripts.util.plot --env-file vector.env ...
+```
+
 # Commands
 
 ```
