@@ -1,4 +1,4 @@
-use anyhow::Result;
+use anyhow::{Context, Result};
 use clap::{Parser, Subcommand};
 use github_tools::{
     commands::{
@@ -6,7 +6,7 @@ use github_tools::{
         fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge,
         remove_legacy_label, workflows,
     },
-    config::Config,
+    config::{Config, Repo},
 };
 use reqwest::blocking::Client;
 use std::path::Path;
@@ -25,11 +25,15 @@ struct Cli {
 enum Command {
     /// Fetch all labels for a repository
     FetchLabels {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
     },
     /// Fetch all issues and PRs for a repository
     FetchIssues {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
         #[arg(long, help = "Only fetch items updated since this date (ISO, YYYY-MM, or relative: 3m, 1y, 30d)")]
@@ -37,6 +41,8 @@ enum Command {
     },
     /// Fetch all discussions for a repository
     FetchDiscussions {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
         #[arg(long, help = "Only fetch items updated since this date (ISO, YYYY-MM, or relative: 3m, 1y, 30d)")]
@@ -46,6 +52,8 @@ enum Command {
     BuildDb {
         #[arg(long, help = "Path to issues JSON file")]
         input: String,
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
     },
@@ -53,27 +61,27 @@ enum Command {
     GenerateSummaries {
         #[arg(long, help = "Path to SQLite database")]
         db: String,
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
     },
-    /// Fetch issues+discussions for all repos (replaces fetch_all_slow.sh)
+    /// Fetch issues+discussions for a repository
     FetchAll {
-        #[arg(long, required = true, help = "Env files to iterate (repeatable)")]
-        env_file: Vec<String>,
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Only fetch items updated since this date (ISO, YYYY-MM, or relative: 3m, 1y, 30d)")]
         since: Option<String>,
     },
-    /// Build DB + summaries for all repos (replaces generate_all.sh)
+    /// Build DB + summaries for a repository
     GenerateAll {
-        #[arg(long, required = true)]
-        env_file: Vec<String>,
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Only include data from this YYYY-MM date forward (passed to plot.py). Defaults to 12 months ago.")]
         start: Option<String>,
     },
     /// Run all purge operations (replaces purge_all.sh)
     PurgeAll {
-        #[arg(long)]
-        env_file: String,
         #[arg(long, default_value = "30")]
         older_than: u32,
         #[arg(long)]
@@ -83,6 +91,8 @@ enum Command {
     },
     /// Close old PRs with the 'meta: awaiting author' label
     CloseOldPrs {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
         #[arg(long)]
@@ -92,6 +102,8 @@ enum Command {
     },
     /// Delete branches with no commits in the last 4 years
     DeleteStaleBranches {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
         #[arg(long)]
@@ -101,8 +113,10 @@ enum Command {
     },
     /// Remove a legacy type label from issues/PRs, optionally setting the type field
     RemoveLegacyLabel {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Path to .env file")]
-        env_file: String,
+        env_file: Option<String>,
         #[arg(long, required = true)]
         legacy_label: String,
         #[arg(long, default_value = "open")]
@@ -127,6 +141,8 @@ enum Command {
     /// Count automated review comments by reaction (liked / disliked / no reaction).
     /// Omit --bot-login to list all review comment authors and discover the right login.
     AutomatedReviewStats {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
         #[arg(long, help = "Path to .env file")]
         env_file: Option<String>,
         #[arg(long, help = "GitHub login of the review bot; omit to list all authors")]
@@ -152,8 +168,6 @@ enum PurgeTarget {
     Nightly {
         #[arg(long, default_value = "30")]
         older_than: u32,
-        #[arg(long, help = "Path to .env file")]
-        env_file: String,
         #[arg(long)]
         dry_run: bool,
         #[arg(long, help = "Skip confirmation prompt")]
@@ -163,8 +177,6 @@ enum PurgeTarget {
     Untagged {
         #[arg(long, default_value = "30")]
         older_than: u32,
-        #[arg(long, help = "Path to .env file")]
-        env_file: String,
         #[arg(long)]
         dry_run: bool,
         #[arg(long, help = "Skip confirmation prompt")]
@@ -174,8 +186,6 @@ enum PurgeTarget {
     VectorDev {
         #[arg(long, default_value = "30")]
         older_than: u32,
-        #[arg(long, help = "Path to .env file")]
-        env_file: String,
         #[arg(long)]
         dry_run: bool,
         #[arg(long, help = "Skip confirmation prompt")]
@@ -187,63 +197,46 @@ fn main() -> Result<()> {
     let cli = Cli::parse();
 
     match cli.command {
-        Command::FetchLabels { env_file } => {
-            let config = Config::load(env_file.as_deref())?;
+        Command::FetchLabels { repo, env_file } => {
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_labels::run(&config)
         }
-        Command::FetchIssues { env_file, since } => {
-            let config = Config::load(env_file.as_deref())?;
+        Command::FetchIssues { repo, env_file, since } => {
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_issues::run(&config, since.as_deref())
         }
-        Command::FetchDiscussions { env_file, since } => {
-            let config = Config::load(env_file.as_deref())?;
+        Command::FetchDiscussions { repo, env_file, since } => {
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_discussions::run(&config, since.as_deref())
         }
-        Command::BuildDb { input, env_file } => {
-            let config = Config::load(env_file.as_deref())?;
+        Command::BuildDb { input, repo, env_file } => {
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             build_db::run(&input, &config)
         }
-        Command::AutomatedReviewStats {
-            env_file,
-            bot_login,
-            since,
-        } => {
-            let config = Config::load(env_file.as_deref())?;
+        Command::AutomatedReviewStats { repo, env_file, bot_login, since } => {
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_automated_review_stats::run(&config, bot_login.as_deref(), since.as_deref())
         }
         Command::Compact { dir } => compact::run(&dir),
-        Command::FetchAll { env_file, since } => workflows::fetch_all(&env_file, since.as_deref()),
-        Command::GenerateAll {
-            env_file,
-            start,
-        } => workflows::generate_all(&env_file, start.as_deref()),
-        Command::PurgeAll {
-            env_file,
-            older_than,
-            dry_run,
-            yes,
-        } => workflows::purge_all(&env_file, older_than, dry_run, yes),
-        Command::CloseOldPrs {
-            env_file,
-            dry_run,
-            yes,
-        } => {
-            let config = Config::load(env_file.as_deref())?;
+        Command::FetchAll { repo, since } => workflows::fetch_all(&repo, since.as_deref()),
+        Command::GenerateAll { repo, start } => workflows::generate_all(&repo, start.as_deref()),
+        Command::PurgeAll { older_than, dry_run, yes } => {
+            workflows::purge_all(older_than, dry_run, yes)
+        }
+        Command::CloseOldPrs { repo, env_file, dry_run, yes } => {
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             close_old_prs::run(&config, dry_run, yes)
         }
-        Command::DeleteStaleBranches {
-            env_file,
-            dry_run,
-            yes,
-        } => {
-            let config = Config::load(env_file.as_deref())?;
+        Command::DeleteStaleBranches { repo, env_file, dry_run, yes } => {
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             delete_stale_branches::run(&config, dry_run, yes)
         }
-        Command::GenerateSummaries { db, env_file } => {
-            let config = Config::load(env_file.as_deref())?;
+        Command::GenerateSummaries { db, repo, env_file } => {
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             generate_summaries::run(&db, &config)
         }
         Command::RemoveLegacyLabel {
+            repo,
             env_file,
             legacy_label,
             state,
@@ -256,10 +249,9 @@ fn main() -> Result<()> {
             since,
             limit,
         } => {
-            let config = Config::load(Some(&env_file))?;
-            let repo = format!("{}/{}", config.repo_owner, config.repo_name);
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             remove_legacy_label::run(&remove_legacy_label::Args {
-                repos: vec![repo],
+                repos: vec![format!("{}/{}", config.org, config.repo)],
                 legacy_label,
                 state,
                 set_type_field,
@@ -275,19 +267,19 @@ fn main() -> Result<()> {
         }
         Command::Purge { target } => {
             let client = Client::new();
+            let github_token =
+                std::env::var("GITHUB_TOKEN").context("GITHUB_TOKEN not set")?;
+            let docker_username =
+                std::env::var("DOCKER_USERNAME").context("DOCKER_USERNAME not set")?;
+            let docker_password =
+                std::env::var("DOCKER_PASSWORD").context("DOCKER_PASSWORD not set")?;
             match target {
-                PurgeTarget::Nightly {
-                    older_than,
-                    env_file,
-                    dry_run,
-                    yes,
-                } => {
-                    let config = Config::load(Some(&env_file))?;
+                PurgeTarget::Nightly { older_than, dry_run, yes } => {
                     let dh_repo = std::env::var("DOCKERHUB_NIGHTLY_REPO")
                         .unwrap_or_else(|_| "timberio/vector".to_string());
                     purge::purge_github_versions(
                         &client,
-                        &config.github_token,
+                        &github_token,
                         Path::new("out/purge/nightly_github.jsonl"),
                         older_than,
                         dry_run,
@@ -297,8 +289,8 @@ fn main() -> Result<()> {
                     purge::purge_dockerhub_images(
                         &client,
                         &dh_repo,
-                        &config.docker_username()?,
-                        &config.docker_password()?,
+                        &docker_username,
+                        &docker_password,
                         Path::new("out/purge/nightly_dockerhub.jsonl"),
                         30,
                         dry_run,
@@ -306,36 +298,24 @@ fn main() -> Result<()> {
                         |t| t.starts_with("nightly"),
                     )
                 }
-                PurgeTarget::Untagged {
-                    older_than,
-                    env_file,
-                    dry_run,
-                    yes,
-                } => {
-                    let config = Config::load(Some(&env_file))?;
+                PurgeTarget::Untagged { older_than, dry_run, yes } => {
                     purge::purge_github_untagged_versions(
                         &client,
-                        &config.github_token,
+                        &github_token,
                         Path::new("out/purge/untagged_github.jsonl"),
                         older_than,
                         dry_run,
                         yes,
                     )
                 }
-                PurgeTarget::VectorDev {
-                    older_than,
-                    env_file,
-                    dry_run,
-                    yes,
-                } => {
-                    let config = Config::load(Some(&env_file))?;
+                PurgeTarget::VectorDev { older_than, dry_run, yes } => {
                     let dh_repo = std::env::var("DOCKERHUB_VECTOR_DEV_REPO")
                         .unwrap_or_else(|_| "timberio/vector-dev".to_string());
                     purge::purge_dockerhub_images(
                         &client,
                         &dh_repo,
-                        &config.docker_username()?,
-                        &config.docker_password()?,
+                        &docker_username,
+                        &docker_password,
                         Path::new("out/purge/vector_dev_dockerhub.jsonl"),
                         older_than,
                         dry_run,

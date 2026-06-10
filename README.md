@@ -38,27 +38,23 @@ cargo build --release
 
 # Configuration
 
-Most commands take an `--env-file` pointing to a `.env` file:
+Commands read credentials from the environment. Keep them in a single `secrets.env`:
 
 ```dotenv
 GITHUB_TOKEN=...
-REPO_OWNER=vectordotdev
-REPO_NAME=vector
 DOCKER_USERNAME=...   # purge commands only
 DOCKER_PASSWORD=...   # purge commands only
 ```
 
-To avoid storing secrets in plaintext, use your password manager's CLI to inject secrets at invocation time. For example, if you use `op` (1Password CLI) or a similar tool that supports secret references:
+The target repository is always specified explicitly via `--repo org/name`.
 
-```dotenv
-GITHUB_TOKEN=op://Vault/Item/field
-DD_API_KEY=op://Vault/Item/field
-```
+If you use a password manager CLI (e.g. `op`), store secret references there and inject at runtime — secrets never touch disk:
 
 ```sh
-op run --env-file=vector.env -- github-tools fetch-issues --env-file vector.env
-op run --env-file=vector.env -- python -m scripts.util.plot --env-file vector.env ...
+op run --env-file secrets.env -- github-tools fetch-issues --repo vectordotdev/vector
 ```
+
+Plain text env files still work via `--env-file` for users without a password manager CLI.
 
 # Commands
 
@@ -98,7 +94,9 @@ Run `github-tools <COMMAND> --help` for full argument details.
 ## 1. (Optional) Fetch fresh data from GitHub
 
 ```shell
-github-tools fetch-all --env-file vector.env --env-file vrl.env --env-file quickwit.env --env-file tantivy.env
+for repo in vectordotdev/vector vectordotdev/vrl quickwit-oss/quickwit quickwit-oss/tantivy; do
+  op run --env-file secrets.env -- github-tools fetch-all --repo "$repo"
+done
 ```
 
 Writes to `out/historical/`. The fetched JSON must be split by year and promoted to `data/` to commit as a snapshot. Issues/PRs are stored in `data/{owner}_{repo}/issues/{year}.json`.
@@ -106,14 +104,13 @@ Writes to `out/historical/`. The fetched JSON must be split by year and promoted
 ## 2. Generate DB, summaries, and charts
 
 ```shell
-github-tools generate-all \
-  --env-file vector.env --env-file vrl.env --env-file quickwit.env --env-file tantivy.env
-
-# Charts (still Python). --exclude-labels hides those label series from
-# label-frequency charts only; the underlying PR/issue counts are unaffected.
-python -m scripts.util.plot --env-file vector.env --input-dir out/summaries \
-  --window 2y \
-  --exclude-labels "no-changelog,meta: awaiting author"
+for repo in vectordotdev/vector vectordotdev/vrl quickwit-oss/quickwit quickwit-oss/tantivy; do
+  op run --env-file secrets.env -- github-tools generate-all --repo "$repo"
+  op run --env-file secrets.env -- python -m scripts.util.plot \
+    --repo "$repo" --input-dir out/summaries \
+    --window 2y \
+    --exclude-labels "no-changelog,meta: awaiting author"
+done
 ```
 
 Charts are written directly into `data/images/`. Review the diff before committing.
@@ -121,8 +118,8 @@ Charts are written directly into `data/images/`. Review the diff before committi
 ## 3. (Optional) Purge stale container images
 
 ```shell
-github-tools purge-all --env-file vector.env --dry-run
-github-tools purge-all --env-file vector.env  # omit --dry-run to execute
+op run --env-file secrets.env -- github-tools purge-all --dry-run
+op run --env-file secrets.env -- github-tools purge-all  # omit --dry-run to execute
 ```
 
 Audit logs written to `out/purge/` (local only).
@@ -133,11 +130,12 @@ Measures how contributors react to automated review bot comments (👍 liked / �
 
 ```shell
 # Discover the bot's GitHub login (lists all review comment authors by frequency)
-github-tools automated-review-stats --env-file vector.env --since 3m
+op run --env-file secrets.env -- github-tools automated-review-stats \
+  --repo vectordotdev/vector --since 3m
 
 # Produce stats + update trends/vector.md
-github-tools automated-review-stats \
-  --env-file vector.env \
+op run --env-file secrets.env -- github-tools automated-review-stats \
+  --repo vectordotdev/vector \
   --bot-login "chatgpt-codex-connector" \
   --since 2026-01-01
 ```
