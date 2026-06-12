@@ -18,23 +18,28 @@ from scripts.logging.custom_logging import setup_logger
 
 def save_figure_if_changed(output_path):
     """Save the current matplotlib figure only if its content differs from the existing file."""
-    import io
-    buf = io.BytesIO()
-    plt.savefig(buf, format="png")
-    new_hash = hashlib.md5(buf.getvalue()).digest()
+    import tempfile, shutil
+    with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
+        tmp_path = tmp.name
 
-    if os.path.exists(output_path):
-        with open(output_path, "rb") as f:
-            old_hash = hashlib.md5(f.read()).digest()
-        if new_hash == old_hash:
-            logging.info(f"Skipped (unchanged): {output_path}")
-            plt.close()
-            return
+    try:
+        plt.savefig(tmp_path)
+        plt.close()
 
-    with open(output_path, "wb") as f:
-        f.write(buf.getvalue())
-    logging.info(f"Saved plot to {output_path}")
-    plt.close()
+        if os.path.exists(output_path):
+            with open(tmp_path, "rb") as f:
+                new_hash = hashlib.md5(f.read()).digest()
+            with open(output_path, "rb") as f:
+                old_hash = hashlib.md5(f.read()).digest()
+            if new_hash == old_hash:
+                logging.info(f"Skipped (unchanged): {output_path}")
+                return
+
+        shutil.move(tmp_path, output_path)
+        logging.info(f"Saved plot to {output_path}")
+    finally:
+        if os.path.exists(tmp_path):
+            os.unlink(tmp_path)
 
 
 # Constants
