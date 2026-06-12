@@ -4,11 +4,18 @@
     "created_at": "2025-01-01T00:24:45Z",
     "id": 2764744089,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_scrape` source related",
+        "id": 8167791065221546555,
+        "name": "source: prometheus_scrape"
+      }
+    ],
     "number": 22102,
     "state": "closed",
     "title": "prometheus_scrape source: add compatibility with HTTP Service Discovery",
-    "updated_at": "2026-05-30T00:12:07Z",
+    "updated_at": "2026-06-12T15:35:41Z",
     "user": {
       "login": "jhbigler"
     }
@@ -1900,12 +1907,18 @@
         "description": "Anything related to Vector's networking",
         "id": 7280804221978411925,
         "name": "domain: networking"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_exporter` sink related",
+        "id": 5884848275777734183,
+        "name": "sink: prometheus_exporter"
       }
     ],
     "number": 22186,
     "state": "closed",
     "title": "Prometheus exporter not able to read/open certificate file for tls ",
-    "updated_at": "2026-05-29T23:25:00Z",
+    "updated_at": "2026-06-12T15:35:42Z",
     "user": {
       "login": "ankitb11"
     }
@@ -2438,11 +2451,18 @@
     "created_at": "2025-01-15T03:43:26Z",
     "id": 2788765604,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `aws_s3` sink related",
+        "id": 1963617647073758968,
+        "name": "sink: aws_s3"
+      }
+    ],
     "number": 22209,
     "state": "closed",
     "title": "Feature Request: Allow Configuring content_encoding to Null or Omitting It in AWS S3 Sink",
-    "updated_at": "2026-05-30T00:12:10Z",
+    "updated_at": "2026-06-12T15:35:43Z",
     "user": {
       "login": "kaiser37"
     }
@@ -2452,11 +2472,24 @@
     "created_at": "2025-01-15T13:24:11Z",
     "id": 2789844421,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `gcp_cloud_storage` sink related",
+        "id": 4663635422713484343,
+        "name": "sink: gcp_cloud_storage"
+      }
+    ],
     "number": 22211,
     "state": "open",
     "title": "[File : Source, GCS: Sink] Loss of Logs during pod shutdown",
-    "updated_at": "2026-02-21T20:42:17Z",
+    "updated_at": "2026-06-12T15:35:44Z",
     "user": {
       "login": "SHWETHABHAT1"
     }
@@ -3820,11 +3853,18 @@
     "created_at": "2025-01-22T10:46:14Z",
     "id": 2804040375,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_scrape` source related",
+        "id": 8167791065221546555,
+        "name": "source: prometheus_scrape"
+      }
+    ],
     "number": 22275,
     "state": "closed",
     "title": "Support for Kubernetes service discovery in Prometheus scrape source",
-    "updated_at": "2026-05-30T00:12:13Z",
+    "updated_at": "2026-06-12T15:35:44Z",
     "user": {
       "login": "FredrikAugust"
     }
@@ -5626,6 +5666,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `elasticsearch` sink related",
+        "id": 3276119148680691006,
+        "name": "sink: elasticsearch"
+      },
+      {
         "color": "343639",
         "description": "Anything related to security",
         "id": 7500145560451755196,
@@ -5635,7 +5681,7 @@
     "number": 22389,
     "state": "closed",
     "title": "vector elasticsearch sink ssl verify failed",
-    "updated_at": "2025-02-08T17:47:18Z",
+    "updated_at": "2026-06-12T15:35:45Z",
     "user": {
       "login": "freedomwarrior"
     }
@@ -7878,11 +7924,18 @@
     "created_at": "2025-02-24T15:43:10Z",
     "id": 2875414279,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `remap` transform related",
+        "id": 6529458574801774570,
+        "name": "transform: remap"
+      }
+    ],
     "number": 22500,
     "state": "closed",
     "title": "[Metrics]:  remap skipped if namespace not set",
-    "updated_at": "2026-05-29T23:25:26Z",
+    "updated_at": "2026-06-12T15:35:46Z",
     "user": {
       "login": "akutta"
     }
@@ -8338,11 +8391,18 @@
     "created_at": "2025-02-26T13:19:41Z",
     "id": 2881579812,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
+      }
+    ],
     "number": 22522,
     "state": "open",
     "title": "Kubernetes: automatic parsing using pod annotation suggested parser",
-    "updated_at": "2026-02-23T14:39:21Z",
+    "updated_at": "2026-06-12T15:35:47Z",
     "user": {
       "login": "baby-gnu"
     }
@@ -9696,12 +9756,18 @@
         "description": "Anything related to Vector's metrics events",
         "id": 3968334348399022300,
         "name": "domain: metrics"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `internal_metrics` source related",
+        "id": 5016304788044877220,
+        "name": "source: internal_metrics"
       }
     ],
     "number": 22584,
     "state": "open",
     "title": "Can the write function of internal metrics be made public?",
-    "updated_at": "2026-05-30T00:12:18Z",
+    "updated_at": "2026-06-12T15:35:48Z",
     "user": {
       "login": "czd890"
     }
@@ -13310,6 +13376,12 @@
     "issue_type": "Bug",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
+      },
+      {
         "color": "F687F6",
         "description": "Anything `kubernetes` platform related",
         "id": 5891925229468674031,
@@ -13319,7 +13391,7 @@
     "number": 22763,
     "state": "open",
     "title": "Helm Chart + Kubernetes_logs rbac/api failing",
-    "updated_at": "2026-05-29T23:25:46Z",
+    "updated_at": "2026-06-12T15:35:49Z",
     "user": {
       "login": "Bonn93"
     }
@@ -14815,11 +14887,18 @@
     "created_at": "2025-04-07T21:54:48Z",
     "id": 2978079642,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `file` sink related",
+        "id": 3048281295868473663,
+        "name": "sink: file"
+      }
+    ],
     "number": 22827,
     "state": "closed",
     "title": "AWS Cloudwatch sink missing region error when role_arn is used with Credentials File Authentication",
-    "updated_at": "2026-05-29T23:25:50Z",
+    "updated_at": "2026-06-12T15:35:49Z",
     "user": {
       "login": "cahartma"
     }
@@ -15270,6 +15349,12 @@
     "issue_type": "Feature",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
+      },
+      {
         "color": "F687F6",
         "description": "Anything `kubernetes` platform related",
         "id": 5891925229468674031,
@@ -15279,7 +15364,7 @@
     "number": 22849,
     "state": "open",
     "title": "Cache kubernetes metadata for deleted pods in source kubernetes_logs",
-    "updated_at": "2026-05-30T00:12:35Z",
+    "updated_at": "2026-06-12T15:35:50Z",
     "user": {
       "login": "xiaozongyang"
     }
@@ -15324,11 +15409,18 @@
     "created_at": "2025-04-10T19:58:45Z",
     "id": 2986741309,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `internal_metrics` source related",
+        "id": 5016304788044877220,
+        "name": "source: internal_metrics"
+      }
+    ],
     "number": 22851,
     "state": "closed",
     "title": "vector crash 0.46.0 internal_metrics",
-    "updated_at": "2026-05-29T23:25:51Z",
+    "updated_at": "2026-06-12T15:35:51Z",
     "user": {
       "login": "triggerhappy17"
     }
@@ -15608,6 +15700,12 @@
     "issue_type": "Bug",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `http` sink related",
+        "id": 7439553622450385285,
+        "name": "sink: http"
+      },
+      {
         "color": "343639",
         "description": "Anything related to Vector's performance",
         "id": 7501419672228520413,
@@ -15623,7 +15721,7 @@
     "number": 22865,
     "state": "closed",
     "title": "Performance degradation in http sink with framing `length_delimited`",
-    "updated_at": "2026-05-29T23:25:53Z",
+    "updated_at": "2026-06-12T15:35:52Z",
     "user": {
       "login": "Ilmarii"
     }
@@ -16165,11 +16263,18 @@
     "created_at": "2025-04-17T12:37:20Z",
     "id": 3002370672,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `http` sink related",
+        "id": 7439553622450385285,
+        "name": "sink: http"
+      }
+    ],
     "number": 22900,
     "state": "closed",
     "title": "HTTP sink stopping after reloading TLS certificates",
-    "updated_at": "2026-05-29T23:25:58Z",
+    "updated_at": "2026-06-12T15:35:53Z",
     "user": {
       "login": "cah-rayan-chehab"
     }
@@ -16179,11 +16284,18 @@
     "created_at": "2025-04-17T17:19:52Z",
     "id": 3003057762,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `remap` transform related",
+        "id": 6529458574801774570,
+        "name": "transform: remap"
+      }
+    ],
     "number": 22903,
     "state": "closed",
     "title": "Changing metric emitted by datadog agent to a metric that is otlp proto format compatible using remap transform",
-    "updated_at": "2025-04-17T18:37:28Z",
+    "updated_at": "2026-06-12T15:35:53Z",
     "user": {
       "login": "hamidp555"
     }
@@ -16243,11 +16355,18 @@
     "created_at": "2025-04-18T14:52:13Z",
     "id": 3005117610,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
+      }
+    ],
     "number": 22908,
     "state": "closed",
     "title": "Missing files in file source metrics received through GraphQL",
-    "updated_at": "2026-05-29T23:25:59Z",
+    "updated_at": "2026-06-12T15:35:54Z",
     "user": {
       "login": "mkudukin"
     }
@@ -16687,11 +16806,18 @@
     "created_at": "2025-04-23T13:28:49Z",
     "id": 3014028138,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `axiom` sink related",
+        "id": 1380913784685102377,
+        "name": "sink: axiom"
+      }
+    ],
     "number": 22933,
     "state": "closed",
     "title": "Enhance Axiom sink to support traces",
-    "updated_at": "2026-05-30T00:12:40Z",
+    "updated_at": "2026-06-12T15:35:55Z",
     "user": {
       "login": "darach"
     }
@@ -16790,11 +16916,18 @@
     "created_at": "2025-04-23T22:07:26Z",
     "id": 3015356937,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `opentelemetry` source related",
+        "id": 1575269920799824754,
+        "name": "source: opentelemetry"
+      }
+    ],
     "number": 22940,
     "state": "open",
     "title": "JSON Support for opentelemetry source",
-    "updated_at": "2026-05-30T00:12:41Z",
+    "updated_at": "2026-06-12T15:35:56Z",
     "user": {
       "login": "fbs"
     }
@@ -16972,6 +17105,12 @@
     "issue_type": "Bug",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `http` sink related",
+        "id": 7439553622450385285,
+        "name": "sink: http"
+      },
+      {
         "color": "343639",
         "description": "Anything related to Vector's performance",
         "id": 7501419672228520413,
@@ -16981,7 +17120,7 @@
     "number": 22950,
     "state": "open",
     "title": "Changing http sink encoding from json to protobuf causes a dramatic increase in CPU",
-    "updated_at": "2026-05-29T23:26:07Z",
+    "updated_at": "2026-06-12T15:35:57Z",
     "user": {
       "login": "syntastical"
     }
@@ -17872,7 +18011,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(config): prohibit multiline interpolation [WIP]",
-    "updated_at": "2025-09-03T17:51:00Z",
+    "updated_at": "2026-06-10T17:20:01Z",
     "user": {
       "login": "pront"
     }
@@ -18218,11 +18357,18 @@
     "created_at": "2025-05-10T09:31:08Z",
     "id": 3053957734,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `splunk_hec` source related",
+        "id": 7446686954895602327,
+        "name": "source: splunk_hec"
+      }
+    ],
     "number": 23022,
     "state": "closed",
     "title": "Splunk HEC Source - Allow content-type Header that Contains application/json",
-    "updated_at": "2026-05-30T00:12:50Z",
+    "updated_at": "2026-06-12T15:35:57Z",
     "user": {
       "login": "tot19"
     }
@@ -20950,6 +21096,12 @@
         "name": "domain: performance"
       },
       {
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_remote_write` sink related",
+        "id": 3463476261161132748,
+        "name": "sink: prometheus_remote_write"
+      },
+      {
         "color": "343639",
         "description": "Anything memory related",
         "id": 8831865801865022400,
@@ -20959,7 +21111,7 @@
     "number": 23160,
     "state": "closed",
     "title": "Prometheus remote write sink causes indefinite memory growth because it converts incremental to absolute values",
-    "updated_at": "2026-05-29T23:26:31Z",
+    "updated_at": "2026-06-12T15:35:59Z",
     "user": {
       "login": "GreyLilac09"
     }
@@ -20990,11 +21142,18 @@
     "created_at": "2025-06-06T14:11:35Z",
     "id": 3124906248,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `docker_logs` source related",
+        "id": 4263998904825639934,
+        "name": "source: docker_logs"
+      }
+    ],
     "number": 23162,
     "state": "closed",
     "title": "read_from missing from docker_logs",
-    "updated_at": "2026-05-29T23:26:31Z",
+    "updated_at": "2026-06-12T15:36:00Z",
     "user": {
       "login": "andymarden"
     }
@@ -21635,6 +21794,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
+      },
+      {
         "color": "343639",
         "description": "Anything related to Vector's performance",
         "id": 7501419672228520413,
@@ -21644,7 +21809,7 @@
     "number": 23195,
     "state": "open",
     "title": "There is a significant delay from the source file to transforms",
-    "updated_at": "2025-12-12T16:20:42Z",
+    "updated_at": "2026-06-12T15:36:01Z",
     "user": {
       "login": "Zzaniu"
     }
@@ -23530,11 +23695,18 @@
     "created_at": "2025-06-30T09:33:14Z",
     "id": 3187806387,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `log_to_metric` transform related",
+        "id": 1954188306316231151,
+        "name": "transform: log_to_metric"
+      }
+    ],
     "number": 23290,
     "state": "open",
     "title": "Vector gives an error when parse config with log_to_metric transform type",
-    "updated_at": "2026-05-29T23:26:38Z",
+    "updated_at": "2026-06-12T15:36:02Z",
     "user": {
       "login": "borisboris232"
     }
@@ -24631,6 +24803,12 @@
     "issue_type": "Bug",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `aws_s3` sink related",
+        "id": 1963617647073758968,
+        "name": "sink: aws_s3"
+      },
+      {
         "color": "343639",
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
@@ -24640,7 +24818,7 @@
     "number": 23332,
     "state": "open",
     "title": "Docs Update: Expose Compression Level Option for AWS S3 Sink",
-    "updated_at": "2026-05-29T23:26:40Z",
+    "updated_at": "2026-06-12T15:36:02Z",
     "user": {
       "login": "jainsahab"
     }
@@ -24752,11 +24930,18 @@
     "created_at": "2025-07-04T12:24:39Z",
     "id": 3202556475,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `http_client` source related",
+        "id": 342413324656510975,
+        "name": "source: http_client"
+      }
+    ],
     "number": 23338,
     "state": "open",
     "title": "Enable AWS authentication for http_client source",
-    "updated_at": "2026-05-30T00:13:13Z",
+    "updated_at": "2026-06-12T15:36:03Z",
     "user": {
       "login": "johannesfloriangeiger"
     }
@@ -26016,11 +26201,18 @@
     "created_at": "2025-07-17T19:30:42Z",
     "id": 3240688358,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `dnstap` source related",
+        "id": 7297509477484979924,
+        "name": "source: dnstap"
+      }
+    ],
     "number": 23392,
     "state": "closed",
     "title": "Missing or throttled events with dnstap TCP source on v0.48.0",
-    "updated_at": "2026-05-29T23:26:49Z",
+    "updated_at": "2026-06-12T15:36:04Z",
     "user": {
       "login": "bakern"
     }
@@ -26428,11 +26620,18 @@
     "created_at": "2025-07-22T12:59:32Z",
     "id": 3252598183,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
+      }
+    ],
     "number": 23410,
     "state": "closed",
     "title": "Concate Multiline logs from kubernetes source",
-    "updated_at": "2026-05-30T00:13:17Z",
+    "updated_at": "2026-06-12T15:36:05Z",
     "user": {
       "login": "xiaozongyang"
     }
@@ -28764,11 +28963,18 @@
     "created_at": "2025-08-02T14:30:02Z",
     "id": 3285975768,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `nats` sink related",
+        "id": 7497645261778518166,
+        "name": "sink: nats"
+      }
+    ],
     "number": 23508,
     "state": "closed",
     "title": "Allow headers in NATS Jetstream sink",
-    "updated_at": "2026-05-30T00:13:20Z",
+    "updated_at": "2026-06-12T15:36:06Z",
     "user": {
       "login": "benjaminawd-flowdesk"
     }
@@ -28778,11 +28984,18 @@
     "created_at": "2025-08-02T14:33:46Z",
     "id": 3285978089,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `nats` sink related",
+        "id": 7497645261778518166,
+        "name": "sink: nats"
+      }
+    ],
     "number": 23509,
     "state": "closed",
     "title": "Allow headers in NATS Jetstream sink",
-    "updated_at": "2026-05-30T00:13:21Z",
+    "updated_at": "2026-06-12T15:36:06Z",
     "user": {
       "login": "benjamin-awd"
     }
@@ -30161,11 +30374,18 @@
     "created_at": "2025-08-10T14:09:35Z",
     "id": 3307609830,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `http` sink related",
+        "id": 7439553622450385285,
+        "name": "sink: http"
+      }
+    ],
     "number": 23568,
     "state": "closed",
     "title": "HTTP Sink Supports Templating in the URI",
-    "updated_at": "2026-05-30T00:13:22Z",
+    "updated_at": "2026-06-12T15:36:08Z",
     "user": {
       "login": "morganebridges"
     }
@@ -31300,6 +31520,12 @@
     "issue_type": "Feature",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `syslog` source related",
+        "id": 2424784285363771579,
+        "name": "source: syslog"
+      },
+      {
         "color": "343639",
         "description": "Anything related to Vector's codecs (encoding/decoding)",
         "id": 24217296173635418,
@@ -31309,7 +31535,7 @@
     "number": 23613,
     "state": "open",
     "title": "Preserve invalid UTF-8 in syslog",
-    "updated_at": "2026-05-30T00:13:25Z",
+    "updated_at": "2026-06-12T15:36:08Z",
     "user": {
       "login": "splitice"
     }
@@ -36502,11 +36728,18 @@
     "created_at": "2025-09-24T01:36:04Z",
     "id": 3447223260,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `mqtt` sink related",
+        "id": 9186242459209927395,
+        "name": "sink: mqtt"
+      }
+    ],
     "number": 23838,
     "state": "closed",
     "title": "Mqtt sink: unable to perform TLS authentication via client certificate",
-    "updated_at": "2026-05-29T23:27:18Z",
+    "updated_at": "2026-06-12T15:36:09Z",
     "user": {
       "login": "ValentinChernovNTQ"
     }
@@ -36712,11 +36945,18 @@
     "created_at": "2025-09-24T20:29:27Z",
     "id": 3450895788,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
+      }
+    ],
     "number": 23849,
     "state": "open",
     "title": "enhancement(kubernetes_logs): disable node watcher if not needed",
-    "updated_at": "2026-05-30T00:13:36Z",
+    "updated_at": "2026-06-12T15:36:10Z",
     "user": {
       "login": "PrayagS"
     }
@@ -38367,11 +38607,18 @@
     "created_at": "2025-10-02T14:09:32Z",
     "id": 3477682209,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `datadog_metrics` sink related",
+        "id": 1943156466611436612,
+        "name": "sink: datadog_metrics"
+      }
+    ],
     "number": 23915,
     "state": "closed",
     "title": "datadog-metrics e2e tests are failing after 7.71 release",
-    "updated_at": "2026-05-29T23:27:22Z",
+    "updated_at": "2026-06-12T15:36:11Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -41364,13 +41611,19 @@
         "description": "Request or implementation of a new source",
         "id": 2516345231450418203,
         "name": "source: new"
+      },
+      {
+        "color": "DBE0E9",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta: awaiting author"
       }
     ],
     "number": 24044,
     "pull_request": {},
     "state": "open",
     "title": "feat(new source): Add ODBC source implementation",
-    "updated_at": "2026-05-24T22:32:20Z",
+    "updated_at": "2026-06-11T17:41:23Z",
     "user": {
       "login": "powerumc"
     }
@@ -42108,11 +42361,18 @@
     "created_at": "2025-10-25T12:19:25Z",
     "id": 3552420460,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `clickhouse` sink related",
+        "id": 3597518471828487572,
+        "name": "sink: clickhouse"
+      }
+    ],
     "number": 24074,
     "state": "closed",
     "title": "Add ArrowStream format to Clickhouse sink",
-    "updated_at": "2026-05-30T00:13:45Z",
+    "updated_at": "2026-06-12T15:36:12Z",
     "user": {
       "login": "benjamin-awd"
     }
@@ -43244,11 +43504,18 @@
     "created_at": "2025-10-31T09:01:57Z",
     "id": 3573990646,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `azure_blob` sink related",
+        "id": 1651409443776833596,
+        "name": "sink: azure_blob"
+      }
+    ],
     "number": 24123,
     "state": "closed",
     "title": "azure_blob in 0.50.0 crashes when blob is inaccessible",
-    "updated_at": "2026-05-29T23:27:29Z",
+    "updated_at": "2026-06-12T15:36:12Z",
     "user": {
       "login": "jiping-s"
     }
@@ -43937,12 +44204,18 @@
         "description": "Anything related to Vector's metrics events",
         "id": 3968334348399022300,
         "name": "domain: metrics"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `internal_metrics` source related",
+        "id": 5016304788044877220,
+        "name": "source: internal_metrics"
       }
     ],
     "number": 24150,
     "state": "closed",
     "title": "Vector don't show config_reload_rejected and config_reloaded internal metrics",
-    "updated_at": "2026-05-29T23:27:30Z",
+    "updated_at": "2026-06-12T15:36:13Z",
     "user": {
       "login": "AVGoodNight"
     }
@@ -44369,12 +44642,18 @@
         "description": "Anything `azure` service provider related",
         "id": 7368077849538816034,
         "name": "provider: azure"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `azure_blob` sink related",
+        "id": 1651409443776833596,
+        "name": "sink: azure_blob"
       }
     ],
     "number": 24167,
     "state": "closed",
     "title": "Support Azure Active Directory tokens for the Azure Blob Store Sink",
-    "updated_at": "2026-05-30T00:13:48Z",
+    "updated_at": "2026-06-12T15:36:14Z",
     "user": {
       "login": "zrc210"
     }
@@ -45783,11 +46062,18 @@
     "created_at": "2025-11-12T19:19:29Z",
     "id": 3617885368,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `internal_logs` source related",
+        "id": 2527980821214814828,
+        "name": "source: internal_logs"
+      }
+    ],
     "number": 24220,
     "state": "open",
     "title": "`internal_logs` source silently drops logs under high load",
-    "updated_at": "2026-02-21T20:42:41Z",
+    "updated_at": "2026-06-12T15:36:15Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -45884,11 +46170,18 @@
     "created_at": "2025-11-13T12:54:07Z",
     "id": 3621107302,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `nats` source related",
+        "id": 7582498524073248249,
+        "name": "source: nats"
+      }
+    ],
     "number": 24229,
     "state": "open",
     "title": "Reduce log spam from 'slow consumers' events in NATS source",
-    "updated_at": "2026-02-21T20:42:41Z",
+    "updated_at": "2026-06-12T15:36:15Z",
     "user": {
       "login": "benjamin-awd"
     }
@@ -47100,11 +47393,18 @@
     "created_at": "2025-11-19T22:50:43Z",
     "id": 3644698192,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
+      }
+    ],
     "number": 24280,
     "state": "open",
     "title": "File source no longer can decompress Gzip",
-    "updated_at": "2026-02-21T20:42:43Z",
+    "updated_at": "2026-06-12T15:36:16Z",
     "user": {
       "login": "FishNumber7"
     }
@@ -47114,11 +47414,18 @@
     "created_at": "2025-11-19T23:01:03Z",
     "id": 3644720518,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `blackhole` sink related",
+        "id": 1588369315436401814,
+        "name": "sink: blackhole"
+      }
+    ],
     "number": 24281,
     "state": "closed",
     "title": "blackhole sink does not implement end-to-end acknowledgements despite documentation claiming support",
-    "updated_at": "2026-05-29T23:27:35Z",
+    "updated_at": "2026-06-12T15:36:17Z",
     "user": {
       "login": "sanjams2"
     }
@@ -47363,11 +47670,18 @@
     "created_at": "2025-11-22T07:42:39Z",
     "id": 3654135733,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
+      }
+    ],
     "number": 24295,
     "state": "closed",
     "title": "file source not work randomly when  my app log config RollingFile endwith log.gz",
-    "updated_at": "2025-12-03T09:23:28Z",
+    "updated_at": "2026-06-12T15:36:18Z",
     "user": {
       "login": "a43412340-bit"
     }
@@ -47427,11 +47741,18 @@
     "created_at": "2025-11-25T16:26:43Z",
     "id": 3663759139,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `socket` source related",
+        "id": 4862344537635261167,
+        "name": "source: socket"
+      }
+    ],
     "number": 24300,
     "state": "open",
     "title": "socket source: passed UDP file descriptor not processed until shutdown",
-    "updated_at": "2026-02-21T20:42:45Z",
+    "updated_at": "2026-06-12T15:36:19Z",
     "user": {
       "login": "aagor"
     }
@@ -47644,11 +47965,18 @@
     "created_at": "2025-11-27T04:00:33Z",
     "id": 3669774897,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related",
+        "id": 5855082884786344119,
+        "name": "source: kafka"
+      }
+    ],
     "number": 24310,
     "state": "open",
     "title": "Kafka source (v0.51.0) fails SCRAM-SHA-512 SASL authentication when connecting to AWS MSK (Kafka 4.0)",
-    "updated_at": "2026-02-21T20:42:47Z",
+    "updated_at": "2026-06-12T15:36:19Z",
     "user": {
       "login": "devsecopsaio"
     }
@@ -47858,11 +48186,18 @@
     "created_at": "2025-12-01T17:28:51Z",
     "id": 3682065494,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `pulsar` source related",
+        "id": 3629562393574494164,
+        "name": "source: pulsar"
+      }
+    ],
     "number": 24321,
     "state": "open",
     "title": "Allow pulsar source to \"soft fail\" vector validate",
-    "updated_at": "2026-05-30T00:13:54Z",
+    "updated_at": "2026-06-12T15:36:20Z",
     "user": {
       "login": "byronwolfman"
     }
@@ -48523,11 +48858,18 @@
     "created_at": "2025-12-05T20:27:13Z",
     "id": 3700267709,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `syslog` source related",
+        "id": 2424784285363771579,
+        "name": "source: syslog"
+      }
+    ],
     "number": 24346,
     "state": "open",
     "title": "Include peer source port to Syslog output log fields",
-    "updated_at": "2026-02-23T14:39:25Z",
+    "updated_at": "2026-06-12T15:36:21Z",
     "user": {
       "login": "nockstarr"
     }
@@ -48811,11 +49153,18 @@
     "created_at": "2025-12-10T11:42:35Z",
     "id": 3714838787,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_remote_write` sink related",
+        "id": 3463476261161132748,
+        "name": "sink: prometheus_remote_write"
+      }
+    ],
     "number": 24363,
     "state": "open",
     "title": "prometheus_remote_write: tenant_id dynamic templating",
-    "updated_at": "2026-02-23T14:39:26Z",
+    "updated_at": "2026-06-12T15:36:22Z",
     "user": {
       "login": "lazam"
     }
@@ -48978,11 +49327,18 @@
     "created_at": "2025-12-12T11:00:16Z",
     "id": 3722992504,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `file` sink related",
+        "id": 3048281295868473663,
+        "name": "sink: file"
+      }
+    ],
     "number": 24371,
     "state": "open",
     "title": "File sink, text codec only appends empty lines to the destination file.",
-    "updated_at": "2026-02-21T20:42:50Z",
+    "updated_at": "2026-06-12T15:36:22Z",
     "user": {
       "login": "jkimalane"
     }
@@ -49446,11 +49802,18 @@
     "created_at": "2025-12-16T17:24:10Z",
     "id": 3735675017,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `journald` source related",
+        "id": 5703283064965190939,
+        "name": "source: journald"
+      }
+    ],
     "number": 24387,
     "state": "open",
     "title": "Additional options in journald source to strip leading underscores and lowercase all key names",
-    "updated_at": "2026-02-23T14:39:28Z",
+    "updated_at": "2026-06-12T15:36:23Z",
     "user": {
       "login": "krisiasty"
     }
@@ -49495,11 +49858,18 @@
     "created_at": "2025-12-17T04:22:43Z",
     "id": 3737275662,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `redis` sink related",
+        "id": 2243487783603638370,
+        "name": "sink: redis"
+      }
+    ],
     "number": 24389,
     "state": "open",
     "title": "Add support for list trimming (LTRIM / max list length) in Redis sink",
-    "updated_at": "2026-02-23T14:39:29Z",
+    "updated_at": "2026-06-12T15:36:24Z",
     "user": {
       "login": "hanmanhui"
     }
@@ -49532,11 +49902,18 @@
     "created_at": "2025-12-17T21:39:19Z",
     "id": 3740606413,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `log_to_metric` transform related",
+        "id": 1954188306316231151,
+        "name": "transform: log_to_metric"
+      }
+    ],
     "number": 24393,
     "state": "closed",
     "title": "log_to_metric: Histogram and summary metrics are converted incorrectly",
-    "updated_at": "2026-05-29T23:27:38Z",
+    "updated_at": "2026-06-12T15:36:25Z",
     "user": {
       "login": "jblazquez"
     }
@@ -49569,11 +49946,18 @@
     "created_at": "2025-12-18T00:39:03Z",
     "id": 3740955444,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `aws_kinesis_streams` sink related",
+        "id": 3514198389626329120,
+        "name": "sink: aws_kinesis_streams"
+      }
+    ],
     "number": 24395,
     "state": "open",
     "title": "aws_kinesis_streams: Support KPL Style Aggregation",
-    "updated_at": "2026-02-23T14:39:30Z",
+    "updated_at": "2026-06-12T15:36:26Z",
     "user": {
       "login": "lht"
     }
@@ -49875,11 +50259,18 @@
     "created_at": "2025-12-24T22:10:18Z",
     "id": 3761089305,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `gcp_cloud_storage` sink related",
+        "id": 4663635422713484343,
+        "name": "sink: gcp_cloud_storage"
+      }
+    ],
     "number": 24410,
     "state": "closed",
     "title": "Feature Request: Add content_type option to gcp_cloud_storage sink",
-    "updated_at": "2026-01-15T20:30:34Z",
+    "updated_at": "2026-06-12T15:36:26Z",
     "user": {
       "login": "sorokinvj"
     }
@@ -50008,11 +50399,18 @@
     "created_at": "2025-12-27T16:51:38Z",
     "id": 3764915966,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_scrape` source related",
+        "id": 8167791065221546555,
+        "name": "source: prometheus_scrape"
+      }
+    ],
     "number": 24416,
     "state": "open",
     "title": "`prometheus_scrape` cannot follow HTTP redirects",
-    "updated_at": "2026-02-21T20:42:55Z",
+    "updated_at": "2026-06-12T15:36:27Z",
     "user": {
       "login": "XYenon"
     }
@@ -50036,11 +50434,18 @@
     "created_at": "2025-12-29T09:46:47Z",
     "id": 3766944686,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `clickhouse` sink related",
+        "id": 3597518471828487572,
+        "name": "sink: clickhouse"
+      }
+    ],
     "number": 24418,
     "state": "open",
     "title": "Sink:Clickhouse support Int128 type in arrow_stream format",
-    "updated_at": "2026-02-21T20:42:57Z",
+    "updated_at": "2026-06-12T15:36:28Z",
     "user": {
       "login": "LaurenceChau"
     }
