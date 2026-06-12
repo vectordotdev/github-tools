@@ -16,6 +16,32 @@ from matplotlib.ticker import MaxNLocator
 from scripts.logging.custom_logging import setup_logger
 
 
+def save_figure_if_changed(output_path):
+    """Save the current matplotlib figure only if its content differs from the existing file."""
+    import tempfile, shutil
+    with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
+        tmp_path = tmp.name
+
+    try:
+        plt.savefig(tmp_path)
+        plt.close()
+
+        if os.path.exists(output_path):
+            with open(tmp_path, "rb") as f:
+                new_hash = hashlib.md5(f.read()).digest()
+            with open(output_path, "rb") as f:
+                old_hash = hashlib.md5(f.read()).digest()
+            if new_hash == old_hash:
+                logging.info(f"Skipped (unchanged): {output_path}")
+                return
+
+        shutil.move(tmp_path, output_path)
+        logging.info(f"Saved plot to {output_path}")
+    finally:
+        if os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+
+
 # Constants
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../data/images"))
@@ -377,9 +403,7 @@ def plot_monthly_summary_basic(path, table, output_path, start_date=None):
         )
         plt.tight_layout()
 
-        plt.savefig(output_path)
-        logging.info(f"Saved plot to {output_path}")
-        plt.close()
+        save_figure_if_changed(output_path)
     except Exception as e:
         logging.warning(f"[{table}] Could not generate monthly trend plot: {e}")
 
@@ -407,9 +431,7 @@ def plot_discussion_trend(path, output_path, start_date=None):
         plt.legend()
         plt.tight_layout()
 
-        plt.savefig(output_path)
-        logging.info(f"Saved plot to {output_path}")
-        plt.close()
+        save_figure_if_changed(output_path)
     except Exception as e:
         logging.warning(f"[discussions] Could not generate monthly trend plot: {e}")
 
@@ -508,9 +530,7 @@ def plot_label_breakdown(path, table, output_path, top_n=20, start_date=None, ex
         ax.invert_yaxis()
         plt.tight_layout()
 
-        plt.savefig(output_path)
-        logging.info(f"Saved plot to {output_path}")
-        plt.close()
+        save_figure_if_changed(output_path)
     except Exception as e:
         logging.warning(f"[{table}] Could not generate label breakdown plot: {e}")
 
@@ -588,9 +608,7 @@ def plot_label_count(path, table, output_path, top_n=8, start_date=None, exclude
         )
 
         plt.tight_layout()
-        plt.savefig(output_path)
-        logging.info(f"Saved plot to {output_path}")
-        plt.close()
+        save_figure_if_changed(output_path)
 
     except Exception as e:
         logging.warning(f"[{table}] Could not generate label time-series bar chart: {e}")
@@ -631,9 +649,7 @@ def plot_label_state_counts(path, table, output_path, top_n, exclude_labels=None
         plt.tight_layout()
         plt.gca().invert_yaxis()  # highest total on top
 
-        plt.savefig(output_path)
-        logging.info(f"Saved plot to {output_path}")
-        plt.close()
+        save_figure_if_changed(output_path)
     except Exception as e:
         logging.warning(f"[{table}] Could not generate label count chart: {e}")
 
@@ -694,9 +710,7 @@ def plot_contributor_heatmap(path, table, output_path, top_n=10, window_months=1
         ax.grid(False)
 
         plt.tight_layout()
-        plt.savefig(output_path)
-        logging.info(f"Saved plot to {output_path}")
-        plt.close()
+        save_figure_if_changed(output_path)
     except Exception as e:
         logging.warning(f"[{table}] Could not generate contributor heatmap: {e}")
 
@@ -761,9 +775,7 @@ def plot_unique_contributors(path, table, output_path, window_months=12):
         ax.legend(loc="upper left")
 
         plt.tight_layout()
-        plt.savefig(output_path)
-        logging.info(f"Saved plot to {output_path}")
-        plt.close()
+        save_figure_if_changed(output_path)
     except Exception as e:
         logging.warning(f"[{table}] Could not generate unique-contributors plot: {e}")
 
@@ -875,9 +887,7 @@ def plot_yearly_contributors(path, table, output_path, max_years=6):
         )
 
         plt.tight_layout()
-        plt.savefig(output_path)
-        logging.info(f"Saved plot to {output_path}")
-        plt.close()
+        save_figure_if_changed(output_path)
     except Exception as e:
         logging.warning(f"[{table}] Could not generate yearly contributors chart: {e}")
 

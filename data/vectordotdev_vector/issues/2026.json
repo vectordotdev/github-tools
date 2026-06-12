@@ -878,11 +878,18 @@
     "created_at": "2026-01-08T16:08:45Z",
     "id": 3793493497,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "",
+        "id": 5874407929034104147,
+        "name": "sink: postgres"
+      }
+    ],
     "number": 24461,
     "state": "open",
     "title": "feat(postgres sink): Allow ignoring serial columns in target table",
-    "updated_at": "2026-02-23T14:39:35Z",
+    "updated_at": "2026-06-12T15:36:29Z",
     "user": {
       "login": "chris-1o"
     }
@@ -2862,11 +2869,18 @@
     "created_at": "2026-01-26T13:33:18Z",
     "id": 3855998026,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related",
+        "id": 5855082884786344119,
+        "name": "source: kafka"
+      }
+    ],
     "number": 24543,
     "state": "open",
     "title": "[BUG] Kafka source loses messages when sink returns 401/403 with acknowledgements enabled",
-    "updated_at": "2026-02-21T20:43:03Z",
+    "updated_at": "2026-06-12T15:36:30Z",
     "user": {
       "login": "yoelk"
     }
@@ -2876,11 +2890,18 @@
     "created_at": "2026-01-26T18:50:46Z",
     "id": 3857208714,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `dnstap` source related",
+        "id": 7297509477484979924,
+        "name": "source: dnstap"
+      }
+    ],
     "number": 24545,
     "state": "closed",
     "title": "dnstap a message size should be included",
-    "updated_at": "2026-03-18T19:22:13Z",
+    "updated_at": "2026-06-12T15:36:31Z",
     "user": {
       "login": "ttyS4"
     }
@@ -3950,11 +3971,24 @@
     "created_at": "2026-02-03T18:34:03Z",
     "id": 3892623104,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `blackhole` sink related",
+        "id": 1588369315436401814,
+        "name": "sink: blackhole"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `http_server` source related",
+        "id": 4345892752843924220,
+        "name": "source: http_server"
+      }
+    ],
     "number": 24586,
     "state": "open",
     "title": "Unable to trigger backpressure with `http_server` source and `blackhole` sink",
-    "updated_at": "2026-02-21T20:43:05Z",
+    "updated_at": "2026-06-12T15:36:32Z",
     "user": {
       "login": "abennett"
     }
@@ -4108,11 +4142,18 @@
     "created_at": "2026-02-04T16:11:03Z",
     "id": 3897296148,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` sink related",
+        "id": 531767785653386989,
+        "name": "sink: kafka"
+      }
+    ],
     "number": 24596,
     "state": "open",
     "title": "Vector failing to start when kafka sink batch.timeout_sec >= 300",
-    "updated_at": "2026-02-21T20:43:06Z",
+    "updated_at": "2026-06-12T15:36:33Z",
     "user": {
       "login": "pgollangi"
     }
@@ -4410,11 +4451,18 @@
     "created_at": "2026-02-06T10:54:53Z",
     "id": 3906169239,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `gcp_pubsub` sink related",
+        "id": 8071778003907366531,
+        "name": "sink: gcp_pubsub"
+      }
+    ],
     "number": 24606,
     "state": "open",
     "title": "vector_component_discarded_events_total metric not showing/incrementing for gcp_pubsub sink when disk buffer is full (drop_newest)",
-    "updated_at": "2026-02-21T20:43:07Z",
+    "updated_at": "2026-06-12T15:36:33Z",
     "user": {
       "login": "samudm98"
     }
@@ -4697,11 +4745,18 @@
     "created_at": "2026-02-08T21:34:26Z",
     "id": 3913627236,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `aws_s3` source related",
+        "id": 7036930517801581248,
+        "name": "source: aws_s3"
+      }
+    ],
     "number": 24617,
     "state": "open",
     "title": "Support for CrowdStrike Falcon Data Replicator (FDR) custom SQS notification format in aws_s3 source",
-    "updated_at": "2026-02-23T14:39:40Z",
+    "updated_at": "2026-06-12T15:36:34Z",
     "user": {
       "login": "kfirg-cetu"
     }
@@ -4884,11 +4939,24 @@
     "created_at": "2026-02-10T00:15:46Z",
     "id": 3918781258,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` sink related",
+        "id": 531767785653386989,
+        "name": "sink: kafka"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related",
+        "id": 5855082884786344119,
+        "name": "source: kafka"
+      }
+    ],
     "number": 24626,
     "state": "open",
     "title": "Support TLS certificate hot-reload for Kafka source/sink",
-    "updated_at": "2026-02-23T14:39:43Z",
+    "updated_at": "2026-06-12T15:36:35Z",
     "user": {
       "login": "clyu-biubiubiu"
     }
@@ -5033,11 +5101,18 @@
     "created_at": "2026-02-10T12:16:39Z",
     "id": 3921130085,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `dnstap` source related",
+        "id": 7297509477484979924,
+        "name": "source: dnstap"
+      }
+    ],
     "number": 24632,
     "state": "open",
     "title": "dnstap parse error: unrecognized algorithm: 12",
-    "updated_at": "2026-02-21T20:43:08Z",
+    "updated_at": "2026-06-12T15:36:36Z",
     "user": {
       "login": "ttyS4"
     }
@@ -5163,11 +5238,18 @@
     "created_at": "2026-02-11T10:11:14Z",
     "id": 3925726041,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `host_metrics` source related",
+        "id": 1086792363740752897,
+        "name": "source: host_metrics"
+      }
+    ],
     "number": 24638,
     "state": "open",
     "title": "Host Metrics Disk error on Windows Server 2022, suspect RAID 1 relevant",
-    "updated_at": "2026-02-21T20:43:09Z",
+    "updated_at": "2026-06-12T15:36:37Z",
     "user": {
       "login": "josh-a1x"
     }
@@ -5627,12 +5709,18 @@
         "description": "Anything `azure` service provider related",
         "id": 7368077849538816034,
         "name": "provider: azure"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `azure_monitor_logs` sink related",
+        "id": 8852673838131659939,
+        "name": "sink: azure_monitor_logs"
       }
     ],
     "number": 24656,
     "state": "closed",
     "title": "Deprecation notice for azure_monitor_logs (Azure Monitor HTTP Data Collector API)",
-    "updated_at": "2026-02-26T19:20:42Z",
+    "updated_at": "2026-06-12T15:36:38Z",
     "user": {
       "login": "simdugas"
     }
@@ -5839,11 +5927,18 @@
     "created_at": "2026-02-17T00:57:36Z",
     "id": 3950196771,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `host_metrics` source related",
+        "id": 1086792363740752897,
+        "name": "source: host_metrics"
+      }
+    ],
     "number": 24665,
     "state": "open",
     "title": "Add HostInfo collector to host_metrics source for static host system information",
-    "updated_at": "2026-02-23T14:39:44Z",
+    "updated_at": "2026-06-12T15:36:38Z",
     "user": {
       "login": "zapdos26"
     }
@@ -5894,11 +5989,18 @@
     "created_at": "2026-02-17T03:16:09Z",
     "id": 3950546034,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `clickhouse` sink related",
+        "id": 3597518471828487572,
+        "name": "sink: clickhouse"
+      }
+    ],
     "number": 24667,
     "state": "closed",
     "title": "Clickhouse sink: ArrowStream format fails schema validation on MATERIALIZED/DEFAULT/ALIAS columns",
-    "updated_at": "2026-02-25T17:08:05Z",
+    "updated_at": "2026-06-12T15:36:39Z",
     "user": {
       "login": "vinzee"
     }
@@ -6789,11 +6891,18 @@
     "created_at": "2026-02-21T08:35:16Z",
     "id": 3971670450,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `opentelemetry` source related",
+        "id": 1575269920799824754,
+        "name": "source: opentelemetry"
+      }
+    ],
     "number": 24705,
     "state": "open",
     "title": "Incorrect handling of EMFILE in opentelemetry source",
-    "updated_at": "2026-02-21T20:43:12Z",
+    "updated_at": "2026-06-12T15:36:41Z",
     "user": {
       "login": "fbs"
     }
@@ -7380,11 +7489,18 @@
     "created_at": "2026-02-24T21:53:57Z",
     "id": 3986008900,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` sink related",
+        "id": 531767785653386989,
+        "name": "sink: kafka"
+      }
+    ],
     "number": 24728,
     "state": "open",
     "title": "Incorrect key \"<null>\" in kafka sink when key_field is null",
-    "updated_at": "2026-02-24T22:15:19Z",
+    "updated_at": "2026-06-12T15:36:42Z",
     "user": {
       "login": "ruskaof"
     }
@@ -8966,7 +9082,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(traces): add container tags to dd apm stats payload",
-    "updated_at": "2026-05-14T18:06:17Z",
+    "updated_at": "2026-06-11T16:28:07Z",
     "user": {
       "login": "tony-resendiz"
     }
@@ -10559,11 +10675,18 @@
     "created_at": "2026-03-03T21:58:25Z",
     "id": 4018911839,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `dnstap` source related",
+        "id": 7297509477484979924,
+        "name": "source: dnstap"
+      }
+    ],
     "number": 24838,
     "state": "open",
     "title": "dnstap TCP source leaks CLOSE_WAIT sockets on remote connection close, exhausting RequestLimiter permit pool over ~48h",
-    "updated_at": "2026-03-03T21:58:25Z",
+    "updated_at": "2026-06-12T15:36:43Z",
     "user": {
       "login": "vinuthna-m"
     }
@@ -10655,11 +10778,24 @@
     "created_at": "2026-03-04T10:37:23Z",
     "id": 4021291459,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `aws_s3` sink related",
+        "id": 1963617647073758968,
+        "name": "sink: aws_s3"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `gcp_cloud_storage` sink related",
+        "id": 4663635422713484343,
+        "name": "sink: gcp_cloud_storage"
+      }
+    ],
     "number": 24841,
     "state": "open",
     "title": "gcp_cloud_storage sink: add content_encoding option (parity with aws_s3) to prevent GCS decompressive transcoding",
-    "updated_at": "2026-03-04T10:37:52Z",
+    "updated_at": "2026-06-12T15:36:44Z",
     "user": {
       "login": "zedge-it"
     }
@@ -11375,7 +11511,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(docker_logs source): add checkpointing",
-    "updated_at": "2026-03-16T10:54:52Z",
+    "updated_at": "2026-06-11T12:49:55Z",
     "user": {
       "login": "vincentbernat"
     }
@@ -11746,11 +11882,18 @@
     "created_at": "2026-03-10T16:43:28Z",
     "id": 4052952387,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `gcp_cloud_storage` sink related",
+        "id": 4663635422713484343,
+        "name": "sink: gcp_cloud_storage"
+      }
+    ],
     "number": 24883,
     "state": "closed",
     "title": "gcp_cloud_storage sink sends Content-Encoding header when content_encoding is set to empty string",
-    "updated_at": "2026-05-21T14:36:09Z",
+    "updated_at": "2026-06-12T15:36:45Z",
     "user": {
       "login": "topkoa"
     }
@@ -12071,11 +12214,18 @@
     "created_at": "2026-03-11T15:32:37Z",
     "id": 4058955252,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_remote_write` sink related",
+        "id": 3463476261161132748,
+        "name": "sink: prometheus_remote_write"
+      }
+    ],
     "number": 24896,
     "state": "open",
     "title": "prometheus_remote_write sink deadlocks after ~10-15 minutes with high cardinality metrics (regression from `0.48.0`)",
-    "updated_at": "2026-04-16T16:23:40Z",
+    "updated_at": "2026-06-12T15:36:46Z",
     "user": {
       "login": "silviugae"
     }
@@ -12353,11 +12503,18 @@
     "created_at": "2026-03-12T11:24:11Z",
     "id": 4063959021,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `datadog_traces` sink related",
+        "id": 6555271956727986025,
+        "name": "sink: datadog_traces"
+      }
+    ],
     "number": 24907,
     "state": "open",
     "title": "datadog_traces sink: APM stats missing span.kind dimension",
-    "updated_at": "2026-03-12T11:25:55Z",
+    "updated_at": "2026-06-12T15:36:47Z",
     "user": {
       "login": "dgdelahera"
     }
@@ -12500,11 +12657,18 @@
     "created_at": "2026-03-13T09:59:29Z",
     "id": 4070096831,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `aws_kinesis_firehose` source related",
+        "id": 5470723790526904733,
+        "name": "source: aws_kinesis_firehose"
+      }
+    ],
     "number": 24913,
     "state": "open",
     "title": "aws_kinesis_firehose source: include attributes from X-Amz-Firehose-Common-Attributes header in the log event",
-    "updated_at": "2026-03-13T09:59:54Z",
+    "updated_at": "2026-06-12T15:36:47Z",
     "user": {
       "login": "tchanturia"
     }
@@ -13174,11 +13338,18 @@
     "created_at": "2026-03-16T19:12:14Z",
     "id": 4084301637,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `nats` source related",
+        "id": 7582498524073248249,
+        "name": "source: nats"
+      }
+    ],
     "number": 24937,
     "state": "open",
     "title": "NATS Source: Expose NATS Message Headers in VRL",
-    "updated_at": "2026-03-16T19:12:14Z",
+    "updated_at": "2026-06-12T15:36:48Z",
     "user": {
       "login": "bwerthmann"
     }
@@ -13864,13 +14035,19 @@
         "description": "",
         "id": 81604373089705258,
         "name": "work in progress"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
       }
     ],
     "number": 24963,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(statsd source): add unix_mode and socket_file_mode support",
-    "updated_at": "2026-05-24T22:31:04Z",
+    "updated_at": "2026-06-09T07:00:11Z",
     "user": {
       "login": "FStelzer"
     }
@@ -14029,11 +14206,18 @@
     "created_at": "2026-03-20T09:52:04Z",
     "id": 4106916627,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `elasticsearch` sink related",
+        "id": 3276119148680691006,
+        "name": "sink: elasticsearch"
+      }
+    ],
     "number": 24969,
     "state": "open",
     "title": "Sending OTEL traces to Elasticsearch/Opensearch",
-    "updated_at": "2026-03-20T09:52:04Z",
+    "updated_at": "2026-06-12T15:36:49Z",
     "user": {
       "login": "pbwur"
     }
@@ -14347,6 +14531,12 @@
     "issue_type": "Bug",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
+      },
+      {
         "color": "F687F6",
         "description": "Anything `kubernetes` platform related",
         "id": 5891925229468674031,
@@ -14356,7 +14546,7 @@
     "number": 24981,
     "state": "open",
     "title": "Incomplete log records in Kubernetes",
-    "updated_at": "2026-03-23T17:47:23Z",
+    "updated_at": "2026-06-12T15:36:50Z",
     "user": {
       "login": "vadimalekseev"
     }
@@ -15880,7 +16070,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(deps): bump quick-xml from 0.31.0 to 0.38.4",
-    "updated_at": "2026-04-23T18:25:33Z",
+    "updated_at": "2026-06-11T18:49:19Z",
     "user": {
       "login": "dependabot"
     }
@@ -16355,11 +16545,18 @@
     "created_at": "2026-03-26T21:49:29Z",
     "id": 4147553000,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `http_server` source related",
+        "id": 4345892752843924220,
+        "name": "source: http_server"
+      }
+    ],
     "number": 25052,
     "state": "open",
     "title": "Allow http_server to emit events from GET requests with no body",
-    "updated_at": "2026-03-26T21:58:41Z",
+    "updated_at": "2026-06-12T15:36:51Z",
     "user": {
       "login": "jascott1"
     }
@@ -16443,13 +16640,19 @@
         "description": "",
         "id": 81604373089705258,
         "name": "work in progress"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
       }
     ],
     "number": 25055,
     "pull_request": {},
     "state": "open",
     "title": "feat(new sink): add dedicated syslog sink for RFC 5424/3164 output",
-    "updated_at": "2026-05-24T22:30:58Z",
+    "updated_at": "2026-06-11T07:19:12Z",
     "user": {
       "login": "tot19"
     }
@@ -16648,7 +16851,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(aws_cloudwatch_metrics sink): #24655 Drops finalizers of dropped absolute metrics transformed into incremental metrics.",
-    "updated_at": "2026-06-06T18:42:33Z",
+    "updated_at": "2026-06-08T20:50:52Z",
     "user": {
       "login": "johannesfloriangeiger"
     }
@@ -16689,7 +16892,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(networking): #25054 add support for specifying TCP keepalive configuration with HTTP sources",
-    "updated_at": "2026-05-21T02:30:49Z",
+    "updated_at": "2026-06-11T18:52:04Z",
     "user": {
       "login": "erhudy"
     }
@@ -17389,11 +17592,18 @@
     "created_at": "2026-04-01T03:44:02Z",
     "id": 4183835326,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `gcp_cloud_storage` sink related",
+        "id": 4663635422713484343,
+        "name": "sink: gcp_cloud_storage"
+      }
+    ],
     "number": 25090,
     "state": "open",
     "title": "gcp_cloud_storage sink: timezone option not applied to key_prefix strftime rendering",
-    "updated_at": "2026-04-01T03:44:02Z",
+    "updated_at": "2026-06-12T15:36:51Z",
     "user": {
       "login": "yh1215"
     }
@@ -18126,11 +18336,18 @@
     "created_at": "2026-04-03T15:53:11Z",
     "id": 4201143439,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `journald` source related",
+        "id": 5703283064965190939,
+        "name": "source: journald"
+      }
+    ],
     "number": 25117,
     "state": "open",
     "title": "journald source reports component_events_received_bytes even when the downstream components are blocked.",
-    "updated_at": "2026-04-03T15:55:13Z",
+    "updated_at": "2026-06-12T15:36:52Z",
     "user": {
       "login": "jcantrill"
     }
@@ -18547,6 +18764,12 @@
     "issue_type": "Feature",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
+      },
+      {
         "color": "F687F6",
         "description": "Anything `kubernetes` platform related",
         "id": 5891925229468674031,
@@ -18556,7 +18779,7 @@
     "number": 25137,
     "state": "open",
     "title": "feat(kubernetes source): new `kubernetes_logs_api` source — API-based pod log collection without node access",
-    "updated_at": "2026-04-07T21:08:53Z",
+    "updated_at": "2026-06-12T15:36:53Z",
     "user": {
       "login": "git001"
     }
@@ -18708,7 +18931,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(enrichment tables): add cuckoo filter to memory table",
-    "updated_at": "2026-06-01T12:53:00Z",
+    "updated_at": "2026-06-10T08:37:03Z",
     "user": {
       "login": "esensar"
     }
@@ -18931,11 +19154,18 @@
     "created_at": "2026-04-09T07:41:42Z",
     "id": 4230422856,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `gcp_pubsub` source related",
+        "id": 3392094781726188481,
+        "name": "source: gcp_pubsub"
+      }
+    ],
     "number": 25151,
     "state": "open",
     "title": "gcp_pubsub source: expected StreamingPull stream closures logged as ERROR",
-    "updated_at": "2026-04-09T07:46:31Z",
+    "updated_at": "2026-06-12T15:36:54Z",
     "user": {
       "login": "andylibrian"
     }
@@ -19700,11 +19930,18 @@
     "created_at": "2026-04-14T06:20:03Z",
     "id": 4259894807,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `dnstap` source related",
+        "id": 7297509477484979924,
+        "name": "source: dnstap"
+      }
+    ],
     "number": 25181,
     "state": "open",
     "title": "dnstap sourceAddress: \"0.0.0.0\" instead of real client IP when using TCP transport",
-    "updated_at": "2026-04-17T08:43:26Z",
+    "updated_at": "2026-06-12T15:36:54Z",
     "user": {
       "login": "YangTao0"
     }
@@ -20087,11 +20324,18 @@
     "created_at": "2026-04-15T10:43:49Z",
     "id": 4268297496,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `host_metrics` source related",
+        "id": 1086792363740752897,
+        "name": "source: host_metrics"
+      }
+    ],
     "number": 25197,
     "state": "open",
     "title": "host_metrics source: Report irq, softirq, and steal CPU modes on Linux",
-    "updated_at": "2026-04-15T10:43:49Z",
+    "updated_at": "2026-06-12T15:36:55Z",
     "user": {
       "login": "SHWETHABHAT1"
     }
@@ -20405,11 +20649,18 @@
     "created_at": "2026-04-16T15:03:46Z",
     "id": 4276611521,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `elasticsearch` sink related",
+        "id": 3276119148680691006,
+        "name": "sink: elasticsearch"
+      }
+    ],
     "number": 25212,
     "state": "open",
     "title": "bug(elasticsearch sink): Unbounded in-flight retrying batches cause OOM during sustained downstream failures",
-    "updated_at": "2026-04-16T16:17:57Z",
+    "updated_at": "2026-06-12T15:36:56Z",
     "user": {
       "login": "yusufcemalcelebi"
     }
@@ -21483,7 +21734,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-11T13:40:37Z",
     "created_at": "2026-04-23T05:46:57Z",
     "draft": false,
     "id": 3571285966,
@@ -21491,9 +21742,9 @@
     "labels": [],
     "number": 25251,
     "pull_request": {},
-    "state": "open",
-    "title": "fix(startup): add --raise-fd-limit CLI flag to raise file descriptor soft limit",
-    "updated_at": "2026-06-04T17:09:33Z",
+    "state": "closed",
+    "title": "feat(startup): add --raise-fd-limit CLI flag to raise file descriptor soft limit",
+    "updated_at": "2026-06-11T13:40:54Z",
     "user": {
       "login": "vparfonov"
     }
@@ -21522,7 +21773,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(file source): add max_open_files config with LRU eviction",
-    "updated_at": "2026-05-19T16:47:30Z",
+    "updated_at": "2026-06-11T18:56:56Z",
     "user": {
       "login": "vparfonov"
     }
@@ -21866,11 +22117,18 @@
     "created_at": "2026-04-24T22:41:17Z",
     "id": 4325985460,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_scrape` source related",
+        "id": 8167791065221546555,
+        "name": "source: prometheus_scrape"
+      }
+    ],
     "number": 25266,
     "state": "open",
     "title": "Add source-side metric_name allow/deny filter to `prometheus_scrape` (prevents OOM on high-cardinality endpoints)",
-    "updated_at": "2026-04-24T23:13:53Z",
+    "updated_at": "2026-06-12T15:36:57Z",
     "user": {
       "login": "st-omarkhalid"
     }
@@ -23347,7 +23605,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-10T16:16:49Z",
     "created_at": "2026-04-28T15:17:22Z",
     "draft": false,
     "id": 3596851002,
@@ -23370,25 +23628,13 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
-      },
-      {
-        "color": "AB3B4B",
-        "description": "",
-        "id": 81604373089705258,
-        "name": "work in progress"
-      },
-      {
-        "color": "605f58",
-        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
-        "id": 6102271970520709555,
-        "name": "docs review on hold"
       }
     ],
     "number": 25317,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "feat(metrics): Add per-component CPU usage metric (poll-hook)",
-    "updated_at": "2026-06-03T15:24:22Z",
+    "updated_at": "2026-06-10T16:17:02Z",
     "user": {
       "login": "gwenaskell"
     }
@@ -23726,7 +23972,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(traces): Add RFC for typed internal trace data model",
-    "updated_at": "2026-06-01T17:10:07Z",
+    "updated_at": "2026-06-11T15:48:25Z",
     "user": {
       "login": "bruceg"
     }
@@ -24907,12 +25153,18 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `internal_metrics` source related",
+        "id": 5016304788044877220,
+        "name": "source: internal_metrics"
       }
     ],
     "number": 25374,
     "state": "open",
     "title": "Generate internal metric documentation from source code",
-    "updated_at": "2026-05-05T20:10:55Z",
+    "updated_at": "2026-06-12T15:36:58Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -24922,11 +25174,18 @@
     "created_at": "2026-05-06T06:40:08Z",
     "id": 4389306332,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` sink related",
+        "id": 531767785653386989,
+        "name": "sink: kafka"
+      }
+    ],
     "number": 25375,
     "state": "open",
     "title": "Kafka sink permanently stuck after leader=-1 metadata response — QRYLEADER: broker is internal: re-query loop never recovers",
-    "updated_at": "2026-05-06T07:07:07Z",
+    "updated_at": "2026-06-12T15:36:58Z",
     "user": {
       "login": "fanyangxi"
     }
@@ -25216,11 +25475,24 @@
     "created_at": "2026-05-07T02:49:23Z",
     "id": 4395828876,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
+      }
+    ],
     "number": 25385,
     "state": "open",
     "title": "`kubernetes_logs` has high source lag and may incorrectly merge Docker partial logs when multiple rotated file watchers exist for the same pod log path",
-    "updated_at": "2026-05-07T02:49:23Z",
+    "updated_at": "2026-06-12T15:36:59Z",
     "user": {
       "login": "huan89983"
     }
@@ -25844,11 +26116,18 @@
     "created_at": "2026-05-11T17:34:32Z",
     "id": 4422933213,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_exporter` sink related",
+        "id": 5884848275777734183,
+        "name": "sink: prometheus_exporter"
+      }
+    ],
     "number": 25409,
     "state": "open",
     "title": "feat(sink/prometheus_exporter) Restrict access by SubjectAccessReview to  authorized clients in Kubernetes environment",
-    "updated_at": "2026-05-11T17:34:48Z",
+    "updated_at": "2026-06-12T15:37:00Z",
     "user": {
       "login": "jcantrill"
     }
@@ -26092,7 +26371,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(buffers): add nesting depth limit to prevent protobuf decode corruption",
-    "updated_at": "2026-06-04T15:02:05Z",
+    "updated_at": "2026-06-11T18:39:44Z",
     "user": {
       "login": "ganelo"
     }
@@ -26679,7 +26958,7 @@
     "number": 25441,
     "state": "open",
     "title": "`datadog_agent` source should accept LLMObs telemetry",
-    "updated_at": "2026-05-15T20:13:27Z",
+    "updated_at": "2026-06-08T22:04:03Z",
     "user": {
       "login": "xavirg"
     }
@@ -27078,7 +27357,7 @@
     "number": 25455,
     "state": "open",
     "title": "metrics: rename memory enrichment table counters to end with _total",
-    "updated_at": "2026-05-26T05:42:27Z",
+    "updated_at": "2026-06-09T00:14:56Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -27224,11 +27503,18 @@
     "created_at": "2026-05-20T13:16:11Z",
     "id": 4486758115,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `mqtt` sink related",
+        "id": 9186242459209927395,
+        "name": "sink: mqtt"
+      }
+    ],
     "number": 25463,
     "state": "closed",
     "title": "MQTT sink forces multiple connections to the broker",
-    "updated_at": "2026-05-27T11:31:51Z",
+    "updated_at": "2026-06-12T15:37:01Z",
     "user": {
       "login": "jpiedel"
     }
@@ -27379,7 +27665,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-11T19:30:52Z",
     "created_at": "2026-05-20T14:40:27Z",
     "draft": false,
     "id": 3717409588,
@@ -27400,9 +27686,9 @@
     ],
     "number": 25469,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(ci): bump the artifact group across 1 directory with 2 updates",
-    "updated_at": "2026-06-03T00:40:58Z",
+    "updated_at": "2026-06-11T19:31:03Z",
     "user": {
       "login": "dependabot"
     }
@@ -27750,7 +28036,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(kafka source): process messages in batch",
-    "updated_at": "2026-06-04T10:22:38Z",
+    "updated_at": "2026-06-09T04:21:16Z",
     "user": {
       "login": "esensar"
     }
@@ -28146,24 +28432,17 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-10T18:59:29Z",
     "created_at": "2026-05-25T17:11:22Z",
     "draft": false,
     "id": 3743291392,
     "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment",
-        "id": 6526936644602743638,
-        "name": "domain: ci"
-      }
-    ],
+    "labels": [],
     "number": 25495,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix(dnstap source): prevent error message when DOQ is encountered",
-    "updated_at": "2026-06-08T16:58:28Z",
+    "updated_at": "2026-06-11T06:38:59Z",
     "user": {
       "login": "esensar"
     }
@@ -28288,11 +28567,18 @@
     "created_at": "2026-05-27T03:06:48Z",
     "id": 4529147810,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `clickhouse` sink related",
+        "id": 3597518471828487572,
+        "name": "sink: clickhouse"
+      }
+    ],
     "number": 25501,
     "state": "open",
     "title": "Vector receives OpenTelemetry logs but fails to write to ClickHouse",
-    "updated_at": "2026-05-27T03:06:48Z",
+    "updated_at": "2026-06-12T15:37:02Z",
     "user": {
       "login": "zhaoming1995"
     }
@@ -28546,6 +28832,18 @@
     "issue_type": "Bug",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `socket` source related",
+        "id": 4862344537635261167,
+        "name": "source: socket"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `dnstap` source related",
+        "id": 7297509477484979924,
+        "name": "source: dnstap"
+      },
+      {
         "color": "343639",
         "description": "",
         "id": 4100981168124393568,
@@ -28555,7 +28853,7 @@
     "number": 25513,
     "state": "open",
     "title": "`vector validate -d` deletes Unix socket of running dnstap source (destructive side-effect in dry-run)",
-    "updated_at": "2026-06-01T16:36:30Z",
+    "updated_at": "2026-06-12T15:37:02Z",
     "user": {
       "login": "srozb"
     }
@@ -28648,12 +28946,6 @@
     "issue_type": null,
     "labels": [
       {
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment",
-        "id": 6526936644602743638,
-        "name": "domain: ci"
-      },
-      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -28664,7 +28956,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(dev): add AI-assisted component maturity evaluation skill",
-    "updated_at": "2026-06-01T17:41:35Z",
+    "updated_at": "2026-06-12T15:30:24Z",
     "user": {
       "login": "pront"
     }
@@ -29181,7 +29473,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(datadog_agent source): add API key validation",
-    "updated_at": "2026-06-03T20:51:29Z",
+    "updated_at": "2026-06-12T16:51:59Z",
     "user": {
       "login": "xfocus3"
     }
@@ -29617,7 +29909,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-11T20:02:00Z",
     "created_at": "2026-06-01T17:10:43Z",
     "draft": false,
     "id": 3782525505,
@@ -29644,9 +29936,9 @@
     ],
     "number": 25554,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(website): remove codename field from release definitions and template",
-    "updated_at": "2026-06-01T17:23:55Z",
+    "updated_at": "2026-06-11T20:02:16Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -29825,7 +30117,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-10T17:57:51Z",
     "created_at": "2026-06-02T21:04:04Z",
     "draft": false,
     "id": 3791126570,
@@ -29852,9 +30144,9 @@
     ],
     "number": 25561,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "feat(databricks_zerobus sink): add user_agent config option",
-    "updated_at": "2026-06-02T21:06:09Z",
+    "updated_at": "2026-06-10T17:58:05Z",
     "user": {
       "login": "flaviofcruz"
     }
@@ -29867,18 +30159,6 @@
     "issue_type": null,
     "labels": [
       {
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment",
-        "id": 6526936644602743638,
-        "name": "domain: ci"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to the vdev tooling",
-        "id": 6235798767080406514,
-        "name": "domain: vdev"
-      },
-      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -29889,7 +30169,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(tests): antithesis harness, durability harness scenario",
-    "updated_at": "2026-06-04T18:12:41Z",
+    "updated_at": "2026-06-10T17:49:32Z",
     "user": {
       "login": "blt"
     }
@@ -29912,7 +30192,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(sources): post-processing in SourceSender",
-    "updated_at": "2026-06-04T23:31:28Z",
+    "updated_at": "2026-06-11T22:05:40Z",
     "user": {
       "login": "20agbekodo"
     }
@@ -29974,11 +30254,18 @@
     "created_at": "2026-06-03T10:27:15Z",
     "id": 4578976819,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related",
+        "id": 5855082884786344119,
+        "name": "source: kafka"
+      }
+    ],
     "number": 25566,
     "state": "open",
     "title": "kafka source: add option to opt out offset commits",
-    "updated_at": "2026-06-03T10:27:15Z",
+    "updated_at": "2026-06-12T15:37:03Z",
     "user": {
       "login": "watson28"
     }
@@ -30116,7 +30403,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(tests): Antithesis Vector end-to-end ack scenario",
-    "updated_at": "2026-06-04T18:20:53Z",
+    "updated_at": "2026-06-10T17:15:18Z",
     "user": {
       "login": "blt"
     }
@@ -30244,7 +30531,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(aws_s3 sink): add `key` option for full object key control",
-    "updated_at": "2026-06-04T22:15:24Z",
+    "updated_at": "2026-06-11T20:36:07Z",
     "user": {
       "login": "aravind-n"
     }
@@ -30258,7 +30545,7 @@
     "number": 25576,
     "state": "open",
     "title": "Title: device_and_inode fingerprint causes wrong offset on inode reuse when files are deleted periodically",
-    "updated_at": "2026-06-05T01:54:13Z",
+    "updated_at": "2026-06-12T14:50:51Z",
     "user": {
       "login": "tjpark-lab"
     }
@@ -30282,11 +30569,18 @@
     "created_at": "2026-06-05T11:30:47Z",
     "id": 4596563333,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `opentelemetry` source related",
+        "id": 1575269920799824754,
+        "name": "source: opentelemetry"
+      }
+    ],
     "number": 25578,
     "state": "open",
     "title": "host_key support for OpenTelemetry source",
-    "updated_at": "2026-06-05T11:30:47Z",
+    "updated_at": "2026-06-12T15:37:04Z",
     "user": {
       "login": "fingon"
     }
@@ -30321,7 +30615,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(new transform): add AWS ECS metadata transform",
-    "updated_at": "2026-06-08T15:13:41Z",
+    "updated_at": "2026-06-09T17:16:44Z",
     "user": {
       "login": "hrko"
     }
@@ -30335,16 +30629,28 @@
     "labels": [
       {
         "color": "343639",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain: external docs"
+      },
+      {
+        "color": "343639",
         "description": "Anything related to the vdev tooling",
         "id": 6235798767080406514,
         "name": "domain: vdev"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
       }
     ],
     "number": 25580,
     "pull_request": {},
     "state": "open",
     "title": "feat(observability): generate internal metrics docs from configurable metadata",
-    "updated_at": "2026-06-05T14:07:17Z",
+    "updated_at": "2026-06-11T16:51:52Z",
     "user": {
       "login": "gwenaskell"
     }
@@ -30396,7 +30702,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-08T20:07:04Z",
     "created_at": "2026-06-05T15:41:17Z",
     "draft": false,
     "id": 3811135694,
@@ -30423,15 +30729,15 @@
     ],
     "number": 25583,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "docs(file sink): enhance note on `path` templates",
-    "updated_at": "2026-06-08T18:32:13Z",
+    "updated_at": "2026-06-08T20:07:17Z",
     "user": {
       "login": "pront"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-11T16:00:51Z",
     "created_at": "2026-06-05T15:54:34Z",
     "draft": false,
     "id": 3811207854,
@@ -30452,9 +30758,9 @@
     ],
     "number": 25584,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump the serde group across 1 directory with 2 updates",
-    "updated_at": "2026-06-05T15:54:35Z",
+    "updated_at": "2026-06-11T16:01:05Z",
     "user": {
       "login": "dependabot"
     }
@@ -30495,7 +30801,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-10T16:20:33Z",
     "created_at": "2026-06-05T18:53:48Z",
     "draft": false,
     "id": 3812174052,
@@ -30522,9 +30828,9 @@
     ],
     "number": 25586,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "feat(databricks_zerobus sink): add Arrow IPC compression option",
-    "updated_at": "2026-06-05T18:59:09Z",
+    "updated_at": "2026-06-10T16:20:34Z",
     "user": {
       "login": "flaviofcruz"
     }
@@ -30550,12 +30856,6 @@
       },
       {
         "color": "343639",
-        "description": "Anything related to Vector's CI environment",
-        "id": 6526936644602743638,
-        "name": "domain: ci"
-      },
-      {
-        "color": "343639",
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
@@ -30571,7 +30871,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(mqtt source, mqtt sink): add MQTT v5 protocol support",
-    "updated_at": "2026-06-08T17:47:34Z",
+    "updated_at": "2026-06-10T20:37:55Z",
     "user": {
       "login": "vitalvas"
     }
@@ -30634,12 +30934,6 @@
       },
       {
         "color": "343639",
-        "description": "Anything related to Vector's CI environment",
-        "id": 6526936644602743638,
-        "name": "domain: ci"
-      },
-      {
-        "color": "343639",
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
@@ -30655,18 +30949,24 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(gcp_cloud_storage sink): support Parquet batch encoding",
-    "updated_at": "2026-06-08T17:24:46Z",
+    "updated_at": "2026-06-12T12:46:43Z",
     "user": {
       "login": "dshmatov"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-10T17:46:03Z",
     "created_at": "2026-06-08T13:26:22Z",
-    "draft": true,
+    "draft": false,
     "id": 3823904030,
     "issue_type": null,
     "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `clickhouse` sink related",
+        "id": 3597518471828487572,
+        "name": "sink: clickhouse"
+      },
       {
         "color": "343639",
         "description": "Anything related to the Vector's sinks",
@@ -30676,9 +30976,9 @@
     ],
     "number": 25591,
     "pull_request": {},
-    "state": "open",
-    "title": "fix(clickhouse sink): SQL-standard identifier escaping for database and table names",
-    "updated_at": "2026-06-08T14:01:39Z",
+    "state": "closed",
+    "title": "fix(clickhouse sink): use ClickHouse Identifier query parameters for safe database/table names",
+    "updated_at": "2026-06-10T17:46:17Z",
     "user": {
       "login": "pront"
     }
@@ -30707,7 +31007,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-08T20:11:42Z",
     "created_at": "2026-06-08T16:43:56Z",
     "draft": false,
     "id": 3825208802,
@@ -30734,9 +31034,9 @@
     ],
     "number": 25593,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(ci): replace semantic PR title action with custom script",
-    "updated_at": "2026-06-08T18:23:52Z",
+    "updated_at": "2026-06-08T20:11:54Z",
     "user": {
       "login": "pront"
     }
@@ -30794,9 +31094,9 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-10T15:27:59Z",
     "created_at": "2026-06-08T19:20:08Z",
-    "draft": true,
+    "draft": false,
     "id": 3826210852,
     "issue_type": null,
     "labels": [
@@ -30815,11 +31115,455 @@
     ],
     "number": 25596,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix(ci): split docs review label workflow to fix fork PR permissions",
-    "updated_at": "2026-06-08T19:20:20Z",
+    "updated_at": "2026-06-10T15:28:01Z",
     "user": {
       "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-06-10T14:58:47Z",
+    "created_at": "2026-06-08T20:45:24Z",
+    "draft": false,
+    "id": 3826729659,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's topology code",
+        "id": 1103341506812725494,
+        "name": "domain: topology"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to the Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain: sources"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain: transforms"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to the Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain: sinks"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain: ci"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain: external docs"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain: core"
+      },
+      {
+        "color": "ededed",
+        "description": null,
+        "id": 4191376575049891724,
+        "name": "domain: rfc"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain: vdev"
+      }
+    ],
+    "number": 25597,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): replace check-spelling with typos",
+    "updated_at": "2026-06-10T14:59:00Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-09T08:53:03Z",
+    "id": 4620459876,
+    "issue_type": null,
+    "labels": [],
+    "number": 25598,
+    "state": "open",
+    "title": "`aws_kinesis_firehose` sink silently drops + acknowledges `opentelemetry` traces events, corrupting the disk buffer size (u64 underflow) and wedging the sink",
+    "updated_at": "2026-06-09T08:54:06Z",
+    "user": {
+      "login": "danievanzyl"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-09T10:38:33Z",
+    "id": 4621207013,
+    "issue_type": "Bug",
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to releasing Vector",
+        "id": 843604899509384131,
+        "name": "domain: releasing"
+      },
+      {
+        "color": "F687F6",
+        "description": "Anything `kubernetes` platform related",
+        "id": 5891925229468674031,
+        "name": "platform: kubernetes"
+      }
+    ],
+    "number": 25599,
+    "state": "open",
+    "title": "Possible version mismatch in distribution/kubernetes/vector-agent/daemonset.yaml",
+    "updated_at": "2026-06-10T21:23:28Z",
+    "user": {
+      "login": "mrozborsunity"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-09T11:07:20Z",
+    "id": 4621393778,
+    "issue_type": "Bug",
+    "labels": [],
+    "number": 25600,
+    "state": "open",
+    "title": "Source windows_event_log fails when subscribing to Analytics/Debug channels",
+    "updated_at": "2026-06-09T11:08:24Z",
+    "user": {
+      "login": "egglessness"
+    }
+  },
+  {
+    "closed_at": "2026-06-10T18:47:40Z",
+    "created_at": "2026-06-09T14:43:17Z",
+    "draft": false,
+    "id": 3832352519,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain: core"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 25601,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(tests): add debug cfg gate to test for debug builds",
+    "updated_at": "2026-06-10T18:47:53Z",
+    "user": {
+      "login": "strophy"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-09T16:26:58Z",
+    "draft": false,
+    "id": 3832999523,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "5ED9F6",
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
+      }
+    ],
+    "number": 25602,
+    "pull_request": {},
+    "state": "open",
+    "title": "enhancement(file source): skip redundant file fingerprinting for already-watched files",
+    "updated_at": "2026-06-12T14:12:26Z",
+    "user": {
+      "login": "vparfonov"
+    }
+  },
+  {
+    "closed_at": "2026-06-12T14:21:06Z",
+    "created_at": "2026-06-10T00:18:24Z",
+    "draft": false,
+    "id": 3835575330,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "ededed",
+        "description": null,
+        "id": 4191376575049891724,
+        "name": "domain: rfc"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 25603,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(rfc): parse-first config interpolation",
+    "updated_at": "2026-06-12T14:21:19Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-10T11:43:54Z",
+    "draft": false,
+    "id": 3839124558,
+    "issue_type": null,
+    "labels": [],
+    "number": 25604,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(top): handle UI events separately to prevent UI freeze",
+    "updated_at": "2026-06-12T15:15:52Z",
+    "user": {
+      "login": "esensar"
+    }
+  },
+  {
+    "closed_at": "2026-06-10T13:50:42Z",
+    "created_at": "2026-06-10T13:37:29Z",
+    "draft": false,
+    "id": 3839898380,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 25605,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): ignore RUSTSEC-2026-0173 (proc-macro-error2 unmaintained via mlua_derive)",
+    "updated_at": "2026-06-10T13:50:55Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-06-10T22:47:02Z",
+    "created_at": "2026-06-10T19:46:33Z",
+    "draft": false,
+    "id": 3842216764,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's topology code",
+        "id": 1103341506812725494,
+        "name": "domain: topology"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to the Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain: sources"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to the Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain: sinks"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain: core"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain: vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 25606,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(dev): bump rust toolchain to 1.95 and fix clippy lints",
+    "updated_at": "2026-06-10T22:47:13Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-11T06:57:00Z",
+    "draft": false,
+    "id": 3845196714,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to the Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain: sources"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain: external docs"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 25607,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(host_metrics source): add temperature metrics collector",
+    "updated_at": "2026-06-12T05:52:25Z",
+    "user": {
+      "login": "somaz94"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-12T08:54:45Z",
+    "draft": false,
+    "id": 3853426513,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to the Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain: sinks"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `datadog_logs` sink related",
+        "id": 6447116046887888457,
+        "name": "sink: datadog_logs"
+      }
+    ],
+    "number": 25608,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(logging): Improve datadog logs semantic meaning warning",
+    "updated_at": "2026-06-12T16:32:00Z",
+    "user": {
+      "login": "gwenaskell"
+    }
+  },
+  {
+    "closed_at": "2026-06-12T15:17:33Z",
+    "created_at": "2026-06-12T10:22:54Z",
+    "draft": false,
+    "id": 3853929187,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 25609,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(vrl): Avoid using unnecessary LazyLock",
+    "updated_at": "2026-06-12T15:17:45Z",
+    "user": {
+      "login": "JakubOnderka"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-06-12T12:39:22Z",
+    "draft": false,
+    "id": 3854684896,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to the Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain: sources"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to the Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain: sinks"
+      }
+    ],
+    "number": 25610,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(codecs): Use simdutf for converting bytes to string",
+    "updated_at": "2026-06-12T12:39:32Z",
+    "user": {
+      "login": "JakubOnderka"
+    }
+  },
+  {
+    "closed_at": "2026-06-12T15:17:34Z",
+    "created_at": "2026-06-12T14:45:19Z",
+    "draft": false,
+    "id": 3855462350,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "ededed",
+        "description": null,
+        "id": 4191376575049891724,
+        "name": "domain: rfc"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 25611,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs(rfcs): simplify RFC template and process",
+    "updated_at": "2026-06-12T15:17:47Z",
+    "user": {
+      "login": "pront"
     }
   }
 ]
