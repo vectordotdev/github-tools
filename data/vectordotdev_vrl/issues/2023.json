@@ -2067,12 +2067,18 @@
         "description": "A bug that results in the program unexpectedly terminating, such as a panic.",
         "id": 5102344010816012392,
         "name": "crash"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_groks",
+        "id": 4924712345985418412,
+        "name": "stdlib: parse_groks"
       }
     ],
     "number": 261,
     "state": "open",
     "title": "`parse_groks` aliases are not type checked",
-    "updated_at": "2026-06-01T14:06:59Z",
+    "updated_at": "2026-06-16T13:10:29Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -2249,12 +2255,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: assert_eq",
+        "id": 2765864288317877556,
+        "name": "stdlib: assert_eq"
       }
     ],
     "number": 273,
     "state": "open",
     "title": "assert_eq confusingly fails to compare arrays of numbers",
-    "updated_at": "2026-06-01T14:06:31Z",
+    "updated_at": "2026-06-16T13:10:31Z",
     "user": {
       "login": "jpeach"
     }
@@ -3218,12 +3230,18 @@
         "description": "",
         "id": 2278291412943965611,
         "name": "meta:confirmed"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 2223534336356115461,
+        "name": "stdlib: parse_key_value"
       }
     ],
     "number": 324,
     "state": "open",
     "title": "parse_key_value vs backslash",
-    "updated_at": "2026-06-01T14:07:10Z",
+    "updated_at": "2026-06-16T13:10:27Z",
     "user": {
       "login": "grinapo"
     }
@@ -4861,11 +4879,18 @@
     "created_at": "2023-08-21T09:36:10Z",
     "id": 1858987392,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_nginx_log",
+        "id": 3283702677068885973,
+        "name": "stdlib: parse_nginx_log"
+      }
+    ],
     "number": 406,
     "state": "open",
     "title": "Restore `parse_nginx_log` parsing of the request string, optionally",
-    "updated_at": "2023-09-15T07:47:41Z",
+    "updated_at": "2026-06-16T13:10:24Z",
     "user": {
       "login": "rbarrois"
     }
@@ -5523,12 +5548,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_groks",
+        "id": 4924712345985418412,
+        "name": "stdlib: parse_groks"
       }
     ],
     "number": 437,
     "state": "open",
     "title": "Docs for `parse_groks` links to a page that doesn't seem to exist any more",
-    "updated_at": "2023-10-10T14:24:05Z",
+    "updated_at": "2026-06-16T13:10:22Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -6189,11 +6220,18 @@
     "created_at": "2023-09-23T23:38:27Z",
     "id": 1910034177,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": null,
+        "id": 2148306289676808345,
+        "name": "stdlib: parse_klog"
+      }
+    ],
     "number": 471,
     "state": "open",
     "title": "parse_klog always parse the timestamp as UTC timezone",
-    "updated_at": "2023-10-11T14:26:49Z",
+    "updated_at": "2026-06-16T13:10:20Z",
     "user": {
       "login": "Leo1003"
     }
@@ -6770,12 +6808,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: is_json",
+        "id": 6135003163853857899,
+        "name": "stdlib: is_json"
       }
     ],
     "number": 501,
     "state": "open",
     "title": "Make is_json more permissive",
-    "updated_at": "2023-10-12T14:57:19Z",
+    "updated_at": "2026-06-16T13:10:18Z",
     "user": {
       "login": "saliagadotcom"
     }
@@ -6805,12 +6849,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 4588059261544733975,
+        "name": "stdlib: parse_timestamp"
       }
     ],
     "number": 503,
     "state": "open",
     "title": "Add formats parameter to parse_timestamp",
-    "updated_at": "2023-10-11T21:47:45Z",
+    "updated_at": "2026-06-16T13:10:16Z",
     "user": {
       "login": "mattnthat"
     }
@@ -8204,12 +8254,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_json",
+        "id": 6341163032176729316,
+        "name": "stdlib: parse_json"
       }
     ],
     "number": 571,
     "state": "open",
     "title": "parse_json: Provide opt-in configuration options for lossless number conversion ",
-    "updated_at": "2023-11-21T21:45:27Z",
+    "updated_at": "2026-06-16T13:10:14Z",
     "user": {
       "login": "pront"
     }

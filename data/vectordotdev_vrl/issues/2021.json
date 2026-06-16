@@ -124,12 +124,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_grok",
+        "id": 2407447042232504134,
+        "name": "stdlib: parse_grok"
       }
     ],
     "number": 89,
     "state": "open",
     "title": "The `parse_grok` function should accept aliases (helper rules) defined in a file",
-    "updated_at": "2023-03-28T13:49:25Z",
+    "updated_at": "2026-06-16T13:11:18Z",
     "user": {
       "login": "binarylogic"
     }
@@ -268,12 +274,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: flatten",
+        "id": 5930686372604670146,
+        "name": "stdlib: flatten"
       }
     ],
     "number": 95,
     "state": "open",
     "title": "Add ability to completely flatten objects via `flatten`",
-    "updated_at": "2025-02-01T20:33:07Z",
+    "updated_at": "2026-06-16T13:11:20Z",
     "user": {
       "login": "jszwedko"
     }
@@ -343,12 +355,18 @@
         "description": "Changes to the compiler",
         "id": 8770318842022581189,
         "name": "vrl: compiler"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: del",
+        "id": 1433633256269262082,
+        "name": "stdlib: del"
       }
     ],
     "number": 98,
     "state": "open",
     "title": "Issue with `del` inside chained functions",
-    "updated_at": "2026-06-01T14:04:58Z",
+    "updated_at": "2026-06-16T13:11:23Z",
     "user": {
       "login": "spencergilbert"
     }
@@ -487,12 +505,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 6533433125993601394,
+        "name": "stdlib: unnest"
       }
     ],
     "number": 104,
     "state": "open",
     "title": "`unnest` should unnest one level deeper",
-    "updated_at": "2023-03-28T14:02:10Z",
+    "updated_at": "2026-06-16T13:11:26Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -568,12 +592,24 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 2223534336356115461,
+        "name": "stdlib: parse_key_value"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encode_key_value",
+        "id": 3515033063252261379,
+        "name": "stdlib: encode_key_value"
       }
     ],
     "number": 107,
     "state": "open",
     "title": "improve `parse_key_value` escaping management & align it with `encode_key_value`",
-    "updated_at": "2023-03-28T14:09:00Z",
+    "updated_at": "2026-06-16T13:11:28Z",
     "user": {
       "login": "prognant"
     }
@@ -787,12 +823,18 @@
         "description": "Changes to the type system",
         "id": 4415283568476322878,
         "name": "vrl: typedef"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_regex",
+        "id": 2227565278763405655,
+        "name": "stdlib: parse_regex"
       }
     ],
     "number": 116,
     "state": "open",
     "title": "fields extracted using parse_regex imply incorrect type definitions when parse_regex fails",
-    "updated_at": "2026-06-01T14:04:44Z",
+    "updated_at": "2026-06-16T13:11:30Z",
     "user": {
       "login": "jerome-kleinen-kbc-be"
     }
@@ -862,12 +904,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_logfmt",
+        "id": 1756612506343068664,
+        "name": "stdlib: parse_logfmt"
       }
     ],
     "number": 119,
     "state": "open",
     "title": "`parse_logfmt` unflattening",
-    "updated_at": "2023-03-28T14:18:51Z",
+    "updated_at": "2026-06-16T13:11:32Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1018,12 +1066,24 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 2223534336356115461,
+        "name": "stdlib: parse_key_value"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_logfmt",
+        "id": 1756612506343068664,
+        "name": "stdlib: parse_logfmt"
       }
     ],
     "number": 125,
     "state": "open",
     "title": "Allow `'`s around values in `parse_key_value` / `parse_logfmt`",
-    "updated_at": "2023-03-28T14:20:54Z",
+    "updated_at": "2026-06-16T13:11:35Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1072,12 +1132,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 4588059261544733975,
+        "name": "stdlib: parse_timestamp"
       }
     ],
     "number": 127,
     "state": "open",
     "title": "Allow specification of multiple timestamp formats to parse_timestamp",
-    "updated_at": "2025-12-05T07:38:56Z",
+    "updated_at": "2026-06-16T13:11:37Z",
     "user": {
       "login": "rabbitstack"
     }
@@ -1153,12 +1219,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_csv",
+        "id": 8253684283393347764,
+        "name": "stdlib: parse_csv"
       }
     ],
     "number": 130,
     "state": "open",
     "title": "Add headers for `parse_csv`",
-    "updated_at": "2026-06-01T14:16:19Z",
+    "updated_at": "2026-06-16T13:11:39Z",
     "user": {
       "login": "vladimir-dd"
     }
@@ -1255,12 +1327,18 @@
         "description": "A value-adding code change that enhances its existing functionality",
         "id": 2640581176510094373,
         "name": "type: enhancement"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: now",
+        "id": 7398344453312870094,
+        "name": "stdlib: now"
       }
     ],
     "number": 134,
     "state": "open",
     "title": "Benchmark `now` and `uuidv4` vrl functions",
-    "updated_at": "2023-03-28T14:30:06Z",
+    "updated_at": "2026-06-16T13:11:41Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1282,12 +1360,24 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: del",
+        "id": 1433633256269262082,
+        "name": "stdlib: del"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: exists",
+        "id": 3133812636300642122,
+        "name": "stdlib: exists"
       }
     ],
     "number": 135,
     "state": "open",
     "title": "Benchmark `del` and `exists` vrl functions",
-    "updated_at": "2023-03-28T14:30:59Z",
+    "updated_at": "2026-06-16T13:11:44Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1414,12 +1504,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: to_syslog_severity",
+        "id": 251311056782287591,
+        "name": "stdlib: to_syslog_severity"
       }
     ],
     "number": 141,
     "state": "open",
     "title": "rename `to_syslog_severity` to `parse_syslog_severity`",
-    "updated_at": "2023-03-28T14:35:40Z",
+    "updated_at": "2026-06-16T13:11:46Z",
     "user": {
       "login": "JeanMertz"
     }

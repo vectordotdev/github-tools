@@ -128,12 +128,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: reverse_dns",
+        "id": 7820855268562383788,
+        "name": "stdlib: reverse_dns"
       }
     ],
     "number": 15,
     "state": "open",
     "title": "[Web Playground] Make `reverse_dns()` function wasm compatible",
-    "updated_at": "2023-03-28T13:10:37Z",
+    "updated_at": "2026-06-16T13:10:33Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -182,12 +188,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_groks",
+        "id": 4924712345985418412,
+        "name": "stdlib: parse_groks"
       }
     ],
     "number": 17,
     "state": "open",
     "title": "[Web Playground] Make parse_groks() function wasm compatible",
-    "updated_at": "2023-03-28T13:10:39Z",
+    "updated_at": "2026-06-16T13:10:35Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -209,12 +221,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: get_hostname",
+        "id": 1020743247364618598,
+        "name": "stdlib: get_hostname"
       }
     ],
     "number": 18,
     "state": "open",
     "title": "[Web Playground] Make get_hostname() function wasm compatible ",
-    "updated_at": "2023-03-28T13:10:40Z",
+    "updated_at": "2026-06-16T13:10:38Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -263,12 +281,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: log",
+        "id": 5717761174283051246,
+        "name": "stdlib: log"
       }
     ],
     "number": 20,
     "state": "open",
     "title": "[Web Playground] Make `log()` function wasm compatible",
-    "updated_at": "2023-03-28T13:10:41Z",
+    "updated_at": "2026-06-16T13:10:40Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -409,12 +433,18 @@
         "description": "Changes to the type system",
         "id": 4415283568476322878,
         "name": "vrl: typedef"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: map_values",
+        "id": 4935369758173653251,
+        "name": "stdlib: map_values"
       }
     ],
     "number": 27,
     "state": "open",
     "title": "`map_values` function closure argument type def can be invalid when using `recursive: true`",
-    "updated_at": "2026-06-01T14:06:16Z",
+    "updated_at": "2026-06-16T13:10:45Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -430,12 +460,18 @@
         "description": "Changes to the compiler",
         "id": 8770318842022581189,
         "name": "vrl: compiler"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: map_values",
+        "id": 4935369758173653251,
+        "name": "stdlib: map_values"
       }
     ],
     "number": 28,
     "state": "open",
     "title": "`map_values` can infinitely recurse / stack overflow",
-    "updated_at": "2026-06-01T14:06:13Z",
+    "updated_at": "2026-06-16T13:10:47Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -760,12 +796,18 @@
         "description": "Changes to the type system",
         "id": 4415283568476322878,
         "name": "vrl: typedef"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: merge",
+        "id": 7388908726678991608,
+        "name": "stdlib: merge"
       }
     ],
     "number": 42,
     "state": "open",
     "title": "Typedef for `merge` vrl function with deep = true is invalid",
-    "updated_at": "2026-06-01T14:05:51Z",
+    "updated_at": "2026-06-16T13:10:52Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -910,12 +952,18 @@
         "description": "Changes to the type system",
         "id": 4415283568476322878,
         "name": "vrl: typedef"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: del",
+        "id": 1433633256269262082,
+        "name": "stdlib: del"
       }
     ],
     "number": 48,
     "state": "open",
     "title": "Improve typedef of `del` when deleting object fields",
-    "updated_at": "2023-03-28T13:24:26Z",
+    "updated_at": "2026-06-16T13:10:54Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -1000,12 +1048,18 @@
         "description": "Changes to the type system",
         "id": 4415283568476322878,
         "name": "vrl: typedef"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: type_def",
+        "id": 5803595434562397296,
+        "name": "stdlib: type_def"
       }
     ],
     "number": 52,
     "state": "open",
     "title": "Add type_def checking to existing VRL tests",
-    "updated_at": "2026-06-01T14:17:00Z",
+    "updated_at": "2026-06-16T13:10:57Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -1021,12 +1075,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: zip",
+        "id": 8700781674114859778,
+        "name": "stdlib: zip"
       }
     ],
     "number": 53,
     "state": "open",
     "title": "Add `zip` function to VRL",
-    "updated_at": "2026-06-01T14:16:57Z",
+    "updated_at": "2026-06-16T13:10:59Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1117,12 +1177,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_logfmt",
+        "id": 1756612506343068664,
+        "name": "stdlib: parse_logfmt"
       }
     ],
     "number": 57,
     "state": "open",
     "title": "VRL: `parse_logfmt` seems to actually be infallible",
-    "updated_at": "2026-06-01T14:05:37Z",
+    "updated_at": "2026-06-16T13:11:02Z",
     "user": {
       "login": "spencergilbert"
     }
@@ -1270,12 +1336,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_user_agent",
+        "id": 2471982089171752361,
+        "name": "stdlib: parse_user_agent"
       }
     ],
     "number": 64,
     "state": "open",
     "title": "Drop the `mode` argument for `parse_user_agent` function",
-    "updated_at": "2023-03-28T13:36:34Z",
+    "updated_at": "2026-06-16T13:11:04Z",
     "user": {
       "login": "binarylogic"
     }
@@ -1297,12 +1369,24 @@
         "description": "A code change that does not add user value",
         "id": 247640269796377022,
         "name": "type: tech debt"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_grok",
+        "id": 2407447042232504134,
+        "name": "stdlib: parse_grok"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_groks",
+        "id": 4924712345985418412,
+        "name": "stdlib: parse_groks"
       }
     ],
     "number": 65,
     "state": "open",
     "title": "Switch `parse_grok` to call `parse_groks`",
-    "updated_at": "2023-03-28T13:36:42Z",
+    "updated_at": "2026-06-16T13:11:06Z",
     "user": {
       "login": "jszwedko"
     }
@@ -1387,12 +1471,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: truncate",
+        "id": 8067142697557302308,
+        "name": "stdlib: truncate"
       }
     ],
     "number": 69,
     "state": "open",
     "title": "vrl: `truncate()` inconsistency: operates on UTF-8 characters instead of bytes",
-    "updated_at": "2026-06-01T14:05:27Z",
+    "updated_at": "2026-06-16T13:11:09Z",
     "user": {
       "login": "hhromic"
     }
@@ -1483,12 +1573,24 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_grok",
+        "id": 2407447042232504134,
+        "name": "stdlib: parse_grok"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_groks",
+        "id": 4924712345985418412,
+        "name": "stdlib: parse_groks"
       }
     ],
     "number": 73,
     "state": "open",
     "title": "`parse_grok` VRL function ignores nonmatching characters at the start of the string, `parse_groks` errors",
-    "updated_at": "2026-06-01T14:05:22Z",
+    "updated_at": "2026-06-16T13:11:11Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -1621,12 +1723,18 @@
         "description": "Changes to the type system",
         "id": 4415283568476322878,
         "name": "vrl: typedef"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: del",
+        "id": 1433633256269262082,
+        "name": "stdlib: del"
       }
     ],
     "number": 79,
     "state": "open",
     "title": "VRL's `del` function should update type definitions for non-external paths",
-    "updated_at": "2026-06-01T14:05:08Z",
+    "updated_at": "2026-06-16T13:11:15Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -1926,12 +2034,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_linux_authorization",
+        "id": 4929531603522291862,
+        "name": "stdlib: parse_linux_authorization"
       }
     ],
     "number": 270,
     "state": "open",
     "title": "Add an optional parameter to the parse_linux_authorization function to specify a timezone",
-    "updated_at": "2026-06-01T14:17:22Z",
+    "updated_at": "2026-06-16T13:10:42Z",
     "user": {
       "login": "Qazeer"
     }
@@ -1947,12 +2061,24 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 2223534336356115461,
+        "name": "stdlib: parse_key_value"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encode_key_value",
+        "id": 3515033063252261379,
+        "name": "stdlib: encode_key_value"
       }
     ],
     "number": 271,
     "state": "open",
     "title": "improve parse_key_value to support nesting , match with encode_key_value",
-    "updated_at": "2026-06-01T14:17:16Z",
+    "updated_at": "2026-06-16T13:10:50Z",
     "user": {
       "login": "ccmsi"
     }
@@ -1968,12 +2094,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_url",
+        "id": 1676637067217504781,
+        "name": "stdlib: parse_url"
       }
     ],
     "number": 376,
     "state": "open",
     "title": "parse_url doesn't support duplicated query parameters",
-    "updated_at": "2026-06-01T14:05:11Z",
+    "updated_at": "2026-06-16T13:11:13Z",
     "user": {
       "login": "anas-aso"
     }
