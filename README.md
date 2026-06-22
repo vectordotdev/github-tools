@@ -7,21 +7,20 @@ Tools for extracting data from GitHub, storing it in a local SQLite database, qu
 
 # Trends
 
-Per-repo trend pages with all charts:
+Per-repo interactive dashboards (GitHub Pages):
 
-- [Vector](trends/vector.md)
-- [VRL](trends/vrl.md)
-- [Quickwit](trends/quickwit.md)
-- [Tantivy](trends/tantivy.md)
+- [Vector](https://vectordotdev.github.io/github-tools/vector/)
+- [VRL](https://vectordotdev.github.io/github-tools/vrl/)
+- [Quickwit](https://vectordotdev.github.io/github-tools/quickwit/)
+- [Tantivy](https://vectordotdev.github.io/github-tools/tantivy/)
 
 # Directory Layout
 
 ```
 src/             # Rust source (single binary: github-tools)
-scripts/util/    # Python: plot.py (charts), json_to_csv.py (utility)
-data/            # Committed snapshots: JSON inputs and PNG charts
+docs/            # GitHub Pages — interactive HTML dashboards (ECharts)
+data/            # Committed snapshots: JSON inputs
   {owner}_{repo}/issues/  # Issues/PRs JSON split by year (2024.json, 2025.json, ...)
-  images/        # Committed PNG charts (written directly by plot.py)
 out/             # Gitignored — all generated and local-only files
   historical/    # Raw JSON fetched from GitHub API
   db/            # SQLite databases
@@ -68,9 +67,10 @@ Fetch:
   fetch-labels       Fetch all labels for a repository
 
 Pipeline:
-  generate-all       Build DB + summaries for all repos (workflow)
+  generate-all       Build DB + summaries + charts for all repos (workflow)
   build-db           Load issues JSON into SQLite database
   generate-summaries Generate CSV summaries from SQLite database
+  generate-charts    Render HTML dashboards into docs/ from out/summaries/
 
 Purge:
   purge-all          Run all purge operations (workflow)
@@ -106,14 +106,10 @@ Writes to `out/historical/`. The fetched JSON must be split by year and promoted
 ```shell
 for repo in vectordotdev/vector vectordotdev/vrl quickwit-oss/quickwit quickwit-oss/tantivy; do
   github-tools generate-all --repo "$repo"
-  python -m scripts.util.plot \
-    --repo "$repo" --input-dir out/summaries \
-    --window 2y \
-    --exclude-labels "no-changelog,meta: awaiting author"
 done
 ```
 
-Charts are written directly into `data/images/`. Review the diff before committing.
+`generate-all` builds the SQLite DB, generates CSVs into `out/summaries/`, and renders interactive HTML dashboards into `docs/`. Review the diff in `docs/` before committing.
 
 ## 3. (Optional) Purge stale container images
 
@@ -143,4 +139,6 @@ op run --env-file secrets.env -- github-tools automated-review-stats \
 Outputs:
 - Console summary (like rate, dislike rate)
 - `out/automated-review-stats/{owner}_{repo}.csv` — per-comment table with URL and reaction (gitignored)
-- `trends/{repo}.md` — two summary tables updated in place via `AUTO:` markers
+- `out/summaries/{owner}_{repo}_automated_review_stats.json` — stats snapshot picked up by `generate-all`
+
+Re-run `generate-all` after collecting stats to update the dashboard with the AI review chart.

@@ -3,7 +3,7 @@ use clap::{Parser, Subcommand};
 use github_tools::{
     commands::{
         build_db, close_old_prs, compact, delete_stale_branches, fetch_automated_review_stats,
-        fetch_discussions, fetch_issues, fetch_labels, generate_summaries, purge,
+        fetch_discussions, fetch_issues, fetch_labels, generate_charts, generate_summaries, purge,
         remove_legacy_label, workflows,
     },
     config::{Config, Repo},
@@ -77,7 +77,18 @@ enum Command {
     GenerateAll {
         #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
         repo: String,
-        #[arg(long, help = "Only include data from this YYYY-MM date forward (passed to plot.py). Defaults to 12 months ago.")]
+        #[arg(long, help = "Only include data from this YYYY-MM date forward. Defaults to 12 months ago.")]
+        start: Option<String>,
+    },
+    /// Generate HTML charts from CSV summaries
+    GenerateCharts {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
+        #[arg(long, default_value = "out/summaries")]
+        input_dir: String,
+        #[arg(long, default_value = "docs")]
+        output_dir: String,
+        #[arg(long, help = "Only include data from this YYYY-MM date forward")]
         start: Option<String>,
     },
     /// Run all purge operations (replaces purge_all.sh)
@@ -220,6 +231,9 @@ fn main() -> Result<()> {
         Command::Compact { dir } => compact::run(&dir),
         Command::FetchAll { repo, since } => workflows::fetch_all(&repo, since.as_deref()),
         Command::GenerateAll { repo, start } => workflows::generate_all(&repo, start.as_deref()),
+        Command::GenerateCharts { repo, input_dir, output_dir, start } => {
+            generate_charts::run(&input_dir, &repo, &output_dir, start.as_deref())
+        }
         Command::PurgeAll { older_than, dry_run, yes } => {
             workflows::purge_all(older_than, dry_run, yes)
         }
