@@ -32,13 +32,19 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_nginx_log",
+        "id": 3283702677068885973,
+        "name": "stdlib: parse_nginx_log"
       }
     ],
     "number": 1202,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): Add `main` log format to `parse_nginx_log` function",
-    "updated_at": "2025-01-03T18:18:21Z",
+    "updated_at": "2026-06-16T13:24:07Z",
     "user": {
       "login": "virtualtam"
     }
@@ -55,13 +61,25 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": null,
+        "id": 2148306289676808345,
+        "name": "stdlib: parse_klog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_linux_authorization",
+        "id": 4929531603522291862,
+        "name": "stdlib: parse_linux_authorization"
       }
     ],
     "number": 1203,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): bump year in failing examples",
-    "updated_at": "2025-01-02T19:16:05Z",
+    "updated_at": "2026-06-16T13:30:29Z",
     "user": {
       "login": "pront"
     }
@@ -118,12 +136,19 @@
     "draft": false,
     "id": 2260473907,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 4588059261544733975,
+        "name": "stdlib: parse_timestamp"
+      }
+    ],
     "number": 1207,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): Add `timezone` option for `parse_timestamp` function",
-    "updated_at": "2025-01-06T16:23:34Z",
+    "updated_at": "2026-06-16T13:24:04Z",
     "user": {
       "login": "titaneric"
     }
@@ -257,7 +282,7 @@
         "name": "vrl: compiler"
       },
       {
-        "color": "E7E87A",
+        "color": "C2E0C6",
         "description": "Anything related to the expression checking phase which happens after source compilation.",
         "id": 5537775539463952263,
         "name": "vrl: expression checker"
@@ -306,7 +331,7 @@
         "name": "no-changelog"
       },
       {
-        "color": "E7E87A",
+        "color": "C2E0C6",
         "description": "Anything related to the expression checking phase which happens after source compilation.",
         "id": 5537775539463952263,
         "name": "vrl: expression checker"
@@ -406,12 +431,19 @@
     "draft": false,
     "id": 2285746047,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: to_syslog_facility_code",
+        "id": 8300973917676154046,
+        "name": "stdlib: to_syslog_facility_code"
+      }
+    ],
     "number": 1221,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): add `to_syslog_facility_code` function",
-    "updated_at": "2025-01-27T16:22:46Z",
+    "updated_at": "2026-06-16T13:24:01Z",
     "user": {
       "login": "simplepad"
     }
@@ -451,12 +483,19 @@
     "draft": false,
     "id": 2290379079,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": null,
+        "id": 8623086532424964028,
+        "name": "stdlib: parse_duration"
+      }
+    ],
     "number": 1223,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): human time parse duration error for decimals",
-    "updated_at": "2025-01-27T18:26:28Z",
+    "updated_at": "2026-06-16T13:30:26Z",
     "user": {
       "login": "sainad2222"
     }
@@ -757,13 +796,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: to_syslog_facility_code",
+        "id": 8300973917676154046,
+        "name": "stdlib: to_syslog_facility_code"
       }
     ],
     "number": 1235,
     "pull_request": {},
     "state": "closed",
     "title": "fix(dev): fix `to_syslog_facility_code` example",
-    "updated_at": "2025-01-27T18:04:01Z",
+    "updated_at": "2026-06-16T13:23:58Z",
     "user": {
       "login": "pront"
     }
@@ -849,13 +894,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: starts_with",
+        "id": 8501324306371375866,
+        "name": "stdlib: starts_with"
       }
     ],
     "number": 1239,
     "pull_request": {},
     "state": "closed",
     "title": "chore(dev): clippy auto-fixes",
-    "updated_at": "2025-01-29T19:18:42Z",
+    "updated_at": "2026-06-16T13:30:24Z",
     "user": {
       "login": "pront"
     }
@@ -917,12 +968,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_json",
+        "id": 6341163032176729316,
+        "name": "stdlib: parse_json"
       }
     ],
     "number": 1244,
     "state": "open",
     "title": "parse_json in VRL doesn't support json-like strings (with single quotes)",
-    "updated_at": "2026-06-01T14:08:19Z",
+    "updated_at": "2026-06-16T13:09:41Z",
     "user": {
       "login": "nomalord"
     }
@@ -933,12 +990,19 @@
     "draft": false,
     "id": 2309960632,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: slice",
+        "id": 4365621895688481017,
+        "name": "stdlib: slice"
+      }
+    ],
     "number": 1246,
     "pull_request": {},
     "state": "closed",
     "title": "fix!(slice): array type def",
-    "updated_at": "2025-02-05T19:13:28Z",
+    "updated_at": "2026-06-16T13:30:21Z",
     "user": {
       "login": "pront"
     }
@@ -965,12 +1029,19 @@
     "draft": false,
     "id": 2311161465,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: ip_cidr_contains",
+        "id": 4997062788792776140,
+        "name": "stdlib: ip_cidr_contains"
+      }
+    ],
     "number": 1248,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): ip_cidr_contains now accepts array of CIDR",
-    "updated_at": "2025-02-10T16:01:43Z",
+    "updated_at": "2026-06-16T13:23:56Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -1154,13 +1225,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: screamingsnakecase",
+        "id": 6435641434878277154,
+        "name": "stdlib: screamingsnakecase"
       }
     ],
     "number": 1255,
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): bump convert_case from 0.6.0 to 0.7.1",
-    "updated_at": "2025-02-03T17:07:25Z",
+    "updated_at": "2026-06-16T13:30:18Z",
     "user": {
       "login": "dependabot"
     }
@@ -1199,12 +1276,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: object_from_array",
+        "id": 3844552141170908238,
+        "name": "stdlib: object_from_array"
       }
     ],
     "number": 1257,
     "state": "open",
     "title": "Unexpected behaviour of the object_from_array VRL fuction",
-    "updated_at": "2026-06-01T14:08:20Z",
+    "updated_at": "2026-06-16T13:09:39Z",
     "user": {
       "login": "usa4ev"
     }
@@ -1447,12 +1530,19 @@
     "draft": false,
     "id": 2331557517,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: shannon_entropy",
+        "id": 8361837680355264809,
+        "name": "stdlib: shannon_entropy"
+      }
+    ],
     "number": 1267,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): add `shannon_entropy` function",
-    "updated_at": "2025-03-03T09:35:08Z",
+    "updated_at": "2026-06-16T13:23:53Z",
     "user": {
       "login": "esensar"
     }
@@ -1672,12 +1762,19 @@
     "draft": false,
     "id": 2345265779,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_nginx_log",
+        "id": 3283702677068885973,
+        "name": "stdlib: parse_nginx_log"
+      }
+    ],
     "number": 1280,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): Parsing nginx error log message with comma",
-    "updated_at": "2025-02-19T20:46:55Z",
+    "updated_at": "2026-06-16T13:30:16Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -1763,13 +1860,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: is_nullish",
+        "id": 1762950274698118553,
+        "name": "stdlib: is_nullish"
       }
     ],
     "number": 1284,
     "pull_request": {},
     "state": "closed",
     "title": "performance(stdlib): Optimise is_nullish",
-    "updated_at": "2025-02-24T14:41:44Z",
+    "updated_at": "2026-06-16T13:23:51Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -1780,12 +1883,19 @@
     "draft": false,
     "id": 2350508397,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_nginx_log",
+        "id": 3283702677068885973,
+        "name": "stdlib: parse_nginx_log"
+      }
+    ],
     "number": 1285,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): Fix parsing nginx error log delaying request",
-    "updated_at": "2025-02-24T14:47:38Z",
+    "updated_at": "2026-06-16T13:30:13Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -1796,12 +1906,19 @@
     "draft": false,
     "id": 2352302907,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: ip_cidr_contains",
+        "id": 4997062788792776140,
+        "name": "stdlib: ip_cidr_contains"
+      }
+    ],
     "number": 1286,
     "pull_request": {},
     "state": "closed",
     "title": "performance(stdlib): Optimise ip_cidr_contains when cidr is constant",
-    "updated_at": "2025-02-27T15:55:32Z",
+    "updated_at": "2026-06-16T13:23:48Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -2082,13 +2199,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_user_agent",
+        "id": 2471982089171752361,
+        "name": "stdlib: parse_user_agent"
       }
     ],
     "number": 1299,
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(stdlib): Update user agent data for parse_user_agent",
-    "updated_at": "2025-02-25T20:28:34Z",
+    "updated_at": "2026-06-16T13:23:45Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -2122,12 +2245,25 @@
     "draft": false,
     "id": 2362240931,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encode_gzip",
+        "id": 1620284121979562873,
+        "name": "stdlib: encode_gzip"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encode_zlib",
+        "id": 5020142592498988925,
+        "name": "stdlib: encode_zlib"
+      }
+    ],
     "number": 1301,
     "pull_request": {},
     "state": "closed",
     "title": "performance(stdlib): Use zlib-rs for much faster zlib decoding/encoding",
-    "updated_at": "2025-03-31T15:27:31Z",
+    "updated_at": "2026-06-16T13:30:10Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -2159,12 +2295,19 @@
     "draft": false,
     "id": 2365637866,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": null,
+        "id": 8429761736599515115,
+        "name": "stdlib: encode_proto"
+      }
+    ],
     "number": 1304,
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(encode_proto): When encoding values into string fields, attempt to convert them automatically",
-    "updated_at": "2025-03-03T20:28:19Z",
+    "updated_at": "2026-06-16T13:23:42Z",
     "user": {
       "login": "roykim98"
     }
@@ -2175,12 +2318,19 @@
     "draft": true,
     "id": 2366297769,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: del",
+        "id": 1433633256269262082,
+        "name": "stdlib: del"
+      }
+    ],
     "number": 1305,
     "pull_request": {},
     "state": "closed",
     "title": "[DRAFT] Performance - Remove unneeded value clones",
-    "updated_at": "2025-03-17T16:59:45Z",
+    "updated_at": "2026-06-16T13:30:07Z",
     "user": {
       "login": "tontinton"
     }
@@ -2355,12 +2505,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 2223534336356115461,
+        "name": "stdlib: parse_key_value"
       }
     ],
     "number": 1313,
     "state": "open",
     "title": "Add option for VRL function parse_key_value to specify resulting key case",
-    "updated_at": "2026-06-01T14:19:17Z",
+    "updated_at": "2026-06-16T13:09:36Z",
     "user": {
       "login": "alexeynl"
     }
@@ -2439,13 +2595,19 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 7173230675418129594,
         "name": "meta: awaiting author"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_user_agent",
+        "id": 2471982089171752361,
+        "name": "stdlib: parse_user_agent"
       }
     ],
     "number": 1317,
     "pull_request": {},
     "state": "closed",
     "title": "performance(stdlib): Switch to much faster ua-parser",
-    "updated_at": "2025-04-02T14:02:01Z",
+    "updated_at": "2026-06-16T13:30:04Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -2512,13 +2674,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: ip_cidr_contains",
+        "id": 4997062788792776140,
+        "name": "stdlib: ip_cidr_contains"
       }
     ],
     "number": 1320,
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): use  `cidr` crate directly",
-    "updated_at": "2025-03-05T18:49:29Z",
+    "updated_at": "2026-06-16T13:30:01Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -2535,13 +2703,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: ip_subnet",
+        "id": 4876070640004488836,
+        "name": "stdlib: ip_subnet"
       }
     ],
     "number": 1321,
     "pull_request": {},
     "state": "closed",
     "title": "chore(stdlib): Simplify ip_subnet function code",
-    "updated_at": "2025-03-05T18:50:37Z",
+    "updated_at": "2026-06-16T13:23:40Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -2566,12 +2740,19 @@
     "draft": false,
     "id": 2377929341,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: snakecase",
+        "id": 7126428601189056673,
+        "name": "stdlib: snakecase"
+      }
+    ],
     "number": 1324,
     "pull_request": {},
     "state": "closed",
     "title": "feat(snakecase): add support for excluded boundaries",
-    "updated_at": "2025-03-10T18:26:07Z",
+    "updated_at": "2026-06-16T13:23:37Z",
     "user": {
       "login": "brittonhayes"
     }
@@ -2800,13 +2981,19 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 7173230675418129594,
         "name": "meta: awaiting author"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: match_datadog_query",
+        "id": 4867010954695849950,
+        "name": "stdlib: match_datadog_query"
       }
     ],
     "number": 1334,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(match_datadog_query): add is_phrase flag to equals method",
-    "updated_at": "2025-06-24T13:27:49Z",
+    "updated_at": "2026-06-16T13:15:06Z",
     "user": {
       "login": "PSeitz"
     }
@@ -2884,12 +3071,25 @@
     "draft": false,
     "id": 2393127957,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: decode_lz4",
+        "id": 532201067922757951,
+        "name": "stdlib: decode_lz4"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encode_lz4",
+        "id": 2475950407493336896,
+        "name": "stdlib: encode_lz4"
+      }
+    ],
     "number": 1339,
     "pull_request": {},
     "state": "closed",
     "title": "feat(lz4 encoder/decoder): add support for Lz4 encode and decode",
-    "updated_at": "2025-04-01T18:55:53Z",
+    "updated_at": "2026-06-16T13:29:58Z",
     "user": {
       "login": "jimmystewpot"
     }
@@ -3132,12 +3332,25 @@
     "draft": false,
     "id": 2403415239,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "DBE0E9",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta: awaiting author"
+      },
+      {
+        "color": "030F33",
+        "description": "",
+        "id": 709158974876078720,
+        "name": "domain: performance"
+      }
+    ],
     "number": 1349,
     "pull_request": {},
     "state": "open",
     "title": "performance(runtime)!: Copy-on-Write value optimization",
-    "updated_at": "2025-03-29T13:16:53Z",
+    "updated_at": "2026-06-12T14:25:42Z",
     "user": {
       "login": "Zettroke"
     }
@@ -3199,12 +3412,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": null,
+        "id": 3120541360500387790,
+        "name": "stdlib: parse_cef"
       }
     ],
     "number": 1352,
     "state": "open",
     "title": "parse_cef fails on logs with complex quoted values",
-    "updated_at": "2026-06-01T14:08:24Z",
+    "updated_at": "2026-06-16T13:09:34Z",
     "user": {
       "login": "unitednf24"
     }
@@ -3401,13 +3620,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: http_request",
+        "id": 1039753914432071142,
+        "name": "stdlib: http_request"
       }
     ],
     "number": 1360,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): add `http_request` function",
-    "updated_at": "2025-08-20T18:02:52Z",
+    "updated_at": "2026-06-16T13:23:34Z",
     "user": {
       "login": "benjamin-awd"
     }
@@ -3423,12 +3648,18 @@
         "description": "Changes to the compiler",
         "id": 8770318842022581189,
         "name": "vrl: compiler"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: format_int",
+        "id": 8387631785112418440,
+        "name": "stdlib: format_int"
       }
     ],
     "number": 1361,
     "state": "open",
     "title": "`format_int` bad output type",
-    "updated_at": "2026-06-01T14:08:25Z",
+    "updated_at": "2026-06-16T13:09:32Z",
     "user": {
       "login": "JTKU"
     }
@@ -3561,13 +3792,25 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encode_gzip",
+        "id": 1620284121979562873,
+        "name": "stdlib: encode_gzip"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encode_zlib",
+        "id": 5020142592498988925,
+        "name": "stdlib: encode_zlib"
       }
     ],
     "number": 1366,
     "pull_request": {},
     "state": "closed",
     "title": "chore(stdlib): Revert use zlib-rs for much faster zlib decoding/encoding",
-    "updated_at": "2025-04-01T20:59:55Z",
+    "updated_at": "2026-06-16T13:29:56Z",
     "user": {
       "login": "pront"
     }
@@ -3578,12 +3821,19 @@
     "draft": false,
     "id": 2433381073,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: decode_lz4",
+        "id": 532201067922757951,
+        "name": "stdlib: decode_lz4"
+      }
+    ],
     "number": 1367,
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(lz4_decode) add lz4_decode compression type detection",
-    "updated_at": "2025-06-10T14:32:01Z",
+    "updated_at": "2026-06-16T13:29:53Z",
     "user": {
       "login": "jimmystewpot"
     }
@@ -3594,12 +3844,25 @@
     "draft": false,
     "id": 2433432540,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encode_gzip",
+        "id": 1620284121979562873,
+        "name": "stdlib: encode_gzip"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encode_zlib",
+        "id": 5020142592498988925,
+        "name": "stdlib: encode_zlib"
+      }
+    ],
     "number": 1368,
     "pull_request": {},
     "state": "closed",
     "title": "performance(stdlib): Use zlib-rs for much faster zlib decoding/encoding",
-    "updated_at": "2025-04-08T17:01:28Z",
+    "updated_at": "2026-06-16T13:29:50Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -3633,12 +3896,19 @@
     "draft": false,
     "id": 2440858635,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_json",
+        "id": 6341163032176729316,
+        "name": "stdlib: parse_json"
+      }
+    ],
     "number": 1370,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): parse_json fails on utf-8 with BOM",
-    "updated_at": "2025-04-08T15:03:41Z",
+    "updated_at": "2026-06-16T13:23:31Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -3847,13 +4117,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 2223534336356115461,
+        "name": "stdlib: parse_key_value"
       }
     ],
     "number": 1380,
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(file source):make parse_key_value public",
-    "updated_at": "2025-04-14T13:56:41Z",
+    "updated_at": "2026-06-16T13:23:29Z",
     "user": {
       "login": "ashishkf"
     }
@@ -3869,12 +4145,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: exists",
+        "id": 3133812636300642122,
+        "name": "stdlib: exists"
       }
     ],
     "number": 1382,
     "state": "open",
     "title": "Add a dynamic variant of the `exists` function",
-    "updated_at": "2026-06-01T14:19:25Z",
+    "updated_at": "2026-06-16T13:09:30Z",
     "user": {
       "login": "simplepad"
     }
@@ -3962,13 +4244,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 4588059261544733975,
+        "name": "stdlib: parse_timestamp"
       }
     ],
     "number": 1388,
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(conversion): Improve timestamp conversion error message",
-    "updated_at": "2025-04-29T13:24:15Z",
+    "updated_at": "2026-06-16T13:29:47Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -4211,13 +4499,25 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": null,
+        "id": 8429761736599515115,
+        "name": "stdlib: encode_proto"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_proto",
+        "id": 1470102011077232971,
+        "name": "stdlib: parse_proto"
       }
     ],
     "number": 1398,
     "pull_request": {},
     "state": "closed",
     "title": "feat(ci): introduce Vector `cargo check` workflow",
-    "updated_at": "2025-05-08T17:35:39Z",
+    "updated_at": "2026-06-16T13:29:44Z",
     "user": {
       "login": "pront"
     }
@@ -4310,11 +4610,18 @@
     "created_at": "2025-05-21T07:32:44Z",
     "id": 3084994001,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: redact",
+        "id": 1086853726375524498,
+        "name": "stdlib: redact"
+      }
+    ],
     "number": 1405,
     "state": "open",
     "title": "Add redact() hashing with automatically rotated salt",
-    "updated_at": "2026-06-01T14:19:29Z",
+    "updated_at": "2026-06-16T13:09:28Z",
     "user": {
       "login": "nemobis"
     }
@@ -4331,13 +4638,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: dns_lookup",
+        "id": 6172985617716978179,
+        "name": "stdlib: dns_lookup"
       }
     ],
     "number": 1407,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): use vector tokio runtime instead of using a worker thread",
-    "updated_at": "2025-06-10T14:33:24Z",
+    "updated_at": "2026-06-16T13:29:42Z",
     "user": {
       "login": "esensar"
     }
@@ -4534,13 +4847,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: crc",
+        "id": 35355823435173662,
+        "name": "stdlib: crc"
       }
     ],
     "number": 1415,
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): bump crc from 3.2.1 to 3.3.0",
-    "updated_at": "2025-06-09T18:47:06Z",
+    "updated_at": "2026-06-16T13:23:26Z",
     "user": {
       "login": "dependabot"
     }
@@ -4756,13 +5075,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": null,
+        "id": 3120541360500387790,
+        "name": "stdlib: parse_cef"
       }
     ],
     "number": 1425,
     "pull_request": {},
     "state": "closed",
     "title": "chore(stdlib): Refactor `parse_header_value` to trim whitespace from escaped values …",
-    "updated_at": "2025-06-23T18:40:13Z",
+    "updated_at": "2026-06-16T13:29:39Z",
     "user": {
       "login": "yjagdale"
     }
@@ -4772,11 +5097,18 @@
     "created_at": "2025-06-23T14:42:29Z",
     "id": 3168468522,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_tokens",
+        "id": 6594689963125240793,
+        "name": "stdlib: parse_tokens"
+      }
+    ],
     "number": 1426,
     "state": "open",
     "title": "VRL function parse_tokens does not handle unescaped \"\\\"",
-    "updated_at": "2026-06-01T14:08:29Z",
+    "updated_at": "2026-06-16T13:09:24Z",
     "user": {
       "login": "CyBeRoni"
     }
@@ -4838,12 +5170,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_groks",
+        "id": 4924712345985418412,
+        "name": "stdlib: parse_groks"
       }
     ],
     "number": 1429,
     "state": "open",
     "title": "Allow override grok patterns via aliases in `parse_groks` function",
-    "updated_at": "2026-06-01T14:19:30Z",
+    "updated_at": "2026-06-16T13:09:26Z",
     "user": {
       "login": "piotrminkina"
     }
@@ -4854,12 +5192,19 @@
     "draft": false,
     "id": 2627169630,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": null,
+        "id": 3120541360500387790,
+        "name": "stdlib: parse_cef"
+      }
+    ],
     "number": 1430,
     "pull_request": {},
     "state": "closed",
     "title": "parse_cef function to handle empty spaces",
-    "updated_at": "2025-07-18T09:12:15Z",
+    "updated_at": "2026-06-16T13:23:24Z",
     "user": {
       "login": "yjagdale"
     }
@@ -5193,13 +5538,19 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: haversine",
+        "id": 3857976580711509957,
+        "name": "stdlib: haversine"
       }
     ],
     "number": 1442,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): add `haversine` function",
-    "updated_at": "2025-07-09T16:10:34Z",
+    "updated_at": "2026-06-16T13:23:21Z",
     "user": {
       "login": "esensar"
     }
@@ -5222,13 +5573,19 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 7173230675418129594,
         "name": "meta: awaiting author"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: validate_json_schema",
+        "id": 1418186921759539505,
+        "name": "stdlib: validate_json_schema"
       }
     ],
     "number": 1443,
     "pull_request": {},
     "state": "closed",
     "title": "feat: add `validate_json_schema` function",
-    "updated_at": "2025-07-11T12:58:37Z",
+    "updated_at": "2026-06-16T13:23:19Z",
     "user": {
       "login": "jlambatl"
     }
@@ -5245,13 +5602,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: haversine",
+        "id": 3857976580711509957,
+        "name": "stdlib: haversine"
       }
     ],
     "number": 1444,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): properly export haversine function in `all`",
-    "updated_at": "2025-07-14T13:27:48Z",
+    "updated_at": "2026-06-16T13:23:15Z",
     "user": {
       "login": "esensar"
     }
@@ -5301,12 +5664,25 @@
     "draft": false,
     "id": 2666823443,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: decode_lz4",
+        "id": 532201067922757951,
+        "name": "stdlib: decode_lz4"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encode_lz4",
+        "id": 2475950407493336896,
+        "name": "stdlib: encode_lz4"
+      }
+    ],
     "number": 1447,
     "pull_request": {},
     "state": "closed",
     "title": "enhancement!(lz4): Improve handling of various lz4 implementations",
-    "updated_at": "2025-07-17T15:02:15Z",
+    "updated_at": "2026-06-16T13:29:37Z",
     "user": {
       "login": "jlambatl"
     }
@@ -5877,12 +6253,19 @@
     "draft": true,
     "id": 2737453843,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 1853162984604962264,
+        "name": "stdlib: xxhash"
+      }
+    ],
     "number": 1472,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): Add new xxhash function",
-    "updated_at": "2025-08-12T21:34:10Z",
+    "updated_at": "2026-06-16T13:23:13Z",
     "user": {
       "login": "stigglor"
     }
@@ -5899,13 +6282,19 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 7173230675418129594,
         "name": "meta: awaiting author"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 1853162984604962264,
+        "name": "stdlib: xxhash"
       }
     ],
     "number": 1473,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): Add new xxhash function",
-    "updated_at": "2025-08-19T17:59:58Z",
+    "updated_at": "2026-06-16T13:23:10Z",
     "user": {
       "login": "stigglor"
     }
@@ -5944,12 +6333,19 @@
     "draft": false,
     "id": 2744120368,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: validate_json_schema",
+        "id": 1418186921759539505,
+        "name": "stdlib: validate_json_schema"
+      }
+    ],
     "number": 1476,
     "pull_request": {},
     "state": "closed",
     "title": "(fix stdlib): Fix `validate_json_schema` to prevent compile-time panics",
-    "updated_at": "2025-08-28T19:07:44Z",
+    "updated_at": "2026-06-16T13:23:08Z",
     "user": {
       "login": "sbalmos"
     }
@@ -5988,12 +6384,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: from_unix_timestamp",
+        "id": 4702067301376247957,
+        "name": "stdlib: from_unix_timestamp"
       }
     ],
     "number": 1478,
     "state": "open",
     "title": "`from_unix_timestamp` should support float timestamps with subsecond precision",
-    "updated_at": "2026-06-01T14:08:34Z",
+    "updated_at": "2026-06-16T13:09:21Z",
     "user": {
       "login": "garysassano"
     }
@@ -6031,12 +6433,19 @@
     "draft": false,
     "id": 2768768949,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_aws_alb_log",
+        "id": 6100913743616003132,
+        "name": "stdlib: parse_aws_alb_log"
+      }
+    ],
     "number": 1482,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): Add flag to ignore new fields when parsing AWS LB logs",
-    "updated_at": "2025-09-25T18:47:11Z",
+    "updated_at": "2026-06-16T13:29:34Z",
     "user": {
       "login": "anas-aso"
     }
@@ -6047,12 +6456,19 @@
     "draft": false,
     "id": 2776855881,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: validate_json_schema",
+        "id": 1418186921759539505,
+        "name": "stdlib: validate_json_schema"
+      }
+    ],
     "number": 1483,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib) Capture error messages from `validate_json_schema`",
-    "updated_at": "2025-09-03T22:22:37Z",
+    "updated_at": "2026-06-16T13:23:05Z",
     "user": {
       "login": "sbalmos"
     }
@@ -6092,13 +6508,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: http_request",
+        "id": 1039753914432071142,
+        "name": "stdlib: http_request"
       }
     ],
     "number": 1485,
     "pull_request": {},
     "state": "closed",
     "title": "chore(dev): add proto conversions options - support json names",
-    "updated_at": "2025-08-28T16:48:09Z",
+    "updated_at": "2026-06-16T13:29:32Z",
     "user": {
       "login": "pront"
     }
@@ -6115,13 +6537,25 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": null,
+        "id": 8429761736599515115,
+        "name": "stdlib: encode_proto"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_proto",
+        "id": 1470102011077232971,
+        "name": "stdlib: parse_proto"
       }
     ],
     "number": 1486,
     "pull_request": {},
     "state": "closed",
     "title": "chore(dev): simplify proto exports",
-    "updated_at": "2025-08-28T17:12:16Z",
+    "updated_at": "2026-06-16T13:29:29Z",
     "user": {
       "login": "pront"
     }
@@ -6202,13 +6636,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_grok",
+        "id": 2407447042232504134,
+        "name": "stdlib: parse_grok"
       }
     ],
     "number": 1489,
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): bump grok from 2.1.0 to 2.4.0",
-    "updated_at": "2025-09-02T19:54:39Z",
+    "updated_at": "2026-06-16T13:29:26Z",
     "user": {
       "login": "dependabot"
     }
@@ -6478,13 +6918,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: http_request",
+        "id": 1039753914432071142,
+        "name": "stdlib: http_request"
       }
     ],
     "number": 1499,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): Fix http_request headers param optional flag",
-    "updated_at": "2025-09-16T17:54:39Z",
+    "updated_at": "2026-06-16T13:23:03Z",
     "user": {
       "login": "sbalmos"
     }
@@ -6524,12 +6970,19 @@
     "draft": false,
     "id": 2801166806,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: pop",
+        "id": 5585822208296541152,
+        "name": "stdlib: pop"
+      }
+    ],
     "number": 1501,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): add array pop() function",
-    "updated_at": "2025-09-05T13:49:30Z",
+    "updated_at": "2026-06-16T13:23:00Z",
     "user": {
       "login": "jlambatl"
     }
@@ -6540,12 +6993,19 @@
     "draft": false,
     "id": 2801217898,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: http_request",
+        "id": 1039753914432071142,
+        "name": "stdlib: http_request"
+      }
+    ],
     "number": 1502,
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(stdlib): Add optional request `body` param to `http_request`",
-    "updated_at": "2025-09-16T13:38:18Z",
+    "updated_at": "2026-06-16T13:22:57Z",
     "user": {
       "login": "sbalmos"
     }
@@ -6599,12 +7059,25 @@
     "draft": false,
     "id": 2817031500,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: decrypt_ip",
+        "id": 9126047454725785765,
+        "name": "stdlib: decrypt_ip"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: encrypt_ip",
+        "id": 430116693576671489,
+        "name": "stdlib: encrypt_ip"
+      }
+    ],
     "number": 1506,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): add IP encryption and decryption functions",
-    "updated_at": "2025-09-15T13:24:06Z",
+    "updated_at": "2026-06-16T13:29:24Z",
     "user": {
       "login": "alterstep"
     }
@@ -6621,13 +7094,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: http_request",
+        "id": 1039753914432071142,
+        "name": "stdlib: http_request"
       }
     ],
     "number": 1508,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): fix http_request tests with add'l body param",
-    "updated_at": "2025-09-16T17:54:17Z",
+    "updated_at": "2026-06-16T13:22:55Z",
     "user": {
       "login": "sbalmos"
     }
@@ -6659,12 +7138,19 @@
     "draft": false,
     "id": 2833376468,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: http_request",
+        "id": 1039753914432071142,
+        "name": "stdlib: http_request"
+      }
+    ],
     "number": 1510,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): Fix `http_request` ability to run from CLI",
-    "updated_at": "2025-09-16T17:54:09Z",
+    "updated_at": "2026-06-16T13:22:52Z",
     "user": {
       "login": "sbalmos"
     }
@@ -6725,12 +7211,19 @@
     "draft": false,
     "id": 2847174030,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: find",
+        "id": 1022219139600379008,
+        "name": "stdlib: find"
+      }
+    ],
     "number": 1514,
     "pull_request": {},
     "state": "closed",
     "title": "feat(vrl): return null instead of -1 when not find in `find` function",
-    "updated_at": "2025-09-22T19:18:37Z",
+    "updated_at": "2026-06-16T13:22:49Z",
     "user": {
       "login": "titaneric"
     }
@@ -6741,12 +7234,19 @@
     "draft": false,
     "id": 2853614758,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_glog",
+        "id": 8157311264713662339,
+        "name": "stdlib: parse_glog"
+      }
+    ],
     "number": 1515,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): fix glog parser to accept padded thread_id",
-    "updated_at": "2025-09-24T13:26:26Z",
+    "updated_at": "2026-06-16T13:29:21Z",
     "user": {
       "login": "suttod"
     }
@@ -6769,13 +7269,19 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 7173230675418129594,
         "name": "meta: awaiting author"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: basename",
+        "id": 7322128410451626131,
+        "name": "stdlib: basename"
       }
     ],
     "number": 1516,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): add new VRL function `basename` to get last component of the path",
-    "updated_at": "2025-10-01T16:25:44Z",
+    "updated_at": "2026-06-16T13:22:47Z",
     "user": {
       "login": "titaneric"
     }
@@ -7180,12 +7686,19 @@
     "draft": false,
     "id": 2878902651,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: basename",
+        "id": 7322128410451626131,
+        "name": "stdlib: basename"
+      }
+    ],
     "number": 1531,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): add new VRL function `basename` to get last component of the path ",
-    "updated_at": "2025-10-06T18:12:08Z",
+    "updated_at": "2026-06-16T13:22:44Z",
     "user": {
       "login": "titaneric"
     }
@@ -7196,12 +7709,19 @@
     "draft": false,
     "id": 2879116316,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: dirname",
+        "id": 294601290798464173,
+        "name": "stdlib: dirname"
+      }
+    ],
     "number": 1532,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): add `dirname` VRL function matched with `dirname` command",
-    "updated_at": "2025-10-02T17:40:11Z",
+    "updated_at": "2026-06-16T13:22:41Z",
     "user": {
       "login": "titaneric"
     }
@@ -7212,12 +7732,19 @@
     "draft": false,
     "id": 2882386160,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: split_path",
+        "id": 3742117134520663409,
+        "name": "stdlib: split_path"
+      }
+    ],
     "number": 1533,
     "pull_request": {},
     "state": "closed",
     "title": "feat(stdlib): add new `split_path` VRL function to split the given path into multiple components",
-    "updated_at": "2025-10-02T18:02:27Z",
+    "updated_at": "2026-06-16T13:22:38Z",
     "user": {
       "login": "titaneric"
     }
@@ -7234,13 +7761,19 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: http_request",
+        "id": 1039753914432071142,
+        "name": "stdlib: http_request"
       }
     ],
     "number": 1534,
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(stdlib): Add optional `http_proxy` and `https_proxy` params to `http_request`",
-    "updated_at": "2025-10-21T20:06:44Z",
+    "updated_at": "2026-06-16T13:22:36Z",
     "user": {
       "login": "5Dev24"
     }
@@ -7342,7 +7875,7 @@
     "number": 1538,
     "state": "open",
     "title": "Escaping characters in parse_cef?",
-    "updated_at": "2026-06-01T14:08:39Z",
+    "updated_at": "2026-06-15T18:26:52Z",
     "user": {
       "login": "sb1-nicolai"
     }
@@ -7669,12 +8202,19 @@
     "draft": false,
     "id": 2984898919,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: split_path",
+        "id": 3742117134520663409,
+        "name": "stdlib: split_path"
+      }
+    ],
     "number": 1553,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): Add missing functions from 0.28 release",
-    "updated_at": "2025-11-06T15:12:14Z",
+    "updated_at": "2026-06-16T13:29:18Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -7853,13 +8393,19 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: http_request",
+        "id": 1039753914432071142,
+        "name": "stdlib: http_request"
       }
     ],
     "number": 1562,
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(http_request): add redaction for sensitive headers",
-    "updated_at": "2026-03-04T15:40:21Z",
+    "updated_at": "2026-06-16T13:22:34Z",
     "user": {
       "login": "benjamin-awd"
     }
@@ -7870,12 +8416,19 @@
     "draft": false,
     "id": 3045086940,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: merge",
+        "id": 7388908726678991608,
+        "name": "stdlib: merge"
+      }
+    ],
     "number": 1563,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): merge: make `to` a required argument",
-    "updated_at": "2025-11-25T22:10:29Z",
+    "updated_at": "2026-06-16T13:29:16Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -8236,12 +8789,19 @@
     "draft": false,
     "id": 3072934428,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: validate_json_schema",
+        "id": 1418186921759539505,
+        "name": "stdlib: validate_json_schema"
+      }
+    ],
     "number": 1577,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib) jsonschema dependency update to fix stackoverflow on empty $ref",
-    "updated_at": "2025-12-10T14:43:42Z",
+    "updated_at": "2026-06-16T13:29:13Z",
     "user": {
       "login": "jlambatl"
     }
@@ -8349,13 +8909,25 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
         "name": "no-changelog"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "",
+        "id": 2223534336356115461,
+        "name": "stdlib: parse_key_value"
+      },
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: parse_user_agent",
+        "id": 2471982089171752361,
+        "name": "stdlib: parse_user_agent"
       }
     ],
     "number": 1582,
     "pull_request": {},
     "state": "closed",
     "title": "chore(dev): Upgrade rust to 1.92.0",
-    "updated_at": "2025-12-29T20:11:19Z",
+    "updated_at": "2026-06-16T13:29:10Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -8382,12 +8954,19 @@
     "draft": false,
     "id": 3118423256,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "aaaaaa",
+        "description": "VRL stdlib function: format_int",
+        "id": 8387631785112418440,
+        "name": "stdlib: format_int"
+      }
+    ],
     "number": 1586,
     "pull_request": {},
     "state": "closed",
     "title": "fix(stdlib): correct format_int return type to bytes",
-    "updated_at": "2025-12-19T20:15:25Z",
+    "updated_at": "2026-06-16T13:22:30Z",
     "user": {
       "login": "thomasqueirozb"
     }
