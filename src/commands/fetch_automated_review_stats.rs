@@ -241,8 +241,27 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
         eprintln!("Trends not updated: results are incomplete due to nested pagination limits.");
     } else {
         update_trends(config, login, since_ts.as_deref(), &stats)?;
+        write_stats_json(config, login, since_ts.as_deref(), &stats)?;
     }
 
+    Ok(())
+}
+
+fn write_stats_json(config: &Config, bot_login: &str, since_ts: Option<&str>, stats: &Stats) -> Result<()> {
+    let out_dir = std::path::Path::new("out/summaries");
+    fs::create_dir_all(out_dir)?;
+    let path = out_dir.join(format!("{}_{}_automated_review_stats.json", config.org, config.repo));
+    let json = json!({
+        "prs_scanned": stats.prs_scanned,
+        "bot_login": bot_login,
+        "since": since_ts.map(|ts| &ts[..10]),
+        "total": stats.total,
+        "liked": stats.liked,
+        "disliked": stats.disliked,
+        "no_signal": stats.no_signal,
+    });
+    fs::write(&path, serde_json::to_string_pretty(&json)?)?;
+    println!("Stats JSON written to {}", path.display());
     Ok(())
 }
 

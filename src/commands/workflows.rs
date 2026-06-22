@@ -1,6 +1,6 @@
 /// High-level workflow commands that orchestrate multiple sub-commands,
 /// replacing fetch_all_slow.sh, generate_all.sh, and purge_all.sh.
-use crate::commands::{build_db, fetch_discussions, fetch_issues, generate_summaries, purge};
+use crate::commands::{build_db, fetch_discussions, fetch_issues, generate_charts, generate_summaries, purge};
 use crate::config::{Config, Repo};
 use anyhow::Result;
 use chrono::{Datelike, Utc};
@@ -25,8 +25,7 @@ pub fn fetch_all(repo_str: &str, since: Option<&str>) -> Result<()> {
     Ok(())
 }
 
-/// Builds DB + summaries for a single repo.
-/// plot.py is kept in Python — this workflow prints the exact command to run it.
+/// Builds DB + summaries + HTML charts for a single repo.
 pub fn generate_all(repo_str: &str, start: Option<&str>) -> Result<()> {
     let repo = Repo::parse(repo_str)?;
     let config = Config::for_repo(&repo);
@@ -65,9 +64,7 @@ pub fn generate_all(repo_str: &str, start: Option<&str>) -> Result<()> {
         format!("{}-{:02}", total_months / 12, total_months % 12 + 1)
     };
     let start_arg = start.unwrap_or(&default_start);
-    println!(
-        "\nTo regenerate charts:\n  python -m scripts.util.plot --repo {repo_str} --input-dir out/summaries --start {start_arg} --exclude-labels \"no-changelog,meta: awaiting author\""
-    );
+    generate_charts::run("out/summaries", repo_str, "docs", Some(start_arg))?;
     Ok(())
 }
 

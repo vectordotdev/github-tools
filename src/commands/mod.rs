@@ -1,6 +1,7 @@
 pub mod build_db;
 pub mod compact;
 pub mod close_old_prs;
+pub mod generate_charts;
 pub mod delete_stale_branches;
 pub mod fetch_automated_review_stats;
 pub mod fetch_discussions;
