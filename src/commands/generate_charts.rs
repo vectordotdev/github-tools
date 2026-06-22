@@ -28,6 +28,15 @@ const PALETTE: &[&str] = &[
 
 const EXCLUDE_LABELS: &[&str] = &["no-changelog", "meta: awaiting author"];
 
+const KNOWN_BOT_LOGINS: &[&str] = &[
+    "dependabot", "dependabot-preview", "renovate",
+    "handlerbot", "step-security-bot", "tronboto",
+];
+
+fn is_bot(login: &str) -> bool {
+    login.ends_with("[bot]") || KNOWN_BOT_LOGINS.contains(&login)
+}
+
 fn label_color(name: &str) -> &'static str {
     match name {
         "type: bug"  | "Bug"                => "#FF4C4C",
@@ -470,7 +479,7 @@ pub fn contributor_heatmap(rows: &[&HashMap<String, String>]) -> Option<Chart> {
 
     Some(Chart::new()
         .tooltip(Tooltip::new().trigger(Trigger::Item))
-        .grid(Grid::new().left("15%").right("4%").bottom("20%").contain_label(true))
+        .grid(Grid::new().left("5%").right("4%").bottom("20%").contain_label(true))
         .x_axis(
             Axis::new()
                 .type_(AxisType::Category)
@@ -1051,7 +1060,10 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
     let pr_label_counts = read_csv(&format!("{input_dir}/{prefix}_pull_requests.label_counts.csv"))?;
     let issues_open_by_label = read_csv(&format!("{input_dir}/{prefix}_issues.open_by_label.csv"))?;
     let pr_open_by_label = read_csv(&format!("{input_dir}/{prefix}_pull_requests.open_by_label.csv"))?;
-    let pr_contributor = read_csv(&format!("{input_dir}/{prefix}_pull_requests.contributor_monthly.csv"))?;
+    let pr_contributor: Vec<HashMap<String, String>> = read_csv(&format!("{input_dir}/{prefix}_pull_requests.contributor_monthly.csv"))?
+        .into_iter()
+        .filter(|r| !r.get("user_login").map(|u| is_bot(u)).unwrap_or(false))
+        .collect();
 
     // ── Derive column lists ──
     let issues_monthly_cols: Vec<String> = if let Some(first) = issues_monthly.first() {
@@ -1220,12 +1232,19 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
         }
 
         if let Some(chart) = unique_contributors_yearly(&all_contrib) {
-            // Build HTML table from already-computed yearly_stats
+            use chrono::{Datelike, Utc};
+            let current_year = Utc::now().year().to_string();
+            let current_month = Utc::now().month();
             let mut table_rows = String::new();
             for (year, (new_c, ret_c)) in &yearly_stats {
                 let unique = new_c + ret_c;
+                let year_label = if year.as_str() == current_year {
+                    format!("{year} (YTD, {}mo)", current_month - 1)
+                } else {
+                    year.to_string()
+                };
                 table_rows.push_str(&format!(
-                    "<tr><td>{year}</td><td>{unique}</td><td>{new_c}</td><td>{ret_c}</td></tr>"
+                    "<tr><td>{year_label}</td><td>{unique}</td><td>{new_c}</td><td>{ret_c}</td></tr>"
                 ));
             }
             let yearly_table = format!(
