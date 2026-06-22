@@ -16,7 +16,7 @@ use std::path::Path;
 const COLOR_CLOSED: &str = "#006400";
 const COLOR_OPEN: &str = "#FF8C00";
 const COLOR_ANSWERED: &str = "#4C9AFF";
-const COLOR_CREATED: &str = "#1E90FF";
+const COLOR_CREATED: &str = "#1a1a1a"; // DARK in Python — near-black for all "created" series
 const COLOR_NEW_CONTRIBUTOR: &str = "#36B37E";
 const COLOR_RETURNING_CONTRIBUTOR: &str = "#8E5CE6";
 
@@ -97,11 +97,12 @@ fn parse_i64(s: &str) -> i64 {
 
 /// 1. Monthly trend: line chart with created vs closed series.
 ///    Also optionally adds dashed overlay lines for label type columns.
+/// `type_overlays`: (series_name, columns_to_sum) — mirrors Python's df[matching].sum(axis=1).
 pub fn monthly_trend(
     rows: &[&HashMap<String, String>],
     created_col: &str,
     closed_col: &str,
-    type_overlays: &[String], // label columns to overlay as dashed lines (top 5 by total)
+    type_overlays: &[(String, Vec<String>)],
 ) -> Chart {
     let months: Vec<String> = rows.iter()
         .filter_map(|r| r.get("month").cloned())
@@ -137,14 +138,14 @@ pub fn monthly_trend(
                 .item_style(ItemStyle::new().color(color(COLOR_CLOSED))),
         );
 
-    for label_col in type_overlays {
+    for (series_name, cols) in type_overlays {
         let vals: Vec<i64> = rows.iter()
-            .map(|r| parse_i64(r.get(label_col.as_str()).map(|s| s.as_str()).unwrap_or("0")))
+            .map(|r| cols.iter().map(|c| parse_i64(r.get(c.as_str()).map(|s| s.as_str()).unwrap_or("0"))).sum())
             .collect();
-        let c = label_color(label_col);
+        let c = label_color(series_name);
         chart = chart.series(
             Line::new()
-                .name(label_col.as_str())
+                .name(series_name.as_str())
                 .data(vals.iter().map(|v| *v).collect::<Vec<_>>())
                 .line_style(LineStyle::new().type_(LineStyleType::Dashed))
                 .item_style(ItemStyle::new().color(color(c))),
@@ -1062,38 +1063,29 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
 
     // Top 5 label columns for overlay (those that are not the standard cols)
     let standard_issue_cols = ["month", "created_issues", "closed_issues"];
-    let issue_type_overlays: Vec<String> = {
-        let filtered = filter_by_start(&issues_monthly, start);
-        let mut totals: Vec<(String, i64)> = issues_monthly_cols.iter()
-            .filter(|c| !standard_issue_cols.contains(&c.as_str()) && !EXCLUDE_LABELS.contains(&c.as_str()))
-            .map(|col| {
-                let total: i64 = filtered.iter()
-                    .map(|r| parse_i64(r.get(col.as_str()).map(|s| s.as_str()).unwrap_or("0")))
-                    .sum();
-                (col.clone(), total)
+    // Fixed type overlays matching Python's TYPE_OVERLAYS.
+    // Collects ALL matching columns per type and sums them (mirrors df[matching].sum(axis=1)),
+    // so repos that use both "type: bug" (label) and "Bug" (native type) get a continuous series.
+    const TYPE_OVERLAY_CANDIDATES: &[(&str, &[&str])] = &[
+        ("type: bug",         &["type: bug",         "Bug"]),
+        ("type: feature",     &["type: feature",     "Feature"]),
+        ("type: enhancement", &["type: enhancement", "Enhancement"]),
+        ("type: task",        &["type: task",        "Task"]),
+    ];
+    fn resolve_type_overlays(cols: &[String]) -> Vec<(String, Vec<String>)> {
+        TYPE_OVERLAY_CANDIDATES.iter()
+            .filter_map(|(name, candidates)| {
+                let matching: Vec<String> = candidates.iter()
+                    .filter(|&&c| cols.iter().any(|col| col == c))
+                    .map(|&c| c.to_string())
+                    .collect();
+                if matching.is_empty() { None } else { Some((name.to_string(), matching)) }
             })
-            .collect();
-        totals.sort_by(|a, b| b.1.cmp(&a.1));
-        totals.truncate(5);
-        totals.into_iter().filter(|(_, t)| *t > 0).map(|(c, _)| c).collect()
-    };
+            .collect()
+    }
 
-    let standard_pr_cols = ["month", "created_pull_requests", "closed_pull_requests"];
-    let pr_type_overlays: Vec<String> = {
-        let filtered = filter_by_start(&pr_monthly, start);
-        let mut totals: Vec<(String, i64)> = pr_monthly_cols.iter()
-            .filter(|c| !standard_pr_cols.contains(&c.as_str()) && !EXCLUDE_LABELS.contains(&c.as_str()))
-            .map(|col| {
-                let total: i64 = filtered.iter()
-                    .map(|r| parse_i64(r.get(col.as_str()).map(|s| s.as_str()).unwrap_or("0")))
-                    .sum();
-                (col.clone(), total)
-            })
-            .collect();
-        totals.sort_by(|a, b| b.1.cmp(&a.1));
-        totals.truncate(5);
-        totals.into_iter().filter(|(_, t)| *t > 0).map(|(c, _)| c).collect()
-    };
+    let issue_type_overlays = resolve_type_overlays(&issues_monthly_cols);
+    let pr_type_overlays = resolve_type_overlays(&pr_monthly_cols);
 
     // ── Build chart sections ──
     let mut sections: Vec<(&str, Vec<ChartEntry>)> = Vec::new();
