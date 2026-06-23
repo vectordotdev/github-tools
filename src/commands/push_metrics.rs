@@ -66,6 +66,7 @@ pub fn run(
     }
 
     println!("Pushing {} metric series to Datadog...", all_series.len());
+    let mut failed_batches = 0usize;
     for (i, chunk) in all_series.chunks(BATCH_SIZE).enumerate() {
         let payload = json!({ "series": chunk });
         let response = client
@@ -87,14 +88,19 @@ pub fn run(
                 for err in errors {
                     eprintln!("    {err}");
                 }
-                continue;
+                failed_batches += 1;
+            } else {
+                println!("  Batch {}: {} series", i + 1, chunk.len());
             }
-            println!("  Batch {}: {} series", i + 1, chunk.len());
         } else {
             eprintln!("  Batch {} rejected ({status}): {body}", i + 1);
+            failed_batches += 1;
         }
     }
 
+    if failed_batches > 0 {
+        anyhow::bail!("{failed_batches} batch(es) failed; see errors above");
+    }
     println!("Done.");
     Ok(())
 }
