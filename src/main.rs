@@ -4,7 +4,7 @@ use github_tools::{
     commands::{
         build_db, close_old_prs, compact, delete_stale_branches, fetch_automated_review_stats,
         fetch_discussions, fetch_issues, fetch_labels, generate_charts, generate_summaries, purge,
-        remove_legacy_label, workflows,
+        push_metrics, remove_legacy_label, workflows,
     },
     config::{Config, Repo},
 };
@@ -149,6 +149,21 @@ enum Command {
         #[arg(long)]
         limit: Option<usize>,
     },
+    /// Push per-item metrics to Datadog (each issue/PR/discussion = data point with all labels as tags)
+    PushMetrics {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
+        #[arg(long, help = "Datadog API key (or set DD_API_KEY in .env file)")]
+        dd_api_key: Option<String>,
+        #[arg(long, help = "Datadog site (or set DD_SITE in .env file, e.g. datadoghq.eu)")]
+        dd_site: Option<String>,
+        #[arg(long, help = "Only push items created since this date (default: 2026-01-01)")]
+        since: Option<String>,
+        #[arg(long, help = "Metric name prefix (default: cose.gh)")]
+        prefix: Option<String>,
+        #[arg(long, help = "Print metrics summary without sending to Datadog")]
+        dry_run: bool,
+    },
     /// Count automated review comments by reaction (liked / disliked / no reaction).
     /// Omit --bot-login to list all review comment authors and discover the right login.
     AutomatedReviewStats {
@@ -223,6 +238,14 @@ fn main() -> Result<()> {
         Command::BuildDb { input, repo, env_file } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             build_db::run(&input, &config)
+        }
+        Command::PushMetrics { repo, dd_api_key, dd_site, since, prefix, dry_run } => {
+            let config = Config::for_repo(&Repo::parse(&repo)?);
+            let api_key = dd_api_key
+                .or_else(|| std::env::var("DD_API_KEY").ok())
+                .ok_or_else(|| anyhow::anyhow!("DD_API_KEY not set (use --dd-api-key or set DD_API_KEY env var)"))?;
+            let site = dd_site.or_else(|| std::env::var("DD_SITE").ok());
+            push_metrics::run(&config, &api_key, site.as_deref(), since.as_deref(), prefix.as_deref(), dry_run)
         }
         Command::AutomatedReviewStats { repo, env_file, bot_login, since } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;

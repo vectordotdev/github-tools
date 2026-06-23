@@ -9,5 +9,6 @@ pub mod fetch_issues;
 pub mod fetch_labels;
 pub mod generate_summaries;
 pub mod purge;
+pub mod push_metrics;
 pub mod remove_legacy_label;
 pub mod workflows;
