@@ -111,20 +111,18 @@ pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Res
         for pr in nodes {
             // updatedAt >= mergedAt always, so this is a sound early-termination criterion.
             let updated_at = pr["updatedAt"].as_str().unwrap_or("");
-            if let Some(ref ts) = since_ts {
-                if updated_at < ts.as_str() {
+            if let Some(ref ts) = since_ts
+                && updated_at < ts.as_str() {
                     hit_boundary = true;
                     continue;
                 }
-            }
 
             // Skip PRs merged before the cutoff (updated after it, e.g. a late comment).
             let merged_at = pr["mergedAt"].as_str().unwrap_or("");
-            if let Some(ref ts) = since_ts {
-                if merged_at < ts.as_str() {
+            if let Some(ref ts) = since_ts
+                && merged_at < ts.as_str() {
                     continue;
                 }
-            }
 
             stats.prs_scanned += 1;
             let pr_number = pr["number"].as_u64().unwrap_or(0);

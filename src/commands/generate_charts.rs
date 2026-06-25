@@ -106,6 +106,7 @@ fn parse_i64(s: &str) -> i64 {
 
 /// 1. Monthly trend: line chart with created vs closed series.
 ///    Also optionally adds dashed overlay lines for label type columns.
+///
 /// `type_overlays`: (series_name, columns_to_sum) — mirrors Python's df[matching].sum(axis=1).
 pub fn monthly_trend(
     rows: &[&HashMap<String, String>],
@@ -137,13 +138,13 @@ pub fn monthly_trend(
         .series(
             Line::new()
                 .name("Created")
-                .data(created.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(created.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_CREATED))),
         )
         .series(
             Line::new()
                 .name("Closed")
-                .data(closed.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(closed.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_CLOSED))),
         );
 
@@ -155,7 +156,7 @@ pub fn monthly_trend(
         chart = chart.series(
             Line::new()
                 .name(series_name.as_str())
-                .data(vals.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(vals.to_vec())
                 .line_style(LineStyle::new().type_(LineStyleType::Dashed))
                 .item_style(ItemStyle::new().color(color(c))),
         );
@@ -193,19 +194,19 @@ pub fn discussion_trend(rows: &[&HashMap<String, String>]) -> Chart {
         .series(
             Line::new()
                 .name("Created")
-                .data(created.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(created.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_CREATED))),
         )
         .series(
             Line::new()
                 .name("Closed")
-                .data(closed.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(closed.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_CLOSED))),
         )
         .series(
             Line::new()
                 .name("Answered")
-                .data(answered.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(answered.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_ANSWERED))),
         )
 }
@@ -289,7 +290,7 @@ pub fn label_counts_over_time(rows: &[&HashMap<String, String>]) -> Chart {
         chart = chart.series(
             Bar::new()
                 .name(label.as_str())
-                .data(vals.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(vals.to_vec())
                 .item_style(ItemStyle::new().color(color(c))),
         );
     }
@@ -298,6 +299,7 @@ pub fn label_counts_over_time(rows: &[&HashMap<String, String>]) -> Chart {
 }
 
 /// 5. Open/closed by integration label: stacked horizontal bar chart.
+///
 /// Filters to source:/transform:/sink: labels only, sorted by total descending.
 pub fn open_closed_by_label(rows: &[&HashMap<String, String>]) -> Option<Chart> {
     let mut pairs: Vec<(String, i64, i64)> = rows.iter()
@@ -336,14 +338,14 @@ pub fn open_closed_by_label(rows: &[&HashMap<String, String>]) -> Option<Chart> 
             Bar::new()
                 .name("Closed")
                 .stack("total")
-                .data(closed_vals.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(closed_vals.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_CLOSED))),
         )
         .series(
             Bar::new()
                 .name("Open")
                 .stack("total")
-                .data(open_vals.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(open_vals.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_OPEN))),
         ))
 }
@@ -405,7 +407,7 @@ pub fn integration_trends(
         chart = chart.series(
             Line::new()
                 .name(col.as_str())
-                .data(vals.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(vals.to_vec())
                 .item_style(ItemStyle::new().color(color(c))),
         );
     }
@@ -573,14 +575,14 @@ pub fn unique_contributors_monthly(rows: &[&HashMap<String, String>]) -> Option<
             Bar::new()
                 .name("New")
                 .stack("contributors")
-                .data(new_vals.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(new_vals.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_NEW_CONTRIBUTOR))),
         )
         .series(
             Bar::new()
                 .name("Returning")
                 .stack("contributors")
-                .data(ret_vals.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(ret_vals.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_RETURNING_CONTRIBUTOR))),
         ))
 }
@@ -625,14 +627,14 @@ pub fn unique_contributors_yearly(rows: &[&HashMap<String, String>]) -> Option<C
             Bar::new()
                 .name("New")
                 .stack("contributors")
-                .data(new_vals.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(new_vals.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_NEW_CONTRIBUTOR))),
         )
         .series(
             Bar::new()
                 .name("Returning")
                 .stack("contributors")
-                .data(ret_vals.iter().map(|v| *v).collect::<Vec<_>>())
+                .data(ret_vals.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_RETURNING_CONTRIBUTOR))),
         ))
 }
@@ -1074,7 +1076,7 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
     } else { vec![] };
 
     // Top 5 label columns for overlay (those that are not the standard cols)
-    let standard_issue_cols = ["month", "created_issues", "closed_issues"];
+    let _standard_issue_cols = ["month", "created_issues", "closed_issues"];
     // Fixed type overlays matching Python's TYPE_OVERLAYS.
     // Collects ALL matching columns per type and sums them (mirrors df[matching].sum(axis=1)),
     // so repos that use both "type: bug" (label) and "Bug" (native type) get a continuous series.
@@ -1298,13 +1300,11 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
         for entry in sorted {
             let path = entry.path();
             let repo_file = path.join(".repo");
-            if path.is_dir() && repo_file.exists() {
-                if let Ok(content) = fs::read_to_string(&repo_file) {
-                    if let Some((o, n)) = content.trim().split_once('/') {
+            if path.is_dir() && repo_file.exists()
+                && let Ok(content) = fs::read_to_string(&repo_file)
+                    && let Some((o, n)) = content.trim().split_once('/') {
                         repos_found.push((o.to_string(), n.to_string()));
                     }
-                }
-            }
         }
     }
     generate_index(output_dir, &repos_found)?;

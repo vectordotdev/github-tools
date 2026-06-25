@@ -175,7 +175,43 @@ enum Command {
 
 #[derive(Subcommand)]
 enum PurgeTarget {
-    /// Purge old nightly images from GitHub and/or Docker Hub
+    /// Purge Docker Hub images
+    Dockerhub {
+        #[command(subcommand)]
+        target: PurgeDockerHubTarget,
+    },
+    /// Purge GitHub container registry images
+    Github {
+        #[command(subcommand)]
+        target: PurgeGithubTarget,
+    },
+}
+
+#[derive(Subcommand)]
+enum PurgeDockerHubTarget {
+    /// Purge old nightly images from Docker Hub
+    Nightly {
+        #[arg(long, default_value = "30")]
+        older_than: u32,
+        #[arg(long)]
+        dry_run: bool,
+        #[arg(long, help = "Skip confirmation prompt")]
+        yes: bool,
+    },
+    /// Purge old vector-dev images from Docker Hub
+    VectorDev {
+        #[arg(long, default_value = "30")]
+        older_than: u32,
+        #[arg(long)]
+        dry_run: bool,
+        #[arg(long, help = "Skip confirmation prompt")]
+        yes: bool,
+    },
+}
+
+#[derive(Subcommand)]
+enum PurgeGithubTarget {
+    /// Purge old nightly images from GitHub container registry
     Nightly {
         #[arg(long, default_value = "30")]
         older_than: u32,
@@ -186,15 +222,6 @@ enum PurgeTarget {
     },
     /// Purge untagged GitHub container images
     Untagged {
-        #[arg(long, default_value = "30")]
-        older_than: u32,
-        #[arg(long)]
-        dry_run: bool,
-        #[arg(long, help = "Skip confirmation prompt")]
-        yes: bool,
-    },
-    /// Purge old vector-dev images from Docker Hub
-    VectorDev {
         #[arg(long, default_value = "30")]
         older_than: u32,
         #[arg(long)]
@@ -281,61 +308,71 @@ fn main() -> Result<()> {
         }
         Command::Purge { target } => {
             let client = Client::new();
-            let github_token =
-                std::env::var("GITHUB_TOKEN").context("GITHUB_TOKEN not set")?;
-            let docker_username =
-                std::env::var("DOCKER_USERNAME").context("DOCKER_USERNAME not set")?;
-            let docker_password =
-                std::env::var("DOCKER_PASSWORD").context("DOCKER_PASSWORD not set")?;
             match target {
-                PurgeTarget::Nightly { older_than, dry_run, yes } => {
-                    let dh_repo = std::env::var("DOCKERHUB_NIGHTLY_REPO")
-                        .unwrap_or_else(|_| "timberio/vector".to_string());
-                    purge::purge_github_versions(
-                        &client,
-                        &github_token,
-                        Path::new("out/purge/nightly_github.jsonl"),
-                        older_than,
-                        dry_run,
-                        yes,
-                        |t| t.contains("nightly"),
-                    )?;
-                    purge::purge_dockerhub_images(
-                        &client,
-                        &dh_repo,
-                        &docker_username,
-                        &docker_password,
-                        Path::new("out/purge/nightly_dockerhub.jsonl"),
-                        30,
-                        dry_run,
-                        yes,
-                        |t| t.starts_with("nightly"),
-                    )
+                PurgeTarget::Dockerhub { target } => {
+                    let docker_username =
+                        std::env::var("DOCKER_USERNAME").context("DOCKER_USERNAME not set")?;
+                    let docker_password =
+                        std::env::var("DOCKER_PASSWORD").context("DOCKER_PASSWORD not set")?;
+                    match target {
+                        PurgeDockerHubTarget::Nightly { older_than, dry_run, yes } => {
+                            let dh_repo = std::env::var("DOCKERHUB_NIGHTLY_REPO")
+                                .unwrap_or_else(|_| "timberio/vector".to_string());
+                            purge::purge_dockerhub_images(
+                                &client,
+                                &dh_repo,
+                                &docker_username,
+                                &docker_password,
+                                Path::new("out/purge/nightly_dockerhub.jsonl"),
+                                older_than,
+                                dry_run,
+                                yes,
+                                |t| t.starts_with("nightly"),
+                            )
+                        }
+                        PurgeDockerHubTarget::VectorDev { older_than, dry_run, yes } => {
+                            let dh_repo = std::env::var("DOCKERHUB_VECTOR_DEV_REPO")
+                                .unwrap_or_else(|_| "timberio/vector-dev".to_string());
+                            purge::purge_dockerhub_images(
+                                &client,
+                                &dh_repo,
+                                &docker_username,
+                                &docker_password,
+                                Path::new("out/purge/vector_dev_dockerhub.jsonl"),
+                                older_than,
+                                dry_run,
+                                yes,
+                                |_| true,
+                            )
+                        }
+                    }
                 }
-                PurgeTarget::Untagged { older_than, dry_run, yes } => {
-                    purge::purge_github_untagged_versions(
-                        &client,
-                        &github_token,
-                        Path::new("out/purge/untagged_github.jsonl"),
-                        older_than,
-                        dry_run,
-                        yes,
-                    )
-                }
-                PurgeTarget::VectorDev { older_than, dry_run, yes } => {
-                    let dh_repo = std::env::var("DOCKERHUB_VECTOR_DEV_REPO")
-                        .unwrap_or_else(|_| "timberio/vector-dev".to_string());
-                    purge::purge_dockerhub_images(
-                        &client,
-                        &dh_repo,
-                        &docker_username,
-                        &docker_password,
-                        Path::new("out/purge/vector_dev_dockerhub.jsonl"),
-                        older_than,
-                        dry_run,
-                        yes,
-                        |_| true,
-                    )
+                PurgeTarget::Github { target } => {
+                    let github_token =
+                        std::env::var("GITHUB_TOKEN").context("GITHUB_TOKEN not set")?;
+                    match target {
+                        PurgeGithubTarget::Nightly { older_than, dry_run, yes } => {
+                            purge::purge_github_versions(
+                                &client,
+                                &github_token,
+                                Path::new("out/purge/nightly_github.jsonl"),
+                                older_than,
+                                dry_run,
+                                yes,
+                                |t| t.contains("nightly"),
+                            )
+                        }
+                        PurgeGithubTarget::Untagged { older_than, dry_run, yes } => {
+                            purge::purge_github_untagged_versions(
+                                &client,
+                                &github_token,
+                                Path::new("out/purge/untagged_github.jsonl"),
+                                older_than,
+                                dry_run,
+                                yes,
+                            )
+                        }
+                    }
                 }
             }
         }
