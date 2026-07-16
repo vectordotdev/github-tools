@@ -28,15 +28,6 @@ const PALETTE: &[&str] = &[
 
 const EXCLUDE_LABELS: &[&str] = &["no-changelog", "meta: awaiting author"];
 
-const KNOWN_BOT_LOGINS: &[&str] = &[
-    "dependabot", "dependabot-preview", "renovate",
-    "handlerbot", "step-security-bot", "tronboto",
-];
-
-fn is_bot(login: &str) -> bool {
-    login.ends_with("[bot]") || KNOWN_BOT_LOGINS.contains(&login)
-}
-
 fn label_color(name: &str) -> &'static str {
     match name {
         "type: bug"  | "Bug"                => "#FF4C4C",
@@ -1062,10 +1053,7 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
     let pr_label_counts = read_csv(&format!("{input_dir}/{prefix}_pull_requests.label_counts.csv"))?;
     let issues_open_by_label = read_csv(&format!("{input_dir}/{prefix}_issues.open_by_label.csv"))?;
     let pr_open_by_label = read_csv(&format!("{input_dir}/{prefix}_pull_requests.open_by_label.csv"))?;
-    let pr_contributor: Vec<HashMap<String, String>> = read_csv(&format!("{input_dir}/{prefix}_pull_requests.contributor_monthly.csv"))?
-        .into_iter()
-        .filter(|r| !r.get("user_login").map(|u| is_bot(u)).unwrap_or(false))
-        .collect();
+    let pr_contributor: Vec<HashMap<String, String>> = read_csv(&format!("{input_dir}/{prefix}_pull_requests.contributor_monthly.csv"))?;
 
     // ── Derive column lists ──
     let issues_monthly_cols: Vec<String> = if let Some(first) = issues_monthly.first() {
@@ -1197,10 +1185,10 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
         let mut entries = Vec::new();
         let filtered_contrib = filter_by_start(&pr_contributor, start);
         if let Some(chart) = contributor_heatmap(&filtered_contrib) {
-            entries.push(chart_to_entry_h("Contributor Heatmap", Some("Last 12 months, top 10 contributors · draft PRs and known bot accounts excluded"), &chart, 350)?);
+            entries.push(chart_to_entry_h("Contributor Heatmap", Some("Last 12 months, top 10 contributors · draft PRs excluded"), &chart, 350)?);
         }
         if let Some(chart) = unique_contributors_monthly(&filtered_contrib) {
-            entries.push(chart_to_entry("Contributors Monthly", Some("Draft PRs and known bot accounts excluded"), &chart)?);
+            entries.push(chart_to_entry("Contributors Monthly", Some("Draft PRs excluded"), &chart)?);
         }
         let all_contrib: Vec<&HashMap<String, String>> = pr_contributor.iter().collect();
 
