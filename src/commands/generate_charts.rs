@@ -28,6 +28,16 @@ const PALETTE: &[&str] = &[
 
 const EXCLUDE_LABELS: &[&str] = &["no-changelog", "meta: awaiting author"];
 
+fn slugify(s: &str) -> String {
+    s.chars()
+        .map(|c| if c.is_ascii_alphanumeric() { c.to_ascii_lowercase() } else { '-' })
+        .collect::<String>()
+        .split('-')
+        .filter(|p| !p.is_empty())
+        .collect::<Vec<_>>()
+        .join("-")
+}
+
 fn label_color(name: &str) -> &'static str {
     match name {
         "type: bug"  | "Bug"                => "#FF4C4C",
@@ -883,14 +893,16 @@ fn render_html(repo_display: &str, sections: &[(&str, Vec<ChartEntry>)], notes_h
 
     for (section_title, entries) in sections {
         if entries.is_empty() { continue; }
+        let section_slug = slugify(section_title);
         body.push_str(&format!(
-            "<div class=\"section-title\">{}</div>\n",
+            "<div class=\"section-title\" id=\"{section_slug}\">{}<a class=\"anchor\" href=\"#{section_slug}\">#</a></div>\n",
             html_escape(section_title)
         ));
         for entry in entries {
             n += 1;
+            let card_slug = slugify(&entry.title);
             body.push_str(&format!(
-                "<div class=\"card\"><h3 class=\"chart-title\">{}</h3><div id=\"c{n}\" data-chart style=\"height:{}px;\"></div>",
+                "<div class=\"card\" id=\"{card_slug}\"><h3 class=\"chart-title\">{}<a class=\"anchor\" href=\"#{card_slug}\">#</a></h3><div id=\"c{n}\" data-chart style=\"height:{}px;\"></div>",
                 html_escape(&entry.title),
                 entry.height_px
             ));
@@ -928,6 +940,10 @@ fn render_html(repo_display: &str, sections: &[(&str, Vec<ChartEntry>)], notes_h
     .section-title {{ font-size: 1.25em; font-weight: 600; border-bottom: 1px solid #d0d7de; padding-bottom: 8px; margin: 32px 0 16px 0; }}
     .card {{ background: white; border: 1px solid #d0d7de; border-radius: 6px; padding: 16px; margin-bottom: 16px; }}
     .chart-title {{ margin: 0 0 12px 0; font-size: 1em; font-weight: 600; color: #24292f; }}
+    .chart-title .anchor {{ opacity: 0; margin-left: 6px; color: #0969da; text-decoration: none; font-weight: 400; }}
+    .chart-title:hover .anchor {{ opacity: 1; }}
+    .section-title .anchor {{ opacity: 0; margin-left: 6px; color: #0969da; text-decoration: none; font-weight: 400; }}
+    .section-title:hover .anchor {{ opacity: 1; }}
     .chart-note {{ color: #656d76; font-size: 0.85em; margin: 8px 0 0 0; font-style: italic; }}
     .stats-meta {{ color: #656d76; font-size: 0.85em; margin: 16px 0 8px 0; }}
     .stats-table {{ border-collapse: collapse; font-size: 0.9em; margin-bottom: 16px; }}
