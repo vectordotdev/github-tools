@@ -2897,7 +2897,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-07-09T16:45:14Z",
     "created_at": "2025-03-10T14:43:38Z",
     "id": 2907516226,
     "issue_type": "Task",
@@ -2910,9 +2910,9 @@
       }
     ],
     "number": 1330,
-    "state": "open",
+    "state": "closed",
     "title": "Delete `string_path` feature",
-    "updated_at": "2025-03-10T14:46:39Z",
+    "updated_at": "2026-07-09T16:45:14Z",
     "user": {
       "login": "pront"
     }
@@ -7368,7 +7368,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-07-01T14:32:20Z",
     "created_at": "2025-10-01T04:25:44Z",
     "draft": false,
     "id": 2876812978,
@@ -7389,9 +7389,9 @@
     ],
     "number": 1520,
     "pull_request": {},
-    "state": "open",
-    "title": "chore(deps): bump ordered-float from 4.6.0 to 5.1.0",
-    "updated_at": "2026-04-14T20:49:59Z",
+    "state": "closed",
+    "title": "chore(deps): bump ordered-float from 4.6.0 to 5.3.0",
+    "updated_at": "2026-07-01T14:32:22Z",
     "user": {
       "login": "dependabot"
     }
@@ -7789,12 +7789,18 @@
         "description": "Changes to the standard library",
         "id": 8863369235281820815,
         "name": "vrl: stdlib"
+      },
+      {
+        "color": "C2E0C6",
+        "description": "Changes to the web playground",
+        "id": 7953488220197710270,
+        "name": "playground"
       }
     ],
     "number": 1535,
     "state": "open",
     "title": "xxHash functions not providing the correct output",
-    "updated_at": "2026-06-01T14:08:41Z",
+    "updated_at": "2026-07-07T13:11:06Z",
     "user": {
       "login": "ryn9"
     }
@@ -8509,7 +8515,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(deps): bump the prost group with 4 updates",
-    "updated_at": "2026-06-01T07:27:44Z",
+    "updated_at": "2026-07-01T14:07:21Z",
     "user": {
       "login": "dependabot"
     }
@@ -9021,6 +9027,20 @@
     "updated_at": "2025-12-24T18:09:24Z",
     "user": {
       "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-07-07T19:47:19Z",
+    "created_at": "2025-08-18T11:07:09Z",
+    "id": 4831582891,
+    "issue_type": "Bug",
+    "labels": [],
+    "number": 1849,
+    "state": "closed",
+    "title": "thread 'vector-worker' panicked: Formatting argument out of range",
+    "updated_at": "2026-07-07T19:47:19Z",
+    "user": {
+      "login": "charlie0129"
     }
   }
 ]

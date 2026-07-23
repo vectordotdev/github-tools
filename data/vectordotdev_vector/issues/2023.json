@@ -211,7 +211,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-07-15T20:03:45Z",
     "created_at": "2023-01-02T15:11:16Z",
     "id": 1516494233,
     "issue_type": "Bug",
@@ -224,9 +224,9 @@
       }
     ],
     "number": 15796,
-    "state": "open",
+    "state": "closed",
     "title": "Dash \"-\" not supporter in secret_key",
-    "updated_at": "2026-02-21T20:39:14Z",
+    "updated_at": "2026-07-15T20:03:45Z",
     "user": {
       "login": "luk-ada"
     }
@@ -594,12 +594,6 @@
     "issue_type": "Enhancement",
     "labels": [
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "F687F6",
         "description": "Anything `centos` platform related",
         "id": 4873163311517673697,
@@ -621,7 +615,7 @@
     "number": 15817,
     "state": "open",
     "title": "Build all packages for older glibc",
-    "updated_at": "2026-06-02T15:31:32Z",
+    "updated_at": "2026-06-12T20:24:33Z",
     "user": {
       "login": "bruceg"
     }
@@ -7643,9 +7637,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5EAAF6",
@@ -8630,9 +8624,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "343639",
@@ -14128,7 +14122,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-22T17:50:09Z",
     "created_at": "2023-02-09T20:45:24Z",
     "id": 1578589446,
     "issue_type": null,
@@ -14153,9 +14147,9 @@
       }
     ],
     "number": 16381,
-    "state": "open",
+    "state": "closed",
     "title": "Detect vdev integration running state",
-    "updated_at": "2023-04-04T18:08:21Z",
+    "updated_at": "2026-06-22T17:50:27Z",
     "user": {
       "login": "bruceg"
     }
@@ -27183,7 +27177,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-22T21:03:25Z",
     "created_at": "2023-03-28T16:55:41Z",
     "id": 1644337548,
     "issue_type": "Bug",
@@ -27202,9 +27196,9 @@
       }
     ],
     "number": 16980,
-    "state": "open",
+    "state": "closed",
     "title": "`cargo vdev build component-docs` should require argument and more helpful message printed in misuse",
-    "updated_at": "2026-02-21T20:39:49Z",
+    "updated_at": "2026-06-22T21:03:25Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -28825,7 +28819,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-22T17:50:26Z",
     "created_at": "2023-04-04T17:54:34Z",
     "id": 1654318951,
     "issue_type": null,
@@ -28844,9 +28838,9 @@
       }
     ],
     "number": 17051,
-    "state": "open",
+    "state": "closed",
     "title": "Replace custom integration runner in `vdev` with compose",
-    "updated_at": "2023-04-04T17:54:34Z",
+    "updated_at": "2026-06-22T17:50:26Z",
     "user": {
       "login": "bruceg"
     }
@@ -33173,9 +33167,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "343639",
@@ -48690,15 +48684,21 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `splunk_hec_metrics` sink related",
+        "id": 2729017698418463843,
+        "name": "sink: splunk_hec_metrics"
       }
     ],
     "number": 18010,
     "state": "open",
     "title": "Splunk sink doesn't fetch the hostname by meaning",
-    "updated_at": "2026-05-29T23:15:23Z",
+    "updated_at": "2026-06-12T19:16:22Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -51364,21 +51364,27 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "343639",
         "description": "Anything related to Vector's memory/disk buffers",
         "id": 3389798092856007937,
         "name": "domain: buffers"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `splunk_hec_metrics` sink related",
+        "id": 2729017698418463843,
+        "name": "sink: splunk_hec_metrics"
       }
     ],
     "number": 18130,
     "state": "open",
     "title": "Uptick in dropped events from disk buffer InvalidProtobufPayload errors",
-    "updated_at": "2026-05-29T23:15:51Z",
+    "updated_at": "2026-06-12T19:14:46Z",
     "user": {
       "login": "sbalmos"
     }
@@ -63312,7 +63318,7 @@
     "number": 18690,
     "state": "open",
     "title": "`datadog_agent` source is not processing V2 API payload from Datadog agent accurately.",
-    "updated_at": "2026-05-29T23:17:19Z",
+    "updated_at": "2026-06-22T17:12:05Z",
     "user": {
       "login": "rpriyanshu9"
     }
@@ -63863,7 +63869,7 @@
     "number": 18718,
     "state": "closed",
     "title": "Upgrading Debian package to v0.33.0 overwrites configuration",
-    "updated_at": "2026-05-29T23:17:28Z",
+    "updated_at": "2026-07-15T17:09:02Z",
     "user": {
       "login": "osalmi"
     }
@@ -64561,10 +64567,10 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-07-09T21:39:25Z",
     "created_at": "2023-10-03T18:30:15Z",
     "id": 1924701396,
-    "issue_type": null,
+    "issue_type": "Task",
     "labels": [
       {
         "color": "BF72F6",
@@ -64574,9 +64580,9 @@
       }
     ],
     "number": 18753,
-    "state": "open",
+    "state": "closed",
     "title": "Remove 'string_path' feature from the VRL crate",
-    "updated_at": "2025-11-18T22:09:51Z",
+    "updated_at": "2026-07-09T22:28:56Z",
     "user": {
       "login": "pront"
     }
@@ -66878,9 +66884,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 18867,
@@ -70865,15 +70871,22 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-07-23T18:19:21Z",
     "created_at": "2023-11-02T09:05:19Z",
     "id": 1973803442,
     "issue_type": "Bug",
-    "labels": [],
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain: external docs"
+      }
+    ],
     "number": 19027,
-    "state": "open",
+    "state": "closed",
     "title": "[docs] File sink example config does not work",
-    "updated_at": "2026-05-29T23:18:16Z",
+    "updated_at": "2026-07-23T18:19:21Z",
     "user": {
       "login": "abeluck"
     }
@@ -73195,9 +73208,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5EAAF6",
@@ -74198,7 +74211,7 @@
     "number": 19179,
     "state": "open",
     "title": "Upgrade the `http` crate to version 1.0.0",
-    "updated_at": "2025-12-10T17:25:53Z",
+    "updated_at": "2026-06-29T18:08:45Z",
     "user": {
       "login": "bruceg"
     }
@@ -78591,7 +78604,7 @@
     "number": 19397,
     "state": "open",
     "title": "AppendBlob support for azure_blob sink",
-    "updated_at": "2026-05-30T00:09:34Z",
+    "updated_at": "2026-06-15T13:18:11Z",
     "user": {
       "login": "linuraj"
     }
@@ -78986,9 +78999,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 19417,
@@ -79021,7 +79034,7 @@
     "number": 19418,
     "state": "open",
     "title": "GCP PubSub Source: messages stop being picked up and do not resume until restart",
-    "updated_at": "2026-05-29T23:19:33Z",
+    "updated_at": "2026-07-20T14:52:54Z",
     "user": {
       "login": "siyegen"
     }
@@ -79863,7 +79876,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-29T18:56:45Z",
     "created_at": "2023-12-22T19:28:37Z",
     "id": 2054433814,
     "issue_type": "Enhancement",
@@ -79882,9 +79895,9 @@
       }
     ],
     "number": 19457,
-    "state": "open",
+    "state": "closed",
     "title": "Add max connection age settings to gRPC servers for improved load balancing",
-    "updated_at": "2026-06-11T12:58:49Z",
+    "updated_at": "2026-06-29T18:56:45Z",
     "user": {
       "login": "dsmith3197"
     }

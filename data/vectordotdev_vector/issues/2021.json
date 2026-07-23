@@ -6382,12 +6382,6 @@
         "name": "needs: approval"
       },
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "343639",
         "description": "Anything related to the Vector Remap Language",
         "id": 4994616880674351535,
@@ -7025,12 +7019,6 @@
     "id": 787508296,
     "issue_type": "Enhancement",
     "labels": [
-      {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
       {
         "color": "343639",
         "description": "Anything related to the Vector Remap Language",
@@ -12868,9 +12856,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 6368,
@@ -14586,9 +14574,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 6452,
@@ -18588,12 +18576,6 @@
         "description": "Needs review & approval before work can begin.",
         "id": 389285363867189610,
         "name": "needs: approval"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
       },
       {
         "color": "343639",
@@ -34406,9 +34388,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -38570,7 +38552,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-22T21:06:17Z",
     "created_at": "2021-05-27T20:59:16Z",
     "id": 904183904,
     "issue_type": "Task",
@@ -38583,9 +38565,9 @@
       }
     ],
     "number": 7622,
-    "state": "open",
+    "state": "closed",
     "title": "Ensure `Cargo.lock` is up-to-date in CI",
-    "updated_at": "2026-02-21T20:46:43Z",
+    "updated_at": "2026-06-22T21:06:17Z",
     "user": {
       "login": "bruceg"
     }
@@ -39533,9 +39515,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -40630,12 +40612,6 @@
         "name": "needs: approval"
       },
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "343639",
         "description": "Anything related to Vector's reliability",
         "id": 5669051342270066101,
@@ -40881,7 +40857,7 @@
     "number": 7735,
     "state": "open",
     "title": "Document the HTTP provider (and providers in general)",
-    "updated_at": "2022-12-28T20:26:35Z",
+    "updated_at": "2026-07-12T02:40:25Z",
     "user": {
       "login": "leebenson"
     }
@@ -45875,9 +45851,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 7993,
@@ -48998,7 +48974,7 @@
     "title": "Document Prometheus Remote Write Source protocol",
     "updated_at": "2026-06-01T13:12:58Z",
     "user": {
-      "login": "CarlosEssun"
+      "login": "essuner"
     }
   },
   {
@@ -50333,7 +50309,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-22T20:57:46Z",
     "created_at": "2021-07-10T13:50:25Z",
     "id": 941254210,
     "issue_type": "Bug",
@@ -50346,9 +50322,9 @@
       }
     ],
     "number": 8227,
-    "state": "open",
+    "state": "closed",
     "title": "Installer Cannot Install On Ubuntu With ZSH",
-    "updated_at": "2026-02-21T20:35:36Z",
+    "updated_at": "2026-06-22T20:57:46Z",
     "user": {
       "login": "veverkap"
     }
@@ -54391,7 +54367,7 @@
     "number": 8435,
     "state": "open",
     "title": "FIPS compliance Epic",
-    "updated_at": "2026-05-29T23:38:00Z",
+    "updated_at": "2026-07-19T16:38:27Z",
     "user": {
       "login": "jszwedko"
     }
@@ -56024,12 +56000,18 @@
         "description": "Anything `socket` source related",
         "id": 4862344537635261167,
         "name": "source: socket"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's performance",
+        "id": 7501419672228520413,
+        "name": "domain: performance"
       }
     ],
     "number": 8518,
     "state": "open",
     "title": "Improve Vector's throughput for UDP protocols",
-    "updated_at": "2026-06-02T15:12:08Z",
+    "updated_at": "2026-07-14T16:01:24Z",
     "user": {
       "login": "jszwedko"
     }
@@ -57557,9 +57539,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 8601,
@@ -69263,7 +69245,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-22T20:59:16Z",
     "created_at": "2021-09-17T18:17:52Z",
     "id": 999611092,
     "issue_type": "Bug",
@@ -69276,9 +69258,9 @@
       }
     ],
     "number": 9221,
-    "state": "open",
+    "state": "closed",
     "title": "VRL function reference always highlights last item in the section",
-    "updated_at": "2026-02-21T20:36:01Z",
+    "updated_at": "2026-06-22T20:59:16Z",
     "user": {
       "login": "spencergilbert"
     }
@@ -69356,9 +69338,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "343639",
@@ -70937,9 +70919,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "343639",
@@ -71575,9 +71557,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -72413,9 +72395,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 9355,
@@ -74219,9 +74201,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "343639",
@@ -74630,9 +74612,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -74807,9 +74789,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -76969,15 +76951,21 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `splunk_hec_metrics` sink related",
+        "id": 2729017698418463843,
+        "name": "sink: splunk_hec_metrics"
       }
     ],
     "number": 9570,
     "state": "open",
     "title": "Enabling \"Template Syntax\" for Splunk HEC sink's endpoint config",
-    "updated_at": "2026-06-02T15:18:49Z",
+    "updated_at": "2026-06-12T19:16:53Z",
     "user": {
       "login": "tomer-epstein"
     }
@@ -80267,9 +80255,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "343639",
@@ -80300,9 +80288,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "343639",
@@ -82284,9 +82272,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -82299,12 +82287,18 @@
         "description": "Anything `splunk` service provider related",
         "id": 7494142469098352203,
         "name": "provider: splunk"
+      },
+      {
+        "color": "5ED9F6",
+        "description": "Anything `splunk_hec_metrics` sink related",
+        "id": 2729017698418463843,
+        "name": "sink: splunk_hec_metrics"
       }
     ],
     "number": 9834,
     "state": "open",
     "title": "Passthrough and use Splunk HEC channel IDs for indexer acknowledgement ",
-    "updated_at": "2026-06-02T15:20:36Z",
+    "updated_at": "2026-06-12T19:16:39Z",
     "user": {
       "login": "wbew"
     }
@@ -83147,9 +83141,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "343639",
@@ -93413,9 +93407,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 10349,
@@ -95776,7 +95770,7 @@
     "number": 10445,
     "state": "closed",
     "title": "Soak Test Improvements",
-    "updated_at": "2026-06-02T15:24:16Z",
+    "updated_at": "2026-06-12T20:21:51Z",
     "user": {
       "login": "blt"
     }
@@ -98850,12 +98844,6 @@
     "issue_type": "Enhancement",
     "labels": [
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "5ED9F6",
         "description": "Anything `splunk_hec` source related",
         "id": 7446686954895602327,
@@ -98865,7 +98853,7 @@
     "number": 10574,
     "state": "open",
     "title": "Allow enabling indexer acks on a per-channel basis for `splunk_hec` source",
-    "updated_at": "2026-06-02T15:24:42Z",
+    "updated_at": "2026-06-12T20:24:34Z",
     "user": {
       "login": "jszwedko"
     }

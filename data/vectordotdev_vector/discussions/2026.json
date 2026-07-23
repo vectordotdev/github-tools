@@ -155,8 +155,8 @@
     "locked": false,
     "number": 24499,
     "stateReason": null,
-    "title": "Q&A",
-    "updatedAt": "2026-04-29T01:38:26Z",
+    "title": "What are the main issues that keep MQTT source and sink from being promoted to \"stable\"?",
+    "updatedAt": "2026-06-11T19:11:21Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24499"
   },
@@ -309,15 +309,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-01-26T17:49:33Z",
     "isAnswered": null,
     "locked": false,
     "number": 24544,
     "stateReason": null,
-    "title": "Migrating from Discord to Github Discussions",
-    "updatedAt": "2026-01-26T17:49:33Z",
+    "title": "Migrating support from Discord to Github Discussions",
+    "updatedAt": "2026-06-25T12:38:13Z",
     "upvoteCount": 3,
     "url": "https://github.com/vectordotdev/vector/discussions/24544"
   },
@@ -749,12 +749,12 @@
       "totalCount": 1
     },
     "createdAt": "2026-03-20T20:52:32Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24989,
     "stateReason": null,
     "title": "Help: log_to_metric count does not match Loki log count",
-    "updatedAt": "2026-03-27T15:02:24Z",
+    "updatedAt": "2026-06-11T18:49:01Z",
     "upvoteCount": 0,
     "url": "https://github.com/vectordotdev/vector/discussions/24989"
   },
@@ -766,18 +766,18 @@
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-06-17T15:05:48Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-03-26T08:35:39Z",
     "isAnswered": false,
     "locked": false,
     "number": 25049,
-    "stateReason": null,
+    "stateReason": "RESOLVED",
     "title": "Incremental and absolute metrics and missing finalizers",
-    "updatedAt": "2026-03-26T08:51:42Z",
+    "updatedAt": "2026-06-17T15:05:48Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/25049"
   },
@@ -953,7 +953,7 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-05-01T15:05:33Z",
     "isAnswered": false,
@@ -961,7 +961,7 @@
     "number": 25341,
     "stateReason": null,
     "title": "Is it possible to have regular expression strings spanning multiple lines?",
-    "updatedAt": "2026-05-01T15:06:15Z",
+    "updatedAt": "2026-07-08T02:50:02Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/25341"
   },
@@ -999,7 +999,7 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-05-06T18:36:16Z",
     "isAnswered": false,
@@ -1007,7 +1007,7 @@
     "number": 25383,
     "stateReason": null,
     "title": "no_proxy plain domain entries don't match subdomains (inconsistent with Go/curl/Python behavior)",
-    "updatedAt": "2026-05-06T18:36:16Z",
+    "updatedAt": "2026-07-06T10:29:10Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/25383"
   },
@@ -1045,7 +1045,7 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-05-08T16:39:35Z",
     "isAnswered": false,
@@ -1053,7 +1053,7 @@
     "number": 25396,
     "stateReason": null,
     "title": "Alternatives to lua for my use case",
-    "updatedAt": "2026-05-13T17:54:17Z",
+    "updatedAt": "2026-07-15T19:34:52Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/25396"
   },
@@ -1160,7 +1160,7 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2026-05-19T16:32:24Z",
     "isAnswered": false,
@@ -1168,7 +1168,7 @@
     "number": 25461,
     "stateReason": null,
     "title": "Can Vector drop old files from the checkpointing?",
-    "updatedAt": "2026-05-28T01:06:54Z",
+    "updatedAt": "2026-07-08T02:50:05Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/25461"
   },
@@ -1263,5 +1263,350 @@
     "updatedAt": "2026-05-30T10:43:12Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/25534"
+  },
+  {
+    "author": {
+      "login": "jonasrichard"
+    },
+    "bodyText": "I need to chase a concurrency issue and for that I need to understand what timeout and sleep exactly do in Batcher poll_next function. Here it is the code\nMy doubt is: why do we set a timeout if there is anything in the batch in line 79.\nSo what I think happens:\n\nPoll::Ready(None) (line 62) is quite clear: if we reached the end of the stream, depending on what we collected return None or the remaining batch\nPoll::Pending (line 90) is also okay: if we have a timer set, let us wait 'timeout' duration and give back the batch. If there is nothing in the batch, timer is set to None in line 76, so we don't wait. Also there is a debug assert to cover that inconsistency. If we don't have timer here, we just return Pending\nPoll::Ready(Some(item)) line 71: once we get an item, let us check if it fits in the batch.\n\nIf it fits and makes the batch full, set the timer no None and return the batch (so we have this.state.len() == 0)\nIf Item fits but the batch is not full and we have a single Item in the batch (?), set the timer, but here we don't return with that single item, but going to the top of the loop and poll the stream. If there isn't anything more in the stream this single item is waiting here in the batch and maybe only after a significant time we can return that from this function (this is the doubtful part).\nIf Item doesn't fit, take the batch return that and save the item to the new batch. Here also we set the timer, so the next pending part we again wait for timeout quantity time.\n\n\n\nNot sure if there is a role of the timeout (quality of service) but I think here we wait at least two times without we need to.\nWhat do others think? Am I confused or have spotted something?",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-06-15T14:29:20Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 25624,
+    "stateReason": null,
+    "title": "vector-stream Batcher doubts",
+    "updatedAt": "2026-06-17T14:07:26Z",
+    "upvoteCount": 3,
+    "url": "https://github.com/vectordotdev/vector/discussions/25624"
+  },
+  {
+    "author": {
+      "login": "dl1jat"
+    },
+    "bodyText": "Question\nI want to enroll vector on windows machines with ansible.\nUnfortunately I didn't found anything about this, only a few older roles deploying to linux machines.\nThe first pitfall I ran into: When I tried to install scripted it hangs. :(\n- name: Install Vector\n  ansible.windows.win_package:\n    path: \"{{ vector_windows_msi_path }}\"\n    state: present\n    arguments: /quiet\n    chdir: \"{{ vector_windows_temp_path }}\"\n(Download etc. worked)\nDo I need other arguments for the installer? I would like to avoid using 'win_shell'.\nNext: I didn't find a guide for configuring vector on windows correctly. For instance I was surprised, that no service is created, or that I need to set a data_dir which doesn't look like the default for linux.\n\nis there any guidance for windows configuration\nor a example for creating a windows service which is always started?\n\nVector Config\nNo response\nVector Logs\nNo response",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2026-06-25T08:30:07Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 25680,
+    "stateReason": null,
+    "title": "Ansible based deployment on Windows",
+    "updatedAt": "2026-06-25T08:30:07Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25680"
+  },
+  {
+    "author": {
+      "login": "OhGlacer"
+    },
+    "bodyText": "Question\nHi!\nCurrently working with vector-0.45.0-distroless-libc version.\nMain goal is to get logs from a k8s worker host machine, i chose to use an journald source.\nAs I can see, the only way to get journald source working in distroless image is to mount journalctl binary and libraries required for its launch (additionally to the existing volumes in default daemonset provided at https://github.com/vectordotdev/vector/blob/master/distribution/kubernetes/vector-agent/daemonset.yaml).\nAm I correct, or I can use journald source without manually providing binary and libs in daemonset?\nVector Config\nNo response\nVector Logs\nNo response",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-06-25T15:31:21Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 25683,
+    "stateReason": null,
+    "title": "Q&A",
+    "updatedAt": "2026-06-29T19:32:27Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25683"
+  },
+  {
+    "author": {
+      "login": "htam-net"
+    },
+    "bodyText": "Question\nHello\nI would like to be able to pull metrics from a kafka topic source and expose them with prometheus exporter sink.\nLibreNMS -> Kafka -> Vector -> Prometheus Exporter\nWith the supplied configuration (and VRL program), I am able to get and transform event into table of metrics. But As vector top cli command shows, all events are outputted from the remap with VRL transform but none gets in the prometheus exporter sink.\nI added the reroute_dropped parameter (with the correspondingfile sink)  but no message is output in this dropped sink.\nI haven't found the expected format that is expected in input for the prometheus exporter sink.\nNB : I was able to expose internal vector metrics with an other prometheus exporter sink (no problem)\nHere a sample message from the kafka topic (in 1 line) :\n{\n    \"measurement\": \"ports\",\n    \"fields\": {\n        \"INOCTETS\": \"38525827765\",\n        \"OUTOCTETS\": \"138659900139\",\n        \"INERRORS\": \"0\",\n        \"OUTERRORS\": \"0\",\n        \"INUCASTPKTS\": \"55716873\",\n        \"OUTUCASTPKTS\": \"84610249\",\n        \"INNUCASTPKTS\": null,\n        \"OUTNUCASTPKTS\": null,\n        \"INDISCARDS\": \"0\",\n        \"OUTDISCARDS\": \"0\",\n        \"INUNKNOWNPROTOS\": null,\n        \"INBROADCASTPKTS\": \"1308652\",\n        \"OUTBROADCASTPKTS\": \"11585320\",\n        \"INMULTICASTPKTS\": \"2883812\",\n        \"OUTMULTICASTPKTS\": \"230907583\",\n        \"ifInUcastPkts_rate\": 4,\n        \"ifOutUcastPkts_rate\": 3,\n        \"ifInErrors_rate\": 0,\n        \"ifOutErrors_rate\": 0,\n        \"ifInOctets_rate\": 1419,\n        \"ifOutOctets_rate\": 16413,\n        \"ifInBits_rate\": 7233,\n        \"ifOutBits_rate\": 130241\n    },\n    \"tags\": {\n        \"ifName\": \"tw1\",\n        \"ifAlias\": \"portTW1\",\n        \"ifIndex\": 1,\n        \"current_polled_time\": 1781853005,\n        \"hostname\": \"1.2.3.4\"\n    }\n\nVector Config\ndata_dir: /tmp/vector\napi: \n  enabled: true\n  address: \"0.0.0.0:8686\"\nschema:\n  # enabled: true\n  validation: true\n\nsources:\n  kafka_metrics_id:\n    type: kafka\n    bootstrap_servers: localhost:9092\n    group_id: group-de-vector\n    topics:\n      - mylibrenms\n\ntransforms:\n  my_parse_metrics_id:\n    type: remap\n    reroute_dropped: true\n    inputs:\n      - kafka_metrics_id\n    file: ./vector-librenms2Kafka2Prometheus-transform.vrl\n      \nsinks:\n  my_sink_id:\n    type: prometheus_exporter\n    inputs:\n      - my_parse_metrics_id\n    address: \"0.0.0.0:9598\"\n  \ndropped:\n    type: file\n    inputs:\n      - my_parse_metrics_id.dropped\n    encoding:\n      codec: text\n    path: /tmp/vector/dropped-%Y-%m-%d.log\n\nmy VRL transform program : ./vector-librenms2Kafka2Prometheus-transform.vrl\n\nmessage = parse_json!(.message)\ntstamp = .timestamp\ntopic = .topic\n\n# 2. Extracting tags to reuse them for each metric\nlabels = {}\nif exists(message.tags) {\n    for_each(object!(message.tags)) -> |key, val| {\n        label_obj = {}\n        if is_null(val) {\n            labels=set!(labels, path: [key], data: \"null\")\n        } else {         \n            labels=set!(labels, path: [key], data: val)\n        }\n    }\n    # adding the kafka topic as label for further tracability\n    labels=set!(labels, [\"topic\"], topic)\n}\n\n# defining the namespace from measurement\nnamespace = message.measurement\n\n# Initialize final table of metrics\nmetrics = []\nif exists(message.fields) {\n    # parse all fields in the log event that must be transformed into metrics\n    for_each(object!(message.fields)) -> |field_name, field_value| {\n        \n        # On ignore les valeurs nulles pour ne pas polluer Prometheus\n        if !is_null(field_value) {\n        \n            # check for gauge or counter value type\n            type_kind = \"gauge\"\n            kind = \"absolute\"\n            if ends_with(field_name, \"OCTETS\") || ends_with(field_name, \"PKTS\") || ends_with(field_name, \"ERRORS\") || ends_with(field_name, \"DISCARDS\") {\n                type_kind = \"counter\"\n                kind = \"incremental\"\n            }\n        \n            # Conversion in float\n            parsed_value = to_float(field_value) ?? 0.0\n            \n            # Construction of the metric object in Vector format\n            metric_obj = {\n                \"name\": field_name,\n                \"namespace\" : namespace,\n                \"kind\": kind,\n                \"tags\": labels,\n                \"timestamps\" : tstamp\n            }\n        \n            # adding the value depending on type\n            if type_kind == \"counter\" {\n                metric_obj.counter = { \"value\": parsed_value }\n            } else {\n                metric_obj.gauge = { \"value\": parsed_value }\n            }\n            \n            # Adding a \"metric\" header\n            # from example : https://vector.dev/docs/reference/configuration/transforms/log_to_metric/#examples-counter\n            metric_master_obj = {\n                \"metric\": metric_obj\n            }\n\n            # Ajout au tableau global\n            metrics = push(metrics, metric_master_obj)\n        }\n    }\n}\n\n# 4. Final replacement to output\n. = metrics\n\n.\n\n### Vector Logs\n\nVector Logs display no error (event in trace mode).",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": true,
+    "closedAt": "2026-07-09T06:55:38Z",
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2026-06-25T19:29:14Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 25685,
+    "stateReason": "RESOLVED",
+    "title": "Q&A : kafka-transported Metrics into Prometheus exporter",
+    "updatedAt": "2026-07-09T06:55:38Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25685"
+  },
+  {
+    "author": {
+      "login": "JayJay-K"
+    },
+    "bodyText": "Question\nHello.\nNow I'm gathering security events with json format from the Tetragon solution.\nAnd I deployed Vector and its source is tetragon event file.\nNow I hope to send them to Wazuh server without Wazuh agent.\nI know Wazuh solution introduces SSH connection from Wazuh server to endpoint to get an events.\nBut it's not a proper solution to get Tetragon events from endpoint.\nAdditionally, Wazuh solution recommand using Wazuh agent to get Tetragon events with following connections\nendpoint:[Tetragon event log file --> Wazuh agent] ------> server:[Wazuh server]\nBut I hope to use vector to send Tetragon event to Wazuh server without Wazuh agent.\nDo you happen to have a good idea for it?\nThanks.\nVector Config\nNo response\nVector Logs\nNo response",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-07-06T06:49:16Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 25749,
+    "stateReason": null,
+    "title": "Do you know the way to send event to the Wazuh server without wazuh agent.",
+    "updatedAt": "2026-07-22T01:31:44Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25749"
+  },
+  {
+    "author": {
+      "login": "htam-net"
+    },
+    "bodyText": "Question\nHello everyone,\nI try to reconstruct a longer message splited in several chunks (all chunks have an unique chunk_id, and all chunks of the same message share a message_id to use in group_by). Also, all chunks include a total_chunk variable.\nin the merge_strategies, I place the variable chunk_id in array, so I can manage the possible out-of-order chunks in a later remap transform.\nTo optimize, I'm looking for a solution to be able to count the already grouped_by chunks and when it equals the total_chunks, the ends_when clause.\nI also try to add a .chunk_count = 1 variable and sum it in the reduce, the .chunk_count variable in the ends_when is not updated either.\nHow can I access the value of these \"reduced\" variables in the ends_when statement ?\nVector Config\nreduce_chunks:\n    type: reduce\n    inputs:\n      - udp_source\n    group_by: \n      - \"message_id\" # all chunks with the message_id (UUID) are part of the same original message\n    merge_strategies:\n      chunk: \"array\"       # We place all chunk in a array\n      chunk_id: \"array\"     # We place all chunk_id in a array to be able to reorder in a later remap transform\n      total_chunks: \"discard\" # We keep the first one (because all value are \n    ends_when: \n      type: vrl\n      source: |\n        log(\"Start Verifying last message\", level: \"info\", rate_limit_secs: 0)\n        log(.chunk_id, level: \"info\", rate_limit_secs: 0) # We can see in the logs that .chunk_id is still an int and not an array\n        if is_array(.chunk_id) {\n          if exists(.total_chunks) {\n            log(\"array chunk_id is present and so is .total_chunks\", level: \"info\", rate_limit_secs: 0)\n            if length(array!(.chunk_id)) >= to_int!(.total_chunks) {\n              log(\"this is last message\", level: \"info\", rate_limit_secs: 0)\n              true\n            } else {\n              log(\"message is not the last\", level: \"info\", rate_limit_secs: 0)\n              false\n            }\n          } else {\n            log(\".total_chunks is missing\", level: \"info\", rate_limit_secs: 0)\n            false\n          }\n        } else {                \n          log(\"no array of .chunk_id\", level: \"info\", rate_limit_secs: 0)\n          false\n        }\nVector Logs\n2026-07-06T18:22:16.865912Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: Start Verifying last message internal_log_rate_secs=0 vrl_position=0\n2026-07-06T18:22:16.865921Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: 0 internal_log_rate_secs=0 vrl_position=82\n2026-07-06T18:22:16.865928Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: no array of .chunk_id internal_log_rate_secs=0 vrl_position=657\n2026-07-06T18:22:16.865966Z TRACE transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vector_common::internal_event::events_received: Internal log [Events received.] is being suppressed to avoid flooding.\n2026-07-06T18:22:16.865975Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: Start Verifying last message internal_log_rate_secs=0 vrl_position=0\n2026-07-06T18:22:16.865981Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: 1 internal_log_rate_secs=0 vrl_position=82\n2026-07-06T18:22:16.865987Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: no array of .chunk_id internal_log_rate_secs=0 vrl_position=657\n2026-07-06T18:22:16.866213Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: Start Verifying last message internal_log_rate_secs=0 vrl_position=0\n2026-07-06T18:22:16.866226Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: 2 internal_log_rate_secs=0 vrl_position=82\n2026-07-06T18:22:16.866295Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: no array of .chunk_id internal_log_rate_secs=0 vrl_position=657\n2026-07-06T18:22:16.866360Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: Start Verifying last message internal_log_rate_secs=0 vrl_position=0\n2026-07-06T18:22:16.866390Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: 3 internal_log_rate_secs=0 vrl_position=82\n2026-07-06T18:22:16.866406Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: no array of .chunk_id internal_log_rate_secs=0 vrl_position=657\n2026-07-06T18:22:16.866445Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: Start Verifying last message internal_log_rate_secs=0 vrl_position=0\n2026-07-06T18:22:16.866494Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: 4 internal_log_rate_secs=0 vrl_position=82\n2026-07-06T18:22:16.866516Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: no array of .chunk_id internal_log_rate_secs=0 vrl_position=657\n2026-07-06T18:22:16.866589Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: Start Verifying last message internal_log_rate_secs=0 vrl_position=0\n2026-07-06T18:22:16.866636Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: 5 internal_log_rate_secs=0 vrl_position=82\n2026-07-06T18:22:16.866665Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: no array of .chunk_id internal_log_rate_secs=0 vrl_position=657\n2026-07-06T18:22:16.866778Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: Start Verifying last message internal_log_rate_secs=0 vrl_position=0\n2026-07-06T18:22:16.866799Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: 6 internal_log_rate_secs=0 vrl_position=82\n2026-07-06T18:22:16.866814Z  INFO transform{component_kind=\"transform\" component_id=reduce_chunks component_type=reduce}: vrl::stdlib::log::implementation: no array of .chunk_id internal_log_rate_secs=0 vrl_position=657",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": true,
+    "closedAt": "2026-07-08T12:41:29Z",
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2026-07-06T20:44:36Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 25754,
+    "stateReason": "RESOLVED",
+    "title": "Q&A : In a reduce transform, How to access array or sum values in the ends_when vrl condition ?",
+    "updatedAt": "2026-07-08T12:41:53Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25754"
+  },
+  {
+    "author": {
+      "login": "devopsmash"
+    },
+    "bodyText": "Question\nI need to capture containerStatuses.lastState from pod statuses to monitor failure exit codes like 1 or 137.\nWhat is the correct Vector configuration for this?\n\nVector Config\nNo response\nVector Logs\nNo response",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-07-08T08:59:33Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 25775,
+    "stateReason": null,
+    "title": "How to forward pod status containerStatuses lastState?",
+    "updatedAt": "2026-07-15T19:34:51Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/vectordotdev/vector/discussions/25775"
+  },
+  {
+    "author": {
+      "login": "mgfnv9"
+    },
+    "bodyText": "When trying to configure dynamic Kafka topics based on Kubernetes metadata (kubernetes_logs source) while deploying Vector via the official Helm chart, there is a syntax collision between Helm (Go templates) and Vector's native templating syntax ({{ ... }}).To ReproduceConfiguring the topic field inside values.yaml under customConfig like this:yamltopic: '{{ kubernetes.node.labels.kubcluster_name }}-{{ kubernetes.namespace }}'\nИспользуйте код с осторожностью.Causes Helm to fail during helm template or execution phase with the following error:texterror calling tpl: cannot parse template ... template: gotpl:18: function \"kubernetes\" not defined\nHow to define kafka topic like this '%{[kubernetes.node.labels.kubcluster_name]}-%{[kubernetes.namespace]}'",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-07-13T13:12:41Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 25812,
+    "stateReason": null,
+    "title": "Add like FileBeat topic: '%{[kubernetes.node.labels.kubcluster_name]}-%{[kubernetes.namespace]}'",
+    "updatedAt": "2026-07-15T10:27:05Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25812"
+  },
+  {
+    "author": {
+      "login": "leandrojmp"
+    },
+    "bodyText": "Question\nHello,\nWe use vector in a couple of ways in an ingestion data flow, our configuration files use both env variable interpolation and templates to dynamically send data into a sink.\nFor environment variable interpolation it seems that I would need to set VECTOR_DANGEROUSLY_ALLOW_ENV_VAR_INTERPOLATION=true in the environment used by the systemd vector service.\nBut what would be the alternative? Using secrets? It is not clear from the upgrade guide.\nHaving to set a variable named VECTOR_DANGEROUSLY_ALLOW_ENV_VAR_INTERPOLATION will probably generate issues from our security team and scanning tools.\nRegarding the template confinement for sinks, it is correct to assume that it will only affect templates that does not have a fixed prefix ?\nFor example, on our kafka sink we dynamically create the topic using something like this:\ntopic: \"logs-{{ log_topic }}\"\n\nThe field log_topic is extracted from the message, in this case vector will consider that it is already confined because of the prefix and will start normally, right?\nI'm sharing an example of our config as well:\nVector Config\n# vector\n# ingestion layer\n#\n\nlog_schema:\n  timestamp_key: \"vector.ingestion_timestamp\"\n  message_key: \"vector.ingestion_message\"\n\nsources:\n  logs:\n    type: http_server\n    address: 0.0.0.0:5045\n    encoding: json\n    method: POST\n    auth:\n      username: \"${VECTOR_HTTP_USER}\"\n      password: \"${VECTOR_HTTP_PASS}\"\n    path: /logs\n    path_key: vector_request_path\n    response_code: 200\n    strict_path: false\n\n  status:\n    type: http_server\n    address: 0.0.0.0:5040\n    encoding: json\n    method: GET\n    path: /status\n    path_key: vector_request_path\n    response_code: 200\n    strict_path: true\n\n# transform\n\ntransforms:\n  topic:\n    inputs: [ \"logs\" ]\n    type: remap\n    drop_on_error: true\n    source: |\n      . |= parse_groks!(\n                .vector_request_path,\n                patterns: [\n                    \"^/logs/%{DATA:log_topic}\"\n                ]\n            )\n      del(.source_type)\n      del(.vector_request_path)\n  event:\n    inputs: [\"*\"]\n    type: filter\n    condition:\n      type: \"vrl\"\n      source: \".log_topic != null\"\n\n# sinks\n\nsinks:\n  kafka:\n    type: kafka\n    inputs: [\"event\"]\n    bootstrap_servers: \"${VECTOR_KAFKA_BROKERS}\"\n    topic: \"logs-{{log_topic}}\"\n    encoding:\n      codec: json\n    librdkafka_options:\n      message.max.bytes: \"10000000\"\n\nVector Logs\nNo response",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2026-07-15T13:18:09Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 25843,
+    "stateReason": null,
+    "title": "Confusion about required changes described in 0.57 upgrade guide",
+    "updatedAt": "2026-07-15T16:43:19Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25843"
+  },
+  {
+    "author": {
+      "login": "JayJay-K"
+    },
+    "bodyText": "Question\nHello.\nI injected vector container to the tetragon pod.\n(but the situation is same when I install vector pod with daemonset)\nThe pods restart again and again:\n[admin@bastion]$ kubectl get pod\nNAME                               READY   STATUS    RESTARTS          AGE\ntetragon-jxpv2                     2/3     Running   451 (3m59s ago)   41h\n\nI checked the vector container's log and I could see following logs:\n2026-07-15T22:53:58.847021Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:15.148924Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: HTTP error. error=error trying to connect: tcp connect error: Connection refused (os error 111) error_type=\"request_failed\" stage=\"processing\"\n2026-07-15T22:54:15.148967Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:17.978948Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: Internal log [HTTP error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:17.978994Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Internal log [Retrying after error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:18.758516Z  INFO vector::signal: Signal received. signal=\"SIGTERM\"\n2026-07-15T22:54:18.758563Z  INFO vector: Vector is stopping.\n2026-07-15T22:54:18.759779Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components=\"tet_out, tet_out2, tet_in\" time_remaining=\"59 seconds left\"\n\nI think it might happen because of consecutive \"connection refuse\".\nWhat is the best way to prevent \"RESTART\" vector, in case consecutive \"connection refuse\"?\nThanks.\nVector Config\n  sources:\n     tet_in:\n       type: file\n       include:\n       - /var/run/cilium/tetragon/tetragon.log\n       read_from: \"end\"\n\n   sinks:\n     tet_out2:\n       inputs:\n       - tet_in\n\n       # Sink to HTTPD\n       encoding:\n         codec: text\n       type: http\n       uri: http://[2001:100:100:11::280]:56789\n\nVector Logs\n2026-07-15T22:53:58.847021Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:15.148924Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: HTTP error. error=error trying to connect: tcp connect error: Connection refused (os error 111) error_type=\"request_failed\" stage=\"processing\"\n2026-07-15T22:54:15.148967Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:17.978948Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: Internal log [HTTP error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:17.978994Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Internal log [Retrying after error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:18.758516Z  INFO vector::signal: Signal received. signal=\"SIGTERM\"\n2026-07-15T22:54:18.758563Z  INFO vector: Vector is stopping.\n2026-07-15T22:54:18.759779Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components=\"tet_out, tet_out2, tet_in\" time_remaining=\"59 seconds left\"",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-07-15T23:21:33Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 25854,
+    "stateReason": null,
+    "title": "Vector pods restart continuously because of \"connection refuse\" from the target.",
+    "updatedAt": "2026-07-22T01:30:07Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25854"
+  },
+  {
+    "author": {
+      "login": "DarkAvery1"
+    },
+    "bodyText": "Question\nHello, Vector.dev community!\nWe're currently migrating our logging pipeline \"from Kafka -> Logstash -> Elasticsearch\" to \"Kafka -> Vector -> Elasticsearch\" and have run into a couple of performance issues. We'd really appreciate any advice or recommendations.\nOur Elasticsearch cluster consists of three hot nodes. The previous \"Kafka -> Logstash -> Elasticsearch\" pipeline handled the indexing workload without any noticeable problems. However, after switching to Vector, we've observed the following:\n\nVector is unable to keep up with Elasticsearch's indexing throughput. At peak load, its internal buffers occasionally fill up, causing backpressure and delays.\nHorizontal scaling doesn't improve overall throughput. A single Vector instance(16 cpu 24 ram) processes around 2 million events per minute. When we scale to two Vector instances, each processes only about 1 million events per minute, so the total throughput remains the same instead of increasing.\nWe understand that the bottleneck may be in Elasticsearch or Kafka rather than Vector itself, but so far we haven't been able to identify the root cause.\nHas anyone experienced similar behavior or can suggest which components or settings we should investigate? Any recommendations for tuning Vector, Kafka, or Elasticsearch for higher indexing throughput would be greatly appreciated.\n\nVector Config\nlog_schema:\n  timestamp_key: \"@timestamp\"\n\nsources:\n  wazuh_indexing_source:\n    type: kafka\n    bootstrap_servers: kafka01:9093, kafka02:9093, kafka03:9093, kafka04:9093\n    group_id: \"indexing_es\"\n    topics:\n      - topic\n    auto_offset_reset: 'earliest'\n    decoding:\n      codec: json\n    tls:\n      enabled: true\n      ca_file: '/etc/vector/cert/ca.pem'\n      verify_certificate: true\n      verify_hostname: true\n      crt_file: '/etc/vector/cert/user-cert.pem'\n      key_file: '/etc/vector/cert/priv.pem'\n    acknowledgements:\n      enabled: true\n\nsinks:\n  wazuh_indexing_sink:\n    type: elasticsearch\n    inputs:\n      - wazuh_indexing_source\n    endpoints:\n      - https://ingest1:9200\n      - https://ingest2:9200\n      - https://ingest3:9200\n    opensearch_service_type: managed\n    auth:\n      strategy: basic\n      user: admin\n      password: admin\n    tls:\n      ca_file: /etc/vector/cert/root-ca.pem\n    bulk:\n      action: \"create\"\n      index: \"{{ .fields.index_prefix }}%Y.%m.%d\"\n    compression: zstd\n    request_retry_partial: true\n    batch:\n      max_events: 10000\n      max_bytes: 200000000\n      timeout_secs: 0.1\n    request:\n      rate_limit_duration_secs: 60\n      rate_limit_num: 300\n      retry_max_duration_secs: 300\n      concurrency: 32\n    buffer:\n    - type: memory\n      max_events: 50000",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-07-16T03:33:04Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 25855,
+    "stateReason": null,
+    "title": "Are we doing something wrong or having performance problems with Elasticsearch?",
+    "updatedAt": "2026-07-20T09:52:11Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25855"
+  },
+  {
+    "author": {
+      "login": "malhoudmouad"
+    },
+    "bodyText": "Question\nHey,\nI know it's not the standard or the common practice, but is there a way to fetch/pull from the agregator (agregator -> multiple agents) instead of having agents pushing (multiples agents -> agregator) ?\nIn a context where security policy inforces that the domain is the one that goes to reach outside (instead of the outside reaching to the inside of the network)..\nThanks\nVector Config\nNo response\nVector Logs\nNo response",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-07-16T19:03:40Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 25876,
+    "stateReason": null,
+    "title": "Fetch instead of pull?",
+    "updatedAt": "2026-07-22T17:25:14Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25876"
+  },
+  {
+    "author": {
+      "login": "Xyaren"
+    },
+    "bodyText": "Question\nHi Vector team,\nI have a question regarding the new template confinement behavior introduced in Vector 0.57.\nI am using the Loki sink with labels like:\nlabels:\n  host: \"{{ .host }}\"\n  service_name: \"{{ .service_name }}\"\n  level: \"{{ .level }}\"\nAfter upgrading to 0.57, validation fails with:\nSink \"loki\": template references event fields ([\".level\"]) but has no literal string prefix to derive a confinement base from. Add a static prefix to your template, or set dangerously_allow_unconfined_template_resolution: true to opt out.\nI understand the reasoning behind template confinement for cases where templates control things like paths, URLs, object keys, topics, etc.\nHowever, for Loki labels this creates a problem: adding a literal prefix changes the actual label value and therefore changes the Loki stream identity.\nFor example:\nBefore:\n{host=\"lx0001\", level=\"info\"}\nWith the suggested workaround:\nhost: \"host={{ .host }}\"\nbecomes:\n{host=\"host=lx0001\", level=\"level=info\"}\nThis breaks existing LogQL queries, dashboards, and alerts because the label schema has changed.\nIs there currently a recommended way to keep dynamic Loki label values unchanged while satisfying the confinement rules?\nPossible solutions I can think of:\n\nA non-template field reference syntax for Loki labels (if feasible), e.g. directly mapping event fields.\nTreating Loki labels differently from routing/resource templates since they are metadata dimensions rather than destinations.\nAllowing a confinement prefix that is not included in the final rendered value.\nAny other migration pattern I may have missed.\n\nFor now, the only backwards-compatible option seems to be:\ndangerously_allow_unconfined_template_resolution: true\nbut I wanted to confirm whether this is the intended approach for Loki labels or whether a better migration path exists.\nThanks!\nVector Config\n# Loki sink to send logs\nsinks:\n  loki:\n    # Sink ID and type\n    inputs:\n      - validate_before_sink\n    type: loki\n\n    # Loki endpoint configuration\n    endpoint: http://10.86.255.3:3100\n    healthcheck:\n      enabled: false\n\n    remove_label_fields: true\n    # Labels to attach to logs\n    labels:\n      host: \"{{ .host }}\"  # Attach the host as a label\n      service_name: \"{{ .service_name }}\"  # Attach the journald unit as a label\n      #severity: \"{{ severity }}\"  # Attach the transformed severity as a label\n      level: \"{{ .level }}\"  # Attach the transformed severity as a label\n\n    # Encoding options for Loki\n    encoding:\n      timestamp_format: \"rfc3339\"  # Format for timestamps\n      codec: json  # Logs are sent as JSON\n\n    compression: snappy\n\n    dangerously_allow_unconfined_template_resolution: true #https://vector.dev/highlights/2026-07-14-0-57-0-upgrade-guide/\nVector Logs\n2026-07-19T11:45:12.357778Z  WARN sink{component_kind=\"sink\" component_id=loki component_type=loki}: vector::template: SECURITY: component has `dangerously_allow_unconfined_template_resolution` enabled — template is NOT confined. A log producer that controls any field used in the template can write to arbitrary keys. component_kind=\"sink\" component_type=\"loki\" field=\"labels\"",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": true,
+    "closedAt": "2026-07-20T17:05:05Z",
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-07-19T11:43:24Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 25894,
+    "stateReason": "RESOLVED",
+    "title": "Loki sink labels and dangerously_allow_unconfined_template_resolution after Vector 0.57",
+    "updatedAt": "2026-07-21T08:07:10Z",
+    "upvoteCount": 2,
+    "url": "https://github.com/vectordotdev/vector/discussions/25894"
+  },
+  {
+    "author": {
+      "login": "cmellongoempyrean"
+    },
+    "bodyText": "Question\nThere doesn't seem to be any documentation of the rationale or implementation behind the rationale changes and they don't make sense to me so I'm seeking some clarification.\nThey seem to be targeted at preventing route traversal attacks, but they're applied to many fields which are not routes. It's also not clear that, in a general case, adding a string prefix actually prevents traversal attacks unless accompanied by other mitigations, which would be sink-specific.\nThe behavior is also not clear. Given the example of the file sink, how exactly does the base_dir prevent traversal? What's the behavior if a string like \"../../etc\" is passed to the event?\nI would have expected sink implementations to attempt to prevent naive injection attacks by using quoting. If that's not something we can rely on and we need to ensure our templates are secure against injection, we need tools beyond just adding a literal prefix, that will let us appropriately escape potentially dangerous characters.\nIn #25894, it was stated that the recommendation is to have literal prefixes on your loki metadata values. Why is that recommended? What kind of attack is that preventing?\nIn the cloudwatch sink, which is what I was using when I encountered this issue at upgrade, why isn't the log_group attribute a sufficient confinement base?\nConfinement feels like a very blunt instrument with a lot of splash radius, that was applied broadly in a lot of cases that that aren't really justified. I'd like to be wrong about this, and to be able to have some detailed explanations in the documentation.\nIf there are docs and I didn't find them, I apologize - I searched for \"confinement\" and the only results were the upgrade guides.\nVector Config\nNo response\nVector Logs\nNo response",
+    "category": {
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-07-20T19:38:22Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 25907,
+    "stateReason": null,
+    "title": "Q&A Seeking clarification on confinement changes",
+    "updatedAt": "2026-07-22T16:10:38Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25907"
+  },
+  {
+    "author": {
+      "login": "shalk"
+    },
+    "bodyText": "Hi All,\nWith Vector deployed across many VMs, fleet management would greatly simplify configuration handling.\nI see Grafana Alloy has a Fleet API—does anyone know if there’s a proposal or plan to add this to Vector?\nThanks!",
+    "category": {
+      "name": "General"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-07-22T03:42:40Z",
+    "isAnswered": false,
+    "locked": false,
+    "number": 25918,
+    "stateReason": null,
+    "title": "Vector Fleet Management Proposal?",
+    "updatedAt": "2026-07-22T19:32:03Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/25918"
   }
 ]

@@ -44,5 +44,28 @@
     "updatedAt": "2026-02-24T14:19:10Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vrl/discussions/1633"
+  },
+  {
+    "author": {
+      "login": "Shabhareash"
+    },
+    "bodyText": "I had an idea for a feature to be added to vector especially for high volume log sources (Tb of logs per day). Essentially we use a set of static rules and remove the flexibility of vector. I have the repo here : https://github.com/Shabhareash/RustLogger .\nI know the figures in the repo does not make sense (But that is what I got ) and to the best of my knowledge it seems right . Kindly let me know where I made the mistake. Thanks",
+    "category": {
+      "name": "Ideas"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-07-18T17:18:50Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 1863,
+    "stateReason": null,
+    "title": "High speed parser using SIMD and Aho-corasick ? ( I think i made some silly mistake in my repo )",
+    "updatedAt": "2026-07-21T16:28:09Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vrl/discussions/1863"
   }
 ]

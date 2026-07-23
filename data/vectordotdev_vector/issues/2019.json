@@ -2347,9 +2347,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -3862,9 +3862,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 272,
@@ -4166,12 +4166,6 @@
         "name": "needs: requirements"
       },
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "343639",
         "description": "Anything related to Vector's networking",
         "id": 7280804221978411925,
@@ -4199,7 +4193,7 @@
     "number": 288,
     "state": "open",
     "title": "TCP load balancing & failover",
-    "updated_at": "2026-06-01T20:44:37Z",
+    "updated_at": "2026-06-12T20:24:57Z",
     "user": {
       "login": "binarylogic"
     }
@@ -4983,9 +4977,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -5108,12 +5102,6 @@
         "description": "Needs review & approval before work can begin.",
         "id": 389285363867189610,
         "name": "needs: approval"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
       },
       {
         "color": "343639",
@@ -5270,12 +5258,6 @@
         "description": "Needs review & approval before work can begin.",
         "id": 389285363867189610,
         "name": "needs: approval"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
       }
     ],
     "number": 342,
@@ -5356,9 +5338,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -5433,9 +5415,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -5490,9 +5472,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -5617,9 +5599,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -6041,9 +6023,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -8688,9 +8670,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -8789,9 +8771,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -10125,12 +10107,6 @@
         "description": "Needs a a list of requirements before work can be begin",
         "id": 1231413994313482691,
         "name": "needs: requirements"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
       },
       {
         "color": "343639",
@@ -13119,12 +13095,6 @@
         "name": "needs: approval"
       },
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "343639",
         "description": "Anything related to the Vector's sinks",
         "id": 6524463192304363030,
@@ -14269,12 +14239,6 @@
         "name": "needs: approval"
       },
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "87F6C9",
         "description": "This feature is nice to have. It is low priority.",
         "id": 1298089048407485492,
@@ -14302,7 +14266,7 @@
     "number": 768,
     "state": "open",
     "title": "Vector operator for Kubernetes",
-    "updated_at": "2026-02-23T14:31:38Z",
+    "updated_at": "2026-06-12T20:24:56Z",
     "user": {
       "login": "tlvenn"
     }
@@ -14990,9 +14954,9 @@
       },
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "5ED9F6",
@@ -16339,12 +16303,6 @@
         "name": "needs: approval"
       },
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "5EAAF6",
         "description": "Anything `aws` service provider related",
         "id": 7964646415162525070,
@@ -16366,7 +16324,7 @@
     "number": 873,
     "state": "open",
     "title": "Support AWS Lambda (router scenario)",
-    "updated_at": "2026-02-23T14:31:41Z",
+    "updated_at": "2026-06-12T20:24:55Z",
     "user": {
       "login": "binarylogic"
     }
@@ -18117,12 +18075,6 @@
         "name": "needs: approval"
       },
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "343639",
         "description": "Anything related to releasing Vector",
         "id": 843604899509384131,
@@ -18148,12 +18100,6 @@
         "description": "Needs review & approval before work can begin.",
         "id": 389285363867189610,
         "name": "needs: approval"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
       },
       {
         "color": "343639",
@@ -18526,12 +18472,6 @@
         "description": "Needs review & approval before work can begin.",
         "id": 389285363867189610,
         "name": "needs: approval"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
       }
     ],
     "number": 980,
@@ -20074,12 +20014,6 @@
         "name": "needs: approval"
       },
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "F687F6",
         "description": "Anything `docker` platform related",
         "id": 7462033205188313656,
@@ -20101,7 +20035,7 @@
     "number": 1050,
     "state": "open",
     "title": "Snapcraft.io snaps for Vector",
-    "updated_at": "2026-02-21T20:44:56Z",
+    "updated_at": "2026-06-12T20:24:54Z",
     "user": {
       "login": null
     }
@@ -20338,12 +20272,6 @@
         "description": "Needs a a list of requirements before work can be begin",
         "id": 1231413994313482691,
         "name": "needs: requirements"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
       }
     ],
     "number": 1061,
@@ -20436,7 +20364,7 @@
     "number": 1065,
     "state": "open",
     "title": "Only warn about small files when they are not empty",
-    "updated_at": "2026-06-01T20:49:10Z",
+    "updated_at": "2026-07-10T21:32:38Z",
     "user": {
       "login": "binarylogic"
     }
@@ -24388,7 +24316,7 @@
     "number": 1256,
     "state": "closed",
     "title": "Include a comment indicating that a file is auto-generated to auto-generated files",
-    "updated_at": "2020-03-26T00:02:00Z",
+    "updated_at": "2026-07-12T00:11:38Z",
     "user": {
       "login": null
     }
@@ -24476,12 +24404,6 @@
         "name": "needs: requirements"
       },
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "343639",
         "description": "Anything related to the Vector's sinks",
         "id": 6524463192304363030,
@@ -24509,7 +24431,7 @@
     "number": 1260,
     "state": "open",
     "title": "New `slack` sink",
-    "updated_at": "2026-02-23T14:31:56Z",
+    "updated_at": "2026-06-12T20:24:54Z",
     "user": {
       "login": "binarylogic"
     }
@@ -25130,7 +25052,7 @@
     "number": 1293,
     "state": "open",
     "title": "New `kubernetes_system_events` source",
-    "updated_at": "2026-06-01T20:49:54Z",
+    "updated_at": "2026-07-02T13:46:24Z",
     "user": {
       "login": "binarylogic"
     }
@@ -27536,12 +27458,6 @@
         "description": "Needs a a list of requirements before work can be begin",
         "id": 1231413994313482691,
         "name": "needs: requirements"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
       }
     ],
     "number": 1398,
@@ -28221,12 +28137,6 @@
         "name": "needs: approval"
       },
       {
-        "color": "FFF068",
-        "description": "Needs more demand before work can begin, +1 or comment to support.",
-        "id": 7098877837014006856,
-        "name": "needs: more demand"
-      },
-      {
         "color": "343639",
         "description": "Anything related to Vector's metrics events",
         "id": 3968334348399022300,
@@ -28254,7 +28164,7 @@
     "number": 1426,
     "state": "open",
     "title": "New `prometheus_alertmanager` source and sink",
-    "updated_at": "2026-02-23T14:32:07Z",
+    "updated_at": "2026-06-12T20:24:53Z",
     "user": {
       "login": "jogster"
     }
