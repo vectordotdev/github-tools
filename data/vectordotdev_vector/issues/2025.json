@@ -4577,7 +4577,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "docs(external): fix wording in common sinks components docs",
-    "updated_at": "2026-03-05T16:12:21Z",
+    "updated_at": "2026-06-16T06:28:10Z",
     "user": {
       "login": "esensar"
     }
@@ -4729,7 +4729,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-07-08T18:20:50Z",
     "created_at": "2025-01-30T15:11:51Z",
     "id": 2821090831,
     "issue_type": "Enhancement",
@@ -4742,9 +4742,9 @@
       }
     ],
     "number": 22328,
-    "state": "open",
+    "state": "closed",
     "title": "Optimize the `Integration Test Suite` to build a reusable Vector image",
-    "updated_at": "2026-06-02T15:34:13Z",
+    "updated_at": "2026-07-08T18:20:50Z",
     "user": {
       "login": "pront"
     }
@@ -5385,7 +5385,7 @@
     "number": 22369,
     "state": "open",
     "title": "exclude_paths_glob_patterns in kubernetes_logs reads logs twice - downstream costs impact",
-    "updated_at": "2026-05-29T23:25:18Z",
+    "updated_at": "2026-06-29T14:30:12Z",
     "user": {
       "login": "shahar-I-levy"
     }
@@ -5564,7 +5564,7 @@
     "number": 22379,
     "state": "open",
     "title": "Splunk integration tests are failing",
-    "updated_at": "2025-10-01T16:31:43Z",
+    "updated_at": "2026-07-08T17:55:15Z",
     "user": {
       "login": "pront"
     }
@@ -10013,7 +10013,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-24T17:46:53Z",
     "created_at": "2025-03-06T09:46:39Z",
     "draft": false,
     "id": 2375865051,
@@ -10034,9 +10034,9 @@
     ],
     "number": 22603,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): use fasyslog for creating syslog payload",
-    "updated_at": "2026-01-17T15:17:54Z",
+    "updated_at": "2026-06-24T17:47:05Z",
     "user": {
       "login": "tisonkun"
     }
@@ -11844,15 +11844,15 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-29T07:32:23Z",
     "created_at": "2025-03-19T16:42:22Z",
     "id": 2932479886,
     "issue_type": "Feature",
     "labels": [],
     "number": 22692,
-    "state": "open",
+    "state": "closed",
     "title": "Dynamically change log level",
-    "updated_at": "2026-05-30T00:12:25Z",
+    "updated_at": "2026-06-29T07:32:23Z",
     "user": {
       "login": "homelab8330"
     }
@@ -15493,7 +15493,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(websocket_server sink): properly display client count in websocket_server debug logs",
-    "updated_at": "2025-04-11T16:00:46Z",
+    "updated_at": "2026-06-15T08:19:58Z",
     "user": {
       "login": "esensar"
     }
@@ -17467,22 +17467,22 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-12T19:12:37Z",
     "created_at": "2025-04-30T18:02:40Z",
     "id": 3032074993,
     "issue_type": "Bug",
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 22969,
-    "state": "open",
+    "state": "closed",
     "title": "Sink: Splunk HEC \"raw\" does not frame events",
-    "updated_at": "2026-05-29T23:26:09Z",
+    "updated_at": "2026-06-12T19:12:38Z",
     "user": {
       "login": "milas"
     }
@@ -18145,7 +18145,7 @@
     "number": 23008,
     "state": "open",
     "title": "cli validate - better messages with filenames and line numbers when validating the configuration",
-    "updated_at": "2026-05-30T00:12:48Z",
+    "updated_at": "2026-06-27T11:36:37Z",
     "user": {
       "login": "Daryes"
     }
@@ -18744,9 +18744,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 23041,
@@ -20282,7 +20282,7 @@
     "number": 23121,
     "state": "open",
     "title": "Use DNS addresses as returned from the server",
-    "updated_at": "2026-05-29T23:26:28Z",
+    "updated_at": "2026-07-22T21:46:23Z",
     "user": {
       "login": "jimrollenhagen"
     }
@@ -21030,9 +21030,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       },
       {
         "color": "343639",
@@ -21278,7 +21278,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(sinks): Loki Sink supports setting requests of persistent connection",
-    "updated_at": "2026-05-20T13:56:51Z",
+    "updated_at": "2026-06-28T06:16:15Z",
     "user": {
       "login": "tiantangkuohai"
     }
@@ -21689,11 +21689,18 @@
     "created_at": "2025-06-11T17:00:28Z",
     "id": 3137526973,
     "issue_type": "Feature",
-    "labels": [],
+    "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to configuring Vector",
+        "id": 4606596601252306592,
+        "name": "domain: config"
+      }
+    ],
     "number": 23188,
     "state": "open",
     "title": "Warn on unknown fields",
-    "updated_at": "2026-05-30T00:13:07Z",
+    "updated_at": "2026-06-30T14:11:47Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -25122,7 +25129,7 @@
     "number": 23346,
     "state": "open",
     "title": "Connection errors with filebeat as agent and logstash source",
-    "updated_at": "2026-06-01T19:26:33Z",
+    "updated_at": "2026-07-10T17:23:26Z",
     "user": {
       "login": "sourcedelica"
     }
@@ -25548,9 +25555,9 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-07-23T18:19:20Z",
     "created_at": "2025-07-11T19:49:08Z",
-    "draft": true,
+    "draft": false,
     "id": 2660166513,
     "issue_type": null,
     "labels": [
@@ -25563,9 +25570,9 @@
     ],
     "number": 23364,
     "pull_request": {},
-    "state": "open",
-    "title": "feat(website): update for deeply nested examples",
-    "updated_at": "2025-09-03T17:52:23Z",
+    "state": "closed",
+    "title": "fix(website): include required encoding field in sink example configs",
+    "updated_at": "2026-07-23T18:19:30Z",
     "user": {
       "login": "pront"
     }
@@ -27496,7 +27503,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(dnstap source): increase request limit for TCP dnstap source",
-    "updated_at": "2025-08-06T15:21:24Z",
+    "updated_at": "2026-06-15T08:20:13Z",
     "user": {
       "login": "esensar"
     }
@@ -28090,7 +28097,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-07-20T18:26:18Z",
     "created_at": "2025-07-30T19:40:53Z",
     "id": 3278245516,
     "issue_type": "Bug",
@@ -28103,9 +28110,9 @@
       }
     ],
     "number": 23474,
-    "state": "open",
+    "state": "closed",
     "title": "Splunk integration tests are failing",
-    "updated_at": "2025-07-30T19:40:53Z",
+    "updated_at": "2026-07-20T18:26:18Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -29558,7 +29565,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(dnstap source): change type of `max_frame_handling_tasks` to `usize`",
-    "updated_at": "2025-08-06T17:42:58Z",
+    "updated_at": "2026-06-15T08:20:31Z",
     "user": {
       "login": "esensar"
     }
@@ -30124,9 +30131,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 23559,
@@ -32489,7 +32496,7 @@
     "number": 23659,
     "state": "open",
     "title": "Investigate and eliminate `allow` statements",
-    "updated_at": "2026-06-05T21:07:02Z",
+    "updated_at": "2026-07-05T06:52:34Z",
     "user": {
       "login": "pront"
     }
@@ -33632,9 +33639,9 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-07-16T19:19:35Z",
     "created_at": "2025-09-02T15:05:56Z",
-    "draft": true,
+    "draft": false,
     "id": 2793022411,
     "issue_type": null,
     "labels": [
@@ -33659,9 +33666,9 @@
     ],
     "number": 23702,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(ci): move changelog fragment validation to vdev/Rust",
-    "updated_at": "2025-11-13T20:16:20Z",
+    "updated_at": "2026-07-16T19:19:45Z",
     "user": {
       "login": "pront"
     }
@@ -34591,7 +34598,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-17T17:44:59Z",
     "created_at": "2025-09-08T18:24:10Z",
     "draft": true,
     "id": 2809140277,
@@ -34630,9 +34637,9 @@
     ],
     "number": 23739,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "[WIP] Fix `http`, `hyper`, `tower`, `axum`, `warp` dependency Hell",
-    "updated_at": "2025-09-08T20:31:22Z",
+    "updated_at": "2026-06-17T17:45:11Z",
     "user": {
       "login": "pront"
     }
@@ -34801,9 +34808,9 @@
     "labels": [
       {
         "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
+        "description": "Anything `splunk_hec_logs` sink related",
         "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
+        "name": "sink: splunk_hec_logs"
       }
     ],
     "number": 23748,
@@ -40276,7 +40283,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-18T14:07:29Z",
     "created_at": "2025-10-11T22:09:36Z",
     "draft": false,
     "id": 2907051980,
@@ -40303,9 +40310,9 @@
     ],
     "number": 23991,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(vdev): clean up clippy some allow statements",
-    "updated_at": "2026-03-16T14:24:37Z",
+    "updated_at": "2026-06-18T14:07:43Z",
     "user": {
       "login": "divoxx"
     }
@@ -40347,7 +40354,7 @@
     "number": 23993,
     "state": "open",
     "title": "Collect logs from MacOS' Unified Logging system",
-    "updated_at": "2026-05-30T00:13:40Z",
+    "updated_at": "2026-06-23T18:10:34Z",
     "user": {
       "login": "Japillow"
     }
@@ -40726,7 +40733,7 @@
     "title": "aws_s3_source log enhancement",
     "updated_at": "2026-05-30T00:13:42Z",
     "user": {
-      "login": "LaurenceChau"
+      "login": "laurencechau"
     }
   },
   {
@@ -40747,7 +40754,7 @@
     "title": "Block `aws_s3_source` graceful shutdown until object processing completes",
     "updated_at": "2026-05-30T00:13:42Z",
     "user": {
-      "login": "LaurenceChau"
+      "login": "laurencechau"
     }
   },
   {
@@ -40757,7 +40764,7 @@
     "issue_type": "Feature",
     "labels": [
       {
-        "color": "5319e7",
+        "color": "5ED9F6",
         "description": "Anything `exclusive_route` transform related",
         "id": 3751553623733900903,
         "name": "transform: exclusive_route"
@@ -41602,6 +41609,12 @@
       },
       {
         "color": "343639",
+        "description": "Anything related to releasing Vector",
+        "id": 843604899509384131,
+        "name": "domain: releasing"
+      },
+      {
+        "color": "343639",
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
@@ -41617,13 +41630,19 @@
         "description": "Pull requests that are awaiting their author.",
         "id": 1951021668007277535,
         "name": "meta: awaiting author"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
       }
     ],
     "number": 24044,
     "pull_request": {},
     "state": "open",
     "title": "feat(new source): Add ODBC source implementation",
-    "updated_at": "2026-06-11T17:41:23Z",
+    "updated_at": "2026-07-21T20:46:28Z",
     "user": {
       "login": "powerumc"
     }
@@ -42047,12 +42066,18 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-22T17:32:08Z",
     "created_at": "2025-10-23T13:53:18Z",
-    "draft": true,
+    "draft": false,
     "id": 2940583240,
     "issue_type": null,
     "labels": [
+      {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain: ci"
+      },
       {
         "color": "343639",
         "description": "Anything related to the vdev tooling",
@@ -42068,9 +42093,9 @@
     ],
     "number": 24061,
     "pull_request": {},
-    "state": "open",
-    "title": "chore(vdev): add vdev release command",
-    "updated_at": "2025-11-03T17:22:49Z",
+    "state": "closed",
+    "title": "chore(ci): auto-tag vdev on version bump in Cargo.toml",
+    "updated_at": "2026-06-22T17:32:20Z",
     "user": {
       "login": "pront"
     }
@@ -43775,7 +43800,7 @@
     "number": 24133,
     "state": "open",
     "title": "Some `gcp` tests fail",
-    "updated_at": "2026-02-21T20:42:36Z",
+    "updated_at": "2026-06-23T20:56:20Z",
     "user": {
       "login": "pront"
     }
@@ -46821,7 +46846,7 @@
         "name": "domain: external docs"
       },
       {
-        "color": "5319e7",
+        "color": "5ED9F6",
         "description": "Anything `exclusive_route` transform related",
         "id": 3751553623733900903,
         "name": "transform: exclusive_route"
@@ -47389,7 +47414,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-17T21:10:58Z",
     "created_at": "2025-11-19T22:50:43Z",
     "id": 3644698192,
     "issue_type": "Bug",
@@ -47402,9 +47427,9 @@
       }
     ],
     "number": 24280,
-    "state": "open",
-    "title": "File source no longer can decompress Gzip",
-    "updated_at": "2026-06-12T15:36:16Z",
+    "state": "closed",
+    "title": "File source no longer can decompress concatenated gzip streams",
+    "updated_at": "2026-06-17T21:10:58Z",
     "user": {
       "login": "FishNumber7"
     }
@@ -47922,7 +47947,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(systemd socket activation): fix log collection for systemd sockets",
-    "updated_at": "2026-03-04T10:43:31Z",
+    "updated_at": "2026-07-07T11:51:52Z",
     "user": {
       "login": "j-c-fuchs"
     }
@@ -49295,15 +49320,15 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-06-22T18:50:42Z",
     "created_at": "2025-12-12T02:47:52Z",
     "id": 3721717375,
     "issue_type": null,
     "labels": [],
     "number": 24368,
-    "state": "open",
+    "state": "closed",
     "title": "Cannot build from Git",
-    "updated_at": "2025-12-12T02:47:52Z",
+    "updated_at": "2026-06-22T18:50:42Z",
     "user": {
       "login": "clin1234"
     }
@@ -49528,13 +49553,19 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain: external docs"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
       }
     ],
     "number": 24377,
     "pull_request": {},
     "state": "open",
     "title": "fix(file source): improve change detection for rarely modified files",
-    "updated_at": "2026-05-31T13:57:40Z",
+    "updated_at": "2026-07-07T16:11:35Z",
     "user": {
       "login": "htrendev"
     }
@@ -49604,7 +49635,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(metrics): calculate ddsketch averages from histogram sum & count fields",
-    "updated_at": "2026-05-02T18:33:17Z",
+    "updated_at": "2026-07-09T13:38:57Z",
     "user": {
       "login": "tony-resendiz"
     }
@@ -50447,7 +50478,7 @@
     "title": "Sink:Clickhouse support Int128 type in arrow_stream format",
     "updated_at": "2026-06-12T15:36:28Z",
     "user": {
-      "login": "LaurenceChau"
+      "login": "laurencechau"
     }
   },
   {
@@ -50529,7 +50560,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(aggregate transform): Add support for event timestamp-based aggregation",
-    "updated_at": "2026-06-03T15:35:15Z",
+    "updated_at": "2026-07-16T08:01:11Z",
     "user": {
       "login": "kaarolch"
     }
