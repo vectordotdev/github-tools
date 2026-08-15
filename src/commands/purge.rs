@@ -319,16 +319,17 @@ fn dockerhub_login(client: &Client, username: &str, password: &str) -> Result<St
         .to_string())
 }
 
-fn list_dockerhub_tags(client: &Client, repo: &str) -> Result<Vec<Value>> {
+fn list_dockerhub_tags(client: &Client, repo: &str, token: Option<&str>) -> Result<Vec<Value>> {
     let base = format!("https://hub.docker.com/v2/repositories/{repo}/tags?page_size=100");
     let mut tags = Vec::new();
     let mut page = 1u32;
 
     loop {
-        let resp = client
-            .get(format!("{base}&page={page}"))
-            .send()?
-            .error_for_status()?;
+        let mut req = client.get(format!("{base}&page={page}"));
+        if let Some(token) = token {
+            req = req.header("Authorization", format!("JWT {token}"));
+        }
+        let resp = req.send()?.error_for_status()?;
         let data: Value = resp.json()?;
         let results = data["results"].as_array().cloned().unwrap_or_default();
         let done = data["next"].is_null();
@@ -359,7 +360,13 @@ pub fn purge_dockerhub_images(
         cutoff.date_naive()
     );
 
-    let tags = list_dockerhub_tags(client, repo)?;
+    // Authenticate up front: Docker Hub refuses to paginate past the first 1000
+    // tags of a repository for anonymous requests (HTTP 403 "pagination offset
+    // too large for anonymous requests").
+    let token = dockerhub_login(client, username, password)?;
+    let auth_header = format!("JWT {token}");
+
+    let tags = list_dockerhub_tags(client, repo, Some(&token))?;
 
     let matching: Vec<(&Value, String, DateTime<Utc>)> = tags
         .iter()
@@ -412,9 +419,6 @@ pub fn purge_dockerhub_images(
         return Ok(());
     }
 
-    // Authenticate only when we're actually going to delete
-    let token = dockerhub_login(client, username, password)?;
-    let auth_header = format!("JWT {token}");
     let mut audit = open_audit(audit_file, dry_run)?;
 
     for (_, name, tag_date) in &matching {
