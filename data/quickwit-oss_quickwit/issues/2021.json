@@ -307,10 +307,10 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "ededed",
         "description": null,
         "id": 2979695546,
-        "name": "cla-signed",
-        "color": "ededed"
+        "name": "cla-signed"
       }
     ],
     "number": 15,
@@ -582,10 +582,10 @@
     "issue_type": null,
     "labels": [
       {
+        "id": 2915214263,
         "name": "quickwit-cli",
         "color": "F1BF11",
-        "description": null,
-        "id": 2915214263
+        "description": null
       }
     ],
     "number": 26,
@@ -668,10 +668,10 @@
     "issue_type": null,
     "labels": [
       {
+        "id": 3008486295,
         "name": "storage",
         "color": "FC81AD",
-        "description": null,
-        "id": 3008486295
+        "description": null
       }
     ],
     "number": 30,
@@ -7398,7 +7398,7 @@
     ],
     "number": 340,
     "state": "closed",
-    "title": "Test AWS credentials with a resourceâs IAM role and add it to the documentation",
+    "title": "Test AWS credentials with a resourceÃ¢ÂÂs IAM role and add it to the documentation",
     "updated_at": "2022-05-17T08:32:14Z",
     "user": {
       "login": "fmassot"
@@ -7719,10 +7719,10 @@
     "issue_type": null,
     "labels": [
       {
-        "id": 2912049040,
-        "name": "documentation",
         "color": "0075ca",
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "id": 2912049040,
+        "name": "documentation"
       }
     ],
     "number": 356,
