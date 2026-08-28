@@ -60,10 +60,10 @@
         "description": "Pull requests that update a dependency file"
       },
       {
-        "id": 3931024155,
         "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ],
     "pull_request": {},
@@ -166,10 +166,10 @@
         "name": "dependencies"
       },
       {
-        "description": "Pull requests that update Rust code",
-        "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ],
     "user": {
@@ -194,10 +194,10 @@
         "description": "Pull requests that update a dependency file"
       },
       {
+        "description": "Pull requests that update Javascript code",
         "id": 3967577678,
         "name": "javascript",
-        "color": "168700",
-        "description": "Pull requests that update Javascript code"
+        "color": "168700"
       }
     ],
     "state": "closed",
@@ -564,16 +564,16 @@
     "type": "pull_request",
     "labels": [
       {
-        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "color": "000000",
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "merged_at": "2023-01-16T20:33:43Z",
@@ -705,16 +705,16 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/2677",
     "labels": [
       {
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
-        "color": "000000",
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ]
   },
@@ -728,10 +728,10 @@
         "name": "dependencies"
       },
       {
-        "id": 3931024155,
         "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ],
     "number": 2678,
@@ -1384,16 +1384,16 @@
     "type": "pull_request",
     "labels": [
       {
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
-        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "assignees": [],
@@ -1488,10 +1488,10 @@
         "name": "dependencies"
       },
       {
-        "description": "Pull requests that update GitHub Actions code",
-        "id": 3931021046,
         "name": "github_actions",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 3931021046
       }
     ],
     "title": "Bump docker/build-push-action from 3 to 4",
@@ -1502,16 +1502,16 @@
     "created_at": "2023-01-30T20:28:14Z",
     "labels": [
       {
-        "id": 3931021008,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "closed_at": "2023-01-31T15:13:43Z",
@@ -1620,16 +1620,16 @@
     "assignees": [],
     "labels": [
       {
-        "id": 3931021008,
         "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       },
       {
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "updated_at": "2023-01-31T20:38:00Z",
@@ -1679,16 +1679,16 @@
     "title": "Bump uuid from 1.2.2 to 1.3.0 in /quickwit",
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
+        "description": "Pull requests that update Rust code",
         "id": 3931024155,
         "name": "rust",
-        "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "color": "000000"
       }
     ],
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/2753",
@@ -1863,16 +1863,16 @@
     "state": "closed",
     "labels": [
       {
-        "id": 3931021008,
         "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "title": "Bump openssl-src from 111.24.0+1.1.1s to 111.25.0+1.1.1t in /quickwit",
@@ -1925,10 +1925,10 @@
     "pull_request": {},
     "labels": [
       {
+        "description": "Improvements or additions to documentation",
         "id": 2912049040,
         "name": "documentation",
-        "color": "0075ca",
-        "description": "Improvements or additions to documentation"
+        "color": "0075ca"
       }
     ],
     "draft": false,
@@ -2305,10 +2305,10 @@
     "closed_at": "2023-02-13T21:52:14Z",
     "labels": [
       {
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
         "id": 3931024155,
@@ -3043,7 +3043,9 @@
     "review_comments_count": 0,
     "engagement_count": 0,
     "comments_count": 0,
-    "reviews_count": 0
+    "reviews_count": 0,
+    "unique_human_participants_7d": 0,
+    "human_comments_7d": 0
   },
   {
     "labels": [],
@@ -3430,16 +3432,16 @@
     "type": "pull_request",
     "labels": [
       {
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
+        "name": "github_actions",
         "color": "000000",
         "description": "Pull requests that update GitHub Actions code",
-        "id": 3931021046,
-        "name": "github_actions"
+        "id": 3931021046
       }
     ],
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/2906",
@@ -3468,16 +3470,16 @@
     "draft": false,
     "labels": [
       {
+        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies",
-        "color": "0366d6"
+        "name": "dependencies"
       },
       {
-        "description": "Pull requests that update Rust code",
-        "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ],
     "state": "closed",
@@ -3596,10 +3598,10 @@
         "id": 3931021008
       },
       {
-        "id": 3931024155,
         "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ],
     "type": "pull_request",
@@ -4099,16 +4101,16 @@
     "merge_commit_sha": "6d6913a94e5551b18b24419586c256f42895746e",
     "labels": [
       {
-        "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6"
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       },
       {
-        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust"
       }
     ]
   },
@@ -4137,10 +4139,10 @@
         "id": 3931021008
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/2955"
@@ -4352,10 +4354,10 @@
         "id": 3931021008
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "user": {
@@ -4400,10 +4402,10 @@
         "color": "0366d6"
       },
       {
-        "color": "000000",
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "id": 1271737337,
@@ -4425,16 +4427,16 @@
     "number": 2975,
     "labels": [
       {
-        "id": 3931021008,
         "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       },
       {
+        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust",
-        "color": "000000"
+        "name": "rust"
       }
     ],
     "pull_request": {},
@@ -4810,16 +4812,16 @@
     "created_at": "2023-03-15T09:32:40Z",
     "labels": [
       {
-        "id": 3931021008,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "name": "javascript",
-        "color": "168700",
         "description": "Pull requests that update Javascript code",
-        "id": 3967577678
+        "id": 3967577678,
+        "name": "javascript",
+        "color": "168700"
       }
     ],
     "draft": false,
@@ -5262,16 +5264,16 @@
     "pull_request": {},
     "labels": [
       {
-        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
+        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155,
-        "name": "rust"
+        "id": 3931024155
       }
     ],
     "title": "Bump syn from 1.0.109 to 2.0.3 in /quickwit",
@@ -5468,16 +5470,16 @@
     "title": "Bump syn from 1.0.109 to 2.0.8 in /quickwit",
     "labels": [
       {
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "pull_request": {},
@@ -5746,16 +5748,16 @@
     },
     "labels": [
       {
+        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies",
-        "color": "0366d6"
+        "name": "dependencies"
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "type": "pull_request",
@@ -5862,10 +5864,10 @@
     "state": "closed",
     "labels": [
       {
-        "name": "dependencies",
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
         "color": "000000",
@@ -5891,10 +5893,10 @@
     "pull_request": {},
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
         "color": "000000",
@@ -5934,16 +5936,16 @@
     "draft": false,
     "labels": [
       {
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
-        "description": "Pull requests that update Rust code",
-        "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ],
     "updated_at": "2023-03-30T13:39:56Z",
@@ -6289,10 +6291,10 @@
     },
     "labels": [
       {
+        "color": "D93F0B",
         "description": null,
         "id": 3067594226,
-        "name": "high-priority",
-        "color": "D93F0B"
+        "name": "high-priority"
       }
     ],
     "title": "QW-885: Move to AWS SDK",
@@ -6346,10 +6348,10 @@
         "name": "dependencies"
       },
       {
-        "name": "rust",
-        "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "assignees": [],
@@ -6481,10 +6483,10 @@
     "assignees": [],
     "labels": [
       {
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
         "description": "Pull requests that update Rust code",
@@ -6674,16 +6676,16 @@
     "created_at": "2023-04-21T21:05:51Z",
     "labels": [
       {
-        "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6"
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "user": {
@@ -6736,10 +6738,10 @@
     "type": "pull_request",
     "labels": [
       {
+        "id": 3067594226,
         "name": "high-priority",
         "color": "D93F0B",
-        "description": null,
-        "id": 3067594226
+        "description": null
       }
     ],
     "title": "add lowercase tokenizer to the list",
@@ -6924,10 +6926,10 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/3228",
     "labels": [
       {
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
         "name": "rust",
@@ -7063,7 +7065,9 @@
     "review_comments_count": 0,
     "type": "pull_request",
     "title": "timestamp pruning guide [docs]",
-    "updated_at": "2025-09-23T13:16:07Z"
+    "updated_at": "2025-09-23T13:16:07Z",
+    "human_comments_7d": 0,
+    "unique_human_participants_7d": 0
   },
   {
     "user": {
@@ -7430,16 +7434,16 @@
     "draft": false,
     "labels": [
       {
-        "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6"
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       },
       {
-        "color": "000000",
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "pull_request": {},
@@ -7464,10 +7468,10 @@
     "draft": false,
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
         "color": "000000",
@@ -7492,16 +7496,16 @@
   {
     "labels": [
       {
-        "name": "dependencies",
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
-        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "user": {
@@ -7629,16 +7633,16 @@
     "updated_at": "2023-05-10T21:58:37Z",
     "labels": [
       {
-        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "draft": false,
@@ -7966,10 +7970,10 @@
         "description": "Pull requests that update a dependency file"
       },
       {
-        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "pull_request": {},
@@ -8553,16 +8557,16 @@
     "pull_request": {},
     "labels": [
       {
-        "id": 3931021008,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "color": "000000",
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "assignees": [],
@@ -8596,10 +8600,10 @@
         "color": "0366d6"
       },
       {
-        "color": "000000",
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "assignees": [],
@@ -8686,16 +8690,16 @@
     "assignees": [],
     "labels": [
       {
-        "name": "dependencies",
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
+        "id": 3931024155,
         "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "description": "Pull requests that update Rust code"
       }
     ],
     "state": "closed"
@@ -9927,16 +9931,16 @@
     "merged_at": "2023-06-05T22:08:29Z",
     "labels": [
       {
-        "id": 3931021008,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
+        "description": "Pull requests that update Rust code",
         "id": 3931024155,
         "name": "rust",
-        "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "color": "000000"
       }
     ],
     "title": "Bump once_cell from 1.17.2 to 1.18.0 in /quickwit",
@@ -10016,16 +10020,16 @@
     "assignees": [],
     "labels": [
       {
-        "name": "dependencies",
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
+        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155,
-        "name": "rust"
+        "id": 3931024155
       }
     ],
     "updated_at": "2023-06-06T12:21:50Z",
@@ -10120,10 +10124,10 @@
         "description": "Pull requests that update a dependency file"
       },
       {
-        "name": "rust",
-        "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "state": "closed",
@@ -10273,7 +10277,9 @@
     "title": "Enhancement of docker section",
     "pull_request": {},
     "number": 3530,
-    "type": "pull_request"
+    "type": "pull_request",
+    "unique_human_participants_7d": 0,
+    "human_comments_7d": 0
   },
   {
     "pull_request": {},
@@ -10284,16 +10290,16 @@
     "updated_at": "2023-06-08T21:29:24Z",
     "labels": [
       {
+        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies",
-        "color": "0366d6"
+        "name": "dependencies"
       },
       {
+        "description": "Pull requests that update Rust code",
         "id": 3931024155,
         "name": "rust",
-        "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "color": "000000"
       }
     ],
     "merged_at": "2023-06-08T21:29:23Z",
@@ -10471,16 +10477,16 @@
     "merge_commit_sha": "b4a8139bdb8f300bee5cabe95a24311b4de40b94",
     "labels": [
       {
-        "id": 3931021008,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "number": 3555,
@@ -10541,17 +10547,19 @@
     "unique_external_participants": 0,
     "updated_at": "2025-09-23T13:16:07Z",
     "unique_participants": 0,
-    "engagement_count": 0
+    "engagement_count": 0,
+    "unique_human_participants_7d": 0,
+    "human_comments_7d": 0
   },
   {
     "assignees": [],
     "draft": false,
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
         "name": "rust",
@@ -10640,7 +10648,9 @@
     "assignees": [],
     "id": 1400125217,
     "labels": [],
-    "first_response_hours": 0
+    "first_response_hours": 0,
+    "unique_human_participants_7d": 0,
+    "human_comments_7d": 0
   },
   {
     "merged_at": "2023-06-26T15:16:45Z",
@@ -10668,10 +10678,10 @@
         "description": "Pull requests that update a dependency file"
       },
       {
+        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust",
-        "color": "000000"
+        "name": "rust"
       }
     ]
   },
@@ -10885,10 +10895,10 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/3587",
     "labels": [
       {
-        "id": 3931021008,
         "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       },
       {
         "name": "rust",
@@ -10917,16 +10927,16 @@
     "pull_request": {},
     "labels": [
       {
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6"
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
+        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155,
-        "name": "rust"
+        "id": 3931024155
       }
     ],
     "closed_at": "2023-06-27T22:45:13Z",
@@ -11034,10 +11044,10 @@
         "name": "dependencies"
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "updated_at": "2023-06-29T21:37:40Z",
@@ -11061,10 +11071,10 @@
         "name": "dependencies"
       },
       {
+        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155,
-        "name": "rust"
+        "id": 3931024155
       }
     ],
     "id": 1415379374,
@@ -11280,16 +11290,16 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/3609",
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
-        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "title": "Bump regex from 1.8.3 to 1.9.0 in /quickwit",
@@ -11347,10 +11357,10 @@
         "id": 3931021008
       },
       {
-        "description": "Pull requests that update Rust code",
-        "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ],
     "pull_request": {},
@@ -11373,10 +11383,10 @@
   {
     "labels": [
       {
-        "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6"
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       }
     ],
     "draft": false,
@@ -11467,16 +11477,16 @@
     "created_at": "2023-07-10T23:36:51Z",
     "labels": [
       {
-        "id": 3931021008,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "name": "javascript",
         "color": "168700",
         "description": "Pull requests that update Javascript code",
-        "id": 3967577678
+        "id": 3967577678,
+        "name": "javascript"
       }
     ],
     "updated_at": "2023-07-19T23:49:18Z",
@@ -11493,10 +11503,10 @@
     "closed_at": "2023-07-12T01:35:54Z",
     "labels": [
       {
+        "description": "New feature or request",
         "id": 2912049044,
         "name": "enhancement",
-        "color": "a2eeef",
-        "description": "New feature or request"
+        "color": "a2eeef"
       }
     ],
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/3622",
@@ -11557,7 +11567,9 @@
     "comments_count": 0,
     "review_comments_count": 0,
     "engagement_count": 0,
-    "pull_request": {}
+    "pull_request": {},
+    "unique_human_participants_7d": 0,
+    "human_comments_7d": 0
   },
   {
     "id": 1432211248,
@@ -11599,16 +11611,16 @@
     "id": 1433747550,
     "labels": [
       {
-        "id": 3931021008,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "id": 3931024155,
         "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ]
   },
@@ -11663,10 +11675,10 @@
     "number": 3635,
     "labels": [
       {
+        "color": "a2eeef",
         "description": "New feature or request",
         "id": 2912049044,
-        "name": "enhancement",
-        "color": "a2eeef"
+        "name": "enhancement"
       }
     ],
     "created_at": "2023-07-14T05:39:38Z",
@@ -11718,10 +11730,10 @@
         "id": 3931021008
       },
       {
-        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "title": "Bump indexmap from 1.9.3 to 2.0.0 in /quickwit",
@@ -12047,16 +12059,16 @@
     "id": 1438057888,
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
-        "name": "rust",
-        "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "merged_at": "2023-07-17T22:13:28Z",
@@ -12215,10 +12227,10 @@
         "color": "0366d6"
       },
       {
-        "color": "168700",
         "description": "Pull requests that update Javascript code",
         "id": 3967577678,
-        "name": "javascript"
+        "name": "javascript",
+        "color": "168700"
       }
     ],
     "closed_at": "2023-07-19T23:41:47Z",
@@ -12437,10 +12449,10 @@
         "id": 3931021008
       },
       {
-        "id": 3931024155,
         "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ],
     "number": 3680,
@@ -12579,16 +12591,16 @@
     "state": "closed",
     "labels": [
       {
+        "id": 3931021008,
         "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "description": "Pull requests that update a dependency file"
       },
       {
-        "color": "2b67c6",
         "description": "Pull requests that update Python code",
         "id": 5775347493,
-        "name": "python"
+        "name": "python",
+        "color": "2b67c6"
       }
     ],
     "merged_at": "2023-07-26T00:52:49Z"
@@ -13064,16 +13076,16 @@
     "closed_at": "2023-08-10T12:24:44Z",
     "labels": [
       {
-        "name": "dependencies",
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
-        "description": "Pull requests that update Rust code",
-        "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ]
   },
@@ -13388,16 +13400,16 @@
     "id": 1479665499,
     "labels": [
       {
-        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "merge_commit_sha": "aefb529e5c9d11440e7db31dc4c22555d6c03a4f",
@@ -13498,7 +13510,9 @@
     "number": 3767,
     "engagement_count": 2,
     "reviews_count": 0,
-    "labels": []
+    "labels": [],
+    "unique_human_participants_7d": 0,
+    "human_comments_7d": 0
   },
   {
     "number": 3768,
@@ -13518,16 +13532,16 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/3768",
     "labels": [
       {
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
-        "color": "000000",
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "created_at": "2023-08-21T20:46:31Z",
@@ -13546,16 +13560,16 @@
     "draft": false,
     "labels": [
       {
+        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "color": "0366d6"
       },
       {
+        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust",
-        "color": "000000"
+        "name": "rust"
       }
     ],
     "title": "Bump utoipa from 3.4.4 to 3.5.0 in /quickwit",
@@ -13576,10 +13590,10 @@
     "updated_at": "2023-08-22T02:00:16Z",
     "labels": [
       {
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6"
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
         "description": "Pull requests that update Rust code",
@@ -13614,16 +13628,16 @@
     },
     "labels": [
       {
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6"
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "merged_at": "2023-08-22T18:27:24Z",
@@ -13703,10 +13717,10 @@
         "color": "0366d6"
       },
       {
-        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "state": "closed",
@@ -13781,16 +13795,16 @@
     "pull_request": {},
     "labels": [
       {
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6"
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
-        "name": "javascript",
-        "color": "168700",
         "description": "Pull requests that update Javascript code",
-        "id": 3967577678
+        "id": 3967577678,
+        "name": "javascript",
+        "color": "168700"
       }
     ],
     "user": {
@@ -13866,16 +13880,16 @@
     "draft": false,
     "labels": [
       {
+        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "color": "0366d6"
       },
       {
-        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "title": "Bump tempfile from 3.7.1 to 3.8.0 in /quickwit",
@@ -13948,16 +13962,16 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/3788",
     "labels": [
       {
+        "id": 3931021008,
         "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "description": "Pull requests that update a dependency file"
       },
       {
-        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "title": "Bump ouroboros from 0.17.2 to 0.18.0 in /quickwit",
@@ -14121,16 +14135,16 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/3801",
     "labels": [
       {
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
+        "description": "Pull requests that update GitHub Actions code",
         "id": 3931021046,
         "name": "github_actions",
-        "color": "000000",
-        "description": "Pull requests that update GitHub Actions code"
+        "color": "000000"
       }
     ],
     "closed_at": "2023-09-05T08:25:24Z",
@@ -14229,10 +14243,10 @@
         "name": "dependencies"
       },
       {
+        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust",
-        "color": "000000"
+        "name": "rust"
       }
     ],
     "draft": false,
@@ -14259,10 +14273,10 @@
         "color": "0366d6"
       },
       {
-        "description": "Pull requests that update Rust code",
-        "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ],
     "user": {
@@ -14319,10 +14333,10 @@
         "color": "0366d6"
       },
       {
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "draft": false
@@ -14337,10 +14351,10 @@
         "id": 3931021008
       },
       {
-        "id": 3931021046,
-        "name": "github_actions",
         "color": "000000",
-        "description": "Pull requests that update GitHub Actions code"
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 3931021046,
+        "name": "github_actions"
       }
     ],
     "merged_at": "2023-09-12T23:35:36Z",
@@ -14379,10 +14393,10 @@
     "pull_request": {},
     "labels": [
       {
-        "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6"
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       },
       {
         "color": "000000",
@@ -14397,16 +14411,16 @@
     "state": "closed",
     "labels": [
       {
-        "id": 3931021008,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "description": "Pull requests that update GitHub Actions code",
         "id": 3931021046,
         "name": "github_actions",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
       }
     ],
     "merged_at": "2023-09-12T23:21:49Z",
@@ -14444,16 +14458,16 @@
     },
     "labels": [
       {
+        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies",
-        "color": "0366d6"
+        "name": "dependencies"
       },
       {
-        "description": "Pull requests that update GitHub Actions code",
         "id": 3931021046,
         "name": "github_actions",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
       }
     ],
     "merge_commit_sha": "5027b6253235301057c760dbf0d1f57aa20cdf83",
@@ -14482,10 +14496,10 @@
         "name": "dependencies"
       },
       {
+        "color": "000000",
         "description": "Pull requests that update GitHub Actions code",
         "id": 3931021046,
-        "name": "github_actions",
-        "color": "000000"
+        "name": "github_actions"
       }
     ],
     "closed_at": "2023-09-12T22:07:45Z",
@@ -14550,10 +14564,10 @@
     ],
     "labels": [
       {
-        "color": "F98124",
-        "description": "Large feature, that is not well designed yet",
         "id": 3172682826,
-        "name": "biggy"
+        "name": "biggy",
+        "color": "F98124",
+        "description": "Large feature, that is not well designed yet"
       }
     ],
     "updated_at": "2024-01-18T09:21:29Z",
@@ -14566,10 +14580,10 @@
     "pull_request": {},
     "labels": [
       {
-        "id": 4466166879,
         "name": "chore",
         "color": "81B3D4",
-        "description": null
+        "description": null,
+        "id": 4466166879
       }
     ],
     "draft": false,
@@ -14643,10 +14657,10 @@
         "color": "0366d6"
       },
       {
-        "id": 3931021046,
-        "name": "github_actions",
         "color": "000000",
-        "description": "Pull requests that update GitHub Actions code"
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 3931021046,
+        "name": "github_actions"
       }
     ],
     "state": "closed",
@@ -14689,7 +14703,9 @@
       "login": "JerryKwan"
     },
     "state": "open",
-    "review_comments_count": 0
+    "review_comments_count": 0,
+    "unique_human_participants_7d": 0,
+    "human_comments_7d": 0
   },
   {
     "number": 3840,
@@ -14714,10 +14730,10 @@
   {
     "labels": [
       {
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
         "name": "docker",
@@ -14836,16 +14852,16 @@
     "merge_commit_sha": "31fd56b29b7d78f47e5bdb74733fa77af6bfb711",
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
+        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155,
-        "name": "rust"
+        "id": 3931024155
       }
     ],
     "merged_at": "2023-09-19T20:56:14Z",
@@ -14989,16 +15005,16 @@
     "created_at": "2023-09-21T09:12:07Z",
     "labels": [
       {
+        "description": "New feature or request",
         "id": 2912049044,
         "name": "enhancement",
-        "color": "a2eeef",
-        "description": "New feature or request"
+        "color": "a2eeef"
       },
       {
-        "name": "tracing",
-        "color": "c2e0c6",
         "description": null,
-        "id": 5810582609
+        "id": 5810582609,
+        "name": "tracing",
+        "color": "c2e0c6"
       }
     ],
     "assignees": [
@@ -15034,10 +15050,10 @@
     },
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
         "color": "000000",
@@ -15099,10 +15115,10 @@
     "closed_at": "2023-10-05T13:11:50Z",
     "labels": [
       {
-        "id": 2912049044,
-        "name": "enhancement",
         "color": "a2eeef",
-        "description": "New feature or request"
+        "description": "New feature or request",
+        "id": 2912049044,
+        "name": "enhancement"
       }
     ],
     "title": "Read from Storage in file source"
@@ -15463,16 +15479,16 @@
     "id": 1538705643,
     "labels": [
       {
+        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "color": "0366d6"
       },
       {
-        "name": "rust",
-        "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "user": {
@@ -15497,16 +15513,16 @@
     "created_at": "2023-10-02T21:46:21Z",
     "labels": [
       {
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "updated_at": "2023-10-02T22:28:42Z",
@@ -15546,10 +15562,10 @@
     "closed_at": "2023-10-03T05:00:13Z",
     "labels": [
       {
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
         "id": 5775347493,
@@ -15739,10 +15755,10 @@
     "unique_participants": 2,
     "labels": [
       {
-        "id": 2912049044,
-        "name": "enhancement",
         "color": "a2eeef",
-        "description": "New feature or request"
+        "description": "New feature or request",
+        "id": 2912049044,
+        "name": "enhancement"
       }
     ],
     "unique_external_participants": 1,
@@ -15756,7 +15772,9 @@
     "user": {
       "login": "guilload"
     },
-    "first_response_hours": 167.11
+    "first_response_hours": 167.11,
+    "human_comments_7d": 0,
+    "unique_human_participants_7d": 0
   },
   {
     "merged_at": "2023-10-10T14:41:37Z",
@@ -15911,10 +15929,10 @@
         "color": "0366d6"
       },
       {
-        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "merge_commit_sha": "76c166ec7b09fb6d21540da8949b738bba7fbeb5",
@@ -15954,10 +15972,10 @@
         "id": 3931021008
       },
       {
+        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155,
-        "name": "rust"
+        "id": 3931024155
       }
     ],
     "created_at": "2023-10-09T21:00:31Z",
@@ -16137,16 +16155,16 @@
     "created_at": "2023-10-12T12:45:12Z",
     "labels": [
       {
+        "description": "Something isn't working",
         "id": 2912049038,
         "name": "bug",
-        "color": "d73a4a",
-        "description": "Something isn't working"
+        "color": "d73a4a"
       },
       {
+        "name": "dev-doc",
         "color": "bfdadc",
         "description": null,
-        "id": 3974242600,
-        "name": "dev-doc"
+        "id": 3974242600
       }
     ],
     "user": {
@@ -16196,10 +16214,10 @@
     ],
     "labels": [
       {
+        "name": "bug",
         "color": "d73a4a",
         "description": "Something isn't working",
-        "id": 2912049038,
-        "name": "bug"
+        "id": 2912049038
       }
     ],
     "merge_commit_sha": "2d6932a73982023b91335a499370cf2c31cd1e6c"
@@ -16284,10 +16302,10 @@
     ],
     "labels": [
       {
-        "name": "bug",
         "color": "d73a4a",
         "description": "Something isn't working",
-        "id": 2912049038
+        "id": 2912049038,
+        "name": "bug"
       }
     ],
     "updated_at": "2023-10-13T08:40:29Z",
@@ -16313,10 +16331,10 @@
     "closed_at": "2023-10-18T09:03:02Z",
     "labels": [
       {
+        "color": "bfdadc",
         "description": null,
         "id": 3974242600,
-        "name": "dev-doc",
-        "color": "bfdadc"
+        "name": "dev-doc"
       }
     ],
     "updated_at": "2023-10-18T09:04:07Z",
@@ -16464,10 +16482,10 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/3972",
     "labels": [
       {
+        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies",
-        "color": "0366d6"
+        "name": "dependencies"
       },
       {
         "color": "168700",
@@ -16508,16 +16526,16 @@
     "created_at": "2023-10-17T20:12:42Z",
     "labels": [
       {
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
+        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust",
-        "color": "000000"
+        "name": "rust"
       }
     ],
     "merged_at": "2023-10-17T21:19:33Z",
@@ -16542,16 +16560,16 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/3977",
     "labels": [
       {
-        "name": "dependencies",
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
+        "name": "python",
         "color": "2b67c6",
         "description": "Pull requests that update Python code",
-        "id": 5775347493,
-        "name": "python"
+        "id": 5775347493
       }
     ],
     "title": "Bump urllib3 from 2.0.4 to 2.0.7 in /quickwit/rest-api-tests",
@@ -16562,6 +16580,40 @@
     "assignees": [],
     "merge_commit_sha": "acd59ac19dc0d2dbd3a9dc7100bd23815f7703bf",
     "updated_at": "2023-10-17T23:33:26Z"
+  },
+  {
+    "labels": [
+      {
+        "name": "bug",
+        "color": "d73a4a",
+        "description": "Something isn't working",
+        "id": 2912049038
+      }
+    ],
+    "state": "open",
+    "comments_count": 0,
+    "type": "issue",
+    "number": 3978,
+    "id": 1948532057,
+    "review_comments_count": 0,
+    "unique_human_participants_7d": 0,
+    "reviews_count": 0,
+    "human_comments_7d": 0,
+    "draft": false,
+    "unique_participants": 0,
+    "user": {
+      "login": "fulmicoton"
+    },
+    "engagement_count": 0,
+    "assignees": [
+      "PSeitz",
+      "dayaffe"
+    ],
+    "html_url": "https://github.com/quickwit-oss/quickwit/issues/3978",
+    "unique_external_participants": 0,
+    "title": "Add a bench for QuickwitCollector and optimize it.",
+    "created_at": "2023-10-18T00:49:23Z",
+    "updated_at": "2026-08-28T15:27:33Z"
   },
   {
     "merge_commit_sha": "54bbb6eb2681be8a6289968a42124982aa6be5bf",
@@ -16580,10 +16632,10 @@
     "closed_at": "2023-10-18T20:21:07Z",
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
         "color": "000000",
@@ -16622,10 +16674,10 @@
         "color": "0366d6"
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ]
   },
@@ -16695,10 +16747,10 @@
     "unique_external_participants": 0,
     "labels": [
       {
-        "id": 2912049044,
         "name": "enhancement",
         "color": "a2eeef",
-        "description": "New feature or request"
+        "description": "New feature or request",
+        "id": 2912049044
       }
     ],
     "state_reason": "completed",
@@ -16720,7 +16772,9 @@
     "state": "closed",
     "reviews_count": 0,
     "created_at": "2023-10-20T15:49:40Z",
-    "comments_count": 0
+    "comments_count": 0,
+    "human_comments_7d": 0,
+    "unique_human_participants_7d": 0
   },
   {
     "title": "Bump node from 18 to 21",
@@ -16729,10 +16783,10 @@
     "pull_request": {},
     "labels": [
       {
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
         "description": "Pull requests that update Docker code",
@@ -16777,16 +16831,16 @@
     "state_reason": "completed",
     "labels": [
       {
-        "color": "0075ca",
-        "description": "Improvements or additions to documentation",
         "id": 2912049040,
-        "name": "documentation"
+        "name": "documentation",
+        "color": "0075ca",
+        "description": "Improvements or additions to documentation"
       },
       {
-        "description": "Good for newcomers",
-        "id": 2912049046,
         "name": "good first issue",
-        "color": "7057ff"
+        "color": "7057ff",
+        "description": "Good for newcomers",
+        "id": 2912049046
       }
     ],
     "number": 4004,
@@ -16808,7 +16862,9 @@
     "unique_external_participants": 0,
     "reviews_count": 0,
     "engagement_count": 0,
-    "closed_at": "2026-08-21T18:59:37Z"
+    "closed_at": "2026-08-21T18:59:37Z",
+    "human_comments_7d": 0,
+    "unique_human_participants_7d": 0
   },
   {
     "title": "Fix failpoint tests.",
@@ -16891,7 +16947,9 @@
     "state": "open",
     "created_at": "2023-10-23T08:57:22Z",
     "unique_participants": 0,
-    "reviews_count": 0
+    "reviews_count": 0,
+    "human_comments_7d": 0,
+    "unique_human_participants_7d": 0
   },
   {
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/4013",
@@ -16920,10 +16978,10 @@
     "draft": false,
     "labels": [
       {
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies"
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
         "id": 3931021046,
@@ -17289,7 +17347,9 @@
     "first_response_at": "2023-10-28T13:04:42Z",
     "labels": [],
     "last_engagement_at": "2023-10-28T13:04:42Z",
-    "state": "open"
+    "state": "open",
+    "human_comments_7d": 0,
+    "unique_human_participants_7d": 0
   },
   {
     "type": "pull_request",
@@ -17452,7 +17512,9 @@
     "pull_request": {},
     "user": {
       "login": "PSeitz"
-    }
+    },
+    "unique_human_participants_7d": 0,
+    "human_comments_7d": 0
   },
   {
     "state": "closed",
@@ -17682,10 +17744,10 @@
         "name": "dependencies"
       },
       {
+        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155,
-        "name": "rust"
+        "id": 3931024155
       }
     ],
     "number": 4069,
@@ -17783,16 +17845,16 @@
     "merge_commit_sha": "bf9dbd48a6c3703c04bc270e7fb90e14913816a9",
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
+        "id": 3931024155,
         "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "description": "Pull requests that update Rust code"
       }
     ]
   },
@@ -18137,16 +18199,16 @@
   {
     "labels": [
       {
-        "description": "New feature or request",
-        "id": 2912049044,
         "name": "enhancement",
-        "color": "a2eeef"
+        "color": "a2eeef",
+        "description": "New feature or request",
+        "id": 2912049044
       },
       {
+        "id": 3067594025,
         "name": "low-priority",
         "color": "BFDADC",
-        "description": null,
-        "id": 3067594025
+        "description": null
       }
     ],
     "pull_request": {},
@@ -18269,16 +18331,16 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/4111",
     "labels": [
       {
-        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "name": "javascript",
         "color": "168700",
         "description": "Pull requests that update Javascript code",
-        "id": 3967577678
+        "id": 3967577678,
+        "name": "javascript"
       }
     ],
     "updated_at": "2023-11-10T22:25:42Z",
@@ -18329,16 +18391,16 @@
     "id": 1596854564,
     "labels": [
       {
-        "description": "Pull requests that update a dependency file",
         "id": 3931021008,
         "name": "dependencies",
-        "color": "0366d6"
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
       },
       {
+        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust",
-        "color": "000000"
+        "name": "rust"
       }
     ],
     "number": 4115,
@@ -18445,16 +18507,16 @@
     },
     "labels": [
       {
+        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies",
-        "color": "0366d6"
+        "name": "dependencies"
       },
       {
-        "description": "Pull requests that update Javascript code",
         "id": 3967577678,
         "name": "javascript",
-        "color": "168700"
+        "color": "168700",
+        "description": "Pull requests that update Javascript code"
       }
     ],
     "created_at": "2023-11-13T00:58:07Z",
@@ -18619,16 +18681,16 @@
     "merged_at": "2023-11-14T20:52:55Z",
     "labels": [
       {
-        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "name": "rust",
-        "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "closed_at": "2023-11-14T20:52:55Z",
@@ -18687,10 +18749,10 @@
         "id": 3931021008
       },
       {
+        "color": "000000",
         "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust",
-        "color": "000000"
+        "name": "rust"
       }
     ],
     "created_at": "2023-11-15T20:20:13Z",
@@ -18967,10 +19029,10 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/4167",
     "labels": [
       {
-        "id": 3931021008,
         "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       },
       {
         "description": "Pull requests that update Rust code",
@@ -19410,16 +19472,18 @@
     "assignees": [],
     "labels": [
       {
+        "id": 2912049044,
         "name": "enhancement",
         "color": "a2eeef",
-        "description": "New feature or request",
-        "id": 2912049044
+        "description": "New feature or request"
       }
     ],
     "user": {
       "login": "trinity-1686a"
     },
-    "reviews_count": 0
+    "reviews_count": 0,
+    "human_comments_7d": 0,
+    "unique_human_participants_7d": 0
   },
   {
     "type": "pull_request",
@@ -19588,10 +19652,10 @@
         "id": 3931021008
       },
       {
+        "description": "Pull requests that update Javascript code",
         "id": 3967577678,
         "name": "javascript",
-        "color": "168700",
-        "description": "Pull requests that update Javascript code"
+        "color": "168700"
       }
     ],
     "state": "closed",
@@ -19658,16 +19722,16 @@
     "type": "pull_request",
     "labels": [
       {
-        "name": "dependencies",
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
+        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155,
-        "name": "rust"
+        "id": 3931024155
       }
     ],
     "draft": false,
@@ -19757,16 +19821,16 @@
     "pull_request": {},
     "labels": [
       {
-        "name": "dependencies",
-        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies",
+        "color": "0366d6"
       },
       {
-        "description": "Pull requests that update Rust code",
-        "id": 3931024155,
         "name": "rust",
-        "color": "000000"
+        "color": "000000",
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155
       }
     ],
     "draft": false
@@ -19908,10 +19972,10 @@
     "closed_at": "2023-12-07T21:47:40Z",
     "labels": [
       {
+        "id": 3931021008,
         "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "description": "Pull requests that update a dependency file"
       },
       {
         "id": 3931024155,
@@ -20014,10 +20078,10 @@
         "name": "dependencies"
       },
       {
-        "id": 3931024155,
-        "name": "rust",
         "color": "000000",
-        "description": "Pull requests that update Rust code"
+        "description": "Pull requests that update Rust code",
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "draft": false,
@@ -20050,16 +20114,16 @@
     "pull_request": {},
     "labels": [
       {
+        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies",
-        "color": "0366d6"
+        "name": "dependencies"
       },
       {
-        "name": "rust",
-        "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust",
+        "color": "000000"
       }
     ],
     "state": "closed",
@@ -20071,10 +20135,10 @@
   {
     "labels": [
       {
+        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies",
-        "color": "0366d6"
+        "name": "dependencies"
       },
       {
         "color": "000000",
@@ -20294,10 +20358,10 @@
     "updated_at": "2023-12-15T07:40:33Z",
     "labels": [
       {
+        "color": "0366d6",
         "description": "Pull requests that update a dependency file",
         "id": 3931021008,
-        "name": "dependencies",
-        "color": "0366d6"
+        "name": "dependencies"
       },
       {
         "name": "github_actions",
@@ -20328,10 +20392,10 @@
         "name": "dependencies"
       },
       {
-        "id": 3931021046,
         "name": "github_actions",
         "color": "000000",
-        "description": "Pull requests that update GitHub Actions code"
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 3931021046
       }
     ],
     "updated_at": "2023-12-15T07:41:17Z",
@@ -20359,10 +20423,10 @@
         "color": "0366d6"
       },
       {
-        "color": "000000",
-        "description": "Pull requests that update Rust code",
         "id": 3931024155,
-        "name": "rust"
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
       }
     ],
     "merged_at": "2023-12-15T07:41:55Z",
@@ -20477,10 +20541,10 @@
         "color": "0366d6"
       },
       {
-        "name": "github_actions",
         "color": "000000",
         "description": "Pull requests that update GitHub Actions code",
-        "id": 3931021046
+        "id": 3931021046,
+        "name": "github_actions"
       }
     ],
     "state": "closed",
@@ -20505,16 +20569,16 @@
     },
     "labels": [
       {
-        "id": 3931021008,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
-        "name": "github_actions",
-        "color": "000000",
         "description": "Pull requests that update GitHub Actions code",
-        "id": 3931021046
+        "id": 3931021046,
+        "name": "github_actions",
+        "color": "000000"
       }
     ],
     "created_at": "2023-12-18T20:24:46Z",
@@ -20682,10 +20746,10 @@
     "updated_at": "2024-01-02T13:40:26Z",
     "labels": [
       {
-        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008
+        "id": 3931021008,
+        "name": "dependencies"
       },
       {
         "id": 3931024155,
@@ -20704,10 +20768,10 @@
     "created_at": "2023-12-21T20:21:31Z",
     "labels": [
       {
-        "id": 3931021008,
         "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 3931021008
       },
       {
         "name": "rust",
@@ -20742,16 +20806,16 @@
     },
     "labels": [
       {
+        "name": "dependencies",
         "color": "0366d6",
         "description": "Pull requests that update a dependency file",
-        "id": 3931021008,
-        "name": "dependencies"
+        "id": 3931021008
       },
       {
-        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155
+        "id": 3931024155,
+        "name": "rust"
       }
     ],
     "state": "closed",
@@ -20804,7 +20868,9 @@
     "updated_at": "2025-09-23T13:16:06Z",
     "unique_participants": 0,
     "id": 1655887799,
-    "unique_external_participants": 0
+    "unique_external_participants": 0,
+    "unique_human_participants_7d": 0,
+    "human_comments_7d": 0
   },
   {
     "updated_at": "2023-12-27T12:21:17Z",
@@ -20961,10 +21027,10 @@
         "description": "Pull requests that update a dependency file"
       },
       {
+        "name": "rust",
         "color": "000000",
         "description": "Pull requests that update Rust code",
-        "id": 3931024155,
-        "name": "rust"
+        "id": 3931024155
       }
     ],
     "pull_request": {},
@@ -20982,10 +21048,10 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/4333",
     "labels": [
       {
-        "name": "quickwit-ui",
         "color": "3D4DFC",
         "description": "Quickwit Embedded User Interface",
-        "id": 3936299596
+        "id": 3936299596,
+        "name": "quickwit-ui"
       }
     ],
     "closed_at": "2023-12-29T00:53:09Z",
