@@ -193,17 +193,29 @@ All are gauges sampled at the run time. Rolling-window totals are gauges rather 
 
 The external scheduler invokes the command once per repository, supplying the appropriate `--repo` and `--lookback`. Its GitHub token needs read access to that repository. Submitting metrics needs `DD_API_KEY`; non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`).
 
-For a GitHub runner, the repository includes a trigger-agnostic composite action at `.github/actions/sync-datadog-metrics`. The calling workflow supplies the trigger, checkout, and credentials:
+For a GitHub runner, the repository includes a trigger-agnostic composite action at `.github/actions/sync-datadog-metrics`. The calling workflow supplies the trigger, checkout, write access, and credentials:
 
 ```yaml
+permissions:
+  contents: write
+
+steps:
 - uses: actions/checkout@v4
+  with:
+    fetch-depth: 0
+    token: ${{ secrets.METRICS_GITHUB_TOKEN }}
 - uses: ./.github/actions/sync-datadog-metrics
   with:
     repo: quickwit-oss/quickwit
     lookback: 30d
+    signing_private_key: ${{ secrets.METRICS_SIGNING_PRIVATE_KEY }}
+    commit_user_name: Your Metrics Bot
+    commit_user_email: metrics-bot@example.com
   env:
     GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
     DD_API_KEY: ${{ secrets.DD_API_KEY }}
 ```
 
-The action builds the CLI and runs `scripts/sync-datadog-metrics.sh`; it does not define or assume a schedule.
+The action builds the CLI, runs `scripts/sync-datadog-metrics.sh`, and commits only changes under the selected repository's `data/{owner}_{repo}/` path. It skips the commit when nothing changed and pushes the signed commit to the checked-out branch without force. The action does not define or assume a schedule.
+
+`METRICS_SIGNING_PRIVATE_KEY` must contain a dedicated, passphrase-free SSH private key. Add its public key to the commit identity's GitHub account as a signing key so GitHub can mark the automated commits as verified. A `dry_run` does not require signing inputs and never commits or pushes.

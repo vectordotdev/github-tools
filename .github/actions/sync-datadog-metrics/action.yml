@@ -17,6 +17,15 @@ inputs:
     description: Fetch and preview without submitting metrics
     required: false
     default: "false"
+  signing_private_key:
+    description: Passphrase-free SSH private key used to sign data commits (required unless dry_run is true)
+    required: false
+  commit_user_name:
+    description: Git author name for signed data commits (required unless dry_run is true)
+    required: false
+  commit_user_email:
+    description: Git author email for signed data commits (required unless dry_run is true)
+    required: false
 
 runs:
   using: composite
@@ -33,8 +42,56 @@ runs:
       shell: bash
       env:
         DRY_RUN: ${{ inputs.dry_run }}
-      run: >-
-        bash "${{ github.action_path }}/../../../scripts/sync-datadog-metrics.sh"
-        "${{ inputs.repo }}"
-        "${{ inputs.lookback }}"
-        "${{ inputs.metric_prefix }}"
+        TARGET_REPO: ${{ inputs.repo }}
+        LOOKBACK: ${{ inputs.lookback }}
+        METRIC_PREFIX: ${{ inputs.metric_prefix }}
+      run: |
+        bash "${{ github.action_path }}/../../../scripts/sync-datadog-metrics.sh" \
+          "${TARGET_REPO}" \
+          "${LOOKBACK}" \
+          "${METRIC_PREFIX}"
+
+    - name: Commit and push data changes
+      if: ${{ inputs.dry_run != 'true' }}
+      shell: bash
+      env:
+        TARGET_REPO: ${{ inputs.repo }}
+        SIGNING_PRIVATE_KEY: ${{ inputs.signing_private_key }}
+        COMMIT_USER_NAME: ${{ inputs.commit_user_name }}
+        COMMIT_USER_EMAIL: ${{ inputs.commit_user_email }}
+      run: |
+        set -euo pipefail
+
+        if [[ -z "${SIGNING_PRIVATE_KEY}" || -z "${COMMIT_USER_NAME}" || -z "${COMMIT_USER_EMAIL}" ]]; then
+          echo "signing_private_key, commit_user_name, and commit_user_email are required" >&2
+          exit 2
+        fi
+
+        branch="$(git symbolic-ref --quiet --short HEAD)" || {
+          echo "cannot push data changes from a detached HEAD; check out the target branch first" >&2
+          exit 2
+        }
+        data_dir="data/${TARGET_REPO/\//_}"
+
+        git add -A -- "${data_dir}"
+        if git diff --cached --quiet -- "${data_dir}"; then
+          echo "No data changes to commit for ${TARGET_REPO}."
+          exit 0
+        fi
+
+        signing_key="${RUNNER_TEMP}/github-tools-signing-key"
+        cleanup() {
+          rm -f -- "${signing_key}"
+        }
+        trap cleanup EXIT
+        umask 077
+        printf '%s\n' "${SIGNING_PRIVATE_KEY}" | tr -d '\r' > "${signing_key}"
+        ssh-keygen -y -f "${signing_key}" >/dev/null
+
+        git \
+          -c user.name="${COMMIT_USER_NAME}" \
+          -c user.email="${COMMIT_USER_EMAIL}" \
+          -c gpg.format=ssh \
+          -c user.signingkey="${signing_key}" \
+          commit -S -m "chore(data): sync ${TARGET_REPO}" -- "${data_dir}"
+        git push origin "HEAD:${branch}"
