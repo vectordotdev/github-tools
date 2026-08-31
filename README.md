@@ -21,8 +21,8 @@ src/             # Rust source (single binary: github-tools)
 docs/            # GitHub Pages — interactive HTML dashboards (ECharts)
 data/            # Committed snapshots: JSON inputs
   {owner}_{repo}/issues/  # Issues/PRs JSON split by year (2024.json, 2025.json, ...)
+  {owner}_{repo}/discussions/  # Discussions JSON split by year
 out/             # Gitignored — all generated and local-only files
-  historical/    # Raw JSON fetched from GitHub API
   db/            # SQLite databases
   summaries/     # Generated CSVs
   purge/         # Purge audit logs (local only)
@@ -41,6 +41,8 @@ Commands read credentials from the environment. Keep them in a single `secrets.e
 
 ```dotenv
 GITHUB_TOKEN=...
+DD_API_KEY=...       # Datadog metric submission only
+DD_SITE=datadoghq.com
 DOCKER_USERNAME=...   # purge commands only
 DOCKER_PASSWORD=...   # purge commands only
 ```
@@ -67,6 +69,8 @@ Fetch:
   fetch-labels       Fetch all labels for a repository
 
 Pipeline:
+  sync-metrics       Fetch into data/, rebuild DB, and submit a Datadog snapshot
+  push-metrics       Submit a Datadog snapshot from an existing local DB
   generate-all       Build DB + summaries + charts for all repos (workflow)
   build-db           Load issues JSON into SQLite database
   generate-summaries Generate CSV summaries from SQLite database
@@ -99,7 +103,12 @@ for repo in vectordotdev/vector vectordotdev/vrl quickwit-oss/quickwit quickwit-
 done
 ```
 
-Writes to `out/historical/`. The fetched JSON must be split by year and promoted to `data/` to commit as a snapshot. Issues/PRs are stored in `data/{owner}_{repo}/issues/{year}.json`.
+Fetches merge directly into the committed snapshot layout:
+
+- Issues/PRs: `data/{owner}_{repo}/issues/{year}.json`
+- Discussions: `data/{owner}_{repo}/discussions/{year}.json`
+
+Use `--since 30d` (or another ISO/relative value) for an incremental refresh. Fresh records replace matching record numbers, while older snapshot data is retained.
 
 ## 2. Generate DB, summaries, and charts
 
@@ -142,3 +151,59 @@ Outputs:
 - `out/summaries/{owner}_{repo}_automated_review_stats.json` — stats snapshot picked up by `generate-all`
 
 Re-run `generate-all` after collecting stats to update the dashboard with the AI review chart.
+
+## 5. Datadog project-health metrics
+
+`sync-metrics` composes the existing fetch and database commands into the path intended for scheduled automation:
+
+```shell
+op run --env-file secrets.env -- github-tools sync-metrics \
+  --repo vectordotdev/vector \
+  --lookback 30d
+```
+
+The command:
+
+1. Fetches issues, pull requests, and discussions updated inside the lookback.
+2. Merges them into the appropriate year files under `data/{owner}_{repo}/`.
+3. Rebuilds `out/db/{owner}_{repo}.db` from the full committed snapshot.
+4. Sends current gauge snapshots to Datadog.
+
+Use `--dry-run` to perform the fetch and database rebuild while printing, but not submitting, the resulting metrics. To preview metrics entirely offline after a database has been built:
+
+```shell
+github-tools push-metrics \
+  --repo vectordotdev/vector \
+  --since 30d \
+  --dry-run
+```
+
+The default prefix is `github.health`; override it with `--prefix`. The metrics are:
+
+| Metric | Meaning | Important tags |
+|---|---|---|
+| `github.health.issues` | Current open issue backlog | `repo`, `issue_type`, `age`, labels |
+| `github.health.prs` | Current non-draft PR backlog | `repo`, `age`, labels |
+| `github.health.discussions` | Current open discussions | `repo`, `category`, `answered`, `age` |
+| `github.health.issues.closed` | Issues closed inside the lookback | `repo`, `window`, `issue_type`, labels |
+| `github.health.prs.closed` | PRs closed inside the lookback | `repo`, `window`, labels |
+| `github.health.discussions.closed` | Discussions closed inside the lookback | `repo`, `window`, `category`, `answered` |
+
+All are gauges sampled at the run time. Rolling-window totals are gauges rather than Datadog `count` metrics because each point is a complete lookback snapshot, not a count accumulated during the reporting interval.
+
+The external scheduler invokes the command once per repository, supplying the appropriate `--repo` and `--lookback`. Its GitHub token needs read access to that repository. Submitting metrics needs `DD_API_KEY`; non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`).
+
+For a GitHub runner, the repository includes a trigger-agnostic composite action at `.github/actions/sync-datadog-metrics`. The calling workflow supplies the trigger, checkout, and credentials:
+
+```yaml
+- uses: actions/checkout@v4
+- uses: ./.github/actions/sync-datadog-metrics
+  with:
+    repo: quickwit-oss/quickwit
+    lookback: 30d
+  env:
+    GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
+    DD_API_KEY: ${{ secrets.DD_API_KEY }}
+```
+
+The action builds the CLI and runs `scripts/sync-datadog-metrics.sh`; it does not define or assume a schedule.
