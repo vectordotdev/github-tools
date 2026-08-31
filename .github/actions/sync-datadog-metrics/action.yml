@@ -6,7 +6,11 @@ inputs:
     description: Repository to sync, as owner/repo
     required: true
   lookback:
-    description: Fetch and activity lookback
+    description: Incremental fetch and historical emission lookback
+    required: false
+    default: 30d
+  activity_window:
+    description: Rolling window used by closed-item metrics
     required: false
     default: 30d
   metric_prefix:
@@ -14,7 +18,7 @@ inputs:
     required: false
     default: github.health
   dry_run:
-    description: Fetch and preview without submitting metrics
+    description: Fetch and preview historical metrics without submitting or committing
     required: false
     default: "false"
   signing_private_key:
@@ -45,11 +49,13 @@ runs:
         TARGET_REPO: ${{ inputs.repo }}
         LOOKBACK: ${{ inputs.lookback }}
         METRIC_PREFIX: ${{ inputs.metric_prefix }}
+        ACTIVITY_WINDOW: ${{ inputs.activity_window }}
       run: |
         bash "${{ github.action_path }}/../../../scripts/sync-datadog-metrics.sh" \
           "${TARGET_REPO}" \
           "${LOOKBACK}" \
-          "${METRIC_PREFIX}"
+          "${METRIC_PREFIX}" \
+          "${ACTIVITY_WINDOW}"
 
     - name: Commit and push data changes
       if: ${{ inputs.dry_run != 'true' }}

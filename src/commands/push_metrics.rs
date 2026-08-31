@@ -1,16 +1,21 @@
 use crate::commands::fetch_issues::parse_since;
 use crate::config::Config;
 use anyhow::{Context, Result};
+use chrono::{DateTime, SecondsFormat, Utc};
 use reqwest::blocking::Client;
 use rusqlite::Connection;
 use serde::Serialize;
-use std::collections::HashMap;
+use std::collections::{BTreeMap, HashMap};
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
 const DEFAULT_DD_SITE: &str = "datadoghq.com";
 const DEFAULT_METRIC_PREFIX: &str = "github.health";
 const DEFAULT_LOOKBACK: &str = "30d";
-const BATCH_SIZE: usize = 500;
+const DEFAULT_HISTORY: &str = "30d";
+const DAY_SECONDS: i64 = 86_400;
+const MAX_HISTORY_DAYS: i64 = 460;
+const MAX_BATCH_SERIES: usize = 500;
+const MAX_BATCH_BYTES: usize = 450_000;
 
 #[derive(Debug, Clone, PartialEq, Serialize)]
 struct MetricPoint {
@@ -38,10 +43,18 @@ impl MetricSeries {
     }
 }
 
+#[derive(Clone, Copy)]
+struct Snapshot<'a> {
+    at: &'a str,
+    window_start: &'a str,
+    timestamp: i64,
+}
+
 pub fn run(
     config: &Config,
     dd_api_key: Option<&str>,
     dd_site: Option<&str>,
+    history: Option<&str>,
     since: Option<&str>,
     prefix: Option<&str>,
     dry_run: bool,
@@ -50,8 +63,21 @@ pub fn run(
         .duration_since(UNIX_EPOCH)
         .context("system time is before the Unix epoch")?
         .as_secs() as i64;
+    let history = history.unwrap_or(DEFAULT_HISTORY);
     let lookback = since.unwrap_or(DEFAULT_LOOKBACK);
-    let velocity_since = parse_since(lookback)?;
+    let history_since = parse_since(history)?;
+    let history_start = DateTime::parse_from_rfc3339(&history_since)
+        .with_context(|| format!("invalid resolved lookback timestamp: {history_since}"))?
+        .timestamp();
+    let snapshots = snapshot_timestamps(history_start, now)?;
+    let activity_since = parse_since(lookback)?;
+    let activity_start = DateTime::parse_from_rfc3339(&activity_since)
+        .with_context(|| format!("invalid resolved activity timestamp: {activity_since}"))?
+        .timestamp();
+    let activity_seconds = now - activity_start;
+    if activity_seconds <= 0 {
+        anyhow::bail!("activity lookback must resolve to a time before now");
+    }
     let metric_prefix = prefix.unwrap_or(DEFAULT_METRIC_PREFIX);
     validate_metric_prefix(metric_prefix)?;
 
@@ -60,10 +86,29 @@ pub fn run(
         .with_context(|| format!("failed to open database: {db_path}"))?;
 
     println!("Reading metrics from {db_path}");
-    println!("  Open backlog: all time");
-    println!("  Activity window: {lookback} ({velocity_since} onward)");
+    println!(
+        "  History: {history} ({} daily UTC snapshots plus the current point)",
+        snapshots.len().saturating_sub(1)
+    );
+    println!("  Rolling activity window: {lookback}");
 
-    let series = collect_metrics(&conn, config, metric_prefix, lookback, &velocity_since, now)?;
+    let mut historical_series = Vec::new();
+    for snapshot in snapshots {
+        let snapshot_at = format_timestamp(snapshot)?;
+        let window_start = format_timestamp(snapshot - activity_seconds)?;
+        historical_series.extend(collect_metrics(
+            &conn,
+            config,
+            metric_prefix,
+            lookback,
+            Snapshot {
+                at: &snapshot_at,
+                window_start: &window_start,
+                timestamp: snapshot,
+            },
+        )?);
+    }
+    let series = coalesce_series(historical_series);
 
     if series.is_empty() {
         println!("No metrics to push.");
@@ -84,8 +129,16 @@ pub fn run(
         .build()
         .context("failed to construct Datadog HTTP client")?;
 
-    println!("Pushing {} metric series to Datadog...", series.len());
-    for (index, chunk) in series.chunks(BATCH_SIZE).enumerate() {
+    let point_count = series
+        .iter()
+        .map(|metric| metric.points.len())
+        .sum::<usize>();
+    let batches = series_batches(&series)?;
+    println!(
+        "Pushing {} metric series with {point_count} historical/current points to Datadog...",
+        series.len()
+    );
+    for (index, chunk) in batches.iter().enumerate() {
         let response = client
             .post(&api_url)
             .header("DD-API-KEY", api_key)
@@ -120,8 +173,7 @@ fn collect_metrics(
     config: &Config,
     prefix: &str,
     lookback: &str,
-    velocity_since: &str,
-    now: i64,
+    snapshot: Snapshot<'_>,
 ) -> Result<Vec<MetricSeries>> {
     let base_tags = vec![
         format!(
@@ -133,41 +185,31 @@ fn collect_metrics(
     ];
 
     let mut series = Vec::new();
-    series.extend(open_items_gauge(conn, "issues", &base_tags, prefix, now)?);
+    series.extend(open_items_gauge(
+        conn, "issues", &base_tags, prefix, snapshot,
+    )?);
     series.extend(open_items_gauge(
         conn,
         "pull_requests",
         &base_tags,
         prefix,
-        now,
+        snapshot,
     )?);
-    series.extend(open_discussions_gauge(conn, &base_tags, prefix, now)?);
+    series.extend(open_discussions_gauge(conn, &base_tags, prefix, snapshot)?);
 
     series.extend(closed_items_gauge(
-        conn,
-        "issues",
-        &base_tags,
-        velocity_since,
-        lookback,
-        prefix,
-        now,
+        conn, "issues", &base_tags, lookback, prefix, snapshot,
     )?);
     series.extend(closed_items_gauge(
         conn,
         "pull_requests",
         &base_tags,
-        velocity_since,
         lookback,
         prefix,
-        now,
+        snapshot,
     )?);
     series.extend(closed_discussions_gauge(
-        conn,
-        &base_tags,
-        velocity_since,
-        lookback,
-        prefix,
-        now,
+        conn, &base_tags, lookback, prefix, snapshot,
     )?);
 
     series.sort_by(|left, right| {
@@ -183,14 +225,15 @@ fn open_items_gauge(
     table: &str,
     base_tags: &[String],
     prefix: &str,
-    now: i64,
+    snapshot: Snapshot<'_>,
 ) -> Result<Vec<MetricSeries>> {
     let metric_name = if table == "pull_requests" {
         format!("{prefix}.prs")
     } else {
         format!("{prefix}.issues")
     };
-    let label_map = build_label_map(conn, table, "t.state = 'open'", None)?;
+    let open_condition = "t.created_at <= ? AND (t.closed_at IS NULL OR t.closed_at > ?)";
+    let label_map = build_label_map(conn, table, open_condition, &[snapshot.at, snapshot.at])?;
     let issue_type_col = if table == "issues" {
         ", issue_type"
     } else {
@@ -202,10 +245,11 @@ fn open_items_gauge(
         ""
     };
     let query = format!(
-        "SELECT id, created_at{issue_type_col} FROM {table} WHERE state = 'open'{extra_filter}"
+        "SELECT id, created_at{issue_type_col} FROM {table} \
+         WHERE created_at <= ? AND (closed_at IS NULL OR closed_at > ?){extra_filter}"
     );
     let mut stmt = conn.prepare(&query)?;
-    let mut rows = stmt.query([])?;
+    let mut rows = stmt.query(rusqlite::params![snapshot.at, snapshot.at])?;
     let mut counts: HashMap<Vec<String>, i64> = HashMap::new();
 
     while let Some(row) = rows.next()? {
@@ -213,7 +257,10 @@ fn open_items_gauge(
         let created_at: String = row.get(1)?;
         let issue_type: Option<String> = if table == "issues" { row.get(2)? } else { None };
         let mut tags = base_tags.to_vec();
-        tags.extend(["state:open".to_string(), age_bucket(&created_at, now)]);
+        tags.extend([
+            "state:open".to_string(),
+            age_bucket(&created_at, snapshot.timestamp),
+        ]);
         add_issue_type_and_labels(&mut tags, issue_type.as_deref(), label_map.get(&id));
         tags.sort();
         *counts.entry(tags).or_default() += 1;
@@ -221,7 +268,9 @@ fn open_items_gauge(
 
     Ok(counts
         .into_iter()
-        .map(|(tags, value)| MetricSeries::gauge(metric_name.clone(), value, now, tags))
+        .map(|(tags, value)| {
+            MetricSeries::gauge(metric_name.clone(), value, snapshot.timestamp, tags)
+        })
         .collect())
 }
 
@@ -229,10 +278,9 @@ fn closed_items_gauge(
     conn: &Connection,
     table: &str,
     base_tags: &[String],
-    velocity_since: &str,
     lookback: &str,
     prefix: &str,
-    now: i64,
+    snapshot: Snapshot<'_>,
 ) -> Result<Vec<MetricSeries>> {
     let metric_name = if table == "pull_requests" {
         format!("{prefix}.prs.closed")
@@ -242,8 +290,8 @@ fn closed_items_gauge(
     let label_map = build_label_map(
         conn,
         table,
-        "t.state = 'closed' AND t.closed_at >= ?",
-        Some(velocity_since),
+        "t.closed_at >= ? AND t.closed_at <= ?",
+        &[snapshot.window_start, snapshot.at],
     )?;
     let select_columns = if table == "issues" {
         "id, issue_type"
@@ -257,10 +305,10 @@ fn closed_items_gauge(
     };
     let query = format!(
         "SELECT {select_columns} FROM {table} \
-         WHERE state = 'closed' AND closed_at >= ?{extra_filter}"
+         WHERE closed_at >= ? AND closed_at <= ?{extra_filter}"
     );
     let mut stmt = conn.prepare(&query)?;
-    let mut rows = stmt.query(rusqlite::params![velocity_since])?;
+    let mut rows = stmt.query(rusqlite::params![snapshot.window_start, snapshot.at])?;
     let mut counts: HashMap<Vec<String>, i64> = HashMap::new();
 
     while let Some(row) = rows.next()? {
@@ -278,7 +326,9 @@ fn closed_items_gauge(
 
     Ok(counts
         .into_iter()
-        .map(|(tags, value)| MetricSeries::gauge(metric_name.clone(), value, now, tags))
+        .map(|(tags, value)| {
+            MetricSeries::gauge(metric_name.clone(), value, snapshot.timestamp, tags)
+        })
         .collect())
 }
 
@@ -286,11 +336,13 @@ fn open_discussions_gauge(
     conn: &Connection,
     base_tags: &[String],
     prefix: &str,
-    now: i64,
+    snapshot: Snapshot<'_>,
 ) -> Result<Vec<MetricSeries>> {
-    let mut stmt =
-        conn.prepare("SELECT category, is_answered, created_at FROM discussions WHERE closed = 0")?;
-    let mut rows = stmt.query([])?;
+    let mut stmt = conn.prepare(
+        "SELECT category, is_answered, created_at FROM discussions \
+         WHERE created_at <= ? AND (closed_at IS NULL OR closed_at > ?)",
+    )?;
+    let mut rows = stmt.query(rusqlite::params![snapshot.at, snapshot.at])?;
     let mut counts: HashMap<Vec<String>, i64> = HashMap::new();
 
     while let Some(row) = rows.next()? {
@@ -302,7 +354,7 @@ fn open_discussions_gauge(
             format!("category:{}", sanitize_tag_value(&category)),
             "state:open".to_string(),
             format!("answered:{answered}"),
-            age_bucket(&created_at, now),
+            age_bucket(&created_at, snapshot.timestamp),
         ]);
         tags.sort();
         *counts.entry(tags).or_default() += 1;
@@ -310,23 +362,29 @@ fn open_discussions_gauge(
 
     Ok(counts
         .into_iter()
-        .map(|(tags, value)| MetricSeries::gauge(format!("{prefix}.discussions"), value, now, tags))
+        .map(|(tags, value)| {
+            MetricSeries::gauge(
+                format!("{prefix}.discussions"),
+                value,
+                snapshot.timestamp,
+                tags,
+            )
+        })
         .collect())
 }
 
 fn closed_discussions_gauge(
     conn: &Connection,
     base_tags: &[String],
-    velocity_since: &str,
     lookback: &str,
     prefix: &str,
-    now: i64,
+    snapshot: Snapshot<'_>,
 ) -> Result<Vec<MetricSeries>> {
     let mut stmt = conn.prepare(
         "SELECT category, is_answered FROM discussions \
-         WHERE closed = 1 AND closed_at >= ?",
+         WHERE closed_at >= ? AND closed_at <= ?",
     )?;
-    let mut rows = stmt.query(rusqlite::params![velocity_since])?;
+    let mut rows = stmt.query(rusqlite::params![snapshot.window_start, snapshot.at])?;
     let mut counts: HashMap<Vec<String>, i64> = HashMap::new();
 
     while let Some(row) = rows.next()? {
@@ -346,7 +404,12 @@ fn closed_discussions_gauge(
     Ok(counts
         .into_iter()
         .map(|(tags, value)| {
-            MetricSeries::gauge(format!("{prefix}.discussions.closed"), value, now, tags)
+            MetricSeries::gauge(
+                format!("{prefix}.discussions.closed"),
+                value,
+                snapshot.timestamp,
+                tags,
+            )
         })
         .collect())
 }
@@ -355,7 +418,7 @@ fn build_label_map(
     conn: &Connection,
     table: &str,
     condition: &str,
-    parameter: Option<&str>,
+    parameters: &[&str],
 ) -> Result<HashMap<i64, Vec<String>>> {
     let query = format!(
         "SELECT il.issue_id, l.name \
@@ -365,11 +428,7 @@ fn build_label_map(
          WHERE {condition}"
     );
     let mut stmt = conn.prepare(&query)?;
-    let mut rows = if let Some(value) = parameter {
-        stmt.query(rusqlite::params![value])?
-    } else {
-        stmt.query([])?
-    };
+    let mut rows = stmt.query(rusqlite::params_from_iter(parameters.iter()))?;
     let mut map: HashMap<i64, Vec<String>> = HashMap::new();
     while let Some(row) = rows.next()? {
         map.entry(row.get(0)?).or_default().push(row.get(1)?);
@@ -467,36 +526,121 @@ fn datadog_api_url(site: &str) -> Result<String> {
     Ok(format!("https://api.{site}/api/v2/series"))
 }
 
+fn snapshot_timestamps(history_start: i64, now: i64) -> Result<Vec<i64>> {
+    if history_start >= now {
+        anyhow::bail!("lookback must resolve to a time before now");
+    }
+    if now - history_start > MAX_HISTORY_DAYS * DAY_SECONDS {
+        anyhow::bail!("historical metric lookback cannot exceed {MAX_HISTORY_DAYS} days");
+    }
+
+    let mut snapshots = Vec::new();
+    let mut timestamp = (history_start.div_euclid(DAY_SECONDS) + 1) * DAY_SECONDS;
+    while timestamp < now {
+        snapshots.push(timestamp);
+        timestamp += DAY_SECONDS;
+    }
+    snapshots.push(now);
+    Ok(snapshots)
+}
+
+fn format_timestamp(timestamp: i64) -> Result<String> {
+    DateTime::<Utc>::from_timestamp(timestamp, 0)
+        .map(|value| value.to_rfc3339_opts(SecondsFormat::Secs, true))
+        .with_context(|| format!("invalid Unix timestamp: {timestamp}"))
+}
+
+fn coalesce_series(series: Vec<MetricSeries>) -> Vec<MetricSeries> {
+    let mut grouped: BTreeMap<(String, u8, Vec<String>), Vec<MetricPoint>> = BTreeMap::new();
+    for metric in series {
+        grouped
+            .entry((metric.metric, metric.metric_type, metric.tags))
+            .or_default()
+            .extend(metric.points);
+    }
+
+    grouped
+        .into_iter()
+        .map(|((metric, metric_type, tags), mut points)| {
+            points.sort_by_key(|point| point.timestamp);
+            points.dedup_by_key(|point| point.timestamp);
+            MetricSeries {
+                metric,
+                metric_type,
+                points,
+                tags,
+            }
+        })
+        .collect()
+}
+
+fn series_batches(series: &[MetricSeries]) -> Result<Vec<&[MetricSeries]>> {
+    let mut batches = Vec::new();
+    let mut start = 0;
+    let mut payload_bytes = 20;
+
+    for (index, metric) in series.iter().enumerate() {
+        let metric_bytes = serde_json::to_vec(metric)
+            .context("failed to estimate Datadog metric payload size")?
+            .len()
+            + 1;
+        if metric_bytes + 20 > MAX_BATCH_BYTES {
+            anyhow::bail!("one Datadog metric series exceeds the safe payload size");
+        }
+        if index > start
+            && (index - start >= MAX_BATCH_SERIES || payload_bytes + metric_bytes > MAX_BATCH_BYTES)
+        {
+            batches.push(&series[start..index]);
+            start = index;
+            payload_bytes = 20;
+        }
+        payload_bytes += metric_bytes;
+    }
+
+    if start < series.len() {
+        batches.push(&series[start..]);
+    }
+    Ok(batches)
+}
+
 fn print_dry_run(series: &[MetricSeries]) {
+    let point_count = series
+        .iter()
+        .map(|metric| metric.points.len())
+        .sum::<usize>();
     let total_items: i64 = series
         .iter()
         .flat_map(|metric| metric.points.iter())
         .map(|point| point.value)
         .sum();
     println!(
-        "[dry-run] Would push {} series representing {} grouped items",
+        "[dry-run] Would push {} unique series with {point_count} points representing {} grouped items across all snapshots",
         series.len(),
         total_items
     );
 
-    let mut by_metric: HashMap<&str, (usize, i64)> = HashMap::new();
+    let mut by_metric: HashMap<&str, (usize, usize, i64)> = HashMap::new();
     for metric in series {
         let entry = by_metric.entry(&metric.metric).or_default();
         entry.0 += 1;
-        entry.1 += metric.points[0].value;
+        entry.1 += metric.points.len();
+        entry.2 += metric.points.iter().map(|point| point.value).sum::<i64>();
     }
     let mut metrics: Vec<_> = by_metric.into_iter().collect();
     metrics.sort_by_key(|(name, _)| *name);
-    for (name, (count, value)) in metrics {
-        println!("  {name}: {count} series, {value} grouped items");
+    for (name, (count, points, value)) in metrics {
+        println!("  {name}: {count} series, {points} points, {value} grouped items");
     }
 
     println!("\n  Sample series:");
     for metric in series.iter().take(8) {
+        let latest = metric.points.last().expect("metric series has a point");
         println!(
-            "    {} = {}: {}",
+            "    {} = {} at {} ({} points): {}",
             metric.metric,
-            metric.points[0].value,
+            latest.value,
+            latest.timestamp,
+            metric.points.len(),
             metric.tags.join(", ")
         );
     }
@@ -557,8 +701,11 @@ mod tests {
             &config,
             "test.github",
             "30d",
-            "2026-08-01T00:00:00Z",
-            now,
+            Snapshot {
+                at: "2026-08-31T00:00:00Z",
+                window_start: "2026-08-01T00:00:00Z",
+                timestamp: now,
+            },
         )
         .unwrap();
 
@@ -577,6 +724,74 @@ mod tests {
                 .iter()
                 .any(|metric| { metric.metric == "test.github.prs" && metric.points[0].value > 1 })
         );
+    }
+
+    #[test]
+    fn reconstructs_backlog_at_historical_timestamps() {
+        let config = Config {
+            github_token: String::new(),
+            org: "Example-Org".to_string(),
+            repo: "Example-Repo".to_string(),
+        };
+        let historical = DateTime::parse_from_rfc3339("2026-08-23T00:00:00Z")
+            .unwrap()
+            .timestamp();
+        let historical_series = collect_metrics(
+            &test_database(),
+            &config,
+            "test.github",
+            "30d",
+            Snapshot {
+                at: "2026-08-23T00:00:00Z",
+                window_start: "2026-07-24T00:00:00Z",
+                timestamp: historical,
+            },
+        )
+        .unwrap();
+
+        let issue_count = historical_series
+            .iter()
+            .filter(|metric| metric.metric == "test.github.issues")
+            .map(|metric| metric.points[0].value)
+            .sum::<i64>();
+        let pr_count = historical_series
+            .iter()
+            .filter(|metric| metric.metric == "test.github.prs")
+            .map(|metric| metric.points[0].value)
+            .sum::<i64>();
+        assert_eq!(issue_count, 1);
+        assert_eq!(pr_count, 3);
+    }
+
+    #[test]
+    fn creates_stable_daily_snapshots_and_coalesces_points() {
+        let start = DateTime::parse_from_rfc3339("2026-08-28T12:00:00Z")
+            .unwrap()
+            .timestamp();
+        let now = DateTime::parse_from_rfc3339("2026-08-31T16:00:00Z")
+            .unwrap()
+            .timestamp();
+        let snapshots = snapshot_timestamps(start, now).unwrap();
+        assert_eq!(
+            snapshots
+                .iter()
+                .map(|timestamp| format_timestamp(*timestamp).unwrap())
+                .collect::<Vec<_>>(),
+            vec![
+                "2026-08-29T00:00:00Z",
+                "2026-08-30T00:00:00Z",
+                "2026-08-31T00:00:00Z",
+                "2026-08-31T16:00:00Z",
+            ]
+        );
+
+        let tags = vec!["repo:example/repo".to_string()];
+        let series = coalesce_series(vec![
+            MetricSeries::gauge("test.metric".to_string(), 1, snapshots[0], tags.clone()),
+            MetricSeries::gauge("test.metric".to_string(), 2, snapshots[1], tags),
+        ]);
+        assert_eq!(series.len(), 1);
+        assert_eq!(series[0].points.len(), 2);
     }
 
     #[test]

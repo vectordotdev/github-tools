@@ -91,7 +91,7 @@ enum Command {
         #[arg(long, help = "Only include data from this YYYY-MM date forward")]
         start: Option<String>,
     },
-    /// Read the local database and submit a current project-health snapshot to Datadog
+    /// Read the local database and submit daily historical plus current snapshots to Datadog
     PushMetrics {
         #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
         repo: String,
@@ -104,7 +104,13 @@ enum Command {
         #[arg(
             long,
             default_value = "30d",
-            help = "Window for closed items: ISO date, YYYY-MM, or relative (30d, 3m, 1y)"
+            help = "Daily history to reconstruct and submit (30d, 3m, 1y)"
+        )]
+        history: String,
+        #[arg(
+            long,
+            default_value = "30d",
+            help = "Rolling window for closed items: ISO date, YYYY-MM, or relative (30d, 3m, 1y)"
         )]
         since: String,
         #[arg(long, default_value = "github.health")]
@@ -125,9 +131,15 @@ enum Command {
         #[arg(
             long,
             default_value = "30d",
-            help = "Fetch and activity lookback: ISO date, YYYY-MM, or relative (30d, 3m, 1y)"
+            help = "Incremental fetch and historical emission lookback: ISO date, YYYY-MM, or relative (30d, 3m, 1y)"
         )]
         lookback: String,
+        #[arg(
+            long,
+            default_value = "30d",
+            help = "Rolling window for closed-item metrics (30d, 3m, 1y)"
+        )]
+        activity_window: String,
         #[arg(long, default_value = "github.health")]
         prefix: String,
         #[arg(long, help = "Update data/ and build metrics, but do not send to Datadog")]
@@ -308,6 +320,7 @@ fn main() -> Result<()> {
             env_file,
             dd_api_key,
             dd_site,
+            history,
             since,
             prefix,
             dry_run,
@@ -320,6 +333,7 @@ fn main() -> Result<()> {
                 &config,
                 api_key.as_deref(),
                 site.as_deref(),
+                Some(&history),
                 Some(&since),
                 Some(&prefix),
                 dry_run,
@@ -331,6 +345,7 @@ fn main() -> Result<()> {
             dd_api_key,
             dd_site,
             lookback,
+            activity_window,
             prefix,
             dry_run,
         } => {
@@ -342,6 +357,7 @@ fn main() -> Result<()> {
                 Some(&lookback),
                 api_key.as_deref(),
                 site.as_deref(),
+                Some(&activity_window),
                 Some(&prefix),
                 dry_run,
             )

@@ -36,27 +36,38 @@ fn fetch_all_with_config(config: &Config, since: Option<&str>) -> Result<()> {
 }
 
 /// Fetches recent changes, merges them into `data/`, rebuilds the local database,
-/// and submits a current metric snapshot to Datadog.
+/// and submits daily historical plus current metric snapshots to Datadog.
 pub fn sync_metrics(
     config: &Config,
     lookback: Option<&str>,
     dd_api_key: Option<&str>,
     dd_site: Option<&str>,
+    activity_window: Option<&str>,
     prefix: Option<&str>,
     dry_run: bool,
 ) -> Result<()> {
     println!("=== Fetching {}/{} ===", config.org, config.repo);
-    fetch_all_with_config(config, lookback)?;
+    let repo_prefix = format!("{}_{}", config.org, config.repo);
+    let has_existing_data = Path::new(&format!("data/{repo_prefix}/issues")).is_dir()
+        || Path::new(&format!("data/{repo_prefix}_issues.json")).is_file();
+    let fetch_since = if has_existing_data {
+        lookback
+    } else {
+        println!("No existing snapshot found; performing a full initial fetch.");
+        None
+    };
+    fetch_all_with_config(config, fetch_since)?;
 
     println!("\n=== Rebuilding local database ===");
     build_repo_db(config)?;
 
-    println!("\n=== Publishing Datadog snapshot ===");
+    println!("\n=== Publishing Datadog history and current snapshot ===");
     push_metrics::run(
         config,
         dd_api_key,
         dd_site,
         lookback,
+        activity_window,
         prefix,
         dry_run,
     )

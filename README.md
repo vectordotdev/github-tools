@@ -159,21 +159,23 @@ Re-run `generate-all` after collecting stats to update the dashboard with the AI
 ```shell
 op run --env-file secrets.env -- github-tools sync-metrics \
   --repo vectordotdev/vector \
-  --lookback 30d
+  --lookback 8d \
+  --activity-window 30d
 ```
 
 The command:
 
-1. Fetches issues, pull requests, and discussions updated inside the lookback.
+1. Performs a full fetch when no snapshot exists; otherwise fetches items updated inside the lookback.
 2. Merges them into the appropriate year files under `data/{owner}_{repo}/`.
 3. Rebuilds `out/db/{owner}_{repo}.db` from the full committed snapshot.
-4. Sends current gauge snapshots to Datadog.
+4. Reconstructs one snapshot at each UTC midnight in `--lookback`, adds the current snapshot, and sends them to Datadog. Closed-item metrics use the independent `--activity-window`.
 
 Use `--dry-run` to perform the fetch and database rebuild while printing, but not submitting, the resulting metrics. To preview metrics entirely offline after a database has been built:
 
 ```shell
 github-tools push-metrics \
   --repo vectordotdev/vector \
+  --history 30d \
   --since 30d \
   --dry-run
 ```
@@ -182,16 +184,29 @@ The default prefix is `github.health`; override it with `--prefix`. The metrics 
 
 | Metric | Meaning | Important tags |
 |---|---|---|
-| `github.health.issues` | Current open issue backlog | `repo`, `issue_type`, `age`, labels |
-| `github.health.prs` | Current non-draft PR backlog | `repo`, `age`, labels |
-| `github.health.discussions` | Current open discussions | `repo`, `category`, `answered`, `age` |
-| `github.health.issues.closed` | Issues closed inside the lookback | `repo`, `window`, `issue_type`, labels |
-| `github.health.prs.closed` | PRs closed inside the lookback | `repo`, `window`, labels |
-| `github.health.discussions.closed` | Discussions closed inside the lookback | `repo`, `window`, `category`, `answered` |
+| `github.health.issues` | Open issue backlog at each snapshot | `repo`, `issue_type`, `age`, labels |
+| `github.health.prs` | Open non-draft PR backlog at each snapshot | `repo`, `age`, labels |
+| `github.health.discussions` | Open discussions at each snapshot | `repo`, `category`, `answered`, `age` |
+| `github.health.issues.closed` | Issues closed in the rolling window ending at each snapshot | `repo`, `window`, `issue_type`, labels |
+| `github.health.prs.closed` | PRs closed in the rolling window ending at each snapshot | `repo`, `window`, labels |
+| `github.health.discussions.closed` | Discussions closed in the rolling window ending at each snapshot | `repo`, `window`, `category`, `answered` |
 
-All are gauges sampled at the run time. Rolling-window totals are gauges rather than Datadog `count` metrics because each point is a complete lookback snapshot, not a count accumulated during the reporting interval.
+All are gauges. Rolling-window totals remain gauges because each point is a complete window snapshot, not a count accumulated during the reporting interval.
 
-The external scheduler invokes the command once per repository, supplying the appropriate `--repo` and `--lookback`. Its GitHub token needs read access to that repository. Submitting metrics needs `DD_API_KEY`; non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`).
+Historical Metrics Ingestion must be enabled for the metric namespace before running this command. In Datadog, open **Metrics Summary**, choose **Configure Metrics → Enable historical metrics**, and select the `github.health` namespace. Datadog treats points older than one hour as historical and bills them as indexed custom metrics; see [Historical Metrics Ingestion](https://docs.datadoghq.com/metrics/custom_metrics/historical_metrics/).
+
+After enabling it, an existing database can be backfilled once without fetching GitHub or changing `data/`:
+
+```shell
+github-tools push-metrics \
+  --repo quickwit-oss/quickwit \
+  --history 450d \
+  --since 30d
+```
+
+The external scheduler invokes `sync-metrics` once per repository. A weekly job can use `--lookback 8d` to fetch with a small overlap and submit daily points for the period between runs while keeping `--activity-window 30d`. Repeated points at the same timestamp and tag combination are idempotent: Datadog retains the most recently submitted value. Its GitHub token needs read access to the source repository. Submitting metrics needs `DD_API_KEY`; non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`).
+
+Historical backlog membership is reconstructed from `created_at` and `closed_at`. Labels, issue types, PR draft state, and discussion answer state reflect the latest stored values because GitHub's current-item snapshot does not include a complete history of those fields.
 
 For a GitHub runner, the repository includes a trigger-agnostic composite action at `.github/actions/sync-datadog-metrics`. The calling workflow supplies the trigger, checkout, write access, and credentials:
 
@@ -207,7 +222,8 @@ steps:
 - uses: ./.github/actions/sync-datadog-metrics
   with:
     repo: quickwit-oss/quickwit
-    lookback: 30d
+    lookback: 8d
+    activity_window: 30d
     signing_private_key: ${{ secrets.METRICS_SIGNING_PRIVATE_KEY }}
     commit_user_name: Your Metrics Bot
     commit_user_email: metrics-bot@example.com
