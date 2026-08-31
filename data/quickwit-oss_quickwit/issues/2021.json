@@ -2189,37 +2189,37 @@
     "type": "pull_request"
   },
   {
-    "closed_at": null,
-    "created_at": "2021-06-09T00:57:43Z",
     "id": 915673651,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "a2eeef",
-        "description": "New feature or request",
-        "id": 1470408430858150400,
-        "name": "enhancement"
-      },
-      {
-        "color": "BFDADC",
-        "description": "",
-        "id": 7373110576788465000,
-        "name": "low-priority"
-      },
-      {
-        "color": "1d76db",
-        "description": "",
-        "id": 579888533335339900,
-        "name": "backlog"
-      }
-    ],
     "number": 103,
+    "title": "Mapping configuration from example (food for thought)",
     "state": "open",
-    "title": "Mapping configuration from example [food for thought]",
-    "updated_at": "2022-03-29T03:04:20Z",
+    "created_at": "2021-06-09T00:57:43Z",
+    "updated_at": "2026-08-31T17:13:45Z",
+    "closed_at": null,
     "user": {
       "login": "fulmicoton"
-    }
+    },
+    "labels": [
+      {
+        "id": 1470408430858150435,
+        "name": "enhancement",
+        "color": "a2eeef",
+        "description": "New feature or request"
+      },
+      {
+        "id": 7373110576788465060,
+        "name": "low-priority",
+        "color": "BFDADC",
+        "description": ""
+      },
+      {
+        "id": 579888533335339947,
+        "name": "backlog",
+        "color": "1d76db",
+        "description": ""
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2021-06-24T13:33:55Z",

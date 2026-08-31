@@ -9169,47 +9169,31 @@
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/4747"
   },
   {
-    "closed_at": "2026-08-24T18:40:47Z",
-    "created_at": "2024-03-15T16:24:03Z",
     "id": 2189026556,
-    "issue_type": null,
-    "labels": [
-      {
-        "description": "New feature or request",
-        "id": 2912049044,
-        "name": "enhancement",
-        "color": "a2eeef"
-      },
-      {
-        "name": "high-priority",
-        "color": "D93F0B",
-        "description": null,
-        "id": 3067594226
-      }
-    ],
     "number": 4748,
-    "state": "closed",
     "title": "Spread janitor load on metastore",
+    "state": "closed",
+    "created_at": "2024-03-15T16:24:03Z",
     "updated_at": "2026-08-24T18:40:47Z",
+    "closed_at": "2026-08-24T18:40:47Z",
     "user": {
       "login": "guilload"
     },
-    "assignees": [],
-    "review_comments_count": 0,
-    "comments_count": 3,
-    "last_engagement_at": "2026-08-20T22:54:02Z",
-    "first_response_at": "2026-08-20T22:54:02Z",
-    "type": "issue",
-    "first_response_hours": 21318.5,
-    "reviews_count": 0,
-    "draft": false,
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/4748",
-    "unique_participants": 2,
-    "unique_external_participants": 1,
-    "state_reason": "completed",
-    "engagement_count": 3,
-    "human_comments_7d": 0,
-    "unique_human_participants_7d": 0
+    "labels": [
+      {
+        "id": 1470408430858150435,
+        "name": "enhancement",
+        "color": "a2eeef",
+        "description": "New feature or request"
+      },
+      {
+        "id": 2266894064615322294,
+        "name": "high-priority",
+        "color": "D93F0B",
+        "description": ""
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2024-03-21T11:32:43Z",
@@ -22746,33 +22730,20 @@
     }
   },
   {
-    "closed_at": "2026-08-28T15:46:02Z",
-    "created_at": "2024-08-26T09:05:34Z",
-    "draft": false,
     "id": 2036956335,
-    "issue_type": null,
-    "labels": [],
     "number": 5344,
-    "pull_request": {},
-    "state": "closed",
     "title": "add more error details",
+    "state": "closed",
+    "created_at": "2024-08-26T09:05:34Z",
     "updated_at": "2026-08-28T15:46:04Z",
+    "closed_at": "2026-08-28T15:46:02Z",
     "user": {
       "login": "PSeitz"
     },
-    "unique_external_participants": 0,
-    "engagement_count": 1,
-    "type": "pull_request",
-    "unique_participants": 0,
-    "merge_commit_sha": "e2079f81f18060f185ac7537aab6443210892e67",
-    "html_url": "https://github.com/quickwit-oss/quickwit/pull/5344",
-    "review_comments_count": 0,
-    "assignees": [],
-    "reviews_count": 0,
-    "comments_count": 1,
-    "unique_human_participants_7d": 0,
-    "merged_at": "2026-08-28T15:46:02Z",
-    "human_comments_7d": 0
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2024-08-28T08:44:25Z",
@@ -23148,36 +23119,20 @@
     "merged_at": "2024-08-28T17:35:52Z"
   },
   {
-    "closed_at": "2026-08-24T18:07:35Z",
-    "created_at": "2024-08-28T16:42:48Z",
-    "draft": false,
     "id": 2042364800,
-    "issue_type": null,
-    "labels": [],
     "number": 5361,
-    "pull_request": {},
-    "state": "closed",
     "title": "add jitter to retention schedule",
+    "state": "closed",
+    "created_at": "2024-08-28T16:42:48Z",
     "updated_at": "2026-08-24T18:07:36Z",
+    "closed_at": "2026-08-24T18:07:35Z",
     "user": {
       "login": "trinity-1686a"
     },
-    "unique_external_participants": 1,
-    "unique_participants": 2,
-    "merged_at": "2026-08-24T18:07:35Z",
-    "last_engagement_at": "2026-03-16T14:06:04Z",
-    "review_comments_count": 0,
-    "first_response_at": "2024-09-11T21:10:42Z",
-    "assignees": [],
-    "type": "pull_request",
-    "comments_count": 5,
-    "html_url": "https://github.com/quickwit-oss/quickwit/pull/5361",
-    "reviews_count": 0,
-    "merge_commit_sha": "623b4d0728691751b2c796f2a248292f0e591c2e",
-    "first_response_hours": 340.47,
-    "engagement_count": 5,
-    "human_comments_7d": 0,
-    "unique_human_participants_7d": 0
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2024-08-29T02:06:47Z",
@@ -26894,34 +26849,20 @@
     }
   },
   {
-    "closed_at": "2026-08-28T15:43:10Z",
-    "created_at": "2024-10-28T08:29:00Z",
-    "draft": false,
     "id": 2148540193,
-    "issue_type": null,
-    "labels": [],
     "number": 5529,
-    "pull_request": {},
-    "state": "closed",
     "title": "Added support for Quickwit enterprise license.",
+    "state": "closed",
+    "created_at": "2024-10-28T08:29:00Z",
     "updated_at": "2026-08-28T15:43:10Z",
+    "closed_at": "2026-08-28T15:43:10Z",
     "user": {
       "login": "fulmicoton"
     },
-    "last_engagement_at": "2024-11-09T23:22:10Z",
-    "reviews_count": 0,
-    "assignees": [],
-    "first_response_at": "2024-11-09T23:02:05Z",
-    "first_response_hours": 302.55,
-    "html_url": "https://github.com/quickwit-oss/quickwit/pull/5529",
-    "review_comments_count": 0,
-    "engagement_count": 3,
-    "type": "pull_request",
-    "unique_participants": 2,
-    "comments_count": 3,
-    "unique_external_participants": 1,
-    "unique_human_participants_7d": 0,
-    "human_comments_7d": 0
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2024-10-29T11:50:14Z",

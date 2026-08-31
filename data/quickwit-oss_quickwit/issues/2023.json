@@ -16582,38 +16582,25 @@
     "updated_at": "2023-10-17T23:33:26Z"
   },
   {
-    "labels": [
-      {
-        "description": "Something isn't working",
-        "id": 2912049038,
-        "name": "bug",
-        "color": "d73a4a"
-      }
-    ],
-    "state": "open",
-    "comments_count": 0,
-    "type": "issue",
-    "number": 3978,
     "id": 1948532057,
-    "review_comments_count": 0,
-    "unique_human_participants_7d": 0,
-    "reviews_count": 0,
-    "human_comments_7d": 0,
-    "draft": false,
-    "unique_participants": 0,
+    "number": 3978,
+    "title": "Add a bench for QuickwitCollector and optimize it.",
+    "state": "open",
+    "created_at": "2023-10-18T00:49:23Z",
+    "updated_at": "2026-08-28T15:27:33Z",
+    "closed_at": null,
     "user": {
       "login": "fulmicoton"
     },
-    "engagement_count": 0,
-    "assignees": [
-      "PSeitz",
-      "dayaffe"
+    "labels": [
+      {
+        "id": 1525837148569873106,
+        "name": "bug",
+        "color": "d73a4a",
+        "description": "Something isn't working"
+      }
     ],
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/3978",
-    "unique_external_participants": 0,
-    "title": "Add a bench for QuickwitCollector and optimize it.",
-    "created_at": "2023-10-18T00:49:23Z",
-    "updated_at": "2026-08-28T15:27:33Z"
+    "issue_type": null
   },
   {
     "merge_commit_sha": "54bbb6eb2681be8a6289968a42124982aa6be5bf",
@@ -20226,44 +20213,31 @@
     "closed_at": "2023-12-14T10:23:25Z"
   },
   {
-    "unique_participants": 1,
-    "type": "issue",
-    "unique_human_participants_7d": 1,
-    "assignees": [],
-    "unique_external_participants": 1,
+    "id": 2038672390,
+    "number": 4266,
+    "title": "Add some examples of requests in the REST API reference docs",
+    "state": "open",
+    "created_at": "2023-12-12T23:01:01Z",
     "updated_at": "2026-08-31T15:17:32Z",
+    "closed_at": null,
     "user": {
       "login": "fmassot"
     },
-    "state": "open",
-    "draft": false,
-    "human_comments_7d": 1,
-    "first_response_hours": 23824.28,
-    "created_at": "2023-12-12T23:01:01Z",
-    "last_engagement_at": "2026-08-31T15:17:32Z",
-    "id": 2038672390,
-    "title": "Add some examples of requests in the REST API reference docs",
     "labels": [
       {
+        "id": 1470408430858150435,
         "name": "enhancement",
         "color": "a2eeef",
-        "description": "New feature or request",
-        "id": 2912049044
+        "description": "New feature or request"
       },
       {
+        "id": 408601970500688619,
+        "name": "good first issue",
         "color": "7057ff",
-        "description": "Good for newcomers",
-        "id": 2912049046,
-        "name": "good first issue"
+        "description": "Good for newcomers"
       }
     ],
-    "reviews_count": 0,
-    "number": 4266,
-    "review_comments_count": 0,
-    "first_response_at": "2026-08-31T15:17:32Z",
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/4266",
-    "engagement_count": 1,
-    "comments_count": 1
+    "issue_type": null
   },
   {
     "html_url": "https://github.com/quickwit-oss/quickwit/pull/4270",
