@@ -307,10 +307,10 @@
     "issue_type": null,
     "labels": [
       {
+        "id": 2979695546,
         "name": "cla-signed",
         "color": "ededed",
-        "description": null,
-        "id": 2979695546
+        "description": null
       }
     ],
     "number": 15,
@@ -498,16 +498,16 @@
     "issue_type": null,
     "labels": [
       {
-        "color": "0075ca",
-        "description": "Improvements or additions to documentation",
         "id": 2912049040,
-        "name": "documentation"
+        "name": "documentation",
+        "color": "0075ca",
+        "description": "Improvements or additions to documentation"
       },
       {
-        "id": 2915214263,
         "name": "quickwit-cli",
         "color": "F1BF11",
-        "description": null
+        "description": null,
+        "id": 2915214263
       }
     ],
     "number": 23,
@@ -582,10 +582,10 @@
     "issue_type": null,
     "labels": [
       {
-        "id": 2915214263,
         "name": "quickwit-cli",
         "color": "F1BF11",
-        "description": null
+        "description": null,
+        "id": 2915214263
       }
     ],
     "number": 26,
@@ -668,10 +668,10 @@
     "issue_type": null,
     "labels": [
       {
-        "id": 3008486295,
-        "name": "storage",
         "color": "FC81AD",
-        "description": null
+        "description": null,
+        "id": 3008486295,
+        "name": "storage"
       }
     ],
     "number": 30,
@@ -7314,16 +7314,16 @@
     "issue_type": null,
     "labels": [
       {
-        "name": "documentation",
         "color": "0075ca",
         "description": "Improvements or additions to documentation",
-        "id": 2912049040
+        "id": 2912049040,
+        "name": "documentation"
       },
       {
+        "color": "a2eeef",
         "description": "New feature or request",
         "id": 2912049044,
-        "name": "enhancement",
-        "color": "a2eeef"
+        "name": "enhancement"
       }
     ],
     "number": 337,
@@ -7398,7 +7398,7 @@
     ],
     "number": 340,
     "state": "closed",
-    "title": "Test AWS credentials with a resourceÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs IAM role and add it to the documentation",
+    "title": "Test AWS credentials with a resourceÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs IAM role and add it to the documentation",
     "updated_at": "2022-05-17T08:32:14Z",
     "user": {
       "login": "fmassot"
@@ -7719,10 +7719,10 @@
     "issue_type": null,
     "labels": [
       {
+        "name": "documentation",
         "color": "0075ca",
         "description": "Improvements or additions to documentation",
-        "id": 2912049040,
-        "name": "documentation"
+        "id": 2912049040
       }
     ],
     "number": 356,
@@ -9545,10 +9545,10 @@
     "issue_type": null,
     "labels": [
       {
+        "description": "Something isn't working",
         "id": 2912049038,
         "name": "bug",
-        "color": "d73a4a",
-        "description": "Something isn't working"
+        "color": "d73a4a"
       }
     ],
     "number": 438,
