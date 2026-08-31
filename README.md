@@ -218,12 +218,14 @@ steps:
 - uses: actions/checkout@v4
   with:
     fetch-depth: 0
+    ref: main
     token: ${{ secrets.METRICS_GITHUB_TOKEN }}
 - uses: ./.github/actions/sync-datadog-metrics
   with:
     repo: quickwit-oss/quickwit
     lookback: 8d
     activity_window: 30d
+    data_branch: main
     signing_private_key: ${{ secrets.METRICS_SIGNING_PRIVATE_KEY }}
     commit_user_name: Your Metrics Bot
     commit_user_email: metrics-bot@example.com
@@ -232,6 +234,6 @@ steps:
     DD_API_KEY: ${{ secrets.DD_API_KEY }}
 ```
 
-The action builds the CLI, runs `scripts/sync-datadog-metrics.sh`, and commits only changes under the selected repository's `data/{owner}_{repo}/` path. It skips the commit when nothing changed and pushes the signed commit to the checked-out branch without force. The action does not define or assume a schedule.
+The action builds the CLI, runs `scripts/sync-datadog-metrics.sh`, and commits only changes under the selected repository's `data/{owner}_{repo}/` path. It skips the commit when nothing changed and pushes the signed commit directly to `data_branch` (`main` by default) without opening a pull request or force-pushing. To prevent accidentally mixing code from another branch into a data update, the action fails unless the checked-out branch matches `data_branch`. The action does not define or assume a schedule.
 
 `METRICS_SIGNING_PRIVATE_KEY` must contain a dedicated, passphrase-free SSH private key. Add its public key to the commit identity's GitHub account as a signing key so GitHub can mark the automated commits as verified. A `dry_run` does not require signing inputs and never commits or pushes.

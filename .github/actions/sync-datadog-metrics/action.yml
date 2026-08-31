@@ -13,6 +13,10 @@ inputs:
     description: Rolling window used by closed-item metrics
     required: false
     default: 30d
+  data_branch:
+    description: Branch that receives signed data commits directly
+    required: false
+    default: main
   metric_prefix:
     description: Datadog metric prefix
     required: false
@@ -62,6 +66,7 @@ runs:
       shell: bash
       env:
         TARGET_REPO: ${{ inputs.repo }}
+        DATA_BRANCH: ${{ inputs.data_branch }}
         SIGNING_PRIVATE_KEY: ${{ inputs.signing_private_key }}
         COMMIT_USER_NAME: ${{ inputs.commit_user_name }}
         COMMIT_USER_EMAIL: ${{ inputs.commit_user_email }}
@@ -77,6 +82,10 @@ runs:
           echo "cannot push data changes from a detached HEAD; check out the target branch first" >&2
           exit 2
         }
+        if [[ "${branch}" != "${DATA_BRANCH}" ]]; then
+          echo "checked out branch ${branch@Q} does not match data_branch ${DATA_BRANCH@Q}" >&2
+          exit 2
+        fi
         data_dir="data/${TARGET_REPO/\//_}"
 
         git add -A -- "${data_dir}"
@@ -100,4 +109,4 @@ runs:
           -c gpg.format=ssh \
           -c user.signingkey="${signing_key}" \
           commit -S -m "chore(data): sync ${TARGET_REPO}" -- "${data_dir}"
-        git push origin "HEAD:${branch}"
+        git push origin "HEAD:${DATA_BRANCH}"
