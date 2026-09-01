@@ -179,6 +179,20 @@ github-tools push-metrics \
   --dry-run
 ```
 
+Use `--output-json` when another automation owns the Datadog connection. It performs the same calculation without submitting and emits one final JSON envelope. Each object in `batches` is a size-safe request body that can be sent directly to `POST /api/v2/series`:
+
+```shell
+github-tools sync-metrics \
+  --repo quickwit-oss/quickwit \
+  --lookback 8d \
+  --activity-window 30d \
+  --output-json
+```
+
+```json
+{"format":"datadog-series-batches-v1","series_count":1,"point_count":1,"batches":[{"series":[{"metric":"github.health.issues","type":3,"points":[{"timestamp":1788278400,"value":42}],"tags":["repo:quickwit-oss/quickwit"]}]}]}
+```
+
 The default prefix is `github.health`; override it with `--prefix`. The metrics are:
 
 | Metric | Meaning | Important tags |
@@ -203,26 +217,6 @@ github-tools push-metrics \
   --since 30d
 ```
 
-The external scheduler invokes `sync-metrics` once per repository. Each run fetches a complete temporary snapshot, so correctness does not depend on committing refreshed data back to this repository. A weekly job can use `--lookback 8d` to submit daily points for the period between runs while keeping `--activity-window 30d`. Repeated points at the same timestamp and tag combination are idempotent: Datadog retains the most recently submitted value. Its GitHub token needs read access to the source repository. Submitting metrics needs `DD_API_KEY`; non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`).
+An external scheduler invokes `sync-metrics` once per repository. Each run fetches a complete temporary snapshot, so correctness does not depend on committing refreshed data back to this repository. A weekly job can use `--lookback 8d` to submit daily points for the period between runs while keeping `--activity-window 30d`. Repeated points at the same timestamp and tag combination are idempotent: Datadog retains the most recently submitted value. Its GitHub token needs read access to the source repository. Direct submission needs `DD_API_KEY`; alternatively, `--output-json` lets a Datadog workflow submit each generated batch through a managed HTTP connection. Non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`) for direct submission.
 
 Historical backlog membership is reconstructed from `created_at` and `closed_at`. Labels, issue types, PR draft state, and discussion answer state reflect the latest stored values because GitHub's current-item snapshot does not include a complete history of those fields.
-
-For a GitHub runner, the repository includes a trigger-agnostic composite action at `.github/actions/sync-datadog-metrics`. The calling workflow supplies the trigger, a read-only checkout, and credentials:
-
-```yaml
-permissions:
-  contents: read
-
-steps:
-- uses: actions/checkout@v4
-- uses: ./.github/actions/sync-datadog-metrics
-  with:
-    repo: quickwit-oss/quickwit
-    lookback: 8d
-    activity_window: 30d
-  env:
-    GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
-    DD_API_KEY: ${{ secrets.DD_API_KEY }}
-```
-
-The action builds the CLI and runs `scripts/sync-datadog-metrics.sh`. Fetched files and the SQLite database exist only in the runner workspace; the action never stages, commits, or pushes them. Datadog is the durable destination. The action does not define or assume a schedule.

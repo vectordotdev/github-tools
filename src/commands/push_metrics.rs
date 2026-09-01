@@ -58,6 +58,7 @@ pub fn run(
     since: Option<&str>,
     prefix: Option<&str>,
     dry_run: bool,
+    output_json: bool,
 ) -> Result<()> {
     let now = SystemTime::now()
         .duration_since(UNIX_EPOCH)
@@ -109,6 +110,11 @@ pub fn run(
         )?);
     }
     let series = coalesce_series(historical_series);
+
+    if output_json {
+        println!("{}", serde_json::to_string(&json_batch_output(&series)?)?);
+        return Ok(());
+    }
 
     if series.is_empty() {
         println!("No metrics to push.");
@@ -603,6 +609,24 @@ fn series_batches(series: &[MetricSeries]) -> Result<Vec<&[MetricSeries]>> {
     Ok(batches)
 }
 
+fn json_batch_output(series: &[MetricSeries]) -> Result<serde_json::Value> {
+    let batches = series_batches(series)?
+        .into_iter()
+        .map(|batch| serde_json::json!({ "series": batch }))
+        .collect::<Vec<_>>();
+    let point_count = series
+        .iter()
+        .map(|metric| metric.points.len())
+        .sum::<usize>();
+
+    Ok(serde_json::json!({
+        "format": "datadog-series-batches-v1",
+        "series_count": series.len(),
+        "point_count": point_count,
+        "batches": batches,
+    }))
+}
+
 fn print_dry_run(series: &[MetricSeries]) {
     let point_count = series
         .iter()
@@ -813,5 +837,23 @@ mod tests {
         assert!(datadog_api_url("https://example.com").is_err());
         assert!(validate_metric_prefix("github.health").is_ok());
         assert!(validate_metric_prefix("github-health").is_err());
+    }
+
+    #[test]
+    fn emits_datadog_request_bodies_as_json_batches() {
+        let series = vec![MetricSeries::gauge(
+            "test.metric".to_string(),
+            7,
+            1_788_134_400,
+            vec!["repo:example/repo".to_string()],
+        )];
+
+        let output = json_batch_output(&series).unwrap();
+        assert_eq!(output["format"], "datadog-series-batches-v1");
+        assert_eq!(output["series_count"], 1);
+        assert_eq!(output["point_count"], 1);
+        assert_eq!(output["batches"].as_array().unwrap().len(), 1);
+        assert_eq!(output["batches"][0]["series"][0]["metric"], "test.metric");
+        assert_eq!(output["batches"][0]["series"][0]["points"][0]["value"], 7);
     }
 }

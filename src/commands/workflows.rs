@@ -45,6 +45,7 @@ pub fn sync_metrics(
     activity_window: Option<&str>,
     prefix: Option<&str>,
     dry_run: bool,
+    output_json: bool,
 ) -> Result<()> {
     println!("=== Fetching {}/{} ===", config.org, config.repo);
     println!("Fetching a complete temporary snapshot; data will not be committed or pushed.");
@@ -62,6 +63,7 @@ pub fn sync_metrics(
         activity_window,
         prefix,
         dry_run,
+        output_json,
     )
 }
 

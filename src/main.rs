@@ -117,6 +117,12 @@ enum Command {
         prefix: String,
         #[arg(long, help = "Build and print the metric summary without sending it")]
         dry_run: bool,
+        #[arg(
+            long,
+            conflicts_with = "dry_run",
+            help = "Print prepared Datadog request batches as JSON without sending them"
+        )]
+        output_json: bool,
     },
     /// Fetch GitHub data locally, rebuild the database, and publish Datadog metrics
     SyncMetrics {
@@ -147,6 +153,12 @@ enum Command {
             help = "Fetch data and build metrics, but do not send to Datadog"
         )]
         dry_run: bool,
+        #[arg(
+            long,
+            conflicts_with = "dry_run",
+            help = "Fetch data and print prepared Datadog request batches as JSON without sending them"
+        )]
+        output_json: bool,
     },
     /// Run all purge operations (replaces purge_all.sh)
     PurgeAll {
@@ -327,6 +339,7 @@ fn main() -> Result<()> {
             since,
             prefix,
             dry_run,
+            output_json,
         } => {
             load_env_file(env_file.as_deref())?;
             let config = Config::for_repo(&Repo::parse(&repo)?);
@@ -340,6 +353,7 @@ fn main() -> Result<()> {
                 Some(&since),
                 Some(&prefix),
                 dry_run,
+                output_json,
             )
         }
         Command::SyncMetrics {
@@ -351,6 +365,7 @@ fn main() -> Result<()> {
             activity_window,
             prefix,
             dry_run,
+            output_json,
         } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             let api_key = dd_api_key.or_else(|| std::env::var("DD_API_KEY").ok());
@@ -363,6 +378,7 @@ fn main() -> Result<()> {
                 Some(&activity_window),
                 Some(&prefix),
                 dry_run,
+                output_json,
             )
         }
         Command::PurgeAll { older_than, dry_run, yes } => {
