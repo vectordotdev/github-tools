@@ -35,8 +35,8 @@ fn fetch_all_with_config(config: &Config, since: Option<&str>) -> Result<()> {
     Ok(())
 }
 
-/// Fetches recent changes, merges them into `data/`, rebuilds the local database,
-/// and submits daily historical plus current metric snapshots to Datadog.
+/// Fetches a complete GitHub snapshot into the runner-local `data/` directory,
+/// rebuilds the local database, and submits historical plus current snapshots to Datadog.
 pub fn sync_metrics(
     config: &Config,
     lookback: Option<&str>,
@@ -47,16 +47,8 @@ pub fn sync_metrics(
     dry_run: bool,
 ) -> Result<()> {
     println!("=== Fetching {}/{} ===", config.org, config.repo);
-    let repo_prefix = format!("{}_{}", config.org, config.repo);
-    let has_existing_data = Path::new(&format!("data/{repo_prefix}/issues")).is_dir()
-        || Path::new(&format!("data/{repo_prefix}_issues.json")).is_file();
-    let fetch_since = if has_existing_data {
-        lookback
-    } else {
-        println!("No existing snapshot found; performing a full initial fetch.");
-        None
-    };
-    fetch_all_with_config(config, fetch_since)?;
+    println!("Fetching a complete temporary snapshot; data will not be committed or pushed.");
+    fetch_all_with_config(config, None)?;
 
     println!("\n=== Rebuilding local database ===");
     build_repo_db(config)?;
@@ -73,7 +65,7 @@ pub fn sync_metrics(
     )
 }
 
-/// Builds the SQLite database used by summaries and Datadog from committed snapshots.
+/// Builds the SQLite database used by summaries and Datadog from local snapshots.
 fn build_repo_db(config: &Config) -> Result<String> {
     let repo_prefix = format!("{}_{}", config.org, config.repo);
     let issues_dir = format!("data/{repo_prefix}/issues");

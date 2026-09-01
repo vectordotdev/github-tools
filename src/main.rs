@@ -118,7 +118,7 @@ enum Command {
         #[arg(long, help = "Build and print the metric summary without sending it")]
         dry_run: bool,
     },
-    /// Fetch recent changes into data/, rebuild the database, and publish Datadog metrics
+    /// Fetch GitHub data locally, rebuild the database, and publish Datadog metrics
     SyncMetrics {
         #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
         repo: String,
@@ -131,7 +131,7 @@ enum Command {
         #[arg(
             long,
             default_value = "30d",
-            help = "Incremental fetch and historical emission lookback: ISO date, YYYY-MM, or relative (30d, 3m, 1y)"
+            help = "Historical emission lookback: ISO date, YYYY-MM, or relative (30d, 3m, 1y)"
         )]
         lookback: String,
         #[arg(
@@ -142,7 +142,10 @@ enum Command {
         activity_window: String,
         #[arg(long, default_value = "github.health")]
         prefix: String,
-        #[arg(long, help = "Update data/ and build metrics, but do not send to Datadog")]
+        #[arg(
+            long,
+            help = "Fetch data and build metrics, but do not send to Datadog"
+        )]
         dry_run: bool,
     },
     /// Run all purge operations (replaces purge_all.sh)

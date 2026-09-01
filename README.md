@@ -69,7 +69,7 @@ Fetch:
   fetch-labels       Fetch all labels for a repository
 
 Pipeline:
-  sync-metrics       Fetch into data/, rebuild DB, and submit a Datadog snapshot
+  sync-metrics       Fetch GitHub data locally, rebuild DB, and submit Datadog metrics
   push-metrics       Submit a Datadog snapshot from an existing local DB
   generate-all       Build DB + summaries + charts for all repos (workflow)
   build-db           Load issues JSON into SQLite database
@@ -165,10 +165,9 @@ op run --env-file secrets.env -- github-tools sync-metrics \
 
 The command:
 
-1. Performs a full fetch when no snapshot exists; otherwise fetches items updated inside the lookback.
-2. Merges them into the appropriate year files under `data/{owner}_{repo}/`.
-3. Rebuilds `out/db/{owner}_{repo}.db` from the full committed snapshot.
-4. Reconstructs one snapshot at each UTC midnight in `--lookback`, adds the current snapshot, and sends them to Datadog. Closed-item metrics use the independent `--activity-window`.
+1. Fetches a complete GitHub snapshot into the runner-local `data/{owner}_{repo}/` directory.
+2. Rebuilds `out/db/{owner}_{repo}.db` from that local snapshot.
+3. Reconstructs one snapshot at each UTC midnight in `--lookback`, adds the current snapshot, and sends them to Datadog. Closed-item metrics use the independent `--activity-window`.
 
 Use `--dry-run` to perform the fetch and database rebuild while printing, but not submitting, the resulting metrics. To preview metrics entirely offline after a database has been built:
 
@@ -204,36 +203,26 @@ github-tools push-metrics \
   --since 30d
 ```
 
-The external scheduler invokes `sync-metrics` once per repository. A weekly job can use `--lookback 8d` to fetch with a small overlap and submit daily points for the period between runs while keeping `--activity-window 30d`. Repeated points at the same timestamp and tag combination are idempotent: Datadog retains the most recently submitted value. Its GitHub token needs read access to the source repository. Submitting metrics needs `DD_API_KEY`; non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`).
+The external scheduler invokes `sync-metrics` once per repository. Each run fetches a complete temporary snapshot, so correctness does not depend on committing refreshed data back to this repository. A weekly job can use `--lookback 8d` to submit daily points for the period between runs while keeping `--activity-window 30d`. Repeated points at the same timestamp and tag combination are idempotent: Datadog retains the most recently submitted value. Its GitHub token needs read access to the source repository. Submitting metrics needs `DD_API_KEY`; non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`).
 
 Historical backlog membership is reconstructed from `created_at` and `closed_at`. Labels, issue types, PR draft state, and discussion answer state reflect the latest stored values because GitHub's current-item snapshot does not include a complete history of those fields.
 
-For a GitHub runner, the repository includes a trigger-agnostic composite action at `.github/actions/sync-datadog-metrics`. The calling workflow supplies the trigger, checkout, write access, and credentials:
+For a GitHub runner, the repository includes a trigger-agnostic composite action at `.github/actions/sync-datadog-metrics`. The calling workflow supplies the trigger, a read-only checkout, and credentials:
 
 ```yaml
 permissions:
-  contents: write
+  contents: read
 
 steps:
 - uses: actions/checkout@v4
-  with:
-    fetch-depth: 0
-    ref: main
-    token: ${{ secrets.METRICS_GITHUB_TOKEN }}
 - uses: ./.github/actions/sync-datadog-metrics
   with:
     repo: quickwit-oss/quickwit
     lookback: 8d
     activity_window: 30d
-    data_branch: main
-    signing_private_key: ${{ secrets.METRICS_SIGNING_PRIVATE_KEY }}
-    commit_user_name: Your Metrics Bot
-    commit_user_email: metrics-bot@example.com
   env:
     GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
     DD_API_KEY: ${{ secrets.DD_API_KEY }}
 ```
 
-The action builds the CLI, runs `scripts/sync-datadog-metrics.sh`, and commits only changes under the selected repository's `data/{owner}_{repo}/` path. It skips the commit when nothing changed and pushes the signed commit directly to `data_branch` (`main` by default) without opening a pull request or force-pushing. To prevent accidentally mixing code from another branch into a data update, the action fails unless the checked-out branch matches `data_branch`. The action does not define or assume a schedule.
-
-`METRICS_SIGNING_PRIVATE_KEY` must contain a dedicated, passphrase-free SSH private key. Add its public key to the commit identity's GitHub account as a signing key so GitHub can mark the automated commits as verified. A `dry_run` does not require signing inputs and never commits or pushes.
+The action builds the CLI and runs `scripts/sync-datadog-metrics.sh`. Fetched files and the SQLite database exist only in the runner workspace; the action never stages, commits, or pushes them. Datadog is the durable destination. The action does not define or assume a schedule.
