@@ -91,7 +91,7 @@ enum Command {
         #[arg(long, help = "Only include data from this YYYY-MM date forward")]
         start: Option<String>,
     },
-    /// Read the local database and submit daily historical plus current snapshots to Datadog
+    /// Submit Datadog metrics from the local database
     PushMetrics {
         #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
         repo: String,
@@ -124,7 +124,7 @@ enum Command {
         )]
         output_json: bool,
     },
-    /// Fetch GitHub data locally, rebuild the database, and publish Datadog metrics
+    /// Fetch GitHub data and submit Datadog metrics
     SyncMetrics {
         #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
         repo: String,

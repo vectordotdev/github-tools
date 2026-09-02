@@ -32,8 +32,7 @@ fn fetch_all_with_config(config: &Config, since: Option<&str>) -> Result<()> {
     Ok(())
 }
 
-/// Fetches a complete GitHub snapshot into the runner-local `data/` directory,
-/// rebuilds the local database, and submits historical plus current snapshots to Datadog.
+/// Syncs a fresh GitHub snapshot to Datadog.
 pub fn sync_metrics(config: &Config, options: push_metrics::MetricsOptions<'_>) -> Result<()> {
     println!("=== Fetching {}/{} ===", config.org, config.repo);
     println!("Fetching a complete temporary snapshot; data will not be committed or pushed.");
@@ -46,7 +45,7 @@ pub fn sync_metrics(config: &Config, options: push_metrics::MetricsOptions<'_>) 
     push_metrics::run(config, options)
 }
 
-/// Builds the SQLite database used by summaries and Datadog from local snapshots.
+/// Rebuilds the local SQLite database.
 fn build_repo_db(config: &Config) -> Result<String> {
     let repo_prefix = format!("{}_{}", config.org, config.repo);
     let issues_dir = format!("data/{repo_prefix}/issues");
