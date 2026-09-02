@@ -22,10 +22,7 @@ fn dockerhub_vector_dev_repo() -> String {
 pub fn fetch_all(repo_str: &str, since: Option<&str>) -> Result<()> {
     let repo = Repo::parse(repo_str)?;
     let config = Config::for_repo(&repo);
-    let client = Client::new();
-    fetch_issues::run_with_client(&client, &config, since)?;
-    fetch_discussions::run_with_client(&client, &config, since)?;
-    Ok(())
+    fetch_all_with_config(&config, since)
 }
 
 fn fetch_all_with_config(config: &Config, since: Option<&str>) -> Result<()> {
@@ -37,16 +34,7 @@ fn fetch_all_with_config(config: &Config, since: Option<&str>) -> Result<()> {
 
 /// Fetches a complete GitHub snapshot into the runner-local `data/` directory,
 /// rebuilds the local database, and submits historical plus current snapshots to Datadog.
-pub fn sync_metrics(
-    config: &Config,
-    lookback: Option<&str>,
-    dd_api_key: Option<&str>,
-    dd_site: Option<&str>,
-    activity_window: Option<&str>,
-    prefix: Option<&str>,
-    dry_run: bool,
-    output_json: bool,
-) -> Result<()> {
+pub fn sync_metrics(config: &Config, options: push_metrics::MetricsOptions<'_>) -> Result<()> {
     println!("=== Fetching {}/{} ===", config.org, config.repo);
     println!("Fetching a complete temporary snapshot; data will not be committed or pushed.");
     fetch_all_with_config(config, None)?;
@@ -55,16 +43,7 @@ pub fn sync_metrics(
     build_repo_db(config)?;
 
     println!("\n=== Publishing Datadog history and current snapshot ===");
-    push_metrics::run(
-        config,
-        dd_api_key,
-        dd_site,
-        lookback,
-        activity_window,
-        prefix,
-        dry_run,
-        output_json,
-    )
+    push_metrics::run(config, options)
 }
 
 /// Builds the SQLite database used by summaries and Datadog from local snapshots.

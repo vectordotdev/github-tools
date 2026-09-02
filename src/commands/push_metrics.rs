@@ -9,11 +9,8 @@ use std::collections::{BTreeMap, HashMap};
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
 const DEFAULT_DD_SITE: &str = "datadoghq.com";
-const DEFAULT_METRIC_PREFIX: &str = "github.health";
-const DEFAULT_LOOKBACK: &str = "30d";
-const DEFAULT_HISTORY: &str = "30d";
 const DAY_SECONDS: i64 = 86_400;
-const MAX_HISTORY_DAYS: i64 = 460;
+const MAX_HISTORY_DAYS: i64 = 450;
 const MAX_BATCH_SERIES: usize = 500;
 const MAX_BATCH_BYTES: usize = 450_000;
 
@@ -50,37 +47,45 @@ struct Snapshot<'a> {
     timestamp: i64,
 }
 
-pub fn run(
-    config: &Config,
-    dd_api_key: Option<&str>,
-    dd_site: Option<&str>,
-    history: Option<&str>,
-    since: Option<&str>,
-    prefix: Option<&str>,
-    dry_run: bool,
-    output_json: bool,
-) -> Result<()> {
+#[derive(Clone, Copy)]
+pub struct MetricsOptions<'a> {
+    pub history: &'a str,
+    pub activity_window: &'a str,
+    pub prefix: &'a str,
+    pub dd_api_key: Option<&'a str>,
+    pub dd_site: Option<&'a str>,
+    pub dry_run: bool,
+    pub output_json: bool,
+}
+
+pub fn run(config: &Config, options: MetricsOptions<'_>) -> Result<()> {
+    let MetricsOptions {
+        history,
+        activity_window,
+        prefix,
+        dd_api_key,
+        dd_site,
+        dry_run,
+        output_json,
+    } = options;
     let now = SystemTime::now()
         .duration_since(UNIX_EPOCH)
         .context("system time is before the Unix epoch")?
         .as_secs() as i64;
-    let history = history.unwrap_or(DEFAULT_HISTORY);
-    let lookback = since.unwrap_or(DEFAULT_LOOKBACK);
     let history_since = parse_since(history)?;
     let history_start = DateTime::parse_from_rfc3339(&history_since)
         .with_context(|| format!("invalid resolved lookback timestamp: {history_since}"))?
         .timestamp();
     let snapshots = snapshot_timestamps(history_start, now)?;
-    let activity_since = parse_since(lookback)?;
+    let activity_since = parse_since(activity_window)?;
     let activity_start = DateTime::parse_from_rfc3339(&activity_since)
         .with_context(|| format!("invalid resolved activity timestamp: {activity_since}"))?
         .timestamp();
     let activity_seconds = now - activity_start;
     if activity_seconds <= 0 {
-        anyhow::bail!("activity lookback must resolve to a time before now");
+        anyhow::bail!("activity window must resolve to a time before now");
     }
-    let metric_prefix = prefix.unwrap_or(DEFAULT_METRIC_PREFIX);
-    validate_metric_prefix(metric_prefix)?;
+    validate_metric_prefix(prefix)?;
 
     let db_path = format!("out/db/{}_{}.db", config.org, config.repo);
     let conn = Connection::open(&db_path)
@@ -91,7 +96,7 @@ pub fn run(
         "  History: {history} ({} daily UTC snapshots plus the current point)",
         snapshots.len().saturating_sub(1)
     );
-    println!("  Rolling activity window: {lookback}");
+    println!("  Rolling activity window: {activity_window}");
 
     let mut historical_series = Vec::new();
     for snapshot in snapshots {
@@ -100,8 +105,8 @@ pub fn run(
         historical_series.extend(collect_metrics(
             &conn,
             config,
-            metric_prefix,
-            lookback,
+            prefix,
+            activity_window,
             Snapshot {
                 at: &snapshot_at,
                 window_start: &window_start,
@@ -178,7 +183,7 @@ fn collect_metrics(
     conn: &Connection,
     config: &Config,
     prefix: &str,
-    lookback: &str,
+    activity_window: &str,
     snapshot: Snapshot<'_>,
 ) -> Result<Vec<MetricSeries>> {
     let base_tags = vec![
@@ -204,18 +209,27 @@ fn collect_metrics(
     series.extend(open_discussions_gauge(conn, &base_tags, prefix, snapshot)?);
 
     series.extend(closed_items_gauge(
-        conn, "issues", &base_tags, lookback, prefix, snapshot,
+        conn,
+        "issues",
+        &base_tags,
+        activity_window,
+        prefix,
+        snapshot,
     )?);
     series.extend(closed_items_gauge(
         conn,
         "pull_requests",
         &base_tags,
-        lookback,
+        activity_window,
         prefix,
         snapshot,
     )?);
     series.extend(closed_discussions_gauge(
-        conn, &base_tags, lookback, prefix, snapshot,
+        conn,
+        &base_tags,
+        activity_window,
+        prefix,
+        snapshot,
     )?);
 
     series.sort_by(|left, right| {
@@ -268,7 +282,7 @@ fn open_items_gauge(
             age_bucket(&created_at, snapshot.timestamp),
         ]);
         add_issue_type_and_labels(&mut tags, issue_type.as_deref(), label_map.get(&id));
-        tags.sort();
+        normalize_tags(&mut tags);
         *counts.entry(tags).or_default() += 1;
     }
 
@@ -284,7 +298,7 @@ fn closed_items_gauge(
     conn: &Connection,
     table: &str,
     base_tags: &[String],
-    lookback: &str,
+    activity_window: &str,
     prefix: &str,
     snapshot: Snapshot<'_>,
 ) -> Result<Vec<MetricSeries>> {
@@ -323,10 +337,10 @@ fn closed_items_gauge(
         let mut tags = base_tags.to_vec();
         tags.extend([
             "state:closed".to_string(),
-            format!("window:{}", sanitize_tag_value(lookback)),
+            format!("window:{}", sanitize_tag_value(activity_window)),
         ]);
         add_issue_type_and_labels(&mut tags, issue_type.as_deref(), label_map.get(&id));
-        tags.sort();
+        normalize_tags(&mut tags);
         *counts.entry(tags).or_default() += 1;
     }
 
@@ -362,7 +376,7 @@ fn open_discussions_gauge(
             format!("answered:{answered}"),
             age_bucket(&created_at, snapshot.timestamp),
         ]);
-        tags.sort();
+        normalize_tags(&mut tags);
         *counts.entry(tags).or_default() += 1;
     }
 
@@ -382,7 +396,7 @@ fn open_discussions_gauge(
 fn closed_discussions_gauge(
     conn: &Connection,
     base_tags: &[String],
-    lookback: &str,
+    activity_window: &str,
     prefix: &str,
     snapshot: Snapshot<'_>,
 ) -> Result<Vec<MetricSeries>> {
@@ -401,9 +415,9 @@ fn closed_discussions_gauge(
             format!("category:{}", sanitize_tag_value(&category)),
             "state:closed".to_string(),
             format!("answered:{answered}"),
-            format!("window:{}", sanitize_tag_value(lookback)),
+            format!("window:{}", sanitize_tag_value(activity_window)),
         ]);
-        tags.sort();
+        normalize_tags(&mut tags);
         *counts.entry(tags).or_default() += 1;
     }
 
@@ -453,6 +467,11 @@ fn add_issue_type_and_labels(
     if let Some(labels) = labels {
         tags.extend(labels.iter().map(|label| label_to_tag(label)));
     }
+}
+
+fn normalize_tags(tags: &mut Vec<String>) {
+    tags.sort();
+    tags.dedup();
 }
 
 fn age_bucket(created_at: &str, now: i64) -> String {
@@ -835,7 +854,7 @@ mod tests {
             "https://api.datadoghq.eu/api/v2/series"
         );
         assert!(datadog_api_url("https://example.com").is_err());
-        assert!(validate_metric_prefix("github.health").is_ok());
+        assert!(validate_metric_prefix("github.health.v2").is_ok());
         assert!(validate_metric_prefix("github-health").is_err());
     }
 

@@ -112,8 +112,8 @@ enum Command {
             default_value = "30d",
             help = "Rolling window for closed items: ISO date, YYYY-MM, or relative (30d, 3m, 1y)"
         )]
-        since: String,
-        #[arg(long, default_value = "github.health")]
+        activity_window: String,
+        #[arg(long, default_value = "github.health.v2")]
         prefix: String,
         #[arg(long, help = "Build and print the metric summary without sending it")]
         dry_run: bool,
@@ -146,7 +146,7 @@ enum Command {
             help = "Rolling window for closed-item metrics (30d, 3m, 1y)"
         )]
         activity_window: String,
-        #[arg(long, default_value = "github.health")]
+        #[arg(long, default_value = "github.health.v2")]
         prefix: String,
         #[arg(
             long,
@@ -336,7 +336,7 @@ fn main() -> Result<()> {
             dd_api_key,
             dd_site,
             history,
-            since,
+            activity_window,
             prefix,
             dry_run,
             output_json,
@@ -347,13 +347,15 @@ fn main() -> Result<()> {
             let site = dd_site.or_else(|| std::env::var("DD_SITE").ok());
             push_metrics::run(
                 &config,
-                api_key.as_deref(),
-                site.as_deref(),
-                Some(&history),
-                Some(&since),
-                Some(&prefix),
-                dry_run,
-                output_json,
+                push_metrics::MetricsOptions {
+                    history: &history,
+                    activity_window: &activity_window,
+                    prefix: &prefix,
+                    dd_api_key: api_key.as_deref(),
+                    dd_site: site.as_deref(),
+                    dry_run,
+                    output_json,
+                },
             )
         }
         Command::SyncMetrics {
@@ -372,13 +374,15 @@ fn main() -> Result<()> {
             let site = dd_site.or_else(|| std::env::var("DD_SITE").ok());
             workflows::sync_metrics(
                 &config,
-                Some(&lookback),
-                api_key.as_deref(),
-                site.as_deref(),
-                Some(&activity_window),
-                Some(&prefix),
-                dry_run,
-                output_json,
+                push_metrics::MetricsOptions {
+                    history: &lookback,
+                    activity_window: &activity_window,
+                    prefix: &prefix,
+                    dd_api_key: api_key.as_deref(),
+                    dd_site: site.as_deref(),
+                    dry_run,
+                    output_json,
+                },
             )
         }
         Command::PurgeAll { older_than, dry_run, yes } => {
