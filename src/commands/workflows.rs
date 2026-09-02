@@ -1,6 +1,9 @@
 /// High-level workflow commands that orchestrate multiple sub-commands,
 /// replacing fetch_all_slow.sh, generate_all.sh, and purge_all.sh.
-use crate::commands::{build_db, fetch_discussions, fetch_issues, generate_charts, generate_summaries, purge};
+use crate::commands::{
+    build_db, fetch_discussions, fetch_issues, generate_charts, generate_summaries, purge,
+    push_metrics,
+};
 use crate::config::{Config, Repo};
 use anyhow::Result;
 use chrono::{Datelike, Utc};
@@ -19,42 +22,65 @@ fn dockerhub_vector_dev_repo() -> String {
 pub fn fetch_all(repo_str: &str, since: Option<&str>) -> Result<()> {
     let repo = Repo::parse(repo_str)?;
     let config = Config::for_repo(&repo);
+    fetch_all_with_config(&config, since)
+}
+
+fn fetch_all_with_config(config: &Config, since: Option<&str>) -> Result<()> {
     let client = Client::new();
-    fetch_issues::run_with_client(&client, &config, since)?;
-    fetch_discussions::run_with_client(&client, &config, since)?;
+    fetch_issues::run_with_client(&client, config, since)?;
+    fetch_discussions::run_with_client(&client, config, since)?;
     Ok(())
+}
+
+/// Syncs a fresh GitHub snapshot to Datadog.
+pub fn sync_metrics(config: &Config, options: push_metrics::MetricsOptions<'_>) -> Result<()> {
+    println!("=== Fetching {}/{} ===", config.org, config.repo);
+    println!("Fetching a complete temporary snapshot; data will not be committed or pushed.");
+    fetch_all_with_config(config, None)?;
+
+    println!("\n=== Rebuilding local database ===");
+    build_repo_db(config)?;
+
+    println!("\n=== Publishing Datadog history and current snapshot ===");
+    push_metrics::run(config, options)
+}
+
+/// Rebuilds the local SQLite database.
+fn build_repo_db(config: &Config) -> Result<String> {
+    let repo_prefix = format!("{}_{}", config.org, config.repo);
+    let issues_dir = format!("data/{repo_prefix}/issues");
+    let single_file = format!("data/{repo_prefix}_issues.json");
+    let db = format!("out/db/{repo_prefix}.db");
+
+    let input = if Path::new(&issues_dir).is_dir() {
+        issues_dir.as_str()
+    } else {
+        single_file.as_str()
+    };
+    build_db::run(input, config)?;
+
+    let discussions_dir = format!("data/{repo_prefix}/discussions");
+    let discussions_file = format!("data/{repo_prefix}_discussions.json");
+    let discussions_input = if Path::new(&discussions_dir).is_dir() {
+        Some(discussions_dir.as_str())
+    } else if Path::new(&discussions_file).exists() {
+        Some(discussions_file.as_str())
+    } else {
+        None
+    };
+    if let Some(input) = discussions_input {
+        let conn = rusqlite::Connection::open(&db)?;
+        build_db::load_discussions_from_path(&conn, input)?;
+    }
+
+    Ok(db)
 }
 
 /// Builds DB + summaries + HTML charts for a single repo.
 pub fn generate_all(repo_str: &str, start: Option<&str>) -> Result<()> {
     let repo = Repo::parse(repo_str)?;
     let config = Config::for_repo(&repo);
-    let repo_prefix = format!("{}_{}", config.org, config.repo);
-    let issues_dir = format!("data/{repo_prefix}/issues");
-    let single_file = format!("data/{repo_prefix}_issues.json");
-    let db = format!("out/db/{repo_prefix}.db");
-
-    let input = if std::path::Path::new(&issues_dir).is_dir() {
-        &issues_dir
-    } else {
-        &single_file
-    };
-
-    build_db::run(input, &config)?;
-
-    let disc_dir = format!("data/{repo_prefix}/discussions");
-    let disc_file = format!("data/{repo_prefix}_discussions.json");
-    let disc_input: Option<&str> = if std::path::Path::new(&disc_dir).is_dir() {
-        Some(&disc_dir)
-    } else if std::path::Path::new(&disc_file).exists() {
-        Some(&disc_file)
-    } else {
-        None
-    };
-    if let Some(disc_path) = disc_input {
-        let conn = rusqlite::Connection::open(&db)?;
-        build_db::load_discussions_from_path(&conn, disc_path)?;
-    }
+    let db = build_repo_db(&config)?;
 
     generate_summaries::run(&db, &config)?;
 

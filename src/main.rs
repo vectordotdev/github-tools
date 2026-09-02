@@ -4,7 +4,7 @@ use github_tools::{
     commands::{
         build_db, close_old_prs, compact, delete_stale_branches, fetch_automated_review_stats,
         fetch_discussions, fetch_issues, fetch_labels, generate_charts, generate_summaries, purge,
-        remove_legacy_label, workflows,
+        push_metrics, remove_legacy_label, workflows,
     },
     config::{Config, Repo},
 };
@@ -90,6 +90,75 @@ enum Command {
         output_dir: String,
         #[arg(long, help = "Only include data from this YYYY-MM date forward")]
         start: Option<String>,
+    },
+    /// Submit Datadog metrics from the local database
+    PushMetrics {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
+        #[arg(long, help = "Path to .env file (may contain DD_API_KEY and DD_SITE)")]
+        env_file: Option<String>,
+        #[arg(long, help = "Datadog API key (prefer DD_API_KEY in automation)")]
+        dd_api_key: Option<String>,
+        #[arg(long, help = "Datadog site hostname, e.g. datadoghq.eu")]
+        dd_site: Option<String>,
+        #[arg(
+            long,
+            default_value = "30d",
+            help = "Daily history to reconstruct and submit (30d, 3m, 1y)"
+        )]
+        history: String,
+        #[arg(
+            long,
+            default_value = "30d",
+            help = "Rolling window for closed items: ISO date, YYYY-MM, or relative (30d, 3m, 1y)"
+        )]
+        activity_window: String,
+        #[arg(long, default_value = "github.health.v2")]
+        prefix: String,
+        #[arg(long, help = "Build and print the metric summary without sending it")]
+        dry_run: bool,
+        #[arg(
+            long,
+            conflicts_with = "dry_run",
+            help = "Print prepared Datadog request batches as JSON without sending them"
+        )]
+        output_json: bool,
+    },
+    /// Fetch GitHub data and submit Datadog metrics
+    SyncMetrics {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
+        #[arg(long, help = "Path to .env file (may contain GITHUB_TOKEN, DD_API_KEY, DD_SITE)")]
+        env_file: Option<String>,
+        #[arg(long, help = "Datadog API key (prefer DD_API_KEY in automation)")]
+        dd_api_key: Option<String>,
+        #[arg(long, help = "Datadog site hostname, e.g. datadoghq.eu")]
+        dd_site: Option<String>,
+        #[arg(
+            long,
+            default_value = "30d",
+            help = "Historical emission lookback: ISO date, YYYY-MM, or relative (30d, 3m, 1y)"
+        )]
+        lookback: String,
+        #[arg(
+            long,
+            default_value = "30d",
+            help = "Rolling window for closed-item metrics (30d, 3m, 1y)"
+        )]
+        activity_window: String,
+        #[arg(long, default_value = "github.health.v2")]
+        prefix: String,
+        #[arg(
+            long,
+            help = "Fetch data and build metrics, but do not send to Datadog"
+        )]
+        dry_run: bool,
+        #[arg(
+            long,
+            conflicts_with = "dry_run",
+            help = "Fetch data and print prepared Datadog request batches as JSON without sending them"
+        )]
+        output_json: bool,
     },
     /// Run all purge operations (replaces purge_all.sh)
     PurgeAll {
@@ -261,6 +330,61 @@ fn main() -> Result<()> {
         Command::GenerateCharts { repo, input_dir, output_dir, start } => {
             generate_charts::run(&input_dir, &repo, &output_dir, start.as_deref())
         }
+        Command::PushMetrics {
+            repo,
+            env_file,
+            dd_api_key,
+            dd_site,
+            history,
+            activity_window,
+            prefix,
+            dry_run,
+            output_json,
+        } => {
+            load_env_file(env_file.as_deref())?;
+            let config = Config::for_repo(&Repo::parse(&repo)?);
+            let api_key = dd_api_key.or_else(|| std::env::var("DD_API_KEY").ok());
+            let site = dd_site.or_else(|| std::env::var("DD_SITE").ok());
+            push_metrics::run(
+                &config,
+                push_metrics::MetricsOptions {
+                    history: &history,
+                    activity_window: &activity_window,
+                    prefix: &prefix,
+                    dd_api_key: api_key.as_deref(),
+                    dd_site: site.as_deref(),
+                    dry_run,
+                    output_json,
+                },
+            )
+        }
+        Command::SyncMetrics {
+            repo,
+            env_file,
+            dd_api_key,
+            dd_site,
+            lookback,
+            activity_window,
+            prefix,
+            dry_run,
+            output_json,
+        } => {
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
+            let api_key = dd_api_key.or_else(|| std::env::var("DD_API_KEY").ok());
+            let site = dd_site.or_else(|| std::env::var("DD_SITE").ok());
+            workflows::sync_metrics(
+                &config,
+                push_metrics::MetricsOptions {
+                    history: &lookback,
+                    activity_window: &activity_window,
+                    prefix: &prefix,
+                    dd_api_key: api_key.as_deref(),
+                    dd_site: site.as_deref(),
+                    dry_run,
+                    output_json,
+                },
+            )
+        }
         Command::PurgeAll { older_than, dry_run, yes } => {
             workflows::purge_all(older_than, dry_run, yes)
         }
@@ -377,4 +501,14 @@ fn main() -> Result<()> {
             }
         }
     }
+}
+
+fn load_env_file(path: Option<&str>) -> Result<()> {
+    if let Some(path) = path {
+        dotenvy::from_filename_override(path)
+            .with_context(|| format!("Failed to load env file: {path}"))?;
+    } else {
+        dotenvy::dotenv().ok();
+    }
+    Ok(())
 }
