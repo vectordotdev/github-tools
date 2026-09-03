@@ -1,3 +1,4 @@
+use super::upsert_json_record;
 use crate::config::Config;
 use anyhow::{Context, Result};
 use chrono::Utc;
@@ -230,7 +231,7 @@ fn write_year_bucketed(items: &[Value], out_dir: &Path, date_field: &str) -> Res
 
         for item in new_items {
             if let Some(n) = item["number"].as_u64() {
-                by_number.insert(n, item.clone());
+                upsert_json_record(&mut by_number, n, item.clone());
             }
         }
 
