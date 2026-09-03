@@ -207,27 +207,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/22131"
   },
   {
+    "number": 22132,
+    "title": "Vector CPU Utilisation",
+    "bodyText": "Hi, im trying to understand limit of vector. I read scaling documents and i should be easily see 10MB/s for each CPU core.\nIm testing on my lab with a python script sending syslog and listening on vector end with socket source without transforms and sinking to blackhole.\nI can reach around 70MB/s without packet drops with having 16 cpu cores, after that it starts to drop packets. When i monitor each cpu core with htop, 5 cores are working (changing which core is active) with %50 utilisation.\nI'm expecting from vector to use all CPU cores to %100 (or close) before it start dropping packets. Is my expectation wrong? If not what should be the issue here?",
+    "url": "https://github.com/vectordotdev/vector/discussions/22132",
+    "createdAt": "2025-01-07T13:00:44Z",
+    "updatedAt": "2026-09-03T15:38:16Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "prayerx"
     },
-    "bodyText": "Hi, im trying to understand limit of vector. I read scaling documents and i should be easily see 10MB/s for each CPU core.\nIm testing on my lab with a python script sending syslog and listening on vector end with socket source without transforms and sinking to blackhole.\nI can reach around 70MB/s without packet drops with having 16 cpu cores, after that it starts to drop packets. When i monitor each cpu core with htop, 5 cores are working (changing which core is active) with %50 utilisation.\nI'm expecting from vector to use all CPU cores to %100 (or close) before it start dropping packets. Is my expectation wrong? If not what should be the issue here?",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
-      "totalCount": 4
+      "totalCount": 5
     },
-    "createdAt": "2025-01-07T13:00:44Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 22132,
-    "stateReason": null,
-    "title": "Vector CPU Utilisation",
-    "updatedAt": "2026-06-25T00:55:14Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/22132"
+    "upvoteCount": 1
   },
   {
     "author": {
@@ -3540,27 +3540,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/22867"
   },
   {
+    "number": 22868,
+    "title": "Logs to s3",
+    "bodyText": "I am using awss3 sink to send the logs using vector. However I am trying to figure how to read the logs from s3 for a specific time period, is there a way I can do it. I tried ClickHouse , but it says invalid format. Looks like it didn't like the format the way vector writes to s3.\nPlease help.",
+    "url": "https://github.com/vectordotdev/vector/discussions/22868",
+    "createdAt": "2025-04-11T22:51:27Z",
+    "updatedAt": "2026-07-27T17:07:58Z",
+    "closedAt": "2026-07-27T17:07:53Z",
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "shamj"
     },
-    "bodyText": "I am using awss3 sink to send the logs using vector. However I am trying to figure how to read the logs from s3 for a specific time period, is there a way I can do it. I tried ClickHouse , but it says invalid format. Looks like it didn't like the format the way vector writes to s3.\nPlease help.",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
-      "totalCount": 2
+      "totalCount": 3
     },
-    "createdAt": "2025-04-11T22:51:27Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 22868,
-    "stateReason": null,
-    "title": "Logs to s3",
-    "updatedAt": "2026-04-29T10:49:10Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/22868"
+    "upvoteCount": 1
   },
   {
     "author": {
@@ -4552,27 +4552,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/23009"
   },
   {
+    "number": 23012,
+    "title": "Connection errors with filebeat as agent and logstash source",
+    "bodyText": "We currently have Filebeat agents picking up logs from different hosts and sending logs to Vector using the logstash source. It works fine for a few days, but after some days of running, we start to see an increase in connection errors in the Filebeat logs.\nErrors like:\n\n\"Failed to publish events caused by: read tcp XXX.XX.XXX.XX:XXXX->XXX.XX.XXX.XX:XXXX: i/o timeout\"\n\"Failed to publish events caused by: write tcp XXX.XX.XXX.XX:XXXX->XXX.XX.XXX.XX:XXXX: use of closed network connection\"\n\"Failed to publish events caused by: client is not connected\"\n\"Failed to publish events caused by: EOF filesdf\"\n\"File cleanup state update error: input outlet closed\"\n\"Failed to publish events caused by: invalid sequence number received (seq=1024, expected=6)\"\n\nSome of the things we noticed:\n\nWith an increase of these errors, we are seeing duplicate logs, we suspect it's because filebeat resends them because either Vector didn't ack or didn't ack in time.\nNot seeing any utilization issues, infact utilization is low. Checked cpu, memory, file descriptor limit, network i/o, storage i/o, etc.\nImportant: Restarting the Vector services gets rid of the errors for a couple days, then it resurfaces after it's been running for some days.\n\nDetails:\nAgent: Filebeat sending logs using the logstash output\nVector: Receives logs using the logstash source\nVector version: 0.42.0, running on EC2\nAny ideas on what we could check? Could there be some internal limit in Vector that we're hitting?",
+    "url": "https://github.com/vectordotdev/vector/discussions/23012",
+    "createdAt": "2025-05-08T18:23:59Z",
+    "updatedAt": "2026-08-26T16:54:13Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "camilisette"
     },
-    "bodyText": "We currently have Filebeat agents picking up logs from different hosts and sending logs to Vector using the logstash source. It works fine for a few days, but after some days of running, we start to see an increase in connection errors in the Filebeat logs.\nErrors like:\n\n\"Failed to publish events caused by: read tcp XXX.XX.XXX.XX:XXXX->XXX.XX.XXX.XX:XXXX: i/o timeout\"\n\"Failed to publish events caused by: write tcp XXX.XX.XXX.XX:XXXX->XXX.XX.XXX.XX:XXXX: use of closed network connection\"\n\"Failed to publish events caused by: client is not connected\"\n\"Failed to publish events caused by: EOF filesdf\"\n\"File cleanup state update error: input outlet closed\"\n\"Failed to publish events caused by: invalid sequence number received (seq=1024, expected=6)\"\n\nSome of the things we noticed:\n\nWith an increase of these errors, we are seeing duplicate logs, we suspect it's because filebeat resends them because either Vector didn't ack or didn't ack in time.\nNot seeing any utilization issues, infact utilization is low. Checked cpu, memory, file descriptor limit, network i/o, storage i/o, etc.\nImportant: Restarting the Vector services gets rid of the errors for a couple days, then it resurfaces after it's been running for some days.\n\nDetails:\nAgent: Filebeat sending logs using the logstash output\nVector: Receives logs using the logstash source\nVector version: 0.42.0, running on EC2\nAny ideas on what we could check? Could there be some internal limit in Vector that we're hitting?",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 2
     },
-    "createdAt": "2025-05-08T18:23:59Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 23012,
-    "stateReason": null,
-    "title": "Connection errors with filebeat as agent and logstash source",
-    "updatedAt": "2026-06-02T19:01:42Z",
-    "upvoteCount": 4,
-    "url": "https://github.com/vectordotdev/vector/discussions/23012"
+    "upvoteCount": 4
   },
   {
     "author": {
@@ -7128,27 +7128,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/23769"
   },
   {
+    "number": 23775,
+    "title": "Concept for patch: source startup delay",
+    "bodyText": "We now are using memory enrichment tables extensively - they're really useful, and are I think are a not-well-understood function of Vector that has amazing functionality. We're also using the sink-based storage function for memory tables: periodically storing the contents of those memory enrichment tables to disk.  Why?  Because we re-load them when Vector restarts, so we don't have to generate the whole table again.  Basically: we're saving state of how to deal with or modify objects passing through Vector, so if a system crashes (or comes up as \"new\") we can create the memory table as it was with some reasonable belief that it is close to what it was when the system went away.\nBut there is a problem: loading these disk files of saved state information into the memory tables takes time.  Sometimes a few seconds, and in the worst cases, it takes many minutes (we have some tables with hundreds of millions of records.)  But our other sources (files or kafka sources in our case) start up immediately, and so we have objects flowing through the Vector system, but we have incomplete ability to apply the correct actions to those objects because the memory tables aren't full yet.  So we're processing events with \"rules\" that aren't complete. This leads to very unpredictable outcomes that are often wildly incorrect.\nCurrently, we use some really ugly hacks to solve this, such as blocking kafka origins with packet filters, or causing other transient faults that we can manually clear when the state tables are ready for the other sources to start feeding data through the system.\nMy memory table example is just one reason that one might want to delay or halt ingestion of a source.  I expect others have different but equally valid reasons that some sources should be delayed or ignored.\nI would propose some method by which sources could be delayed upon startup, so sources could be activated in an orderly, well-understood sequence rather than all at once. This would apply to all sources in their general configuration parameter section.\nThe most trivial way of doing this would be a seconds-based timer that simply waited until expiry to begin processing the source.\nA much more flexible way to do this would be the ability to run some small VRL script on a regular basis (specifiable interval in the source config?) that would result in a \"true\" or \"false\" outcome.  The source would be enabled or disabled based on this outcome.  We use a variant of this type of logic already in the user authentication model in the websocket sink (and other places?) where standalone VRL is used as a method to generate a true/false outcome.   Once we have the internal metrics visible via VRL (this PR: #23430) then it would be easy to examine the uptime of the vector itself and emulate the \"delay for X seconds\" model that I suggest as the \"trivial\" solution above.  But a programmatic method would open the door to much more sophisticated methods of evaluating and activating/deactivating sources.  This perhaps is parallel to the \"backpressure\" model that is already used, but it would also be much simpler and would not have buffering issues. It is not a replacement for backpressure, but would be an adjunct method. Sources would just be turned off until the VRL was \"true\".\nI'd like to get any opinions on which of these methods makes sense, or perhaps neither, or perhaps there other models that already exist but I haven't thought of which are a better solution.",
+    "url": "https://github.com/vectordotdev/vector/discussions/23775",
+    "createdAt": "2025-09-14T16:44:47Z",
+    "updatedAt": "2026-08-26T21:16:13Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": false,
+    "locked": false,
     "author": {
       "login": "johnhtodd"
     },
-    "bodyText": "We now are using memory enrichment tables extensively - they're really useful, and are I think are a not-well-understood function of Vector that has amazing functionality. We're also using the sink-based storage function for memory tables: periodically storing the contents of those memory enrichment tables to disk.  Why?  Because we re-load them when Vector restarts, so we don't have to generate the whole table again.  Basically: we're saving state of how to deal with or modify objects passing through Vector, so if a system crashes (or comes up as \"new\") we can create the memory table as it was with some reasonable belief that it is close to what it was when the system went away.\nBut there is a problem: loading these disk files of saved state information into the memory tables takes time.  Sometimes a few seconds, and in the worst cases, it takes many minutes (we have some tables with hundreds of millions of records.)  But our other sources (files or kafka sources in our case) start up immediately, and so we have objects flowing through the Vector system, but we have incomplete ability to apply the correct actions to those objects because the memory tables aren't full yet.  So we're processing events with \"rules\" that aren't complete. This leads to very unpredictable outcomes that are often wildly incorrect.\nCurrently, we use some really ugly hacks to solve this, such as blocking kafka origins with packet filters, or causing other transient faults that we can manually clear when the state tables are ready for the other sources to start feeding data through the system.\nMy memory table example is just one reason that one might want to delay or halt ingestion of a source.  I expect others have different but equally valid reasons that some sources should be delayed or ignored.\nI would propose some method by which sources could be delayed upon startup, so sources could be activated in an orderly, well-understood sequence rather than all at once. This would apply to all sources in their general configuration parameter section.\nThe most trivial way of doing this would be a seconds-based timer that simply waited until expiry to begin processing the source.\nA much more flexible way to do this would be the ability to run some small VRL script on a regular basis (specifiable interval in the source config?) that would result in a \"true\" or \"false\" outcome.  The source would be enabled or disabled based on this outcome.  We use a variant of this type of logic already in the user authentication model in the websocket sink (and other places?) where standalone VRL is used as a method to generate a true/false outcome.   Once we have the internal metrics visible via VRL (this PR: #23430) then it would be easy to examine the uptime of the vector itself and emulate the \"delay for X seconds\" model that I suggest as the \"trivial\" solution above.  But a programmatic method would open the door to much more sophisticated methods of evaluating and activating/deactivating sources.  This perhaps is parallel to the \"backpressure\" model that is already used, but it would also be much simpler and would not have buffering issues. It is not a replacement for backpressure, but would be an adjunct method. Sources would just be turned off until the VRL was \"true\".\nI'd like to get any opinions on which of these methods makes sense, or perhaps neither, or perhaps there other models that already exist but I haven't thought of which are a better solution.",
     "category": {
       "name": "General"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 2
     },
-    "createdAt": "2025-09-14T16:44:47Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 23775,
-    "stateReason": null,
-    "title": "Concept for patch: source startup delay",
-    "updatedAt": "2026-06-04T20:04:47Z",
-    "upvoteCount": 3,
-    "url": "https://github.com/vectordotdev/vector/discussions/23775"
+    "upvoteCount": 3
   },
   {
     "author": null,
@@ -7425,27 +7425,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/23897"
   },
   {
+    "number": 23902,
+    "title": "Is there any way to record the corresponding log of PVC?",
+    "bodyText": "Question\nIn the production situation, some components are collected by default instead of using console logs but using PVC, so the default use of console collection logs is incomplete. Is there any way to solve it? Does the community have any ideas to make a plugins collection volume mount log?\nVector Config\nNo response\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/23902",
+    "createdAt": "2025-10-01T16:03:14Z",
+    "updatedAt": "2026-08-26T16:39:03Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "cuisongliu"
     },
-    "bodyText": "Question\nIn the production situation, some components are collected by default instead of using console logs but using PVC, so the default use of console collection logs is incomplete. Is there any way to solve it? Does the community have any ideas to make a plugins collection volume mount log?\nVector Config\nNo response\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 2
     },
-    "createdAt": "2025-10-01T16:03:14Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 23902,
-    "stateReason": null,
-    "title": "Is there any way to record the corresponding log of PVC?",
-    "updatedAt": "2026-02-23T21:20:46Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/23902"
+    "upvoteCount": 1
   },
   {
     "author": {
@@ -8184,50 +8184,50 @@
     "url": "https://github.com/vectordotdev/vector/discussions/24196"
   },
   {
+    "number": 24199,
+    "title": "AWS NLB",
+    "bodyText": "May I ask, I have an NLB in front with 4 backend instances, but only 2 instances have active connections. Is there any configuration that I need to set?\nversion: 0.51.0",
+    "url": "https://github.com/vectordotdev/vector/discussions/24199",
+    "createdAt": "2025-11-10T13:05:49Z",
+    "updatedAt": "2026-08-26T16:36:21Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "lhh528634141"
     },
-    "bodyText": "May I ask, I have an NLB in front with 4 backend instances, but only 2 instances have active connections. Is there any configuration that I need to set?\nversion: 0.51.0",
     "category": {
       "name": "General"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2025-11-10T13:05:49Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 24199,
-    "stateReason": null,
-    "title": "AWS NLB",
-    "updatedAt": "2026-03-04T15:48:00Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/24199"
+    "upvoteCount": 1
   },
   {
+    "number": 24200,
+    "title": "Q&A: How to use a variable from transform in the elastic search sink as query param?",
+    "bodyText": "Question\nHi,\nI have to set _routing in my es doc that is to be indexed.\nI have configured the following in my transform\n.routing_id=parsed.routingid\nwhere parsed is the json parsed from .message.\nAnd I have the following configured in sink\n[sinks.elasticsearch.query]\nrouting = “{{ .routing_id }}”\nBut in the logs, I am seeing the routing in the query param in the uri as empty\n/_bulk?timeout=60s&routing=\nAnd this is leading to missing _routing field in the document indexed in es.\nCan anyone please help here?\nVector Config\nNo response\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/24200",
+    "createdAt": "2025-11-10T13:10:40Z",
+    "updatedAt": "2026-08-26T16:38:48Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "vpn31"
     },
-    "bodyText": "Question\nHi,\nI have to set _routing in my es doc that is to be indexed.\nI have configured the following in my transform\n.routing_id=parsed.routingid\nwhere parsed is the json parsed from .message.\nAnd I have the following configured in sink\n[sinks.elasticsearch.query]\nrouting = “{{ .routing_id }}”\nBut in the logs, I am seeing the routing in the query param in the uri as empty\n/_bulk?timeout=60s&routing=\nAnd this is leading to missing _routing field in the document indexed in es.\nCan anyone please help here?\nVector Config\nNo response\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2025-11-10T13:10:40Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 24200,
-    "stateReason": null,
-    "title": "Q&A: How to use a variable from transform in the elastic search sink as query param?",
-    "updatedAt": "2026-03-04T17:30:51Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/24200"
+    "upvoteCount": 1
   },
   {
     "author": {

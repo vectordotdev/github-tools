@@ -460,27 +460,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/24615"
   },
   {
+    "number": 24618,
+    "title": "Q&A VRL assert*() rate limit?",
+    "bodyText": "Question\nHi,\nI had a pipeline use assert() functions to catch oddball logs at scale which are not handled due to unusual combination of fields. However, these functions with vector 0.5x does not appear to be rate limited in a manner similar to log() which caused docker container logs to nearly fill some sink's capacity.\nJust wondering if this is by design? Is it discouraged to use assert functions in the pipeline and only use them in unit tests?\nVector Config\n    if unusual_log {\n        assert(false, \"Dropping  unusual log\")\n    }\n\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/24618",
+    "createdAt": "2026-02-09T09:33:26Z",
+    "updatedAt": "2026-08-26T20:49:38Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "ozacas"
     },
-    "bodyText": "Question\nHi,\nI had a pipeline use assert() functions to catch oddball logs at scale which are not handled due to unusual combination of fields. However, these functions with vector 0.5x does not appear to be rate limited in a manner similar to log() which caused docker container logs to nearly fill some sink's capacity.\nJust wondering if this is by design? Is it discouraged to use assert functions in the pipeline and only use them in unit tests?\nVector Config\n    if unusual_log {\n        assert(false, \"Dropping  unusual log\")\n    }\n\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
-    "createdAt": "2026-02-09T09:33:26Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 24618,
-    "stateReason": null,
-    "title": "Q&A VRL assert*() rate limit?",
-    "updatedAt": "2026-02-15T10:24:32Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/24618"
+    "upvoteCount": 1
   },
   {
     "author": {
@@ -736,27 +736,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/24952"
   },
   {
-    "author": {
-      "login": "bragesande94"
-    },
+    "number": 24989,
+    "title": "Help: log_to_metric count does not match Loki log count",
     "bodyText": "Hi all,\nI’m trying to generate metrics from logs using Vector’s log_to_metric transform so I can query counts much faster in Grafana.\nHowever, the metric counts produced by log_to_metric do not match (its close but not close enough) the counts I see when querying logs directly in Loki (using count_over_time()).\n[transforms.log_count_metrics]\ntype = \"log_to_metric\"\ninputs = [\"process_and_flatten_logs\"]\n\n#Counter metric definition\n[[transforms.log_count_metrics.metrics]]\ntype = \"counter\"\nname = \"log_events_total\"\nnamespace = \"vector_custom\"\nfield = \"kubernetes.namespace_name\"\n\n#Labels used for Grafana grouping and filtering.\n[transforms.log_count_metrics.metrics.tags]\nkubernetes_namespace_name = \"{{ kubernetes.namespace_name }}\"\nservice_name = \"{{ kubernetes.labels.app_kubernetes_io_name }}\"\nproduct = \"{{ kubernetes.labels.app_kubernetes_io_part_of }}\"\nlogtype = \"{{ logtype }}\"\nlevel = \"{{ level }}\"\n\nThe number of log lines I get from Loki (e.g. using count_over_time({...}[$__range])) is higher than the metric counter produced by Vector.\nI want the counter metric (log_events_total) to match the actual number of ingested logs as closely as possible. I would really apreciate if anyone got some ideas on how this can be done",
+    "url": "https://github.com/vectordotdev/vector/discussions/24989",
+    "createdAt": "2026-03-20T20:52:32Z",
+    "updatedAt": "2026-06-11T18:49:01Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "brasande"
+    },
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2026-03-20T20:52:32Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 24989,
-    "stateReason": null,
-    "title": "Help: log_to_metric count does not match Loki log count",
-    "updatedAt": "2026-06-11T18:49:01Z",
-    "upvoteCount": 0,
-    "url": "https://github.com/vectordotdev/vector/discussions/24989"
+    "upvoteCount": 0
   },
   {
     "author": {
@@ -920,142 +920,142 @@
     "url": "https://github.com/vectordotdev/vector/discussions/25257"
   },
   {
+    "number": 25324,
+    "title": "File sink throughput bottleneck: HTTP source → remap transform → file sink maxes out at ~12k EPS (target: 50+)",
+    "bodyText": "Question\nSetup: Logstash forwards Windows event logs via HTTP (json_batch) to Vector on a dedicated archive server. Vector remaps the events (hostname extraction, timestamp parsing) and writes them to per-hostname log files.\nLogstash (32 workers, json_batch) → HTTP → Vector (remap) → file sink (~3000 unique files)\nEnvironment: Vector 0.44 in Docker, 20 CPUs, 32GB RAM, Linux. The archive server handles no other workload.\nProblem: Logstash delivers ~25k EPS to Vector's HTTP source, but the file sink only sustains ~12k EPS. Component utilization is at 100%. We've been iterating on this for a week across multiple test runs and have eliminated several suspects:\nWhat we've ruled out:\n\nLogstash HTTP output is not the bottleneck — delivers 25k+ EPS consistently with 32 workers and json_batch\nDisk I/O on the archive server looks normal, no write saturation visible in node_exporter metrics\nNetwork latency is negligible (0.47ms RTT)\nformat => \"json\" vs \"json_batch\" — confirmed that json_batch works correctly with Vector (events are properly split), using \"json\" sends one HTTP request per event and halves throughput\nLevelDB disk buffer was a confirmed bottleneck in earlier tests (97.6% of events waited 1–2s in buffer_send_duration). Switched to memory buffer, which eliminated that specific latency — but the overall sink throughput didn't improve as expected\nAcknowledgements caused cascading timeouts (Logstash HTTP timeout → \"Source send cancelled\" → event drops). Disabled with acknowledgements: false\n\nWhat we're seeing now (memory buffer, ack disabled):\n\nbuffer_events builds up to ~1.3M over ~2 minutes, then drops sharply to ~160k — repeating sawtooth pattern\nvector_open_files{component_id=\"file_archive\"} shows the same sawtooth: climbs to ~3000, drops to 0, climbs back\nThe mass close/reopen cycle happens every ~2 min, well before idle_timeout_secs: 300 would trigger\ncomponent_utilization stays at 100% throughout\n\nCurrent config:\n  sources:\n    http_in:\n      type: http_server\n      address: \"0.0.0.0:8080\"\n      framing:\n        method: newline_delimited\n      decoding:\n        codec: json\n\n  transforms:\n    extract_routing:\n      type: remap\n      inputs: [\"http_in\"]\n      source: |\n        # hostname extraction chain + timestamp parsing\n\n  sinks:\n    file_archive:\n      type: file\n      inputs: [\"extract_routing\"]\n      path: \"/var/log/remote/hosts/{{ hostname }}\"\n      buffer:\n        type: memory\n        max_events: 500000\n        when_full: block\n      idle_timeout_secs: 300\n      acknowledgements:\n        enabled: false\nQuestions:\n\nWhat limits file sink throughput when writing to ~3000 unique files concurrently? Is there an internal file handle pool, flush interval, or max_open_files default that could explain the periodic mass close?\nAre there recommended tuning options for high-fanout file sinks at this scale?\nCould the remap transform be contributing to the bottleneck at 100% utilization, or does the utilization metric reflect only the sink?\n\nAny guidance appreciated — happy to share Prometheus metrics exports or the full vector.yaml if helpful.\nVector Config\n# =============================================================================\n# Vector Log Archive Configuration\n# =============================================================================\n# Receives JSON logs via HTTP from Logstash and syslog-ng.\n# Stores logs in a structured layout under:\n#   /archive/{MM}/{DD}/{hostname}/{hostname}/{hostname}-{YY}-{MM}-{DD}-{HH}.log\n#\n# NOTE: No parsing or content transformation of logs.\n#       Only routing fields are derived from existing log fields.\n# =============================================================================\n\napi:\n  enabled: true\n  address: \"0.0.0.0:8686\"\n\n# -----------------------------------------------------------------------------\n# DATA DIR (for internal Vector metadata, e.g. cursor state)\n# -----------------------------------------------------------------------------\ndata_dir: /var/lib/vector\n\n# -----------------------------------------------------------------------------\n# SOURCE: HTTP endpoint for incoming JSON logs\n# -----------------------------------------------------------------------------\nsources:\n  http_in:\n    type: http_server\n    address: \"0.0.0.0:8080\"\n\n    # Logstash and syslog-ng send newline-delimited JSON or single JSON objects\n    framing:\n      method: newline_delimited\n    decoding:\n      codec: json\n\n    # Strict mode: rejects requests with incorrect Content-Type\n    strict_path: false\n\n    # Authentication (optional, recommended for production)\n    # auth:\n    #   strategy: bearer\n    #   token: \"YOUR_SECRET_TOKEN\"\n\n  internal_metrics:\n    type: internal_metrics\n\n# -----------------------------------------------------------------------------\n# TRANSFORM: Extract routing fields from timestamp and hostname\n# -----------------------------------------------------------------------------\n# Used exclusively for file path routing. Log content is NOT modified.\n# Routing fields (_r_*) are stripped in the sink configuration.\n# -----------------------------------------------------------------------------\ntransforms:\n  extract_routing:\n    type: remap\n    inputs:\n      - http_in\n    source: |\n      # -----------------------------------------------------------------------\n      # Read timestamp\n      # Supports the following fields (priority: @timestamp > timestamp > date):\n      #   - Logstash:   \"@timestamp\" (ISO 8601)\n      #   - syslog-ng:  \"timestamp\" or \"date\"\n      # -----------------------------------------------------------------------\n      ts_raw = if .@timestamp != null { .@timestamp } else if .timestamp != null { .timestamp } else if .date != null { .date } else { null }\n\n      ts = now()\n      if ts_raw != null {\n        ts_parsed, err = parse_timestamp(to_string!(ts_raw), format: \"%+\")\n        if err == null {\n          ts = ts_parsed\n        } else {\n          log(\"Could not parse timestamp, falling back to now(). Value: \" + to_string!(ts_raw), level: \"warn\")\n        }\n      } else {\n        log(\"No timestamp field found, falling back to now().\", level: \"warn\")\n      }\n\n      # -----------------------------------------------------------------------\n      # Read hostname\n      # Supports the following fields (priority: hostname > host > logsource):\n      #   - Logstash:   \"host\" (often an object: host.name)\n      #   - syslog-ng:  \"hostname\" or \"HOST\"\n      # -----------------------------------------------------------------------\n      _r_host = string(.hostname) ?? string(.host.name) ?? string(.host) ?? string(.\"HOST\") ?? string(.logsource) ?? \"unknown-host\"\n\n      # Sanitize hostname (allow only alphanumeric, hyphen, dot)\n      _r_host = replace(_r_host, r'[^a-zA-Z0-9.\\-]', \"_\")\n\n      # Routing metadata for file path (stripped from output)\n      ._r_host  = _r_host\n      ._r_month = format_timestamp!(ts, format: \"%m\")\n      ._r_day   = format_timestamp!(ts, format: \"%d\")\n      ._r_year  = format_timestamp!(ts, format: \"%y\")\n      ._r_hour  = format_timestamp!(ts, format: \"%H\")\n\n# -----------------------------------------------------------------------------\n# SINK: Structured file storage\n# Path: /archive/{MM}/{DD}/{hostname}/{hostname}/{hostname}-{YY}-{MM}-{DD}-{HH}.log\n# -----------------------------------------------------------------------------\nsinks:\n  file_archive:\n    type: file\n    idle_timeout_secs: 300\n    inputs:\n      - extract_routing\n\n    # File path template using the extracted routing fields\n    path: \"/archive/{{ ._r_month }}/{{ ._r_day }}/{{ ._r_host }}/{{ ._r_host }}-{{ ._r_year }}-{{ ._r_month }}-{{ ._r_day }}-{{ ._r_hour }}.log\"\n\n    # Encoding: JSON, routing fields are NOT written to output\n    encoding:\n      codec: json\n      except_fields:\n        - \"_r_host\"\n        - \"_r_month\"\n        - \"_r_day\"\n        - \"_r_year\"\n        - \"_r_hour\"\n\n    # Buffer: protects against data loss during short backpressure spikes\n    buffer:\n      type: memory\n      max_events: 3000000\n      when_full: block\n\n    # Acknowledgements: when enabled, HTTP source only sends 200 after\n    # the event has been successfully written. Currently disabled.\n    acknowledgements:\n      enabled: false\n\n  # Prometheus metrics exporter\n  prometheus_exporter:\n    type: prometheus_exporter\n    inputs:\n      - internal_metrics\n    address: \"0.0.0.0:9598\"\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/25324",
+    "createdAt": "2026-04-29T12:41:45Z",
+    "updatedAt": "2026-07-27T18:27:50Z",
+    "closedAt": "2026-07-27T18:27:48Z",
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "mrSpencer91"
     },
-    "bodyText": "Question\nSetup: Logstash forwards Windows event logs via HTTP (json_batch) to Vector on a dedicated archive server. Vector remaps the events (hostname extraction, timestamp parsing) and writes them to per-hostname log files.\nLogstash (32 workers, json_batch) → HTTP → Vector (remap) → file sink (~3000 unique files)\nEnvironment: Vector 0.44 in Docker, 20 CPUs, 32GB RAM, Linux. The archive server handles no other workload.\nProblem: Logstash delivers ~25k EPS to Vector's HTTP source, but the file sink only sustains ~12k EPS. Component utilization is at 100%. We've been iterating on this for a week across multiple test runs and have eliminated several suspects:\nWhat we've ruled out:\n\nLogstash HTTP output is not the bottleneck — delivers 25k+ EPS consistently with 32 workers and json_batch\nDisk I/O on the archive server looks normal, no write saturation visible in node_exporter metrics\nNetwork latency is negligible (0.47ms RTT)\nformat => \"json\" vs \"json_batch\" — confirmed that json_batch works correctly with Vector (events are properly split), using \"json\" sends one HTTP request per event and halves throughput\nLevelDB disk buffer was a confirmed bottleneck in earlier tests (97.6% of events waited 1–2s in buffer_send_duration). Switched to memory buffer, which eliminated that specific latency — but the overall sink throughput didn't improve as expected\nAcknowledgements caused cascading timeouts (Logstash HTTP timeout → \"Source send cancelled\" → event drops). Disabled with acknowledgements: false\n\nWhat we're seeing now (memory buffer, ack disabled):\n\nbuffer_events builds up to ~1.3M over ~2 minutes, then drops sharply to ~160k — repeating sawtooth pattern\nvector_open_files{component_id=\"file_archive\"} shows the same sawtooth: climbs to ~3000, drops to 0, climbs back\nThe mass close/reopen cycle happens every ~2 min, well before idle_timeout_secs: 300 would trigger\ncomponent_utilization stays at 100% throughout\n\nCurrent config:\n  sources:\n    http_in:\n      type: http_server\n      address: \"0.0.0.0:8080\"\n      framing:\n        method: newline_delimited\n      decoding:\n        codec: json\n\n  transforms:\n    extract_routing:\n      type: remap\n      inputs: [\"http_in\"]\n      source: |\n        # hostname extraction chain + timestamp parsing\n\n  sinks:\n    file_archive:\n      type: file\n      inputs: [\"extract_routing\"]\n      path: \"/var/log/remote/hosts/{{ hostname }}\"\n      buffer:\n        type: memory\n        max_events: 500000\n        when_full: block\n      idle_timeout_secs: 300\n      acknowledgements:\n        enabled: false\nQuestions:\n\nWhat limits file sink throughput when writing to ~3000 unique files concurrently? Is there an internal file handle pool, flush interval, or max_open_files default that could explain the periodic mass close?\nAre there recommended tuning options for high-fanout file sinks at this scale?\nCould the remap transform be contributing to the bottleneck at 100% utilization, or does the utilization metric reflect only the sink?\n\nAny guidance appreciated — happy to share Prometheus metrics exports or the full vector.yaml if helpful.\nVector Config\n# =============================================================================\n# Vector Log Archive Configuration\n# =============================================================================\n# Receives JSON logs via HTTP from Logstash and syslog-ng.\n# Stores logs in a structured layout under:\n#   /archive/{MM}/{DD}/{hostname}/{hostname}/{hostname}-{YY}-{MM}-{DD}-{HH}.log\n#\n# NOTE: No parsing or content transformation of logs.\n#       Only routing fields are derived from existing log fields.\n# =============================================================================\n\napi:\n  enabled: true\n  address: \"0.0.0.0:8686\"\n\n# -----------------------------------------------------------------------------\n# DATA DIR (for internal Vector metadata, e.g. cursor state)\n# -----------------------------------------------------------------------------\ndata_dir: /var/lib/vector\n\n# -----------------------------------------------------------------------------\n# SOURCE: HTTP endpoint for incoming JSON logs\n# -----------------------------------------------------------------------------\nsources:\n  http_in:\n    type: http_server\n    address: \"0.0.0.0:8080\"\n\n    # Logstash and syslog-ng send newline-delimited JSON or single JSON objects\n    framing:\n      method: newline_delimited\n    decoding:\n      codec: json\n\n    # Strict mode: rejects requests with incorrect Content-Type\n    strict_path: false\n\n    # Authentication (optional, recommended for production)\n    # auth:\n    #   strategy: bearer\n    #   token: \"YOUR_SECRET_TOKEN\"\n\n  internal_metrics:\n    type: internal_metrics\n\n# -----------------------------------------------------------------------------\n# TRANSFORM: Extract routing fields from timestamp and hostname\n# -----------------------------------------------------------------------------\n# Used exclusively for file path routing. Log content is NOT modified.\n# Routing fields (_r_*) are stripped in the sink configuration.\n# -----------------------------------------------------------------------------\ntransforms:\n  extract_routing:\n    type: remap\n    inputs:\n      - http_in\n    source: |\n      # -----------------------------------------------------------------------\n      # Read timestamp\n      # Supports the following fields (priority: @timestamp > timestamp > date):\n      #   - Logstash:   \"@timestamp\" (ISO 8601)\n      #   - syslog-ng:  \"timestamp\" or \"date\"\n      # -----------------------------------------------------------------------\n      ts_raw = if .@timestamp != null { .@timestamp } else if .timestamp != null { .timestamp } else if .date != null { .date } else { null }\n\n      ts = now()\n      if ts_raw != null {\n        ts_parsed, err = parse_timestamp(to_string!(ts_raw), format: \"%+\")\n        if err == null {\n          ts = ts_parsed\n        } else {\n          log(\"Could not parse timestamp, falling back to now(). Value: \" + to_string!(ts_raw), level: \"warn\")\n        }\n      } else {\n        log(\"No timestamp field found, falling back to now().\", level: \"warn\")\n      }\n\n      # -----------------------------------------------------------------------\n      # Read hostname\n      # Supports the following fields (priority: hostname > host > logsource):\n      #   - Logstash:   \"host\" (often an object: host.name)\n      #   - syslog-ng:  \"hostname\" or \"HOST\"\n      # -----------------------------------------------------------------------\n      _r_host = string(.hostname) ?? string(.host.name) ?? string(.host) ?? string(.\"HOST\") ?? string(.logsource) ?? \"unknown-host\"\n\n      # Sanitize hostname (allow only alphanumeric, hyphen, dot)\n      _r_host = replace(_r_host, r'[^a-zA-Z0-9.\\-]', \"_\")\n\n      # Routing metadata for file path (stripped from output)\n      ._r_host  = _r_host\n      ._r_month = format_timestamp!(ts, format: \"%m\")\n      ._r_day   = format_timestamp!(ts, format: \"%d\")\n      ._r_year  = format_timestamp!(ts, format: \"%y\")\n      ._r_hour  = format_timestamp!(ts, format: \"%H\")\n\n# -----------------------------------------------------------------------------\n# SINK: Structured file storage\n# Path: /archive/{MM}/{DD}/{hostname}/{hostname}/{hostname}-{YY}-{MM}-{DD}-{HH}.log\n# -----------------------------------------------------------------------------\nsinks:\n  file_archive:\n    type: file\n    idle_timeout_secs: 300\n    inputs:\n      - extract_routing\n\n    # File path template using the extracted routing fields\n    path: \"/archive/{{ ._r_month }}/{{ ._r_day }}/{{ ._r_host }}/{{ ._r_host }}-{{ ._r_year }}-{{ ._r_month }}-{{ ._r_day }}-{{ ._r_hour }}.log\"\n\n    # Encoding: JSON, routing fields are NOT written to output\n    encoding:\n      codec: json\n      except_fields:\n        - \"_r_host\"\n        - \"_r_month\"\n        - \"_r_day\"\n        - \"_r_year\"\n        - \"_r_hour\"\n\n    # Buffer: protects against data loss during short backpressure spikes\n    buffer:\n      type: memory\n      max_events: 3000000\n      when_full: block\n\n    # Acknowledgements: when enabled, HTTP source only sends 200 after\n    # the event has been successfully written. Currently disabled.\n    acknowledgements:\n      enabled: false\n\n  # Prometheus metrics exporter\n  prometheus_exporter:\n    type: prometheus_exporter\n    inputs:\n      - internal_metrics\n    address: \"0.0.0.0:9598\"\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
-    "createdAt": "2026-04-29T12:41:45Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25324,
-    "stateReason": null,
-    "title": "File sink throughput bottleneck: HTTP source → remap transform → file sink maxes out at ~12k EPS (target: 50+)",
-    "updatedAt": "2026-04-29T13:14:37Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25324"
+    "upvoteCount": 1
   },
   {
+    "number": 25341,
+    "title": "Is it possible to have regular expression strings spanning multiple lines?",
+    "bodyText": "Question\nI'm trying to create a filter and while I think I got the filter itself down, I'm currently trying to make the YAML cleaner by avoiding super long lines.\nIn this case it's my regex string that gets too long for my taste. The filter itself is valid but I think the regex includes some whitespace or newline because a appname with the value containerd doesn't match. You can check it at this playground. Try changing the appname to systemd for example and it returns true\nIs it possible to have multiline regular expression strings?\nVector Config\ntransforms:\n  home_assistant_filter:\n    type: \"filter\"\n\n    inputs:\n      - \"home_assistant_logs\"\n\n    condition: |-\n      # Field .appname is apparently not a string\n      appname = string(.appname) ?? \"unknown\"\n\n      # Filter out all unwanted logs\n      is_app = starts_with(appname, \"addon\")\n      is_ignored = match(appname, r'(?:hassio_dns|systemd|dockerd|\\\n        containerd|kernel|NetworkManager|audit|zigbee2mqtt)$')\n\n      !is_ignored && (!is_app || ends_with(appname, \"git_pull\"))\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/25341",
+    "createdAt": "2026-05-01T15:05:33Z",
+    "updatedAt": "2026-08-25T14:34:31Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "andarotajo"
     },
-    "bodyText": "Question\nI'm trying to create a filter and while I think I got the filter itself down, I'm currently trying to make the YAML cleaner by avoiding super long lines.\nIn this case it's my regex string that gets too long for my taste. The filter itself is valid but I think the regex includes some whitespace or newline because a appname with the value containerd doesn't match. You can check it at this playground. Try changing the appname to systemd for example and it returns true\nIs it possible to have multiline regular expression strings?\nVector Config\ntransforms:\n  home_assistant_filter:\n    type: \"filter\"\n\n    inputs:\n      - \"home_assistant_logs\"\n\n    condition: |-\n      # Field .appname is apparently not a string\n      appname = string(.appname) ?? \"unknown\"\n\n      # Filter out all unwanted logs\n      is_app = starts_with(appname, \"addon\")\n      is_ignored = match(appname, r'(?:hassio_dns|systemd|dockerd|\\\n        containerd|kernel|NetworkManager|audit|zigbee2mqtt)$')\n\n      !is_ignored && (!is_app || ends_with(appname, \"git_pull\"))\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2026-05-01T15:05:33Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25341,
-    "stateReason": null,
-    "title": "Is it possible to have regular expression strings spanning multiple lines?",
-    "updatedAt": "2026-07-08T02:50:02Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25341"
+    "upvoteCount": 1
   },
   {
+    "number": 25352,
+    "title": "Building on FreeBSD",
+    "bodyText": "Anyone had any luck building Vector on FreeBSD? I tried my best but got stopped by this error:\n   Compiling nix v0.23.2\nerror[E0308]: mismatched types\n   --> /home/rihad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.23.2/src/sys/event.rs:231:19\n    |\n231 |             data: data as type_of_data,\n    |                   ^^^^^^^^^^^^^^^^^^^^ expected `i64`, found `isize`\n\nerror[E0063]: missing field `ext` in initializer of `kevent`\n   --> /home/rihad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.23.2/src/sys/event.rs:226:26\n    |\n226 |         KEvent { kevent: libc::kevent {\n    |                          ^^^^^^^^^^^^ missing `ext`\n\n   Compiling uom v0.31.1\nSome errors have detailed explanations: E0063, E0308.\nFor more information about an error, try `rustc --explain E0063`.\nerror: could not compile `nix` (lib) due to 2 previous errors\nwarning: build failed, waiting for other jobs to finish...\ngmake: *** [Makefile:208: build] Error 101",
+    "url": "https://github.com/vectordotdev/vector/discussions/25352",
+    "createdAt": "2026-05-02T13:54:01Z",
+    "updatedAt": "2026-07-27T17:23:24Z",
+    "closedAt": "2026-07-27T17:23:22Z",
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "rihadik"
     },
-    "bodyText": "Anyone had any luck building Vector on FreeBSD? I tried my best but got stopped by this error:\n   Compiling nix v0.23.2\nerror[E0308]: mismatched types\n   --> /home/rihad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.23.2/src/sys/event.rs:231:19\n    |\n231 |             data: data as type_of_data,\n    |                   ^^^^^^^^^^^^^^^^^^^^ expected `i64`, found `isize`\n\nerror[E0063]: missing field `ext` in initializer of `kevent`\n   --> /home/rihad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.23.2/src/sys/event.rs:226:26\n    |\n226 |         KEvent { kevent: libc::kevent {\n    |                          ^^^^^^^^^^^^ missing `ext`\n\n   Compiling uom v0.31.1\nSome errors have detailed explanations: E0063, E0308.\nFor more information about an error, try `rustc --explain E0063`.\nerror: could not compile `nix` (lib) due to 2 previous errors\nwarning: build failed, waiting for other jobs to finish...\ngmake: *** [Makefile:208: build] Error 101",
     "category": {
       "name": "General"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
-    "createdAt": "2026-05-02T13:54:01Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25352,
-    "stateReason": null,
-    "title": "Building on FreeBSD",
-    "updatedAt": "2026-05-02T13:54:01Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25352"
+    "upvoteCount": 1
   },
   {
+    "number": 25383,
+    "title": "no_proxy plain domain entries don't match subdomains (inconsistent with Go/curl/Python behavior)",
+    "bodyText": "Question\nProblem\nVector's no_proxy handling does not match subdomains when a plain domain (without leading dot) is specified. This is due to the upstream no-proxy crate (v0.3.6) which Vector uses for NO_PROXY evaluation.\nWhen NO_PROXY=apps.example.com is set:\n\nGo's httpproxy, curl, Python, Ruby: elasticsearch.apps.example.com bypasses the proxy\nVector: elasticsearch.apps.example.com goes through the proxy\n\nUsers must use .apps.example.com (with leading dot) as a workaround.\nRoot cause\nThe no-proxy crate's NoProxyItem::Plain variant does exact string match only: Self::Plain(source) => source == value,\nVector's documentation is also incorrect\nIn lib/vector-core/src/config/proxy.rs lines 83-84:\n| Domain names     | `example.com` matches requests to `example.com`                     |\n| Wildcard domains | `.example.com` matches requests to `example.com` and its subdomains |\n\nFix\nProposed a fix for the no-proxy crate: jdrouet/no-proxy#12\nVector Config\nNo response\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/25383",
+    "createdAt": "2026-05-06T18:36:16Z",
+    "updatedAt": "2026-08-26T16:33:15Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "vparfonov"
     },
-    "bodyText": "Question\nProblem\nVector's no_proxy handling does not match subdomains when a plain domain (without leading dot) is specified. This is due to the upstream no-proxy crate (v0.3.6) which Vector uses for NO_PROXY evaluation.\nWhen NO_PROXY=apps.example.com is set:\n\nGo's httpproxy, curl, Python, Ruby: elasticsearch.apps.example.com bypasses the proxy\nVector: elasticsearch.apps.example.com goes through the proxy\n\nUsers must use .apps.example.com (with leading dot) as a workaround.\nRoot cause\nThe no-proxy crate's NoProxyItem::Plain variant does exact string match only: Self::Plain(source) => source == value,\nVector's documentation is also incorrect\nIn lib/vector-core/src/config/proxy.rs lines 83-84:\n| Domain names     | `example.com` matches requests to `example.com`                     |\n| Wildcard domains | `.example.com` matches requests to `example.com` and its subdomains |\n\nFix\nProposed a fix for the no-proxy crate: jdrouet/no-proxy#12\nVector Config\nNo response\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2026-05-06T18:36:16Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25383,
-    "stateReason": null,
-    "title": "no_proxy plain domain entries don't match subdomains (inconsistent with Go/curl/Python behavior)",
-    "updatedAt": "2026-07-06T10:29:10Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25383"
+    "upvoteCount": 1
   },
   {
+    "number": 25392,
+    "title": "kubernetes_logs has high source lag and may incorrectly merge Docker partial logs when multiple rotated file watchers exist for the same pod log path",
+    "bodyText": "Question\nBackground\nWe run Vector as a Kubernetes DaemonSet to collect container logs.【Vector DaemonSet -> AutoMQ / Kafka】\nThe Kubernetes cluster uses Docker with the json-file log driver.\nDocker log rotation:\nmax files: 8\nmax size per file: 100MB\nReal Docker log files are stored under:\n/data1/docker/containers/<container_id>/\nKubernetes pod log paths are symlinks:\n/var/log/pods///0.log\nIssue 1: Some Vector pods keep around 2K seconds source lag\nOn some Kubernetes nodes, the Vector kubernetes_logs source lag stays around 2K seconds.\nMetric:\nvector_source_lag_time_seconds_bucket\nWe tried increasing Vector CPU limit to 6 cores and increasing max_read_bytes to 4MB, but it did not help much.\n\nThe source read throughput still stays around ~ 12MB/s\n\nAfter increasing CPU and max_read_bytes, the read throughput did not improve significantly, and the source lag still stayed around 2K seconds.\nOn the sink side, we checked:\nvector_kafka_queue_messages_bytes\nIt stays very stable around ~ 500KB\n\nSo this does not look like Kafka sink backpressure or producer queue accumulation.\nAnother important observation: during business low-traffic hours, the lag can fully recover back to 0.\nThis suggests that Vector's current consumption capacity is not enough during peak traffic, but we are not sure where the bottleneck is.\nIssue 2: Incorrect log interleaving when multiple watchers exist for the same container\nPossibly because Vector cannot consume logs fast enough and Docker log rotation is frequent, multiple watchers for rotated log files of the same container can coexist.\nFor example, Vector may hold multiple file descriptors for the same container:\n<container_id>-json.log\n<container_id>-json.log.1\n<container_id>-json.log.2\n<container_id>-json.log.3\n...\nWhen this happens, we sometimes see log interleaving/corruption.\nA large application log line is split by Docker into multiple 16KB JSON log records. Vector is expected to merge only fragments from the same original log line.\nHowever, in the actual query result, fragments from different logs can be merged together. Sometimes a fragment from another log appears in the middle of the merged log.\nThis problem happens frequently during peak traffic, but rarely happens during business low-traffic hours.\nOur current suspicion is:\nhigh source lag\n-> old rotated file watchers remain active for a long time\n-> multiple watchers for the same container coexist\n-> Docker partial log merge may incorrectly merge fragments across different rotated files\nPlease help confirm whether this is an expected limitation, a configuration issue, or a correctness bug in\nkubernetes_logs / Docker partial log merging.\nVector Config\napiVersion: v1\ndata:\nagent.yaml: |\napi:\nenabled: true\naddress: \"0.0.0.0:8686\"\ndata_dir: /data/vector/\nsources:\nk8s:\ntype: file\ninclude:\n- /data1/log/kubernetes.audit\nlogs:\ntype: kubernetes_logs\nuse_apiserver_cache: true\nmax_read_bytes: 4194304\nrotate_wait_secs: 1800\nexclude_paths_glob_patterns:\n- \"/colo-system_\"\n- \"/k8s-iaas_\"\n- \"/*.gz\"\n- \"/*.tmp\"\noldest_first: true\ninternal_metrics:\ntype: internal_metrics\ntransforms:\nfilter:\ntype: filter\ninputs:\n- logs\ncondition: |-\n# Filter by Kubernetes labels\nremap:\ntype: remap\ninputs:\n- filter\nsource: |-\n# Rewrite the event as:log, pod, app_name, unit_name, container_name, version, idc, @timestamp\nroute:\ntype: route\ninputs:\n- remap\nreroute_unmatched: true\nroute:\nmultiline_std:\ntype: reduce\ninputs:\n- route.std\nstarts_when: starts_with(string!(.log), \"[\")\nexpire_after_ms: 1000\nmax_events: 100\nmerge_strategies:\nlog: concat_newline\ngroup_by:\n- pod\n- container_name\nsinks:\nprom_exporter:\ntype: prometheus_exporter\ninputs:\n- internal_metrics\naddress: 0.0.0.0:9090\nkafka:\ntype: kafka\ninputs:\n- multiline_std\n- route._unmatched\n- k8s_remap\nbootstrap_servers: \"${KAFKA_HOSTS}\"\ntopic: log.log-container-app.stdout\nlibrdkafka_options:\nrequest.required.acks: \"-1\"\nbatch:\nmax_events: 1000\nencoding:\ncodec: \"json\"\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/25392",
+    "createdAt": "2026-05-08T02:18:29Z",
+    "updatedAt": "2026-08-25T16:34:44Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "huan89983"
     },
-    "bodyText": "Question\nBackground\nWe run Vector as a Kubernetes DaemonSet to collect container logs.【Vector DaemonSet -> AutoMQ / Kafka】\nThe Kubernetes cluster uses Docker with the json-file log driver.\nDocker log rotation:\nmax files: 8\nmax size per file: 100MB\nReal Docker log files are stored under:\n/data1/docker/containers/<container_id>/\nKubernetes pod log paths are symlinks:\n/var/log/pods///0.log\nIssue 1: Some Vector pods keep around 2K seconds source lag\nOn some Kubernetes nodes, the Vector kubernetes_logs source lag stays around 2K seconds.\nMetric:\nvector_source_lag_time_seconds_bucket\nWe tried increasing Vector CPU limit to 6 cores and increasing max_read_bytes to 4MB, but it did not help much.\n\nThe source read throughput still stays around ~ 12MB/s\n\nAfter increasing CPU and max_read_bytes, the read throughput did not improve significantly, and the source lag still stayed around 2K seconds.\nOn the sink side, we checked:\nvector_kafka_queue_messages_bytes\nIt stays very stable around ~ 500KB\n\nSo this does not look like Kafka sink backpressure or producer queue accumulation.\nAnother important observation: during business low-traffic hours, the lag can fully recover back to 0.\nThis suggests that Vector's current consumption capacity is not enough during peak traffic, but we are not sure where the bottleneck is.\nIssue 2: Incorrect log interleaving when multiple watchers exist for the same container\nPossibly because Vector cannot consume logs fast enough and Docker log rotation is frequent, multiple watchers for rotated log files of the same container can coexist.\nFor example, Vector may hold multiple file descriptors for the same container:\n<container_id>-json.log\n<container_id>-json.log.1\n<container_id>-json.log.2\n<container_id>-json.log.3\n...\nWhen this happens, we sometimes see log interleaving/corruption.\nA large application log line is split by Docker into multiple 16KB JSON log records. Vector is expected to merge only fragments from the same original log line.\nHowever, in the actual query result, fragments from different logs can be merged together. Sometimes a fragment from another log appears in the middle of the merged log.\nThis problem happens frequently during peak traffic, but rarely happens during business low-traffic hours.\nOur current suspicion is:\nhigh source lag\n-> old rotated file watchers remain active for a long time\n-> multiple watchers for the same container coexist\n-> Docker partial log merge may incorrectly merge fragments across different rotated files\nPlease help confirm whether this is an expected limitation, a configuration issue, or a correctness bug in\nkubernetes_logs / Docker partial log merging.\nVector Config\napiVersion: v1\ndata:\nagent.yaml: |\napi:\nenabled: true\naddress: \"0.0.0.0:8686\"\ndata_dir: /data/vector/\nsources:\nk8s:\ntype: file\ninclude:\n- /data1/log/kubernetes.audit\nlogs:\ntype: kubernetes_logs\nuse_apiserver_cache: true\nmax_read_bytes: 4194304\nrotate_wait_secs: 1800\nexclude_paths_glob_patterns:\n- \"/colo-system_\"\n- \"/k8s-iaas_\"\n- \"/*.gz\"\n- \"/*.tmp\"\noldest_first: true\ninternal_metrics:\ntype: internal_metrics\ntransforms:\nfilter:\ntype: filter\ninputs:\n- logs\ncondition: |-\n# Filter by Kubernetes labels\nremap:\ntype: remap\ninputs:\n- filter\nsource: |-\n# Rewrite the event as:log, pod, app_name, unit_name, container_name, version, idc, @timestamp\nroute:\ntype: route\ninputs:\n- remap\nreroute_unmatched: true\nroute:\nmultiline_std:\ntype: reduce\ninputs:\n- route.std\nstarts_when: starts_with(string!(.log), \"[\")\nexpire_after_ms: 1000\nmax_events: 100\nmerge_strategies:\nlog: concat_newline\ngroup_by:\n- pod\n- container_name\nsinks:\nprom_exporter:\ntype: prometheus_exporter\ninputs:\n- internal_metrics\naddress: 0.0.0.0:9090\nkafka:\ntype: kafka\ninputs:\n- multiline_std\n- route._unmatched\n- k8s_remap\nbootstrap_servers: \"${KAFKA_HOSTS}\"\ntopic: log.log-container-app.stdout\nlibrdkafka_options:\nrequest.required.acks: \"-1\"\nbatch:\nmax_events: 1000\nencoding:\ncodec: \"json\"\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2026-05-08T02:18:29Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25392,
-    "stateReason": null,
-    "title": "kubernetes_logs has high source lag and may incorrectly merge Docker partial logs when multiple rotated file watchers exist for the same pod log path",
-    "updatedAt": "2026-05-28T01:06:55Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25392"
+    "upvoteCount": 1
   },
   {
+    "number": 25396,
+    "title": "Alternatives to lua for my use case",
+    "bodyText": "Question\nHello, I opened a discussion some time ago about my vector config (see #24635). This week we finally went to production and we found out some problems not seen in our test environment.\nNamely, it seems we had some issues for the exec source, which is a bash script that just dumps metadata from K8s API server and fuels our enrichment_table. We run the script manually inside vector pods and it run fast with no error (returned 0), so probably that wasn't the root cause.\nAfter more troubleshooting we found out we had a lot of jq stuck processes. Since it was used inside the lua script, we tried removing the entire lua from the transforms section of vector config. Turns out, after that everything worked fine and timeout errors disappeared.\nSo my reasoning is, our current lua script is not optimized enough with our current load. You can see it in the section below. Vector's lua does not support HTTP external libraries, right? So the only way I have to fetch the application name for what is not present in the enrichment_table is spawning a curl process.\nDo you think I have other alternatives if I want to try to remediate a missing app name when the record is not present in the enrichment table? In general this seems to happen to less of 1% of our logs, so it's relatively rare, but on absolute numbers it happens thousands of times.\nThank you in advance.\nNote the vector config below only includes what I think is in scope for this question.\nVector Config\nenrichment_tables:\n  k8s_metadata:\n\ttype: \"memory\"\n\tttl_seconds: 1000\n\t# The table reads events directly from this transform\n\tinputs: [\"app_enricher\"]\n\nsources:\n  vector_metrics:\n\ttype: internal_metrics\n  kube:\n\ttype: \"exec\"\n\tcommand:\n\t  - \"/etc/vector/scripts/get_k8s_label.sh\"\n\tmode: \"scheduled\"\n\tscheduled:\n\t  exec_interval_secs: 30\n\tdecoding:\n\t  codec: \"json\"\n\n  logs:\n\ttype: \"file\"\n\tinclude: [\"/var/log/containers/*.log\"]\n\tread_from: end\n\tignore_older_secs: 20\n\toffset_key: offset\n\ntransforms:\n  # Prepare data for the enrichment table\n  app_enricher:\n\ttype: \"remap\"\n\tinputs: [\"kube\"]\n\tsource: |\n\t  # Reshape the event so the KEY is the container_id and the VALUE is the app_name.\n\t  # The memory table interprets { \"key\": \"value\" } as: lookup(\"key\") -> \"value\"\n\n\t  # We want to store: container_id -> { app_name: \"...\" }\n\t  # So we create a dynamic key using the container_id\n\n\t  id = .container_id\n\t  app = .app_name\n\n\t  # Clear the event and set the new structure\n\t  . = {}\n\n\t  # Set the dynamic key.\n\t  #set!(., [id], app)\n\t  . = set!(., [id], { \"app_name\": app })\n\t  \n  router:\n\ttype: route\n\tinputs:\n\t  - set_app\n\treroute_unmatched: false\n\troute:\n\t  needs_enrichment:\n\t\tsource: \"!exists(.app_name)\"\n\t\ttype: vrl\n\t  ok:\n\t\tsource: \"exists(.app_name)\"\n\t\ttype: vrl\n\n  lua_enricher:\n\ttype: lua\n\tinputs:\n\t  - router.needs_enrichment\n\tversion: \"2\"\n\thooks:\n\t  process: |-\n\t\tfunction (event, emit)\n\t\t  -- Hardcoded target (as in your curl example)\n\t\t  local namespace = event.log.namespace\n\t\t  local pod       = event.log.pod_name\n\n\t\t  local cmd = table.concat({\n\t\t\t\"curl -s\",\n\t\t\t\"https://endpoint.example.com\",\n\t\t\t\"| jq -c '.metadata.labels.\\\"app.kubernetes.io/name\\\"'\",\n\t\t\t\"2>&1\",\n\t\t  }, \" \")\n\n\t\t  local handle = io.popen(cmd)\n\t\t  if not handle then\n\t\t\tevent.log = event.log or {}\n\t\t\tevent.log.k8s_label_error = \"io.popen failed\"\n\t\t\temit(event)\n\t\t\treturn\n\t\t  end\n\n\t\t  local out = handle:read(\"*a\") or \"\"\n\t\t  local ok, _, exit_code = handle:close()\n\n\t\t  -- Trim output\n\t\t  out = out:gsub(\"^%s*(.-)%s*$\", \"%1\")\n\n\t\t  event.log = event.log or {}\n\n\t\t  if ok and out ~= \"\" and out ~= \"null\" then\n\t\t\t-- out is a JSON string like: \"shared-shake\"\n\t\t\t-- store it as-is or strip quotes:\n\t\t\tlocal unquoted = out:gsub('^\"(.*)\"$', \"%1\")\n\t\t\tevent.log.app_name = unquoted\n\t\t\tevent.log.k8s_label_source = \"curl_apiserver\"\n\t\t\tevent.log.enrichment_source = \"table\"\n\t\t  else\n\t\t\tevent.log.k8s_label_error = out\n\t\t\tevent.log.k8s_label_exit_code = exit_code\n\t\t  end\n\n\t\t  emit(event)\n\t\tend\n\n\n\nVector Logs\n2026-05-07T06:53:45.169858Z ERROR source{component_kind=\"source\" component_id=kube component_type=exec}: vector_common::internal_event::component_events_dropped: Events dropped intentional=false count=1 reason=\"Source send cancelled.\"\n2026-05-07T06:53:45.169949Z ERROR source{component_kind=\"source\" component_id=kube component_type=exec}: vector::internal_events::exec: Timeout during exec. command=/etc/vector/scripts/get_k8s_label.sh elapsed_seconds=30 error=deadline has elapsed error_type=\"timed_out\" stage=\"receiving\"\n2026-05-07T06:53:48.642950Z ERROR vector::internal_events::exec: Receive channel closed, unable to send. error_type=\"command_failed\" stage=\"receiving\"\n2026-05-07T06:53:48.642972Z ERROR vector_common::internal_event::component_events_dropped: Events dropped intentional=false count=1 reason=\"Receive channel closed, unable to send.\"",
+    "url": "https://github.com/vectordotdev/vector/discussions/25396",
+    "createdAt": "2026-05-08T16:39:35Z",
+    "updatedAt": "2026-08-14T22:33:32Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "giacom0c"
     },
-    "bodyText": "Question\nHello, I opened a discussion some time ago about my vector config (see #24635). This week we finally went to production and we found out some problems not seen in our test environment.\nNamely, it seems we had some issues for the exec source, which is a bash script that just dumps metadata from K8s API server and fuels our enrichment_table. We run the script manually inside vector pods and it run fast with no error (returned 0), so probably that wasn't the root cause.\nAfter more troubleshooting we found out we had a lot of jq stuck processes. Since it was used inside the lua script, we tried removing the entire lua from the transforms section of vector config. Turns out, after that everything worked fine and timeout errors disappeared.\nSo my reasoning is, our current lua script is not optimized enough with our current load. You can see it in the section below. Vector's lua does not support HTTP external libraries, right? So the only way I have to fetch the application name for what is not present in the enrichment_table is spawning a curl process.\nDo you think I have other alternatives if I want to try to remediate a missing app name when the record is not present in the enrichment table? In general this seems to happen to less of 1% of our logs, so it's relatively rare, but on absolute numbers it happens thousands of times.\nThank you in advance.\nNote the vector config below only includes what I think is in scope for this question.\nVector Config\nenrichment_tables:\n  k8s_metadata:\n\ttype: \"memory\"\n\tttl_seconds: 1000\n\t# The table reads events directly from this transform\n\tinputs: [\"app_enricher\"]\n\nsources:\n  vector_metrics:\n\ttype: internal_metrics\n  kube:\n\ttype: \"exec\"\n\tcommand:\n\t  - \"/etc/vector/scripts/get_k8s_label.sh\"\n\tmode: \"scheduled\"\n\tscheduled:\n\t  exec_interval_secs: 30\n\tdecoding:\n\t  codec: \"json\"\n\n  logs:\n\ttype: \"file\"\n\tinclude: [\"/var/log/containers/*.log\"]\n\tread_from: end\n\tignore_older_secs: 20\n\toffset_key: offset\n\ntransforms:\n  # Prepare data for the enrichment table\n  app_enricher:\n\ttype: \"remap\"\n\tinputs: [\"kube\"]\n\tsource: |\n\t  # Reshape the event so the KEY is the container_id and the VALUE is the app_name.\n\t  # The memory table interprets { \"key\": \"value\" } as: lookup(\"key\") -> \"value\"\n\n\t  # We want to store: container_id -> { app_name: \"...\" }\n\t  # So we create a dynamic key using the container_id\n\n\t  id = .container_id\n\t  app = .app_name\n\n\t  # Clear the event and set the new structure\n\t  . = {}\n\n\t  # Set the dynamic key.\n\t  #set!(., [id], app)\n\t  . = set!(., [id], { \"app_name\": app })\n\t  \n  router:\n\ttype: route\n\tinputs:\n\t  - set_app\n\treroute_unmatched: false\n\troute:\n\t  needs_enrichment:\n\t\tsource: \"!exists(.app_name)\"\n\t\ttype: vrl\n\t  ok:\n\t\tsource: \"exists(.app_name)\"\n\t\ttype: vrl\n\n  lua_enricher:\n\ttype: lua\n\tinputs:\n\t  - router.needs_enrichment\n\tversion: \"2\"\n\thooks:\n\t  process: |-\n\t\tfunction (event, emit)\n\t\t  -- Hardcoded target (as in your curl example)\n\t\t  local namespace = event.log.namespace\n\t\t  local pod       = event.log.pod_name\n\n\t\t  local cmd = table.concat({\n\t\t\t\"curl -s\",\n\t\t\t\"https://endpoint.example.com\",\n\t\t\t\"| jq -c '.metadata.labels.\\\"app.kubernetes.io/name\\\"'\",\n\t\t\t\"2>&1\",\n\t\t  }, \" \")\n\n\t\t  local handle = io.popen(cmd)\n\t\t  if not handle then\n\t\t\tevent.log = event.log or {}\n\t\t\tevent.log.k8s_label_error = \"io.popen failed\"\n\t\t\temit(event)\n\t\t\treturn\n\t\t  end\n\n\t\t  local out = handle:read(\"*a\") or \"\"\n\t\t  local ok, _, exit_code = handle:close()\n\n\t\t  -- Trim output\n\t\t  out = out:gsub(\"^%s*(.-)%s*$\", \"%1\")\n\n\t\t  event.log = event.log or {}\n\n\t\t  if ok and out ~= \"\" and out ~= \"null\" then\n\t\t\t-- out is a JSON string like: \"shared-shake\"\n\t\t\t-- store it as-is or strip quotes:\n\t\t\tlocal unquoted = out:gsub('^\"(.*)\"$', \"%1\")\n\t\t\tevent.log.app_name = unquoted\n\t\t\tevent.log.k8s_label_source = \"curl_apiserver\"\n\t\t\tevent.log.enrichment_source = \"table\"\n\t\t  else\n\t\t\tevent.log.k8s_label_error = out\n\t\t\tevent.log.k8s_label_exit_code = exit_code\n\t\t  end\n\n\t\t  emit(event)\n\t\tend\n\n\n\nVector Logs\n2026-05-07T06:53:45.169858Z ERROR source{component_kind=\"source\" component_id=kube component_type=exec}: vector_common::internal_event::component_events_dropped: Events dropped intentional=false count=1 reason=\"Source send cancelled.\"\n2026-05-07T06:53:45.169949Z ERROR source{component_kind=\"source\" component_id=kube component_type=exec}: vector::internal_events::exec: Timeout during exec. command=/etc/vector/scripts/get_k8s_label.sh elapsed_seconds=30 error=deadline has elapsed error_type=\"timed_out\" stage=\"receiving\"\n2026-05-07T06:53:48.642950Z ERROR vector::internal_events::exec: Receive channel closed, unable to send. error_type=\"command_failed\" stage=\"receiving\"\n2026-05-07T06:53:48.642972Z ERROR vector_common::internal_event::component_events_dropped: Events dropped intentional=false count=1 reason=\"Receive channel closed, unable to send.\"",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
-    "createdAt": "2026-05-08T16:39:35Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25396,
-    "stateReason": null,
-    "title": "Alternatives to lua for my use case",
-    "updatedAt": "2026-07-15T19:34:52Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25396"
+    "upvoteCount": 1
   },
   {
     "author": {
@@ -1150,27 +1150,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/25451"
   },
   {
+    "number": 25461,
+    "title": "Can Vector drop old files from the checkpointing?",
+    "bodyText": "Question\nWe have a directory structure of log files that we need to monitor. This is from a system that schedules batch jobs, so each batch job drops a file. This ends up being about 3k files per day. The ignore_older_secs seems to only work on startup to ignore files in the checkpointer.\nIs there an option or pattern to drop old files? We are on an older version, but I went through the code and don't see how it would drop older files. Without that, I would expect the file handles to continually grow until it runs out.\nIf this doesn't exist, would this be a useful feature? I'm happy to contribute if others would use the same feature.\nVector Config\nNo response\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/25461",
+    "createdAt": "2026-05-19T16:32:24Z",
+    "updatedAt": "2026-08-26T16:34:14Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "tzinckgraf"
     },
-    "bodyText": "Question\nWe have a directory structure of log files that we need to monitor. This is from a system that schedules batch jobs, so each batch job drops a file. This ends up being about 3k files per day. The ignore_older_secs seems to only work on startup to ignore files in the checkpointer.\nIs there an option or pattern to drop old files? We are on an older version, but I went through the code and don't see how it would drop older files. Without that, I would expect the file handles to continually grow until it runs out.\nIf this doesn't exist, would this be a useful feature? I'm happy to contribute if others would use the same feature.\nVector Config\nNo response\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 2
     },
-    "createdAt": "2026-05-19T16:32:24Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25461,
-    "stateReason": null,
-    "title": "Can Vector drop old files from the checkpointing?",
-    "updatedAt": "2026-07-08T02:50:05Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25461"
+    "upvoteCount": 1
   },
   {
     "author": {
@@ -1242,27 +1242,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/25512"
   },
   {
+    "number": 25534,
+    "title": "About https://github.com/vectordotdev/vector/pkgs/container/vector",
+    "bodyText": "Looks like this page for container registry is 'hidden' from the https://github.com/vectordotdev/vector main page or documentation. It seems it is nowhere to find this link from the Vector main page (github/external project page).\nI would appreciate the link is provide somewhere in the front page of the github/main project website.\nThanks.",
+    "url": "https://github.com/vectordotdev/vector/discussions/25534",
+    "createdAt": "2026-05-30T10:43:06Z",
+    "updatedAt": "2026-07-24T17:45:25Z",
+    "closedAt": "2026-07-24T17:45:25Z",
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": false,
+    "locked": false,
     "author": {
       "login": "patrickdung"
     },
-    "bodyText": "Looks like this page for container registry is 'hidden' from the https://github.com/vectordotdev/vector main page or documentation. It seems it is nowhere to find this link from the Vector main page (github/external project page).\nI would appreciate the link is provide somewhere in the front page of the github/main project website.\nThanks.",
     "category": {
       "name": "General"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
-    "createdAt": "2026-05-30T10:43:06Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25534,
-    "stateReason": null,
-    "title": "About https://github.com/vectordotdev/vector/pkgs/container/vector",
-    "updatedAt": "2026-05-30T10:43:12Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25534"
+    "upvoteCount": 2
   },
   {
     "author": {
@@ -1357,27 +1357,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/25685"
   },
   {
+    "number": 25749,
+    "title": "Do you know the way to send event to the Wazuh server without wazuh agent.",
+    "bodyText": "Question\nHello.\nNow I'm gathering security events with json format from the Tetragon solution.\nAnd I deployed Vector and its source is tetragon event file.\nNow I hope to send them to Wazuh server without Wazuh agent.\nI know Wazuh solution introduces SSH connection from Wazuh server to endpoint to get an events.\nBut it's not a proper solution to get Tetragon events from endpoint.\nAdditionally, Wazuh solution recommand using Wazuh agent to get Tetragon events with following connections\nendpoint:[Tetragon event log file --> Wazuh agent] ------> server:[Wazuh server]\nBut I hope to use vector to send Tetragon event to Wazuh server without Wazuh agent.\nDo you happen to have a good idea for it?\nThanks.\nVector Config\nNo response\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/25749",
+    "createdAt": "2026-07-06T06:49:16Z",
+    "updatedAt": "2026-07-27T17:12:12Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "JayJay-K"
     },
-    "bodyText": "Question\nHello.\nNow I'm gathering security events with json format from the Tetragon solution.\nAnd I deployed Vector and its source is tetragon event file.\nNow I hope to send them to Wazuh server without Wazuh agent.\nI know Wazuh solution introduces SSH connection from Wazuh server to endpoint to get an events.\nBut it's not a proper solution to get Tetragon events from endpoint.\nAdditionally, Wazuh solution recommand using Wazuh agent to get Tetragon events with following connections\nendpoint:[Tetragon event log file --> Wazuh agent] ------> server:[Wazuh server]\nBut I hope to use vector to send Tetragon event to Wazuh server without Wazuh agent.\nDo you happen to have a good idea for it?\nThanks.\nVector Config\nNo response\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2026-07-06T06:49:16Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25749,
-    "stateReason": null,
-    "title": "Do you know the way to send event to the Wazuh server without wazuh agent.",
-    "updatedAt": "2026-07-22T01:31:44Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25749"
+    "upvoteCount": 1
   },
   {
     "author": {
@@ -1403,27 +1403,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/25754"
   },
   {
+    "number": 25775,
+    "title": "How to forward pod status containerStatuses lastState?",
+    "bodyText": "Question\nI need to capture containerStatuses.lastState from pod statuses to monitor failure exit codes like 1 or 137.\nWhat is the correct Vector configuration for this?\n\nVector Config\nNo response\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/25775",
+    "createdAt": "2026-07-08T08:59:33Z",
+    "updatedAt": "2026-07-27T17:13:05Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "devopsmash"
     },
-    "bodyText": "Question\nI need to capture containerStatuses.lastState from pod statuses to monitor failure exit codes like 1 or 137.\nWhat is the correct Vector configuration for this?\n\nVector Config\nNo response\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2026-07-08T08:59:33Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25775,
-    "stateReason": null,
-    "title": "How to forward pod status containerStatuses lastState?",
-    "updatedAt": "2026-07-15T19:34:51Z",
-    "upvoteCount": 2,
-    "url": "https://github.com/vectordotdev/vector/discussions/25775"
+    "upvoteCount": 2
   },
   {
     "author": {
@@ -1472,27 +1472,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/25843"
   },
   {
+    "number": 25854,
+    "title": "Vector pods restart continuously because of \"connection refuse\" from the target.",
+    "bodyText": "Question\nHello.\nI injected vector container to the tetragon pod.\n(but the situation is same when I install vector pod with daemonset)\nThe pods restart again and again:\n[admin@bastion]$ kubectl get pod\nNAME                               READY   STATUS    RESTARTS          AGE\ntetragon-jxpv2                     2/3     Running   451 (3m59s ago)   41h\n\nI checked the vector container's log and I could see following logs:\n2026-07-15T22:53:58.847021Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:15.148924Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: HTTP error. error=error trying to connect: tcp connect error: Connection refused (os error 111) error_type=\"request_failed\" stage=\"processing\"\n2026-07-15T22:54:15.148967Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:17.978948Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: Internal log [HTTP error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:17.978994Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Internal log [Retrying after error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:18.758516Z  INFO vector::signal: Signal received. signal=\"SIGTERM\"\n2026-07-15T22:54:18.758563Z  INFO vector: Vector is stopping.\n2026-07-15T22:54:18.759779Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components=\"tet_out, tet_out2, tet_in\" time_remaining=\"59 seconds left\"\n\nI think it might happen because of consecutive \"connection refuse\".\nWhat is the best way to prevent \"RESTART\" vector, in case consecutive \"connection refuse\"?\nThanks.\nVector Config\n  sources:\n     tet_in:\n       type: file\n       include:\n       - /var/run/cilium/tetragon/tetragon.log\n       read_from: \"end\"\n\n   sinks:\n     tet_out2:\n       inputs:\n       - tet_in\n\n       # Sink to HTTPD\n       encoding:\n         codec: text\n       type: http\n       uri: http://[2001:100:100:11::280]:56789\n\nVector Logs\n2026-07-15T22:53:58.847021Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:15.148924Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: HTTP error. error=error trying to connect: tcp connect error: Connection refused (os error 111) error_type=\"request_failed\" stage=\"processing\"\n2026-07-15T22:54:15.148967Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:17.978948Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: Internal log [HTTP error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:17.978994Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Internal log [Retrying after error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:18.758516Z  INFO vector::signal: Signal received. signal=\"SIGTERM\"\n2026-07-15T22:54:18.758563Z  INFO vector: Vector is stopping.\n2026-07-15T22:54:18.759779Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components=\"tet_out, tet_out2, tet_in\" time_remaining=\"59 seconds left\"",
+    "url": "https://github.com/vectordotdev/vector/discussions/25854",
+    "createdAt": "2026-07-15T23:21:33Z",
+    "updatedAt": "2026-07-27T17:19:14Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "JayJay-K"
     },
-    "bodyText": "Question\nHello.\nI injected vector container to the tetragon pod.\n(but the situation is same when I install vector pod with daemonset)\nThe pods restart again and again:\n[admin@bastion]$ kubectl get pod\nNAME                               READY   STATUS    RESTARTS          AGE\ntetragon-jxpv2                     2/3     Running   451 (3m59s ago)   41h\n\nI checked the vector container's log and I could see following logs:\n2026-07-15T22:53:58.847021Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:15.148924Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: HTTP error. error=error trying to connect: tcp connect error: Connection refused (os error 111) error_type=\"request_failed\" stage=\"processing\"\n2026-07-15T22:54:15.148967Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:17.978948Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: Internal log [HTTP error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:17.978994Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Internal log [Retrying after error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:18.758516Z  INFO vector::signal: Signal received. signal=\"SIGTERM\"\n2026-07-15T22:54:18.758563Z  INFO vector: Vector is stopping.\n2026-07-15T22:54:18.759779Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components=\"tet_out, tet_out2, tet_in\" time_remaining=\"59 seconds left\"\n\nI think it might happen because of consecutive \"connection refuse\".\nWhat is the best way to prevent \"RESTART\" vector, in case consecutive \"connection refuse\"?\nThanks.\nVector Config\n  sources:\n     tet_in:\n       type: file\n       include:\n       - /var/run/cilium/tetragon/tetragon.log\n       read_from: \"end\"\n\n   sinks:\n     tet_out2:\n       inputs:\n       - tet_in\n\n       # Sink to HTTPD\n       encoding:\n         codec: text\n       type: http\n       uri: http://[2001:100:100:11::280]:56789\n\nVector Logs\n2026-07-15T22:53:58.847021Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:15.148924Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: HTTP error. error=error trying to connect: tcp connect error: Connection refused (os error 111) error_type=\"request_failed\" stage=\"processing\"\n2026-07-15T22:54:15.148967Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Retrying after error. error=Failed to make HTTP(S) request: error trying to connect: tcp connect error: Connection refused (os error 111)\n2026-07-15T22:54:17.978948Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}:http: vector::internal_events::http_client: Internal log [HTTP error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:17.978994Z  WARN sink{component_kind=\"sink\" component_id=tet_out2 component_type=http}:request{request_id=1}: vector::sinks::util::retries: Internal log [Retrying after error.] is being suppressed to avoid flooding.\n2026-07-15T22:54:18.758516Z  INFO vector::signal: Signal received. signal=\"SIGTERM\"\n2026-07-15T22:54:18.758563Z  INFO vector: Vector is stopping.\n2026-07-15T22:54:18.759779Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components=\"tet_out, tet_out2, tet_in\" time_remaining=\"59 seconds left\"",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2026-07-15T23:21:33Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 25854,
-    "stateReason": null,
-    "title": "Vector pods restart continuously because of \"connection refuse\" from the target.",
-    "updatedAt": "2026-07-22T01:30:07Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25854"
+    "upvoteCount": 1
   },
   {
     "author": {
@@ -1564,49 +1564,279 @@
     "url": "https://github.com/vectordotdev/vector/discussions/25894"
   },
   {
+    "number": 25907,
+    "title": "Q&A Seeking clarification on confinement changes",
+    "bodyText": "Question\nThere doesn't seem to be any documentation of the rationale or implementation behind the rationale changes and they don't make sense to me so I'm seeking some clarification.\nThey seem to be targeted at preventing route traversal attacks, but they're applied to many fields which are not routes. It's also not clear that, in a general case, adding a string prefix actually prevents traversal attacks unless accompanied by other mitigations, which would be sink-specific.\nThe behavior is also not clear. Given the example of the file sink, how exactly does the base_dir prevent traversal? What's the behavior if a string like \"../../etc\" is passed to the event?\nI would have expected sink implementations to attempt to prevent naive injection attacks by using quoting. If that's not something we can rely on and we need to ensure our templates are secure against injection, we need tools beyond just adding a literal prefix, that will let us appropriately escape potentially dangerous characters.\nIn #25894, it was stated that the recommendation is to have literal prefixes on your loki metadata values. Why is that recommended? What kind of attack is that preventing?\nIn the cloudwatch sink, which is what I was using when I encountered this issue at upgrade, why isn't the log_group attribute a sufficient confinement base?\nConfinement feels like a very blunt instrument with a lot of splash radius, that was applied broadly in a lot of cases that that aren't really justified. I'd like to be wrong about this, and to be able to have some detailed explanations in the documentation.\nIf there are docs and I didn't find them, I apologize - I searched for \"confinement\" and the only results were the upgrade guides.\nVector Config\nNo response\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/25907",
+    "createdAt": "2026-07-20T19:38:22Z",
+    "updatedAt": "2026-07-30T15:40:37Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "cmellongoempyrean"
     },
-    "bodyText": "Question\nThere doesn't seem to be any documentation of the rationale or implementation behind the rationale changes and they don't make sense to me so I'm seeking some clarification.\nThey seem to be targeted at preventing route traversal attacks, but they're applied to many fields which are not routes. It's also not clear that, in a general case, adding a string prefix actually prevents traversal attacks unless accompanied by other mitigations, which would be sink-specific.\nThe behavior is also not clear. Given the example of the file sink, how exactly does the base_dir prevent traversal? What's the behavior if a string like \"../../etc\" is passed to the event?\nI would have expected sink implementations to attempt to prevent naive injection attacks by using quoting. If that's not something we can rely on and we need to ensure our templates are secure against injection, we need tools beyond just adding a literal prefix, that will let us appropriately escape potentially dangerous characters.\nIn #25894, it was stated that the recommendation is to have literal prefixes on your loki metadata values. Why is that recommended? What kind of attack is that preventing?\nIn the cloudwatch sink, which is what I was using when I encountered this issue at upgrade, why isn't the log_group attribute a sufficient confinement base?\nConfinement feels like a very blunt instrument with a lot of splash radius, that was applied broadly in a lot of cases that that aren't really justified. I'd like to be wrong about this, and to be able to have some detailed explanations in the documentation.\nIf there are docs and I didn't find them, I apologize - I searched for \"confinement\" and the only results were the upgrade guides.\nVector Config\nNo response\nVector Logs\nNo response",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2026-07-20T19:38:22Z",
-    "isAnswered": true,
-    "locked": false,
-    "number": 25907,
-    "stateReason": null,
-    "title": "Q&A Seeking clarification on confinement changes",
-    "updatedAt": "2026-07-22T16:10:38Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25907"
+    "upvoteCount": 1
   },
   {
+    "number": 25918,
+    "title": "Vector Fleet Management Proposal?",
+    "bodyText": "Hi All,\nWith Vector deployed across many VMs, fleet management would greatly simplify configuration handling.\nI see Grafana Alloy has a Fleet API—does anyone know if there’s a proposal or plan to add this to Vector?\nThanks!",
+    "url": "https://github.com/vectordotdev/vector/discussions/25918",
+    "createdAt": "2026-07-22T03:42:40Z",
+    "updatedAt": "2026-08-25T14:34:10Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
     "author": {
       "login": "shalk"
     },
-    "bodyText": "Hi All,\nWith Vector deployed across many VMs, fleet management would greatly simplify configuration handling.\nI see Grafana Alloy has a Fleet API—does anyone know if there’s a proposal or plan to add this to Vector?\nThanks!",
     "category": {
       "name": "General"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
       "totalCount": 1
     },
-    "createdAt": "2026-07-22T03:42:40Z",
+    "upvoteCount": 1
+  },
+  {
+    "number": 25966,
+    "title": "Updating vector ?",
+    "bodyText": "Question\nHey,\nStill exploring the solution of vector coupled with opensearch. I found a concern and asking how would you guys deal with it.\nProblem :\nLet's say I have 15 apps. I am required to have one agent per machine (hosting the apps) to send the logs to the agregator. Imagine tomorrow there is a vulnerability found in vector. Wouldn't it be a pain to update them all on each machine ?\nHow do you guys deal with this ? Also, how often would you say there are vulnerabilities ?\nThank you\nVector Config\nNo response\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/25966",
+    "createdAt": "2026-07-29T13:43:31Z",
+    "updatedAt": "2026-07-29T18:03:55Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "malhoudmouad"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 25982,
+    "title": "Best Practice for Vector Hot-Reload in Kubernetes with ConfigMap-mounted Config?",
+    "bodyText": "Question\nHello!\nI was wondering what the best practice is for Vector hot-reload in K8s with a ConfigMap-mounted config?\nWe are running Vector 0.53.0 in OpenShift/Kubernetes, with the config mounted from a ConfigMap. Trying to get hot-reload working without restarting the pod.\n\n--watch-config (default inotify method) doesn't work here - ConfigMap volume updates replace the mount via a symlink swap (kubelet writes a new timestamped directory and swaps the ..data symlink), and Vector's inotify watcher is bound to the old inode, so it never fires.\nWe then switched to --watch-config-method poll with a 5s interval, which seems to work since it reloads the file path instead of watching the inode. A few things we couldn't find documented and wanted to check with the community:\n\n\nIs hot-reload even the recommended approach in Kubernetes, or is a rolling pod restart on config change the intended pattern? Curious whether the Vector team actually recommends live-reloading config in K8s environments, or whether restart-on-change (with proper readiness probes protecting against a bad rollout) is considered the safer/preferred default, given restarts get you a clean process start and full config re-validation from scratch.\nIf hot-reload is recommended, is poll the right approach for K8s, or is there a better-supported pattern we are missing (/reload endpoint, or a sidecar)?\nIf a reload is triggered with an invalid config, does Vector guarantee the previous topology keeps running untouched, or are there edge cases where a partially-valid config could apply? Trying to understand the actual reload-safety contract.\nIs there a metric that reflects a successful reload (not just reload_errors_total) on failure? Want to monitor reload health via Prometheus without tailing logs\n\"vector validate\" catches syntax errors and unknown component types, but not things like empty inputs. Does reload have the same blind spot?\n\nThank you!!\nVector Config\nNo response\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/25982",
+    "createdAt": "2026-07-31T13:52:12Z",
+    "updatedAt": "2026-07-31T19:13:29Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "AdwaitKulkarni58"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 26029,
+    "title": "How to reduce file source ingestion latency for near real-time log collection?Q&A",
+    "bodyText": "Question\nI am using Vector 0.56.0 file source to collect application logs and I am trying to reduce the latency between a log line being appended to a file and the event being available downstream.\nCurrent environment:\n\nVector version: 0.56.0\nSource: file\nFilesystem: ext4\nLogs are appended to existing files\n\nThe observed end-to-end latency is around 0.5~2 seconds.\nI investigated the delay and found that the file source uses a polling model rather than filesystem notifications. In the source code, the FileServer applies an exponential backoff when no new bytes are read:\nbackoff_cap = if global_bytes_read == 0 {\n    cmp::min(2_048, backoff_cap.saturating_mul(2))\n} else {\n    1\n};\nMy understanding is that this can cause a newly appended log line to wait until the next polling cycle.\nI have tried tuning:\n\nglob_minimum_cooldown_ms\nmax_read_bytes\nsink batch timeout\n\nbut these do not appear to affect this specific delay.\nMy goal is to achieve lower latency for interactive log viewing use cases.\nAre there recommended configurations or deployment patterns for reducing file source ingestion latency?\nWould another Vector source type or architecture be more appropriate for this use case?\nVector Config\napiVersion: v1\nkind: ConfigMap\nmetadata:\nname: vector-config\nnamespace: monitoring\ndata:\nvector.yaml: |\ndata_dir: /var/lib/vector\napi:\n  enabled: true\n  address: 0.0.0.0:8687\n\nsources:\n\n  application_logs:\n    type: file\n\n    include:\n      - /var/log/app/*.log\n\n    read_from: beginning\n\n    fingerprint:\n      strategy: device_and_inode\n\n    # Tried lowering this value, but it does not affect\n    # latency for appending to existing files.\n    glob_minimum_cooldown_ms: 10\n\n    max_read_bytes: 1048576\n\n    multiline:\n      mode: halt_before\n      start_pattern: '^\\d{4}-\\d{2}-\\d{2}'\n      condition_pattern: '^\\d{4}-\\d{2}-\\d{2}'\n      timeout_ms: 1000\n\n\ntransforms:\n\n  parse_logs:\n    type: remap\n    inputs:\n      - application_logs\n\n    source: |\n      .message = to_string!(.message)\n\n\nsinks:\n\n  debug_output:\n    type: console\n\n    inputs:\n      - parse_logs\n\n    encoding:\n      codec: json\n\n\napiVersion: apps/v1\nkind: DaemonSet\nmetadata:\nname: vector-agent\nnamespace: monitoring\nspec:\nselector:\nmatchLabels:\napp: vector-agent\ntemplate:\nmetadata:\n  labels:\n    app: vector-agent\n\nspec:\n\n  containers:\n\n    - name: vector\n\n      image: timberio/vector:0.56.0-debian\n\n      args:\n        - --config\n        - /etc/vector/vector.yaml\n\n\n      resources:\n\n        requests:\n          cpu: 200m\n          memory: 256Mi\n\n        limits:\n          cpu: 1000m\n          memory: 1Gi\n\n\n      volumeMounts:\n\n        - name: config\n          mountPath: /etc/vector\n\n        - name: logs\n          mountPath: /var/log/app\n          readOnly: true\n\n        - name: vector-data\n          mountPath: /var/lib/vector\n\n\n  volumes:\n\n    - name: config\n\n      configMap:\n        name: vector-config\n\n\n    - name: logs\n\n      hostPath:\n        path: /var/log/app\n        type: Directory\n\n\n    - name: vector-data\n\n      emptyDir: {}\n\nThe above configuration is a simplified version of my production setup.\nThe actual deployment sends events to an HTTP sink, but the observed delay remains the same when using console sink, which indicates that the delay happens before the sink stage.\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/26029",
+    "createdAt": "2026-08-05T11:00:24Z",
+    "updatedAt": "2026-08-06T08:06:21Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "ArkIiii-9526"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 26049,
+    "title": "Community contributions - expectations on changes being integrated",
+    "bodyText": "Title: How do community contributions get triaged?\nHey folks,\nFirst off, respect for the pace here. It's impressive how much is moving to make Vector better, faster, stronger 💪\nSome context on where we're coming from: we're planning to build a key data exchange flow of our upcoming service platform on Vector, something we'd otherwise have written ourselves. We found a couple of pieces missing for our use case, and rather than maintaining our own thing on the side, we figured we'd contribute them upstream so everyone benefits. Felt like a win-win.\nConcretely it's two closely related features: #22316 and #19397. The second builds on the first, so they need to land in order. I opened the first PR on June 1 (#25545) hoping we'd see it reviewed reasonably soon and could then follow up with the second.\nTwo months on, it hasn't been picked up yet. Development elsewhere in the project is clearly very active, so I don't read this as the team being idle — I just can't tell where our PR sits, or what would help move it along. On our side, what started as an opportunity to build on Vector has slowly turned into something we have to plan risk around. We're getting close to deciding whether to (a) maintain our own build with the missing features, or (b) look at alternatives.\nI'm not trying to nag anyone. What I'm really after is enough insight to judge how contributions are handled here, so we can plan properly — both for this PR and for the ones we'd like to send in future. So:\n\nIs there a triage or prioritization process for community PRs, and what makes something get picked up?\nHow does the roadmap get balanced between what the team has planned and what comes in from users?\nNow that Vector is part of Datadog: is there a commercial route — enterprise support or similar — for companies that need a specific feature or fix prioritized?\nIs a richer plugin system on the table at all? Being able to add our own sinks, transforms and sources on top of the core would solve much of this for us. It comes at a cost, sure, but it would also let the ecosystem grow without every change having to live in core.\n\nThanks a lot,\nDaniel",
+    "url": "https://github.com/vectordotdev/vector/discussions/26049",
+    "createdAt": "2026-08-06T17:29:46Z",
+    "updatedAt": "2026-08-10T11:58:40Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "Danielku15"
+    },
+    "category": {
+      "name": "General"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 26172,
+    "title": "Mutation-tested vector's unit suite: zero survivors across 100 mutants",
+    "bodyText": "I ran a mutation-testing pass over vector's unit suite recently and wanted to share the result, since it is unusually good.\nSetup: upstream master in a Docker fixture, mutants generated across 15 source files under src/, coverage-guided selection, each mutant run against the tests that cover it and validated with the full suite where targeting could not narrow it. 100 mutants executed.\nEvery one of them was caught. For anyone who works on the suite: that does not happen often!\nOne footnote on the 100: 18 of the mutants never made it past the compiler, so the tests themselves get credit for 82 of the catches. Rust's type system does a lot of the work here, which is worth remembering whenever mutation scores get compared across languages.\nI discovered these results while mutation-testing this repo (I'm building a tool in this space). Happy to share the full run output or the fixture setup if anyone wants to reproduce it.",
+    "url": "https://github.com/vectordotdev/vector/discussions/26172",
+    "createdAt": "2026-08-20T21:51:45Z",
+    "updatedAt": "2026-09-02T14:54:43Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "fohara"
+    },
+    "category": {
+      "name": "General"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 26196,
+    "title": "Is filtering logs expected behavior of the delay transform?",
+    "bodyText": "Question\nHello, I am experimenting with the delay transform but am seeing different behavior than is outlined in the docs. As I understand the docs, events passing through this transform will be delayed some number of seconds until a condition is met, but ultimately, all logs will eventually pass through. The behavior I am seeing in testing is that events passing through this transform are dropped if they do not meet the condition. Maybe I am misunderstanding the delay function.\nBackground:\nI have a server and listener log that write independently to a central vector instance. I need to reduce the entire server and listener log items together based on message_id and I need to flush based on a known last server message. Due to various observed delays, I cannot rely on guaranteed in order delivery of log items. Thus, sometimes the last known server log beats the listener to the reduce and triggers premature flush. I am hoping that delaying this last known server log will solve my problem since a small delay should break the race condition. However, I am not able to get the delay transform to actually delay.\nBuild: vector 0.57.0 (aarch64-apple-darwin 8832452 2026-07-14 20:58:30.491174540)\nVector Config\ndata_dir: /tmp/vector-test-data\n\nsources:\n  log_file:\n    type: file\n    include:\n      - /Users/andrew/vector_test/sample.log\n    read_from: beginning\n    ignore_checkpoints: true\n    fingerprint:\n      strategy: device_and_inode\n\ntransforms:\n  parse:\n    type: remap\n    inputs:\n      - log_file\n    source: |\n      parsed, err = parse_regex(.message, r'^(?P<timestamp>\\S+) (?P<level>\\w+)\\s+process=(?P<process>\\S+)\\s+messageId=(?P<messageId>\\S+)\\s+(?P<message>.*)$')\n      if err != null {\n        log(\"unparseable line: \" + string!(.message), level: \"warn\")\n        abort\n      }\n      .timestamp = parse_timestamp!(parsed.timestamp, format: \"%+\")\n      .level = parsed.level\n      .process = parsed.process\n      .messageId = parsed.messageId\n      .message = parsed.message\n      .num = 1\n  \n  thread_route:\n    type: route\n    inputs:\n      - parse\n    route:\n      server: '.process == \"server\"'\n      listener: '.process == \"listener\"'\n  \n  server_delay:\n    type: delay\n    inputs:\n      - thread_route.server\n    condition:\n      type: \"vrl\"\n      source: '.process == \"server\" && contains(string!(.message), \"Server up\")'\n    delay_ms: 1000\n  \n  server_reduce:\n    type: reduce\n    inputs:\n      - server_delay\n    group_by:\n      - messageId\n    ends_when:\n      type: \"vrl\"\n      # Flush when the last server event arrives\n      source: '(.process == \"server\" && contains(string!(.message), \"Calling listener\")) || (.process == \"server\" && contains(string!(.message), \"Server up\"))'\n    expire_after_ms: 5000\n    merge_strategies:\n      message: array\n      timestamp: retain\n      num: sum\n  \n  listener_reduce:\n    type: reduce\n    inputs:\n      - thread_route.listener\n    group_by:\n      - messageId\n    ends_when:\n      type: \"vrl\"\n      # Flush when the last listener event arrives\n      # (\"Payment API recovered, resuming normal traffic\")\n      source: '.process == \"listener\" && contains(string!(.message), \"resuming normal traffic\")'\n    expire_after_ms: 5000\n    merge_strategies:\n      message: array\n      timestamp: retain\n      num: sum\n\n  final_reduce:\n    type: reduce\n    inputs:\n      - server_reduce\n      - listener_reduce\n    group_by:\n      - messageId\n    ends_when:\n      type: \"vrl\"\n      source: '(.process == \"server\" && contains(string!(.message[-1]), \"Server up\"))'\n    expire_after_ms: 7000\n    flush_period_ms: 5000\n    end_every_period_ms: 5000\n    merge_strategies:\n      message: array\n      timestamp: retain\n      num: sum\n\nsinks:\n  console:\n    type: console\n    inputs:\n      - final_reduce\n    encoding:\n      codec: json\nVector Logs\nWith the above vector config and the following sample log file:\n2026-08-21T10:00:28Z DEBUG process=server   messageId=abc-123 Persisting session state to Redis\n2026-08-21T10:00:30Z INFO  process=server   messageId=abc-123 Nightly backup job scheduled\n2026-08-21T10:00:33Z ERROR process=server   messageId=abc-123 Disk usage on /var exceeded 90%\n2026-08-21T10:00:36Z WARN  process=server   messageId=abc-123 Evicting oldest cache entries to free memory\n2026-08-21T10:00:40Z INFO  process=server   messageId=abc-123 Metrics flushed to monitoring endpoint\n2026-08-21T10:00:01Z INFO  process=server   messageId=abc-123 Service started on port 8080\n2026-08-21T10:00:02Z DEBUG process=server   messageId=abc-123 Loading configuration from /etc/app/config.yaml\n2026-08-21T10:00:05Z INFO  process=server   messageId=abc-123 Database connection pool established\n2026-08-21T10:00:07Z WARN  process=server   messageId=abc-123 Cache miss rate above 20% threshold\n2026-08-21T10:00:10Z INFO  process=server   messageId=abc-123 Health check endpoint registered\n2026-08-21T10:00:10Z INFO  process=server   messageId=abc-123 Calling listener\n2026-08-21T10:00:12Z DEBUG process=listener messageId=abc-123 Refreshing auth token cache\n2026-08-21T10:00:15Z ERROR process=listener messageId=abc-123 Failed to reach upstream payment API after 3 retries\n2026-08-21T10:00:18Z INFO  process=listener messageId=abc-123 Retrying payment API with backoff\n2026-08-21T10:00:22Z WARN  process=listener messageId=abc-123 Slow query detected: 1.8s on orders table\n2026-08-21T10:00:25Z INFO  process=listener messageId=abc-123 Payment API recovered, resuming normal traffic\n\nThen a few seconds after the program is up, the following log item is appended to the log file:\n2026-08-21T10:00:40Z INFO  process=server   messageId=abc-123 Server up\n\nObserved output:\n2026-08-25T01:42:40.185479Z  INFO vector::app: Log level is enabled. level=\"info\"\n2026-08-25T01:42:40.186056Z  INFO vector::app: Loading configs. paths=[\"delay_minimal.yaml\"]\n2026-08-25T01:42:40.188319Z  WARN vector::config::loading: Transform \"thread_route._unmatched\" has no consumers\n2026-08-25T01:42:40.390544Z  INFO vector::topology::running: Running healthchecks.\n2026-08-25T01:42:40.390613Z  INFO vector::topology::builder: Healthcheck passed.\n2026-08-25T01:42:40.390647Z  INFO vector: Vector has started. debug=\"false\" version=\"0.57.0\" arch=\"aarch64\" revision=\"8832452 2026-07-14 20:58:30.491174540\"\n2026-08-25T01:42:40.390653Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.\n2026-08-25T01:42:40.390673Z  INFO source{component_kind=\"source\" component_id=log_file component_type=file}: vector::sources::file: Starting file server. include=[\"/Users/andrew/vector_test/sample.log\"] exclude=[]\n2026-08-25T01:42:40.390953Z  INFO source{component_kind=\"source\" component_id=log_file component_type=file}:file_server: file_source_common::checkpointer: Loaded checkpoint data.\n2026-08-25T01:42:40.391180Z  INFO source{component_kind=\"source\" component_id=log_file component_type=file}:file_server: vector::internal_events::file::source: Found new file to watch. file=/Users/andrew/vector_test/sample.log\n{\n  \"file\": \"/Users/andrew/vector_test/sample.log\",\n  \"host\": \"Andrews-MacBook-Pro.local\",\n  \"level\": \"DEBUG\",\n  \"message\": [\n    [\n      \"Refreshing auth token cache\",\n      \"Failed to reach upstream payment API after 3 retries\",\n      \"Retrying payment API with backoff\",\n      \"Slow query detected: 1.8s on orders table\",\n      \"Payment API recovered, resuming normal traffic\"\n    ]\n  ],\n  \"messageId\": \"abc-123\",\n  \"num\": 5,\n  \"process\": \"listener\",\n  \"source_type\": \"file\",\n  \"timestamp\": \"2026-08-21T10:00:25Z\"\n}\n{\n  \"file\": \"/Users/andrew/vector_test/sample.log\",\n  \"host\": \"Andrews-MacBook-Pro.local\",\n  \"level\": \"INFO\",\n  \"message\": [\n    [\n      \"Server up\"\n    ]\n  ],\n  \"messageId\": \"abc-123\",\n  \"num\": 1,\n  \"process\": \"server\",\n  \"source_type\": \"file\",\n  \"timestamp\": \"2026-08-21T10:00:40Z\"\n}\n\nExpected output:\n2026-08-25T02:02:00.905234Z  INFO vector::app: Log level is enabled. level=\"info\"\n2026-08-25T02:02:00.905652Z  INFO vector::app: Loading configs. paths=[\"delay_minimal.yaml\"]\n2026-08-25T02:02:00.907400Z  WARN vector::config::loading: Transform \"server_delay\" has no consumers\n2026-08-25T02:02:00.907413Z  WARN vector::config::loading: Internal log [Transform \"server_delay\" has no consumers] is being suppressed to avoid flooding.\n2026-08-25T02:02:01.109092Z  INFO vector::topology::running: Running healthchecks.\n2026-08-25T02:02:01.109187Z  INFO vector::topology::builder: Healthcheck passed.\n2026-08-25T02:02:01.109247Z  INFO vector: Vector has started. debug=\"false\" version=\"0.57.0\" arch=\"aarch64\" revision=\"8832452 2026-07-14 20:58:30.491174540\"\n2026-08-25T02:02:01.109257Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.\n2026-08-25T02:02:01.109309Z  INFO source{component_kind=\"source\" component_id=log_file component_type=file}: vector::sources::file: Starting file server. include=[\"/Users/andrew/vector_test/sample.log\"] exclude=[]\n2026-08-25T02:02:01.109795Z  INFO source{component_kind=\"source\" component_id=log_file component_type=file}:file_server: file_source_common::checkpointer: Loaded checkpoint data.\n2026-08-25T02:02:01.110059Z  INFO source{component_kind=\"source\" component_id=log_file component_type=file}:file_server: vector::internal_events::file::source: Found new file to watch. file=/Users/andrew/vector_test/sample.log\n{\n  \"file\": \"/Users/andrew/vector_test/sample.log\",\n  \"host\": \"Andrews-MacBook-Pro.local\",\n  \"level\": \"DEBUG\",\n  \"message\": [\n    [\n      \"Refreshing auth token cache\",\n      \"Failed to reach upstream payment API after 3 retries\",\n      \"Retrying payment API with backoff\",\n      \"Slow query detected: 1.8s on orders table\",\n      \"Payment API recovered, resuming normal traffic\"\n    ],\n    [\n      \"Persisting session state to Redis\",\n      \"Nightly backup job scheduled\",\n      \"Disk usage on /var exceeded 90%\",\n      \"Evicting oldest cache entries to free memory\",\n      \"Metrics flushed to monitoring endpoint\",\n      \"Service started on port 8080\",\n      \"Loading configuration from /etc/app/config.yaml\",\n      \"Database connection pool established\",\n      \"Cache miss rate above 20% threshold\",\n      \"Health check endpoint registered\",\n      \"Calling listener\",\n      \"Server up\"\n    ]\n  ],\n  \"messageId\": \"abc-123\",\n  \"num\": 17,\n  \"process\": \"listener\",\n  \"source_type\": \"file\",\n  \"timestamp\": \"2026-08-21T10:00:40Z\"\n}",
+    "url": "https://github.com/vectordotdev/vector/discussions/26196",
+    "createdAt": "2026-08-25T02:19:40Z",
+    "updatedAt": "2026-08-25T13:02:56Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "wanaylor"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 1
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 26223,
+    "title": "How to use direct cross-compilation under Linux",
+    "bodyText": "I want to compile the executable file of aarch64-unknown-linux-gnu under x86_64 GNU/Linux. How to configure the project parameters is needed. I have installed gcc-aarch64-linux-gnu \\ g++-aarch64-linux-gnu \\binutils-aarch64-linux-gnu \\libc6-dev-arm64-cross.\nUsing cross-compilation ultimately depends on the glibc version of the compilation environment, which may be higher than my running environment.\nerror: linking with `aarch64-linux-gnu-gcc` failed: exit status: 1\n  |\n  = note:  \"aarch64-linux-gnu-gcc\" \"<1 object files omitted>\" \"-Wl,--as-needed\" \"-Wl,-Bstatic\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/{libtikv_jemalloc_sys-466b46d7cba71470,liblz4_sys-b9c951accf8f125a,librdkafka_sys-80e4439d10555fb9,libcurl_sys-c0f5e59d0e4b0b35,liblibz_sys-4180caf8dc02cad4,libzstd_sys-fa40d6e9b3bad4e2,libring-4396bea31710f768,libopenssl_sys-60ca4bfdfd489a5c,libonig_sys-b3298023a2580ec9}.rlib\" \"-llua5.4\" \"<sysroot>/lib/rustlib/aarch64-unknown-linux-gnu/lib/libcompiler_builtins-*.rlib\" \"-Wl,-Bdynamic\" \"-lgcc_s\" \"-lutil\" \"-lrt\" \"-lpthread\" \"-lm\" \"-ldl\" \"-lc\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/raw-dylibs\" \"-Wl,--eh-frame-hdr\" \"-Wl,-z,noexecstack\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/build/zstd-sys-291de93a985572e6/out\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/build/ring-2185f64283abbabf/out\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/build/openssl-sys-57e386abf17434f7/out/openssl-build/install/lib\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/build/onig_sys-b25a1dfdf50cd694/out\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/build/mlua-sys-7233e320124d7208/out/lib\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/build/lz4-sys-dfaf06ae2df5afe1/out\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/build/rdkafka-sys-0da974230f159343/out/src\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/build/curl-sys-694423d109060bec/out/build\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/build/libz-sys-95c9254046279325/out/lib\" \"-L\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/build/tikv-jemalloc-sys-25bd0b78d0e824b5/out/lib\" \"-L\" \"<sysroot>/lib/rustlib/aarch64-unknown-linux-gnu/lib\" \"-o\" \"/opt/vector/target/aarch64-unknown-linux-gnu/release/deps/vector-6e5e892360590c87\" \"-Wl,--gc-sections\" \"-pie\" \"-Wl,-z,relro,-z,now\" \"-Wl,-O1\" \"-Wl,--strip-debug\" \"-nodefaultlibs\" \"-rdynamic\"\n  = note: some arguments are omitted. use `--verbose` to show all linker arguments\n  = note: /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib(rdkafka.o): Relocations in generic ELF (EM: 62)\n          /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib(rdkafka.o): Relocations in generic ELF (EM: 62)\n          /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib(rdkafka.o): Relocations in generic ELF (EM: 62)\n          /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib(rdkafka.o): Relocations in generic ELF (EM: 62)\n          /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib(rdkafka.o): Relocations in generic ELF (EM: 62)\n          /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib(rdkafka.o): Relocations in generic ELF (EM: 62)\n          /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib(rdkafka.o): Relocations in generic ELF (EM: 62)\n          /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib(rdkafka.o): Relocations in generic ELF (EM: 62)\n          /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib(rdkafka.o): Relocations in generic ELF (EM: 62)\n          /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib(rdkafka.o): Relocations in generic ELF (EM: 62)\n          /usr/lib/gcc-cross/aarch64-linux-gnu/8/../../../../aarch64-linux-gnu/bin/ld: /opt/vector/target/aarch64-unknown-linux-gnu/release/deps/rustcBi5hre/librdkafka_sys-80e4439d10555fb9.rlib: error adding symbols: file in wrong format\n          collect2: error: ld returned 1 exit status\n          \n\nerror: could not compile `vector` (bin \"vector\") due to 1 previous error\n\n.cargo/config.toml\n[env]\n# Build jemalloc assuming 64K pages so binaries also run on aarch64 hosts whose\n# kernels ship with a 64K page size (notably EL8 aarch64). On 4K-page hosts this\n# coarsens jemalloc's allocation granularity; no regression was measured in\n# https://github.com/vectordotdev/vector/pull/18481.\nJEMALLOC_SYS_WITH_LG_PAGE = \"16\"\nCC_aarch64_unknown_linux_gnu = \"aarch64-linux-gnu-gcc\"\nCXX_aarch64_unknown_linux_gnu = \"aarch64-linux-gnu-g++\"\nRDKAFKA_CONFIGURE_FLAGS = \"--host=aarch64-linux-gnu CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++\"\n[target.aarch64-unknown-linux-gnu]\nlinker = \"aarch64-linux-gnu-gcc\"\nrustflags = [\"-C\", \"link-args=-rdynamic\"]",
+    "url": "https://github.com/vectordotdev/vector/discussions/26223",
+    "createdAt": "2026-08-26T04:05:38Z",
+    "updatedAt": "2026-08-28T01:46:05Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "FengZh61"
+    },
+    "category": {
+      "name": "General"
+    },
+    "comments": {
+      "totalCount": 2
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 26235,
+    "title": "Is anyone using Vector’s published Rust API documentation?",
+    "bodyText": "Question\nWe’re considering sunsetting the hosted Vector Rust API documentation, and we’d like to understand whether the community currently relies on it before making a decision.\nIf you use these docs, please let us know:\n\nWhat do you use them for?\nHow frequently do you use them?\nWould removing them disrupt your workflow?\nIs there an alternative that would meet your needs?\n\nYour feedback will help us understand the impact and determine the best path forward 🙏\nEdit: We will leave this open for comments for a few weeks. If there's no response we will sunset the site.",
+    "url": "https://github.com/vectordotdev/vector/discussions/26235",
+    "createdAt": "2026-08-26T17:40:02Z",
+    "updatedAt": "2026-09-02T15:07:45Z",
+    "closedAt": null,
+    "closed": false,
+    "stateReason": null,
     "isAnswered": false,
     "locked": false,
-    "number": 25918,
+    "author": {
+      "login": "pront"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 0
+    },
+    "upvoteCount": 1
+  },
+  {
+    "number": 26245,
+    "title": "New deprecations page",
+    "bodyText": "A small but useful update: Vector now has a dedicated deprecations page! It’s the go-to place for active and past deprecations, including migration guidance and relevant release timelines.",
+    "url": "https://github.com/vectordotdev/vector/discussions/26245",
+    "createdAt": "2026-08-27T13:43:13Z",
+    "updatedAt": "2026-08-27T13:43:13Z",
+    "closedAt": null,
+    "closed": false,
     "stateReason": null,
-    "title": "Vector Fleet Management Proposal?",
-    "updatedAt": "2026-07-22T19:32:03Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/25918"
+    "isAnswered": null,
+    "locked": false,
+    "author": {
+      "login": "pront"
+    },
+    "category": {
+      "name": "Announcements"
+    },
+    "comments": {
+      "totalCount": 0
+    },
+    "upvoteCount": 2
+  },
+  {
+    "number": 26251,
+    "title": "Q&A Dynamic uri in http sink",
+    "bodyText": "Question\nHey\nPrior to 0.57, I dynamically constructed the uri using env vars. This was handy for managing a lot of separate streams:\nsinks:\n  rsyslog:\n    type: http\n    ...\n    uri: \"${OPENOBSERVE_HOST}/api/default/rsyslog/_json\"\n  journalctl:\n    type: http\n    ...\n    uri: \"${OPENOBSERVE_HOST}/api/default/journalctl/_json\"\n\nThe variables were stored in a .env file (added to .gitignore), load with EnvironmentFile by systemd\nIs there any way to dynamically generate the uri in 0.57+?\nThe secrets backend doesn't seem to support string concatenation\n(e.g., \"SECRET[env_file.OPENOBSERVE_HOST]/api/...\" and other tries fails to parse).\nTemplating seems not working for this case also.\nCreating a multiple separate full URLs in .env for every single stream or push URI to git is not an option for me:(\nThanks!\nVector Config\nNo response\nVector Logs\nNo response",
+    "url": "https://github.com/vectordotdev/vector/discussions/26251",
+    "createdAt": "2026-08-27T17:10:57Z",
+    "updatedAt": "2026-08-28T17:55:24Z",
+    "closedAt": "2026-08-28T17:55:24Z",
+    "closed": true,
+    "stateReason": "RESOLVED",
+    "isAnswered": true,
+    "locked": false,
+    "author": {
+      "login": "SadDrummer"
+    },
+    "category": {
+      "name": "Q&A"
+    },
+    "comments": {
+      "totalCount": 3
+    },
+    "upvoteCount": 1
   }
 ]

@@ -1,9 +1,10 @@
+use super::upsert_json_record;
 use crate::config::Config;
 use anyhow::{Context, Result};
-use chrono::Utc;
+use chrono::{DateTime, Months, Utc};
 use reqwest::blocking::Client;
 use serde_json::{json, Value};
-use std::collections::{BTreeMap, hash_map::DefaultHasher};
+use std::collections::{hash_map::DefaultHasher, BTreeMap};
 use std::fs;
 use std::hash::{Hash, Hasher};
 use std::path::Path;
@@ -164,22 +165,22 @@ pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) ->
 
 /// Parse a --since value: ISO date (2026-01-01), YYYY-MM (2026-01), or relative (3m, 1y, 30d).
 pub fn parse_since(input: &str) -> Result<String> {
+    parse_since_at(input, Utc::now())
+}
+
+fn parse_since_at(input: &str, now: DateTime<Utc>) -> Result<String> {
     // Relative: e.g. "3m", "1y", "30d"
     if let Some(num_str) = input.strip_suffix('d') {
         let days: i64 = num_str.parse().context("Invalid number in relative date")?;
-        let dt = Utc::now() - chrono::Duration::days(days);
+        let dt = now - chrono::Duration::days(days);
         return Ok(dt.format("%Y-%m-%dT%H:%M:%SZ").to_string());
     }
     if let Some(num_str) = input.strip_suffix('m') {
-        let months: i32 = num_str.parse().context("Invalid number in relative date")?;
-        let now = Utc::now();
-        let total = now.format("%Y").to_string().parse::<i32>().unwrap() * 12
-            + now.format("%m").to_string().parse::<i32>().unwrap()
-            - 1
-            - months;
-        let y = total / 12;
-        let m = total % 12 + 1;
-        return Ok(format!("{y}-{m:02}-01T00:00:00Z"));
+        let months: u32 = num_str.parse().context("Invalid number in relative date")?;
+        let dt = now
+            .checked_sub_months(Months::new(months))
+            .context("Relative month value is out of range")?;
+        return Ok(dt.format("%Y-%m-%dT%H:%M:%SZ").to_string());
     }
     if let Some(num_str) = input.strip_suffix('y') {
         let years: i32 = num_str.parse().context("Invalid number in relative date")?;
@@ -230,7 +231,7 @@ fn write_year_bucketed(items: &[Value], out_dir: &Path, date_field: &str) -> Res
 
         for item in new_items {
             if let Some(n) = item["number"].as_u64() {
-                by_number.insert(n, item.clone());
+                upsert_json_record(&mut by_number, n, item.clone());
             }
         }
 
@@ -546,4 +547,17 @@ fn stable_id(node_id: &str) -> i64 {
     node_id.hash(&mut hasher);
     // Mask to positive i64
     (hasher.finish() & 0x7FFF_FFFF_FFFF_FFFF) as i64
+}
+
+#[cfg(test)]
+mod tests {
+    use super::parse_since_at;
+    use chrono::{TimeZone, Utc};
+
+    #[test]
+    fn relative_months_preserve_day_and_time() {
+        let now = Utc.with_ymd_and_hms(2026, 9, 3, 14, 25, 30).unwrap();
+
+        assert_eq!(parse_since_at("3m", now).unwrap(), "2026-06-03T14:25:30Z");
+    }
 }

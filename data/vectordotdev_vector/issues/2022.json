@@ -4184,31 +4184,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-01-14T20:57:21Z",
     "id": 1104117478,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "DBE0E9",
-        "description": "Anything in the idea phase. Needs further discussion and consensus before work can begin.",
-        "id": 2532840815751579171,
-        "name": "meta: idea"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      }
-    ],
     "number": 10870,
-    "state": "open",
     "title": "Consider expanding the cases where Vector retries requests",
-    "updated_at": "2026-04-02T20:36:57Z",
+    "state": "open",
+    "created_at": "2022-01-14T20:57:21Z",
+    "updated_at": "2026-09-02T04:58:49Z",
+    "closed_at": null,
     "user": {
       "login": "jszwedko"
-    }
+    },
+    "labels": [
+      {
+        "id": 2532840815751579171,
+        "name": "meta: idea",
+        "color": "DBE0E9",
+        "description": "Anything in the idea phase. Needs further discussion and consensus before work can begin."
+      },
+      {
+        "id": 6524463192304363030,
+        "name": "domain: sinks",
+        "color": "343639",
+        "description": "Anything related to the Vector's sinks"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2022-02-01T19:46:12Z",
@@ -17289,25 +17289,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-02-17T13:54:18Z",
     "id": 1141368841,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `influxdb_logs` sink related",
-        "id": 3608624490535451758,
-        "name": "sink: influxdb_logs"
-      }
-    ],
     "number": 11441,
-    "state": "open",
     "title": "Influxdb logs configuration doesn't work out of the box",
-    "updated_at": "2026-02-21T20:36:39Z",
+    "state": "closed",
+    "created_at": "2022-02-17T13:54:18Z",
+    "updated_at": "2026-08-13T19:52:30Z",
+    "closed_at": "2026-08-13T19:52:30Z",
     "user": {
       "login": "jdrouet"
-    }
+    },
+    "labels": [
+      {
+        "id": 3608624490535451758,
+        "name": "sink: influxdb_logs",
+        "color": "5ED9F6",
+        "description": "Anything `influxdb_logs` sink related"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2022-03-04T14:13:06Z",
@@ -41970,25 +41970,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-05-02T20:01:53Z",
     "id": 1223297139,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's CLI",
-        "id": 1567260423419290724,
-        "name": "domain: cli"
-      }
-    ],
     "number": 12527,
-    "state": "open",
     "title": "Introduce a `vector fmt` subcommand",
-    "updated_at": "2022-05-12T20:23:07Z",
+    "state": "closed",
+    "created_at": "2022-05-02T20:01:53Z",
+    "updated_at": "2026-07-31T14:52:08Z",
+    "closed_at": "2026-07-31T14:52:08Z",
     "user": {
       "login": "wbew"
-    }
+    },
+    "labels": [
+      {
+        "id": 1567260423419290724,
+        "name": "domain: cli",
+        "color": "343639",
+        "description": "Anything related to Vector's CLI"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2022-05-03T20:19:34Z",
@@ -47741,25 +47741,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-05-18T21:28:27Z",
     "id": 1240549690,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "5EAAF6",
-        "description": "Anything `aws` service provider related",
-        "id": 7964646415162525070,
-        "name": "provider: aws"
-      }
-    ],
     "number": 12779,
-    "state": "open",
     "title": "AWS components lack custom HTTP metrics as of 0.21.0",
-    "updated_at": "2026-02-21T20:37:03Z",
+    "state": "closed",
+    "created_at": "2022-05-18T21:28:27Z",
+    "updated_at": "2026-07-27T15:03:40Z",
+    "closed_at": "2026-07-27T15:03:40Z",
     "user": {
       "login": "jszwedko"
-    }
+    },
+    "labels": [
+      {
+        "id": 7964646415162525070,
+        "name": "provider: aws",
+        "color": "5EAAF6",
+        "description": "Anything `aws` service provider related"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2022-06-16T13:52:45Z",
@@ -49073,25 +49073,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-05-24T09:19:44Z",
     "id": 1246252221,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to configuring Vector",
-        "id": 4606596601252306592,
-        "name": "domain: config"
-      }
-    ],
     "number": 12832,
-    "state": "open",
     "title": "configuration: formally consider `null` values as \"option not provided\"",
-    "updated_at": "2026-02-23T14:34:20Z",
+    "state": "open",
+    "created_at": "2022-05-24T09:19:44Z",
+    "updated_at": "2026-07-31T20:30:54Z",
+    "closed_at": null,
     "user": {
       "login": "hhromic"
-    }
+    },
+    "labels": [
+      {
+        "id": 4606596601252306592,
+        "name": "domain: config",
+        "color": "343639",
+        "description": "Anything related to configuring Vector"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2022-05-24T14:23:47Z",
@@ -73359,25 +73359,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-08-08T14:28:18Z",
     "id": 1331958890,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Request or implementation of a new source",
-        "id": 2516345231450418203,
-        "name": "source: new"
-      }
-    ],
     "number": 13882,
-    "state": "open",
     "title": "Add Azure Blob Storage source",
-    "updated_at": "2026-03-14T06:08:40Z",
+    "state": "open",
+    "created_at": "2022-08-08T14:28:18Z",
+    "updated_at": "2026-08-13T08:34:40Z",
+    "closed_at": null,
     "user": {
       "login": "spencergilbert"
-    }
+    },
+    "labels": [
+      {
+        "id": 2516345231450418203,
+        "name": "source: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new source"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2022-08-10T14:06:25Z",
@@ -94076,18 +94076,18 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-10-12T17:35:41Z",
     "id": 1406572716,
-    "issue_type": null,
-    "labels": [],
     "number": 14812,
-    "state": "open",
     "title": "Generating Vector's user-facing documentation from the configuration schema.",
-    "updated_at": "2023-03-17T21:27:36Z",
+    "state": "open",
+    "created_at": "2022-10-12T17:35:41Z",
+    "updated_at": "2026-09-03T19:20:25Z",
+    "closed_at": null,
     "user": {
       "login": "tobz"
-    }
+    },
+    "labels": [],
+    "issue_type": null
   },
   {
     "closed_at": "2022-10-30T14:19:04Z",
@@ -98430,18 +98430,18 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-10-28T17:25:36Z",
     "id": 1427556075,
-    "issue_type": null,
-    "labels": [],
     "number": 14999,
-    "state": "open",
     "title": "chore(config, docs): handle initial integration of newly auto-generated sink documentation into existing Cue",
-    "updated_at": "2023-02-21T21:42:39Z",
+    "state": "closed",
+    "created_at": "2022-10-28T17:25:36Z",
+    "updated_at": "2026-09-03T19:20:23Z",
+    "closed_at": "2026-09-03T19:20:23Z",
     "user": {
       "login": "tobz"
-    }
+    },
+    "labels": [],
+    "issue_type": null
   },
   {
     "closed_at": "2022-10-31T17:00:00Z",
@@ -98473,18 +98473,18 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-10-28T17:48:51Z",
     "id": 1427582418,
-    "issue_type": null,
-    "labels": [],
     "number": 15001,
-    "state": "open",
     "title": "chore(config, docs): adjust website build process to handle changes to Cue documentation",
-    "updated_at": "2022-10-28T17:51:40Z",
+    "state": "closed",
+    "created_at": "2022-10-28T17:48:51Z",
+    "updated_at": "2026-09-03T19:20:11Z",
+    "closed_at": "2026-09-03T19:20:10Z",
     "user": {
       "login": "tobz"
-    }
+    },
+    "labels": [],
+    "issue_type": null
   },
   {
     "closed_at": "2022-10-28T20:48:46Z",
@@ -112274,25 +112274,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2022-12-14T16:00:09Z",
     "id": 1496936730,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `statsd` source related",
-        "id": 6326138185091387078,
-        "name": "source: statsd"
-      }
-    ],
     "number": 15583,
-    "state": "open",
     "title": "Vector drops large # of UDP packets in statsd source without warning",
-    "updated_at": "2026-02-21T20:39:11Z",
+    "state": "open",
+    "created_at": "2022-12-14T16:00:09Z",
+    "updated_at": "2026-09-03T15:37:16Z",
+    "closed_at": null,
     "user": {
       "login": "derekhuizhang"
-    }
+    },
+    "labels": [
+      {
+        "id": 6326138185091387078,
+        "name": "source: statsd",
+        "color": "5ED9F6",
+        "description": "Anything `statsd` source related"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2022-12-14T17:14:40Z",

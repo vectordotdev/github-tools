@@ -1732,49 +1732,49 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-01-19T22:22:22Z",
     "id": 551995313,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "FFF068",
-        "description": "Needs review & approval before work can begin.",
-        "id": 389285363867189610,
-        "name": "needs: approval"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs a a list of requirements before work can be begin",
-        "id": 1231413994313482691,
-        "name": "needs: requirements"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `docker` platform related",
-        "id": 7462033205188313656,
-        "name": "platform: docker"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's metrics events",
-        "id": 3968334348399022300,
-        "name": "domain: metrics"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Request or implementation of a new source",
-        "id": 2516345231450418203,
-        "name": "source: new"
-      }
-    ],
     "number": 1545,
-    "state": "open",
     "title": "Add runtime metrics collection to the docker source",
-    "updated_at": "2026-02-23T14:32:17Z",
+    "state": "open",
+    "created_at": "2020-01-19T22:22:22Z",
+    "updated_at": "2026-08-18T02:16:40Z",
+    "closed_at": null,
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 389285363867189610,
+        "name": "needs: approval",
+        "color": "FFF068",
+        "description": "Needs review & approval before work can begin."
+      },
+      {
+        "id": 1231413994313482691,
+        "name": "needs: requirements",
+        "color": "FFF068",
+        "description": "Needs a a list of requirements before work can be begin"
+      },
+      {
+        "id": 7462033205188313656,
+        "name": "platform: docker",
+        "color": "F687F6",
+        "description": "Anything `docker` platform related"
+      },
+      {
+        "id": 3968334348399022300,
+        "name": "domain: metrics",
+        "color": "343639",
+        "description": "Anything related to Vector's metrics events"
+      },
+      {
+        "id": 2516345231450418203,
+        "name": "source: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new source"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": null,
@@ -37425,49 +37425,49 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-07-10T23:31:28Z",
     "id": 655085342,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "DBE0E9",
-        "description": "Anything that is good for new contributors.",
-        "id": 942722858524630774,
-        "name": "good first issue"
-      },
-      {
-        "color": "F69049",
-        "description": "We should have this feature, but is not required. It is medium priority.",
-        "id": 6848739542623159481,
-        "name": "have: should"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `reduce` transform related",
-        "id": 308046406784353022,
-        "name": "transform: reduce"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's reliability",
-        "id": 5669051342270066101,
-        "name": "domain: reliability"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's performance",
-        "id": 7501419672228520413,
-        "name": "domain: performance"
-      }
-    ],
     "number": 3027,
-    "state": "open",
     "title": "Safeguard `reduce` transform memory use",
-    "updated_at": "2026-06-01T20:57:36Z",
+    "state": "open",
+    "created_at": "2020-07-10T23:31:28Z",
+    "updated_at": "2026-07-30T03:20:43Z",
+    "closed_at": null,
     "user": {
       "login": "lukesteensen"
-    }
+    },
+    "labels": [
+      {
+        "id": 942722858524630774,
+        "name": "good first issue",
+        "color": "DBE0E9",
+        "description": "Anything that is good for new contributors."
+      },
+      {
+        "id": 6848739542623159481,
+        "name": "have: should",
+        "color": "F69049",
+        "description": "We should have this feature, but is not required. It is medium priority."
+      },
+      {
+        "id": 308046406784353022,
+        "name": "transform: reduce",
+        "color": "5ED9F6",
+        "description": "Anything `reduce` transform related"
+      },
+      {
+        "id": 5669051342270066101,
+        "name": "domain: reliability",
+        "color": "343639",
+        "description": "Anything related to Vector's reliability"
+      },
+      {
+        "id": 7501419672228520413,
+        "name": "domain: performance",
+        "color": "343639",
+        "description": "Anything related to Vector's performance"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2022-12-30T00:25:31Z",
@@ -73350,31 +73350,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-10-14T18:52:12Z",
     "id": 721699414,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sources",
-        "id": 2021938762883471635,
-        "name": "domain: sources"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Request or implementation of a new source",
-        "id": 2516345231450418203,
-        "name": "source: new"
-      }
-    ],
     "number": 4567,
-    "state": "open",
     "title": "SNMP source",
-    "updated_at": "2026-06-22T18:26:22Z",
+    "state": "open",
+    "created_at": "2020-10-14T18:52:12Z",
+    "updated_at": "2026-07-31T18:45:00Z",
+    "closed_at": null,
     "user": {
       "login": "jszwedko"
-    }
+    },
+    "labels": [
+      {
+        "id": 2021938762883471635,
+        "name": "domain: sources",
+        "color": "343639",
+        "description": "Anything related to the Vector's sources"
+      },
+      {
+        "id": 2516345231450418203,
+        "name": "source: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new source"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2022-08-04T21:18:49Z",

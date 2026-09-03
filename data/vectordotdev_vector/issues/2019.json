@@ -14610,25 +14610,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2019-08-23T16:22:25Z",
     "id": 484611343,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "BF72F6",
-        "description": "A general announcement (pinned issues).",
-        "id": 5670576833338800074,
-        "name": "type: announcement"
-      }
-    ],
     "number": 790,
-    "state": "open",
     "title": "Who's using Vector in production?",
-    "updated_at": "2026-03-06T19:56:53Z",
+    "state": "open",
+    "created_at": "2019-08-23T16:22:25Z",
+    "updated_at": "2026-08-13T15:18:06Z",
+    "closed_at": null,
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 3034880794230890330,
+        "name": "meta: feedback",
+        "color": "DBE0E9",
+        "description": "Anything related to customer/user feedback."
+      },
+      {
+        "id": 5670576833338800074,
+        "name": "type: announcement",
+        "color": "BF72F6",
+        "description": "A general announcement (pinned issues)."
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2019-08-25T16:50:56Z",

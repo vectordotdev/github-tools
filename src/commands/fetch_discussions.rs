@@ -1,3 +1,4 @@
+use super::upsert_json_record;
 use crate::commands::fetch_issues::parse_since;
 use crate::config::Config;
 use anyhow::{Context, Result};
@@ -191,7 +192,7 @@ pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) ->
         };
 
         for d in items {
-            by_number.insert(d.number, serde_json::to_value(d).unwrap());
+            upsert_json_record(&mut by_number, d.number, serde_json::to_value(d).unwrap());
         }
 
         let mut merged: Vec<Value> = by_number.into_values().collect();

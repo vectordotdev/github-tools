@@ -1711,25 +1711,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2019-06-02T17:47:02Z",
     "id": 451216405,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "84b6eb",
-        "description": null,
-        "id": 7641015712852752914,
-        "name": "enhancement"
-      }
-    ],
     "number": 557,
-    "state": "open",
     "title": "Read only mode",
-    "updated_at": "2026-04-29T19:27:58Z",
+    "state": "open",
+    "created_at": "2019-06-02T17:47:02Z",
+    "updated_at": "2026-08-26T19:51:46Z",
+    "closed_at": null,
     "user": {
       "login": "Rigellute"
-    }
+    },
+    "labels": [
+      {
+        "id": 7641015712852752914,
+        "name": "enhancement",
+        "color": "84b6eb",
+        "description": null
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2019-09-06T08:59:51Z",

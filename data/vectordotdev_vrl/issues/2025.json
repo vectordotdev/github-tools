@@ -3356,27 +3356,27 @@
     }
   },
   {
-    "closed_at": "2025-03-19T15:39:13Z",
-    "created_at": "2025-03-19T14:53:59Z",
-    "draft": false,
     "id": 2404070080,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
-        "id": 405647549714097197,
-        "name": "no-changelog"
-      }
-    ],
     "number": 1350,
-    "pull_request": {},
-    "state": "closed",
     "title": "chore(deps): move some cryptography deps under a new (default) feature",
-    "updated_at": "2025-03-19T15:39:13Z",
+    "state": "closed",
+    "created_at": "2025-03-19T14:53:59Z",
+    "updated_at": "2026-09-03T14:36:52Z",
+    "closed_at": "2025-03-19T15:39:13Z",
     "user": {
       "login": "pront"
-    }
+    },
+    "labels": [
+      {
+        "id": 405647549714097197,
+        "name": "no-changelog",
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2025-03-19T19:07:35Z",
@@ -8492,33 +8492,33 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-12-01T04:44:29Z",
-    "draft": false,
     "id": 3057665601,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to dependencies",
-        "id": 2612821526597292841,
-        "name": "domain: deps"
-      },
-      {
-        "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
-        "id": 405647549714097197,
-        "name": "no-changelog"
-      }
-    ],
     "number": 1566,
-    "pull_request": {},
-    "state": "open",
     "title": "chore(deps): bump the prost group with 4 updates",
-    "updated_at": "2026-07-01T14:07:21Z",
+    "state": "open",
+    "created_at": "2025-12-01T04:44:29Z",
+    "updated_at": "2026-09-03T14:31:35Z",
+    "closed_at": null,
     "user": {
       "login": "dependabot"
-    }
+    },
+    "labels": [
+      {
+        "id": 2612821526597292841,
+        "name": "domain: deps",
+        "color": "343639",
+        "description": "Anything related to dependencies"
+      },
+      {
+        "id": 405647549714097197,
+        "name": "no-changelog",
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2025-12-23T17:35:20Z",

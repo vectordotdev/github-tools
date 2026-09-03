@@ -140,20 +140,20 @@
     }
   },
   {
-    "closed_at": "2023-01-10T04:38:37Z",
-    "created_at": "2023-01-04T11:40:29Z",
-    "draft": false,
     "id": 1184769243,
-    "issue_type": null,
-    "labels": [],
     "number": 1759,
-    "pull_request": {},
-    "state": "closed",
     "title": "Add regex tokenizer",
-    "updated_at": "2023-01-10T04:38:37Z",
+    "state": "closed",
+    "created_at": "2023-01-04T11:40:29Z",
+    "updated_at": "2026-07-28T08:12:29Z",
+    "closed_at": "2023-01-10T04:38:37Z",
     "user": {
       "login": "mkleen"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2023-01-12T13:20:16Z",
@@ -1201,31 +1201,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-01-23T23:55:46Z",
     "id": 1554015737,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "159818",
-        "description": null,
-        "id": 6009342136867471565,
-        "name": "help wanted"
-      },
-      {
-        "color": "fbca04",
-        "description": null,
-        "id": 169050159450115259,
-        "name": "good first issue"
-      }
-    ],
     "number": 1824,
-    "state": "open",
     "title": "Missing search results with in memory index",
-    "updated_at": "2023-10-08T06:44:41Z",
+    "state": "open",
+    "created_at": "2023-01-23T23:55:46Z",
+    "updated_at": "2026-08-26T12:55:22Z",
+    "closed_at": null,
     "user": {
       "login": "EntilZha"
-    }
+    },
+    "labels": [
+      {
+        "id": 6009342136867471565,
+        "name": "help wanted",
+        "color": "159818",
+        "description": null
+      },
+      {
+        "id": 169050159450115259,
+        "name": "good first issue",
+        "color": "fbca04",
+        "description": null
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2023-02-09T16:43:01Z",
@@ -5967,18 +5967,18 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-07-11T03:19:46Z",
     "id": 1797999812,
-    "issue_type": null,
-    "labels": [],
     "number": 2114,
-    "state": "open",
     "title": "Support f64 Compression",
-    "updated_at": "2023-08-29T09:06:37Z",
+    "state": "open",
+    "created_at": "2023-07-11T03:19:46Z",
+    "updated_at": "2026-09-03T08:09:37Z",
+    "closed_at": null,
     "user": {
       "login": "PSeitz"
-    }
+    },
+    "labels": [],
+    "issue_type": null
   },
   {
     "closed_at": "2023-07-11T19:35:31Z",
