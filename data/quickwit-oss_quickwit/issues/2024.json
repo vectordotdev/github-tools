@@ -21,41 +21,25 @@
     "type": "pull_request"
   },
   {
-    "closed_at": "2026-08-19T22:10:50Z",
-    "created_at": "2024-01-02T12:07:00Z",
     "id": 2062329323,
-    "issue_type": null,
-    "labels": [
-      {
-        "name": "enhancement",
-        "color": "a2eeef",
-        "description": "New feature or request",
-        "id": 2912049044
-      }
-    ],
     "number": 4338,
-    "state": "closed",
     "title": "Pin hash function used to compute rendez-vous hash",
+    "state": "closed",
+    "created_at": "2024-01-02T12:07:00Z",
     "updated_at": "2026-08-19T22:10:50Z",
+    "closed_at": "2026-08-19T22:10:50Z",
     "user": {
       "login": "guilload"
     },
-    "state_reason": "completed",
-    "unique_external_participants": 1,
-    "comments_count": 2,
-    "draft": false,
-    "reviews_count": 0,
-    "unique_participants": 2,
-    "assignees": [],
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/4338",
-    "last_engagement_at": "2026-08-19T22:10:50Z",
-    "review_comments_count": 0,
-    "first_response_at": "2025-06-26T08:31:11Z",
-    "engagement_count": 2,
-    "type": "issue",
-    "first_response_hours": 12980.4,
-    "human_comments_7d": 0,
-    "unique_human_participants_7d": 0
+    "labels": [
+      {
+        "id": 1470408430858150435,
+        "name": "enhancement",
+        "color": "a2eeef",
+        "description": "New feature or request"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2024-01-12T03:14:05Z",
@@ -2382,44 +2366,25 @@
     "type": "pull_request"
   },
   {
-    "closed_at": "2026-08-19T22:10:22Z",
-    "created_at": "2024-01-22T14:01:45Z",
     "id": 2093989349,
-    "issue_type": null,
-    "labels": [
-      {
-        "name": "enhancement",
-        "color": "a2eeef",
-        "description": "New feature or request",
-        "id": 2912049044
-      }
-    ],
     "number": 4441,
-    "state": "closed",
     "title": "Upgrade `http`, `http-serde`, `hyper` crates to 1.x versions",
+    "state": "closed",
+    "created_at": "2024-01-22T14:01:45Z",
     "updated_at": "2026-08-19T22:10:22Z",
+    "closed_at": "2026-08-19T22:10:22Z",
     "user": {
       "login": "guilload"
     },
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/4441",
-    "engagement_count": 4,
-    "review_comments_count": 0,
-    "comments_count": 4,
-    "assignees": [
-      "fmassot",
-      "PSeitz"
+    "labels": [
+      {
+        "id": 1470408430858150435,
+        "name": "enhancement",
+        "color": "a2eeef",
+        "description": "New feature or request"
+      }
     ],
-    "first_response_at": "2024-03-26T14:30:57Z",
-    "last_engagement_at": "2026-08-19T22:10:22Z",
-    "type": "issue",
-    "unique_participants": 3,
-    "unique_external_participants": 2,
-    "first_response_hours": 1536.49,
-    "reviews_count": 0,
-    "draft": false,
-    "state_reason": "completed",
-    "unique_human_participants_7d": 0,
-    "human_comments_7d": 0
+    "issue_type": null
   },
   {
     "closed_at": "2024-01-25T01:56:29Z",
@@ -5382,41 +5347,25 @@
     }
   },
   {
-    "closed_at": "2026-07-28T12:56:05Z",
-    "created_at": "2024-02-14T03:24:56Z",
     "id": 2133476899,
-    "issue_type": null,
-    "labels": [
-      {
-        "name": "enhancement",
-        "color": "a2eeef",
-        "description": "New feature or request",
-        "id": 2912049044
-      }
-    ],
     "number": 4580,
-    "state": "closed",
     "title": "Top level Ingest v2: handle replication",
+    "state": "closed",
+    "created_at": "2024-02-14T03:24:56Z",
     "updated_at": "2026-07-28T12:56:05Z",
+    "closed_at": "2026-07-28T12:56:05Z",
     "user": {
       "login": "fulmicoton"
     },
-    "draft": false,
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/4580",
-    "type": "issue",
-    "reviews_count": 0,
-    "first_response_at": "2026-07-28T12:56:05Z",
-    "review_comments_count": 0,
-    "engagement_count": 1,
-    "first_response_hours": 21489.52,
-    "unique_participants": 1,
-    "last_engagement_at": "2026-07-28T12:56:05Z",
-    "state_reason": "completed",
-    "assignees": [],
-    "unique_external_participants": 1,
-    "comments_count": 1,
-    "unique_human_participants_7d": 0,
-    "human_comments_7d": 0
+    "labels": [
+      {
+        "id": 1470408430858150435,
+        "name": "enhancement",
+        "color": "a2eeef",
+        "description": "New feature or request"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2024-02-15T06:22:24Z",
@@ -8900,41 +8849,25 @@
     }
   },
   {
-    "closed_at": "2026-07-28T12:55:31Z",
-    "created_at": "2024-03-14T12:35:36Z",
     "id": 2186256337,
-    "issue_type": null,
-    "labels": [
-      {
-        "name": "bug",
-        "color": "d73a4a",
-        "description": "Something isn't working",
-        "id": 2912049038
-      }
-    ],
     "number": 4737,
-    "state": "closed",
     "title": "Replica shards allocation may not be always perfectly balanced",
+    "state": "closed",
+    "created_at": "2024-03-14T12:35:36Z",
     "updated_at": "2026-07-28T12:55:31Z",
+    "closed_at": "2026-07-28T12:55:31Z",
     "user": {
       "login": "guilload"
     },
-    "type": "issue",
-    "comments_count": 1,
-    "draft": false,
-    "reviews_count": 0,
-    "last_engagement_at": "2026-07-28T12:55:31Z",
-    "review_comments_count": 0,
-    "assignees": [
-      "guilload"
+    "labels": [
+      {
+        "id": 1525837148569873106,
+        "name": "bug",
+        "color": "d73a4a",
+        "description": "Something isn't working"
+      }
     ],
-    "state_reason": "completed",
-    "engagement_count": 1,
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/4737",
-    "unique_participants": 1,
-    "unique_external_participants": 0,
-    "human_comments_7d": 0,
-    "unique_human_participants_7d": 0
+    "issue_type": null
   },
   {
     "closed_at": null,
@@ -12628,42 +12561,25 @@
     "type": "pull_request"
   },
   {
-    "closed_at": null,
-    "created_at": "2024-04-23T13:58:29Z",
     "id": 2258958454,
-    "issue_type": null,
+    "number": 4898,
+    "title": "Improve ingester/indexer decommissioning",
+    "state": "open",
+    "created_at": "2024-04-23T13:58:29Z",
+    "updated_at": "2026-06-27T18:40:27Z",
+    "closed_at": null,
+    "user": {
+      "login": "guilload"
+    },
     "labels": [
       {
-        "id": 2912049038,
+        "id": 1525837148569873106,
         "name": "bug",
         "color": "d73a4a",
         "description": "Something isn't working"
       }
     ],
-    "number": 4898,
-    "state": "open",
-    "title": "Improve ingester/indexer decommissioning",
-    "updated_at": "2026-06-27T18:40:27Z",
-    "user": {
-      "login": "guilload"
-    },
-    "assignees": [
-      "guilload"
-    ],
-    "review_comments_count": 0,
-    "engagement_count": 1,
-    "first_response_hours": 19084.69,
-    "comments_count": 1,
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/4898",
-    "reviews_count": 0,
-    "type": "issue",
-    "unique_external_participants": 1,
-    "unique_participants": 1,
-    "draft": false,
-    "first_response_at": "2026-06-27T18:40:02Z",
-    "last_engagement_at": "2026-06-27T18:40:02Z",
-    "human_comments_7d": 0,
-    "unique_human_participants_7d": 0
+    "issue_type": null
   },
   {
     "closed_at": "2024-04-24T02:19:56Z",
@@ -15717,34 +15633,20 @@
     "assignees": []
   },
   {
-    "closed_at": "2026-06-12T14:07:23Z",
-    "created_at": "2024-05-27T05:52:23Z",
-    "draft": true,
     "id": 1889410958,
-    "issue_type": null,
-    "labels": [],
     "number": 5035,
-    "pull_request": {},
-    "state": "closed",
     "title": "use serde_json_borrow to parse JSON",
+    "state": "closed",
+    "created_at": "2024-05-27T05:52:23Z",
     "updated_at": "2026-06-12T14:07:23Z",
+    "closed_at": "2026-06-12T14:07:23Z",
     "user": {
       "login": "PSeitz"
     },
-    "unique_external_participants": 1,
-    "unique_participants": 1,
-    "html_url": "https://github.com/quickwit-oss/quickwit/pull/5035",
-    "comments_count": 1,
-    "first_response_at": "2024-05-29T03:25:20Z",
-    "type": "pull_request",
-    "reviews_count": 0,
-    "last_engagement_at": "2024-05-29T03:25:20Z",
-    "assignees": [],
-    "first_response_hours": 45.55,
-    "engagement_count": 1,
-    "review_comments_count": 0,
-    "unique_human_participants_7d": 0,
-    "human_comments_7d": 0
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
   },
   {
     "closed_at": "2024-05-27T20:03:12Z",
@@ -20692,41 +20594,25 @@
     }
   },
   {
-    "closed_at": "2026-07-28T12:55:24Z",
-    "created_at": "2024-07-25T06:40:19Z",
     "id": 2429148116,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "d73a4a",
-        "description": "Something isn't working",
-        "id": 2912049038,
-        "name": "bug"
-      }
-    ],
     "number": 5255,
-    "state": "closed",
     "title": "After replication, CircuitBreaker on WAL could be a problem",
+    "state": "closed",
+    "created_at": "2024-07-25T06:40:19Z",
     "updated_at": "2026-07-28T12:55:24Z",
+    "closed_at": "2026-07-28T12:55:24Z",
     "user": {
       "login": "fulmicoton"
     },
-    "draft": false,
-    "assignees": [],
-    "unique_participants": 1,
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/5255",
-    "review_comments_count": 0,
-    "unique_external_participants": 1,
-    "first_response_at": "2026-07-28T12:55:24Z",
-    "last_engagement_at": "2026-07-28T12:55:24Z",
-    "first_response_hours": 17598.25,
-    "state_reason": "completed",
-    "reviews_count": 0,
-    "engagement_count": 1,
-    "type": "issue",
-    "comments_count": 1,
-    "human_comments_7d": 0,
-    "unique_human_participants_7d": 0
+    "labels": [
+      {
+        "id": 1525837148569873106,
+        "name": "bug",
+        "color": "d73a4a",
+        "description": "Something isn't working"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2024-07-30T09:05:41Z",
@@ -22145,41 +22031,25 @@
     "type": "pull_request"
   },
   {
-    "closed_at": "2026-07-27T07:12:57Z",
-    "created_at": "2024-08-17T06:15:50Z",
     "id": 2471371480,
-    "issue_type": null,
+    "number": 5318,
+    "title": " When will quickwit 0.9 be released?",
+    "state": "closed",
+    "created_at": "2024-08-17T06:15:50Z",
+    "updated_at": "2026-07-27T07:12:57Z",
+    "closed_at": "2026-07-27T07:12:57Z",
+    "user": {
+      "login": "wking1986"
+    },
     "labels": [
       {
-        "id": 2912049044,
+        "id": 1470408430858150435,
         "name": "enhancement",
         "color": "a2eeef",
         "description": "New feature or request"
       }
     ],
-    "number": 5318,
-    "state": "closed",
-    "title": " When will quickwit 0.9 be released?",
-    "updated_at": "2026-07-27T07:12:57Z",
-    "user": {
-      "login": "wking1986"
-    },
-    "unique_participants": 4,
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/5318",
-    "review_comments_count": 0,
-    "first_response_at": "2024-08-17T15:17:13Z",
-    "reviews_count": 0,
-    "type": "issue",
-    "draft": false,
-    "last_engagement_at": "2026-07-27T07:12:55Z",
-    "engagement_count": 6,
-    "assignees": [],
-    "comments_count": 6,
-    "first_response_hours": 9.02,
-    "state_reason": "completed",
-    "unique_external_participants": 3,
-    "unique_human_participants_7d": 0,
-    "human_comments_7d": 0
+    "issue_type": null
   },
   {
     "closed_at": null,
@@ -26132,34 +26002,20 @@
     }
   },
   {
-    "closed_at": "2026-07-07T12:48:52Z",
-    "created_at": "2024-10-17T06:07:44Z",
-    "draft": false,
     "id": 2129356148,
-    "issue_type": null,
-    "labels": [],
     "number": 5495,
-    "pull_request": {},
-    "state": "closed",
     "title": "Optionally prepending s3 compatible storage's key with a hash of the …",
+    "state": "closed",
+    "created_at": "2024-10-17T06:07:44Z",
     "updated_at": "2026-07-07T12:48:52Z",
+    "closed_at": "2026-07-07T12:48:52Z",
     "user": {
       "login": "fulmicoton"
     },
-    "type": "pull_request",
-    "first_response_at": "2025-11-18T20:54:21Z",
-    "unique_participants": 1,
-    "review_comments_count": 0,
-    "assignees": [],
-    "comments_count": 2,
-    "unique_external_participants": 1,
-    "html_url": "https://github.com/quickwit-oss/quickwit/pull/5495",
-    "last_engagement_at": "2025-11-18T20:54:21Z",
-    "reviews_count": 0,
-    "first_response_hours": 9542.78,
-    "engagement_count": 2,
-    "unique_human_participants_7d": 0,
-    "human_comments_7d": 0
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2024-10-17T13:07:01Z",

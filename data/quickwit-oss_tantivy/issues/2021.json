@@ -140,43 +140,43 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2021-01-07T09:24:04Z",
     "id": 781163126,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "84b6eb",
-        "description": null,
-        "id": 7641015712852752914,
-        "name": "enhancement"
-      },
-      {
-        "color": "fbca04",
-        "description": null,
-        "id": 169050159450115259,
-        "name": "good first issue"
-      },
-      {
-        "color": "d93f0b",
-        "description": "",
-        "id": 1555160031871621062,
-        "name": "high priority"
-      },
-      {
-        "color": "006b75",
-        "description": "",
-        "id": 1836260052125601210,
-        "name": "quickwit"
-      }
-    ],
     "number": 971,
-    "state": "open",
     "title": "Generate meaningful SegmentIDs instead of pure random",
-    "updated_at": "2021-04-07T09:34:36Z",
+    "state": "open",
+    "created_at": "2021-01-07T09:24:04Z",
+    "updated_at": "2026-08-26T12:21:57Z",
+    "closed_at": null,
     "user": {
       "login": "ppodolsky"
-    }
+    },
+    "labels": [
+      {
+        "id": 7641015712852752914,
+        "name": "enhancement",
+        "color": "84b6eb",
+        "description": null
+      },
+      {
+        "id": 169050159450115259,
+        "name": "good first issue",
+        "color": "fbca04",
+        "description": null
+      },
+      {
+        "id": 1555160031871621062,
+        "name": "high priority",
+        "color": "d93f0b",
+        "description": ""
+      },
+      {
+        "id": 1836260052125601210,
+        "name": "quickwit",
+        "color": "006b75",
+        "description": ""
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2021-01-07T13:49:32Z",

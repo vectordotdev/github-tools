@@ -12080,37 +12080,37 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2024-02-27T23:18:47Z",
     "id": 2157780022,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "BF72F6",
-        "description": "A code change that does not add user value.",
-        "id": 2473344330675535720,
-        "name": "type: tech debt"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to configuring Vector",
-        "id": 4606596601252306592,
-        "name": "domain: config"
-      },
-      {
-        "color": "1a4c8b",
-        "description": "Moderate complex issue, that takes a fair bit of work to solve.",
-        "id": 7417528240119009628,
-        "name": "complexity: moderate"
-      }
-    ],
     "number": 19963,
-    "state": "open",
     "title": "Drop use of TOML as an internal configuration value",
-    "updated_at": "2024-02-27T23:18:48Z",
+    "state": "closed",
+    "created_at": "2024-02-27T23:18:47Z",
+    "updated_at": "2026-07-31T19:59:17Z",
+    "closed_at": "2026-07-31T19:59:17Z",
     "user": {
       "login": "bruceg"
-    }
+    },
+    "labels": [
+      {
+        "id": 2473344330675535720,
+        "name": "type: tech debt",
+        "color": "BF72F6",
+        "description": "A code change that does not add user value."
+      },
+      {
+        "id": 4606596601252306592,
+        "name": "domain: config",
+        "color": "343639",
+        "description": "Anything related to configuring Vector"
+      },
+      {
+        "id": 7417528240119009628,
+        "name": "complexity: moderate",
+        "color": "1a4c8b",
+        "description": "Moderate complex issue, that takes a fair bit of work to solve."
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2024-02-29T19:25:40Z",
@@ -22451,31 +22451,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2024-04-29T09:19:47Z",
     "id": 2268524851,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `file` sink related",
-        "id": 3048281295868473663,
-        "name": "sink: file"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's performance",
-        "id": 7501419672228520413,
-        "name": "domain: performance"
-      }
-    ],
     "number": 20394,
-    "state": "open",
     "title": "Add concurrent batching to the `file` sink",
-    "updated_at": "2026-06-02T15:33:48Z",
+    "state": "open",
+    "created_at": "2024-04-29T09:19:47Z",
+    "updated_at": "2026-08-11T13:35:13Z",
+    "closed_at": null,
     "user": {
       "login": "fpytloun"
-    }
+    },
+    "labels": [
+      {
+        "id": 3048281295868473663,
+        "name": "sink: file",
+        "color": "5ED9F6",
+        "description": "Anything `file` sink related"
+      },
+      {
+        "id": 7501419672228520413,
+        "name": "domain: performance",
+        "color": "343639",
+        "description": "Anything related to Vector's performance"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": null,
@@ -33278,25 +33278,25 @@
     }
   },
   {
-    "closed_at": "2024-11-19T03:59:55Z",
-    "created_at": "2024-07-14T10:20:11Z",
     "id": 2407365757,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to configuring Vector",
-        "id": 4606596601252306592,
-        "name": "domain: config"
-      }
-    ],
     "number": 20853,
-    "state": "closed",
     "title": "Vector YAML configuration - anchors support",
-    "updated_at": "2026-05-30T00:11:15Z",
+    "state": "closed",
+    "created_at": "2024-07-14T10:20:11Z",
+    "updated_at": "2026-08-17T17:06:44Z",
+    "closed_at": "2024-11-19T03:59:55Z",
     "user": {
       "login": "nazarovkv"
-    }
+    },
+    "labels": [
+      {
+        "id": 4606596601252306592,
+        "name": "domain: config",
+        "color": "343639",
+        "description": "Anything related to configuring Vector"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2024-07-20T01:10:41Z",
@@ -39724,33 +39724,33 @@
     }
   },
   {
-    "closed_at": "2024-08-23T19:40:59Z",
-    "created_at": "2024-08-23T08:40:48Z",
-    "draft": false,
     "id": 2033725861,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment",
-        "id": 6526936644602743638,
-        "name": "domain: ci"
-      }
-    ],
     "number": 21140,
-    "pull_request": {},
-    "state": "closed",
     "title": "chore(ci): Swap out mockwatchlogs for localstack",
-    "updated_at": "2024-08-23T19:40:59Z",
+    "state": "closed",
+    "created_at": "2024-08-23T08:40:48Z",
+    "updated_at": "2026-07-30T17:02:56Z",
+    "closed_at": "2024-08-23T19:40:59Z",
     "user": {
       "login": "balonik"
-    }
+    },
+    "labels": [
+      {
+        "id": 6524463192304363030,
+        "name": "domain: sinks",
+        "color": "343639",
+        "description": "Anything related to the Vector's sinks"
+      },
+      {
+        "id": 6526936644602743638,
+        "name": "domain: ci",
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2024-08-27T16:37:35Z",
@@ -53718,25 +53718,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2024-11-07T19:30:35Z",
     "id": 2641981931,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's external, public documentation",
-        "id": 5210716293491119031,
-        "name": "domain: external docs"
-      }
-    ],
     "number": 21735,
-    "state": "open",
     "title": "Public documentation improvements and fixes",
-    "updated_at": "2026-06-02T15:34:05Z",
+    "state": "open",
+    "created_at": "2024-11-07T19:30:35Z",
+    "updated_at": "2026-09-03T19:31:53Z",
+    "closed_at": null,
     "user": {
       "login": "pront"
-    }
+    },
+    "labels": [
+      {
+        "id": 5210716293491119031,
+        "name": "domain: external docs",
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2024-11-07T21:40:51Z",
@@ -56431,37 +56431,43 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2024-11-21T19:54:31Z",
     "id": 2680724181,
-    "issue_type": "Task",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to configuring Vector",
-        "id": 4606596601252306592,
-        "name": "domain: config"
-      },
-      {
-        "color": "DBE0E9",
-        "description": "Anything that is good for new contributors.",
-        "id": 942722858524630774,
-        "name": "good first issue"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's development environment",
-        "id": 5194436200726937888,
-        "name": "domain: dev"
-      }
-    ],
     "number": 21865,
-    "state": "open",
     "title": "Provide generic `generate_config` and `test_generate_config`",
-    "updated_at": "2025-01-28T17:29:08Z",
+    "state": "closed",
+    "created_at": "2024-11-21T19:54:31Z",
+    "updated_at": "2026-07-29T15:49:08Z",
+    "closed_at": "2026-07-29T15:49:08Z",
     "user": {
       "login": "pront"
-    }
+    },
+    "labels": [
+      {
+        "id": 2473344330675535720,
+        "name": "type: tech debt",
+        "color": "BF72F6",
+        "description": "A code change that does not add user value."
+      },
+      {
+        "id": 4606596601252306592,
+        "name": "domain: config",
+        "color": "343639",
+        "description": "Anything related to configuring Vector"
+      },
+      {
+        "id": 942722858524630774,
+        "name": "good first issue",
+        "color": "DBE0E9",
+        "description": "Anything that is good for new contributors."
+      },
+      {
+        "id": 5194436200726937888,
+        "name": "domain: dev",
+        "color": "343639",
+        "description": "Anything related to Vector's development environment"
+      }
+    ],
+    "issue_type": "Task"
   },
   {
     "closed_at": "2024-11-26T23:24:17Z",

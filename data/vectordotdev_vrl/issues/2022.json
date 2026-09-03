@@ -2109,5 +2109,26 @@
     "user": {
       "login": "anas-aso"
     }
+  },
+  {
+    "id": 5082704390,
+    "number": 1891,
+    "title": "Improve `NaN` float handling in `Value`",
+    "state": "open",
+    "created_at": "2022-02-03T18:06:08Z",
+    "updated_at": "2026-08-06T15:34:44Z",
+    "closed_at": null,
+    "user": {
+      "login": "fuchsnj"
+    },
+    "labels": [
+      {
+        "id": 8770318842022581189,
+        "name": "vrl: compiler",
+        "color": "C2E0C6",
+        "description": "Changes to the compiler"
+      }
+    ],
+    "issue_type": "Task"
   }
 ]

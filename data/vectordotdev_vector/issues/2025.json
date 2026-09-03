@@ -4456,25 +4456,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-01-28T08:18:55Z",
     "id": 2814926768,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's networking",
-        "id": 7280804221978411925,
-        "name": "domain: networking"
-      }
-    ],
     "number": 22310,
-    "state": "open",
     "title": "SSL errors in log with http_endpoint with tls",
-    "updated_at": "2026-05-29T23:25:14Z",
+    "state": "open",
+    "created_at": "2025-01-28T08:18:55Z",
+    "updated_at": "2026-08-28T16:16:13Z",
+    "closed_at": null,
     "user": {
       "login": "robinpecha"
-    }
+    },
+    "labels": [
+      {
+        "id": 7280804221978411925,
+        "name": "domain: networking",
+        "color": "343639",
+        "description": "Anything related to Vector's networking"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2025-06-13T15:22:03Z",
@@ -4521,25 +4521,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-01-28T23:19:24Z",
     "id": 2816905179,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `azure_blob` sink related",
-        "id": 1651409443776833596,
-        "name": "sink: azure_blob"
-      }
-    ],
     "number": 22316,
-    "state": "open",
     "title": "support tags in Azure Blob Storage sink",
-    "updated_at": "2026-06-01T12:04:03Z",
+    "state": "closed",
+    "created_at": "2025-01-28T23:19:24Z",
+    "updated_at": "2026-08-07T18:29:42Z",
+    "closed_at": "2026-08-07T18:29:42Z",
     "user": {
       "login": "melugoyal"
-    }
+    },
+    "labels": [
+      {
+        "id": 1651409443776833596,
+        "name": "sink: azure_blob",
+        "color": "5ED9F6",
+        "description": "Anything `azure_blob` sink related"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2025-01-31T21:08:01Z",
@@ -4708,25 +4708,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-01-30T13:52:45Z",
     "id": 2820899491,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to configuring Vector",
-        "id": 4606596601252306592,
-        "name": "domain: config"
-      }
-    ],
     "number": 22327,
-    "state": "open",
     "title": "Configuration Errors in YAML when encountering null value",
-    "updated_at": "2026-06-02T15:34:11Z",
+    "state": "closed",
+    "created_at": "2025-01-30T13:52:45Z",
+    "updated_at": "2026-07-31T19:59:18Z",
+    "closed_at": "2026-07-31T19:59:18Z",
     "user": {
       "login": "nomalord"
-    }
+    },
+    "labels": [
+      {
+        "id": 4606596601252306592,
+        "name": "domain: config",
+        "color": "343639",
+        "description": "Anything related to configuring Vector"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2026-07-08T18:20:50Z",
@@ -6697,25 +6697,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-02-14T14:59:35Z",
     "id": 2853937067,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `prometheus_exporter` sink related",
-        "id": 5884848275777734183,
-        "name": "sink: prometheus_exporter"
-      }
-    ],
     "number": 22440,
-    "state": "open",
     "title": "prometheus_exporter metrics gap when upgrading from 0.23",
-    "updated_at": "2026-05-29T23:25:21Z",
+    "state": "closed",
+    "created_at": "2025-02-14T14:59:35Z",
+    "updated_at": "2026-08-22T21:23:38Z",
+    "closed_at": "2026-08-22T21:23:38Z",
     "user": {
       "login": "urosht"
-    }
+    },
+    "labels": [
+      {
+        "id": 5884848275777734183,
+        "name": "sink: prometheus_exporter",
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_exporter` sink related"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2025-02-14T19:55:10Z",
@@ -10264,25 +10264,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-03-08T09:34:19Z",
     "id": 2904673944,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `redis` source related",
-        "id": 210342434853879155,
-        "name": "source: redis"
-      }
-    ],
     "number": 22615,
-    "state": "open",
     "title": "Redis doesn't resubscribe/reconnect to channel",
-    "updated_at": "2026-05-29T23:25:35Z",
+    "state": "closed",
+    "created_at": "2025-03-08T09:34:19Z",
+    "updated_at": "2026-08-04T18:32:06Z",
+    "closed_at": "2026-08-04T18:32:06Z",
     "user": {
       "login": "andreyvital"
-    }
+    },
+    "labels": [
+      {
+        "id": 210342434853879155,
+        "name": "source: redis",
+        "color": "5ED9F6",
+        "description": "Anything `redis` source related"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2026-05-06T15:21:17Z",
@@ -23698,25 +23698,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-06-30T09:33:14Z",
     "id": 3187806387,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `log_to_metric` transform related",
-        "id": 1954188306316231151,
-        "name": "transform: log_to_metric"
-      }
-    ],
     "number": 23290,
-    "state": "open",
     "title": "Vector gives an error when parse config with log_to_metric transform type",
-    "updated_at": "2026-06-12T15:36:02Z",
+    "state": "closed",
+    "created_at": "2025-06-30T09:33:14Z",
+    "updated_at": "2026-08-17T02:49:40Z",
+    "closed_at": "2026-08-17T02:49:40Z",
     "user": {
       "login": "borisboris232"
-    }
+    },
+    "labels": [
+      {
+        "id": 1954188306316231151,
+        "name": "transform: log_to_metric",
+        "color": "5ED9F6",
+        "description": "Anything `log_to_metric` transform related"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2025-06-30T13:53:35Z",
@@ -25114,25 +25114,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-07-08T00:03:22Z",
     "id": 3210571198,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `logstash` source related",
-        "id": 310409946339004301,
-        "name": "source: logstash"
-      }
-    ],
     "number": 23346,
-    "state": "open",
     "title": "Connection errors with filebeat as agent and logstash source",
-    "updated_at": "2026-07-10T17:23:26Z",
+    "state": "closed",
+    "created_at": "2025-07-08T00:03:22Z",
+    "updated_at": "2026-08-26T16:53:22Z",
+    "closed_at": "2026-08-26T16:53:22Z",
     "user": {
       "login": "sourcedelica"
-    }
+    },
+    "labels": [
+      {
+        "id": 310409946339004301,
+        "name": "source: logstash",
+        "color": "5ED9F6",
+        "description": "Anything `logstash` source related"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2025-07-08T14:54:58Z",
@@ -29202,25 +29202,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-08-04T13:39:21Z",
     "id": 3289500539,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `prometheus_exporter` sink related",
-        "id": 5884848275777734183,
-        "name": "sink: prometheus_exporter"
-      }
-    ],
     "number": 23519,
-    "state": "open",
     "title": "`prometheus_exporter` sink not able to aggregate metrics over time",
-    "updated_at": "2026-05-29T23:26:55Z",
+    "state": "closed",
+    "created_at": "2025-08-04T13:39:21Z",
+    "updated_at": "2026-08-12T14:53:30Z",
+    "closed_at": "2026-08-12T14:53:30Z",
     "user": {
       "login": "PrayagS"
-    }
+    },
+    "labels": [
+      {
+        "id": 5884848275777734183,
+        "name": "sink: prometheus_exporter",
+        "color": "5ED9F6",
+        "description": "Anything `prometheus_exporter` sink related"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2025-08-28T21:19:33Z",
@@ -31260,31 +31260,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-08-17T04:22:33Z",
     "id": 3327930119,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to configuring Vector",
-        "id": 4606596601252306592,
-        "name": "domain: config"
-      },
-      {
-        "color": "343639",
-        "description": "",
-        "id": 4100981168124393568,
-        "name": "domain: validation"
-      }
-    ],
     "number": 23602,
-    "state": "open",
     "title": "Add option to `vector validate` so that it resolve secrets before validation",
-    "updated_at": "2026-06-02T15:34:27Z",
+    "state": "closed",
+    "created_at": "2025-08-17T04:22:33Z",
+    "updated_at": "2026-08-31T20:28:54Z",
+    "closed_at": "2026-08-31T20:28:54Z",
     "user": {
       "login": "garysassano"
-    }
+    },
+    "labels": [
+      {
+        "id": 4606596601252306592,
+        "name": "domain: config",
+        "color": "343639",
+        "description": "Anything related to configuring Vector"
+      },
+      {
+        "id": 4100981168124393568,
+        "name": "domain: validation",
+        "color": "343639",
+        "description": ""
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2025-08-22T15:05:36Z",
@@ -32463,43 +32463,43 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-08-27T18:44:24Z",
     "id": 3360489619,
-    "issue_type": "Task",
-    "labels": [
-      {
-        "color": "BF72F6",
-        "description": "A code change that does not add user value.",
-        "id": 2473344330675535720,
-        "name": "type: tech debt"
-      },
-      {
-        "color": "DBE0E9",
-        "description": "Anything that is good for new contributors.",
-        "id": 942722858524630774,
-        "name": "good first issue"
-      },
-      {
-        "color": "87F6C9",
-        "description": "This feature is nice to have. It is low priority.",
-        "id": 1298089048407485492,
-        "name": "have: nice"
-      },
-      {
-        "color": "aaaaaa",
-        "description": null,
-        "id": 8088131457271031435,
-        "name": "hacktoberfest"
-      }
-    ],
     "number": 23659,
-    "state": "open",
     "title": "Investigate and eliminate `allow` statements",
-    "updated_at": "2026-07-05T06:52:34Z",
+    "state": "open",
+    "created_at": "2025-08-27T18:44:24Z",
+    "updated_at": "2026-08-20T16:58:31Z",
+    "closed_at": null,
     "user": {
       "login": "pront"
-    }
+    },
+    "labels": [
+      {
+        "id": 2473344330675535720,
+        "name": "type: tech debt",
+        "color": "BF72F6",
+        "description": "A code change that does not add user value."
+      },
+      {
+        "id": 942722858524630774,
+        "name": "good first issue",
+        "color": "DBE0E9",
+        "description": "Anything that is good for new contributors."
+      },
+      {
+        "id": 1298089048407485492,
+        "name": "have: nice",
+        "color": "87F6C9",
+        "description": "This feature is nice to have. It is low priority."
+      },
+      {
+        "id": 8088131457271031435,
+        "name": "hacktoberfest",
+        "color": "aaaaaa",
+        "description": null
+      }
+    ],
+    "issue_type": "Task"
   },
   {
     "closed_at": null,
@@ -39911,31 +39911,31 @@
     }
   },
   {
-    "closed_at": "2025-10-16T15:30:09Z",
-    "created_at": "2025-10-09T14:48:22Z",
     "id": 3499503739,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `opentelemetry` source related",
-        "id": 1575269920799824754,
-        "name": "source: opentelemetry"
-      },
-      {
-        "color": "DBE0E9",
-        "description": "A bug that has been reproduced or confirmed.",
-        "id": 1968677811294901969,
-        "name": "meta: confirmed"
-      }
-    ],
     "number": 23975,
-    "state": "closed",
     "title": "invalid wire type: LengthDelimited (expected SixtyFourBit) use_otlp_decoding: true",
-    "updated_at": "2026-05-29T23:27:24Z",
+    "state": "closed",
+    "created_at": "2025-10-09T14:48:22Z",
+    "updated_at": "2026-08-30T11:31:33Z",
+    "closed_at": "2025-10-16T15:30:09Z",
     "user": {
       "login": "victorserbu2709"
-    }
+    },
+    "labels": [
+      {
+        "id": 1575269920799824754,
+        "name": "source: opentelemetry",
+        "color": "5ED9F6",
+        "description": "Anything `opentelemetry` source related"
+      },
+      {
+        "id": 1968677811294901969,
+        "name": "meta: confirmed",
+        "color": "DBE0E9",
+        "description": "A bug that has been reproduced or confirmed."
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2025-10-17T14:27:45Z",
@@ -41589,63 +41589,57 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-10-22T13:11:57Z",
-    "draft": false,
     "id": 2937125892,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sources",
-        "id": 2021938762883471635,
-        "name": "domain: sources"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment",
-        "id": 6526936644602743638,
-        "name": "domain: ci"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to releasing Vector",
-        "id": 843604899509384131,
-        "name": "domain: releasing"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's external, public documentation",
-        "id": 5210716293491119031,
-        "name": "domain: external docs"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Request or implementation of a new source",
-        "id": 2516345231450418203,
-        "name": "source: new"
-      },
-      {
-        "color": "DBE0E9",
-        "description": "Pull requests that are awaiting their author.",
-        "id": 1951021668007277535,
-        "name": "meta: awaiting author"
-      },
-      {
-        "color": "605f58",
-        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
-        "id": 6102271970520709555,
-        "name": "docs review on hold"
-      }
-    ],
     "number": 24044,
-    "pull_request": {},
-    "state": "open",
     "title": "feat(new source): Add ODBC source implementation",
-    "updated_at": "2026-07-21T20:46:28Z",
+    "state": "open",
+    "created_at": "2025-10-22T13:11:57Z",
+    "updated_at": "2026-08-31T23:52:39Z",
+    "closed_at": null,
     "user": {
       "login": "powerumc"
-    }
+    },
+    "labels": [
+      {
+        "id": 2021938762883471635,
+        "name": "domain: sources",
+        "color": "343639",
+        "description": "Anything related to the Vector's sources"
+      },
+      {
+        "id": 6526936644602743638,
+        "name": "domain: ci",
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment"
+      },
+      {
+        "id": 843604899509384131,
+        "name": "domain: releasing",
+        "color": "343639",
+        "description": "Anything related to releasing Vector"
+      },
+      {
+        "id": 5210716293491119031,
+        "name": "domain: external docs",
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation"
+      },
+      {
+        "id": 2516345231450418203,
+        "name": "source: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new source"
+      },
+      {
+        "id": 6102271970520709555,
+        "name": "docs review on hold",
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team."
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2025-10-22T16:28:10Z",
@@ -41811,39 +41805,39 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-10-22T19:17:37Z",
-    "draft": true,
     "id": 2938249678,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment",
-        "id": 6526936644602743638,
-        "name": "domain: ci"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to the vdev tooling",
-        "id": 6235798767080406514,
-        "name": "domain: vdev"
-      },
-      {
-        "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
-        "id": 115157577543356499,
-        "name": "no-changelog"
-      }
-    ],
     "number": 24051,
-    "pull_request": {},
-    "state": "open",
     "title": "chore(vdev): move test runner to vdev",
-    "updated_at": "2026-03-20T14:25:45Z",
+    "state": "closed",
+    "created_at": "2025-10-22T19:17:37Z",
+    "updated_at": "2026-08-03T14:11:54Z",
+    "closed_at": "2026-08-03T14:11:35Z",
     "user": {
       "login": "pront"
-    }
+    },
+    "labels": [
+      {
+        "id": 6526936644602743638,
+        "name": "domain: ci",
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment"
+      },
+      {
+        "id": 6235798767080406514,
+        "name": "domain: vdev",
+        "color": "343639",
+        "description": "Anything related to the vdev tooling"
+      },
+      {
+        "id": 115157577543356499,
+        "name": "no-changelog",
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2025-10-22T21:32:44Z",
@@ -47338,51 +47332,33 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-11-19T22:09:29Z",
-    "draft": true,
     "id": 3027502396,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sources",
-        "id": 2021938762883471635,
-        "name": "domain: sources"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `gcp` service provider related",
-        "id": 5970174565153215818,
-        "name": "provider: gcp"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment",
-        "id": 6526936644602743638,
-        "name": "domain: ci"
-      },
-      {
-        "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
-        "id": 115157577543356499,
-        "name": "no-changelog"
-      }
-    ],
     "number": 24278,
-    "pull_request": {},
+    "title": "fix(gcp_pubsub source): fix metrics, shutdown behavior, re-enable IT tests",
     "state": "open",
-    "title": "fix(dev): re-enable GCP integration tests",
-    "updated_at": "2025-12-02T18:38:36Z",
+    "created_at": "2025-11-19T22:09:29Z",
+    "updated_at": "2026-07-27T22:29:06Z",
+    "closed_at": null,
     "user": {
       "login": "thomasqueirozb"
-    }
+    },
+    "labels": [
+      {
+        "id": 2021938762883471635,
+        "name": "domain: sources",
+        "color": "343639",
+        "description": "Anything related to the Vector's sources"
+      },
+      {
+        "id": 5970174565153215818,
+        "name": "provider: gcp",
+        "color": "5EAAF6",
+        "description": "Anything `gcp` service provider related"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
   },
   {
     "closed_at": null,
@@ -50321,39 +50297,39 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-12-25T10:20:10Z",
-    "draft": false,
     "id": 3129798829,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `clickhouse` sink related",
-        "id": 3597518471828487572,
-        "name": "sink: clickhouse"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's external, public documentation",
-        "id": 5210716293491119031,
-        "name": "domain: external docs"
-      }
-    ],
     "number": 24412,
-    "pull_request": {},
-    "state": "open",
     "title": "feat(clickhouse sink): add multi-endpoint support with load balancing",
-    "updated_at": "2026-05-24T22:32:00Z",
+    "state": "open",
+    "created_at": "2025-12-25T10:20:10Z",
+    "updated_at": "2026-08-23T21:36:56Z",
+    "closed_at": null,
     "user": {
       "login": "pinylin"
-    }
+    },
+    "labels": [
+      {
+        "id": 3597518471828487572,
+        "name": "sink: clickhouse",
+        "color": "5ED9F6",
+        "description": "Anything `clickhouse` sink related"
+      },
+      {
+        "id": 6524463192304363030,
+        "name": "domain: sinks",
+        "color": "343639",
+        "description": "Anything related to the Vector's sinks"
+      },
+      {
+        "id": 5210716293491119031,
+        "name": "domain: external docs",
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2026-04-15T20:52:43Z",
@@ -50519,51 +50495,45 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2025-12-30T09:07:12Z",
-    "draft": false,
     "id": 3136274765,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's transform components",
-        "id": 4876837993745139454,
-        "name": "domain: transforms"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's external, public documentation",
-        "id": 5210716293491119031,
-        "name": "domain: external docs"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `aggregate` transform related",
-        "id": 2331044872657461066,
-        "name": "transform: aggregate"
-      },
-      {
-        "color": "AB3B4B",
-        "description": "",
-        "id": 81604373089705258,
-        "name": "work in progress"
-      },
-      {
-        "color": "605f58",
-        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
-        "id": 6102271970520709555,
-        "name": "docs review on hold"
-      }
-    ],
     "number": 24421,
-    "pull_request": {},
-    "state": "open",
     "title": "feat(aggregate transform): Add support for event timestamp-based aggregation",
-    "updated_at": "2026-07-16T08:01:11Z",
+    "state": "open",
+    "created_at": "2025-12-30T09:07:12Z",
+    "updated_at": "2026-09-03T17:17:27Z",
+    "closed_at": null,
     "user": {
       "login": "kaarolch"
-    }
+    },
+    "labels": [
+      {
+        "id": 4876837993745139454,
+        "name": "domain: transforms",
+        "color": "343639",
+        "description": "Anything related to Vector's transform components"
+      },
+      {
+        "id": 5210716293491119031,
+        "name": "domain: external docs",
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation"
+      },
+      {
+        "id": 2331044872657461066,
+        "name": "transform: aggregate",
+        "color": "5ED9F6",
+        "description": "Anything `aggregate` transform related"
+      },
+      {
+        "id": 81604373089705258,
+        "name": "work in progress",
+        "color": "AB3B4B",
+        "description": ""
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2025-12-30T18:11:08Z",

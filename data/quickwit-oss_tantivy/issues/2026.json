@@ -124,20 +124,20 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-01-09T15:00:29Z",
-    "draft": false,
     "id": 3159940570,
-    "issue_type": null,
-    "labels": [],
     "number": 2798,
-    "pull_request": {},
-    "state": "open",
     "title": "feat: Add support for Exists leaf in query parser",
-    "updated_at": "2026-01-16T07:21:26Z",
+    "state": "closed",
+    "created_at": "2026-01-09T15:00:29Z",
+    "updated_at": "2026-08-03T10:14:51Z",
+    "closed_at": "2026-08-03T10:14:51Z",
     "user": {
       "login": "Darkheir"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2026-01-13T21:47:35Z",
@@ -898,18 +898,18 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-03-04T01:21:54Z",
     "id": 4019516427,
-    "issue_type": null,
-    "labels": [],
     "number": 2847,
-    "state": "open",
     "title": "`ManagedDirectory` commit fails with `PermissionDenied` on Windows — single `IndexWriter`'s internal merge thread races with commit on `.managed.json`",
-    "updated_at": "2026-03-09T14:58:59Z",
+    "state": "open",
+    "created_at": "2026-03-04T01:21:54Z",
+    "updated_at": "2026-07-28T06:13:24Z",
+    "closed_at": null,
     "user": {
       "login": "pohuan"
-    }
+    },
+    "labels": [],
+    "issue_type": null
   },
   {
     "closed_at": "2026-03-11T13:55:22Z",
@@ -1609,25 +1609,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-04-07T08:29:28Z",
     "id": 4216449357,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "fc2929",
-        "description": null,
-        "id": 3091165909343518362,
-        "name": "bug"
-      }
-    ],
     "number": 2888,
-    "state": "open",
     "title": "Cardinality seems inaccurate",
-    "updated_at": "2026-04-13T15:38:33Z",
+    "state": "open",
+    "created_at": "2026-04-07T08:29:28Z",
+    "updated_at": "2026-07-27T14:53:08Z",
+    "closed_at": null,
     "user": {
       "login": "fulmicoton"
-    }
+    },
+    "labels": [
+      {
+        "id": 3091165909343518362,
+        "name": "bug",
+        "color": "fc2929",
+        "description": null
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2026-04-10T12:51:01Z",
@@ -2060,20 +2060,20 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-04-27T14:32:35Z",
-    "draft": false,
     "id": 3590317843,
-    "issue_type": null,
-    "labels": [],
     "number": 2913,
-    "pull_request": {},
-    "state": "open",
     "title": "fix: Missing sentinel is now considered in term agg requests with exclude + missing",
-    "updated_at": "2026-06-23T00:58:39Z",
+    "state": "open",
+    "created_at": "2026-04-27T14:32:35Z",
+    "updated_at": "2026-08-13T00:41:18Z",
+    "closed_at": null,
     "user": {
       "login": "barbarj"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2026-04-30T20:04:20Z",
@@ -2887,33 +2887,33 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-06-08T20:04:12Z",
-    "draft": false,
     "id": 3826481702,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "0025ff",
-        "description": null,
-        "id": 4576553370448459310,
-        "name": "dependencies"
-      },
-      {
-        "color": "000000",
-        "description": "Pull requests that update GitHub Actions code",
-        "id": 3397884688459367338,
-        "name": "github_actions"
-      }
-    ],
     "number": 2955,
-    "pull_request": {},
-    "state": "open",
     "title": "Bump github/codeql-action from 4.36.1 to 4.36.2",
-    "updated_at": "2026-06-08T20:04:13Z",
+    "state": "open",
+    "created_at": "2026-06-08T20:04:12Z",
+    "updated_at": "2026-08-07T09:59:14Z",
+    "closed_at": null,
     "user": {
       "login": "dependabot"
-    }
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2026-06-19T09:13:19Z",
@@ -3040,20 +3040,20 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-06-17T14:52:12Z",
-    "draft": false,
     "id": 3884451530,
-    "issue_type": null,
-    "labels": [],
     "number": 2964,
-    "pull_request": {},
-    "state": "open",
     "title": "Fix MoreLikeThis panic on indexes with deleted documents",
-    "updated_at": "2026-06-17T14:54:47Z",
+    "state": "open",
+    "created_at": "2026-06-17T14:52:12Z",
+    "updated_at": "2026-08-05T16:47:23Z",
+    "closed_at": null,
     "user": {
       "login": "stumpylog"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2026-06-18T09:07:43Z",
@@ -3072,20 +3072,20 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-06-18T13:38:56Z",
-    "draft": false,
     "id": 3891746174,
-    "issue_type": null,
-    "labels": [],
     "number": 2966,
-    "pull_request": {},
-    "state": "open",
     "title": "fix(query-parser): honor phrase prefix and slop on JSON fields",
-    "updated_at": "2026-06-18T13:52:28Z",
+    "state": "closed",
+    "created_at": "2026-06-18T13:38:56Z",
+    "updated_at": "2026-08-14T08:10:32Z",
+    "closed_at": "2026-08-14T08:10:32Z",
     "user": {
       "login": "DavIvek"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": null,
@@ -3254,20 +3254,20 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-06-25T08:56:41Z",
-    "draft": true,
     "id": 3933876802,
-    "issue_type": null,
-    "labels": [],
     "number": 2976,
-    "pull_request": {},
-    "state": "open",
     "title": "make get_term_info_async pub",
-    "updated_at": "2026-06-25T08:56:41Z",
+    "state": "closed",
+    "created_at": "2026-06-25T08:56:41Z",
+    "updated_at": "2026-08-03T09:11:10Z",
+    "closed_at": "2026-08-03T09:11:10Z",
     "user": {
       "login": "PSeitz"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
   },
   {
     "closed_at": "2026-07-06T20:03:55Z",
@@ -3391,20 +3391,20 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-06-29T10:03:23Z",
-    "draft": false,
     "id": 3954795496,
-    "issue_type": null,
-    "labels": [],
     "number": 2984,
-    "pull_request": {},
-    "state": "open",
     "title": "multi-terms aggregation ",
-    "updated_at": "2026-07-23T08:48:06Z",
+    "state": "closed",
+    "created_at": "2026-06-29T10:03:23Z",
+    "updated_at": "2026-08-04T11:23:22Z",
+    "closed_at": "2026-08-04T11:23:20Z",
     "user": {
       "login": "trinity-1686a"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2026-07-03T15:17:08Z",
@@ -3469,20 +3469,20 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-07-06T11:49:46Z",
-    "draft": false,
     "id": 3998466343,
-    "issue_type": null,
-    "labels": [],
     "number": 2989,
-    "pull_request": {},
-    "state": "open",
     "title": "Faster term aggregations: Use Vec-backed storage for higher cardinalities",
-    "updated_at": "2026-07-17T16:02:28Z",
+    "state": "closed",
+    "created_at": "2026-07-06T11:49:46Z",
+    "updated_at": "2026-07-27T16:00:38Z",
+    "closed_at": "2026-07-27T16:00:38Z",
     "user": {
       "login": "PSeitz"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2026-07-13T10:16:18Z",
@@ -3544,20 +3544,20 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-07-08T18:33:50Z",
-    "draft": false,
     "id": 4016754141,
-    "issue_type": null,
-    "labels": [],
     "number": 2993,
-    "pull_request": {},
-    "state": "open",
     "title": "feat: Extensible segment components via plugin trait",
-    "updated_at": "2026-07-16T19:14:39Z",
+    "state": "closed",
+    "created_at": "2026-07-08T18:33:50Z",
+    "updated_at": "2026-08-10T23:06:14Z",
+    "closed_at": "2026-08-10T23:06:11Z",
     "user": {
       "login": "rebasedming"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2026-07-12T14:40:05Z",
@@ -3576,20 +3576,20 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-07-10T16:52:27Z",
-    "draft": false,
     "id": 4031019245,
-    "issue_type": null,
-    "labels": [],
     "number": 2995,
-    "pull_request": {},
-    "state": "open",
     "title": "Convert BMW implementations into publicly-available PruningScorers",
-    "updated_at": "2026-07-10T17:43:14Z",
+    "state": "open",
+    "created_at": "2026-07-10T16:52:27Z",
+    "updated_at": "2026-08-27T23:31:30Z",
+    "closed_at": null,
     "user": {
       "login": "barbarj"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2026-07-20T20:03:50Z",
@@ -3621,33 +3621,33 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-07-13T20:05:00Z",
-    "draft": false,
     "id": 4047431556,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "0025ff",
-        "description": null,
-        "id": 4576553370448459310,
-        "name": "dependencies"
-      },
-      {
-        "color": "000000",
-        "description": "Pull requests that update Rust code",
-        "id": 3060109781203623155,
-        "name": "rust"
-      }
-    ],
     "number": 2997,
-    "pull_request": {},
-    "state": "open",
     "title": "Update lru requirement from 0.16.3 to 0.18.1",
-    "updated_at": "2026-07-13T20:05:01Z",
+    "state": "closed",
+    "created_at": "2026-07-13T20:05:00Z",
+    "updated_at": "2026-08-05T20:06:11Z",
+    "closed_at": "2026-08-05T20:06:09Z",
     "user": {
       "login": "dependabot"
-    }
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3060109781203623155,
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": null,
@@ -3757,18 +3757,18 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-07-20T07:25:14Z",
     "id": 4926727686,
-    "issue_type": null,
-    "labels": [],
     "number": 3004,
-    "state": "open",
     "title": "Tantivy is too chatty (most info! should be debug!)",
-    "updated_at": "2026-07-20T07:25:14Z",
+    "state": "closed",
+    "created_at": "2026-07-20T07:25:14Z",
+    "updated_at": "2026-08-07T09:58:58Z",
+    "closed_at": "2026-08-07T09:58:58Z",
     "user": {
       "login": "nwin"
-    }
+    },
+    "labels": [],
+    "issue_type": null
   },
   {
     "closed_at": "2026-07-23T20:04:27Z",
@@ -3800,49 +3800,49 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-07-20T20:04:03Z",
-    "draft": false,
     "id": 4094196064,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "0025ff",
-        "description": null,
-        "id": 4576553370448459310,
-        "name": "dependencies"
-      },
-      {
-        "color": "000000",
-        "description": "Pull requests that update GitHub Actions code",
-        "id": 3397884688459367338,
-        "name": "github_actions"
-      }
-    ],
     "number": 3006,
-    "pull_request": {},
-    "state": "open",
     "title": "Bump actions/checkout from 6.0.3 to 7.0.1",
-    "updated_at": "2026-07-20T20:04:04Z",
+    "state": "closed",
+    "created_at": "2026-07-20T20:04:03Z",
+    "updated_at": "2026-08-07T10:03:23Z",
+    "closed_at": "2026-08-07T10:03:20Z",
     "user": {
       "login": "dependabot"
-    }
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
-    "closed_at": null,
-    "created_at": "2026-07-22T07:58:39Z",
-    "draft": true,
     "id": 4106296286,
-    "issue_type": null,
-    "labels": [],
     "number": 3007,
-    "pull_request": {},
-    "state": "open",
     "title": "Fix intersection regression with fastfield range queries",
-    "updated_at": "2026-07-23T16:12:24Z",
+    "state": "open",
+    "created_at": "2026-07-22T07:58:39Z",
+    "updated_at": "2026-07-28T15:01:55Z",
+    "closed_at": null,
     "user": {
       "login": "PSeitz"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
   },
   {
     "closed_at": "2026-07-22T12:32:43Z",
@@ -3877,32 +3877,1184 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2026-07-23T20:04:22Z",
-    "draft": false,
     "id": 4119615856,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "0025ff",
-        "description": null,
-        "id": 4576553370448459310,
-        "name": "dependencies"
-      },
-      {
-        "color": "000000",
-        "description": "Pull requests that update GitHub Actions code",
-        "id": 3397884688459367338,
-        "name": "github_actions"
-      }
-    ],
     "number": 3010,
-    "pull_request": {},
-    "state": "open",
     "title": "build(deps): bump github/codeql-action/upload-sarif from 4.36.1 to 4.37.2",
-    "updated_at": "2026-07-23T20:04:23Z",
+    "state": "closed",
+    "created_at": "2026-07-23T20:04:22Z",
+    "updated_at": "2026-07-24T20:03:56Z",
+    "closed_at": "2026-07-24T20:03:54Z",
     "user": {
       "login": "dependabot"
-    }
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4128906444,
+    "number": 3011,
+    "title": "build(deps): bump github/codeql-action/upload-sarif from 4.36.1 to 4.37.3",
+    "state": "closed",
+    "created_at": "2026-07-24T20:03:50Z",
+    "updated_at": "2026-08-03T20:06:04Z",
+    "closed_at": "2026-08-03T20:06:02Z",
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4132128243,
+    "number": 3012,
+    "title": "Generate meaningful segment ids using UUIDv7",
+    "state": "open",
+    "created_at": "2026-07-25T11:00:50Z",
+    "updated_at": "2026-07-25T16:11:35Z",
+    "closed_at": null,
+    "user": {
+      "login": "Divyesh-k"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4140960164,
+    "number": 3013,
+    "title": "chore: downgrade all info! logs to debug!",
+    "state": "closed",
+    "created_at": "2026-07-27T09:11:33Z",
+    "updated_at": "2026-08-07T09:58:57Z",
+    "closed_at": "2026-08-07T09:58:57Z",
+    "user": {
+      "login": "mmustafasenoglu"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4145706996,
+    "number": 3014,
+    "title": "build(deps): update base64 requirement from 0.22.0 to 0.23.0",
+    "state": "closed",
+    "created_at": "2026-07-27T20:03:07Z",
+    "updated_at": "2026-08-07T09:57:56Z",
+    "closed_at": "2026-08-07T09:57:54Z",
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3060109781203623155,
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4145713650,
+    "number": 3015,
+    "title": "build(deps): bump ossf/scorecard-action from 2.4.3 to 2.4.4",
+    "state": "closed",
+    "created_at": "2026-07-27T20:04:07Z",
+    "updated_at": "2026-08-07T09:58:13Z",
+    "closed_at": "2026-08-07T09:58:11Z",
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4150994215,
+    "number": 3016,
+    "title": "Optimize very low-cardinality terms aggregations",
+    "state": "closed",
+    "created_at": "2026-07-28T11:42:49Z",
+    "updated_at": "2026-07-28T12:26:24Z",
+    "closed_at": "2026-07-28T12:26:11Z",
+    "user": {
+      "login": "PSeitz-dd"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4151317485,
+    "number": 3017,
+    "title": "Optimize very low-cardinality terms aggregations",
+    "state": "closed",
+    "created_at": "2026-07-28T12:26:14Z",
+    "updated_at": "2026-07-29T07:12:29Z",
+    "closed_at": "2026-07-29T06:57:55Z",
+    "user": {
+      "login": "PSeitz"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4161925443,
+    "number": 3018,
+    "title": "Up to 2x faster fused term-histogram aggregation",
+    "state": "closed",
+    "created_at": "2026-07-29T15:30:33Z",
+    "updated_at": "2026-08-10T07:39:49Z",
+    "closed_at": "2026-08-10T07:39:48Z",
+    "user": {
+      "login": "PSeitz"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4172673187,
+    "number": 3019,
+    "title": "feat: pass owned training vectors to IvfClusterer::train",
+    "state": "closed",
+    "created_at": "2026-07-30T20:14:13Z",
+    "updated_at": "2026-07-30T20:37:10Z",
+    "closed_at": "2026-07-30T20:14:20Z",
+    "user": {
+      "login": "rebasedming"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4188119755,
+    "number": 3020,
+    "title": "Refactoring TextFastFieldOptions",
+    "state": "closed",
+    "created_at": "2026-08-02T11:53:52Z",
+    "updated_at": "2026-08-02T15:17:05Z",
+    "closed_at": "2026-08-02T15:17:03Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 5047385377,
+    "number": 3021,
+    "title": "Should `ConstScoreQuery` disable scoring for its child query?",
+    "state": "closed",
+    "created_at": "2026-08-03T07:28:15Z",
+    "updated_at": "2026-08-27T15:52:19Z",
+    "closed_at": "2026-08-27T15:52:19Z",
+    "user": {
+      "login": "JinheLin"
+    },
+    "labels": [],
+    "issue_type": null
+  },
+  {
+    "id": 4197200302,
+    "number": 3022,
+    "title": "Fix: do not drive a non-summing score combiner with Block-WAND",
+    "state": "closed",
+    "created_at": "2026-08-03T18:52:49Z",
+    "updated_at": "2026-08-07T09:57:22Z",
+    "closed_at": "2026-08-07T09:57:22Z",
+    "user": {
+      "login": "marcbachmann"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4197677077,
+    "number": 3023,
+    "title": "build(deps): bump github/codeql-action/upload-sarif from 4.36.1 to 4.37.4",
+    "state": "closed",
+    "created_at": "2026-08-03T20:05:58Z",
+    "updated_at": "2026-08-05T20:05:31Z",
+    "closed_at": "2026-08-05T20:05:28Z",
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4198792550,
+    "number": 3024,
+    "title": "perf: Implement early termination for AutomatonWeight-based queries",
+    "state": "closed",
+    "created_at": "2026-08-03T23:27:45Z",
+    "updated_at": "2026-08-31T15:51:15Z",
+    "closed_at": "2026-08-31T15:51:14Z",
+    "user": {
+      "login": "alex09x"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4198797710,
+    "number": 3025,
+    "title": "Fix nested all-negative boolean clauses matching zero documents",
+    "state": "open",
+    "created_at": "2026-08-03T23:29:05Z",
+    "updated_at": "2026-08-08T21:10:45Z",
+    "closed_at": null,
+    "user": {
+      "login": "stumpylog"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4198909373,
+    "number": 3026,
+    "title": "fix: resolve UB in MemoryArena by using safe indexing bounds checks",
+    "state": "closed",
+    "created_at": "2026-08-03T23:55:52Z",
+    "updated_at": "2026-08-04T00:15:40Z",
+    "closed_at": "2026-08-04T00:15:40Z",
+    "user": {
+      "login": "alex09x"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4199017833,
+    "number": 3027,
+    "title": "fix: resolve UB in MemoryArena by using safe indexing bounds checks",
+    "state": "closed",
+    "created_at": "2026-08-04T00:20:17Z",
+    "updated_at": "2026-08-04T21:50:53Z",
+    "closed_at": "2026-08-04T21:50:53Z",
+    "user": {
+      "login": "alex09x"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4205039660,
+    "number": 3028,
+    "title": "Replace unmaintained rust-stemmers with frostem",
+    "state": "closed",
+    "created_at": "2026-08-04T15:57:21Z",
+    "updated_at": "2026-08-06T09:23:04Z",
+    "closed_at": "2026-08-06T08:54:56Z",
+    "user": {
+      "login": "Xuanwo"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4205256428,
+    "number": 3029,
+    "title": "reintroduce get_fast_field_tokenizer_name",
+    "state": "closed",
+    "created_at": "2026-08-04T16:26:48Z",
+    "updated_at": "2026-08-04T19:04:49Z",
+    "closed_at": "2026-08-04T19:04:46Z",
+    "user": {
+      "login": "trinity-1686a"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4207261698,
+    "number": 3030,
+    "title": "fix(sstable): report the real term ordinal when an automaton prunes blocks",
+    "state": "closed",
+    "created_at": "2026-08-04T21:25:08Z",
+    "updated_at": "2026-08-07T15:14:54Z",
+    "closed_at": "2026-08-07T15:14:54Z",
+    "user": {
+      "login": "flow3d"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 5067701627,
+    "number": 3031,
+    "title": "QueryParser::parse_query panics on `- *` instead of returning Err (Exist query without a field)",
+    "state": "open",
+    "created_at": "2026-08-05T05:38:40Z",
+    "updated_at": "2026-08-05T05:38:40Z",
+    "closed_at": null,
+    "user": {
+      "login": "coconutbird"
+    },
+    "labels": [],
+    "issue_type": null
+  },
+  {
+    "id": 5067725669,
+    "number": 3032,
+    "title": "parse_query_lenient does not terminate on `a:(^` (unclosed group with a boost)",
+    "state": "open",
+    "created_at": "2026-08-05T05:42:11Z",
+    "updated_at": "2026-08-23T13:23:47Z",
+    "closed_at": null,
+    "user": {
+      "login": "coconutbird"
+    },
+    "labels": [],
+    "issue_type": null
+  },
+  {
+    "id": 4215500829,
+    "number": 3033,
+    "title": "Bump github/codeql-action/upload-sarif from 4.36.1 to 4.37.5",
+    "state": "closed",
+    "created_at": "2026-08-05T20:05:23Z",
+    "updated_at": "2026-08-07T20:04:58Z",
+    "closed_at": "2026-08-07T20:04:57Z",
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4215505569,
+    "number": 3034,
+    "title": "Update lru requirement from 0.16.3 to 0.18.2",
+    "state": "closed",
+    "created_at": "2026-08-05T20:06:03Z",
+    "updated_at": "2026-08-06T08:18:18Z",
+    "closed_at": "2026-08-06T08:18:16Z",
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3060109781203623155,
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4231310807,
+    "number": 3035,
+    "title": "Bump github/codeql-action/upload-sarif from 4.36.1 to 4.37.6",
+    "state": "closed",
+    "created_at": "2026-08-07T20:04:53Z",
+    "updated_at": "2026-08-17T20:04:07Z",
+    "closed_at": "2026-08-17T20:04:05Z",
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4247889414,
+    "number": 3036,
+    "title": "Bump Swatinem/rust-cache from 2.9.1 to 2.9.2",
+    "state": "open",
+    "created_at": "2026-08-10T20:04:39Z",
+    "updated_at": "2026-08-10T20:04:40Z",
+    "closed_at": null,
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4251503840,
+    "number": 3037,
+    "title": "Removing TODO.txt",
+    "state": "closed",
+    "created_at": "2026-08-11T08:30:06Z",
+    "updated_at": "2026-08-11T08:30:18Z",
+    "closed_at": "2026-08-11T08:30:15Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4253753687,
+    "number": 3038,
+    "title": "(Calculated fields) Plain column codec",
+    "state": "open",
+    "created_at": "2026-08-11T13:46:38Z",
+    "updated_at": "2026-09-01T13:14:19Z",
+    "closed_at": null,
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
+  },
+  {
+    "id": 4262260539,
+    "number": 3039,
+    "title": "fix clippy",
+    "state": "closed",
+    "created_at": "2026-08-12T12:30:16Z",
+    "updated_at": "2026-08-12T13:08:08Z",
+    "closed_at": "2026-08-12T13:08:06Z",
+    "user": {
+      "login": "PSeitz"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4267002984,
+    "number": 3040,
+    "title": "Faster term aggregation result merges",
+    "state": "open",
+    "created_at": "2026-08-13T00:17:59Z",
+    "updated_at": "2026-09-03T07:44:18Z",
+    "closed_at": null,
+    "user": {
+      "login": "PSeitz"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4275458820,
+    "number": 3041,
+    "title": "chore: sync security-policy",
+    "state": "closed",
+    "created_at": "2026-08-13T22:43:49Z",
+    "updated_at": "2026-08-14T13:09:11Z",
+    "closed_at": "2026-08-14T13:09:09Z",
+    "user": {
+      "login": "dayaffe"
+    },
+    "labels": [
+      {
+        "id": 2164156968380213859,
+        "name": "no-changelog",
+        "color": "747659",
+        "description": "Unused for now"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4280613253,
+    "number": 3042,
+    "title": "chore: sync ai-policy + add CONTRIBUTING.md",
+    "state": "closed",
+    "created_at": "2026-08-14T14:25:18Z",
+    "updated_at": "2026-08-14T17:46:01Z",
+    "closed_at": "2026-08-14T17:46:01Z",
+    "user": {
+      "login": "dayaffe"
+    },
+    "labels": [
+      {
+        "id": 2164156968380213859,
+        "name": "no-changelog",
+        "color": "747659",
+        "description": "Unused for now"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4281874550,
+    "number": 3043,
+    "title": "SIMD batch unpacking for the u64 fast field codecs",
+    "state": "open",
+    "created_at": "2026-08-14T17:21:01Z",
+    "updated_at": "2026-08-26T07:40:51Z",
+    "closed_at": null,
+    "user": {
+      "login": "marcbachmann"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4282282029,
+    "number": 3044,
+    "title": "Add BlockFor fast field codec + SIMD batch decode (ALP included, unwired)",
+    "state": "closed",
+    "created_at": "2026-08-14T18:29:04Z",
+    "updated_at": "2026-08-20T16:06:15Z",
+    "closed_at": "2026-08-20T16:06:14Z",
+    "user": {
+      "login": "marcbachmann"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
+  },
+  {
+    "id": 4298868908,
+    "number": 3045,
+    "title": "Bump github/codeql-action/upload-sarif from 4.36.1 to 4.37.7",
+    "state": "closed",
+    "created_at": "2026-08-17T20:04:00Z",
+    "updated_at": "2026-08-24T20:06:20Z",
+    "closed_at": "2026-08-24T20:06:17Z",
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4305868240,
+    "number": 3046,
+    "title": "Add a JIT expression compiler",
+    "state": "closed",
+    "created_at": "2026-08-18T15:06:32Z",
+    "updated_at": "2026-08-19T10:06:45Z",
+    "closed_at": "2026-08-19T10:06:45Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
+  },
+  {
+    "id": 4312719228,
+    "number": 3047,
+    "title": "Calculed fields: Add standalone JIT expression compiler",
+    "state": "open",
+    "created_at": "2026-08-19T10:05:32Z",
+    "updated_at": "2026-09-03T14:17:08Z",
+    "closed_at": null,
+    "user": {
+      "login": "fulmicoton-dd"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
+  },
+  {
+    "id": 4312721091,
+    "number": 3048,
+    "title": "Calculed fields: Add calculated predicate query",
+    "state": "open",
+    "created_at": "2026-08-19T10:05:49Z",
+    "updated_at": "2026-09-03T14:17:49Z",
+    "closed_at": null,
+    "user": {
+      "login": "fulmicoton-dd"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
+  },
+  {
+    "id": 4315329553,
+    "number": 3049,
+    "title": "Minor refactoring of find_missing_docs",
+    "state": "closed",
+    "created_at": "2026-08-19T15:47:05Z",
+    "updated_at": "2026-08-19T16:11:16Z",
+    "closed_at": "2026-08-19T16:11:15Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4317125480,
+    "number": 3050,
+    "title": "fix(columnar): estimate BlockwiseLinear's residuals per block, not per column",
+    "state": "open",
+    "created_at": "2026-08-19T20:00:15Z",
+    "updated_at": "2026-08-26T08:43:54Z",
+    "closed_at": null,
+    "user": {
+      "login": "marcbachmann"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4317427953,
+    "number": 3051,
+    "title": "Fix numeric term key normalization across segments",
+    "state": "closed",
+    "created_at": "2026-08-19T20:45:13Z",
+    "updated_at": "2026-08-19T21:09:42Z",
+    "closed_at": "2026-08-19T21:09:40Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4322578004,
+    "number": 3052,
+    "title": "Faster exists queries on columns (up to 500x)",
+    "state": "closed",
+    "created_at": "2026-08-20T11:58:31Z",
+    "updated_at": "2026-09-02T06:14:46Z",
+    "closed_at": "2026-09-02T06:14:46Z",
+    "user": {
+      "login": "PSeitz"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4326190616,
+    "number": 3053,
+    "title": "Update datasketches requirement from 0.3.0 to 0.4.0",
+    "state": "open",
+    "created_at": "2026-08-20T20:03:29Z",
+    "updated_at": "2026-08-20T20:03:30Z",
+    "closed_at": null,
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3060109781203623155,
+        "name": "rust",
+        "color": "000000",
+        "description": "Pull requests that update Rust code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 5229209608,
+    "number": 3054,
+    "title": "0.26.1: distributed cardinality merge silently under-counts after intermediate serialization (datasketches 0.2.0 bug, fixed on main)",
+    "state": "closed",
+    "created_at": "2026-08-23T21:34:48Z",
+    "updated_at": "2026-08-23T21:37:24Z",
+    "closed_at": "2026-08-23T21:37:24Z",
+    "user": {
+      "login": "porcupin26"
+    },
+    "labels": [],
+    "issue_type": null
+  },
+  {
+    "id": 4351975948,
+    "number": 3055,
+    "title": "Bump github/codeql-action/upload-sarif from 4.36.1 to 4.37.8",
+    "state": "closed",
+    "created_at": "2026-08-24T20:06:12Z",
+    "updated_at": "2026-08-28T20:04:23Z",
+    "closed_at": "2026-08-28T20:04:22Z",
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4366776822,
+    "number": 3056,
+    "title": "Fix RamDirectory::atomic_write not waiting for reload watchers",
+    "state": "closed",
+    "created_at": "2026-08-26T11:57:26Z",
+    "updated_at": "2026-08-26T12:52:55Z",
+    "closed_at": "2026-08-26T12:28:51Z",
+    "user": {
+      "login": "Divyesh-k"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4367115246,
+    "number": 3057,
+    "title": "Clarify that OnCommitWithDelay reload is not synchronized with commit()",
+    "state": "closed",
+    "created_at": "2026-08-26T12:42:34Z",
+    "updated_at": "2026-08-26T12:52:55Z",
+    "closed_at": "2026-08-26T12:46:03Z",
+    "user": {
+      "login": "Divyesh-k"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4371178292,
+    "number": 3058,
+    "title": "Add read-only directory support",
+    "state": "open",
+    "created_at": "2026-08-26T22:24:01Z",
+    "updated_at": "2026-09-02T17:15:36Z",
+    "closed_at": null,
+    "user": {
+      "login": "shashankbrgowda"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4373085790,
+    "number": 3059,
+    "title": "Disable child scoring in ConstScoreQuery",
+    "state": "closed",
+    "created_at": "2026-08-27T05:46:42Z",
+    "updated_at": "2026-08-27T15:52:18Z",
+    "closed_at": "2026-08-27T15:52:18Z",
+    "user": {
+      "login": "JinheLin"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4387719369,
+    "number": 3060,
+    "title": "Bump github/codeql-action/upload-sarif from 4.36.1 to 4.37.9",
+    "state": "open",
+    "created_at": "2026-08-28T20:04:17Z",
+    "updated_at": "2026-08-28T20:04:18Z",
+    "closed_at": null,
+    "user": {
+      "login": "dependabot"
+    },
+    "labels": [
+      {
+        "id": 4576553370448459310,
+        "name": "dependencies",
+        "color": "0025ff",
+        "description": null
+      },
+      {
+        "id": 3397884688459367338,
+        "name": "github_actions",
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4400388297,
+    "number": 3061,
+    "title": "Refactoring to introduce calculated fields.",
+    "state": "closed",
+    "created_at": "2026-08-31T08:00:45Z",
+    "updated_at": "2026-09-01T09:25:03Z",
+    "closed_at": "2026-09-01T09:25:03Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4402378221,
+    "number": 3062,
+    "title": "fix formatting",
+    "state": "closed",
+    "created_at": "2026-08-31T12:40:04Z",
+    "updated_at": "2026-08-31T12:40:30Z",
+    "closed_at": "2026-08-31T12:40:28Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4403677434,
+    "number": 3063,
+    "title": "Paul.masurel/calc field in agg",
+    "state": "closed",
+    "created_at": "2026-08-31T15:16:03Z",
+    "updated_at": "2026-09-01T08:01:27Z",
+    "closed_at": "2026-09-01T08:01:27Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
+  },
+  {
+    "id": 4403686399,
+    "number": 3064,
+    "title": "Paul.masurel/calc field in agg",
+    "state": "closed",
+    "created_at": "2026-08-31T15:17:09Z",
+    "updated_at": "2026-09-01T13:12:38Z",
+    "closed_at": "2026-09-01T13:12:38Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
+  },
+  {
+    "id": 4410667937,
+    "number": 3066,
+    "title": "Refactoring to introduce calculated fields.",
+    "state": "closed",
+    "created_at": "2026-09-01T09:24:21Z",
+    "updated_at": "2026-09-01T13:10:23Z",
+    "closed_at": "2026-09-01T13:10:20Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4411067000,
+    "number": 3067,
+    "title": "aggregation: evaluate numerical calculated columns",
+    "state": "closed",
+    "created_at": "2026-09-01T10:14:58Z",
+    "updated_at": "2026-09-01T13:12:27Z",
+    "closed_at": "2026-09-01T13:12:27Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
+  },
+  {
+    "id": 4412509346,
+    "number": 3068,
+    "title": "(Calculated fields) Calc field in aggression",
+    "state": "closed",
+    "created_at": "2026-09-01T13:16:19Z",
+    "updated_at": "2026-09-01T13:23:00Z",
+    "closed_at": "2026-09-01T13:18:40Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4412515663,
+    "number": 3069,
+    "title": "(Calculated fields) calc fields in aggregation",
+    "state": "open",
+    "created_at": "2026-09-01T13:17:06Z",
+    "updated_at": "2026-09-03T14:17:08Z",
+    "closed_at": null,
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": true
+  },
+  {
+    "id": 4421062444,
+    "number": 3070,
+    "title": "Added the capacity to build scorer and seek_danger in a joint manner.",
+    "state": "closed",
+    "created_at": "2026-09-02T10:10:26Z",
+    "updated_at": "2026-09-03T12:07:41Z",
+    "closed_at": "2026-09-03T12:07:39Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4421765245,
+    "number": 3071,
+    "title": "Minor change: removing BooleanWeight::new as it is quite the footgun",
+    "state": "closed",
+    "created_at": "2026-09-02T11:41:28Z",
+    "updated_at": "2026-09-02T11:47:53Z",
+    "closed_at": "2026-09-02T11:47:51Z",
+    "user": {
+      "login": "fulmicoton"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 4434343189,
+    "number": 3072,
+    "title": "Add DocPredicateQuery and a generic FunctionPredicate implementation",
+    "state": "open",
+    "created_at": "2026-09-03T15:23:28Z",
+    "updated_at": "2026-09-03T15:34:55Z",
+    "closed_at": null,
+    "user": {
+      "login": "fulmicoton-dd"
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
+  },
+  {
+    "id": 5338755702,
+    "number": 3073,
+    "title": "Consider rusty_zstd for the document-store Zstd backend",
+    "state": "open",
+    "created_at": "2026-09-03T16:05:09Z",
+    "updated_at": "2026-09-03T17:41:47Z",
+    "closed_at": null,
+    "user": {
+      "login": "Ttimmahlax"
+    },
+    "labels": [],
+    "issue_type": null
   }
 ]

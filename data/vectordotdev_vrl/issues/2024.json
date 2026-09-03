@@ -911,20 +911,20 @@
     }
   },
   {
-    "closed_at": "2024-01-22T22:55:35Z",
-    "created_at": "2024-01-22T22:23:11Z",
-    "draft": false,
     "id": 1690688516,
-    "issue_type": null,
-    "labels": [],
     "number": 649,
-    "pull_request": {},
-    "state": "closed",
     "title": "chore(scripts): update publish script to also generate the new changelog",
-    "updated_at": "2024-01-22T22:55:35Z",
+    "state": "closed",
+    "created_at": "2024-01-22T22:23:11Z",
+    "updated_at": "2026-09-03T14:36:49Z",
+    "closed_at": "2024-01-22T22:55:35Z",
     "user": {
       "login": "pront"
-    }
+    },
+    "labels": [],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2024-01-23T16:41:48Z",
@@ -11576,27 +11576,27 @@
     }
   },
   {
-    "closed_at": "2024-10-07T18:44:45Z",
-    "created_at": "2024-10-07T18:12:20Z",
-    "draft": false,
     "id": 2111436122,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
-        "id": 405647549714097197,
-        "name": "no-changelog"
-      }
-    ],
     "number": 1065,
-    "pull_request": {},
-    "state": "closed",
     "title": "chore(deps): remove prost-derive dep by turning on the 'derive' feature",
-    "updated_at": "2024-10-07T18:44:46Z",
+    "state": "closed",
+    "created_at": "2024-10-07T18:12:20Z",
+    "updated_at": "2026-09-03T14:36:48Z",
+    "closed_at": "2024-10-07T18:44:45Z",
     "user": {
       "login": "pront"
-    }
+    },
+    "labels": [
+      {
+        "id": 405647549714097197,
+        "name": "no-changelog",
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2024-10-10T20:41:56Z",

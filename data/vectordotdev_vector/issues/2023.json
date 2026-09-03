@@ -10153,18 +10153,18 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-01-31T21:55:00Z",
     "id": 1565056398,
-    "issue_type": null,
-    "labels": [],
     "number": 16222,
-    "state": "open",
     "title": "chore(config): mark shared types as 'advanced' at the type-level",
-    "updated_at": "2023-01-31T21:55:00Z",
+    "state": "closed",
+    "created_at": "2023-01-31T21:55:00Z",
+    "updated_at": "2026-08-07T20:06:40Z",
+    "closed_at": "2026-08-07T20:06:40Z",
     "user": {
       "login": "tobz"
-    }
+    },
+    "labels": [],
+    "issue_type": null
   },
   {
     "closed_at": "2023-02-03T15:22:35Z",
@@ -44641,33 +44641,33 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-06-30T09:58:10Z",
-    "draft": false,
     "id": 1414600222,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to releasing Vector",
-        "id": 843604899509384131,
-        "name": "domain: releasing"
-      },
-      {
-        "color": "DBE0E9",
-        "description": "Pull requests that are awaiting their author.",
-        "id": 1951021668007277535,
-        "name": "meta: awaiting author"
-      }
-    ],
     "number": 17812,
-    "pull_request": {},
-    "state": "open",
     "title": "feat(distribution/systemd): add vector@.service and hardened-vector@.service",
-    "updated_at": "2026-03-16T14:24:34Z",
+    "state": "closed",
+    "created_at": "2023-06-30T09:58:10Z",
+    "updated_at": "2026-07-27T19:59:42Z",
+    "closed_at": "2026-07-27T19:59:30Z",
     "user": {
       "login": "FlorentinDUBOIS"
-    }
+    },
+    "labels": [
+      {
+        "id": 843604899509384131,
+        "name": "domain: releasing",
+        "color": "343639",
+        "description": "Anything related to releasing Vector"
+      },
+      {
+        "id": 1951021668007277535,
+        "name": "meta: awaiting author",
+        "color": "DBE0E9",
+        "description": "Pull requests that are awaiting their author."
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2023-07-04T16:39:14Z",
@@ -49374,31 +49374,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-07-21T08:35:51Z",
     "id": 1815400632,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "DBE0E9",
-        "description": "Anything in the idea phase. Needs further discussion and consensus before work can begin.",
-        "id": 2532840815751579171,
-        "name": "meta: idea"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `http_server` source related",
-        "id": 4345892752843924220,
-        "name": "source: http_server"
-      }
-    ],
     "number": 18045,
-    "state": "open",
     "title": "Support http body data validation for http_server source",
-    "updated_at": "2026-05-30T00:07:55Z",
+    "state": "open",
+    "created_at": "2023-07-21T08:35:51Z",
+    "updated_at": "2026-07-30T13:17:09Z",
+    "closed_at": null,
     "user": {
       "login": "IFtech-A"
-    }
+    },
+    "labels": [
+      {
+        "id": 2532840815751579171,
+        "name": "meta: idea",
+        "color": "DBE0E9",
+        "description": "Anything in the idea phase. Needs further discussion and consensus before work can begin."
+      },
+      {
+        "id": 4345892752843924220,
+        "name": "source: http_server",
+        "color": "5ED9F6",
+        "description": "Anything `http_server` source related"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2024-05-22T02:37:07Z",
@@ -53545,18 +53545,18 @@
     }
   },
   {
-    "closed_at": "2023-08-14T14:50:31Z",
-    "created_at": "2023-08-13T09:52:09Z",
     "id": 1848514596,
-    "issue_type": "Feature",
-    "labels": [],
     "number": 18230,
-    "state": "closed",
     "title": "FIPS compliance",
-    "updated_at": "2026-05-30T00:08:14Z",
+    "state": "closed",
+    "created_at": "2023-08-13T09:52:09Z",
+    "updated_at": "2026-08-25T13:32:08Z",
+    "closed_at": "2023-08-14T14:50:31Z",
     "user": {
       "login": "elibramson"
-    }
+    },
+    "labels": [],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2023-08-14T16:37:56Z",
@@ -55964,25 +55964,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-08-21T23:37:57Z",
     "id": 1860320318,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's memory/disk buffers",
-        "id": 3389798092856007937,
-        "name": "domain: buffers"
-      }
-    ],
     "number": 18336,
-    "state": "open",
     "title": "unable to be deserialized error on disk buffer block vector sending data out",
-    "updated_at": "2026-06-09T09:51:07Z",
+    "state": "open",
+    "created_at": "2023-08-21T23:37:57Z",
+    "updated_at": "2026-08-29T19:18:09Z",
+    "closed_at": null,
     "user": {
       "login": "ee07b415"
-    }
+    },
+    "labels": [
+      {
+        "id": 3389798092856007937,
+        "name": "domain: buffers",
+        "color": "343639",
+        "description": "Anything related to Vector's memory/disk buffers"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2023-08-22T22:57:58Z",
@@ -56897,25 +56897,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-08-24T23:37:59Z",
     "id": 1866026007,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "DBE0E9",
-        "description": "A bug that has been reproduced or confirmed.",
-        "id": 1968677811294901969,
-        "name": "meta: confirmed"
-      }
-    ],
     "number": 18382,
-    "state": "open",
     "title": "Unable to get Vector to use the FIPS AWS endpoints",
-    "updated_at": "2026-05-29T23:16:32Z",
+    "state": "closed",
+    "created_at": "2023-08-24T23:37:59Z",
+    "updated_at": "2026-08-26T08:08:01Z",
+    "closed_at": "2026-08-25T16:11:01Z",
     "user": {
       "login": "alex-rowe"
-    }
+    },
+    "labels": [
+      {
+        "id": 1968677811294901969,
+        "name": "meta: confirmed",
+        "color": "DBE0E9",
+        "description": "A bug that has been reproduced or confirmed."
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2023-08-26T01:23:34Z",
@@ -60934,37 +60934,37 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-09-14T19:21:34Z",
     "id": 1897167413,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's internal tests",
-        "id": 5489522564843688803,
-        "name": "domain: tests"
-      },
-      {
-        "color": "c8d6e5",
-        "description": "This issue represents a regression",
-        "id": 5726225094191158907,
-        "name": "meta: regression"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's codecs (encoding/decoding)",
-        "id": 24217296173635418,
-        "name": "domain: codecs"
-      }
-    ],
     "number": 18570,
-    "state": "open",
     "title": "`native_json` codec is not serializing/deserializing `EventMetadata`.",
-    "updated_at": "2026-05-29T23:16:51Z",
+    "state": "open",
+    "created_at": "2023-09-14T19:21:34Z",
+    "updated_at": "2026-08-31T20:09:09Z",
+    "closed_at": null,
     "user": {
       "login": "neuronull"
-    }
+    },
+    "labels": [
+      {
+        "id": 5489522564843688803,
+        "name": "domain: tests",
+        "color": "343639",
+        "description": "Anything related to Vector's internal tests"
+      },
+      {
+        "id": 5726225094191158907,
+        "name": "meta: regression",
+        "color": "c8d6e5",
+        "description": "This issue represents a regression"
+      },
+      {
+        "id": 24217296173635418,
+        "name": "domain: codecs",
+        "color": "343639",
+        "description": "Anything related to Vector's codecs (encoding/decoding)"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2023-09-15T11:06:28Z",
@@ -68136,18 +68136,18 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-10-24T10:53:08Z",
     "id": 1958993221,
-    "issue_type": "Feature",
-    "labels": [],
     "number": 18917,
-    "state": "open",
     "title": "Make metrics aggregation opt-in for batches where sink supports multiple timestamps",
-    "updated_at": "2026-05-30T00:09:08Z",
+    "state": "open",
+    "created_at": "2023-10-24T10:53:08Z",
+    "updated_at": "2026-08-13T13:20:59Z",
+    "closed_at": null,
     "user": {
       "login": "moschroe"
-    }
+    },
+    "labels": [],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2023-10-24T14:27:23Z",
@@ -74184,37 +74184,37 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-11-17T04:02:40Z",
     "id": 1998236182,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "BF72F6",
-        "description": "A code change that does not add user value.",
-        "id": 2473344330675535720,
-        "name": "type: tech debt"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's dependencies",
-        "id": 7735142015044067771,
-        "name": "domain: deps"
-      },
-      {
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file",
-        "id": 9188659864033715330,
-        "name": "dependencies"
-      }
-    ],
     "number": 19179,
-    "state": "open",
     "title": "Upgrade the `http` crate to version 1.0.0",
-    "updated_at": "2026-06-29T18:08:45Z",
+    "state": "open",
+    "created_at": "2023-11-17T04:02:40Z",
+    "updated_at": "2026-08-31T20:12:27Z",
+    "closed_at": null,
     "user": {
       "login": "bruceg"
-    }
+    },
+    "labels": [
+      {
+        "id": 2473344330675535720,
+        "name": "type: tech debt",
+        "color": "BF72F6",
+        "description": "A code change that does not add user value."
+      },
+      {
+        "id": 7735142015044067771,
+        "name": "domain: deps",
+        "color": "343639",
+        "description": "Anything related to Vector's dependencies"
+      },
+      {
+        "id": 9188659864033715330,
+        "name": "dependencies",
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2023-11-17T16:04:07Z",
@@ -77031,25 +77031,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-12-05T19:57:31Z",
     "id": 2027018653,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's codecs (encoding/decoding)",
-        "id": 24217296173635418,
-        "name": "domain: codecs"
-      }
-    ],
     "number": 19315,
-    "state": "open",
     "title": "Protobuf default recursion depth limit of 32 - fails disk buffering, codec, and Vector source/sink",
-    "updated_at": "2026-05-29T23:19:15Z",
+    "state": "closed",
+    "created_at": "2023-12-05T19:57:31Z",
+    "updated_at": "2026-08-17T23:23:43Z",
+    "closed_at": "2026-08-17T23:23:43Z",
     "user": {
       "login": "sbalmos"
-    }
+    },
+    "labels": [
+      {
+        "id": 24217296173635418,
+        "name": "domain: codecs",
+        "color": "343639",
+        "description": "Anything related to Vector's codecs (encoding/decoding)"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2023-12-06T09:39:56Z",
@@ -78293,25 +78293,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-12-14T12:43:23Z",
     "id": 2041624799,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `syslog` source related",
-        "id": 2424784285363771579,
-        "name": "source: syslog"
-      }
-    ],
     "number": 19383,
-    "state": "open",
     "title": "Allow systemd socket passing for UNIX sockets (syslog source)",
-    "updated_at": "2026-05-30T00:09:30Z",
+    "state": "open",
+    "created_at": "2023-12-14T12:43:23Z",
+    "updated_at": "2026-08-20T12:56:56Z",
+    "closed_at": null,
     "user": {
       "login": "Korrigan"
-    }
+    },
+    "labels": [
+      {
+        "id": 2424784285363771579,
+        "name": "source: syslog",
+        "color": "5ED9F6",
+        "description": "Anything `syslog` source related"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2023-12-14T14:07:54Z",
@@ -78583,31 +78583,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-12-15T13:53:44Z",
     "id": 2043769498,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `azure_blob` sink related",
-        "id": 1651409443776833596,
-        "name": "sink: azure_blob"
-      }
-    ],
     "number": 19397,
-    "state": "open",
     "title": "AppendBlob support for azure_blob sink",
-    "updated_at": "2026-06-15T13:18:11Z",
+    "state": "closed",
+    "created_at": "2023-12-15T13:53:44Z",
+    "updated_at": "2026-08-28T14:27:32Z",
+    "closed_at": "2026-08-28T14:27:32Z",
     "user": {
       "login": "linuraj"
-    }
+    },
+    "labels": [
+      {
+        "id": 6524463192304363030,
+        "name": "domain: sinks",
+        "color": "343639",
+        "description": "Anything related to the Vector's sinks"
+      },
+      {
+        "id": 1651409443776833596,
+        "name": "sink: azure_blob",
+        "color": "5ED9F6",
+        "description": "Anything `azure_blob` sink related"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2024-04-03T11:42:22Z",
@@ -79917,31 +79917,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2023-12-24T03:01:06Z",
     "id": 2054968197,
-    "issue_type": "Bug",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to monitoring/observing Vector",
-        "id": 8902634565218545672,
-        "name": "domain: observability"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `kafka` source related",
-        "id": 5855082884786344119,
-        "name": "source: kafka"
-      }
-    ],
     "number": 19460,
-    "state": "open",
     "title": "Kafka source does not have metric _component_received_events_total",
-    "updated_at": "2026-06-03T14:09:00Z",
+    "state": "closed",
+    "created_at": "2023-12-24T03:01:06Z",
+    "updated_at": "2026-07-28T18:31:48Z",
+    "closed_at": "2026-07-28T18:31:48Z",
     "user": {
       "login": "youtian001"
-    }
+    },
+    "labels": [
+      {
+        "id": 8902634565218545672,
+        "name": "domain: observability",
+        "color": "343639",
+        "description": "Anything related to monitoring/observing Vector"
+      },
+      {
+        "id": 5855082884786344119,
+        "name": "source: kafka",
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related"
+      }
+    ],
+    "issue_type": "Bug"
   },
   {
     "closed_at": "2024-01-02T22:35:02Z",

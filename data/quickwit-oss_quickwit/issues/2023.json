@@ -15739,42 +15739,25 @@
     "id": 1543005899
   },
   {
-    "updated_at": "2026-07-28T12:55:58Z",
-    "state_reason": "completed",
-    "draft": false,
-    "created_at": "2023-10-05T21:39:58Z",
-    "closed_at": "2026-07-28T12:55:58Z",
-    "number": 3916,
-    "comments_count": 4,
-    "state": "closed",
-    "assignees": [
-      "guilload"
-    ],
     "id": 1929102012,
-    "first_response_at": "2023-10-12T20:46:21Z",
-    "unique_participants": 2,
-    "labels": [
-      {
-        "color": "a2eeef",
-        "description": "New feature or request",
-        "id": 2912049044,
-        "name": "enhancement"
-      }
-    ],
-    "unique_external_participants": 1,
-    "engagement_count": 4,
+    "number": 3916,
     "title": "Handle replication errors",
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/3916",
-    "last_engagement_at": "2026-07-28T12:55:58Z",
-    "review_comments_count": 0,
-    "reviews_count": 0,
-    "type": "issue",
+    "state": "closed",
+    "created_at": "2023-10-05T21:39:58Z",
+    "updated_at": "2026-07-28T12:55:58Z",
+    "closed_at": "2026-07-28T12:55:58Z",
     "user": {
       "login": "guilload"
     },
-    "first_response_hours": 167.11,
-    "human_comments_7d": 0,
-    "unique_human_participants_7d": 0
+    "labels": [
+      {
+        "id": 1470408430858150435,
+        "name": "enhancement",
+        "color": "a2eeef",
+        "description": "New feature or request"
+      }
+    ],
+    "issue_type": null
   },
   {
     "merged_at": "2023-10-10T14:41:37Z",
@@ -16729,39 +16712,25 @@
     "merge_commit_sha": "6b38b785b3a33117d4161253db8ce9ca3751523a"
   },
   {
-    "number": 4000,
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/4000",
-    "unique_external_participants": 0,
-    "labels": [
-      {
-        "color": "a2eeef",
-        "description": "New feature or request",
-        "id": 2912049044,
-        "name": "enhancement"
-      }
-    ],
-    "state_reason": "completed",
-    "engagement_count": 0,
-    "type": "issue",
-    "updated_at": "2026-08-19T22:11:17Z",
     "id": 1954564789,
-    "unique_participants": 0,
-    "review_comments_count": 0,
+    "number": 4000,
+    "title": "Optimize searcher semaphore",
+    "state": "closed",
+    "created_at": "2023-10-20T15:49:40Z",
+    "updated_at": "2026-08-19T22:11:17Z",
+    "closed_at": "2026-08-19T22:11:17Z",
     "user": {
       "login": "guilload"
     },
-    "assignees": [
-      "fulmicoton"
+    "labels": [
+      {
+        "id": 1470408430858150435,
+        "name": "enhancement",
+        "color": "a2eeef",
+        "description": "New feature or request"
+      }
     ],
-    "closed_at": "2026-08-19T22:11:17Z",
-    "title": "Optimize searcher semaphore",
-    "draft": false,
-    "state": "closed",
-    "reviews_count": 0,
-    "created_at": "2023-10-20T15:49:40Z",
-    "comments_count": 0,
-    "human_comments_7d": 0,
-    "unique_human_participants_7d": 0
+    "issue_type": null
   },
   {
     "title": "Bump node from 18 to 21",
@@ -16815,43 +16784,31 @@
     "pull_request": {}
   },
   {
-    "state_reason": "completed",
+    "id": 1955534318,
+    "number": 4004,
+    "title": "Update the distributed search tutorial ",
+    "state": "closed",
+    "created_at": "2023-10-21T15:18:48Z",
+    "updated_at": "2026-08-21T18:59:37Z",
+    "closed_at": "2026-08-21T18:59:37Z",
+    "user": {
+      "login": "fmassot"
+    },
     "labels": [
       {
-        "id": 2912049040,
+        "id": 3954923629933036143,
         "name": "documentation",
         "color": "0075ca",
         "description": "Improvements or additions to documentation"
       },
       {
+        "id": 408601970500688619,
+        "name": "good first issue",
         "color": "7057ff",
-        "description": "Good for newcomers",
-        "id": 2912049046,
-        "name": "good first issue"
+        "description": "Good for newcomers"
       }
     ],
-    "number": 4004,
-    "unique_participants": 0,
-    "draft": false,
-    "updated_at": "2026-08-21T18:59:37Z",
-    "assignees": [],
-    "comments_count": 0,
-    "title": "Update the distributed search tutorial ",
-    "created_at": "2023-10-21T15:18:48Z",
-    "state": "closed",
-    "user": {
-      "login": "fmassot"
-    },
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/4004",
-    "review_comments_count": 0,
-    "type": "issue",
-    "id": 1955534318,
-    "unique_external_participants": 0,
-    "reviews_count": 0,
-    "engagement_count": 0,
-    "closed_at": "2026-08-21T18:59:37Z",
-    "human_comments_7d": 0,
-    "unique_human_participants_7d": 0
+    "issue_type": null
   },
   {
     "title": "Fix failpoint tests.",
@@ -19439,38 +19396,25 @@
     "merged_at": "2023-11-28T07:40:00Z"
   },
   {
-    "engagement_count": 1,
-    "html_url": "https://github.com/quickwit-oss/quickwit/issues/4202",
-    "review_comments_count": 0,
-    "comments_count": 1,
-    "unique_external_participants": 0,
-    "last_engagement_at": "2026-06-18T12:47:50Z",
-    "type": "issue",
-    "created_at": "2023-11-27T16:04:42Z",
-    "draft": false,
-    "title": "abort warmup and query when warming up the dictionary is enought to know a split can't match",
-    "unique_participants": 1,
     "id": 2012609375,
-    "updated_at": "2026-06-18T12:47:50Z",
-    "state_reason": "completed",
-    "state": "closed",
-    "closed_at": "2026-06-18T12:47:50Z",
     "number": 4202,
-    "assignees": [],
+    "title": "abort warmup and query when warming up the dictionary is enought to know a split can't match",
+    "state": "closed",
+    "created_at": "2023-11-27T16:04:42Z",
+    "updated_at": "2026-06-18T12:47:50Z",
+    "closed_at": "2026-06-18T12:47:50Z",
+    "user": {
+      "login": "trinity-1686a"
+    },
     "labels": [
       {
-        "id": 2912049044,
+        "id": 1470408430858150435,
         "name": "enhancement",
         "color": "a2eeef",
         "description": "New feature or request"
       }
     ],
-    "user": {
-      "login": "trinity-1686a"
-    },
-    "reviews_count": 0,
-    "human_comments_7d": 0,
-    "unique_human_participants_7d": 0
+    "issue_type": null
   },
   {
     "type": "pull_request",
