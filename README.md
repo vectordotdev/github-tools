@@ -69,7 +69,7 @@ Fetch:
   fetch-labels       Fetch all labels for a repository
 
 Pipeline:
-  sync-metrics       Fetch GitHub data locally, rebuild DB, and submit Datadog metrics
+  sync-metrics       Fetch GitHub data locally, rebuild DB, and prepare or submit metrics
   push-metrics       Submit a Datadog snapshot from an existing local DB
   generate-all       Build DB + summaries + charts for all repos (workflow)
   build-db           Load issues JSON into SQLite database
@@ -160,16 +160,19 @@ Re-run `generate-all` after collecting stats to update the dashboard with the AI
 op run --env-file secrets.env -- github-tools sync-metrics \
   --repo vectordotdev/vector \
   --lookback 7d \
-  --activity-window 30d
+  --activity-window 30d \
+  --submit
 ```
 
 The command:
 
 1. Fetches a complete GitHub snapshot into the runner-local `data/{owner}_{repo}/` directory.
 2. Rebuilds `out/db/{owner}_{repo}.db` from that local snapshot.
-3. Reconstructs one snapshot at each UTC midnight in `--lookback`, adds the current snapshot, and sends them to Datadog. `--activity-window` independently controls the rolling period summarized by the closed-item metrics.
+3. Reconstructs one snapshot at each UTC midnight in `--lookback`, adds the current snapshot, and sends them to Datadog when `--submit` is present. `--activity-window` independently controls the rolling period summarized by the closed-item metrics.
 
 The fetched JSON and SQLite database are temporary automation inputs. The command never stages, commits, or pushes them.
+
+`sync-metrics` requires exactly one output mode: `--submit`, `--dry-run`, or `--output-json`. Submission is explicit so an incomplete automation command cannot write metrics accidentally. `--submit` reads `DD_API_KEY` from the environment; do not pass secrets as command-line arguments.
 
 Use `--dry-run` to perform the fetch and database rebuild while printing, but not submitting, the resulting metrics. To preview metrics entirely offline after a database has been built:
 
@@ -181,7 +184,7 @@ github-tools push-metrics \
   --dry-run
 ```
 
-Use `--output-json` when a Datadog workflow or agent owns the Datadog connection. It performs the same calculation without submitting and emits one final JSON envelope. Each object in `batches` is a size-safe request body that can be sent directly to `POST /api/v2/series`:
+Use `--output-json` when another process owns the Datadog connection and can transfer the generated batches without routing them through an LLM context. It performs the same calculation without submitting and emits one final JSON envelope. Each object in `batches` is a size-safe Datadog API request body that can be sent directly to `POST /api/v2/series`:
 
 ```shell
 github-tools sync-metrics \
@@ -193,6 +196,12 @@ github-tools sync-metrics \
 
 ```json
 {"format":"datadog-series-batches-v1","series_count":1,"point_count":1,"batches":[{"series":[{"metric":"github.health.v2.issues","type":3,"points":[{"timestamp":1788278400,"value":42}],"tags":["repo:quickwit-oss/quickwit"]}]}]}
+```
+
+After `--submit` succeeds, the final output line is a compact receipt suitable for an automation agent to validate without reading metric payloads:
+
+```json
+{"format":"datadog-submission-result-v1","success":true,"repository":"quickwit-oss/quickwit","metric_prefix":"github.health.v2","lookback":"7d","activity_window":"30d","series_count":91,"point_count":705,"batch_count":1,"batch_http_statuses":[202],"earliest_timestamp_utc":"2026-09-04T00:00:00Z","latest_timestamp_utc":"2026-09-10T20:00:00Z"}
 ```
 
 The default prefix is `github.health.v2`; override it with `--prefix`. Increment the prefix version before changing the metric dimensions so a clean backfill cannot mix incompatible tag schemas. The metrics are:
@@ -212,10 +221,10 @@ All are gauges. Rolling-window totals remain gauges because each point is a comp
 
 Historical Metrics Ingestion must be enabled before submitting the backfill. For a new prefix:
 
-1. Submit a one-day seed using `--lookback 1d --activity-window 30d` so the metric names exist.
+1. Submit a one-day seed using `--lookback 1d --activity-window 30d --submit` so the metric names exist.
 2. In Datadog **Metrics Summary**, choose **Configure Metrics → Enable historical metrics** and select the `github.health.v2` namespace.
-3. Submit the one-time backfill with `--lookback 450d --activity-window 30d`.
-4. Schedule subsequent runs at a fixed UTC time with `--lookback 7d --activity-window 30d`.
+3. Submit the one-time backfill with `--lookback 450d --activity-window 30d --submit`.
+4. Schedule subsequent runs at a fixed UTC time with `--lookback 7d --activity-window 30d --submit`.
 
 Closed metrics are sparse: a metric with no matching closures is not emitted. If a closed metric is absent after the seed, use a wider activity window to create its name before enabling Historical Metrics Ingestion.
 
@@ -245,6 +254,6 @@ sum:github.health.v2.discussions.closed{repo:quickwit-oss/quickwit,window:30d}
 
 Do not use `avg:` for repository totals: each metric is split into multiple tag combinations for its breakdown dimensions.
 
-An external scheduler invokes `sync-metrics` once per repository. Its GitHub token needs read access to the source repository. Direct submission needs `DD_API_KEY`; alternatively, `--output-json` lets a Datadog workflow submit each generated batch through a managed HTTP connection. Non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`) for direct submission.
+An external scheduler invokes `sync-metrics --submit` once per repository. Its GitHub token needs read access to the source repository, and `DD_API_KEY` must be injected as a secret environment variable. Non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`). Use `--output-json` only when the caller can transfer the generated batches directly; sandbox files are not shared automatically with managed HTTP actions.
 
 Tags and series are emitted in deterministic order, and an identical metric name, timestamp, and tag combination is safe to resubmit because Datadog retains the most recently submitted value. Current GitHub snapshots do not contain the full timelines for labels, issue types, PR draft transitions, discussion categories/answers, or close/reopen cycles. Historical breakdowns using those mutable fields are therefore current-state approximations. Use a new prefix version for a clean corrective backfill if the schema changes; exact lifecycle reconstruction would require fetching GitHub timeline events.

@@ -149,6 +149,7 @@ pub fn run(config: &Config, options: MetricsOptions<'_>) -> Result<()> {
         "Pushing {} metric series with {point_count} historical/current points to Datadog...",
         series.len()
     );
+    let mut batch_http_statuses = Vec::with_capacity(batches.len());
     for (index, chunk) in batches.iter().enumerate() {
         let response = client
             .post(&api_url)
@@ -172,10 +173,22 @@ pub fn run(config: &Config, options: MetricsOptions<'_>) -> Result<()> {
             );
         }
 
+        batch_http_statuses.push(status.as_u16());
         println!("  Batch {}: {} series accepted", index + 1, chunk.len());
     }
 
     println!("Done.");
+    println!(
+        "{}",
+        serde_json::to_string(&submission_result(
+            config,
+            history,
+            activity_window,
+            prefix,
+            &series,
+            &batch_http_statuses,
+        )?)?
+    );
     Ok(())
 }
 
@@ -646,6 +659,47 @@ fn json_batch_output(series: &[MetricSeries]) -> Result<serde_json::Value> {
     }))
 }
 
+fn submission_result(
+    config: &Config,
+    history: &str,
+    activity_window: &str,
+    prefix: &str,
+    series: &[MetricSeries],
+    batch_http_statuses: &[u16],
+) -> Result<serde_json::Value> {
+    let point_count = series
+        .iter()
+        .map(|metric| metric.points.len())
+        .sum::<usize>();
+    let earliest_timestamp = series
+        .iter()
+        .flat_map(|metric| metric.points.iter())
+        .map(|point| point.timestamp)
+        .min()
+        .context("submitted metrics contain no points")?;
+    let latest_timestamp = series
+        .iter()
+        .flat_map(|metric| metric.points.iter())
+        .map(|point| point.timestamp)
+        .max()
+        .context("submitted metrics contain no points")?;
+
+    Ok(serde_json::json!({
+        "format": "datadog-submission-result-v1",
+        "success": true,
+        "repository": format!("{}/{}", config.org, config.repo),
+        "metric_prefix": prefix,
+        "lookback": history,
+        "activity_window": activity_window,
+        "series_count": series.len(),
+        "point_count": point_count,
+        "batch_count": batch_http_statuses.len(),
+        "batch_http_statuses": batch_http_statuses,
+        "earliest_timestamp_utc": format_timestamp(earliest_timestamp)?,
+        "latest_timestamp_utc": format_timestamp(latest_timestamp)?,
+    }))
+}
+
 fn print_dry_run(series: &[MetricSeries]) {
     let point_count = series
         .iter()
@@ -874,5 +928,33 @@ mod tests {
         assert_eq!(output["batches"].as_array().unwrap().len(), 1);
         assert_eq!(output["batches"][0]["series"][0]["metric"], "test.metric");
         assert_eq!(output["batches"][0]["series"][0]["points"][0]["value"], 7);
+    }
+
+    #[test]
+    fn emits_compact_submission_result() {
+        let config = Config {
+            github_token: String::new(),
+            org: "example".to_string(),
+            repo: "repo".to_string(),
+        };
+        let series = vec![MetricSeries::gauge(
+            "github.health.v2.issues".to_string(),
+            7,
+            1_788_134_400,
+            vec!["repo:example/repo".to_string()],
+        )];
+
+        let output =
+            submission_result(&config, "7d", "30d", "github.health.v2", &series, &[202]).unwrap();
+
+        assert_eq!(output["format"], "datadog-submission-result-v1");
+        assert_eq!(output["success"], true);
+        assert_eq!(output["repository"], "example/repo");
+        assert_eq!(output["series_count"], 1);
+        assert_eq!(output["point_count"], 1);
+        assert_eq!(output["batch_count"], 1);
+        assert_eq!(output["batch_http_statuses"][0], 202);
+        assert_eq!(output["earliest_timestamp_utc"], "2026-08-31T00:00:00Z");
+        assert_eq!(output["latest_timestamp_utc"], "2026-08-31T00:00:00Z");
     }
 }

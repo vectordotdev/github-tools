@@ -124,14 +124,12 @@ enum Command {
         )]
         output_json: bool,
     },
-    /// Fetch GitHub data and submit Datadog metrics
+    /// Fetch GitHub data and prepare or submit Datadog metrics
     SyncMetrics {
         #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
         repo: String,
         #[arg(long, help = "Path to .env file (may contain GITHUB_TOKEN, DD_API_KEY, DD_SITE)")]
         env_file: Option<String>,
-        #[arg(long, help = "Datadog API key (prefer DD_API_KEY in automation)")]
-        dd_api_key: Option<String>,
         #[arg(long, help = "Datadog site hostname, e.g. datadoghq.eu")]
         dd_site: Option<String>,
         #[arg(
@@ -150,6 +148,13 @@ enum Command {
         prefix: String,
         #[arg(
             long,
+            conflicts_with_all = ["dry_run", "output_json"],
+            help = "Submit metrics to Datadog using DD_API_KEY from the environment"
+        )]
+        submit: bool,
+        #[arg(
+            long,
+            conflicts_with = "output_json",
             help = "Fetch data and build metrics, but do not send to Datadog"
         )]
         dry_run: bool,
@@ -361,16 +366,22 @@ fn main() -> Result<()> {
         Command::SyncMetrics {
             repo,
             env_file,
-            dd_api_key,
             dd_site,
             lookback,
             activity_window,
             prefix,
+            submit,
             dry_run,
             output_json,
         } => {
+            if !submit && !dry_run && !output_json {
+                anyhow::bail!("sync-metrics requires one of --submit, --dry-run, or --output-json");
+            }
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
-            let api_key = dd_api_key.or_else(|| std::env::var("DD_API_KEY").ok());
+            let api_key = std::env::var("DD_API_KEY").ok();
+            if submit && api_key.as_deref().is_none_or(|key| key.trim().is_empty()) {
+                anyhow::bail!("DD_API_KEY not set");
+            }
             let site = dd_site.or_else(|| std::env::var("DD_SITE").ok());
             workflows::sync_metrics(
                 &config,
