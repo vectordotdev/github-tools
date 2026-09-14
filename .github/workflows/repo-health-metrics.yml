@@ -1,0 +1,92 @@
+name: Submit repository-health metrics
+
+run-name: Repository health for ${{ inputs.repository }} (${{ inputs.lookback }})
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: Repository to analyze (owner/repository)
+        required: true
+        type: string
+      lookback:
+        description: Historical metric lookback (1d to 450d)
+        required: true
+        default: 7d
+        type: string
+      activity_window:
+        description: Closed-item activity window
+        required: true
+        default: 30d
+        type: string
+      metric_prefix:
+        description: Datadog metric prefix
+        required: true
+        default: github.health.v2
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repository-health-${{ inputs.repository }}
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      TARGET_REPOSITORY: ${{ inputs.repository }}
+      LOOKBACK: ${{ inputs.lookback }}
+      ACTIVITY_WINDOW: ${{ inputs.activity_window }}
+      METRIC_PREFIX: ${{ inputs.metric_prefix }}
+      GITHUB_TOKEN: ${{ secrets.PAT_TOKEN_DASHBOARD_METRICS }}
+      DD_API_KEY: ${{ secrets.DD_API_KEY_DASHBOARD_METRICS }}
+      DD_SITE: datadoghq.com
+
+    steps:
+      - name: Check out github-tools
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Validate inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ ! "$TARGET_REPOSITORY" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]]; then
+            echo "repository must use owner/repository format"
+            exit 1
+          fi
+
+          if [[ ! "$LOOKBACK" =~ ^([1-9][0-9]{0,2})d$ ]] || (( ${BASH_REMATCH[1]:-0} > 450 )); then
+            echo "lookback must be between 1d and 450d"
+            exit 1
+          fi
+
+          if [[ ! "$ACTIVITY_WINDOW" =~ ^[1-9][0-9]{0,2}d$ ]]; then
+            echo "activity_window must be a positive number of days"
+            exit 1
+          fi
+
+          if [[ ! "$METRIC_PREFIX" =~ ^[A-Za-z0-9_.]+$ ]]; then
+            echo "metric_prefix contains unsupported characters"
+            exit 1
+          fi
+
+          if [[ -z "$GITHUB_TOKEN" || -z "$DD_API_KEY" ]]; then
+            echo "required GitHub Actions secrets are not configured"
+            exit 1
+          fi
+
+      - name: Collect and submit metrics
+        shell: bash
+        run: |
+          cargo run --locked --release -- sync-metrics \
+            --repo "$TARGET_REPOSITORY" \
+            --lookback "$LOOKBACK" \
+            --activity-window "$ACTIVITY_WINDOW" \
+            --prefix "$METRIC_PREFIX"

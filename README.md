@@ -247,4 +247,13 @@ Do not use `avg:` for repository totals: each metric is split into multiple tag 
 
 An external scheduler invokes `sync-metrics` once per repository. Its GitHub token needs read access to the source repository. Direct submission needs `DD_API_KEY`; alternatively, `--output-json` lets a Datadog workflow submit each generated batch through a managed HTTP connection. Non-US1 accounts should also set `DD_SITE` (for example, `datadoghq.eu`) for direct submission.
 
+### GitHub Actions dispatch
+
+The `Submit repository-health metrics` workflow provides a networked execution path for Datadog Workflow Automation. Configure these GitHub Actions secrets on this repository:
+
+- `DD_API_KEY_DASHBOARD_METRICS`: submits metrics to Datadog.
+- `PAT_TOKEN_DASHBOARD_METRICS`: reads issues, pull requests, and discussions from the target repository.
+
+Dispatch the workflow with `repository`, `lookback`, `activity_window`, and `metric_prefix`. The caller supplies no shell command or credentials; the workflow validates those inputs and constructs the fixed `sync-metrics` command.
+
 Tags and series are emitted in deterministic order, and an identical metric name, timestamp, and tag combination is safe to resubmit because Datadog retains the most recently submitted value. Current GitHub snapshots do not contain the full timelines for labels, issue types, PR draft transitions, discussion categories/answers, or close/reopen cycles. Historical breakdowns using those mutable fields are therefore current-state approximations. Use a new prefix version for a clean corrective backfill if the schema changes; exact lifecycle reconstruction would require fetching GitHub timeline events.
