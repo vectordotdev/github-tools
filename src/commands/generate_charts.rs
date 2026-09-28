@@ -28,7 +28,7 @@ const PALETTE: &[&str] = &[
 
 const EXCLUDE_LABELS: &[&str] = &["no-changelog", "meta: awaiting author"];
 
-fn slugify(s: &str) -> String {
+pub(crate) fn slugify(s: &str) -> String {
     s.chars()
         .map(|c| if c.is_ascii_alphanumeric() { c.to_ascii_lowercase() } else { '-' })
         .collect::<String>()
@@ -265,7 +265,7 @@ pub fn label_counts_over_time(rows: &[&HashMap<String, String>]) -> Chart {
     }
 
     let mut top_labels: Vec<(String, i64)> = label_totals.into_iter().collect();
-    top_labels.sort_by(|a, b| b.1.cmp(&a.1));
+    top_labels.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(&b.0)));
     top_labels.truncate(8);
     let top_labels: Vec<String> = top_labels.into_iter().map(|(l, _)| l).collect();
 
@@ -376,7 +376,7 @@ pub fn integration_trends(
             (*col, total)
         })
         .collect();
-    totals.sort_by(|a, b| b.1.cmp(&a.1));
+    totals.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(b.0)));
     totals.truncate(5);
 
     let top_cols: Vec<&String> = totals.into_iter().map(|(c, _)| c).collect();
@@ -443,7 +443,7 @@ pub fn contributor_heatmap(rows: &[&HashMap<String, String>]) -> Option<Chart> {
         *user_totals.entry(user).or_insert(0) += count;
     }
     let mut top_users: Vec<(String, i64)> = user_totals.into_iter().collect();
-    top_users.sort_by(|a, b| b.1.cmp(&a.1));
+    top_users.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(&b.0)));
     top_users.truncate(10);
     let top_users: Vec<String> = top_users.into_iter().map(|(u, _)| u).collect();
 
@@ -739,10 +739,10 @@ fn ai_stats_entry(stats: &AiStats) -> Result<ChartEntry> {
 
 // ── HTML generation ─────────────────────────────────────────────────────────────
 
-struct ChartEntry {
-    title: String,
+pub(crate) struct ChartEntry {
+    pub(crate) title: String,
     note: Option<String>,
-    json: String,
+    pub(crate) json: String,
     height_px: u32,
     extra_html: Option<String>,
 }
@@ -1046,6 +1046,61 @@ fn render_index_html(repos: &[(String, String)]) -> String {
 /// Generate charts for a single repo.
 /// `repo` is in the form "owner/name" (e.g. "vectordotdev/vector").
 pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -> Result<()> {
+    let (owner, name) = repo.split_once('/')
+        .with_context(|| format!("repo must be owner/name, got '{repo}'"))?;
+    let repo_display = format!("{owner}/{name}");
+    let Built { sections, yearly_stats } = build(input_dir, repo, start)?;
+    if let Some(yearly_stats) = &yearly_stats {
+        update_yearly_contributors_md(name, yearly_stats)?;
+    }
+
+    // ── Write output ──
+    let repo_out_dir = format!("{output_dir}/{name}");
+    fs::create_dir_all(&repo_out_dir)
+        .with_context(|| format!("creating directory {repo_out_dir}"))?;
+
+    let data_notes = read_data_notes(name);
+    let github_url = format!("https://github.com/{owner}/{name}");
+    let html = render_html(&repo_display, &sections, data_notes.as_deref(), &github_url);
+    let out_path = format!("{repo_out_dir}/index.html");
+    fs::write(&out_path, &html)
+        .with_context(|| format!("writing {out_path}"))?;
+
+    println!("Generated: {out_path}");
+
+    // Write .repo marker so the index knows the full owner/name
+    let repo_marker = Path::new(output_dir).join(name).join(".repo");
+    fs::write(&repo_marker, format!("{owner}/{name}"))?;
+
+    // Regenerate the top-level index by scanning for subdirectories with .repo
+    let mut repos_found: Vec<(String, String)> = Vec::new();
+    if let Ok(entries) = fs::read_dir(output_dir) {
+        let mut sorted: Vec<_> = entries.filter_map(|e| e.ok()).collect();
+        sorted.sort_by_key(|e| e.file_name());
+        for entry in sorted {
+            let path = entry.path();
+            let repo_file = path.join(".repo");
+            if path.is_dir() && repo_file.exists()
+                && let Ok(content) = fs::read_to_string(&repo_file)
+                    && let Some((o, n)) = content.trim().split_once('/') {
+                        repos_found.push((o.to_string(), n.to_string()));
+                    }
+        }
+    }
+    generate_index(output_dir, &repos_found)?;
+
+    Ok(())
+}
+
+/// Chart sections plus yearly contributor stats, without writing anything.
+pub(crate) struct Built {
+    pub(crate) sections: Vec<(&'static str, Vec<ChartEntry>)>,
+    pub(crate) yearly_stats: Option<BTreeMap<String, (i64, i64)>>,
+}
+
+/// Builds every chart for one repo from summary CSVs. Shared by the HTML
+/// dashboards and the Datadog chart metrics so both stay identical.
+pub(crate) fn build(input_dir: &str, repo: &str, start: Option<&str>) -> Result<Built> {
     use chrono::{Datelike, Utc};
     let two_years_ago = {
         let now = Utc::now();
@@ -1057,7 +1112,6 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
     let (owner, name) = repo.split_once('/')
         .with_context(|| format!("repo must be owner/name, got '{repo}'"))?;
     let prefix = format!("{owner}_{name}");
-    let repo_display = format!("{owner}/{name}");
 
     // ── Load CSVs ──
     let issues_monthly = read_csv(&format!("{input_dir}/{prefix}_issues.monthly_summary.csv"))?;
@@ -1197,6 +1251,7 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
     }
 
     // Contributors section
+    let mut yearly = None;
     if !pr_contributor.is_empty() {
         let mut entries = Vec::new();
         let filtered_contrib = filter_by_start(&pr_contributor, start);
@@ -1267,9 +1322,7 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
         if !entries.is_empty() {
             sections.push(("Contributors", entries));
         }
-        if !pr_contributor.is_empty() {
-            update_yearly_contributors_md(name, &yearly_stats)?;
-        }
+        yearly = Some(yearly_stats);
     }
 
     // AI Code Review section
@@ -1278,42 +1331,7 @@ pub fn run(input_dir: &str, repo: &str, output_dir: &str, start: Option<&str>) -
         sections.push(("AI Code Review", vec![entry]));
     }
 
-    // ── Write output ──
-    let repo_out_dir = format!("{output_dir}/{name}");
-    fs::create_dir_all(&repo_out_dir)
-        .with_context(|| format!("creating directory {repo_out_dir}"))?;
-
-    let data_notes = read_data_notes(name);
-    let github_url = format!("https://github.com/{owner}/{name}");
-    let html = render_html(&repo_display, &sections, data_notes.as_deref(), &github_url);
-    let out_path = format!("{repo_out_dir}/index.html");
-    fs::write(&out_path, &html)
-        .with_context(|| format!("writing {out_path}"))?;
-
-    println!("Generated: {out_path}");
-
-    // Write .repo marker so the index knows the full owner/name
-    let repo_marker = Path::new(output_dir).join(name).join(".repo");
-    fs::write(&repo_marker, format!("{owner}/{name}"))?;
-
-    // Regenerate the top-level index by scanning for subdirectories with .repo
-    let mut repos_found: Vec<(String, String)> = Vec::new();
-    if let Ok(entries) = fs::read_dir(output_dir) {
-        let mut sorted: Vec<_> = entries.filter_map(|e| e.ok()).collect();
-        sorted.sort_by_key(|e| e.file_name());
-        for entry in sorted {
-            let path = entry.path();
-            let repo_file = path.join(".repo");
-            if path.is_dir() && repo_file.exists()
-                && let Ok(content) = fs::read_to_string(&repo_file)
-                    && let Some((o, n)) = content.trim().split_once('/') {
-                        repos_found.push((o.to_string(), n.to_string()));
-                    }
-        }
-    }
-    generate_index(output_dir, &repos_found)?;
-
-    Ok(())
+    Ok(Built { sections, yearly_stats: yearly })
 }
 
 /// Generate the overview index.html listing all repos.

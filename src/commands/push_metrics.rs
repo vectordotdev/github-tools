@@ -1,4 +1,5 @@
 use crate::commands::fetch_issues::parse_since;
+use crate::commands::{generate_charts, generate_summaries, workflows};
 use crate::config::Config;
 use anyhow::{Context, Result};
 use chrono::{DateTime, SecondsFormat, Utc};
@@ -114,7 +115,8 @@ pub fn run(config: &Config, options: MetricsOptions<'_>) -> Result<()> {
             },
         )?);
     }
-    let series = coalesce_series(historical_series);
+    let mut series = coalesce_series(historical_series);
+    series.extend(chart_metrics(&db_path, config, prefix, now)?);
 
     if output_json {
         println!("{}", serde_json::to_string(&json_batch_output(&series)?)?);
@@ -177,6 +179,119 @@ pub fn run(config: &Config, options: MetricsOptions<'_>) -> Result<()> {
 
     println!("Done.");
     Ok(())
+}
+
+/// Emits every chart on the published dashboards as `{prefix}.chart` gauges,
+/// built by the same code that renders the HTML so the numbers match exactly.
+/// All points share one timestamp; the `snapshot` tag lets dashboards keep
+/// only the latest run and ignore labels that have since dropped out.
+fn chart_metrics(db_path: &str, config: &Config, prefix: &str, now: i64) -> Result<Vec<MetricSeries>> {
+    generate_summaries::run(db_path, config)?;
+    let repo = format!("{}/{}", config.org, config.repo);
+    let start = workflows::default_chart_start();
+    let built = generate_charts::build("out/summaries", &repo, Some(&start))?;
+
+    let base = vec![
+        format!("repo:{}", sanitize_tag_value(&repo)),
+        format!("snapshot:{now}"),
+    ];
+    let metric = format!("{prefix}.chart");
+    let mut series = Vec::new();
+    for entry in built.sections.iter().flat_map(|(_, entries)| entries) {
+        let chart: serde_json::Value = serde_json::from_str(&entry.json)?;
+        let chart_tag = format!("chart:{}", generate_charts::slugify(&entry.title));
+        for point in chart_points(&chart) {
+            let mut tags = base.clone();
+            tags.push(chart_tag.clone());
+            tags.extend(point.tags);
+            series.push(MetricSeries::gauge(metric.clone(), point.value, now, tags));
+        }
+    }
+    if let Some(yearly) = built.yearly_stats {
+        for (year, (new, returning)) in yearly {
+            for (name, value) in [("unique", new + returning), ("new", new), ("returning", returning)] {
+                let mut tags = base.clone();
+                tags.extend([
+                    "chart:contributors-yearly-table".to_string(),
+                    format!("series:{name}"),
+                    format!("x:{year}"),
+                ]);
+                series.push(MetricSeries::gauge(metric.clone(), value, now, tags));
+            }
+        }
+    }
+    Ok(series)
+}
+
+struct ChartPoint {
+    value: i64,
+    tags: Vec<String>,
+}
+
+/// Flattens an ECharts option (line, bar, horizontal bar, heatmap) into points.
+fn chart_points(chart: &serde_json::Value) -> Vec<ChartPoint> {
+    let categories = |axis: &str| -> Vec<String> {
+        chart[axis][0]["data"]
+            .as_array()
+            .map(|values| values.iter().map(|v| v.as_str().unwrap_or_default().to_string()).collect())
+            .unwrap_or_default()
+    };
+    let x_categories = categories("xAxis");
+    let y_categories = categories("yAxis");
+    // Horizontal bars put the categories on the y axis.
+    let categories = if x_categories.is_empty() { &y_categories } else { &x_categories };
+
+    let mut points = Vec::new();
+    for (order, series) in chart["series"].as_array().into_iter().flatten().enumerate() {
+        let name = series["name"].as_str().unwrap_or_default();
+        let series_color = series["itemStyle"]["color"].as_str();
+        for (index, datum) in series["data"].as_array().into_iter().flatten().enumerate() {
+            let mut tags = vec![format!("series:{}", chart_tag(name)), format!("order:{order}")];
+            let (value, color) = if let Some(cell) = datum.as_array() {
+                // Heatmap cell: [x index, y index, value].
+                let x = cell[0].as_u64().unwrap_or_default() as usize;
+                let y = cell[1].as_u64().unwrap_or_default() as usize;
+                tags.extend([
+                    format!("x:{}", chart_tag(&x_categories[x])),
+                    format!("x_order:{x}"),
+                    format!("y:{}", chart_tag(&y_categories[y])),
+                    format!("y_order:{y}"),
+                ]);
+                (cell[2].as_i64(), None)
+            } else {
+                tags.extend([
+                    format!("x:{}", chart_tag(&categories[index])),
+                    format!("x_order:{index}"),
+                ]);
+                match datum.get("value") {
+                    Some(value) => (value.as_i64(), datum["itemStyle"]["color"].as_str()),
+                    None => (datum.as_i64(), None),
+                }
+            };
+            if let Some(color) = color.or(series_color) {
+                tags.push(format!("color:{}", color.trim_start_matches('#').to_lowercase()));
+            }
+            points.push(ChartPoint { value: value.unwrap_or_default(), tags });
+        }
+    }
+    points
+}
+
+/// Tag-safe label encoding that dashboards can reverse: spaces become `.`
+/// (no GitHub label or login here contains a dot). Datadog lowercases tag
+/// values, so original casing is lost.
+fn chart_tag(value: &str) -> String {
+    value
+        .trim()
+        .to_lowercase()
+        .chars()
+        .map(|c| match c {
+            ' ' => '.',
+            c if c.is_ascii_alphanumeric() || matches!(c, '_' | '-' | ':' | '/') => c,
+            _ => '_',
+        })
+        .take(200)
+        .collect()
 }
 
 fn collect_metrics(
@@ -845,6 +960,44 @@ mod tests {
             age_bucket("2026-08-25T00:00:00Z", 1_788_134_400),
             "age:0_7d"
         );
+    }
+
+    #[test]
+    fn flattens_line_bar_and_heatmap_charts() {
+        let line = serde_json::json!({
+            "xAxis": [{"data": ["2026-07", "2026-08"]}],
+            "series": [{"name": "type: bug", "itemStyle": {"color": "#FF4C4C"}, "data": [3, 4]}]
+        });
+        let points = chart_points(&line);
+        assert_eq!(points.len(), 2);
+        assert_eq!(points[1].value, 4);
+        assert_eq!(
+            points[1].tags,
+            ["series:type:.bug", "order:0", "x:2026-08", "x_order:1", "color:ff4c4c"]
+        );
+
+        let horizontal = serde_json::json!({
+            "xAxis": [{"type": "value"}],
+            "yAxis": [{"data": ["domain: external docs"]}],
+            "series": [{"name": "Count", "data": [{"value": 7, "itemStyle": {"color": "#afab7e"}}]}]
+        });
+        let points = chart_points(&horizontal);
+        assert_eq!(points[0].value, 7);
+        assert!(points[0].tags.contains(&"x:domain:.external.docs".to_string()));
+        assert!(points[0].tags.contains(&"color:afab7e".to_string()));
+
+        let heatmap = serde_json::json!({
+            "xAxis": [{"data": ["2026-07", "2026-08"]}],
+            "yAxis": [{"data": ["alice", "Bob"]}],
+            "series": [{"name": "PRs", "data": [[1, 1, 5]]}]
+        });
+        let points = chart_points(&heatmap);
+        assert_eq!(points[0].value, 5);
+        assert_eq!(
+            points[0].tags,
+            ["series:prs", "order:0", "x:2026-08", "x_order:1", "y:bob", "y_order:1"]
+        );
+        assert_eq!(chart_tag("dependabot[bot]"), "dependabot_bot_");
     }
 
     #[test]

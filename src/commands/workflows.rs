@@ -76,6 +76,13 @@ fn build_repo_db(config: &Config) -> Result<String> {
     Ok(db)
 }
 
+/// First month shown on the published dashboards (last 12 complete months).
+pub fn default_chart_start() -> String {
+    let now = Utc::now();
+    let total_months = now.year() * 12 + now.month() as i32 - 13;
+    format!("{}-{:02}", total_months / 12, total_months % 12 + 1)
+}
+
 /// Builds DB + summaries + HTML charts for a single repo.
 pub fn generate_all(repo_str: &str, start: Option<&str>) -> Result<()> {
     let repo = Repo::parse(repo_str)?;
@@ -84,11 +91,7 @@ pub fn generate_all(repo_str: &str, start: Option<&str>) -> Result<()> {
 
     generate_summaries::run(&db, &config)?;
 
-    let default_start = {
-        let now = Utc::now();
-        let total_months = now.year() * 12 + now.month() as i32 - 13;
-        format!("{}-{:02}", total_months / 12, total_months % 12 + 1)
-    };
+    let default_start = default_chart_start();
     let start_arg = start.unwrap_or(&default_start);
     generate_charts::run("out/summaries", repo_str, "docs", Some(start_arg))?;
     Ok(())
