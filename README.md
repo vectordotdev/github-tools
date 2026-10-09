@@ -1,13 +1,20 @@
 # github-tools
 
-> [!NOTE]
-> Experimental repo for gaining insights into open source project health.
+Data and automation for maintaining open source projects. We use it to understand how Vector, VRL and Quickwit are
+doing (where the backlog is growing, which integrations draw the most issues, and how the contributor base changes over
+time) and to automate the repetitive parts of running them.
 
-Tools for extracting data from GitHub, storing it in a local SQLite database, querying it, and visualizing trends.
+It pulls issues, pull requests and discussions from the GitHub API into SQLite, and from there:
+
+- Publishes interactive **trend dashboards** to GitHub Pages: monthly issue, PR and discussion trends, label and
+  integration breakdowns, and contributor activity.
+- Submits **project-health metrics** to Datadog (open backlog by age, closure rates) for long-term tracking.
+- Measures how contributors react to **AI review bot** comments.
+- Runs **maintenance jobs**: closing abandoned PRs, deleting stale branches, and purging old container images.
 
 # Trends
 
-Per-repo interactive dashboards (GitHub Pages):
+Interactive dashboards, refreshed from committed data snapshots:
 
 - [Vector](https://vectordotdev.github.io/github-tools/vector/)
 - [VRL](https://vectordotdev.github.io/github-tools/vrl/)
