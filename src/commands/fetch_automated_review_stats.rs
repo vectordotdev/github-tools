@@ -1,338 +1,803 @@
+//! Persist review comments like the other year-bucketed GitHub snapshots.
+//! Discovery is incremental; reactions on every saved comment are reconciled each run.
 use crate::commands::fetch_issues::parse_since;
 use crate::config::Config;
-use anyhow::{Context, Result};
+use anyhow::{Context, Result, bail, ensure};
+use chrono::{DateTime, Duration, SecondsFormat, Utc};
 use reqwest::blocking::Client;
-use serde_json::{json, Value};
-use std::collections::HashMap;
+use serde::{Deserialize, Serialize};
+use serde_json::{Value, json};
+use std::collections::BTreeMap;
 use std::fs;
+use std::path::{Path, PathBuf};
 
-const GRAPHQL_URL: &str = "https://api.github.com/graphql";
-const PR_PAGE_SIZE: u32 = 10;
-
-// Ordered by UPDATED_AT so the since boundary check on updatedAt is sound:
-// updatedAt >= mergedAt always, so updatedAt < since implies mergedAt < since.
-const MERGED_PRS_QUERY: &str = r#"
-query($owner: String!, $name: String!, $first: Int!, $after: String) {
-  repository(owner: $owner, name: $name) {
-    pullRequests(first: $first, after: $after, states: [MERGED], orderBy: {field: UPDATED_AT, direction: DESC}) {
-      pageInfo {
-        endCursor
-        hasNextPage
-      }
-      nodes {
-        number
-        updatedAt
-        mergedAt
-        reviewThreads(first: 100) {
-          pageInfo { hasNextPage }
-          nodes {
-            comments(first: 100) {
-              pageInfo { hasNextPage }
-              nodes {
-                url
-                author { login }
-                reactions(first: 100) {
-                  pageInfo { hasNextPage }
-                  nodes {
-                    content
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+const PRS: &str = r#"
+query($owner:String!, $name:String!, $after:String) {
+ repository(owner:$owner,name:$name) {
+  pullRequests(first:100,after:$after,states:[MERGED],orderBy:{field:UPDATED_AT,direction:DESC}) {
+   pageInfo {hasNextPage endCursor}
+   nodes {number updatedAt mergedAt}
   }
+ }
+}"#;
+const THREADS: &str = r#"
+query($owner:String!, $name:String!, $number:Int!, $after:String) {
+ repository(owner:$owner,name:$name) { pullRequest(number:$number) {
+  reviewThreads(first:100,after:$after) {
+   pageInfo {hasNextPage endCursor}
+   nodes {id comments(first:100) {
+    pageInfo {hasNextPage endCursor}
+    nodes {COMMENT_FIELDS}
+   }}
+  }
+ }}
+}"#;
+const COMMENTS: &str = r#"
+query($id:ID!, $after:String) {
+ node(id:$id) { ... on PullRequestReviewThread { comments(first:100,after:$after) {
+  pageInfo {hasNextPage endCursor}
+  nodes {COMMENT_FIELDS}
+ }}}
+}"#;
+const COMMENT_FIELDS: &str = "id author {login} up:reactions(content:THUMBS_UP) {totalCount} down:reactions(content:THUMBS_DOWN) {totalCount}";
+const REFRESH: &str = r#"
+query($ids:[ID!]!) {
+ nodes(ids:$ids) { ... on PullRequestReviewComment {COMMENT_FIELDS} }
+}"#;
+
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
+struct Comment {
+    id: String,
+    pr: u64,
+    merged_at: String,
+    thumbs_up: u64,
+    thumbs_down: u64,
 }
-"#;
 
-struct Stats {
-    prs_scanned: u64,
-    total: u64,
-    liked: u64,
-    disliked: u64,
-    no_signal: u64, // no reaction + mixed (both thumbs): no clear verdict
-    incomplete: bool, // true if any nested connection hit the 100-item page limit
+/// Minimal per-comment state required to reconcile reactions by node ID.
+#[derive(Clone, Debug, Deserialize, Serialize)]
+struct ReviewComment {
+    id: String,
+    thumbs_up: u64,
+    thumbs_down: u64,
 }
 
-/// Omit `bot_login` to run in discovery mode: lists all review comment authors.
-pub fn run(config: &Config, bot_login: Option<&str>, since: Option<&str>) -> Result<()> {
-    let client = Client::new();
-    let since_ts = since.map(parse_since).transpose()?;
+#[derive(Debug, Deserialize, Serialize)]
+struct PullRequest {
+    pr: u64,
+    merged_at: String,
+    comments: Vec<ReviewComment>,
+}
 
-    let discovery = bot_login.is_none();
-    let mut authors: HashMap<String, u64> = HashMap::new();
-    let mut stats = Stats { prs_scanned: 0, total: 0, liked: 0, disliked: 0, no_signal: 0, incomplete: false };
-    let mut rows: Vec<(String, &'static str)> = Vec::new();
-    let mut after: Option<String> = None;
-    let mut page = 1;
+#[derive(Debug, Serialize)]
+struct PrSummary {
+    pr: u64,
+    url: String,
+    merged_at: String,
+    total: usize,
+    liked: usize,
+    disliked: usize,
+    no_signal: usize,
+    mixed: usize,
+    thumbs_up: u64,
+    thumbs_down: u64,
+}
 
-    loop {
-        println!("Fetching merged PR page {page} (batch: {PR_PAGE_SIZE})...");
-
-        let body = json!({
-            "query": MERGED_PRS_QUERY,
-            "variables": {
-                "owner": config.org,
-                "name": config.repo,
-                "first": PR_PAGE_SIZE,
-                "after": after,
-            }
+fn group_by_pr(records: &BTreeMap<String, Comment>) -> Result<BTreeMap<u64, PullRequest>> {
+    let mut prs: BTreeMap<u64, PullRequest> = BTreeMap::new();
+    for comment in records.values() {
+        let pr = prs.entry(comment.pr).or_insert_with(|| PullRequest {
+            pr: comment.pr,
+            merged_at: comment.merged_at.clone(),
+            comments: Vec::new(),
         });
+        ensure!(
+            pr.merged_at == comment.merged_at,
+            "Conflicting merge dates for PR {}",
+            pr.pr
+        );
+        pr.comments.push(ReviewComment {
+            id: comment.id.clone(),
+            thumbs_up: comment.thumbs_up,
+            thumbs_down: comment.thumbs_down,
+        });
+    }
+    Ok(prs)
+}
 
-        let response = client
-            .post(GRAPHQL_URL)
-            .header("Authorization", format!("Bearer {}", config.github_token))
-            .header("Accept", "application/vnd.github+json")
-            .header("User-Agent", "github-tools")
-            .json(&body)
-            .send()
-            .context("Failed to send GraphQL request")?;
+fn pr_summaries(repo: &str, records: &BTreeMap<String, Comment>) -> Result<Vec<PrSummary>> {
+    Ok(group_by_pr(records)?
+        .into_values()
+        .map(|pr| {
+            let liked = pr
+                .comments
+                .iter()
+                .filter(|c| c.thumbs_up > 0 && c.thumbs_down == 0)
+                .count();
+            let disliked = pr
+                .comments
+                .iter()
+                .filter(|c| c.thumbs_down > 0 && c.thumbs_up == 0)
+                .count();
+            PrSummary {
+                pr: pr.pr,
+                url: format!("https://github.com/{repo}/pull/{}", pr.pr),
+                merged_at: pr.merged_at,
+                total: pr.comments.len(),
+                liked,
+                disliked,
+                no_signal: pr.comments.len() - liked - disliked,
+                mixed: pr
+                    .comments
+                    .iter()
+                    .filter(|c| c.thumbs_up > 0 && c.thumbs_down > 0)
+                    .count(),
+                thumbs_up: pr.comments.iter().map(|c| c.thumbs_up).sum(),
+                thumbs_down: pr.comments.iter().map(|c| c.thumbs_down).sum(),
+            }
+        })
+        .collect())
+}
 
-        if !response.status().is_success() {
-            let status = response.status();
-            let text = response.text().unwrap_or_default();
-            anyhow::bail!("GraphQL request failed ({status}): {text}");
+#[derive(Debug, Deserialize, Serialize)]
+struct State {
+    schema_version: u32,
+    repo: String,
+    bot_login: String,
+    since: String,
+    // Start of the successful discovery pass, never its end, avoids skipping races.
+    discovery_through: String,
+    collected_at: String,
+    prs_scanned: u64,
+}
+
+fn root(config: &Config) -> PathBuf {
+    Path::new("data")
+        .join(format!("{}_{}", config.org, config.repo))
+        .join("automated-review-stats")
+}
+
+fn query(client: &Client, config: &Config, query: &str, variables: Value) -> Result<Value> {
+    let response = client.post("https://api.github.com/graphql")
+        .bearer_auth(&config.github_token)
+        .header("User-Agent", "github-tools")
+        .json(&json!({"query":query.replace("COMMENT_FIELDS", COMMENT_FIELDS), "variables":variables}))
+        .send()?.error_for_status()?;
+    let value: Value = response.json()?;
+    if let Some(errors) = value.get("errors") {
+        bail!("GitHub GraphQL errors: {errors}");
+    }
+    ensure!(value["data"].is_object(), "Missing GraphQL data");
+    Ok(value["data"].clone())
+}
+
+fn nodes(connection: &Value) -> Result<&Vec<Value>> {
+    connection["nodes"]
+        .as_array()
+        .context("Missing connection nodes")
+}
+
+fn next(connection: &Value) -> Result<Option<String>> {
+    let has_next = connection["pageInfo"]["hasNextPage"]
+        .as_bool()
+        .context("Missing pageInfo")?;
+    if has_next {
+        Ok(Some(string(&connection["pageInfo"], "endCursor")?))
+    } else {
+        Ok(None)
+    }
+}
+
+fn string(value: &Value, key: &str) -> Result<String> {
+    value[key]
+        .as_str()
+        .map(str::to_owned)
+        .with_context(|| format!("Missing {key}"))
+}
+
+fn timestamp(value: &str) -> Result<String> {
+    Ok(DateTime::parse_from_rfc3339(value)?
+        .with_timezone(&Utc)
+        .to_rfc3339_opts(SecondsFormat::Secs, true))
+}
+
+fn comment(value: &Value, pr: u64, merged_at: &str) -> Result<Comment> {
+    Ok(Comment {
+        id: string(value, "id")?,
+        pr,
+        merged_at: timestamp(merged_at)?,
+        thumbs_up: value["up"]["totalCount"]
+            .as_u64()
+            .context("Missing thumbs-up count")?,
+        thumbs_down: value["down"]["totalCount"]
+            .as_u64()
+            .context("Missing thumbs-down count")?,
+    })
+}
+
+fn read_records(dir: &Path) -> Result<BTreeMap<String, Comment>> {
+    let mut records = BTreeMap::new();
+    let mut seen_prs = std::collections::BTreeSet::new();
+    if !dir.exists() {
+        return Ok(records);
+    }
+    for entry in fs::read_dir(dir)? {
+        let path = entry?.path();
+        let name = path.file_stem().and_then(|s| s.to_str()).unwrap_or("");
+        if path.extension().and_then(|s| s.to_str()) != Some("json")
+            || name.len() != 4
+            || !name.bytes().all(|b| b.is_ascii_digit())
+        {
+            continue;
         }
-
-        let result: Value = response.json().context("Failed to parse GraphQL response")?;
-
-        if let Some(errors) = result.get("errors") {
-            anyhow::bail!("GraphQL errors: {errors}");
+        let items: Vec<PullRequest> = serde_json::from_slice(&fs::read(&path)?)
+            .with_context(|| format!("Reading {}", path.display()))?;
+        for pr in items {
+            ensure!(
+                timestamp(&pr.merged_at)?.starts_with(name),
+                "PR in wrong merge-year bucket"
+            );
+            ensure!(seen_prs.insert(pr.pr), "Duplicate PR {}", pr.pr);
+            for item in pr.comments {
+                ensure!(
+                    !records.contains_key(&item.id),
+                    "Duplicate comment ID {}",
+                    item.id
+                );
+                records.insert(
+                    item.id.clone(),
+                    Comment {
+                        id: item.id,
+                        pr: pr.pr,
+                        merged_at: pr.merged_at.clone(),
+                        thumbs_up: item.thumbs_up,
+                        thumbs_down: item.thumbs_down,
+                    },
+                );
+            }
         }
+    }
+    Ok(records)
+}
 
-        let connection = &result["data"]["repository"]["pullRequests"];
-        let nodes = connection["nodes"].as_array().context("Missing nodes")?;
-        let has_next = connection["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false);
-        let end_cursor = connection["pageInfo"]["endCursor"].as_str().map(|s| s.to_string());
+fn write_json(path: &Path, value: &impl Serialize) -> Result<()> {
+    let text = format!("{}\n", serde_json::to_string_pretty(value)?);
+    if fs::read_to_string(path).ok().as_deref() == Some(&text) {
+        return Ok(());
+    }
+    fs::create_dir_all(path.parent().context("Missing parent")?)?;
+    let temp = path.with_extension("json.tmp");
+    fs::write(&temp, text)?;
+    fs::rename(temp, path)?;
+    Ok(())
+}
 
+fn save(dir: &Path, records: &BTreeMap<String, Comment>, state: &State) -> Result<()> {
+    let mut years: BTreeMap<String, Vec<PullRequest>> = BTreeMap::new();
+    // Retain empty buckets when comments were deleted; no stale records remain.
+    if dir.exists() {
+        for entry in fs::read_dir(dir)? {
+            let path = entry?.path();
+            let year = path.file_stem().and_then(|s| s.to_str()).unwrap_or("");
+            if path.extension().and_then(|s| s.to_str()) == Some("json")
+                && year.len() == 4
+                && year.bytes().all(|b| b.is_ascii_digit())
+            {
+                years.entry(year.to_owned()).or_default();
+            }
+        }
+    }
+    for item in group_by_pr(records)?.into_values() {
+        years
+            .entry(timestamp(&item.merged_at)?[..4].to_owned())
+            .or_default()
+            .push(item);
+    }
+    for (year, items) in years {
+        write_json(&dir.join(format!("{year}.json")), &items)?;
+    }
+    // Advance only after all requests and year writes succeed. Failed runs can safely retry.
+    write_json(&dir.join("state.json"), state)
+}
+
+fn cutoff(requested: Option<&str>, state: Option<&State>) -> Result<String> {
+    let since = requested
+        .map(parse_since)
+        .transpose()?
+        .map(|s| timestamp(&s))
+        .transpose()?
+        .unwrap_or_else(|| {
+            state
+                .map(|s| s.since.clone())
+                .unwrap_or("1970-01-01T00:00:00Z".into())
+        });
+    if let Some(state) = state {
+        ensure!(
+            since <= state.since,
+            "--since cannot narrow saved coverage ({}); omit it to reuse coverage, or choose an earlier date to backfill",
+            state.since
+        );
+    }
+    Ok(since)
+}
+
+fn discovery_boundary(since: &str, state: Option<&State>, full_refresh: bool) -> Result<String> {
+    if let Some(state) = state.filter(|s| !full_refresh && since == s.since) {
+        // A one-day overlap tolerates timestamp precision and delayed visibility.
+        let boundary = DateTime::parse_from_rfc3339(&state.discovery_through)? - Duration::days(1);
+        Ok(boundary
+            .to_rfc3339_opts(SecondsFormat::Secs, true)
+            .max(since.to_owned()))
+    } else {
+        Ok(since.to_owned())
+    }
+}
+
+/// Without a bot, discover authors without persisting anything.
+pub fn run(
+    config: &Config,
+    bot_login: Option<&str>,
+    since: Option<&str>,
+    full_refresh: bool,
+) -> Result<()> {
+    if let Some(bot) = bot_login {
+        ensure!(
+            !bot.is_empty()
+                && bot
+                    .bytes()
+                    .all(|b| b.is_ascii_alphanumeric() || b == b'-' || b == b'[' || b == b']'),
+            "Invalid bot login"
+        );
+    }
+    let dir = bot_login.map(|bot| root(config).join(bot));
+    let state: Option<State> = match dir.as_ref().map(|d| d.join("state.json")) {
+        Some(path) if path.exists() => Some(serde_json::from_slice(&fs::read(path)?)?),
+        _ => None,
+    };
+    if let Some(state) = &state {
+        ensure!(
+            state.schema_version == 2
+                && state.repo == format!("{}/{}", config.org, config.repo)
+                && Some(state.bot_login.as_str()) == bot_login,
+            "Saved state identity/version mismatch"
+        );
+    }
+    let since = cutoff(since, state.as_ref())?;
+    let boundary = discovery_boundary(&since, state.as_ref(), full_refresh)?;
+    let mut records = match &dir {
+        Some(dir) => read_records(dir)?,
+        None => BTreeMap::new(),
+    };
+    ensure!(
+        records.is_empty() || state.is_some(),
+        "Saved comments require state.json; refusing to guess coverage"
+    );
+    let started = Utc::now().to_rfc3339_opts(SecondsFormat::Secs, true);
+    let client = Client::builder()
+        .timeout(std::time::Duration::from_secs(120))
+        .build()?;
+    let mut authors: BTreeMap<String, u64> = BTreeMap::new();
+    let mut prs_scanned = 0;
+    let mut after: Option<String> = None;
+    println!("Discovering PRs updated since {boundary}; merged coverage begins {since}");
+    loop {
+        let data = query(
+            &client,
+            config,
+            PRS,
+            json!({"owner":config.org,"name":config.repo,"after":after}),
+        )?;
+        let connection = &data["repository"]["pullRequests"];
         let mut hit_boundary = false;
-        for pr in nodes {
-            // updatedAt >= mergedAt always, so this is a sound early-termination criterion.
-            let updated_at = pr["updatedAt"].as_str().unwrap_or("");
-            if let Some(ref ts) = since_ts
-                && updated_at < ts.as_str() {
-                    hit_boundary = true;
-                    continue;
-                }
-
-            // Skip PRs merged before the cutoff (updated after it, e.g. a late comment).
-            let merged_at = pr["mergedAt"].as_str().unwrap_or("");
-            if let Some(ref ts) = since_ts
-                && merged_at < ts.as_str() {
-                    continue;
-                }
-
-            stats.prs_scanned += 1;
-            let pr_number = pr["number"].as_u64().unwrap_or(0);
-
-            if pr["reviewThreads"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
-                eprintln!("Warning: PR #{pr_number} has >100 review threads; counts may be incomplete.");
-                stats.incomplete = true;
+        for pr in nodes(connection)? {
+            if timestamp(&string(pr, "updatedAt")?)? < boundary {
+                hit_boundary = true;
+                continue;
             }
-
-            let threads = pr["reviewThreads"]["nodes"].as_array().cloned().unwrap_or_default();
-            for thread in &threads {
-                if thread["comments"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
-                    eprintln!("Warning: PR #{pr_number} has a thread with >100 comments; counts may be incomplete.");
-                    stats.incomplete = true;
-                }
-
-                let comments = thread["comments"]["nodes"].as_array().cloned().unwrap_or_default();
-                for comment in &comments {
-                    let author = comment["author"]["login"].as_str().unwrap_or("");
-
-                    if discovery {
-                        *authors.entry(author.to_string()).or_default() += 1;
-                        continue;
-                    }
-
-                    if Some(author) != bot_login {
-                        continue;
-                    }
-
-                    if comment["reactions"]["pageInfo"]["hasNextPage"].as_bool().unwrap_or(false) {
-                        eprintln!("Warning: a comment on PR #{pr_number} has >100 reactions; counts may be incomplete.");
-                        stats.incomplete = true;
-                    }
-
-                    stats.total += 1;
-                    let url = comment["url"].as_str().unwrap_or("").to_string();
-                    let reactions = comment["reactions"]["nodes"].as_array().cloned().unwrap_or_default();
-                    let has_up = reactions.iter().any(|r| r["content"].as_str() == Some("THUMBS_UP"));
-                    let has_down = reactions.iter().any(|r| r["content"].as_str() == Some("THUMBS_DOWN"));
-
-                    // Mixed (both 👍 and 👎) gives no clear verdict; group with no reaction.
-                    let reaction = match (has_up, has_down) {
-                        (true, false)  => { stats.liked += 1;     "liked"     }
-                        (false, true)  => { stats.disliked += 1;  "disliked"  }
-                        _              => { stats.no_signal += 1; "no signal" }
-                    };
-                    rows.push((url, reaction));
-                }
+            let merged_at = timestamp(&string(pr, "mergedAt")?)?;
+            if merged_at < since {
+                continue;
             }
+            let number = pr["number"].as_u64().context("Missing PR number")?;
+            let fresh = fetch_comments(
+                config,
+                number,
+                &merged_at,
+                bot_login,
+                &records,
+                &mut authors,
+                |q, variables| query(&client, config, q, variables),
+            )?;
+            // Replace the scanned PR's records, including removal of deleted comments.
+            records.retain(|_, c| c.pr != number);
+            records.extend(fresh);
+            prs_scanned += 1;
         }
-
-        println!("  PRs scanned: {} | bot comments found: {}", stats.prs_scanned, stats.total);
-
-        if hit_boundary || !has_next {
+        println!(
+            "Scanned {prs_scanned} PRs; {} saved bot comments",
+            records.len()
+        );
+        after = next(connection)?;
+        if hit_boundary || after.is_none() {
             break;
         }
-        after = end_cursor;
-        page += 1;
     }
-
-    println!();
-
-    if discovery {
-        println!("=== Review Comment Authors ({}/{}) ===", config.org, config.repo);
-        if let Some(ref ts) = since_ts {
-            println!("Since : {}", &ts[..10]);
-        }
-        println!("PRs scanned : {}", stats.prs_scanned);
-        println!();
-        let mut sorted: Vec<_> = authors.iter().collect();
-        sorted.sort_by(|a, b| b.1.cmp(a.1));
-        for (login, count) in &sorted {
-            println!("  {count:>6}  {login}");
+    let Some(bot) = bot_login else {
+        let mut authors: Vec<_> = authors.into_iter().collect();
+        authors.sort_by_key(|(_, count)| std::cmp::Reverse(*count));
+        for (author, count) in authors {
+            println!("{count:>6} {author}");
         }
         return Ok(());
-    }
-
-    let login = bot_login.unwrap();
-    println!("=== Automated Review Stats ({}/{}) ===", config.org, config.repo);
-    println!("Bot login : {login}");
-    if let Some(ref ts) = since_ts {
-        println!("Since     : {}", &ts[..10]);
-    }
-    println!("PRs scanned        : {}", stats.prs_scanned);
-    println!("Total bot comments : {}", stats.total);
-    println!("  Liked     (👍)      : {}", stats.liked);
-    println!("  Disliked  (👎)      : {}", stats.disliked);
-    println!("  No signal (no reaction or 👍+👎) : {}", stats.no_signal);
-    if stats.total > 0 {
-        println!();
-        println!("  Like rate    : {:.1}%", stats.liked as f64 / stats.total as f64 * 100.0);
-        println!("  Dislike rate : {:.1}%", stats.disliked as f64 / stats.total as f64 * 100.0);
-    }
-
-    if !rows.is_empty() {
-        let out_dir = std::path::Path::new("out/automated-review-stats");
-        fs::create_dir_all(out_dir)?;
-        let csv_path = out_dir.join(format!("{}_{}.csv", config.org, config.repo));
-        rows.sort_by_key(|(_, reaction)| match *reaction {
-            "no signal"  => 0,
-            "disliked"   => 1,
-            _            => 2,
-        });
-        let mut csv = String::from("url, reaction\n");
-        for (url, reaction) in &rows {
-            csv.push_str(&format!("{url}, {reaction}\n"));
-        }
-        fs::write(&csv_path, csv)?;
-        println!();
-        println!("Full table written to {}", csv_path.display());
-    }
-
-    if stats.incomplete {
-        eprintln!("Trends not updated: results are incomplete due to nested pagination limits.");
-    } else {
-        update_trends(config, login, since_ts.as_deref(), &stats)?;
-        write_stats_json(config, login, since_ts.as_deref(), &stats)?;
-    }
-
-    Ok(())
-}
-
-fn write_stats_json(config: &Config, bot_login: &str, since_ts: Option<&str>, stats: &Stats) -> Result<()> {
-    let out_dir = std::path::Path::new("out/summaries");
-    fs::create_dir_all(out_dir)?;
-    let path = out_dir.join(format!("{}_{}_automated_review_stats.json", config.org, config.repo));
-    let json = json!({
-        "prs_scanned": stats.prs_scanned,
-        "bot_login": bot_login,
-        "since": since_ts.map(|ts| &ts[..10]),
-        "total": stats.total,
-        "liked": stats.liked,
-        "disliked": stats.disliked,
-        "no_signal": stats.no_signal,
-    });
-    fs::write(&path, serde_json::to_string_pretty(&json)?)?;
-    println!("Stats JSON written to {}", path.display());
-    Ok(())
-}
-
-fn update_trends(config: &Config, bot_login: &str, since_ts: Option<&str>, stats: &Stats) -> Result<()> {
-    let trends_path = std::path::Path::new("trends").join(format!("{}.md", config.repo));
-    if !trends_path.exists() {
-        println!("Trends file not found at {}, skipping.", trends_path.display());
-        return Ok(());
-    }
-
-    if stats.total == 0 {
-        println!("No bot comments found, skipping trends update.");
-        return Ok(());
-    }
-
-    let since_label = since_ts.map(|ts| &ts[..10]).unwrap_or("all time");
-    let reacted = stats.liked + stats.disliked;
-
-    let reacted_table = if reacted > 0 {
-        format!(
-            "**Reacted comments only** (excludes no signal)\n\
-            \n\
-            | Reaction | Count | Share |\n\
-            |----------|------:|------:|\n\
-            | Liked 👍 | {liked} | {liked_pct:.1}% |\n\
-            | Disliked 👎 | {disliked} | {disliked_pct:.1}% |\n\
-            | **Total** | **{reacted}** | |\n",
-            liked = stats.liked,
-            disliked = stats.disliked,
-            liked_pct = stats.liked as f64 / reacted as f64 * 100.0,
-            disliked_pct = stats.disliked as f64 / reacted as f64 * 100.0,
-        )
-    } else {
-        String::from("*No reacted comments in this window.*\n")
     };
-
-    let new_content = format!(
-        "\n**All comments** ({prs} merged PRs, bot: `{bot_login}`, since: {since_label})\n\
-        \n\
-        | Reaction | Count | Share |\n\
-        |----------|------:|------:|\n\
-        | Liked 👍 | {liked} | {liked_pct:.1}% |\n\
-        | Disliked 👎 | {disliked} | {disliked_pct:.1}% |\n\
-        | No signal | {no_signal} | {no_signal_pct:.1}% |\n\
-        | **Total** | **{total}** | |\n\
-        \n\
-        {reacted_table}",
-        prs = stats.prs_scanned,
-        liked = stats.liked,
-        disliked = stats.disliked,
-        no_signal = stats.no_signal,
-        total = stats.total,
-        liked_pct = stats.liked as f64 / stats.total as f64 * 100.0,
-        disliked_pct = stats.disliked as f64 / stats.total as f64 * 100.0,
-        no_signal_pct = stats.no_signal as f64 / stats.total as f64 * 100.0,
+    // Reactions may change without changing the parent PR's updatedAt.
+    // Bounded nodes queries avoid enumerating individual reactions or all old PRs.
+    let ids: Vec<_> = records.keys().cloned().collect();
+    for batch in ids.chunks(100) {
+        let data = query(&client, config, REFRESH, json!({"ids":batch}))?;
+        apply_refresh(&mut records, batch, &data["nodes"], bot)?;
+    }
+    let state = State {
+        schema_version: 2,
+        repo: format!("{}/{}", config.org, config.repo),
+        bot_login: bot.into(),
+        since,
+        discovery_through: started,
+        collected_at: Utc::now().to_rfc3339_opts(SecondsFormat::Secs, true),
+        prs_scanned,
+    };
+    save(&dir.context("Missing bot directory")?, &records, &state)?;
+    generate_summaries(config)?;
+    println!(
+        "Saved {} comments for {bot}; reactions reconciled through {}",
+        records.len(),
+        state.collected_at
     );
-
-    const START: &str = "<!-- AUTO:automated-review-stats:start -->";
-    const END: &str = "<!-- AUTO:automated-review-stats:end -->";
-
-    let existing = fs::read_to_string(&trends_path)?;
-
-    let updated = match (existing.find(START), existing.find(END)) {
-        (Some(start_pos), Some(end_pos)) => {
-            let before = &existing[..start_pos + START.len()];
-            let after = &existing[end_pos..];
-            format!("{before}{new_content}{after}")
-        }
-        _ => format!("{existing}\n## AI-Assisted Code Review\n\n{START}{new_content}{END}\n"),
-    };
-
-    fs::write(&trends_path, updated)?;
-    println!("Trends updated at {}", trends_path.display());
-
     Ok(())
+}
+
+fn fetch_comments(
+    config: &Config,
+    number: u64,
+    merged_at: &str,
+    bot: Option<&str>,
+    saved: &BTreeMap<String, Comment>,
+    authors: &mut BTreeMap<String, u64>,
+    mut request: impl FnMut(&str, Value) -> Result<Value>,
+) -> Result<BTreeMap<String, Comment>> {
+    let mut fresh = BTreeMap::new();
+    let mut thread_after: Option<String> = None;
+    loop {
+        let data = request(
+            THREADS,
+            json!({"owner":config.org,"name":config.repo,"number":number,"after":thread_after}),
+        )?;
+        let threads = &data["repository"]["pullRequest"]["reviewThreads"];
+        for thread in nodes(threads)? {
+            let mut comments = thread["comments"].clone();
+            loop {
+                for value in nodes(&comments)? {
+                    let author = value["author"]["login"].as_str();
+                    *authors
+                        .entry(author.unwrap_or("[deleted]").to_owned())
+                        .or_default() += 1;
+                    let previously_attributed = author.is_none()
+                        && value["id"]
+                            .as_str()
+                            .is_some_and(|id| saved.contains_key(id));
+                    if bot.is_some() && (author == bot || previously_attributed) {
+                        let item = comment(value, number, merged_at)?;
+                        fresh.insert(item.id.clone(), item);
+                    }
+                }
+                let Some(cursor) = next(&comments)? else {
+                    break;
+                };
+                let data = request(COMMENTS, json!({"id":string(thread,"id")?,"after":cursor}))?;
+                comments = data["node"]["comments"].clone();
+            }
+        }
+        thread_after = next(threads)?;
+        if thread_after.is_none() {
+            break;
+        }
+    }
+    Ok(fresh)
+}
+
+fn apply_refresh(
+    records: &mut BTreeMap<String, Comment>,
+    ids: &[String],
+    values: &Value,
+    bot: &str,
+) -> Result<()> {
+    let values = values.as_array().context("Missing refreshed nodes")?;
+    ensure!(values.len() == ids.len(), "Incomplete reaction refresh");
+    for (id, value) in ids.iter().zip(values) {
+        if value.is_null() {
+            records.remove(id);
+            continue;
+        }
+        ensure!(
+            value["id"].as_str() == Some(id),
+            "Reaction refresh ID mismatch"
+        );
+        // Deleted users have null authors. Preserve attribution already observed.
+        if let Some(author) = value["author"]["login"].as_str() {
+            ensure!(
+                author == bot,
+                "Saved comment author changed; run --full-refresh"
+            );
+        }
+        let previous = &records[id];
+        let fresh = comment(value, previous.pr, &previous.merged_at)?;
+        records.insert(id.clone(), fresh);
+    }
+    Ok(())
+}
+
+fn summary(state: &State, records: &BTreeMap<String, Comment>) -> Value {
+    let liked = records
+        .values()
+        .filter(|c| c.thumbs_up > 0 && c.thumbs_down == 0)
+        .count();
+    let disliked = records
+        .values()
+        .filter(|c| c.thumbs_down > 0 && c.thumbs_up == 0)
+        .count();
+    let mixed = records
+        .values()
+        .filter(|c| c.thumbs_down > 0 && c.thumbs_up > 0)
+        .count();
+    json!({"bot_login":state.bot_login,"since":state.since,"collected_at":state.collected_at,
+        "prs_scanned":state.prs_scanned,"total":records.len(),"liked":liked,"disliked":disliked,
+        "no_signal":records.len()-liked-disliked,"mixed":mixed})
+}
+
+/// Rebuild disposable summaries from tracked data; usable offline by generate-all.
+pub fn generate_summaries(config: &Config) -> Result<()> {
+    let root = root(config);
+    if !root.exists() {
+        return Ok(());
+    }
+    let mut summaries = BTreeMap::new();
+    for entry in fs::read_dir(root)? {
+        let dir = entry?.path();
+        if !dir.is_dir() {
+            continue;
+        }
+        let state: State = serde_json::from_slice(&fs::read(dir.join("state.json"))?)?;
+        ensure!(
+            state.schema_version == 2
+                && state.repo == format!("{}/{}", config.org, config.repo)
+                && dir.file_name().and_then(|n| n.to_str()) == Some(state.bot_login.as_str()),
+            "Saved state identity/version mismatch"
+        );
+        let records = read_records(&dir)?;
+        let prs = pr_summaries(&state.repo, &records)?;
+        let mut stats = summary(&state, &records);
+        stats["pull_requests"] = serde_json::to_value(&prs)?;
+        summaries.insert(state.bot_login.clone(), stats);
+        let csv_path = Path::new("out/automated-review-stats").join(format!(
+            "{}_{}_{}.csv",
+            config.org, config.repo, state.bot_login
+        ));
+        fs::create_dir_all(csv_path.parent().unwrap())?;
+        let mut writer = csv::Writer::from_path(csv_path)?;
+        for pr in &prs {
+            writer.serialize(pr)?;
+        }
+        writer.flush()?;
+    }
+    let path = Path::new("out/summaries").join(format!(
+        "{}_{}_automated_review_stats.json",
+        config.org, config.repo
+    ));
+    write_json(
+        &path,
+        &json!({"bots":summaries.into_values().collect::<Vec<_>>()}),
+    )
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    fn state() -> State {
+        State {
+            schema_version: 2,
+            repo: "o/r".into(),
+            bot_login: "bot".into(),
+            since: "2026-01-01T00:00:00Z".into(),
+            discovery_through: "2026-10-19T12:00:00Z".into(),
+            collected_at: "2026-10-19T12:00:00Z".into(),
+            prs_scanned: 2,
+        }
+    }
+    fn sample(id: &str) -> Comment {
+        Comment {
+            id: id.into(),
+            pr: 1,
+            merged_at: "2026-02-01T00:00:00Z".into(),
+            thumbs_up: 1,
+            thumbs_down: 0,
+        }
+    }
+    #[test]
+    fn pr_totals_distinguish_comments_from_reactions() {
+        let mut liked = sample("a");
+        liked.thumbs_up = 10;
+        let mut mixed = sample("b");
+        mixed.thumbs_down = 2;
+        let mut disliked = sample("c");
+        disliked.pr = 2;
+        disliked.thumbs_up = 0;
+        disliked.thumbs_down = 3;
+        let mut none = sample("d");
+        none.thumbs_up = 0;
+        let records = BTreeMap::from([
+            (liked.id.clone(), liked),
+            (mixed.id.clone(), mixed),
+            (disliked.id.clone(), disliked),
+            (none.id.clone(), none),
+        ]);
+        let prs = pr_summaries("o/r", &records).unwrap();
+        assert_eq!(prs.len(), 2);
+        assert_eq!(prs[0].url, "https://github.com/o/r/pull/1");
+        assert_eq!(
+            (
+                prs[0].total,
+                prs[0].liked,
+                prs[0].disliked,
+                prs[0].no_signal,
+                prs[0].mixed
+            ),
+            (3, 1, 0, 2, 1)
+        );
+        assert_eq!((prs[0].thumbs_up, prs[0].thumbs_down), (11, 2));
+        assert_eq!(
+            (prs[1].total, prs[1].disliked, prs[1].thumbs_down),
+            (1, 1, 3)
+        );
+        let stats = summary(&state(), &records);
+        assert_eq!(stats["total"], prs.iter().map(|p| p.total).sum::<usize>());
+        assert_eq!(
+            stats["no_signal"],
+            prs.iter().map(|p| p.no_signal).sum::<usize>()
+        );
+    }
+
+    #[test]
+    fn compact_storage_groups_comments_and_rejects_conflicting_pr_dates() {
+        let mut records = BTreeMap::from([("a".into(), sample("a")), ("b".into(), sample("b"))]);
+        let grouped = group_by_pr(&records).unwrap();
+        let json = serde_json::to_value(&grouped[&1]).unwrap();
+        assert_eq!(json["comments"].as_array().unwrap().len(), 2);
+        assert_eq!(json["comments"][0].as_object().unwrap().len(), 3);
+        assert!(json["comments"][0].get("pr").is_none());
+        records.get_mut("b").unwrap().merged_at = "2025-01-01T00:00:00Z".into();
+        assert!(group_by_pr(&records).is_err());
+    }
+
+    #[test]
+    fn coverage_and_watermark_are_independent() {
+        let s = state();
+        assert_eq!(cutoff(None, Some(&s)).unwrap(), s.since);
+        assert!(cutoff(Some("2026-02-01"), Some(&s)).is_err());
+        assert_eq!(
+            discovery_boundary(&s.since, Some(&s), false).unwrap(),
+            "2026-10-18T12:00:00Z"
+        );
+        assert_eq!(
+            discovery_boundary(&s.since, Some(&s), true).unwrap(),
+            s.since
+        );
+        assert_eq!(
+            discovery_boundary("2025-01-01T00:00:00Z", Some(&s), false).unwrap(),
+            "2025-01-01T00:00:00Z"
+        );
+    }
+    #[test]
+    fn reactions_refresh_from_minimal_records_and_deletions_are_removed() {
+        let mut records = BTreeMap::from([("a".into(), sample("a")), ("b".into(), sample("b"))]);
+        let value = json!([{"id":"a","author":{"login":"bot"},"up":{"totalCount":1},"down":{"totalCount":2}},null]);
+        apply_refresh(&mut records, &["a".into(), "b".into()], &value, "bot").unwrap();
+        let stats = summary(&state(), &records);
+        assert_eq!(stats["total"], 1);
+        assert_eq!(stats["mixed"], 1);
+        assert_eq!(stats["no_signal"], 1);
+        assert_eq!(stats["liked"], 0);
+        assert_eq!(records["a"].merged_at, "2026-02-01T00:00:00Z");
+        assert!(apply_refresh(&mut records, &["a".into()], &json!([]), "bot").is_err());
+    }
+    #[test]
+    fn year_buckets_round_trip_and_clear_deleted_records() {
+        let dir = std::env::temp_dir().join(format!("github-tools-ai-test-{}", std::process::id()));
+        let mut old = sample("old");
+        old.merged_at = "2025-12-31T00:00:00Z".into();
+        old.pr = 2;
+        let mut records = BTreeMap::from([("old".into(), old), ("new".into(), sample("new"))]);
+        save(&dir, &records, &state()).unwrap();
+        assert_eq!(read_records(&dir).unwrap(), records);
+        records.remove("old");
+        save(&dir, &records, &state()).unwrap();
+        assert_eq!(read_records(&dir).unwrap(), records);
+        fs::write(dir.join("2025.json"), "broken").unwrap();
+        assert!(read_records(&dir).is_err());
+        fs::remove_dir_all(dir).unwrap();
+    }
+    #[test]
+    fn follows_both_nested_cursors_and_propagates_failed_pages() {
+        let c = |id: &str| json!({"id":id,"author":{"login":"bot"},"up":{"totalCount":0},"down":{"totalCount":0}});
+        let connection = |items: Value, cursor: Option<&str>| json!({"nodes":items,"pageInfo":{"hasNextPage":cursor.is_some(),"endCursor":cursor}});
+        let pages = vec![
+            json!({"repository":{"pullRequest":{"reviewThreads":connection(json!([{"id":"thread","comments":connection(json!([c("a")]),Some("comment-cursor"))}]),Some("thread-cursor"))}}}),
+            json!({"node":{"comments":connection(json!([c("b")]),None)}}),
+            json!({"repository":{"pullRequest":{"reviewThreads":connection(json!([{"id":"thread2","comments":connection(json!([c("c")]),None)}]),None)}}}),
+        ];
+        let config = Config {
+            org: "o".into(),
+            repo: "r".into(),
+            github_token: String::new(),
+        };
+        let mut calls = 0;
+        let records = fetch_comments(
+            &config,
+            1,
+            "2026-02-01T00:00:00Z",
+            Some("bot"),
+            &BTreeMap::new(),
+            &mut BTreeMap::new(),
+            |q, v| {
+                match calls {
+                    0 => {
+                        assert_eq!(q, THREADS);
+                        assert!(v["after"].is_null());
+                    }
+                    1 => {
+                        assert_eq!(q, COMMENTS);
+                        assert_eq!(v["after"], "comment-cursor");
+                    }
+                    2 => {
+                        assert_eq!(q, THREADS);
+                        assert_eq!(v["after"], "thread-cursor");
+                    }
+                    _ => panic!("unexpected request"),
+                }
+                let page = pages[calls].clone();
+                calls += 1;
+                Ok(page)
+            },
+        )
+        .unwrap();
+        assert_eq!(records.len(), 3);
+        let mut calls = 0;
+        let result = fetch_comments(
+            &config,
+            1,
+            "2026-02-01T00:00:00Z",
+            Some("bot"),
+            &BTreeMap::new(),
+            &mut BTreeMap::new(),
+            |_, _| {
+                calls += 1;
+                if calls == 1 {
+                    Ok(pages[0].clone())
+                } else {
+                    bail!("rate limited")
+                }
+            },
+        );
+        assert!(result.is_err());
+    }
+    #[test]
+    fn pagination_requires_a_cursor_and_counts_are_not_truncated() {
+        assert!(next(&json!({"pageInfo":{"hasNextPage":true}})).is_err());
+        let c = comment(
+            &json!({"id":"x","up":{"totalCount":501},"down":{"totalCount":0}}),
+            1,
+            "2026-01-02T00:00:00Z",
+        )
+        .unwrap();
+        assert_eq!(c.thumbs_up, 501);
+    }
 }

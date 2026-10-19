@@ -90,6 +90,7 @@ pub fn generate_all(repo_str: &str, start: Option<&str>) -> Result<()> {
     let db = build_repo_db(&config)?;
 
     generate_summaries::run(&db, &config)?;
+    crate::commands::fetch_automated_review_stats::generate_summaries(&config)?;
 
     let default_start = default_chart_start();
     let start_arg = start.unwrap_or(&default_start);

@@ -138,26 +138,75 @@ Audit logs written to `out/purge/` (local only).
 
 ## 4. AI-assisted review stats
 
-Measures how contributors react to automated review bot comments (👍 liked / 👎 disliked / no signal).
+Measures thumbs-up/down feedback on review-thread comments on **merged PRs**.
+Top-level review summaries, issue comments, and open/unmerged PRs are excluded.
 
 ```shell
-# Discover the bot's GitHub login (lists all review comment authors by frequency)
+# Discover author logins without saving data
 op run --env-file secrets.env -- github-tools automated-review-stats \
   --repo vectordotdev/vector --since 3m
 
-# Produce stats + update trends/vector.md
+# Initial collection, or widen saved coverage with an earlier cutoff
 op run --env-file secrets.env -- github-tools automated-review-stats \
-  --repo vectordotdev/vector \
-  --bot-login "chatgpt-codex-connector" \
-  --since 2026-01-01
+  --repo vectordotdev/vector --bot-login chatgpt-codex-connector --since 2026-01-01
+
+# Subsequent incremental refreshes (reuse each bot's saved coverage)
+op run --env-file secrets.env -- github-tools automated-review-stats \
+  --repo vectordotdev/vector --bot-login chatgpt-codex-connector
+op run --env-file secrets.env -- github-tools automated-review-stats \
+  --repo vectordotdev/vector --bot-login datadoghq-integration
+
+# Periodic full reconciliation of discovery, within saved merged-date coverage
+op run --env-file secrets.env -- github-tools automated-review-stats \
+  --repo vectordotdev/vector --bot-login chatgpt-codex-connector --full-refresh
+
+# Rebuild summaries and reports offline from tracked snapshots
+github-tools generate-all --repo vectordotdev/vector
 ```
 
-Outputs:
-- Console summary (like rate, dislike rate)
-- `out/automated-review-stats/{owner}_{repo}.csv` — per-comment table with URL and reaction (gitignored)
-- `out/summaries/{owner}_{repo}_automated_review_stats.json` — stats snapshot picked up by `generate-all`
+Source records live in `data/{owner}_{repo}/automated-review-stats/{bot_login}/{year}.json`,
+bucketed by **PR merge year**. Each PR stores its number and merge timestamp once,
+with a list of minimal comment records (`id`, `thumbs_up`, `thumbs_down`). Comment
+URLs and timestamps are omitted; PR links are derived when generating summaries.
+Node IDs retain efficient batched reaction refreshes. Each bot has a
+`state.json` with its merged-date coverage, successful discovery watermark,
+collection time, and PR count for the latest pass. Codex and Bits never overwrite
+each other. The initial Vector snapshots were collected on October 19, 2026:
+1,926 Codex comments and 21 Bits comments on PRs merged since January 1, 2026.
 
-Re-run `generate-all` after collecting stats to update the dashboard with the AI review chart.
+Incremental discovery scans merged PR metadata ordered by update time, stopping
+at the previous successful run's **start** minus a one-day overlap. Only matching
+PRs have their threads/comments fetched, with full pagination. Every saved comment
+also gets a batched reaction-count refresh, because reaction changes need not bump
+PR update timestamps. Counts use GraphQL totals, not a page of individual reactions.
+Missing nodes are removed when GitHub returns null without errors; API errors abort
+without saving the collected results. No watermark advances until fetching and data
+writes succeed. Run one collector per bot/repository at a time.
+
+`--since` defines cumulative merged-date coverage, not an incremental update window.
+Omit it on subsequent runs; an earlier date backfills, while narrowing saved coverage
+is rejected. Without saved data or `--since`, collection covers all time. Use
+`--full-refresh` periodically to reconcile discovery beyond the overlap window.
+Snapshots retain the latest comment state, like issues/discussions; they do not
+reconstruct when reactions occurred. Git history retains prior committed snapshots.
+Mixed thumbs count as `no_signal`, with a separate `mixed` count in summaries.
+
+Generated, gitignored outputs:
+
+- `out/automated-review-stats/{owner}_{repo}_{bot_login}.csv`: one row per PR, with
+  one PR link, comment classifications, and summed thumbs-up/down reaction counts.
+- `out/summaries/{owner}_{repo}_automated_review_stats.json`: all saved bot summaries,
+  including per-PR aggregates in each bot's `pull_requests` array.
+
+Comment classifications and reaction totals remain distinct: a comment with ten
+thumbs-up reactions counts as one liked comment and ten positive reactions. The
+charts continue to show comment classifications. Storage schema version 2 groups
+records by PR; the snapshots in this branch have been converted from version 1.
+
+`generate-all` rebuilds these outputs from tracked data and renders one AI chart per
+bot. The collection command does not edit `trends/*.md`; HTML reports are generated
+separately. Neither command commits or pushes data. This collector is not scheduled
+by the Datadog metrics workflow.
 
 ## 5. Datadog project-health metrics
 

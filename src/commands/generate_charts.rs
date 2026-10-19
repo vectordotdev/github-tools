@@ -653,25 +653,31 @@ struct AiStats {
     prs_scanned: u64,
     bot_login: String,
     since: Option<String>,
+    collected_at: Option<String>,
     total: u64,
     liked: u64,
     disliked: u64,
     no_signal: u64,
 }
 
-fn read_ai_stats(input_dir: &str, prefix: &str) -> Option<AiStats> {
+fn read_ai_stats(input_dir: &str, prefix: &str) -> Result<Vec<AiStats>> {
     let path = Path::new(input_dir).join(format!("{prefix}_automated_review_stats.json"));
-    let text = fs::read_to_string(&path).ok()?;
-    let v: serde_json::Value = serde_json::from_str(&text).ok()?;
-    Some(AiStats {
-        prs_scanned: v["prs_scanned"].as_u64()?,
-        bot_login:   v["bot_login"].as_str()?.to_string(),
-        since:       v["since"].as_str().map(|s| s.to_string()),
-        total:       v["total"].as_u64()?,
-        liked:       v["liked"].as_u64()?,
-        disliked:    v["disliked"].as_u64()?,
-        no_signal:   v["no_signal"].as_u64()?,
-    })
+    if !path.exists() { return Ok(Vec::new()); }
+    let v: serde_json::Value = serde_json::from_str(&fs::read_to_string(&path)?)?;
+    // Accept old single-bot summaries as well as the new multi-bot format.
+    let values = if let Some(bots) = v.get("bots") {
+        bots.as_array().context("Invalid AI bot summaries")?.clone()
+    } else { vec![v] };
+    values.into_iter().map(|v| Ok(AiStats {
+        prs_scanned: v["prs_scanned"].as_u64().context("Missing AI PR count")?,
+        bot_login: v["bot_login"].as_str().context("Missing AI bot login")?.to_owned(),
+        since: v["since"].as_str().map(str::to_owned),
+        collected_at: v["collected_at"].as_str().map(str::to_owned),
+        total: v["total"].as_u64().context("Missing AI total")?,
+        liked: v["liked"].as_u64().context("Missing AI liked")?,
+        disliked: v["disliked"].as_u64().context("Missing AI disliked")?,
+        no_signal: v["no_signal"].as_u64().context("Missing AI no_signal")?,
+    })).collect()
 }
 
 fn ai_stats_entry(stats: &AiStats) -> Result<ChartEntry> {
@@ -694,8 +700,9 @@ fn ai_stats_entry(stats: &AiStats) -> Result<ChartEntry> {
     let reacted = stats.liked + stats.disliked;
     let since_str = stats.since.as_deref().unwrap_or("all time");
     let meta = format!(
-        "{} merged PRs &nbsp;·&nbsp; bot: <code>{}</code> &nbsp;·&nbsp; since: {}",
-        stats.prs_scanned, html_escape(&stats.bot_login), since_str
+        "{} PRs scanned in latest collection &nbsp;·&nbsp; bot: <code>{}</code> &nbsp;·&nbsp; merged since: {} &nbsp;·&nbsp; reactions collected: {}",
+        stats.prs_scanned, html_escape(&stats.bot_login), html_escape(since_str),
+        html_escape(stats.collected_at.as_deref().unwrap_or("unknown"))
     );
 
     let all_table = format!(
@@ -710,9 +717,9 @@ fn ai_stats_entry(stats: &AiStats) -> Result<ChartEntry> {
         </tbody></table>",
         liked = stats.liked, disliked = stats.disliked,
         no_signal = stats.no_signal, total = stats.total,
-        liked_pct = stats.liked as f64 / stats.total as f64 * 100.0,
-        disliked_pct = stats.disliked as f64 / stats.total as f64 * 100.0,
-        no_signal_pct = stats.no_signal as f64 / stats.total as f64 * 100.0,
+        liked_pct = stats.liked as f64 / stats.total.max(1) as f64 * 100.0,
+        disliked_pct = stats.disliked as f64 / stats.total.max(1) as f64 * 100.0,
+        no_signal_pct = stats.no_signal as f64 / stats.total.max(1) as f64 * 100.0,
     );
 
     let reacted_table = if reacted > 0 {
@@ -736,8 +743,8 @@ fn ai_stats_entry(stats: &AiStats) -> Result<ChartEntry> {
     let extra = format!("<p class=\"stats-meta\">{meta}</p>{all_table}{reacted_table}");
     let json = serde_json::to_string(&chart).context("serializing ai stats chart")?;
     Ok(ChartEntry {
-        title: "AI Code Review".to_string(),
-        note: None,
+        title: format!("AI Code Review — {}", stats.bot_login),
+        note: Some("Review-thread comments on merged PRs only. No signal includes both no thumbs and mixed thumbs. Reactions are current observations, not historical reaction events.".to_owned()),
         json,
         height_px: 180,
         extra_html: Some(extra),
@@ -1343,9 +1350,9 @@ pub(crate) fn build(input_dir: &str, repo: &str, start: Option<&str>) -> Result<
     }
 
     // AI Code Review section
-    if let Some(stats) = read_ai_stats(input_dir, &prefix) {
-        let entry = ai_stats_entry(&stats)?;
-        sections.push(("AI Code Review", vec![entry]));
+    let ai_entries = read_ai_stats(input_dir, &prefix)?.iter().map(ai_stats_entry).collect::<Result<Vec<_>>>()?;
+    if !ai_entries.is_empty() {
+        sections.push(("AI Code Review", ai_entries));
     }
 
     Ok(Built { sections, yearly_stats: yearly })
@@ -1412,5 +1419,35 @@ mod heatmap_tests {
         let value = serde_json::to_value(&chart).unwrap();
         assert_eq!(value["yAxis"][0]["data"], serde_json::json!(["alice (2 PRs)", "dependabot (2 PRs)"]));
         assert_eq!(contributor_heatmap_entry(&chart).unwrap().height_px, 350);
+    }
+}
+
+#[cfg(test)]
+mod ai_stats_tests {
+    use super::*;
+
+    #[test]
+    fn loads_legacy_and_multiple_bots_and_renders_empty_counts() {
+        let dir = std::env::temp_dir().join(format!("github-tools-ai-charts-{}", std::process::id()));
+        fs::create_dir_all(&dir).unwrap();
+        let path = dir.join("test_automated_review_stats.json");
+        let legacy = serde_json::json!({
+            "prs_scanned": 0, "bot_login": "codex", "since": "2026-01-01",
+            "total": 0, "liked": 0, "disliked": 0, "no_signal": 0
+        });
+        fs::write(&path, legacy.to_string()).unwrap();
+        let stats = read_ai_stats(dir.to_str().unwrap(), "test").unwrap();
+        assert_eq!(stats.len(), 1);
+        let entry = ai_stats_entry(&stats[0]).unwrap();
+        assert!(!entry.extra_html.unwrap().contains("NaN"));
+        let mut bits = legacy.clone();
+        bits["bot_login"] = serde_json::json!("bits");
+        fs::write(&path, serde_json::json!({"bots": [legacy, bits]}).to_string()).unwrap();
+        let stats = read_ai_stats(dir.to_str().unwrap(), "test").unwrap();
+        assert_eq!(stats.len(), 2);
+        assert_ne!(ai_stats_entry(&stats[0]).unwrap().title, ai_stats_entry(&stats[1]).unwrap().title);
+        fs::write(&path, "broken").unwrap();
+        assert!(read_ai_stats(dir.to_str().unwrap(), "test").is_err());
+        fs::remove_dir_all(dir).unwrap();
     }
 }
