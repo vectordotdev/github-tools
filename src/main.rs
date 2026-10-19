@@ -229,6 +229,8 @@ enum Command {
         bot_login: Option<String>,
         #[arg(long, help = "Only scan PRs merged since this date (ISO, YYYY-MM, or relative: 3m, 1y, 30d)")]
         since: Option<String>,
+        #[arg(long, help = "Rescan all merged PRs in saved coverage instead of using the discovery watermark")]
+        full_refresh: bool,
     },
     /// Deduplicate JSON year files in a data directory
     Compact {
@@ -320,9 +322,9 @@ fn main() -> Result<()> {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             build_db::run(&input, &config)
         }
-        Command::AutomatedReviewStats { repo, env_file, bot_login, since } => {
+        Command::AutomatedReviewStats { repo, env_file, bot_login, since, full_refresh } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
-            fetch_automated_review_stats::run(&config, bot_login.as_deref(), since.as_deref())
+            fetch_automated_review_stats::run(&config, bot_login.as_deref(), since.as_deref(), full_refresh)
         }
         Command::Compact { dir } => compact::run(&dir),
         Command::FetchAll { repo, since } => workflows::fetch_all(&repo, since.as_deref()),
