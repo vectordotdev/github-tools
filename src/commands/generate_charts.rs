@@ -416,7 +416,7 @@ pub fn integration_trends(
     Some(chart)
 }
 
-/// 7. Contributor heatmap: months x top 10 contributors.
+/// 7. Contributor heatmap: months x top 10 contributors, including cutoff ties.
 pub fn contributor_heatmap(rows: &[&HashMap<String, String>]) -> Option<Chart> {
     if rows.is_empty() { return None; }
 
@@ -444,7 +444,13 @@ pub fn contributor_heatmap(rows: &[&HashMap<String, String>]) -> Option<Chart> {
     }
     let mut top_users: Vec<(String, i64)> = user_totals.into_iter().collect();
     top_users.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(&b.0)));
-    top_users.truncate(10);
+    if let Some((_, cutoff)) = top_users.get(9) {
+        let cutoff = *cutoff;
+        top_users.retain(|(_, count)| *count >= cutoff);
+    }
+    let user_labels: Vec<String> = top_users.iter()
+        .map(|(user, total)| format!("{user} ({total} PRs)"))
+        .collect();
     let top_users: Vec<String> = top_users.into_iter().map(|(u, _)| u).collect();
 
     if top_users.is_empty() { return None; }
@@ -492,7 +498,8 @@ pub fn contributor_heatmap(rows: &[&HashMap<String, String>]) -> Option<Chart> {
         .y_axis(
             Axis::new()
                 .type_(AxisType::Category)
-                .data(top_users.clone())
+                .data(user_labels)
+                .axis_label(AxisLabel::new().interval(0.0))
                 .inverse(true),
         )
         .visual_map(
@@ -751,6 +758,16 @@ fn chart_to_entry(title: &str, note: Option<&str>, chart: &Chart) -> Result<Char
     let json = serde_json::to_string(chart)
         .with_context(|| format!("serializing chart '{title}'"))?;
     Ok(ChartEntry { title: title.to_string(), note: note.map(|s| s.to_string()), json, height_px: 400, extra_html: None })
+}
+
+fn contributor_heatmap_entry(chart: &Chart) -> Result<ChartEntry> {
+    let value = serde_json::to_value(chart)?;
+    let months = value["xAxis"][0]["data"].as_array().context("heatmap months")?;
+    let row_count = value["yAxis"][0]["data"].as_array().context("heatmap contributors")?.len();
+    let first = months.first().and_then(|v| v.as_str()).unwrap_or("");
+    let last = months.last().and_then(|v| v.as_str()).unwrap_or("");
+    let note = format!("{first}–{last} · Top 10 contributors by total PRs opened in this period, including ties · Open, merged, and closed PRs count; drafts excluded · Blank cells mean no PRs");
+    chart_to_entry_h("Contributor Heatmap", Some(&note), chart, 350 + row_count.saturating_sub(10) as u32 * 25)
 }
 
 fn chart_to_entry_h(title: &str, note: Option<&str>, chart: &Chart, height_px: u32) -> Result<ChartEntry> {
@@ -1256,7 +1273,7 @@ pub(crate) fn build(input_dir: &str, repo: &str, start: Option<&str>) -> Result<
         let mut entries = Vec::new();
         let filtered_contrib = filter_by_start(&pr_contributor, start);
         if let Some(chart) = contributor_heatmap(&filtered_contrib) {
-            entries.push(chart_to_entry_h("Contributor Heatmap", Some("Last 12 months, top 10 contributors · draft PRs excluded"), &chart, 350)?);
+            entries.push(contributor_heatmap_entry(&chart)?);
         }
         if let Some(chart) = unique_contributors_monthly(&filtered_contrib) {
             entries.push(chart_to_entry("Contributors Monthly", Some("Draft PRs excluded"), &chart)?);
@@ -1342,4 +1359,58 @@ pub fn generate_index(output_dir: &str, repos: &[(String, String)]) -> Result<()
         .with_context(|| format!("writing {out_path}"))?;
     println!("Generated index: {out_path}");
     Ok(())
+}
+
+#[cfg(test)]
+mod heatmap_tests {
+    use super::*;
+
+    fn row(month: &str, user: &str, count: i64) -> HashMap<String, String> {
+        [("month".into(), month.into()), ("user_login".into(), user.into()),
+         ("count".into(), count.to_string())].into_iter().collect()
+    }
+
+    #[test]
+    fn ranks_window_totals_and_preserves_cutoff_ties() {
+        let mut rows = vec![row("2025-01", "old", 1000)];
+        for month in 2..=12 {
+            rows.push(row(&format!("2025-{month:02}"), "leader", 1));
+        }
+        rows.push(row("2026-01", "leader", 1));
+        for i in 0..8 { rows.push(row("2026-01", &format!("user{i}"), 10)); }
+        rows.push(row("2026-01", "zulu", 3));
+        rows.push(row("2025-12", "alpha", 1));
+        rows.push(row("2026-01", "alpha", 2));
+        rows.push(row("2026-01", "below", 2));
+        let chart = contributor_heatmap(&rows.iter().collect::<Vec<_>>()).unwrap();
+        let value = serde_json::to_value(&chart).unwrap();
+        let labels = value["yAxis"][0]["data"].as_array().unwrap();
+        assert_eq!(labels.len(), 11);
+        assert_eq!(labels[0], "leader (12 PRs)");
+        assert_eq!(labels[9], "alpha (3 PRs)");
+        assert_eq!(labels[10], "zulu (3 PRs)");
+        assert_eq!(value["xAxis"][0]["data"][0], "2025-02");
+        let cells = value["series"][0]["data"].as_array().unwrap();
+        for (index, label) in labels.iter().enumerate() {
+            let total: i64 = cells.iter().filter(|c| c[1].as_u64() == Some(index as u64))
+                .map(|c| c[2].as_i64().unwrap()).sum();
+            assert!(label.as_str().unwrap().ends_with(&format!("({total} PRs)")));
+        }
+        rows.reverse();
+        let reversed = serde_json::to_value(contributor_heatmap(&rows.iter().collect::<Vec<_>>()).unwrap()).unwrap();
+        assert_eq!(value["yAxis"], reversed["yAxis"]);
+        let entry = contributor_heatmap_entry(&chart).unwrap();
+        assert_eq!(entry.height_px, 375);
+        assert!(entry.note.unwrap().contains("2025-02–2026-01"));
+    }
+
+    #[test]
+    fn handles_empty_and_small_heatmaps() {
+        assert!(contributor_heatmap(&[]).is_none());
+        let rows = [row("2026-08", "dependabot", 2), row("2026-08", "alice", 2)];
+        let chart = contributor_heatmap(&rows.iter().collect::<Vec<_>>()).unwrap();
+        let value = serde_json::to_value(&chart).unwrap();
+        assert_eq!(value["yAxis"][0]["data"], serde_json::json!(["alice (2 PRs)", "dependabot (2 PRs)"]));
+        assert_eq!(contributor_heatmap_entry(&chart).unwrap().height_px, 350);
+    }
 }
