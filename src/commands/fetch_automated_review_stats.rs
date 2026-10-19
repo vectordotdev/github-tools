@@ -39,7 +39,7 @@ query($id:ID!, $after:String) {
   nodes {COMMENT_FIELDS}
  }}}
 }"#;
-const COMMENT_FIELDS: &str = "id url createdAt updatedAt author {login} up:reactions(content:THUMBS_UP) {totalCount} down:reactions(content:THUMBS_DOWN) {totalCount}";
+const COMMENT_FIELDS: &str = "id author {login} up:reactions(content:THUMBS_UP) {totalCount} down:reactions(content:THUMBS_DOWN) {totalCount}";
 const REFRESH: &str = r#"
 query($ids:[ID!]!) {
  nodes(ids:$ids) { ... on PullRequestReviewComment {COMMENT_FIELDS} }
@@ -48,13 +48,95 @@ query($ids:[ID!]!) {
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 struct Comment {
     id: String,
-    url: String,
     pr: u64,
     merged_at: String,
-    created_at: String,
-    updated_at: String,
     thumbs_up: u64,
     thumbs_down: u64,
+}
+
+/// Minimal per-comment state required to reconcile reactions by node ID.
+#[derive(Clone, Debug, Deserialize, Serialize)]
+struct ReviewComment {
+    id: String,
+    thumbs_up: u64,
+    thumbs_down: u64,
+}
+
+#[derive(Debug, Deserialize, Serialize)]
+struct PullRequest {
+    pr: u64,
+    merged_at: String,
+    comments: Vec<ReviewComment>,
+}
+
+#[derive(Debug, Serialize)]
+struct PrSummary {
+    pr: u64,
+    url: String,
+    merged_at: String,
+    total: usize,
+    liked: usize,
+    disliked: usize,
+    no_signal: usize,
+    mixed: usize,
+    thumbs_up: u64,
+    thumbs_down: u64,
+}
+
+fn group_by_pr(records: &BTreeMap<String, Comment>) -> Result<BTreeMap<u64, PullRequest>> {
+    let mut prs: BTreeMap<u64, PullRequest> = BTreeMap::new();
+    for comment in records.values() {
+        let pr = prs.entry(comment.pr).or_insert_with(|| PullRequest {
+            pr: comment.pr,
+            merged_at: comment.merged_at.clone(),
+            comments: Vec::new(),
+        });
+        ensure!(
+            pr.merged_at == comment.merged_at,
+            "Conflicting merge dates for PR {}",
+            pr.pr
+        );
+        pr.comments.push(ReviewComment {
+            id: comment.id.clone(),
+            thumbs_up: comment.thumbs_up,
+            thumbs_down: comment.thumbs_down,
+        });
+    }
+    Ok(prs)
+}
+
+fn pr_summaries(repo: &str, records: &BTreeMap<String, Comment>) -> Result<Vec<PrSummary>> {
+    Ok(group_by_pr(records)?
+        .into_values()
+        .map(|pr| {
+            let liked = pr
+                .comments
+                .iter()
+                .filter(|c| c.thumbs_up > 0 && c.thumbs_down == 0)
+                .count();
+            let disliked = pr
+                .comments
+                .iter()
+                .filter(|c| c.thumbs_down > 0 && c.thumbs_up == 0)
+                .count();
+            PrSummary {
+                pr: pr.pr,
+                url: format!("https://github.com/{repo}/pull/{}", pr.pr),
+                merged_at: pr.merged_at,
+                total: pr.comments.len(),
+                liked,
+                disliked,
+                no_signal: pr.comments.len() - liked - disliked,
+                mixed: pr
+                    .comments
+                    .iter()
+                    .filter(|c| c.thumbs_up > 0 && c.thumbs_down > 0)
+                    .count(),
+                thumbs_up: pr.comments.iter().map(|c| c.thumbs_up).sum(),
+                thumbs_down: pr.comments.iter().map(|c| c.thumbs_down).sum(),
+            }
+        })
+        .collect())
 }
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -122,11 +204,8 @@ fn timestamp(value: &str) -> Result<String> {
 fn comment(value: &Value, pr: u64, merged_at: &str) -> Result<Comment> {
     Ok(Comment {
         id: string(value, "id")?,
-        url: string(value, "url")?,
         pr,
         merged_at: timestamp(merged_at)?,
-        created_at: timestamp(&string(value, "createdAt")?)?,
-        updated_at: timestamp(&string(value, "updatedAt")?)?,
         thumbs_up: value["up"]["totalCount"]
             .as_u64()
             .context("Missing thumbs-up count")?,
@@ -138,6 +217,7 @@ fn comment(value: &Value, pr: u64, merged_at: &str) -> Result<Comment> {
 
 fn read_records(dir: &Path) -> Result<BTreeMap<String, Comment>> {
     let mut records = BTreeMap::new();
+    let mut seen_prs = std::collections::BTreeSet::new();
     if !dir.exists() {
         return Ok(records);
     }
@@ -150,19 +230,31 @@ fn read_records(dir: &Path) -> Result<BTreeMap<String, Comment>> {
         {
             continue;
         }
-        let items: Vec<Comment> = serde_json::from_slice(&fs::read(&path)?)
+        let items: Vec<PullRequest> = serde_json::from_slice(&fs::read(&path)?)
             .with_context(|| format!("Reading {}", path.display()))?;
-        for item in items {
+        for pr in items {
             ensure!(
-                timestamp(&item.created_at)?.starts_with(name),
-                "Comment in wrong year bucket"
+                timestamp(&pr.merged_at)?.starts_with(name),
+                "PR in wrong merge-year bucket"
             );
-            ensure!(
-                !records.contains_key(&item.id),
-                "Duplicate comment ID {}",
-                item.id
-            );
-            records.insert(item.id.clone(), item);
+            ensure!(seen_prs.insert(pr.pr), "Duplicate PR {}", pr.pr);
+            for item in pr.comments {
+                ensure!(
+                    !records.contains_key(&item.id),
+                    "Duplicate comment ID {}",
+                    item.id
+                );
+                records.insert(
+                    item.id.clone(),
+                    Comment {
+                        id: item.id,
+                        pr: pr.pr,
+                        merged_at: pr.merged_at.clone(),
+                        thumbs_up: item.thumbs_up,
+                        thumbs_down: item.thumbs_down,
+                    },
+                );
+            }
         }
     }
     Ok(records)
@@ -181,7 +273,7 @@ fn write_json(path: &Path, value: &impl Serialize) -> Result<()> {
 }
 
 fn save(dir: &Path, records: &BTreeMap<String, Comment>, state: &State) -> Result<()> {
-    let mut years: BTreeMap<String, Vec<&Comment>> = BTreeMap::new();
+    let mut years: BTreeMap<String, Vec<PullRequest>> = BTreeMap::new();
     // Retain empty buckets when comments were deleted; no stale records remain.
     if dir.exists() {
         for entry in fs::read_dir(dir)? {
@@ -195,9 +287,9 @@ fn save(dir: &Path, records: &BTreeMap<String, Comment>, state: &State) -> Resul
             }
         }
     }
-    for item in records.values() {
+    for item in group_by_pr(records)?.into_values() {
         years
-            .entry(timestamp(&item.created_at)?[..4].to_owned())
+            .entry(timestamp(&item.merged_at)?[..4].to_owned())
             .or_default()
             .push(item);
     }
@@ -264,7 +356,7 @@ pub fn run(
     };
     if let Some(state) = &state {
         ensure!(
-            state.schema_version == 1
+            state.schema_version == 2
                 && state.repo == format!("{}/{}", config.org, config.repo)
                 && Some(state.bot_login.as_str()) == bot_login,
             "Saved state identity/version mismatch"
@@ -346,7 +438,7 @@ pub fn run(
         apply_refresh(&mut records, batch, &data["nodes"], bot)?;
     }
     let state = State {
-        schema_version: 1,
+        schema_version: 2,
         repo: format!("{}/{}", config.org, config.repo),
         bot_login: bot.into(),
         since,
@@ -476,21 +568,24 @@ pub fn generate_summaries(config: &Config) -> Result<()> {
         }
         let state: State = serde_json::from_slice(&fs::read(dir.join("state.json"))?)?;
         ensure!(
-            state.schema_version == 1
+            state.schema_version == 2
                 && state.repo == format!("{}/{}", config.org, config.repo)
                 && dir.file_name().and_then(|n| n.to_str()) == Some(state.bot_login.as_str()),
             "Saved state identity/version mismatch"
         );
         let records = read_records(&dir)?;
-        summaries.insert(state.bot_login.clone(), summary(&state, &records));
+        let prs = pr_summaries(&state.repo, &records)?;
+        let mut stats = summary(&state, &records);
+        stats["pull_requests"] = serde_json::to_value(&prs)?;
+        summaries.insert(state.bot_login.clone(), stats);
         let csv_path = Path::new("out/automated-review-stats").join(format!(
             "{}_{}_{}.csv",
             config.org, config.repo, state.bot_login
         ));
         fs::create_dir_all(csv_path.parent().unwrap())?;
         let mut writer = csv::Writer::from_path(csv_path)?;
-        for item in records.values() {
-            writer.serialize(item)?;
+        for pr in &prs {
+            writer.serialize(pr)?;
         }
         writer.flush()?;
     }
@@ -509,7 +604,7 @@ mod tests {
     use super::*;
     fn state() -> State {
         State {
-            schema_version: 1,
+            schema_version: 2,
             repo: "o/r".into(),
             bot_login: "bot".into(),
             since: "2026-01-01T00:00:00Z".into(),
@@ -521,15 +616,68 @@ mod tests {
     fn sample(id: &str) -> Comment {
         Comment {
             id: id.into(),
-            url: "https://example.test/comment".into(),
             pr: 1,
             merged_at: "2026-02-01T00:00:00Z".into(),
-            created_at: "2026-01-31T00:00:00Z".into(),
-            updated_at: "2026-01-31T00:00:00Z".into(),
             thumbs_up: 1,
             thumbs_down: 0,
         }
     }
+    #[test]
+    fn pr_totals_distinguish_comments_from_reactions() {
+        let mut liked = sample("a");
+        liked.thumbs_up = 10;
+        let mut mixed = sample("b");
+        mixed.thumbs_down = 2;
+        let mut disliked = sample("c");
+        disliked.pr = 2;
+        disliked.thumbs_up = 0;
+        disliked.thumbs_down = 3;
+        let mut none = sample("d");
+        none.thumbs_up = 0;
+        let records = BTreeMap::from([
+            (liked.id.clone(), liked),
+            (mixed.id.clone(), mixed),
+            (disliked.id.clone(), disliked),
+            (none.id.clone(), none),
+        ]);
+        let prs = pr_summaries("o/r", &records).unwrap();
+        assert_eq!(prs.len(), 2);
+        assert_eq!(prs[0].url, "https://github.com/o/r/pull/1");
+        assert_eq!(
+            (
+                prs[0].total,
+                prs[0].liked,
+                prs[0].disliked,
+                prs[0].no_signal,
+                prs[0].mixed
+            ),
+            (3, 1, 0, 2, 1)
+        );
+        assert_eq!((prs[0].thumbs_up, prs[0].thumbs_down), (11, 2));
+        assert_eq!(
+            (prs[1].total, prs[1].disliked, prs[1].thumbs_down),
+            (1, 1, 3)
+        );
+        let stats = summary(&state(), &records);
+        assert_eq!(stats["total"], prs.iter().map(|p| p.total).sum::<usize>());
+        assert_eq!(
+            stats["no_signal"],
+            prs.iter().map(|p| p.no_signal).sum::<usize>()
+        );
+    }
+
+    #[test]
+    fn compact_storage_groups_comments_and_rejects_conflicting_pr_dates() {
+        let mut records = BTreeMap::from([("a".into(), sample("a")), ("b".into(), sample("b"))]);
+        let grouped = group_by_pr(&records).unwrap();
+        let json = serde_json::to_value(&grouped[&1]).unwrap();
+        assert_eq!(json["comments"].as_array().unwrap().len(), 2);
+        assert_eq!(json["comments"][0].as_object().unwrap().len(), 3);
+        assert!(json["comments"][0].get("pr").is_none());
+        records.get_mut("b").unwrap().merged_at = "2025-01-01T00:00:00Z".into();
+        assert!(group_by_pr(&records).is_err());
+    }
+
     #[test]
     fn coverage_and_watermark_are_independent() {
         let s = state();
@@ -549,23 +697,24 @@ mod tests {
         );
     }
     #[test]
-    fn reactions_refresh_without_comment_timestamp_change_and_deletions_are_removed() {
+    fn reactions_refresh_from_minimal_records_and_deletions_are_removed() {
         let mut records = BTreeMap::from([("a".into(), sample("a")), ("b".into(), sample("b"))]);
-        let value = json!([{"id":"a","url":"https://example.test/comment","createdAt":"2026-01-31T00:00:00Z","updatedAt":"2026-01-31T00:00:00Z","author":{"login":"bot"},"up":{"totalCount":1},"down":{"totalCount":2}},null]);
+        let value = json!([{"id":"a","author":{"login":"bot"},"up":{"totalCount":1},"down":{"totalCount":2}},null]);
         apply_refresh(&mut records, &["a".into(), "b".into()], &value, "bot").unwrap();
         let stats = summary(&state(), &records);
         assert_eq!(stats["total"], 1);
         assert_eq!(stats["mixed"], 1);
         assert_eq!(stats["no_signal"], 1);
         assert_eq!(stats["liked"], 0);
-        assert_eq!(records["a"].updated_at, "2026-01-31T00:00:00Z");
+        assert_eq!(records["a"].merged_at, "2026-02-01T00:00:00Z");
         assert!(apply_refresh(&mut records, &["a".into()], &json!([]), "bot").is_err());
     }
     #[test]
     fn year_buckets_round_trip_and_clear_deleted_records() {
         let dir = std::env::temp_dir().join(format!("github-tools-ai-test-{}", std::process::id()));
         let mut old = sample("old");
-        old.created_at = "2025-12-31T00:00:00Z".into();
+        old.merged_at = "2025-12-31T00:00:00Z".into();
+        old.pr = 2;
         let mut records = BTreeMap::from([("old".into(), old), ("new".into(), sample("new"))]);
         save(&dir, &records, &state()).unwrap();
         assert_eq!(read_records(&dir).unwrap(), records);
@@ -578,7 +727,7 @@ mod tests {
     }
     #[test]
     fn follows_both_nested_cursors_and_propagates_failed_pages() {
-        let c = |id: &str| json!({"id":id,"url":"u","createdAt":"2026-01-01T00:00:00Z","updatedAt":"2026-01-01T00:00:00Z","author":{"login":"bot"},"up":{"totalCount":0},"down":{"totalCount":0}});
+        let c = |id: &str| json!({"id":id,"author":{"login":"bot"},"up":{"totalCount":0},"down":{"totalCount":0}});
         let connection = |items: Value, cursor: Option<&str>| json!({"nodes":items,"pageInfo":{"hasNextPage":cursor.is_some(),"endCursor":cursor}});
         let pages = vec![
             json!({"repository":{"pullRequest":{"reviewThreads":connection(json!([{"id":"thread","comments":connection(json!([c("a")]),Some("comment-cursor"))}]),Some("thread-cursor"))}}}),
@@ -643,7 +792,12 @@ mod tests {
     #[test]
     fn pagination_requires_a_cursor_and_counts_are_not_truncated() {
         assert!(next(&json!({"pageInfo":{"hasNextPage":true}})).is_err());
-        let c = comment(&json!({"id":"x","url":"u","createdAt":"2026-01-01T00:00:00Z","updatedAt":"2026-01-01T00:00:00Z","up":{"totalCount":501},"down":{"totalCount":0}}),1,"2026-01-02T00:00:00Z").unwrap();
+        let c = comment(
+            &json!({"id":"x","up":{"totalCount":501},"down":{"totalCount":0}}),
+            1,
+            "2026-01-02T00:00:00Z",
+        )
+        .unwrap();
         assert_eq!(c.thumbs_up, 501);
     }
 }

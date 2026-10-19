@@ -165,7 +165,10 @@ github-tools generate-all --repo vectordotdev/vector
 ```
 
 Source records live in `data/{owner}_{repo}/automated-review-stats/{bot_login}/{year}.json`,
-bucketed by comment creation year and keyed by GitHub node ID. Each bot has a
+bucketed by **PR merge year**. Each PR stores its number and merge timestamp once,
+with a list of minimal comment records (`id`, `thumbs_up`, `thumbs_down`). Comment
+URLs and timestamps are omitted; PR links are derived when generating summaries.
+Node IDs retain efficient batched reaction refreshes. Each bot has a
 `state.json` with its merged-date coverage, successful discovery watermark,
 collection time, and PR count for the latest pass. Codex and Bits never overwrite
 each other. The initial Vector snapshots were collected on October 19, 2026:
@@ -190,8 +193,15 @@ Mixed thumbs count as `no_signal`, with a separate `mixed` count in summaries.
 
 Generated, gitignored outputs:
 
-- `out/automated-review-stats/{owner}_{repo}_{bot_login}.csv`: per-comment records.
-- `out/summaries/{owner}_{repo}_automated_review_stats.json`: all saved bot summaries.
+- `out/automated-review-stats/{owner}_{repo}_{bot_login}.csv`: one row per PR, with
+  one PR link, comment classifications, and summed thumbs-up/down reaction counts.
+- `out/summaries/{owner}_{repo}_automated_review_stats.json`: all saved bot summaries,
+  including per-PR aggregates in each bot's `pull_requests` array.
+
+Comment classifications and reaction totals remain distinct: a comment with ten
+thumbs-up reactions counts as one liked comment and ten positive reactions. The
+charts continue to show comment classifications. Storage schema version 2 groups
+records by PR; the snapshots in this branch have been converted from version 1.
 
 `generate-all` rebuilds these outputs from tracked data and renders one AI chart per
 bot. The collection command does not edit `trends/*.md`; HTML reports are generated
