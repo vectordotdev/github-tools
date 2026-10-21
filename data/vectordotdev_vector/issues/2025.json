@@ -2902,25 +2902,25 @@
     }
   },
   {
-    "id": 2795697855,
-    "number": 22234,
-    "title": "Missing documentation for secrets",
-    "state": "closed",
-    "created_at": "2025-01-17T15:07:25Z",
-    "updated_at": "2026-09-24T14:04:31Z",
     "closed_at": "2025-01-30T20:23:42Z",
-    "user": {
-      "login": "satellite-no"
-    },
+    "created_at": "2025-01-17T15:07:25Z",
+    "id": 2795697855,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 5210716293491119031,
-        "name": "domain: external docs",
         "color": "343639",
-        "description": "Anything related to Vector's external, public documentation"
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain: external docs"
       }
     ],
-    "issue_type": "Bug"
+    "number": 22234,
+    "state": "closed",
+    "title": "Missing documentation for secrets",
+    "updated_at": "2026-09-24T14:04:31Z",
+    "user": {
+      "login": "satellite-no"
+    }
   },
   {
     "closed_at": "2025-01-20T08:02:31Z",
@@ -4071,25 +4071,25 @@
     }
   },
   {
-    "id": 2805814999,
-    "number": 22288,
-    "title": "Vector keeps reading from a log file that has been deleted when no space left on device",
-    "state": "open",
-    "created_at": "2025-01-23T03:28:10Z",
-    "updated_at": "2026-10-14T21:11:31Z",
     "closed_at": null,
-    "user": {
-      "login": "duanchao2035"
-    },
+    "created_at": "2025-01-23T03:28:10Z",
+    "id": 2805814999,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 3167616327810328810,
-        "name": "source: file",
         "color": "5ED9F6",
-        "description": "Anything `file` source related"
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
       }
     ],
-    "issue_type": "Bug"
+    "number": 22288,
+    "state": "open",
+    "title": "Vector keeps reading from a log file that has been deleted when no space left on device",
+    "updated_at": "2026-10-14T21:11:31Z",
+    "user": {
+      "login": "duanchao2035"
+    }
   },
   {
     "closed_at": null,
@@ -4456,25 +4456,25 @@
     }
   },
   {
-    "id": 2814926768,
-    "number": 22310,
-    "title": "SSL errors in log with http_endpoint with tls",
-    "state": "open",
-    "created_at": "2025-01-28T08:18:55Z",
-    "updated_at": "2026-08-28T16:16:13Z",
     "closed_at": null,
-    "user": {
-      "login": "robinpecha"
-    },
+    "created_at": "2025-01-28T08:18:55Z",
+    "id": 2814926768,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 7280804221978411925,
-        "name": "domain: networking",
         "color": "343639",
-        "description": "Anything related to Vector's networking"
+        "description": "Anything related to Vector's networking",
+        "id": 7280804221978411925,
+        "name": "domain: networking"
       }
     ],
-    "issue_type": "Bug"
+    "number": 22310,
+    "state": "open",
+    "title": "SSL errors in log with http_endpoint with tls",
+    "updated_at": "2026-08-28T16:16:13Z",
+    "user": {
+      "login": "robinpecha"
+    }
   },
   {
     "closed_at": "2025-06-13T15:22:03Z",
@@ -4521,25 +4521,25 @@
     }
   },
   {
-    "id": 2816905179,
-    "number": 22316,
-    "title": "support tags in Azure Blob Storage sink",
-    "state": "closed",
-    "created_at": "2025-01-28T23:19:24Z",
-    "updated_at": "2026-08-07T18:29:42Z",
     "closed_at": "2026-08-07T18:29:42Z",
-    "user": {
-      "login": "melugoyal"
-    },
+    "created_at": "2025-01-28T23:19:24Z",
+    "id": 2816905179,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 1651409443776833596,
-        "name": "sink: azure_blob",
         "color": "5ED9F6",
-        "description": "Anything `azure_blob` sink related"
+        "description": "Anything `azure_blob` sink related",
+        "id": 1651409443776833596,
+        "name": "sink: azure_blob"
       }
     ],
-    "issue_type": "Feature"
+    "number": 22316,
+    "state": "closed",
+    "title": "support tags in Azure Blob Storage sink",
+    "updated_at": "2026-08-07T18:29:42Z",
+    "user": {
+      "login": "melugoyal"
+    }
   },
   {
     "closed_at": "2025-01-31T21:08:01Z",
@@ -4708,25 +4708,25 @@
     }
   },
   {
-    "id": 2820899491,
-    "number": 22327,
-    "title": "Configuration Errors in YAML when encountering null value",
-    "state": "closed",
-    "created_at": "2025-01-30T13:52:45Z",
-    "updated_at": "2026-07-31T19:59:18Z",
     "closed_at": "2026-07-31T19:59:18Z",
-    "user": {
-      "login": "nomalord"
-    },
+    "created_at": "2025-01-30T13:52:45Z",
+    "id": 2820899491,
+    "issue_type": "Enhancement",
     "labels": [
       {
-        "id": 4606596601252306592,
-        "name": "domain: config",
         "color": "343639",
-        "description": "Anything related to configuring Vector"
+        "description": "Anything related to configuring Vector",
+        "id": 4606596601252306592,
+        "name": "domain: config"
       }
     ],
-    "issue_type": "Enhancement"
+    "number": 22327,
+    "state": "closed",
+    "title": "Configuration Errors in YAML when encountering null value",
+    "updated_at": "2026-07-31T19:59:18Z",
+    "user": {
+      "login": "nomalord"
+    }
   },
   {
     "closed_at": "2026-07-08T18:20:50Z",
@@ -4796,31 +4796,31 @@
     }
   },
   {
-    "id": 2823460364,
-    "number": 22339,
-    "title": "Vector does not skip healthchecks on config validation - just ignores their results causing a hang",
-    "state": "open",
-    "created_at": "2025-01-31T13:14:23Z",
-    "updated_at": "2026-09-29T03:49:31Z",
     "closed_at": null,
-    "user": {
-      "login": "nulli3"
-    },
+    "created_at": "2025-01-31T13:14:23Z",
+    "id": 2823460364,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 4606596601252306592,
-        "name": "domain: config",
         "color": "343639",
-        "description": "Anything related to configuring Vector"
+        "description": "Anything related to configuring Vector",
+        "id": 4606596601252306592,
+        "name": "domain: config"
       },
       {
-        "id": 247640566794965911,
-        "name": "domain: healthchecks",
         "color": "343639",
-        "description": "Anything related to Vector's healthchecks"
+        "description": "Anything related to Vector's healthchecks",
+        "id": 247640566794965911,
+        "name": "domain: healthchecks"
       }
     ],
-    "issue_type": "Bug"
+    "number": 22339,
+    "state": "open",
+    "title": "Vector does not skip healthchecks on config validation - just ignores their results causing a hang",
+    "updated_at": "2026-09-29T03:49:31Z",
+    "user": {
+      "login": "nulli3"
+    }
   },
   {
     "closed_at": "2025-03-10T17:23:20Z",
@@ -6697,25 +6697,25 @@
     }
   },
   {
-    "id": 2853937067,
-    "number": 22440,
-    "title": "prometheus_exporter metrics gap when upgrading from 0.23",
-    "state": "closed",
-    "created_at": "2025-02-14T14:59:35Z",
-    "updated_at": "2026-08-22T21:23:38Z",
     "closed_at": "2026-08-22T21:23:38Z",
-    "user": {
-      "login": "urosht"
-    },
+    "created_at": "2025-02-14T14:59:35Z",
+    "id": 2853937067,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 5884848275777734183,
-        "name": "sink: prometheus_exporter",
         "color": "5ED9F6",
-        "description": "Anything `prometheus_exporter` sink related"
+        "description": "Anything `prometheus_exporter` sink related",
+        "id": 5884848275777734183,
+        "name": "sink: prometheus_exporter"
       }
     ],
-    "issue_type": "Bug"
+    "number": 22440,
+    "state": "closed",
+    "title": "prometheus_exporter metrics gap when upgrading from 0.23",
+    "updated_at": "2026-08-22T21:23:38Z",
+    "user": {
+      "login": "urosht"
+    }
   },
   {
     "closed_at": "2025-02-14T19:55:10Z",
@@ -9860,25 +9860,25 @@
     }
   },
   {
-    "id": 2895637355,
-    "number": 22592,
-    "title": "`support.notices`  section from cue files is not displayed in website documentation",
-    "state": "closed",
-    "created_at": "2025-03-04T22:55:24Z",
-    "updated_at": "2026-09-03T20:40:45Z",
     "closed_at": "2026-09-03T20:40:45Z",
-    "user": {
-      "login": "jorgehermo9"
-    },
+    "created_at": "2025-03-04T22:55:24Z",
+    "id": 2895637355,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 5210716293491119031,
-        "name": "domain: external docs",
         "color": "343639",
-        "description": "Anything related to Vector's external, public documentation"
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain: external docs"
       }
     ],
-    "issue_type": "Bug"
+    "number": 22592,
+    "state": "closed",
+    "title": "`support.notices`  section from cue files is not displayed in website documentation",
+    "updated_at": "2026-09-03T20:40:45Z",
+    "user": {
+      "login": "jorgehermo9"
+    }
   },
   {
     "closed_at": null,
@@ -10144,39 +10144,39 @@
     }
   },
   {
-    "id": 2379052158,
-    "number": 22610,
-    "title": "chore(deps): Bump axios from 1.7.5 to 1.8.2 in /website in the npm_and_yarn group across 1 directory",
-    "state": "closed",
-    "created_at": "2025-03-07T16:53:59Z",
-    "updated_at": "2026-10-16T20:52:56Z",
     "closed_at": "2025-03-11T15:02:25Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-03-07T16:53:59Z",
+    "draft": false,
+    "id": 2379052158,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 22610,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(deps): Bump axios from 1.7.5 to 1.8.2 in /website in the npm_and_yarn group across 1 directory",
+    "updated_at": "2026-10-16T20:52:56Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-03-11T20:53:42Z",
@@ -10264,25 +10264,25 @@
     }
   },
   {
-    "id": 2904673944,
-    "number": 22615,
-    "title": "Redis doesn't resubscribe/reconnect to channel",
-    "state": "closed",
-    "created_at": "2025-03-08T09:34:19Z",
-    "updated_at": "2026-08-04T18:32:06Z",
     "closed_at": "2026-08-04T18:32:06Z",
-    "user": {
-      "login": "andreyvital"
-    },
+    "created_at": "2025-03-08T09:34:19Z",
+    "id": 2904673944,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 210342434853879155,
-        "name": "source: redis",
         "color": "5ED9F6",
-        "description": "Anything `redis` source related"
+        "description": "Anything `redis` source related",
+        "id": 210342434853879155,
+        "name": "source: redis"
       }
     ],
-    "issue_type": "Bug"
+    "number": 22615,
+    "state": "closed",
+    "title": "Redis doesn't resubscribe/reconnect to channel",
+    "updated_at": "2026-08-04T18:32:06Z",
+    "user": {
+      "login": "andreyvital"
+    }
   },
   {
     "closed_at": "2026-05-06T15:21:17Z",
@@ -11415,39 +11415,39 @@
     }
   },
   {
-    "id": 2398255657,
-    "number": 22671,
-    "title": "chore(deps): Bump the npm_and_yarn group across 1 directory with 2 updates",
-    "state": "closed",
-    "created_at": "2025-03-17T15:18:09Z",
-    "updated_at": "2026-10-16T20:52:53Z",
     "closed_at": "2025-03-17T17:39:39Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-03-17T15:18:09Z",
+    "draft": false,
+    "id": 2398255657,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 22671,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(deps): Bump the npm_and_yarn group across 1 directory with 2 updates",
+    "updated_at": "2026-10-16T20:52:53Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-03-17T18:49:30Z",
@@ -11531,39 +11531,39 @@
     }
   },
   {
-    "id": 2398719151,
-    "number": 22675,
-    "title": "chore(website deps): Bump the npm_and_yarn group in /website with 38 updates",
-    "state": "closed",
-    "created_at": "2025-03-17T18:14:40Z",
-    "updated_at": "2026-10-16T20:52:50Z",
     "closed_at": "2025-03-24T19:54:01Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-03-17T18:14:40Z",
+    "draft": false,
+    "id": 2398719151,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 22675,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): Bump the npm_and_yarn group in /website with 38 updates",
+    "updated_at": "2026-10-16T20:52:50Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-03-17T22:50:54Z",
@@ -12436,45 +12436,45 @@
     }
   },
   {
-    "id": 2414806978,
-    "number": 22721,
-    "title": "chore(website deps): Bump the npm_and_yarn group across 1 directory with 39 updates",
-    "state": "closed",
-    "created_at": "2025-03-24T20:59:50Z",
-    "updated_at": "2026-10-16T20:52:47Z",
     "closed_at": "2025-06-30T16:59:42Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-03-24T20:59:50Z",
+    "draft": false,
+    "id": 2414806978,
+    "issue_type": null,
     "labels": [
       {
-        "id": 7735142015044067771,
-        "name": "domain: deps",
         "color": "343639",
-        "description": "Anything related to Vector's dependencies"
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain: deps"
       },
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 22721,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): Bump the npm_and_yarn group across 1 directory with 39 updates",
+    "updated_at": "2026-10-16T20:52:47Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-03-25T14:22:54Z",
@@ -12608,25 +12608,25 @@
     }
   },
   {
-    "id": 2951374447,
-    "number": 22733,
-    "title": "Support file source close when file not active for a long time",
-    "state": "open",
-    "created_at": "2025-03-27T03:20:44Z",
-    "updated_at": "2026-09-28T20:01:46Z",
     "closed_at": null,
-    "user": {
-      "login": "suikammd"
-    },
+    "created_at": "2025-03-27T03:20:44Z",
+    "id": 2951374447,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 3167616327810328810,
-        "name": "source: file",
         "color": "5ED9F6",
-        "description": "Anything `file` source related"
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
       }
     ],
-    "issue_type": "Feature"
+    "number": 22733,
+    "state": "open",
+    "title": "Support file source close when file not active for a long time",
+    "updated_at": "2026-09-28T20:01:46Z",
+    "user": {
+      "login": "suikammd"
+    }
   },
   {
     "closed_at": "2025-03-27T15:17:31Z",
@@ -14236,39 +14236,39 @@
     }
   },
   {
-    "id": 2440519999,
-    "number": 22803,
-    "title": "feat(sources): Add new ifile source with improved implementation",
-    "state": "closed",
-    "created_at": "2025-04-04T22:28:06Z",
-    "updated_at": "2026-09-23T18:24:05Z",
     "closed_at": "2026-09-23T18:23:52Z",
-    "user": {
-      "login": "tamer-hassan"
-    },
+    "created_at": "2025-04-04T22:28:06Z",
+    "draft": true,
+    "id": 2440519999,
+    "issue_type": null,
     "labels": [
       {
-        "id": 3167616327810328810,
-        "name": "source: file",
         "color": "5ED9F6",
-        "description": "Anything `file` source related"
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
       },
       {
+        "color": "343639",
+        "description": "Anything related to Vector's sources",
         "id": 2021938762883471635,
-        "name": "domain: sources",
-        "color": "343639",
-        "description": "Anything related to Vector's sources"
+        "name": "domain: sources"
       },
       {
-        "id": 5210716293491119031,
-        "name": "domain: external docs",
         "color": "343639",
-        "description": "Anything related to Vector's external, public documentation"
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain: external docs"
       }
     ],
-    "issue_type": null,
+    "number": 22803,
     "pull_request": {},
-    "draft": true
+    "state": "closed",
+    "title": "feat(sources): Add new ifile source with improved implementation",
+    "updated_at": "2026-09-23T18:24:05Z",
+    "user": {
+      "login": "tamer-hassan"
+    }
   },
   {
     "closed_at": "2025-04-11T19:16:22Z",
@@ -15343,31 +15343,31 @@
     }
   },
   {
-    "id": 2985853672,
-    "number": 22849,
-    "title": "Cache kubernetes metadata for deleted pods in source kubernetes_logs",
-    "state": "closed",
-    "created_at": "2025-04-10T14:16:04Z",
-    "updated_at": "2026-10-08T09:29:10Z",
     "closed_at": "2026-10-08T09:29:10Z",
-    "user": {
-      "login": "xiaozongyang"
-    },
+    "created_at": "2025-04-10T14:16:04Z",
+    "id": 2985853672,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 8380833141092437707,
-        "name": "source: kubernetes_logs",
         "color": "5ED9F6",
-        "description": "Anything `kubernetes_logs` source related"
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
       },
       {
-        "id": 5891925229468674031,
-        "name": "platform: kubernetes",
         "color": "F687F6",
-        "description": "Anything `kubernetes` platform related"
+        "description": "Anything `kubernetes` platform related",
+        "id": 5891925229468674031,
+        "name": "platform: kubernetes"
       }
     ],
-    "issue_type": "Feature"
+    "number": 22849,
+    "state": "closed",
+    "title": "Cache kubernetes metadata for deleted pods in source kubernetes_logs",
+    "updated_at": "2026-10-08T09:29:10Z",
+    "user": {
+      "login": "xiaozongyang"
+    }
   },
   {
     "closed_at": "2025-04-18T15:24:12Z",
@@ -17009,25 +17009,25 @@
     }
   },
   {
-    "id": 3019409976,
-    "number": 22946,
-    "title": "Event stuck in buffer and remains unprocessed",
-    "state": "open",
-    "created_at": "2025-04-25T08:48:51Z",
-    "updated_at": "2026-09-15T17:57:40Z",
     "closed_at": null,
-    "user": {
-      "login": "cah-rita-kassar"
-    },
+    "created_at": "2025-04-25T08:48:51Z",
+    "id": 3019409976,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 3389798092856007937,
-        "name": "domain: buffers",
         "color": "343639",
-        "description": "Anything related to Vector's memory/disk buffers"
+        "description": "Anything related to Vector's memory/disk buffers",
+        "id": 3389798092856007937,
+        "name": "domain: buffers"
       }
     ],
-    "issue_type": "Bug"
+    "number": 22946,
+    "state": "open",
+    "title": "Event stuck in buffer and remains unprocessed",
+    "updated_at": "2026-09-15T17:57:40Z",
+    "user": {
+      "login": "cah-rita-kassar"
+    }
   },
   {
     "closed_at": "2025-10-14T17:16:08Z",
@@ -18074,25 +18074,25 @@
     }
   },
   {
-    "id": 3044470742,
-    "number": 23000,
-    "title": "Configurable Healthcheck Endpoint for Loki Sink",
-    "state": "closed",
-    "created_at": "2025-05-07T02:12:37Z",
-    "updated_at": "2026-09-04T15:12:46Z",
     "closed_at": "2026-09-04T15:12:46Z",
-    "user": {
-      "login": "mlladb"
-    },
+    "created_at": "2025-05-07T02:12:37Z",
+    "id": 3044470742,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 7804543468253826248,
-        "name": "sink: loki",
         "color": "5ED9F6",
-        "description": "Anything `loki` sink related"
+        "description": "Anything `loki` sink related",
+        "id": 7804543468253826248,
+        "name": "sink: loki"
       }
     ],
-    "issue_type": "Feature"
+    "number": 23000,
+    "state": "closed",
+    "title": "Configurable Healthcheck Endpoint for Loki Sink",
+    "updated_at": "2026-09-04T15:12:46Z",
+    "user": {
+      "login": "mlladb"
+    }
   },
   {
     "closed_at": "2025-05-07T17:27:04Z",
@@ -19115,25 +19115,25 @@
     }
   },
   {
-    "id": 3067348984,
-    "number": 23062,
-    "title": "Support gRPC in the OTEL sink",
-    "state": "open",
-    "created_at": "2025-05-15T20:48:59Z",
-    "updated_at": "2026-09-23T22:14:49Z",
     "closed_at": null,
-    "user": {
-      "login": "pront"
-    },
+    "created_at": "2025-05-15T20:48:59Z",
+    "id": 3067348984,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 2424438130306630529,
-        "name": "sink: opentelemetry",
         "color": "5ED9F6",
-        "description": "Anything `opentelemetry` sink related"
+        "description": "Anything `opentelemetry` sink related",
+        "id": 2424438130306630529,
+        "name": "sink: opentelemetry"
       }
     ],
-    "issue_type": "Feature"
+    "number": 23062,
+    "state": "open",
+    "title": "Support gRPC in the OTEL sink",
+    "updated_at": "2026-09-23T22:14:49Z",
+    "user": {
+      "login": "pront"
+    }
   },
   {
     "closed_at": "2025-05-16T16:22:00Z",
@@ -19426,25 +19426,25 @@
     }
   },
   {
-    "id": 3075446806,
-    "number": 23076,
-    "title": "Data Loss After Log Rolling in Vector File Source",
-    "state": "open",
-    "created_at": "2025-05-20T02:34:56Z",
-    "updated_at": "2026-09-09T18:46:23Z",
     "closed_at": null,
-    "user": {
-      "login": "suha-company"
-    },
+    "created_at": "2025-05-20T02:34:56Z",
+    "id": 3075446806,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 3167616327810328810,
-        "name": "source: file",
         "color": "5ED9F6",
-        "description": "Anything `file` source related"
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
       }
     ],
-    "issue_type": "Bug"
+    "number": 23076,
+    "state": "open",
+    "title": "Data Loss After Log Rolling in Vector File Source",
+    "updated_at": "2026-09-09T18:46:23Z",
+    "user": {
+      "login": "suha-company"
+    }
   },
   {
     "closed_at": "2025-06-11T14:57:43Z",
@@ -22425,25 +22425,25 @@
     }
   },
   {
-    "id": 3156077928,
-    "number": 23227,
-    "title": "Vector not recovering SQS source processing after network disruption",
-    "state": "open",
-    "created_at": "2025-06-18T09:06:50Z",
-    "updated_at": "2026-10-08T09:38:45Z",
     "closed_at": null,
-    "user": {
-      "login": "jkaflik"
-    },
+    "created_at": "2025-06-18T09:06:50Z",
+    "id": 3156077928,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 7008478005149731081,
-        "name": "source: aws_sqs",
         "color": "5ED9F6",
-        "description": "Anything `aws_sqs` source related"
+        "description": "Anything `aws_sqs` source related",
+        "id": 7008478005149731081,
+        "name": "source: aws_sqs"
       }
     ],
-    "issue_type": "Bug"
+    "number": 23227,
+    "state": "open",
+    "title": "Vector not recovering SQS source processing after network disruption",
+    "updated_at": "2026-10-08T09:38:45Z",
+    "user": {
+      "login": "jkaflik"
+    }
   },
   {
     "closed_at": "2025-06-20T19:29:11Z",
@@ -23698,25 +23698,25 @@
     }
   },
   {
-    "id": 3187806387,
-    "number": 23290,
-    "title": "Vector gives an error when parse config with log_to_metric transform type",
-    "state": "closed",
-    "created_at": "2025-06-30T09:33:14Z",
-    "updated_at": "2026-08-17T02:49:40Z",
     "closed_at": "2026-08-17T02:49:40Z",
-    "user": {
-      "login": "borisboris232"
-    },
+    "created_at": "2025-06-30T09:33:14Z",
+    "id": 3187806387,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 1954188306316231151,
-        "name": "transform: log_to_metric",
         "color": "5ED9F6",
-        "description": "Anything `log_to_metric` transform related"
+        "description": "Anything `log_to_metric` transform related",
+        "id": 1954188306316231151,
+        "name": "transform: log_to_metric"
       }
     ],
-    "issue_type": "Bug"
+    "number": 23290,
+    "state": "closed",
+    "title": "Vector gives an error when parse config with log_to_metric transform type",
+    "updated_at": "2026-08-17T02:49:40Z",
+    "user": {
+      "login": "borisboris232"
+    }
   },
   {
     "closed_at": "2025-06-30T13:53:35Z",
@@ -23822,39 +23822,39 @@
     }
   },
   {
-    "id": 2629586868,
-    "number": 23297,
-    "title": "chore(website deps): Bump the npm_and_yarn group across 1 directory with 40 updates",
-    "state": "closed",
-    "created_at": "2025-06-30T17:00:24Z",
-    "updated_at": "2026-10-16T20:52:43Z",
     "closed_at": "2025-07-09T15:52:45Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-06-30T17:00:24Z",
+    "draft": false,
+    "id": 2629586868,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 23297,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): Bump the npm_and_yarn group across 1 directory with 40 updates",
+    "updated_at": "2026-10-16T20:52:43Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-06-30T20:38:54Z",
@@ -24713,37 +24713,37 @@
     }
   },
   {
-    "id": 3196176863,
-    "number": 23329,
-    "title": "Remove patch dependencies",
-    "state": "open",
-    "created_at": "2025-07-02T14:45:02Z",
-    "updated_at": "2026-10-13T12:46:20Z",
     "closed_at": null,
-    "user": {
-      "login": "pront"
-    },
+    "created_at": "2025-07-02T14:45:02Z",
+    "id": 3196176863,
+    "issue_type": "Task",
     "labels": [
       {
-        "id": 2473344330675535720,
-        "name": "type: tech debt",
         "color": "BF72F6",
-        "description": "A code change that does not add user value."
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type: tech debt"
       },
       {
-        "id": 942722858524630774,
-        "name": "good first issue",
         "color": "DBE0E9",
-        "description": "Anything that is good for new contributors."
+        "description": "Anything that is good for new contributors.",
+        "id": 942722858524630774,
+        "name": "good first issue"
       },
       {
-        "id": 7735142015044067771,
-        "name": "domain: deps",
         "color": "343639",
-        "description": "Anything related to Vector's dependencies"
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain: deps"
       }
     ],
-    "issue_type": "Task"
+    "number": 23329,
+    "state": "open",
+    "title": "Remove patch dependencies",
+    "updated_at": "2026-10-13T12:46:20Z",
+    "user": {
+      "login": "pront"
+    }
   },
   {
     "closed_at": "2025-07-15T17:45:20Z",
@@ -25114,25 +25114,25 @@
     }
   },
   {
-    "id": 3210571198,
-    "number": 23346,
-    "title": "Connection errors with filebeat as agent and logstash source",
-    "state": "closed",
-    "created_at": "2025-07-08T00:03:22Z",
-    "updated_at": "2026-08-26T16:53:22Z",
     "closed_at": "2026-08-26T16:53:22Z",
-    "user": {
-      "login": "sourcedelica"
-    },
+    "created_at": "2025-07-08T00:03:22Z",
+    "id": 3210571198,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 310409946339004301,
-        "name": "source: logstash",
         "color": "5ED9F6",
-        "description": "Anything `logstash` source related"
+        "description": "Anything `logstash` source related",
+        "id": 310409946339004301,
+        "name": "source: logstash"
       }
     ],
-    "issue_type": "Bug"
+    "number": 23346,
+    "state": "closed",
+    "title": "Connection errors with filebeat as agent and logstash source",
+    "updated_at": "2026-08-26T16:53:22Z",
+    "user": {
+      "login": "sourcedelica"
+    }
   },
   {
     "closed_at": "2025-07-08T14:54:58Z",
@@ -25732,39 +25732,39 @@
     }
   },
   {
-    "id": 2664996881,
-    "number": 23372,
-    "title": "chore(website deps): Bump brace-expansion from 1.1.11 to 1.1.12 in /website in the npm_and_yarn group",
-    "state": "closed",
-    "created_at": "2025-07-14T18:01:33Z",
-    "updated_at": "2026-10-16T20:52:40Z",
     "closed_at": "2025-07-14T20:47:47Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-07-14T18:01:33Z",
+    "draft": false,
+    "id": 2664996881,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 23372,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): Bump brace-expansion from 1.1.11 to 1.1.12 in /website in the npm_and_yarn group",
+    "updated_at": "2026-10-16T20:52:40Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-09-03T17:47:09Z",
@@ -26588,39 +26588,39 @@
     }
   },
   {
-    "id": 2683383681,
-    "number": 23408,
-    "title": "chore(website deps): Bump form-data from 4.0.0 to 4.0.4 in /website in the npm_and_yarn group",
-    "state": "closed",
-    "created_at": "2025-07-21T22:56:45Z",
-    "updated_at": "2026-10-16T20:52:36Z",
     "closed_at": "2025-07-23T14:09:09Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-07-21T22:56:45Z",
+    "draft": false,
+    "id": 2683383681,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 23408,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): Bump form-data from 4.0.0 to 4.0.4 in /website in the npm_and_yarn group",
+    "updated_at": "2026-10-16T20:52:36Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-07-22T13:47:38Z",
@@ -28715,39 +28715,39 @@
     }
   },
   {
-    "id": 2712072589,
-    "number": 23498,
-    "title": "chore(website deps): Bump the npm_and_yarn group in /website with 40 updates",
-    "state": "closed",
-    "created_at": "2025-08-01T05:48:13Z",
-    "updated_at": "2026-10-16T20:52:34Z",
     "closed_at": "2025-08-01T13:45:49Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-08-01T05:48:13Z",
+    "draft": false,
+    "id": 2712072589,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 23498,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): Bump the npm_and_yarn group in /website with 40 updates",
+    "updated_at": "2026-10-16T20:52:34Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-08-01T14:41:35Z",
@@ -29202,25 +29202,25 @@
     }
   },
   {
-    "id": 3289500539,
-    "number": 23519,
-    "title": "`prometheus_exporter` sink not able to aggregate metrics over time",
-    "state": "closed",
-    "created_at": "2025-08-04T13:39:21Z",
-    "updated_at": "2026-08-12T14:53:30Z",
     "closed_at": "2026-08-12T14:53:30Z",
-    "user": {
-      "login": "PrayagS"
-    },
+    "created_at": "2025-08-04T13:39:21Z",
+    "id": 3289500539,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 5884848275777734183,
-        "name": "sink: prometheus_exporter",
         "color": "5ED9F6",
-        "description": "Anything `prometheus_exporter` sink related"
+        "description": "Anything `prometheus_exporter` sink related",
+        "id": 5884848275777734183,
+        "name": "sink: prometheus_exporter"
       }
     ],
-    "issue_type": "Bug"
+    "number": 23519,
+    "state": "closed",
+    "title": "`prometheus_exporter` sink not able to aggregate metrics over time",
+    "updated_at": "2026-08-12T14:53:30Z",
+    "user": {
+      "login": "PrayagS"
+    }
   },
   {
     "closed_at": "2025-08-28T21:19:33Z",
@@ -29600,39 +29600,39 @@
     }
   },
   {
-    "id": 2725257594,
-    "number": 23539,
-    "title": "chore(website deps): Bump tmp from 0.2.1 to 0.2.4 in /website in the npm_and_yarn group",
-    "state": "closed",
-    "created_at": "2025-08-06T18:33:42Z",
-    "updated_at": "2026-10-16T20:52:30Z",
     "closed_at": "2025-08-06T19:47:05Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-08-06T18:33:42Z",
+    "draft": false,
+    "id": 2725257594,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 23539,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): Bump tmp from 0.2.1 to 0.2.4 in /website in the npm_and_yarn group",
+    "updated_at": "2026-10-16T20:52:30Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-08-06T20:24:54Z",
@@ -30508,33 +30508,33 @@
     }
   },
   {
-    "id": 2736592121,
-    "number": 23573,
-    "title": "chore(website): Add a margin between the author and the badges",
-    "state": "closed",
-    "created_at": "2025-08-11T19:05:04Z",
-    "updated_at": "2026-10-16T19:59:19Z",
     "closed_at": "2025-08-11T20:24:20Z",
-    "user": {
-      "login": "thomasqueirozb"
-    },
+    "created_at": "2025-08-11T19:05:04Z",
+    "draft": false,
+    "id": 2736592121,
+    "issue_type": null,
     "labels": [
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 23573,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website): Add a margin between the author and the badges",
+    "updated_at": "2026-10-16T19:59:19Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
   },
   {
     "closed_at": "2025-08-11T20:20:11Z",
@@ -31031,33 +31031,33 @@
     }
   },
   {
-    "id": 2744195112,
-    "number": 23594,
-    "title": "fix(website): document Vector 0.49.0 behavior change",
-    "state": "closed",
-    "created_at": "2025-08-13T21:41:30Z",
-    "updated_at": "2026-10-16T19:59:22Z",
     "closed_at": "2025-08-14T04:07:41Z",
-    "user": {
-      "login": "thomasqueirozb"
-    },
+    "created_at": "2025-08-13T21:41:30Z",
+    "draft": false,
+    "id": 2744195112,
+    "issue_type": null,
     "labels": [
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 23594,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "fix(website): document Vector 0.49.0 behavior change",
+    "updated_at": "2026-10-16T19:59:22Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
   },
   {
     "closed_at": null,
@@ -31254,31 +31254,31 @@
     }
   },
   {
-    "id": 3327930119,
-    "number": 23602,
-    "title": "Add option to `vector validate` so that it resolve secrets before validation",
-    "state": "closed",
-    "created_at": "2025-08-17T04:22:33Z",
-    "updated_at": "2026-08-31T20:28:54Z",
     "closed_at": "2026-08-31T20:28:54Z",
-    "user": {
-      "login": "garysassano"
-    },
+    "created_at": "2025-08-17T04:22:33Z",
+    "id": 3327930119,
+    "issue_type": "Enhancement",
     "labels": [
       {
-        "id": 4606596601252306592,
-        "name": "domain: config",
         "color": "343639",
-        "description": "Anything related to configuring Vector"
+        "description": "Anything related to configuring Vector",
+        "id": 4606596601252306592,
+        "name": "domain: config"
       },
       {
-        "id": 4100981168124393568,
-        "name": "domain: validation",
         "color": "343639",
-        "description": ""
+        "description": "",
+        "id": 4100981168124393568,
+        "name": "domain: validation"
       }
     ],
-    "issue_type": "Enhancement"
+    "number": 23602,
+    "state": "closed",
+    "title": "Add option to `vector validate` so that it resolve secrets before validation",
+    "updated_at": "2026-08-31T20:28:54Z",
+    "user": {
+      "login": "garysassano"
+    }
   },
   {
     "closed_at": "2025-08-22T15:05:36Z",
@@ -31592,25 +31592,25 @@
     }
   },
   {
-    "id": 3338035415,
-    "number": 23619,
-    "title": "Duplicate events when file is truncated and rewritten without rotation",
-    "state": "open",
-    "created_at": "2025-08-20T12:56:55Z",
-    "updated_at": "2026-09-22T09:17:28Z",
     "closed_at": null,
-    "user": {
-      "login": "mkudukin"
-    },
+    "created_at": "2025-08-20T12:56:55Z",
+    "id": 3338035415,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 3167616327810328810,
-        "name": "source: file",
         "color": "5ED9F6",
-        "description": "Anything `file` source related"
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
       }
     ],
-    "issue_type": "Bug"
+    "number": 23619,
+    "state": "open",
+    "title": "Duplicate events when file is truncated and rewritten without rotation",
+    "updated_at": "2026-09-22T09:17:28Z",
+    "user": {
+      "login": "mkudukin"
+    }
   },
   {
     "closed_at": "2025-08-20T15:37:12Z",
@@ -32457,43 +32457,43 @@
     }
   },
   {
-    "id": 3360489619,
-    "number": 23659,
-    "title": "Investigate and eliminate `allow` statements",
-    "state": "open",
-    "created_at": "2025-08-27T18:44:24Z",
-    "updated_at": "2026-08-20T16:58:31Z",
     "closed_at": null,
-    "user": {
-      "login": "pront"
-    },
+    "created_at": "2025-08-27T18:44:24Z",
+    "id": 3360489619,
+    "issue_type": "Task",
     "labels": [
       {
-        "id": 2473344330675535720,
-        "name": "type: tech debt",
         "color": "BF72F6",
-        "description": "A code change that does not add user value."
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type: tech debt"
       },
       {
-        "id": 942722858524630774,
-        "name": "good first issue",
         "color": "DBE0E9",
-        "description": "Anything that is good for new contributors."
+        "description": "Anything that is good for new contributors.",
+        "id": 942722858524630774,
+        "name": "good first issue"
       },
       {
-        "id": 1298089048407485492,
-        "name": "have: nice",
         "color": "87F6C9",
-        "description": "This feature is nice to have. It is low priority."
+        "description": "This feature is nice to have. It is low priority.",
+        "id": 1298089048407485492,
+        "name": "have: nice"
       },
       {
-        "id": 8088131457271031435,
-        "name": "hacktoberfest",
         "color": "aaaaaa",
-        "description": null
+        "description": null,
+        "id": 8088131457271031435,
+        "name": "hacktoberfest"
       }
     ],
-    "issue_type": "Task"
+    "number": 23659,
+    "state": "open",
+    "title": "Investigate and eliminate `allow` statements",
+    "updated_at": "2026-08-20T16:58:31Z",
+    "user": {
+      "login": "pront"
+    }
   },
   {
     "closed_at": null,
@@ -34155,33 +34155,33 @@
     }
   },
   {
-    "id": 2800215161,
-    "number": 23723,
-    "title": "feat(vdev): add stderr to output",
-    "state": "closed",
-    "created_at": "2025-09-04T17:18:28Z",
-    "updated_at": "2026-10-14T22:28:07Z",
     "closed_at": "2026-10-14T22:27:55Z",
-    "user": {
-      "login": "thomasqueirozb"
-    },
+    "created_at": "2025-09-04T17:18:28Z",
+    "draft": true,
+    "id": 2800215161,
+    "issue_type": null,
     "labels": [
       {
-        "id": 6235798767080406514,
-        "name": "domain: vdev",
         "color": "343639",
-        "description": "Anything related to the vdev tooling"
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain: vdev"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       }
     ],
-    "issue_type": null,
+    "number": 23723,
     "pull_request": {},
-    "draft": true
+    "state": "closed",
+    "title": "feat(vdev): add stderr to output",
+    "updated_at": "2026-10-14T22:28:07Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
   },
   {
     "closed_at": "2025-09-04T17:48:58Z",
@@ -35206,39 +35206,39 @@
     }
   },
   {
-    "id": 2822839748,
-    "number": 23768,
-    "title": "chore(website deps): Bump axios from 1.8.2 to 1.12.0 in /website in the npm_and_yarn group across 1 directory",
-    "state": "closed",
-    "created_at": "2025-09-12T14:01:34Z",
-    "updated_at": "2026-10-16T20:52:28Z",
     "closed_at": "2025-09-12T15:12:22Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-09-12T14:01:34Z",
+    "draft": false,
+    "id": 2822839748,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 23768,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): Bump axios from 1.8.2 to 1.12.0 in /website in the npm_and_yarn group across 1 directory",
+    "updated_at": "2026-10-16T20:52:28Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-09-12T18:43:15Z",
@@ -36769,25 +36769,25 @@
     }
   },
   {
-    "id": 3448020784,
-    "number": 23840,
-    "title": "Adding paths to the checkpoint file",
-    "state": "open",
-    "created_at": "2025-09-24T07:08:05Z",
-    "updated_at": "2026-10-10T12:07:43Z",
     "closed_at": null,
-    "user": {
-      "login": "denizsurmeli"
-    },
+    "created_at": "2025-09-24T07:08:05Z",
+    "id": 3448020784,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 3167616327810328810,
-        "name": "source: file",
         "color": "5ED9F6",
-        "description": "Anything `file` source related"
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
       }
     ],
-    "issue_type": "Feature"
+    "number": 23840,
+    "state": "open",
+    "title": "Adding paths to the checkpoint file",
+    "updated_at": "2026-10-10T12:07:43Z",
+    "user": {
+      "login": "denizsurmeli"
+    }
   },
   {
     "closed_at": "2025-09-24T13:28:24Z",
@@ -38232,39 +38232,39 @@
     }
   },
   {
-    "id": 2876885264,
-    "number": 23896,
-    "title": "chore(website deps): Bump the npm_and_yarn group in /website with 41 updates",
-    "state": "closed",
-    "created_at": "2025-10-01T05:11:59Z",
-    "updated_at": "2026-10-16T20:52:25Z",
     "closed_at": "2025-11-05T15:59:06Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-10-01T05:11:59Z",
+    "draft": false,
+    "id": 2876885264,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 23896,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): Bump the npm_and_yarn group in /website with 41 updates",
+    "updated_at": "2026-10-16T20:52:25Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-10-24T14:23:10Z",
@@ -39580,27 +39580,27 @@
     }
   },
   {
-    "id": 2894145561,
-    "number": 23958,
-    "title": "feat(website): fix new line preview",
-    "state": "closed",
-    "created_at": "2025-10-07T14:09:05Z",
-    "updated_at": "2026-09-30T19:48:11Z",
     "closed_at": "2026-09-30T19:48:00Z",
-    "user": {
-      "login": "thomasqueirozb"
-    },
+    "created_at": "2025-10-07T14:09:05Z",
+    "draft": true,
+    "id": 2894145561,
+    "issue_type": null,
     "labels": [
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       }
     ],
-    "issue_type": null,
+    "number": 23958,
     "pull_request": {},
-    "draft": true
+    "state": "closed",
+    "title": "feat(website): fix new line preview",
+    "updated_at": "2026-09-30T19:48:11Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
   },
   {
     "closed_at": "2026-02-23T15:36:01Z",
@@ -39905,31 +39905,31 @@
     }
   },
   {
-    "id": 3499503739,
-    "number": 23975,
-    "title": "invalid wire type: LengthDelimited (expected SixtyFourBit) use_otlp_decoding: true",
-    "state": "closed",
-    "created_at": "2025-10-09T14:48:22Z",
-    "updated_at": "2026-08-30T11:31:33Z",
     "closed_at": "2025-10-16T15:30:09Z",
-    "user": {
-      "login": "victorserbu2709"
-    },
+    "created_at": "2025-10-09T14:48:22Z",
+    "id": 3499503739,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 1575269920799824754,
-        "name": "source: opentelemetry",
         "color": "5ED9F6",
-        "description": "Anything `opentelemetry` source related"
+        "description": "Anything `opentelemetry` source related",
+        "id": 1575269920799824754,
+        "name": "source: opentelemetry"
       },
       {
-        "id": 1968677811294901969,
-        "name": "meta: confirmed",
         "color": "DBE0E9",
-        "description": "A bug that has been reproduced or confirmed."
+        "description": "A bug that has been reproduced or confirmed.",
+        "id": 1968677811294901969,
+        "name": "meta: confirmed"
       }
     ],
-    "issue_type": "Bug"
+    "number": 23975,
+    "state": "closed",
+    "title": "invalid wire type: LengthDelimited (expected SixtyFourBit) use_otlp_decoding: true",
+    "updated_at": "2026-08-30T11:31:33Z",
+    "user": {
+      "login": "victorserbu2709"
+    }
   },
   {
     "closed_at": "2025-10-17T14:27:45Z",
@@ -40053,33 +40053,33 @@
     }
   },
   {
-    "id": 2904255083,
-    "number": 23983,
-    "title": "fix(website): use ` instead of \" in aws guide",
-    "state": "closed",
-    "created_at": "2025-10-10T14:30:10Z",
-    "updated_at": "2026-10-16T19:59:24Z",
     "closed_at": "2025-10-10T14:36:39Z",
-    "user": {
-      "login": "thomasqueirozb"
-    },
+    "created_at": "2025-10-10T14:30:10Z",
+    "draft": false,
+    "id": 2904255083,
+    "issue_type": null,
     "labels": [
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 23983,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "fix(website): use ` instead of \" in aws guide",
+    "updated_at": "2026-10-16T19:59:24Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
   },
   {
     "closed_at": "2025-10-10T20:24:41Z",
@@ -41583,57 +41583,57 @@
     }
   },
   {
-    "id": 2937125892,
-    "number": 24044,
-    "title": "feat(new source): Add ODBC source implementation",
-    "state": "open",
-    "created_at": "2025-10-22T13:11:57Z",
-    "updated_at": "2026-09-11T07:33:18Z",
     "closed_at": null,
-    "user": {
-      "login": "powerumc"
-    },
+    "created_at": "2025-10-22T13:11:57Z",
+    "draft": false,
+    "id": 2937125892,
+    "issue_type": null,
     "labels": [
       {
+        "color": "343639",
+        "description": "Anything related to Vector's sources",
         "id": 2021938762883471635,
-        "name": "domain: sources",
-        "color": "343639",
-        "description": "Anything related to Vector's sources"
+        "name": "domain: sources"
       },
       {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
-        "name": "domain: ci",
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment"
+        "name": "domain: ci"
       },
       {
+        "color": "343639",
+        "description": "Anything related to releasing Vector",
         "id": 843604899509384131,
-        "name": "domain: releasing",
-        "color": "343639",
-        "description": "Anything related to releasing Vector"
+        "name": "domain: releasing"
       },
       {
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
-        "name": "domain: external docs",
-        "color": "343639",
-        "description": "Anything related to Vector's external, public documentation"
+        "name": "domain: external docs"
       },
       {
-        "id": 2516345231450418203,
-        "name": "source: new",
         "color": "5ED9F6",
-        "description": "Request or implementation of a new source"
+        "description": "Request or implementation of a new source",
+        "id": 2516345231450418203,
+        "name": "source: new"
       },
       {
-        "id": 6102271970520709555,
-        "name": "docs review on hold",
         "color": "605f58",
-        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team."
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
       }
     ],
-    "issue_type": null,
+    "number": 24044,
     "pull_request": {},
-    "draft": false
+    "state": "open",
+    "title": "feat(new source): Add ODBC source implementation",
+    "updated_at": "2026-09-11T07:33:18Z",
+    "user": {
+      "login": "powerumc"
+    }
   },
   {
     "closed_at": "2025-10-22T16:28:10Z",
@@ -41799,39 +41799,39 @@
     }
   },
   {
-    "id": 2938249678,
-    "number": 24051,
-    "title": "chore(vdev): move test runner to vdev",
-    "state": "closed",
-    "created_at": "2025-10-22T19:17:37Z",
-    "updated_at": "2026-08-03T14:11:54Z",
     "closed_at": "2026-08-03T14:11:35Z",
-    "user": {
-      "login": "pront"
-    },
+    "created_at": "2025-10-22T19:17:37Z",
+    "draft": false,
+    "id": 2938249678,
+    "issue_type": null,
     "labels": [
       {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
-        "name": "domain: ci",
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment"
+        "name": "domain: ci"
       },
       {
+        "color": "343639",
+        "description": "Anything related to the vdev tooling",
         "id": 6235798767080406514,
-        "name": "domain: vdev",
-        "color": "343639",
-        "description": "Anything related to the vdev tooling"
+        "name": "domain: vdev"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       }
     ],
-    "issue_type": null,
+    "number": 24051,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(vdev): move test runner to vdev",
+    "updated_at": "2026-08-03T14:11:54Z",
+    "user": {
+      "login": "pront"
+    }
   },
   {
     "closed_at": "2025-10-22T21:32:44Z",
@@ -42443,31 +42443,31 @@
     }
   },
   {
-    "id": 3555528514,
-    "number": 24078,
-    "title": "The file handle is not released",
-    "state": "closed",
-    "created_at": "2025-10-27T08:00:26Z",
-    "updated_at": "2026-09-08T20:14:00Z",
     "closed_at": "2026-09-08T20:14:00Z",
-    "user": {
-      "login": "lhh528634141"
-    },
+    "created_at": "2025-10-27T08:00:26Z",
+    "id": 3555528514,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 3167616327810328810,
-        "name": "source: file",
         "color": "5ED9F6",
-        "description": "Anything `file` source related"
+        "description": "Anything `file` source related",
+        "id": 3167616327810328810,
+        "name": "source: file"
       },
       {
-        "id": 8417861749150534704,
-        "name": "needs: more info",
         "color": "FFF068",
-        "description": "Needs more info from author. The issue is missing a configuration, logs or benchmarks."
+        "description": "Needs more info from author. The issue is missing a configuration, logs or benchmarks.",
+        "id": 8417861749150534704,
+        "name": "needs: more info"
       }
     ],
-    "issue_type": "Bug"
+    "number": 24078,
+    "state": "closed",
+    "title": "The file handle is not released",
+    "updated_at": "2026-09-08T20:14:00Z",
+    "user": {
+      "login": "lhh528634141"
+    }
   },
   {
     "closed_at": "2026-01-21T08:05:38Z",
@@ -43389,33 +43389,33 @@
     }
   },
   {
-    "id": 2964182855,
-    "number": 24118,
-    "title": "chore(dev): add opentelemetry traces e2e tests",
-    "state": "closed",
-    "created_at": "2025-10-30T18:05:36Z",
-    "updated_at": "2026-09-21T16:27:56Z",
     "closed_at": "2026-09-21T16:27:44Z",
-    "user": {
-      "login": "thomasqueirozb"
-    },
+    "created_at": "2025-10-30T18:05:36Z",
+    "draft": false,
+    "id": 2964182855,
+    "issue_type": null,
     "labels": [
       {
-        "id": 6526936644602743638,
-        "name": "domain: ci",
         "color": "343639",
-        "description": "Anything related to Vector's CI environment"
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain: ci"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       }
     ],
-    "issue_type": null,
+    "number": 24118,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(dev): add opentelemetry traces e2e tests",
+    "updated_at": "2026-09-21T16:27:56Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
   },
   {
     "closed_at": "2025-11-03T18:32:01Z",
@@ -43934,25 +43934,25 @@
     }
   },
   {
-    "id": 3587451662,
-    "number": 24139,
-    "title": "Publish homebrew fails during release",
-    "state": "closed",
-    "created_at": "2025-11-04T16:59:46Z",
-    "updated_at": "2026-10-14T18:07:57Z",
     "closed_at": "2026-10-14T18:07:56Z",
-    "user": {
-      "login": "thomasqueirozb"
-    },
+    "created_at": "2025-11-04T16:59:46Z",
+    "id": 3587451662,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 6526936644602743638,
-        "name": "domain: ci",
         "color": "343639",
-        "description": "Anything related to Vector's CI environment"
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain: ci"
       }
     ],
-    "issue_type": "Bug"
+    "number": 24139,
+    "state": "closed",
+    "title": "Publish homebrew fails during release",
+    "updated_at": "2026-10-14T18:07:57Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
   },
   {
     "closed_at": "2026-01-20T19:15:15Z",
@@ -44901,39 +44901,39 @@
     }
   },
   {
-    "id": 2985190208,
-    "number": 24177,
-    "title": "chore(website deps): bump the npm_and_yarn group in /website with 41 updates",
-    "state": "closed",
-    "created_at": "2025-11-06T15:45:45Z",
-    "updated_at": "2026-10-16T20:52:21Z",
     "closed_at": "2025-12-22T21:11:09Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-11-06T15:45:45Z",
+    "draft": false,
+    "id": 2985190208,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 24177,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): bump the npm_and_yarn group in /website with 41 updates",
+    "updated_at": "2026-10-16T20:52:21Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-11-06T17:05:16Z",
@@ -45686,37 +45686,37 @@
     }
   },
   {
-    "id": 3612770551,
-    "number": 24208,
-    "title": "Bump krb5-src dependency",
-    "state": "open",
-    "created_at": "2025-11-11T15:23:11Z",
-    "updated_at": "2026-09-04T22:25:57Z",
     "closed_at": null,
-    "user": {
-      "login": "leandrohinz"
-    },
+    "created_at": "2025-11-11T15:23:11Z",
+    "id": 3612770551,
+    "issue_type": "Feature",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` sink related",
         "id": 531767785653386989,
-        "name": "sink: kafka",
-        "color": "5ED9F6",
-        "description": "Anything `kafka` sink related"
+        "name": "sink: kafka"
       },
       {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related",
         "id": 5855082884786344119,
-        "name": "source: kafka",
-        "color": "5ED9F6",
-        "description": "Anything `kafka` source related"
+        "name": "source: kafka"
       },
       {
-        "id": 3508736057168924534,
-        "name": "meta: blocked",
         "color": "F6707D",
-        "description": "Anything that is blocked to the point where it cannot be worked on."
+        "description": "Anything that is blocked to the point where it cannot be worked on.",
+        "id": 3508736057168924534,
+        "name": "meta: blocked"
       }
     ],
-    "issue_type": "Feature"
+    "number": 24208,
+    "state": "open",
+    "title": "Bump krb5-src dependency",
+    "updated_at": "2026-09-04T22:25:57Z",
+    "user": {
+      "login": "leandrohinz"
+    }
   },
   {
     "closed_at": "2025-11-11T19:03:14Z",
@@ -46077,25 +46077,25 @@
     }
   },
   {
-    "id": 3617885368,
-    "number": 24220,
-    "title": "`internal_logs` source silently drops logs under high load",
-    "state": "closed",
-    "created_at": "2025-11-12T19:19:29Z",
-    "updated_at": "2026-10-14T20:07:38Z",
     "closed_at": "2026-10-14T20:07:38Z",
-    "user": {
-      "login": "thomasqueirozb"
-    },
+    "created_at": "2025-11-12T19:19:29Z",
+    "id": 3617885368,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 2527980821214814828,
-        "name": "source: internal_logs",
         "color": "5ED9F6",
-        "description": "Anything `internal_logs` source related"
+        "description": "Anything `internal_logs` source related",
+        "id": 2527980821214814828,
+        "name": "source: internal_logs"
       }
     ],
-    "issue_type": "Bug"
+    "number": 24220,
+    "state": "closed",
+    "title": "`internal_logs` source silently drops logs under high load",
+    "updated_at": "2026-10-14T20:07:38Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
   },
   {
     "closed_at": "2025-11-13T20:51:26Z",
@@ -47332,33 +47332,33 @@
     }
   },
   {
-    "id": 3027502396,
-    "number": 24278,
-    "title": "fix(gcp_pubsub source): fix metrics, shutdown behavior, re-enable IT tests",
-    "state": "open",
-    "created_at": "2025-11-19T22:09:29Z",
-    "updated_at": "2026-07-27T22:29:06Z",
     "closed_at": null,
-    "user": {
-      "login": "thomasqueirozb"
-    },
+    "created_at": "2025-11-19T22:09:29Z",
+    "draft": true,
+    "id": 3027502396,
+    "issue_type": null,
     "labels": [
       {
-        "id": 2021938762883471635,
-        "name": "domain: sources",
         "color": "343639",
-        "description": "Anything related to the Vector's sources"
+        "description": "Anything related to the Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain: sources"
       },
       {
-        "id": 5970174565153215818,
-        "name": "provider: gcp",
         "color": "5EAAF6",
-        "description": "Anything `gcp` service provider related"
+        "description": "Anything `gcp` service provider related",
+        "id": 5970174565153215818,
+        "name": "provider: gcp"
       }
     ],
-    "issue_type": null,
+    "number": 24278,
     "pull_request": {},
-    "draft": true
+    "state": "open",
+    "title": "fix(gcp_pubsub source): fix metrics, shutdown behavior, re-enable IT tests",
+    "updated_at": "2026-07-27T22:29:06Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
   },
   {
     "closed_at": null,
@@ -47738,25 +47738,25 @@
     }
   },
   {
-    "id": 3663759139,
-    "number": 24300,
-    "title": "socket source: passed UDP file descriptor not processed until shutdown",
-    "state": "closed",
-    "created_at": "2025-11-25T16:26:43Z",
-    "updated_at": "2026-09-14T21:30:18Z",
     "closed_at": "2026-09-14T21:30:18Z",
-    "user": {
-      "login": "aagor"
-    },
+    "created_at": "2025-11-25T16:26:43Z",
+    "id": 3663759139,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 4862344537635261167,
-        "name": "source: socket",
         "color": "5ED9F6",
-        "description": "Anything `socket` source related"
+        "description": "Anything `socket` source related",
+        "id": 4862344537635261167,
+        "name": "source: socket"
       }
     ],
-    "issue_type": "Bug"
+    "number": 24300,
+    "state": "closed",
+    "title": "socket source: passed UDP file descriptor not processed until shutdown",
+    "updated_at": "2026-09-14T21:30:18Z",
+    "user": {
+      "login": "aagor"
+    }
   },
   {
     "closed_at": null,
@@ -47906,27 +47906,27 @@
     }
   },
   {
-    "id": 3049162426,
-    "number": 24308,
-    "title": "fix(systemd socket activation): fix log collection for systemd sockets",
-    "state": "closed",
-    "created_at": "2025-11-26T23:02:39Z",
-    "updated_at": "2026-09-14T21:30:26Z",
     "closed_at": "2026-09-14T21:30:17Z",
-    "user": {
-      "login": "j-c-fuchs"
-    },
+    "created_at": "2025-11-26T23:02:39Z",
+    "draft": false,
+    "id": 3049162426,
+    "issue_type": null,
     "labels": [
       {
-        "id": 2021938762883471635,
-        "name": "domain: sources",
         "color": "343639",
-        "description": "Anything related to Vector's sources"
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain: sources"
       }
     ],
-    "issue_type": null,
+    "number": 24308,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "fix(systemd socket activation): fix log collection for systemd sockets",
+    "updated_at": "2026-09-14T21:30:26Z",
+    "user": {
+      "login": "j-c-fuchs"
+    }
   },
   {
     "closed_at": null,
@@ -48791,39 +48791,39 @@
     }
   },
   {
-    "id": 3073588770,
-    "number": 24342,
-    "title": "feat(transform): Add redis enrichment transformer",
-    "state": "closed",
-    "created_at": "2025-12-05T01:11:10Z",
-    "updated_at": "2026-10-15T22:26:35Z",
     "closed_at": "2026-10-15T22:26:24Z",
-    "user": {
-      "login": "akutta"
-    },
+    "created_at": "2025-12-05T01:11:10Z",
+    "draft": false,
+    "id": 3073588770,
+    "issue_type": null,
     "labels": [
       {
+        "color": "343639",
+        "description": "Anything related to Vector's transform components",
         "id": 4876837993745139454,
-        "name": "domain: transforms",
-        "color": "343639",
-        "description": "Anything related to Vector's transform components"
+        "name": "domain: transforms"
       },
       {
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
-        "name": "domain: external docs",
-        "color": "343639",
-        "description": "Anything related to Vector's external, public documentation"
+        "name": "domain: external docs"
       },
       {
-        "id": 3907211055831279021,
-        "name": "do not merge",
         "color": "B60205",
-        "description": ""
+        "description": "",
+        "id": 3907211055831279021,
+        "name": "do not merge"
       }
     ],
-    "issue_type": null,
+    "number": 24342,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "feat(transform): Add redis enrichment transformer",
+    "updated_at": "2026-10-15T22:26:35Z",
+    "user": {
+      "login": "akutta"
+    }
   },
   {
     "closed_at": "2025-12-09T18:51:23Z",
@@ -50140,39 +50140,39 @@
     }
   },
   {
-    "id": 3124223638,
-    "number": 24405,
-    "title": "chore(website deps): bump the npm_and_yarn group across 1 directory with 20 updates",
-    "state": "closed",
-    "created_at": "2025-12-22T21:12:05Z",
-    "updated_at": "2026-10-16T20:52:19Z",
     "closed_at": "2025-12-23T20:28:46Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-12-22T21:12:05Z",
+    "draft": false,
+    "id": 3124223638,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 24405,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): bump the npm_and_yarn group across 1 directory with 20 updates",
+    "updated_at": "2026-10-16T20:52:19Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2025-12-23T18:53:57Z",
@@ -50198,39 +50198,39 @@
     }
   },
   {
-    "id": 3127062024,
-    "number": 24408,
-    "title": "chore(website deps): bump the npm_and_yarn group across 1 directory with 17 updates",
-    "state": "closed",
-    "created_at": "2025-12-23T20:29:37Z",
-    "updated_at": "2026-10-16T20:52:15Z",
     "closed_at": "2026-02-01T05:06:56Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2025-12-23T20:29:37Z",
+    "draft": false,
+    "id": 3127062024,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 115157577543356499,
-        "name": "no-changelog",
         "color": "4FC887",
-        "description": "Changes in this PR do not need user-facing explanations in the release changelog"
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 24408,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website deps): bump the npm_and_yarn group across 1 directory with 17 updates",
+    "updated_at": "2026-10-16T20:52:15Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2026-02-02T18:13:19Z",
@@ -50297,39 +50297,39 @@
     }
   },
   {
-    "id": 3129798829,
-    "number": 24412,
-    "title": "feat(clickhouse sink): add multi-endpoint support with load balancing",
-    "state": "open",
-    "created_at": "2025-12-25T10:20:10Z",
-    "updated_at": "2026-09-30T22:50:47Z",
     "closed_at": null,
-    "user": {
-      "login": "pinylin"
-    },
+    "created_at": "2025-12-25T10:20:10Z",
+    "draft": false,
+    "id": 3129798829,
+    "issue_type": null,
     "labels": [
       {
-        "id": 3597518471828487572,
-        "name": "sink: clickhouse",
         "color": "5ED9F6",
-        "description": "Anything `clickhouse` sink related"
+        "description": "Anything `clickhouse` sink related",
+        "id": 3597518471828487572,
+        "name": "sink: clickhouse"
       },
       {
+        "color": "343639",
+        "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
-        "name": "domain: sinks",
-        "color": "343639",
-        "description": "Anything related to Vector's sinks"
+        "name": "domain: sinks"
       },
       {
-        "id": 5210716293491119031,
-        "name": "domain: external docs",
         "color": "343639",
-        "description": "Anything related to Vector's external, public documentation"
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain: external docs"
       }
     ],
-    "issue_type": null,
+    "number": 24412,
     "pull_request": {},
-    "draft": false
+    "state": "open",
+    "title": "feat(clickhouse sink): add multi-endpoint support with load balancing",
+    "updated_at": "2026-09-30T22:50:47Z",
+    "user": {
+      "login": "pinylin"
+    }
   },
   {
     "closed_at": "2026-04-15T20:52:43Z",
@@ -50495,45 +50495,45 @@
     }
   },
   {
-    "id": 3136274765,
-    "number": 24421,
-    "title": "feat(aggregate transform): Add support for event timestamp-based aggregation",
-    "state": "closed",
-    "created_at": "2025-12-30T09:07:12Z",
-    "updated_at": "2026-09-09T15:09:31Z",
     "closed_at": "2026-09-09T15:09:21Z",
-    "user": {
-      "login": "kaarolch"
-    },
+    "created_at": "2025-12-30T09:07:12Z",
+    "draft": false,
+    "id": 3136274765,
+    "issue_type": null,
     "labels": [
       {
+        "color": "343639",
+        "description": "Anything related to Vector's transform components",
         "id": 4876837993745139454,
-        "name": "domain: transforms",
-        "color": "343639",
-        "description": "Anything related to Vector's transform components"
+        "name": "domain: transforms"
       },
       {
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
-        "name": "domain: external docs",
-        "color": "343639",
-        "description": "Anything related to Vector's external, public documentation"
+        "name": "domain: external docs"
       },
       {
-        "id": 2331044872657461066,
-        "name": "transform: aggregate",
         "color": "5ED9F6",
-        "description": "Anything `aggregate` transform related"
+        "description": "Anything `aggregate` transform related",
+        "id": 2331044872657461066,
+        "name": "transform: aggregate"
       },
       {
-        "id": 81604373089705258,
-        "name": "work in progress",
         "color": "AB3B4B",
-        "description": ""
+        "description": "",
+        "id": 81604373089705258,
+        "name": "work in progress"
       }
     ],
-    "issue_type": null,
+    "number": 24421,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "feat(aggregate transform): Add support for event timestamp-based aggregation",
+    "updated_at": "2026-09-09T15:09:31Z",
+    "user": {
+      "login": "kaarolch"
+    }
   },
   {
     "closed_at": "2025-12-30T18:11:08Z",

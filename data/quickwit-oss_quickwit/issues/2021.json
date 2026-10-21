@@ -439,10 +439,10 @@
         "name": "documentation"
       },
       {
-        "id": 2915214263,
-        "name": "quickwit-cli",
         "color": "F1BF11",
-        "description": null
+        "description": null,
+        "id": 2915214263,
+        "name": "quickwit-cli"
       }
     ],
     "number": 23,
@@ -505,10 +505,10 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "F1BF11",
         "description": null,
         "id": 2915214263,
-        "name": "quickwit-cli",
-        "color": "F1BF11"
+        "name": "quickwit-cli"
       }
     ],
     "number": 26,
@@ -579,10 +579,10 @@
     "issue_type": null,
     "labels": [
       {
-        "name": "storage",
         "color": "FC81AD",
         "description": null,
-        "id": 3008486295
+        "id": 3008486295,
+        "name": "storage"
       }
     ],
     "number": 30,
@@ -1858,37 +1858,37 @@
     }
   },
   {
-    "id": 915673651,
-    "number": 103,
-    "title": "Mapping configuration from example (food for thought)",
-    "state": "open",
-    "created_at": "2021-06-09T00:57:43Z",
-    "updated_at": "2026-08-31T17:13:45Z",
     "closed_at": null,
-    "user": {
-      "login": "fulmicoton"
-    },
+    "created_at": "2021-06-09T00:57:43Z",
+    "id": 915673651,
+    "issue_type": null,
     "labels": [
       {
-        "id": 1470408430858150435,
-        "name": "enhancement",
         "color": "a2eeef",
-        "description": "New feature or request"
+        "description": "New feature or request",
+        "id": 1470408430858150435,
+        "name": "enhancement"
       },
       {
-        "id": 7373110576788465060,
-        "name": "low-priority",
         "color": "BFDADC",
-        "description": ""
+        "description": "",
+        "id": 7373110576788465060,
+        "name": "low-priority"
       },
       {
-        "id": 579888533335339947,
-        "name": "backlog",
         "color": "1d76db",
-        "description": ""
+        "description": "",
+        "id": 579888533335339947,
+        "name": "backlog"
       }
     ],
-    "issue_type": null
+    "number": 103,
+    "state": "open",
+    "title": "Mapping configuration from example (food for thought)",
+    "updated_at": "2026-08-31T17:13:45Z",
+    "user": {
+      "login": "fulmicoton"
+    }
   },
   {
     "closed_at": "2021-06-24T13:33:55Z",
@@ -6398,10 +6398,10 @@
         "name": "documentation"
       },
       {
+        "color": "a2eeef",
         "description": "New feature or request",
         "id": 2912049044,
-        "name": "enhancement",
-        "color": "a2eeef"
+        "name": "enhancement"
       }
     ],
     "number": 337,
@@ -8395,10 +8395,10 @@
     "issue_type": null,
     "labels": [
       {
-        "name": "bug",
         "color": "d73a4a",
         "description": "Something isn't working",
-        "id": 2912049038
+        "id": 2912049038,
+        "name": "bug"
       }
     ],
     "number": 438,
@@ -17114,10 +17114,10 @@
     "issue_type": null,
     "labels": [
       {
-        "id": 2912049040,
-        "name": "documentation",
         "color": "0075ca",
-        "description": "Improvements or additions to documentation"
+        "description": "Improvements or additions to documentation",
+        "id": 2912049040,
+        "name": "documentation"
       }
     ],
     "number": 897,
