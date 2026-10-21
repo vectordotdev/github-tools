@@ -96,9 +96,60 @@ Maintenance:
   close-old-prs          Close PRs with 'meta: awaiting author' older than 6 months
   delete-stale-branches  Delete branches with no commits in 4 years
   remove-legacy-label    Remove legacy type labels from issues/PRs
+  replace-label          Replace a label on issues, PRs and discussions (preview by default)
 ```
 
 Run `github-tools <COMMAND> --help` for full argument details.
+
+## Replace label assignments
+
+Use `replace-label` to rename a label or migrate its assignments into another
+label in the same repository. If the destination name does not exist, the
+command previews a rename that preserves the label's ID, color, description and
+assignments. If the destination exists, it previews a merge of assignments. The
+separate `remove-legacy-label` command continues to handle migration of legacy
+type labels into the issue type field.
+
+Preview all affected issues, pull requests and discussions, including closed and
+merged items:
+
+```shell
+github-tools replace-label --repo owner/repo \
+  --old-label 'old label' --new-label 'replacement label'
+```
+
+Add `--apply` to collect a fresh plan, display it, and ask for confirmation.
+`--apply --yes` skips the prompt. `--dry-run` explicitly selects the default
+preview behavior and cannot be combined with `--apply`.
+
+The command fully paginates the inventory before making changes. For a merge, it
+adds and verifies the destination label across the plan first, then rechecks
+each item before removing only the source label. Unrelated labels are preserved.
+Issues and PRs are queried by label; discussions and their labels are scanned
+because the discussion API has no label filter. If discussions are disabled, the
+command reports that their assignments cannot be inspected or migrated.
+
+For a rename, the command rechecks both names after confirmation, updates only
+the existing label's name, and verifies that the new name resolves to the same
+ID. It aborts if the source changed or the destination appeared since the
+preview. If a rename has an ambiguous outcome, inspect the names before
+retrying: a completed rename means the old name no longer exists.
+
+Any API, permission or verification failure stops the run with a nonzero exit.
+For a merge, an addition-phase failure leaves every source assignment untouched
+by this command; a removal-phase failure preserves earlier completed
+replacements. Rerun the same command to reconcile current state: items with both
+labels only need the source removed, and completed items are absent from the
+next plan. Ambiguous requests are not automatically retried or rolled back.
+
+After a merge, a final inventory reports remaining source assignments, including
+those added during the run. GitHub does not provide an atomic label swap, so
+concurrent edits can still race with verification; run during a quiet period and
+update any automation that applies the old label. A merge retains both
+repository label definitions. The command uses `GITHUB_TOKEN` / `--env-file`
+when provided, otherwise it uses `gh api` with its existing authentication
+without extracting its token. Merging requires label-editing permission on every
+planned item; renaming requires permission to edit repository labels.
 
 # Workflow
 

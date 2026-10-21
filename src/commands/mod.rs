@@ -13,6 +13,7 @@ pub mod generate_summaries;
 pub mod purge;
 pub mod push_metrics;
 pub mod remove_legacy_label;
+pub mod replace_label;
 pub mod workflows;
 
 /// Serialize snapshots with alphabetical object keys at every depth.
