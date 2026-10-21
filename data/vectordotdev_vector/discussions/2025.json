@@ -212,7 +212,7 @@
     "bodyText": "Hi, im trying to understand limit of vector. I read scaling documents and i should be easily see 10MB/s for each CPU core.\nIm testing on my lab with a python script sending syslog and listening on vector end with socket source without transforms and sinking to blackhole.\nI can reach around 70MB/s without packet drops with having 16 cpu cores, after that it starts to drop packets. When i monitor each cpu core with htop, 5 cores are working (changing which core is active) with %50 utilisation.\nI'm expecting from vector to use all CPU cores to %100 (or close) before it start dropping packets. Is my expectation wrong? If not what should be the issue here?",
     "url": "https://github.com/vectordotdev/vector/discussions/22132",
     "createdAt": "2025-01-07T13:00:44Z",
-    "updatedAt": "2026-09-03T15:38:16Z",
+    "updatedAt": "2026-09-04T00:07:15Z",
     "closedAt": null,
     "closed": false,
     "stateReason": null,
@@ -225,7 +225,7 @@
       "name": "Q&A"
     },
     "comments": {
-      "totalCount": 5
+      "totalCount": 6
     },
     "upvoteCount": 1
   },
@@ -4138,27 +4138,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/22951"
   },
   {
+    "number": 22953,
+    "title": "One log, multiple outputs, how to collect vector and store it in clickhouse",
+    "bodyText": "gateway.log\n普通日志\n[timestamp] [thread] [level] class - message\n异常日志\n[timestamp] [thread] [level] class - message: xxxxxx xx null\njava.lang.RuntimeException: xxxxxx xx null\nat com.xxxx\nat com.xxxx\nat com.xxxx\nat com.xxxx\n异常日志\n[timestamp] [thread] [level] class - message: xxxxxx xx null\njava.lang.RuntimeException: xxxxxx xx xxx: Message:\nHTTP response code: 404\nHTTP response body: {\"xxxx[xxx]\",\"xxxx[xxxxx]\"}\nHTTP response headers: {\"xxxx\",\nxxxx[xxxx]}\nat com.xxxx\nat com.xxxx\nat com.xxxx\nat com.xxxx\n其它日志\n[timestamp] [thread] [level] class - message : {\n\"xxxxx\" : \"xxxxx\",\n\"xxxxx\" : \"xxxxx\",\n\"xxxxx\" : \"xxxxx\",\n\"xxxxx\" : \"xxxxx\",\n\"xxxxx\" : \"xxxxx\"\n}",
+    "url": "https://github.com/vectordotdev/vector/discussions/22953",
+    "createdAt": "2025-04-27T03:09:46Z",
+    "updatedAt": "2026-10-19T17:52:01Z",
+    "closedAt": "2026-10-19T17:52:01Z",
+    "closed": true,
+    "stateReason": "OUTDATED",
+    "isAnswered": false,
+    "locked": false,
     "author": {
       "login": "initampk"
     },
-    "bodyText": "gateway.log\n普通日志\n[timestamp] [thread] [level] class - message\n异常日志\n[timestamp] [thread] [level] class - message: xxxxxx xx null\njava.lang.RuntimeException: xxxxxx xx null\nat com.xxxx\nat com.xxxx\nat com.xxxx\nat com.xxxx\n异常日志\n[timestamp] [thread] [level] class - message: xxxxxx xx null\njava.lang.RuntimeException: xxxxxx xx xxx: Message:\nHTTP response code: 404\nHTTP response body: {\"xxxx[xxx]\",\"xxxx[xxxxx]\"}\nHTTP response headers: {\"xxxx\",\nxxxx[xxxx]}\nat com.xxxx\nat com.xxxx\nat com.xxxx\nat com.xxxx\n其它日志\n[timestamp] [thread] [level] class - message : {\n\"xxxxx\" : \"xxxxx\",\n\"xxxxx\" : \"xxxxx\",\n\"xxxxx\" : \"xxxxx\",\n\"xxxxx\" : \"xxxxx\",\n\"xxxxx\" : \"xxxxx\"\n}",
     "category": {
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
-    "createdAt": "2025-04-27T03:09:46Z",
-    "isAnswered": false,
-    "locked": false,
-    "number": 22953,
-    "stateReason": null,
-    "title": "One log, multiple outputs, how to collect vector and store it in clickhouse",
-    "updatedAt": "2025-04-28T18:23:41Z",
-    "upvoteCount": 1,
-    "url": "https://github.com/vectordotdev/vector/discussions/22953"
+    "upvoteCount": 1
   },
   {
     "author": {

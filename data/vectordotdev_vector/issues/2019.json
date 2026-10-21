@@ -7957,31 +7957,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2019-06-10T21:31:59Z",
     "id": 454383386,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's internal tests",
-        "id": 5489522564843688803,
-        "name": "domain: tests"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A code change that does not add user value.",
-        "id": 2473344330675535720,
-        "name": "type: tech debt"
-      }
-    ],
     "number": 467,
-    "state": "open",
     "title": "Add tests covering missing `message` key",
-    "updated_at": "2023-05-01T14:52:45Z",
+    "state": "closed",
+    "created_at": "2019-06-10T21:31:59Z",
+    "updated_at": "2026-09-08T14:28:07Z",
+    "closed_at": "2026-09-08T14:28:07Z",
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 5489522564843688803,
+        "name": "domain: tests",
+        "color": "343639",
+        "description": "Anything related to Vector's internal tests"
+      },
+      {
+        "id": 2473344330675535720,
+        "name": "type: tech debt",
+        "color": "BF72F6",
+        "description": "A code change that does not add user value."
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2019-06-11T23:35:09Z",
@@ -9367,37 +9367,37 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2019-06-20T23:21:39Z",
     "id": 458930960,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      },
-      {
-        "color": "F69049",
-        "description": "We should have this feature, but is not required. It is medium priority.",
-        "id": 6848739542623159481,
-        "name": "have: should"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Request or implementation of a new sink",
-        "id": 8712994079615624380,
-        "name": "sink: new"
-      }
-    ],
     "number": 533,
-    "state": "open",
     "title": "New `logstash` sink",
-    "updated_at": "2026-02-23T14:31:32Z",
+    "state": "open",
+    "created_at": "2019-06-20T23:21:39Z",
+    "updated_at": "2026-10-21T07:06:16Z",
+    "closed_at": null,
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 6524463192304363030,
+        "name": "domain: sinks",
+        "color": "343639",
+        "description": "Anything related to Vector's sinks"
+      },
+      {
+        "id": 6848739542623159481,
+        "name": "have: should",
+        "color": "F69049",
+        "description": "We should have this feature, but is not required. It is medium priority."
+      },
+      {
+        "id": 8712994079615624380,
+        "name": "sink: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new sink"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": null,
@@ -20337,43 +20337,43 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2019-10-21T19:36:21Z",
     "id": 510236167,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `file` source related",
-        "id": 3167616327810328810,
-        "name": "source: file"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to monitoring/observing Vector",
-        "id": 8902634565218545672,
-        "name": "domain: observability"
-      },
-      {
-        "color": "DBE0E9",
-        "description": "Anything that is good for new contributors.",
-        "id": 942722858524630774,
-        "name": "good first issue"
-      },
-      {
-        "color": "DBE0E9",
-        "description": "Anything related to customer/user feedback.",
-        "id": 3034880794230890330,
-        "name": "meta: feedback"
-      }
-    ],
     "number": 1065,
-    "state": "open",
     "title": "Only warn about small files when they are not empty",
-    "updated_at": "2026-07-10T21:32:38Z",
+    "state": "open",
+    "created_at": "2019-10-21T19:36:21Z",
+    "updated_at": "2026-10-09T05:31:52Z",
+    "closed_at": null,
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 3167616327810328810,
+        "name": "source: file",
+        "color": "5ED9F6",
+        "description": "Anything `file` source related"
+      },
+      {
+        "id": 8902634565218545672,
+        "name": "domain: observability",
+        "color": "343639",
+        "description": "Anything related to monitoring/observing Vector"
+      },
+      {
+        "id": 942722858524630774,
+        "name": "good first issue",
+        "color": "DBE0E9",
+        "description": "Anything that is good for new contributors."
+      },
+      {
+        "id": 3034880794230890330,
+        "name": "meta: feedback",
+        "color": "DBE0E9",
+        "description": "Anything related to customer/user feedback."
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2019-10-23T12:08:46Z",
@@ -25025,43 +25025,43 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2019-12-01T18:55:04Z",
     "id": 530777187,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "FFF068",
-        "description": "Needs a a list of requirements before work can be begin",
-        "id": 1231413994313482691,
-        "name": "needs: requirements"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's log events",
-        "id": 1603740098990692642,
-        "name": "domain: logs"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `kubernetes` platform related",
-        "id": 5891925229468674031,
-        "name": "platform: kubernetes"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Request or implementation of a new source",
-        "id": 2516345231450418203,
-        "name": "source: new"
-      }
-    ],
     "number": 1293,
-    "state": "open",
     "title": "New `kubernetes_system_events` source",
-    "updated_at": "2026-07-02T13:46:24Z",
+    "state": "open",
+    "created_at": "2019-12-01T18:55:04Z",
+    "updated_at": "2026-10-01T09:08:26Z",
+    "closed_at": null,
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 1231413994313482691,
+        "name": "needs: requirements",
+        "color": "FFF068",
+        "description": "Needs a list of requirements before work can be begin"
+      },
+      {
+        "id": 1603740098990692642,
+        "name": "domain: logs",
+        "color": "343639",
+        "description": "Anything related to Vector's log events"
+      },
+      {
+        "id": 5891925229468674031,
+        "name": "platform: kubernetes",
+        "color": "F687F6",
+        "description": "Anything `kubernetes` platform related"
+      },
+      {
+        "id": 2516345231450418203,
+        "name": "source: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new source"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2019-12-12T13:53:31Z",
@@ -25189,43 +25189,43 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2019-12-02T16:25:03Z",
     "id": 531243637,
-    "issue_type": "Task",
-    "labels": [
-      {
-        "color": "FFF068",
-        "description": "Needs review & approval before work can begin.",
-        "id": 389285363867189610,
-        "name": "needs: approval"
-      },
-      {
-        "color": "87F6C9",
-        "description": "This feature is nice to have. It is low priority.",
-        "id": 1298089048407485492,
-        "name": "have: nice"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `arm64` platform related",
-        "id": 5397779638003501036,
-        "name": "platform: arm64"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment",
-        "id": 6526936644602743638,
-        "name": "domain: ci"
-      }
-    ],
     "number": 1301,
-    "state": "open",
     "title": "Run tests for ARM binaries in CI",
-    "updated_at": "2026-02-21T20:44:58Z",
+    "state": "open",
+    "created_at": "2019-12-02T16:25:03Z",
+    "updated_at": "2026-10-16T21:15:22Z",
+    "closed_at": null,
     "user": {
       "login": null
-    }
+    },
+    "labels": [
+      {
+        "id": 389285363867189610,
+        "name": "needs: approval",
+        "color": "FFF068",
+        "description": "Needs review & approval before work can begin."
+      },
+      {
+        "id": 1298089048407485492,
+        "name": "have: nice",
+        "color": "87F6C9",
+        "description": "This feature is nice to have. It is low priority."
+      },
+      {
+        "id": 6526936644602743638,
+        "name": "domain: ci",
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment"
+      },
+      {
+        "id": 3996083420765767120,
+        "name": "platform: arm",
+        "color": "F687F6",
+        "description": "Anything `arm` platform related"
+      }
+    ],
+    "issue_type": "Task"
   },
   {
     "closed_at": "2019-12-04T02:32:24Z",
