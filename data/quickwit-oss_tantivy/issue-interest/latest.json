@@ -1,0 +1,2443 @@
+{
+  "collectedAt": "2026-10-21T18:42:04.946829+00:00",
+  "issues": [
+    {
+      "number": 7,
+      "reactions": 0,
+      "title": "Somehow find a way to make cascading writing to disk",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 18,
+      "reactions": 0,
+      "title": "Add auto-publish",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 40,
+      "reactions": 0,
+      "title": "Reconsider  the way to encode the field in the term",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 41,
+      "reactions": 0,
+      "title": "Create mechanism to define collectors as aggregate function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 44,
+      "reactions": 23,
+      "title": "Geo-search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 11
+    },
+    {
+      "number": 59,
+      "reactions": 0,
+      "title": "Ignore phrase query when the field does not have positions.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 62,
+      "reactions": 0,
+      "title": "make the fst term map cache cache-friendly",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 86,
+      "reactions": 4,
+      "title": "Handle prefix search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 97,
+      "reactions": 0,
+      "title": "Handle segment file deletion in the middle of load searcher. ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 107,
+      "reactions": 0,
+      "title": "Create a mock directory that helps simulates error and test behavior on error.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 111,
+      "reactions": 0,
+      "title": "Consider using slog instead of log",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 116,
+      "reactions": 0,
+      "title": "Purge deletes before commit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 124,
+      "reactions": 0,
+      "title": "Tantivy should work without a store/fieldnorm/position file",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 127,
+      "reactions": 0,
+      "title": "Improve boolean queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 167,
+      "reactions": 0,
+      "title": "Optimize codec for the case where all delta in the block are 1.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 194,
+      "reactions": 2,
+      "title": "Too many small segments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 219,
+      "reactions": 3,
+      "title": "Implementing a Sublime-style fuzzy search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 247,
+      "reactions": 2,
+      "title": "Create a term proximity scorer",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 258,
+      "reactions": 0,
+      "title": "Refactor positions writing / reading code",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 276,
+      "reactions": 0,
+      "title": "Refactor indexing for a listener model",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 296,
+      "reactions": 0,
+      "title": "Optimize Segment Readers Alive Doc Iterator",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 301,
+      "reactions": 0,
+      "title": "Adding fields to existing Index's schema",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 314,
+      "reactions": 0,
+      "title": "Elective n-grams",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 326,
+      "reactions": 1,
+      "title": "Maybe i can contribute a official website for tantivy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 359,
+      "reactions": 0,
+      "title": "Optimize position merge when there are a lot of rare terms",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 372,
+      "reactions": 0,
+      "title": "Add examples",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 386,
+      "reactions": 0,
+      "title": "Make the behavior of an empty query configurable in `QueryParser`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 391,
+      "reactions": 0,
+      "title": "Add a new field type \"FOLDING\"",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 401,
+      "reactions": 0,
+      "title": "Custom weight/score calculation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 407,
+      "reactions": 0,
+      "title": "Add a unicode normalizer.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 409,
+      "reactions": 3,
+      "title": "Add support for `CharFilter`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 464,
+      "reactions": 0,
+      "title": "Multifields and arrays",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 465,
+      "reactions": 0,
+      "title": "Memory footprint stats for benchmarks?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 470,
+      "reactions": 6,
+      "title": "Evolve schemas",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 474,
+      "reactions": 4,
+      "title": "Node bindings",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 480,
+      "reactions": 1,
+      "title": "Add the notion of input schema mapping",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 494,
+      "reactions": 13,
+      "title": "Near Real Time indexing.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 497,
+      "reactions": 0,
+      "title": "Test for race conditions with loom",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 499,
+      "reactions": 1,
+      "title": "Add a `caching` directory.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 506,
+      "reactions": 0,
+      "title": "Switch to 64 bit hashes in the term hashmap.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 515,
+      "reactions": 0,
+      "title": "Reexport IntFacetCollector",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 541,
+      "reactions": 25,
+      "title": "wasm RFC",
+      "unattributedComments": 0,
+      "uniqueCommenters": 13
+    },
+    {
+      "number": 548,
+      "reactions": 2,
+      "title": "Pluggable compressor support, or at least just zstd?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 554,
+      "reactions": 0,
+      "title": "Correct way of quering against \"title\" and \"body\"",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 555,
+      "reactions": 0,
+      "title": "Dynamic Field feature like Solr",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 557,
+      "reactions": 2,
+      "title": "Read only mode",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 563,
+      "reactions": 14,
+      "title": "score fuzzy term by distance",
+      "unattributedComments": 0,
+      "uniqueCommenters": 11
+    },
+    {
+      "number": 564,
+      "reactions": 0,
+      "title": "Rollback and Delete all docs should get their own opstamp",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 576,
+      "reactions": 0,
+      "title": "Index size comparison against Lucene",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 602,
+      "reactions": 0,
+      "title": "Remove watching directory introduced in 0.9",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 614,
+      "reactions": 0,
+      "title": ".NET bindings (through C-FFI)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 617,
+      "reactions": 0,
+      "title": "Add support for Nested documents",
+      "unattributedComments": 0,
+      "uniqueCommenters": 6
+    },
+    {
+      "number": 618,
+      "reactions": 0,
+      "title": "Splitting tantivy and call for official maintainers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 626,
+      "reactions": 0,
+      "title": "Migrate benchmark to criterion.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 638,
+      "reactions": 17,
+      "title": "Discussion : Roadmap to 1.0.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 651,
+      "reactions": 0,
+      "title": "Explain the purpose of the query-grammar subcrate",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 653,
+      "reactions": 2,
+      "title": "Documentation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 658,
+      "reactions": 0,
+      "title": "Searching in a subset of the documents / SetMembership Query",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 672,
+      "reactions": 1,
+      "title": "Regex query doesn't return snippets.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 680,
+      "reactions": 0,
+      "title": "Stale adding documents if there are too many ongoing merge ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 688,
+      "reactions": 0,
+      "title": "The efficient way to get topdocs from int filed",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 703,
+      "reactions": 0,
+      "title": "Document Score",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 773,
+      "reactions": 0,
+      "title": "A way to know if a fast field has a value for a specific document",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 798,
+      "reactions": 0,
+      "title": "document that doc_freq() includes deletes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 799,
+      "reactions": 1,
+      "title": "Interest in a `MoreLikeThis` query?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 800,
+      "reactions": 0,
+      "title": "Does tantivy has both data and metadata in every segments, just like Lucene does ?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 804,
+      "reactions": 2,
+      "title": "Mitigate the perf loss due to dynamic dispatch to the collector",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 815,
+      "reactions": 27,
+      "title": "(Approximate) Nearest Neighbour / Vector Similarity Search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 11
+    },
+    {
+      "number": 847,
+      "reactions": 2,
+      "title": "Make an index reader that offers a view over the union of 2 or more indexes.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 855,
+      "reactions": 0,
+      "title": "How to impl this analyzer",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 858,
+      "reactions": 0,
+      "title": "Allow external executor pool for IndexWriter",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 875,
+      "reactions": 4,
+      "title": "Document the JSON format",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 884,
+      "reactions": 0,
+      "title": "Make tantivy's directory `io::Read` friendly.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 894,
+      "reactions": 1,
+      "title": "Fix the user experience for selecting a range.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 903,
+      "reactions": 0,
+      "title": "Make the Document binary serialization format more compact.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 906,
+      "reactions": 0,
+      "title": "Add explicit ascending/descending ordering to order_by_u64_field()",
+      "unattributedComments": 1,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 911,
+      "reactions": 0,
+      "title": "Is there Serde support for Snippets?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 936,
+      "reactions": 0,
+      "title": "Right way to use only TF score for ranking",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 957,
+      "reactions": 0,
+      "title": "crawler recommendation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 958,
+      "reactions": 0,
+      "title": "term hashmap memory usage",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 960,
+      "reactions": 0,
+      "title": "Method to get BooleanQuery as text",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 971,
+      "reactions": 0,
+      "title": "Generate meaningful SegmentIDs instead of pure random",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 977,
+      "reactions": 0,
+      "title": "Luwak/Reverse Search/Lucene Monitor for tantivy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 981,
+      "reactions": 0,
+      "title": "Rethink / Document the tantivy index format.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 982,
+      "reactions": 0,
+      "title": "Ensure that segment cannot exceed 2^31 documents.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 993,
+      "reactions": 0,
+      "title": "please add a demo to the readme",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 999,
+      "reactions": 0,
+      "title": "Storing arbitrary attributes for segments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1003,
+      "reactions": 0,
+      "title": "Investigate the bottleneck in the search benchmark using toplev",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1034,
+      "reactions": 0,
+      "title": "Make Block WAND work with BoostWeight",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1039,
+      "reactions": 0,
+      "title": "Improve merge performance on index sorted by field.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1040,
+      "reactions": 0,
+      "title": "Improve performance of segment serialize for sorted index.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1041,
+      "reactions": 4,
+      "title": "Optimize single document posting lists.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1052,
+      "reactions": 0,
+      "title": "Merge: Add deletion treshold instead of hard switch for merge algorithms",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1059,
+      "reactions": 0,
+      "title": "Consider Capability Based API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1065,
+      "reactions": 0,
+      "title": "Add blocked term dicitonaries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1066,
+      "reactions": 0,
+      "title": "Choosing fastfield encoders",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1074,
+      "reactions": 2,
+      "title": "Allow defining a different tokenizer for search than indexing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1075,
+      "reactions": 0,
+      "title": "Add a word-delimiter filter",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1081,
+      "reactions": 0,
+      "title": "Random Document Sorting",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1112,
+      "reactions": 0,
+      "title": "How many query grammars does tantivy support?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1162,
+      "reactions": 0,
+      "title": "How to customize query type when using `parse_query`?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1174,
+      "reactions": 8,
+      "title": "Support for autocompletion",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1192,
+      "reactions": 0,
+      "title": "Protect against infinite loop in skip reader seek",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1204,
+      "reactions": 0,
+      "title": "Add shingle token filter or token n-grams",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1212,
+      "reactions": 0,
+      "title": "Possible to save 16 bytes on linear block metadata in the multilinear interpolation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1215,
+      "reactions": 0,
+      "title": "Slope value unexpected in multilinear interpolation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1219,
+      "reactions": 1,
+      "title": "Reverse queries?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 1221,
+      "reactions": 0,
+      "title": "MacOS MmapDirectory sync_all (F_FULLFSYNC) performance",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1223,
+      "reactions": 0,
+      "title": "Investigate the number of sync effectively happening.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1227,
+      "reactions": 0,
+      "title": "Remove allow(clippy::uninit_vev)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1236,
+      "reactions": 0,
+      "title": "Remove the use of iff in the code",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1240,
+      "reactions": 0,
+      "title": "Change DEFAULT_DEL_DOCS_RATIO_BEFORE_MERGE to 0.3",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1249,
+      "reactions": 0,
+      "title": "Better Snippet Scoring",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1257,
+      "reactions": 1,
+      "title": "Replace delete opstamp by number of deleted documents.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1273,
+      "reactions": 0,
+      "title": "Proposal for new query type: phrase with gaps",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1277,
+      "reactions": 0,
+      "title": "Refactor the Collector API to be distribute-friendly.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1309,
+      "reactions": 0,
+      "title": "Link to outdated gitbooks page in docs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1313,
+      "reactions": 0,
+      "title": "Histogram performance",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1314,
+      "reactions": 0,
+      "title": "Fast field datasets",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1323,
+      "reactions": 2,
+      "title": "Inconsistent API implementation of BytesOptions, TextOptions, and NumericOptions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1337,
+      "reactions": 0,
+      "title": "Single-value fast field for strings fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1352,
+      "reactions": 0,
+      "title": "Document as trait",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1354,
+      "reactions": 0,
+      "title": "Making \".field parsing story possible in tantivy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1386,
+      "reactions": 0,
+      "title": "uses ancient crate `htmlescape` (not actively maintained `html-escape`)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1392,
+      "reactions": 0,
+      "title": "Include slop in the scoring formula for the phrasescorer",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1394,
+      "reactions": 0,
+      "title": "Document escaping for `QueryParser`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1397,
+      "reactions": 0,
+      "title": "Improve Error handling for doc_store compressor thread",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1412,
+      "reactions": 0,
+      "title": "Rename FastField Trait to make its use clear",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1413,
+      "reactions": 0,
+      "title": "Client side web search?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1416,
+      "reactions": 0,
+      "title": "Persian [Farsi] language support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1417,
+      "reactions": 2,
+      "title": "Arabic language support ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1431,
+      "reactions": 0,
+      "title": "Can Tantivy generate snippets from JSON field?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1438,
+      "reactions": 0,
+      "title": "Fieldnorms compression",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1530,
+      "reactions": 0,
+      "title": "Add f32 support ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1533,
+      "reactions": 0,
+      "title": "Track index creation memory consumption",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1540,
+      "reactions": 0,
+      "title": "Introducing a ColumnReader",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1563,
+      "reactions": 0,
+      "title": "Out of memory on writing to tantivy index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1568,
+      "reactions": 0,
+      "title": "Use TermSetQuery when building the Query from the user input.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1571,
+      "reactions": 0,
+      "title": "convert DocIdMapping to an enum",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1573,
+      "reactions": 0,
+      "title": "Consider MemUsage trait",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1577,
+      "reactions": 0,
+      "title": "Use simple terms instead of phrase query for multiple terms",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1584,
+      "reactions": 0,
+      "title": "Unused code when building without default features",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1597,
+      "reactions": 0,
+      "title": "Support adding fields to an existing index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 1605,
+      "reactions": 0,
+      "title": "Investigate to merge MonotonicallyMappableToU64 and StrictlyMonotonicMappingFn",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1606,
+      "reactions": 0,
+      "title": "Rename get_between_vals and multivalue.range",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1616,
+      "reactions": 0,
+      "title": "Sparse data and fieldnorms",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1636,
+      "reactions": 0,
+      "title": "Check token constraints",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1654,
+      "reactions": 0,
+      "title": "Indexing an array of small pieces of text is much slower than indexing a big string ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 1655,
+      "reactions": 0,
+      "title": "Disable IDF - workaround? ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1668,
+      "reactions": 0,
+      "title": "Add a preserve_original feature to the Ascii folding filter.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1669,
+      "reactions": 0,
+      "title": "Remove duplicates filter",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1686,
+      "reactions": 0,
+      "title": "Rename min max in Column",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1688,
+      "reactions": 0,
+      "title": "Is it possible to search with prefixes?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1689,
+      "reactions": 0,
+      "title": "Support term aggregation on non text fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1690,
+      "reactions": 0,
+      "title": "Aggregation Feature Parity with Elasticsearch",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1698,
+      "reactions": 0,
+      "title": "Add Support for ip address in aggregations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1699,
+      "reactions": 0,
+      "title": "Improve `QueryParser::split_full_path`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1701,
+      "reactions": 0,
+      "title": "Allow custom format on date aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1709,
+      "reactions": 0,
+      "title": "Range queries on JSON fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 8
+    },
+    {
+      "number": 1710,
+      "reactions": 0,
+      "title": "The linear normalization is not necessary for the linear and the blockwise linear codec in the absence of a GCD",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1727,
+      "reactions": 0,
+      "title": "Add version/magic number in SSTable format.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1751,
+      "reactions": 0,
+      "title": "Allow Serialization of RamDirectory into a single file.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1753,
+      "reactions": 0,
+      "title": "Allow single-threaded addition of documents to existing index without spawning new threads",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1754,
+      "reactions": 0,
+      "title": "Panic when opening old indexes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1761,
+      "reactions": 0,
+      "title": "Increase Test Coverage",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1773,
+      "reactions": 0,
+      "title": "Move docstore_compress_dedicated_thread property out of index_settings.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1774,
+      "reactions": 0,
+      "title": "Add API to close tantivy index properly",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1790,
+      "reactions": 0,
+      "title": "add proptest for `get_docids_for_value_range`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1791,
+      "reactions": 0,
+      "title": "Optimization in boolean query",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1792,
+      "reactions": 0,
+      "title": "QueryAST",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1795,
+      "reactions": 0,
+      "title": "Refactoring: removing Field and use &str in the public API of tantivy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 1796,
+      "reactions": 0,
+      "title": "REFACTORING: Aggregation factorization of computation, factorization of fetches?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1814,
+      "reactions": 0,
+      "title": "Support term set queries for json path",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1824,
+      "reactions": 0,
+      "title": "Missing search results with in memory index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 6
+    },
+    {
+      "number": 1826,
+      "reactions": 0,
+      "title": "add more benchmarks for fast field creation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1829,
+      "reactions": 0,
+      "title": "use kahan summation in aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1836,
+      "reactions": 0,
+      "title": "Querying documents that contain a specific key in JSON field",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1841,
+      "reactions": 0,
+      "title": "TermsAggregation with early top n truncation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1844,
+      "reactions": 0,
+      "title": "Add reverse dictionary streaming",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1877,
+      "reactions": 0,
+      "title": "Implement serde `Serialize` and `Deserialize` traits for `DateTime`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1887,
+      "reactions": 0,
+      "title": "simplify PhrasePrefixQuery to not use `read_postings_no_deletes`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1890,
+      "reactions": 0,
+      "title": "min/max value is NaN for empty f64 columns ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1891,
+      "reactions": 0,
+      "title": "Remove empty columns, remove legacy u64/i64 API?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1893,
+      "reactions": 0,
+      "title": "NaN sucks",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1897,
+      "reactions": 0,
+      "title": "Delayed computation of sub aggregations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1903,
+      "reactions": 0,
+      "title": "Can we remove FastValue?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1918,
+      "reactions": 0,
+      "title": "Make the dynamic fast field thing configurable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1919,
+      "reactions": 0,
+      "title": "add proptest for aggs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1931,
+      "reactions": 0,
+      "title": "QueryParser does not support URL special characters in filter keys",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1947,
+      "reactions": 0,
+      "title": "`TokenizerManager` name is a bit misleading",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1948,
+      "reactions": 0,
+      "title": "SSTableIndex could be a multi layer SSTable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1951,
+      "reactions": 0,
+      "title": "Performance of OptionalIndex::SparseBlock::rank_if_exists",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1952,
+      "reactions": 0,
+      "title": "date histogram limitations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1964,
+      "reactions": 0,
+      "title": "Remove the multilinear codec and replace it by a simpler blockwise bitpacking codec",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1975,
+      "reactions": 0,
+      "title": "The Streamer with A=AlwaysMatchAutomaton does not need to maintain a stack of states",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1977,
+      "reactions": 0,
+      "title": "How to define schema for a non-json text file",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1980,
+      "reactions": 1,
+      "title": "Handle isolated (NOT something)  queries in the query parser.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1981,
+      "reactions": 0,
+      "title": "Make sure the BM25 failing case in CI is a false negative.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1997,
+      "reactions": 0,
+      "title": "Date detection on JSON fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2004,
+      "reactions": 0,
+      "title": "test tantivy::failpoints test_fail_on_flush_segment_but_one_worker_remains extremely slow ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2011,
+      "reactions": 0,
+      "title": "function to fetch multiple docs at once from the docstore",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2015,
+      "reactions": 0,
+      "title": "Big indexing refactoring",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2021,
+      "reactions": 0,
+      "title": "Improve AggregationLimits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2026,
+      "reactions": 0,
+      "title": "Date histogram extended bounds and hard bounds default unit are not aligned with ES API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2037,
+      "reactions": 0,
+      "title": "Add support for `interval` field for Date histogram",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2047,
+      "reactions": 0,
+      "title": "Support overlapping ranges in RangeAggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2052,
+      "reactions": 1,
+      "title": "Tokenizer API allocations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2061,
+      "reactions": 1,
+      "title": "Update bench",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2072,
+      "reactions": 0,
+      "title": "Empty results",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2074,
+      "reactions": 0,
+      "title": "Custom Directory implementations can't trigger WatchCallback",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2090,
+      "reactions": 0,
+      "title": "Make it possible to have high perf, non dictionary encoded Str/Bytes field",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2092,
+      "reactions": 0,
+      "title": "posting lists seems less compact than they could be",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2114,
+      "reactions": 0,
+      "title": "Support f64 Compression",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2163,
+      "reactions": 0,
+      "title": "Profile-Guided Optimization (PGO) evaluation results",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2166,
+      "reactions": 0,
+      "title": "Optimize ExistsQuery",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2193,
+      "reactions": 0,
+      "title": "Panic from indexWriter.commit() call",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 2194,
+      "reactions": 0,
+      "title": "Old optimization idea for stop words",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2195,
+      "reactions": 0,
+      "title": "Change const parameter of bm25",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2200,
+      "reactions": 1,
+      "title": "Deregister FileWatcher in MmapDirectory",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2215,
+      "reactions": 0,
+      "title": "Dynamic Schema",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2216,
+      "reactions": 0,
+      "title": "RefValue::Array is not indexed",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2218,
+      "reactions": 1,
+      "title": "Fix error message when converting user input exists query into logical ast",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2221,
+      "reactions": 0,
+      "title": "How do I handle documents with different types of content?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2234,
+      "reactions": 0,
+      "title": "How can I watch the writer's opstamp to commit when needed?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2241,
+      "reactions": 0,
+      "title": "expand_dots and object reconstruction",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2244,
+      "reactions": 1,
+      "title": "new bitpacking release",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2261,
+      "reactions": 0,
+      "title": "JSON field shadowing issue",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2271,
+      "reactions": 0,
+      "title": "Is there a way to extract positions/postings information from a search result?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2272,
+      "reactions": 0,
+      "title": "test_managed_directory_gc_while_mmapped fails on windows",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2274,
+      "reactions": 0,
+      "title": "About different indices and schemas",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2281,
+      "reactions": 0,
+      "title": "Support for term alternatives in phrase.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 2296,
+      "reactions": 1,
+      "title": "accept ip in cidr notation in queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2300,
+      "reactions": 0,
+      "title": "Tantivy Internal Architecture Documentation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2301,
+      "reactions": 0,
+      "title": "Multiple Snippets on multiple matches on the same document?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2303,
+      "reactions": 0,
+      "title": "Ngram + Stemmer combination",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2317,
+      "reactions": 0,
+      "title": "Occur::MustNot  does not seem to be working as expected",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2334,
+      "reactions": 0,
+      "title": "Be able to use range query with values containing space ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2338,
+      "reactions": 3,
+      "title": "Index encryption via Encrypted Directory [reopen]",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2341,
+      "reactions": 0,
+      "title": "MemorySanitizer: use-of-uninitialized-value (probably false positive)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2350,
+      "reactions": 0,
+      "title": "add `top_metrics` aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2358,
+      "reactions": 0,
+      "title": "FuzzyTermQuery, PhrasePrefixQuery, PhraseQuery --> Snippets / actual matches",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2374,
+      "reactions": 0,
+      "title": "Replace PreTokenizedString",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2376,
+      "reactions": 1,
+      "title": "support multiple modes of execution for fastfield range query",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2377,
+      "reactions": 0,
+      "title": "Addition of a migration guide from Lucene to Tantivy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2381,
+      "reactions": 0,
+      "title": "QueryParser raises SyntaxError when combining field prefix with nested searchstring",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2388,
+      "reactions": 0,
+      "title": "Any plan to support learned sparse vector search?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 2390,
+      "reactions": 0,
+      "title": "Implementing Block WAND optimization for more queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 2413,
+      "reactions": 0,
+      "title": "Isolate Aggregations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2421,
+      "reactions": 0,
+      "title": "Unique field",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2436,
+      "reactions": 0,
+      "title": "monotonic mapping broken for `get_docids_for_value_range`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2440,
+      "reactions": 1,
+      "title": "Possible Codec Between SPARSE and DENSE: CHIMERA",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2459,
+      "reactions": 0,
+      "title": "calendar_interval in datehistogram",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2461,
+      "reactions": 0,
+      "title": "more ast optimizations arround boolean queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2462,
+      "reactions": 0,
+      "title": "Improve incorrect type handling on columnar",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2464,
+      "reactions": 0,
+      "title": "cardinality aggregation precision_threshold parameter ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2465,
+      "reactions": 0,
+      "title": "\"Internal error: Couldn't find term_id 25777562 in dict\" for very large dicts (>20mio)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2466,
+      "reactions": 0,
+      "title": "Improve Date precision truncation handling",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2469,
+      "reactions": 0,
+      "title": "Consider normalization for cardinality aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2472,
+      "reactions": 2,
+      "title": "Natural language queries exhibit unexpected behavior when processing Chinese text.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2475,
+      "reactions": 2,
+      "title": "Support disabling compression for SSTable based dictionaries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2482,
+      "reactions": 0,
+      "title": "Add Ukrainian stemmer",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2484,
+      "reactions": 0,
+      "title": "Add support for Polish language stemming",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2505,
+      "reactions": 0,
+      "title": "Reverse reverse index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2507,
+      "reactions": 0,
+      "title": "Split segments / Export Segments / Import Segments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2514,
+      "reactions": 2,
+      "title": "Add support for exists syntax like \"name: *\" pattern for built-in `QueryParser`.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2518,
+      "reactions": 2,
+      "title": "Phrase Query Top N Pruning",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2536,
+      "reactions": 0,
+      "title": "Allocation in Intersection::seek",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2539,
+      "reactions": 0,
+      "title": "Proptest Nested Union + Intersection",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2540,
+      "reactions": 4,
+      "title": "Indexer panics ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2544,
+      "reactions": 0,
+      "title": "Add Intersection + Union Benchmarks",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2561,
+      "reactions": 0,
+      "title": "vint.rs 97 line error",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2565,
+      "reactions": 0,
+      "title": "New collector - `DistinctFilterCollector`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2576,
+      "reactions": 0,
+      "title": "Snippet generation breaks with fuzzy fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2577,
+      "reactions": 0,
+      "title": "Attempt to multiply with overflow",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2584,
+      "reactions": 0,
+      "title": "NOT Operator with Phrase Query Returns Empty Results",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2595,
+      "reactions": 0,
+      "title": "Missing english stopwords?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2599,
+      "reactions": 0,
+      "title": "Adding temporary documents to an existing index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2603,
+      "reactions": 0,
+      "title": "Change wait_merging_threads to take &mut self instead of consuming self",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2604,
+      "reactions": 0,
+      "title": "Efficiently Retrieve Fast Field Values and Compute Min/Max for Numeric Fast Fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2605,
+      "reactions": 0,
+      "title": "Question about the behavior of Segment",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2608,
+      "reactions": 0,
+      "title": "Custom parsing logic for bytes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2612,
+      "reactions": 0,
+      "title": "Encode dense blocks of postings as bit sets",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 2613,
+      "reactions": 1,
+      "title": "Use bit sets to evaluate conjunctions too",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2616,
+      "reactions": 2,
+      "title": "Generalize count() optimization for faceting",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2619,
+      "reactions": 0,
+      "title": "Multi-Language Index?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2628,
+      "reactions": 2,
+      "title": "iOS compilation failure due to zstd",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2630,
+      "reactions": 0,
+      "title": "Synonym support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 2631,
+      "reactions": 0,
+      "title": "Parse error when contains \"(\"",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2634,
+      "reactions": 0,
+      "title": "Panic: \"The IndexWriter does not have any lock\"",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2635,
+      "reactions": 1,
+      "title": "Can it be reliably used for mobile in a production environment",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 2637,
+      "reactions": 0,
+      "title": "What is valid Tantivy Syntax?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2639,
+      "reactions": 0,
+      "title": "Optim skip scoring/weight/etc. for a term query when the boost is set to 0.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2640,
+      "reactions": 0,
+      "title": "DLL with a C API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2645,
+      "reactions": 0,
+      "title": "segment_postings assertion failed: self.doc() <= target",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2647,
+      "reactions": 1,
+      "title": "PermissionDenied Error When Committing Large Number of Documents",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2652,
+      "reactions": 0,
+      "title": "Make string decoding lazier in `TopDocs::order_by_string_fast_field`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2658,
+      "reactions": 0,
+      "title": "Why do every .term will be fully read during search ?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2659,
+      "reactions": 0,
+      "title": "Tantivy segment files are large-ish",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2665,
+      "reactions": 0,
+      "title": "Best approach to handling searches across multiple object schemas",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2666,
+      "reactions": 0,
+      "title": "IndexWriter's committed_opstamp is never updated after commits, breaking rollback and causing data integrity issues",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2667,
+      "reactions": 0,
+      "title": "Searcher is being overly strict",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2671,
+      "reactions": 0,
+      "title": "How to efficiently retrieve value from text fast field",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2688,
+      "reactions": 0,
+      "title": "Interest in Java port of Python Tantivy libraries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2703,
+      "reactions": 0,
+      "title": "Share TopN threshold across segments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2712,
+      "reactions": 0,
+      "title": "RegexPhraseQuery - multi-term regex match",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2713,
+      "reactions": 0,
+      "title": "Is it possible to get an iterator over all terms in the index? And get the term frequency in each doc?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2720,
+      "reactions": 0,
+      "title": "IndexWriter.delete_term() can fail silently",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2731,
+      "reactions": 3,
+      "title": "Adopt the same top-k collection algorithms as Lucene?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2733,
+      "reactions": 1,
+      "title": "Is it possible to pass in a bitset of document ids to be considered in pruning for TermQuery (and BooleanQuery).",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2734,
+      "reactions": 0,
+      "title": "document with facet can not be deleted",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2776,
+      "reactions": 0,
+      "title": "About 15% regression on string sorts",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2781,
+      "reactions": 0,
+      "title": "Support for arbitrary precision integers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2794,
+      "reactions": 0,
+      "title": "Improve LogMergePolicy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2800,
+      "reactions": 0,
+      "title": "Are we planning to implement CharFilter in the future ?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2805,
+      "reactions": 0,
+      "title": "behavior change in TopDocs#order_by_u64_field",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2806,
+      "reactions": 0,
+      "title": "Incremental encoding/decoding slows down string value parsing for fast field.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2813,
+      "reactions": 0,
+      "title": "Add a `uuid` field type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2831,
+      "reactions": 0,
+      "title": "How can I use a dynamic tokenizer?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2838,
+      "reactions": 0,
+      "title": "Soft deletes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2841,
+      "reactions": 0,
+      "title": "support TermSetQuery over fastfield",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2847,
+      "reactions": 1,
+      "title": "`ManagedDirectory` commit fails with `PermissionDenied` on Windows — single `IndexWriter`'s internal merge thread races with commit on `.managed.json`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2859,
+      "reactions": 0,
+      "title": "Block-based scoring",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2887,
+      "reactions": 0,
+      "title": "Optimization opportunity",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2888,
+      "reactions": 0,
+      "title": "Cardinality seems inaccurate",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2891,
+      "reactions": 0,
+      "title": "Missing key handling in cardinality is glitchy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2892,
+      "reactions": 0,
+      "title": "Apply optimization introduced in #2879 for other aggregations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2908,
+      "reactions": 0,
+      "title": "Terms aggregation requests where the missing key matches an existing key don't return the missing bucket",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2924,
+      "reactions": 3,
+      "title": "Make BM25 parameters (k1, b) configurable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2925,
+      "reactions": 0,
+      "title": "QueryParser: build RegexPhraseQuery from phrases containing regex/wildcard tokens",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2932,
+      "reactions": 0,
+      "title": "Slow performance and many small segments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2945,
+      "reactions": 3,
+      "title": "README.md and benchmarks statement",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2961,
+      "reactions": 0,
+      "title": "Larger distance limit for Levenshtein Distance",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2968,
+      "reactions": 0,
+      "title": "Static values in aggregations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2974,
+      "reactions": 0,
+      "title": "`AutomatonWeight`-based queries have no early termination: `TopDocs::with_limit(N)` is `O(matches)`, not `O(N)`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2979,
+      "reactions": 0,
+      "title": "term aggregation sort order isn't entire match with ES on ties",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2980,
+      "reactions": 0,
+      "title": "wrong sorting for missing key of type string in term aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3031,
+      "reactions": 0,
+      "title": "QueryParser::parse_query panics on `- *` instead of returning Err (Exist query without a field)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3032,
+      "reactions": 0,
+      "title": "parse_query_lenient does not terminate on `a:(^` (unclosed group with a boost)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3079,
+      "reactions": 0,
+      "title": "Are orphaned segment files recoverable after writer process crash?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3100,
+      "reactions": 0,
+      "title": "FileWatcher idle-eviction leaks watcher threads under high repo churn — thread-cap exhaustion with EAGAIN panics (0.22.1)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3146,
+      "reactions": 0,
+      "title": "Opt-in trained zstd dictionary for the doc store?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3161,
+      "reactions": 0,
+      "title": "Add full blocks to the optional codec.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3167,
+      "reactions": 0,
+      "title": "Supporting sorting TopDocs by Json fast field paths (e.g. attr.due)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3172,
+      "reactions": 0,
+      "title": "DynamicTermDictionary is not accounted for in AggregationLimits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3186,
+      "reactions": 0,
+      "title": "A reopened IndexWriter's first op reuses the last commit's opstamp, so a delete can be skipped by a merge (duplicate after upsert)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3193,
+      "reactions": 1,
+      "title": "`PhraseScorer::seek_danger` debug assertion fails when a phrase is excluded (`MustNot`) and its first match is after the first candidate",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3195,
+      "reactions": 0,
+      "title": "Build `BooleanQuery` `MUST` clauses cheapest first",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3200,
+      "reactions": 0,
+      "title": "`FuzzyTermQuery::new_prefix` with distance 2 misses terms whose prefix is within 2 edits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    }
+  ],
+  "repository": "quickwit-oss/tantivy",
+  "schemaVersion": 1
+}

@@ -3,8 +3,8 @@ use clap::{Parser, Subcommand};
 use github_tools::{
     commands::{
         build_db, close_old_prs, compact, delete_stale_branches, fetch_automated_review_stats,
-        fetch_discussions, fetch_issues, fetch_labels, generate_charts, generate_summaries, purge,
-        push_metrics, remove_legacy_label, replace_label, workflows,
+        fetch_discussions, fetch_issue_interest, fetch_issues, fetch_labels, generate_charts,
+        generate_summaries, purge, push_metrics, remove_legacy_label, replace_label, workflows,
     },
     config::{Config, Repo},
 };
@@ -38,6 +38,13 @@ enum Command {
         env_file: Option<String>,
         #[arg(long, help = "Only fetch items updated since this date (ISO, YYYY-MM, or relative: 3m, 1y, 30d)")]
         since: Option<String>,
+    },
+    /// Snapshot open issues ranked by reactions and distinct commenters
+    FetchIssueInterest {
+        #[arg(long)]
+        repo: String,
+        #[arg(long)]
+        env_file: Option<String>,
     },
     /// Fetch all discussions for a repository
     FetchDiscussions {
@@ -330,6 +337,10 @@ fn main() -> Result<()> {
         Command::FetchIssues { repo, env_file, since } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_issues::run(&config, since.as_deref())
+        }
+        Command::FetchIssueInterest { repo, env_file } => {
+            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
+            fetch_issue_interest::run(&config)
         }
         Command::FetchDiscussions { repo, env_file, since } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;

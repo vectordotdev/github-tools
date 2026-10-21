@@ -31,11 +31,13 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
         closed
         stateReason
         isAnswered
+        answerChosenAt
         locked
         author {
           login
         }
         category {
+          isAnswerable
           name
         }
         comments {
@@ -67,11 +69,13 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
         closed
         stateReason
         isAnswered
+        answerChosenAt
         locked
         author {
           login
         }
         category {
+          isAnswerable
           name
         }
         comments {
@@ -97,6 +101,7 @@ pub struct Discussion {
     pub closed: bool,
     pub state_reason: Option<String>,
     pub is_answered: Option<bool>,
+    pub answer_chosen_at: Option<String>,
     pub locked: bool,
     pub author: Option<Author>,
     pub category: Category,
@@ -110,8 +115,10 @@ pub struct Author {
 }
 
 #[derive(Deserialize, Serialize)]
+#[serde(rename_all = "camelCase")]
 pub struct Category {
     pub name: String,
+    pub is_answerable: Option<bool>,
 }
 
 #[derive(Deserialize, Serialize)]
@@ -344,4 +351,27 @@ fn fetch_all_discussions(client: &Client, config: &Config) -> Result<Vec<Discuss
     }
 
     Ok(discussions)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn answer_dates_round_trip_and_older_snapshots_remain_readable() {
+        let mut row = json!({
+            "number": 1, "title": "Question", "bodyText": "", "url": "https://github.com/example/discussions/1",
+            "createdAt": "2026-01-01T00:00:00Z", "updatedAt": "2026-01-03T00:00:00Z",
+            "closedAt": null, "closed": false, "stateReason": null, "isAnswered": true,
+            "locked": false, "author": null, "category": {"name": "Q&A", "isAnswerable": true},
+            "comments": {"totalCount": 1}, "upvoteCount": 0
+        });
+        let old: Discussion = serde_json::from_value(row.clone()).unwrap();
+        assert_eq!(old.answer_chosen_at, None);
+        row["answerChosenAt"] = json!("2026-01-02T00:00:00Z");
+        let current: Discussion = serde_json::from_value(row.clone()).unwrap();
+        assert_eq!(serde_json::to_value(current).unwrap(), row);
+        assert!(QUERY.contains("answerChosenAt"));
+        assert!(QUERY_SINCE.contains("answerChosenAt"));
+    }
 }

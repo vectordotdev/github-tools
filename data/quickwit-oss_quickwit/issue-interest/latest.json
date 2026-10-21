@@ -1,0 +1,4746 @@
+{
+  "collectedAt": "2026-10-21T18:41:50.909874+00:00",
+  "issues": [
+    {
+      "number": 103,
+      "reactions": 0,
+      "title": "Mapping configuration from example (food for thought)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 118,
+      "reactions": 0,
+      "title": "Usage of Path::join creates non-conform index on windows",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 156,
+      "reactions": 0,
+      "title": "Clarify default text options // add a string type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 186,
+      "reactions": 0,
+      "title": "Protect against deeply nested json document by setting a depth limit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 199,
+      "reactions": 0,
+      "title": "Better message when parsing doc mapper generates an error",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 296,
+      "reactions": 0,
+      "title": "Publish to cargo",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 308,
+      "reactions": 5,
+      "title": "IPFS storage and search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 329,
+      "reactions": 0,
+      "title": "Consider different nodes for search and doc fetching",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 410,
+      "reactions": 0,
+      "title": "Add mechanism to disable retries on failure",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 428,
+      "reactions": 0,
+      "title": "Include from & to actors in the actor message SendError",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 470,
+      "reactions": 0,
+      "title": "Add a command to add a split file to an existing index.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 477,
+      "reactions": 0,
+      "title": "Client-side search instance, read-only against any http backend",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 513,
+      "reactions": 0,
+      "title": "Sort splits per checkpoint in the merge policy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 517,
+      "reactions": 0,
+      "title": "Add a way to have concurrent actors",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 567,
+      "reactions": 0,
+      "title": "Merge checkpoints in the merge executor",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 574,
+      "reactions": 0,
+      "title": "Remove \"actor are stopping when they detect there are no more messages\" functionality",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 670,
+      "reactions": 0,
+      "title": "Make metastore tests more fine grained ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 672,
+      "reactions": 0,
+      "title": "Discussion: Search is read only?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 681,
+      "reactions": 0,
+      "title": "Tech debt: fix caching ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 713,
+      "reactions": 0,
+      "title": "Reduce the variance of the split size produced by the merge operations.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 763,
+      "reactions": 0,
+      "title": "Create a document helping new contributoir how to navigate the codebase ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 794,
+      "reactions": 0,
+      "title": "Follow search performance on basic queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 864,
+      "reactions": 0,
+      "title": "Repeated storage error messages",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 881,
+      "reactions": 0,
+      "title": "Fix bad pattern used in CLI argument parsing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 889,
+      "reactions": 0,
+      "title": "Single dockerhub repository for cross images ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 890,
+      "reactions": 1,
+      "title": "Consider GIN index on metastore for  tags field",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 903,
+      "reactions": 0,
+      "title": "Add and populate _source_id field into the documents (with tags)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 943,
+      "reactions": 0,
+      "title": "Blocking code in the indexing pipeline actor?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 976,
+      "reactions": 0,
+      "title": "Target optimal num docs by split when ingesting data",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 991,
+      "reactions": 0,
+      "title": "More defensive behavior when SourceCheckpoint is missing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1000,
+      "reactions": 9,
+      "title": "[WishList] Support more sources",
+      "unattributedComments": 0,
+      "uniqueCommenters": 12
+    },
+    {
+      "number": 1017,
+      "reactions": 0,
+      "title": "Request hangs forever if UDP is accessible and gRPC is not",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1036,
+      "reactions": 0,
+      "title": "Create native (.rpm, .deb) packages ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1044,
+      "reactions": 0,
+      "title": "Defaults concerning in-memory usage should reflect on available memory",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1054,
+      "reactions": 0,
+      "title": "Cache TermInfo and Postinglist/Positions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1064,
+      "reactions": 0,
+      "title": "Refactor Source building",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1067,
+      "reactions": 0,
+      "title": "Find a way to mitigate the confusion: file storage does not work when using several nodes.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1107,
+      "reactions": 1,
+      "title": "Supporting Google PubSub as a source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1112,
+      "reactions": 0,
+      "title": "Improve the split-> leaf node assignment algorithm",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1120,
+      "reactions": 2,
+      "title": "Showcase quickwit with a public UI @demo.quickwit.io",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1123,
+      "reactions": 0,
+      "title": "Collation support?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1129,
+      "reactions": 0,
+      "title": "Add to code style:  when to pass reference or move",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1143,
+      "reactions": 1,
+      "title": "Create a custom tokenizer that is more log friendly",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1150,
+      "reactions": 3,
+      "title": "Distributed Storage.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 1159,
+      "reactions": 0,
+      "title": "Investigate: File as a source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1199,
+      "reactions": 0,
+      "title": "Generate TypeScript bindings from Rust types",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1261,
+      "reactions": 0,
+      "title": "ES Compatible search API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1267,
+      "reactions": 0,
+      "title": "Document and maybe rethink about how a field can be indexed",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1275,
+      "reactions": 0,
+      "title": "Support many indices",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1309,
+      "reactions": 0,
+      "title": "Log an error and test default field corner case",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1321,
+      "reactions": 0,
+      "title": "Review search and index management routes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1323,
+      "reactions": 0,
+      "title": "[Discussion] Json field usage in UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1327,
+      "reactions": 1,
+      "title": "project tokens to to root level in json object config",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1340,
+      "reactions": 0,
+      "title": "Refactor DocMapper",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1363,
+      "reactions": 0,
+      "title": "Define and implement the user XP when searching for phrase query where position are not available.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1449,
+      "reactions": 0,
+      "title": "Performance falls rapidly as max_hits increases in size",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1450,
+      "reactions": 0,
+      "title": "sort_by_field returns incorrect results on text fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1476,
+      "reactions": 0,
+      "title": "Add split boundary/partition policy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1488,
+      "reactions": 0,
+      "title": "Revisit global retry strategy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1494,
+      "reactions": 0,
+      "title": "Unit test: search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1502,
+      "reactions": 0,
+      "title": "Can you support csv format as input",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1503,
+      "reactions": 0,
+      "title": "Can't use a key as default search field for JSON field",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 1511,
+      "reactions": 0,
+      "title": "Text fields without indexing / Ignoring fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1532,
+      "reactions": 0,
+      "title": "Add native support for Amazon Elastic File System (EFS)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1544,
+      "reactions": 0,
+      "title": "Support for large start_offset",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1565,
+      "reactions": 0,
+      "title": "RFC: Fuzzy Search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1582,
+      "reactions": 0,
+      "title": "Test TCP No delay in our Http client ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1594,
+      "reactions": 0,
+      "title": "Log network latency breakdow somehow. ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1599,
+      "reactions": 0,
+      "title": "Server cannot start if you rm the index directory but forget to update the `indexes_states.json` file",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1602,
+      "reactions": 0,
+      "title": "Deleting and recreating a topic for an index result in retries on a non-recoverable scenario",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1609,
+      "reactions": 0,
+      "title": "Create a reproducible benchmark to track and investigate index size for different datasets",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1613,
+      "reactions": 0,
+      "title": "Quickwit's indexing per-index footprint",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1617,
+      "reactions": 0,
+      "title": "Kafka Source: Add support for wildcard or regex-based topic subscription",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1620,
+      "reactions": 0,
+      "title": "Make dev XP nicer with the UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1630,
+      "reactions": 0,
+      "title": "Expose split states / split meta",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1655,
+      "reactions": 0,
+      "title": "Refactoring needed in the tag extraction code.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1674,
+      "reactions": 0,
+      "title": "Stateless HTTP Indexing sources",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 1676,
+      "reactions": 0,
+      "title": "Time selector in the UI drifts",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1693,
+      "reactions": 0,
+      "title": "No `num_docs` optimization and lazy top K.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1699,
+      "reactions": 0,
+      "title": "Expose more information on field-wise stats in split describe.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1713,
+      "reactions": 0,
+      "title": "RAYON_NUM_THREADS affects the size of our search thread pool",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1715,
+      "reactions": 0,
+      "title": "CPU never reaching 100%",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1727,
+      "reactions": 0,
+      "title": "Export tokio-metrics in prometheus",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1735,
+      "reactions": 0,
+      "title": "Improve Cache Admission logic",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1750,
+      "reactions": 0,
+      "title": "Refactor  search / search stream",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1766,
+      "reactions": 0,
+      "title": "Run CI on macOS",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1772,
+      "reactions": 0,
+      "title": "Exclude immature splits from merge candidates when the retention cutoff is close",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1777,
+      "reactions": 0,
+      "title": "Search requests with high `max_hits` (> ~100) causes fetch error with indexes stored on Cloudflare R2.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1816,
+      "reactions": 0,
+      "title": "Fix musl build and re-publish musl binaries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 1829,
+      "reactions": 0,
+      "title": "Dynamic Mapping should not tokenize values",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 1831,
+      "reactions": 0,
+      "title": "Installation Bug",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1832,
+      "reactions": 1,
+      "title": "Document upgrade and downgrade processes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1860,
+      "reactions": 0,
+      "title": "Monitoring support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 1910,
+      "reactions": 0,
+      "title": "Add a test with different different grpc_listen_addr and grpc_advertise_addr",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1937,
+      "reactions": 0,
+      "title": "Use NonZeroUsize in Stamper and maybe somewhere else.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1938,
+      "reactions": 0,
+      "title": "Remove call to `last_delete_opstamp` at each indexing workbench creation.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1963,
+      "reactions": 0,
+      "title": "Show the index delete tasks in the index UI tab",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1986,
+      "reactions": 0,
+      "title": "Metastore GRPC disconnection?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1990,
+      "reactions": 0,
+      "title": "Warn user when using local filesystem as default index root URI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1993,
+      "reactions": 0,
+      "title": "Add integration test with postgresql",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2013,
+      "reactions": 0,
+      "title": "U64 as displayed in the UI are wrong.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2031,
+      "reactions": 0,
+      "title": "Trigger a delete task planner evaluation after creation of a delete task  ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2050,
+      "reactions": 0,
+      "title": "Document document store and fast fields concepts",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2092,
+      "reactions": 0,
+      "title": "Improve logs when ingesting data.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2099,
+      "reactions": 0,
+      "title": "Check nodejs dependencies licences",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2103,
+      "reactions": 0,
+      "title": "Indexing one kafka source leads to postgresql pool timed out errors after some time",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2108,
+      "reactions": 0,
+      "title": "Add  labels to prometheus metrics.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2114,
+      "reactions": 0,
+      "title": "Docs-only PRs cannot be merge easily ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2127,
+      "reactions": 0,
+      "title": "Streamline split upload",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2134,
+      "reactions": 0,
+      "title": "Improve `protect_future`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2150,
+      "reactions": 0,
+      "title": "Consider `ActorExitStatus::Quit` as a successful exit?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2151,
+      "reactions": 0,
+      "title": "Add logs on delete index / create with overwrite option to show quickwit is working during index deletion",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2177,
+      "reactions": 0,
+      "title": "Code smell: max_concurrent_split_uploads",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2202,
+      "reactions": 0,
+      "title": "Remove logs for CLI commands that don't require them.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2221,
+      "reactions": 0,
+      "title": "Remove the fastfield codecs dependency in quickwit, and the remove make_fast_field_reader function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2223,
+      "reactions": 0,
+      "title": "Revisit the protobuf API for snippet requests ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2227,
+      "reactions": 0,
+      "title": "Add REST endpoint to access actors observable states.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2269,
+      "reactions": 0,
+      "title": "`LocalSplitStore::open` can take a very long time when there is a high number of splits on the disk",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2270,
+      "reactions": 0,
+      "title": "Instrument Kafka source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2275,
+      "reactions": 0,
+      "title": "More flexibility on dynamic (JSON) fields mapping",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2286,
+      "reactions": 0,
+      "title": "Change splits filter for timestamp fields to use `OffsetDateTime` rather than unix timestamps.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2333,
+      "reactions": 0,
+      "title": "yarn install is failing due to a timeout",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2342,
+      "reactions": 0,
+      "title": "Add a unit test to test backpressure on the entire pipeline",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2343,
+      "reactions": 0,
+      "title": "Add pagination to the UI when viewing splits.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2370,
+      "reactions": 0,
+      "title": "Improve dev XP on index create/update ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2391,
+      "reactions": 0,
+      "title": "Improve merge pipeline observability",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2431,
+      "reactions": 0,
+      "title": "ip>127.0.0.1 should error or be interpreted in the expected way",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2483,
+      "reactions": 0,
+      "title": "Handle a json path as a routing expression.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2489,
+      "reactions": 0,
+      "title": "Update indexer grafana dashboard with missing metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2491,
+      "reactions": 0,
+      "title": "Splits rest api returns a JSON Array",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2492,
+      "reactions": 0,
+      "title": "List index returns an array",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2493,
+      "reactions": 0,
+      "title": "Delete source should return an empty object.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2494,
+      "reactions": 4,
+      "title": "Improve user XP when using delete API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2501,
+      "reactions": 2,
+      "title": "Add a simple JSON query editor in the quickwit UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2502,
+      "reactions": 0,
+      "title": "Aggregation documentation is twisted",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2519,
+      "reactions": 0,
+      "title": "Increase minimum supported PostgreSQL version to `10` or `11`.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2520,
+      "reactions": 0,
+      "title": "Investigate the opportunity to use fadvise / madvise",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2526,
+      "reactions": 0,
+      "title": "Multi-tenant data model",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2552,
+      "reactions": 0,
+      "title": "How do you recommend securing access to a quickwit node?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2556,
+      "reactions": 0,
+      "title": "Single-node load testing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2564,
+      "reactions": 0,
+      "title": "Change the cpu-target or cpu feature flags when building binaries.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2569,
+      "reactions": 0,
+      "title": "Add docs to explain how to monitor a quickwit cluster",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2579,
+      "reactions": 0,
+      "title": "Tracing: support Kafka-based ingestion",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2586,
+      "reactions": 0,
+      "title": "Add auth check based on Biscuit on the searcher",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2590,
+      "reactions": 1,
+      "title": "Configuration error message should mention the \"path to invalid key\".",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2592,
+      "reactions": 0,
+      "title": "Per index credentials for the S3 storage",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2597,
+      "reactions": 0,
+      "title": "Idea: CLI setup tool",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2627,
+      "reactions": 0,
+      "title": "Integrate pull request preview environments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2632,
+      "reactions": 0,
+      "title": "Reduce UI bundle size.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2638,
+      "reactions": 0,
+      "title": "Create utility scripts for setting up and loading common ingestion sources for testing.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2642,
+      "reactions": 0,
+      "title": "Improve accelerated_time",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2645,
+      "reactions": 0,
+      "title": "API exposing the amount of bytes stored for a given index.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2648,
+      "reactions": 0,
+      "title": "Filtered aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2650,
+      "reactions": 1,
+      "title": "Add instances recommandations in the docs ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2651,
+      "reactions": 0,
+      "title": "Microsoft Windows Support ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2654,
+      "reactions": 0,
+      "title": "Case-sensitive search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2655,
+      "reactions": 2,
+      "title": "[quick-storage] Support more storage via opendal",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2660,
+      "reactions": 0,
+      "title": "Investigate what should be done with file sources ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2662,
+      "reactions": 0,
+      "title": "Use a metastore version number to avoid triggering scheduling when version is unchanged.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2667,
+      "reactions": 0,
+      "title": "Protect against a MetastoreWithControlPlaneTriggers that wraps a gRPC client metastore.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2671,
+      "reactions": 0,
+      "title": "Revisit actor runtimes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2679,
+      "reactions": 0,
+      "title": "Refactoring: Remove the warmup procedure.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2688,
+      "reactions": 0,
+      "title": "Tracing: use pagination for queries fetching a huge number of spans",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2732,
+      "reactions": 0,
+      "title": "Use `preserve_order` feature of `serde_json`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2733,
+      "reactions": 0,
+      "title": "UI: Display indexes sorted by index ID in index view",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2734,
+      "reactions": 0,
+      "title": "UI: Add ability to sort indexes by index ID, URI, creation date in indexes view ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2759,
+      "reactions": 0,
+      "title": "Should return 201 when creating index/source with the REST API ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2762,
+      "reactions": 0,
+      "title": "Enhance CLI split list command with a tags argument",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2763,
+      "reactions": 0,
+      "title": "Enhance CLI describe split command to show the split size and sizes of files contained in it",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2769,
+      "reactions": 0,
+      "title": "implement retry for ListTerms",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2773,
+      "reactions": 0,
+      "title": "Supports split pruning (tags) in list terms search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2795,
+      "reactions": 0,
+      "title": "Improve pulsar source stability when using partitioned topics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 2796,
+      "reactions": 0,
+      "title": "Improve Pulsar source testing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2797,
+      "reactions": 0,
+      "title": "Create a nicer set of demos of Quickwit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2798,
+      "reactions": 0,
+      "title": "REST endpoints should all have an query parameter to pretty format json output.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2805,
+      "reactions": 0,
+      "title": "Explore implementing bloom filters for pruning tagged fields with high cardinality.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2816,
+      "reactions": 0,
+      "title": "UI does not show the right create_timestamp of an index in indexes list page.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2844,
+      "reactions": 0,
+      "title": "Add pulsar internal docs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2849,
+      "reactions": 0,
+      "title": "Add VRL script for the ingest API source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 2859,
+      "reactions": 0,
+      "title": "Service client codegen: support error details",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2868,
+      "reactions": 0,
+      "title": "Universe created with accelerated_time can lead to indexing pipeline failure.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2882,
+      "reactions": 0,
+      "title": "Server running all services but `indexer` returns a 500 on an ingest request",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2905,
+      "reactions": 0,
+      "title": "Test Pulsar authentification",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2915,
+      "reactions": 1,
+      "title": "Return a 5xx status code when local disk is full",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2924,
+      "reactions": 0,
+      "title": "Update CONTRIBUTING.md and docker-compose.yaml to make it possible to have jaeger show quickwit traces",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2931,
+      "reactions": 0,
+      "title": "UI does not show timestamps on otel indexes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2933,
+      "reactions": 0,
+      "title": "Add a tutorial to show how to collect AWS Lambda traces/logs and send them into Quickwit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2938,
+      "reactions": 0,
+      "title": "Three tests are regularly failing on macOS M1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 2957,
+      "reactions": 2,
+      "title": "Improve error messages for mssing fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2961,
+      "reactions": 0,
+      "title": "metrics ingested_num_bytes double counting?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2969,
+      "reactions": 0,
+      "title": "Compression for intra-cluster gRPCs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2987,
+      "reactions": 0,
+      "title": "Bulk ingest API content type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 2989,
+      "reactions": 1,
+      "title": "Document cardinality",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2990,
+      "reactions": 0,
+      "title": "Quickwit does not check if a given S3 bucket is valid. (MinIO)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2993,
+      "reactions": 0,
+      "title": "With 100 indexers, Kafka keeps rebalancing partitions and prevent Quickwit to reach a stable indexing throughput",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2999,
+      "reactions": 0,
+      "title": "No error message when runnign quickwit on several node with a fs storage uri ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3001,
+      "reactions": 0,
+      "title": "User XP when quickwit runs out of file descriptors could be better. #1941",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3007,
+      "reactions": 1,
+      "title": "Add a guide on partitioning",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3008,
+      "reactions": 5,
+      "title": "Quickwit search errors are not helpful",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3015,
+      "reactions": 0,
+      "title": "Add e2e tracing tutorial in the docs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3018,
+      "reactions": 0,
+      "title": "The transform feature shows example with the index config... as opposed to the source config.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 3022,
+      "reactions": 0,
+      "title": "Lazy filed backed index error logged after index is deleted ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3023,
+      "reactions": 0,
+      "title": "Better defaults for OTEL tracing.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3037,
+      "reactions": 0,
+      "title": "No forward for the OTEL gRPC stuff",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3046,
+      "reactions": 1,
+      "title": "Implement Jaeger SpanWriter gRPC API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3060,
+      "reactions": 0,
+      "title": "Link to AWS setup returns 404",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3064,
+      "reactions": 0,
+      "title": "Remove the need for tantivy::Document and allocations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3069,
+      "reactions": 0,
+      "title": "Publish JS client as NPM package",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3071,
+      "reactions": 0,
+      "title": "Add an example of helm deployement with metastore on s3",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3073,
+      "reactions": 0,
+      "title": "Quickwit fails to handle SIGTERM signals.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3075,
+      "reactions": 0,
+      "title": "Authorization / authentication: tools for public endpoints",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3081,
+      "reactions": 1,
+      "title": "Mutability / Overwriting resources / `id` field / ingest resources using delete task",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3082,
+      "reactions": 0,
+      "title": "delete_tasks endpoint has multiple parameters for index_id",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3084,
+      "reactions": 1,
+      "title": "Implementing Jaeger metrics store API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3094,
+      "reactions": 0,
+      "title": "Add a diagnostic screen in the UI to notify of major errors",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3103,
+      "reactions": 0,
+      "title": "Optimize the building of binaries/docker images.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3107,
+      "reactions": 0,
+      "title": "Discussion configuration of dynamic mapping",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3111,
+      "reactions": 0,
+      "title": "Trace Tower layer",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3114,
+      "reactions": 0,
+      "title": "Make storage setup more visible in the docs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3121,
+      "reactions": 0,
+      "title": "add test for aggregation limits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3125,
+      "reactions": 0,
+      "title": "add and document tantivy coerce option ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3127,
+      "reactions": 0,
+      "title": "[Documentation topic] Document Ip addresses",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3129,
+      "reactions": 0,
+      "title": "No Indexer metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3130,
+      "reactions": 0,
+      "title": "Optimize Quickwit collection when maxhits == 0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3131,
+      "reactions": 0,
+      "title": "aggs field expects an aggs object in the Swagger API screen",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3134,
+      "reactions": 0,
+      "title": "Isolate the documentation DocumentMapper documentation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3141,
+      "reactions": 0,
+      "title": "Improve logging error when no metastore is available",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3142,
+      "reactions": 0,
+      "title": "Add sort_by examples in the docs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3143,
+      "reactions": 0,
+      "title": "Add docs about RAM requirements for the indexer ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3146,
+      "reactions": 0,
+      "title": "Is our Tokio runtime too loaded?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3154,
+      "reactions": 0,
+      "title": "Enhance Helm charts Quickwit setup",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3155,
+      "reactions": 0,
+      "title": "Integrated view of Quickwit logs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3156,
+      "reactions": 0,
+      "title": "[Documentation] Doc mapping field types",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3157,
+      "reactions": 0,
+      "title": "quickwit tool local-ingest doesn't show parse errors",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3161,
+      "reactions": 2,
+      "title": "Internal Errors are not logged",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3165,
+      "reactions": 0,
+      "title": "About Query Criteria Time Interval",
+      "unattributedComments": 0,
+      "uniqueCommenters": 6
+    },
+    {
+      "number": 3166,
+      "reactions": 0,
+      "title": "Investigate a kafka source that is not indexed",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3171,
+      "reactions": 0,
+      "title": "Support specifying a timezone manually with strptime parser",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 3172,
+      "reactions": 0,
+      "title": "some question about quwick-UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 3176,
+      "reactions": 0,
+      "title": "Add tests on CLI prompts",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3186,
+      "reactions": 0,
+      "title": "Make the REST server compression layer optional",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3188,
+      "reactions": 0,
+      "title": "Japanese support observation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3192,
+      "reactions": 0,
+      "title": "Add the possibility to clear the search cache",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 3194,
+      "reactions": 0,
+      "title": "Range query optim ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 3205,
+      "reactions": 0,
+      "title": "Quickwit UI index explorator takes space on small screens [quickwit-ui]",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3207,
+      "reactions": 0,
+      "title": "Handle shutdown signals",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3208,
+      "reactions": 0,
+      "title": "Remove the `DocMapper::query` out of the `DocMapper`.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3224,
+      "reactions": 0,
+      "title": "aggregation does not work on inner field",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3235,
+      "reactions": 0,
+      "title": "Reorder split search to use CPU as soon as possible",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3255,
+      "reactions": 0,
+      "title": "limit fast field warmup to specific types.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3257,
+      "reactions": 0,
+      "title": "Add support for teletrace UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3301,
+      "reactions": 0,
+      "title": "Refactoring: Extract query building from the docmapper (and put that in quickwit_query)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3302,
+      "reactions": 0,
+      "title": "Tiered Storage for Indexed Data",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 3316,
+      "reactions": 0,
+      "title": "Put the columnar field -> meta dictionary in the hotcache when it is small.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3327,
+      "reactions": 0,
+      "title": "Add a mechanism to bypass the leaf response cache.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3333,
+      "reactions": 0,
+      "title": "Move away from using the gRPC address of a node as the primary key in client pool",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3337,
+      "reactions": 0,
+      "title": "Document the ES compatible API.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3360,
+      "reactions": 0,
+      "title": "test_partitioned_topic_multi_consumer_ingestion fails occasionally",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3361,
+      "reactions": 0,
+      "title": "test_scheduler_scheduling_and_control_loop_apply_plan_again fails occasionally",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3384,
+      "reactions": 1,
+      "title": "Support for \"remote\" (EBS, NFS) file systems as data dir",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 3386,
+      "reactions": 0,
+      "title": "[Discussion] Should \"quotation mark\" in absence of positions yield an error?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3397,
+      "reactions": 0,
+      "title": "Make all config parameters human-readable/writable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3409,
+      "reactions": 0,
+      "title": "error message for unquoted TermQuery over datetime field is unhelpful",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3415,
+      "reactions": 0,
+      "title": "Exporter otlp log errors seen on indexer",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3422,
+      "reactions": 0,
+      "title": "Define a default time range window in the UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3425,
+      "reactions": 0,
+      "title": "[Optim] Use tantivy's range query for timestamp filtering when facing an AllQuery.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3430,
+      "reactions": 0,
+      "title": "Improve query error message when field is not indexed",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3436,
+      "reactions": 0,
+      "title": "Better logic for input format in queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3448,
+      "reactions": 0,
+      "title": "Add recommended minimum spec information",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3463,
+      "reactions": 0,
+      "title": "Store the fast field dictionary (or at least part of) in the hotcache.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3480,
+      "reactions": 0,
+      "title": "Define output format of bytes fields for trace ID and span ID for OTEL trace/logs indexes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3484,
+      "reactions": 0,
+      "title": "Observation interval",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3509,
+      "reactions": 0,
+      "title": "Add link to freebsd port in the doc",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3510,
+      "reactions": 0,
+      "title": "Improve doc wording on file backed metastore usage",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3515,
+      "reactions": 0,
+      "title": "Bump format version from 0.6 to 0.7",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3518,
+      "reactions": 0,
+      "title": "Update Dockerhub page ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3519,
+      "reactions": 0,
+      "title": "search stream support for datetime is not documented",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3528,
+      "reactions": 1,
+      "title": "Add a documentation section for breaking changes and migration steps",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3539,
+      "reactions": 2,
+      "title": "Add exact match query",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3540,
+      "reactions": 0,
+      "title": "\"indices\" as alias for \"indexes\"",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 3546,
+      "reactions": 0,
+      "title": "Add a parameter to limit the size of a query string",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3547,
+      "reactions": 1,
+      "title": "Postgres metastore tutorial",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3548,
+      "reactions": 0,
+      "title": "Add PGO support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3550,
+      "reactions": 2,
+      "title": "[Documentation] max_merge_factor",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3560,
+      "reactions": 0,
+      "title": "Index ID to UID resolution for high QPS endpoints",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3561,
+      "reactions": 0,
+      "title": "Check performance when piping a ndjson file into index ingest",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3569,
+      "reactions": 0,
+      "title": "Affinitiy based on node id, not socketaddr?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3579,
+      "reactions": 1,
+      "title": "IPv6 for telemetry endpoint",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3593,
+      "reactions": 0,
+      "title": "Update identifiers validation rules",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3598,
+      "reactions": 0,
+      "title": "Add a way to change the number of displayed hits in the UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3606,
+      "reactions": 0,
+      "title": "Add docs for custom tokenizers.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3607,
+      "reactions": 0,
+      "title": "High Performance Indexing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 3612,
+      "reactions": 0,
+      "title": "delete operation can delete documents not yet ingested",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3621,
+      "reactions": 0,
+      "title": "about i64,u64 Maximum problem",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 3626,
+      "reactions": 0,
+      "title": "Services using gRPC will break when hitting the max gRPC message size limit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 3633,
+      "reactions": 0,
+      "title": "Indexers require a lot of memory to avoid OOM kill",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 3650,
+      "reactions": 0,
+      "title": "Fix the leaf search retry logic",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3657,
+      "reactions": 0,
+      "title": "Improvements for `quickwit_core::index`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3662,
+      "reactions": 0,
+      "title": "Ctrl-C does not work when a merge is running.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3665,
+      "reactions": 0,
+      "title": "Clean and publish quickwit-rest-client project on crates.io",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3666,
+      "reactions": 0,
+      "title": "Update docs on range queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3670,
+      "reactions": 0,
+      "title": "Doc processing error with an object mapping and null value",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3681,
+      "reactions": 0,
+      "title": "`Index XXX not found` even though the index has been created.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3684,
+      "reactions": 0,
+      "title": "Multilang tokenizer is slow on long text in JPN/CMN/KOR",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 3696,
+      "reactions": 0,
+      "title": "Update doc examples/tutorials using the dynamic mappings",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3701,
+      "reactions": 0,
+      "title": "Add a local tool to create an index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3711,
+      "reactions": 1,
+      "title": "Explore whether we can support the Jaeger data source in Grafana without using Jaeger frontend as a proxy.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3717,
+      "reactions": 0,
+      "title": "Add docs on tokenizers, filters and tokenizer API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3719,
+      "reactions": 0,
+      "title": "Add storage metrics for local storages",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3722,
+      "reactions": 0,
+      "title": "Sort mode",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3731,
+      "reactions": 0,
+      "title": "Plug the lenient grammar to Quickwit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3738,
+      "reactions": 0,
+      "title": "Add an 'Open in Jaeger' option in quickwit-ui",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3739,
+      "reactions": 0,
+      "title": "Allow webhooks to trigger for various logs and conditions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3745,
+      "reactions": 0,
+      "title": "Panic happens on indexer that indexes data and in the same time the index is deleted",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3755,
+      "reactions": 0,
+      "title": "Allow multi indexes search with different query ASTs between indexes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3760,
+      "reactions": 0,
+      "title": "[Discussion] Keeping or removing the check on index existence in `list_splits` method",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3762,
+      "reactions": 0,
+      "title": "Default fields are not resolved in the delete query AST",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3784,
+      "reactions": 0,
+      "title": "Improve the leaf search scheduler logic.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3802,
+      "reactions": 0,
+      "title": "Optimize delete",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3805,
+      "reactions": 0,
+      "title": "quickwit tool merge description might be inaccurate.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3807,
+      "reactions": 0,
+      "title": "Cluster config for cluster-wide parameters",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3815,
+      "reactions": 0,
+      "title": "Add a rest endpoint to publish the mem queue position state.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3818,
+      "reactions": 0,
+      "title": "quickstart guide points to two non-existing documents",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3858,
+      "reactions": 0,
+      "title": "Exist query doesn't consider sub fields for json fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3859,
+      "reactions": 0,
+      "title": "Reorganize directories",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3860,
+      "reactions": 0,
+      "title": "Log search, hoping for highlighting",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3872,
+      "reactions": 0,
+      "title": "Better interface description for Storage abstraction",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3896,
+      "reactions": 0,
+      "title": "Aggregations do not work on a field declared as fast with a parent field is a JSON field with `fast: false`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3909,
+      "reactions": 0,
+      "title": "Set retryable_error to false",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3923,
+      "reactions": 0,
+      "title": "Add kafka source example with several pipelines in the source configuration page",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3924,
+      "reactions": 0,
+      "title": "Rebuilding the known split ids set ended up not halving its size",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3930,
+      "reactions": 0,
+      "title": "Add ability to extend code-generated traits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3939,
+      "reactions": 0,
+      "title": "Document object storage support in the file source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3945,
+      "reactions": 0,
+      "title": "The runtime as thread pool model for blocking task is leaving cpu off the table.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3955,
+      "reactions": 0,
+      "title": "Expose REST API for managing shards",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3956,
+      "reactions": 0,
+      "title": "Add CLI commands for managing shards",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3967,
+      "reactions": 1,
+      "title": "search_after on quickwit API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3968,
+      "reactions": 2,
+      "title": "Quickwit doesn't respect URL prefix behind proxy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 3974,
+      "reactions": 0,
+      "title": "Log error on indexer when enabling OTLP exporter",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3975,
+      "reactions": 0,
+      "title": "Postcard decoding error when querying from jaeger",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3978,
+      "reactions": 0,
+      "title": "Add a bench for QuickwitCollector and optimize it.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3979,
+      "reactions": 0,
+      "title": "Optimize the Quickwit collector",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3984,
+      "reactions": 0,
+      "title": "Tutorials are failing on index creation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3985,
+      "reactions": 0,
+      "title": "Docs that show the benefits of time pruning",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3992,
+      "reactions": 0,
+      "title": "Migrate embedded checkpoint in index metadata to shard table",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4006,
+      "reactions": 0,
+      "title": "Refactor the metastore factory cache.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4008,
+      "reactions": 0,
+      "title": "Fix make docker-compose-monitoring command",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4024,
+      "reactions": 0,
+      "title": "Control plane could ask ingesters for shard status report on startup or before assigning a shard",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4025,
+      "reactions": 0,
+      "title": "Improve behavior on corrupted checkpoint.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4030,
+      "reactions": 0,
+      "title": "ditch Actor::on_drain mechanics for cooperative indexing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4036,
+      "reactions": 0,
+      "title": "A string range query on a JSON field should return an error",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4052,
+      "reactions": 0,
+      "title": "[Feature] Add SQL with Arrow Flight SQL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4055,
+      "reactions": 0,
+      "title": "Plug load metrics to the scheduling logic.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4076,
+      "reactions": 0,
+      "title": "Enhance metrics on the REST API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4078,
+      "reactions": 0,
+      "title": "Add a query to gets surroudnings documents",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4086,
+      "reactions": 0,
+      "title": "Add parameter to set the time zone in the UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4089,
+      "reactions": 0,
+      "title": "Tracing improvement",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4098,
+      "reactions": 0,
+      "title": "Display in the UI the query sent to the server when there is an error.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4103,
+      "reactions": 0,
+      "title": "Indexer and DocProcessor run on one thread [tokio issue]",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4121,
+      "reactions": 0,
+      "title": "Add a doc page to show how to quick start multiple nodes with docker compose",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4131,
+      "reactions": 0,
+      "title": "Improve merge performance.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4133,
+      "reactions": 0,
+      "title": "Put the column termdict into the hotcache whenever possible.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4144,
+      "reactions": 0,
+      "title": "Bound memory and disk usage at the queue level",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4155,
+      "reactions": 0,
+      "title": "Backward compatibilty tests",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4157,
+      "reactions": 0,
+      "title": "Support OTLP HTTP API for traces and logs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4158,
+      "reactions": 0,
+      "title": "Redocument metastore ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4166,
+      "reactions": 1,
+      "title": "more efficient way to map input documents to what we index and store",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4170,
+      "reactions": 0,
+      "title": "Chitchat server is not shutdown on shutdown signal",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4177,
+      "reactions": 0,
+      "title": "Add a maintenance operation to identify and remove leaking shards",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4178,
+      "reactions": 0,
+      "title": "Add integration test to test shard lifecycle.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4185,
+      "reactions": 0,
+      "title": "Add unit test for behavior of control plane delete index in presence of a metastore failure.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4188,
+      "reactions": 0,
+      "title": "Update the swagger documentation on the POST mapping and ingest data",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4201,
+      "reactions": 0,
+      "title": "Looking for an elasticsearch alternative",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4204,
+      "reactions": 0,
+      "title": "Add a gauge with the number of pods as seen from the control plane",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4206,
+      "reactions": 0,
+      "title": "Update to latest version of `rust-rdkafka` and remove consumer poll loop",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4211,
+      "reactions": 0,
+      "title": "Flaky Indexing pipeline test",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4226,
+      "reactions": 0,
+      "title": "Documents default values in the CLI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4228,
+      "reactions": 0,
+      "title": "Rest payload limits vs gRPC payload limit impedance.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4229,
+      "reactions": 0,
+      "title": "Route ingest request",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4232,
+      "reactions": 0,
+      "title": "Avoid moving shards from one pipeline to another. instead: closed and open.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4243,
+      "reactions": 0,
+      "title": "Stream splits in file backed metastore `list_splits`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4250,
+      "reactions": 0,
+      "title": "Hide footgun",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4252,
+      "reactions": 0,
+      "title": "Wrap control plane RPCs to indexers, ingesters, and metastore with a timeout",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4255,
+      "reactions": 0,
+      "title": "failed to truncate shard(s): ingester `node-1` is unavailable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4257,
+      "reactions": 0,
+      "title": "Shard load",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4258,
+      "reactions": 0,
+      "title": "Instrument routers and ingesters",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4264,
+      "reactions": 0,
+      "title": "Stream indexes metadata in metastore gRPC client `list_indexes_metadata`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4266,
+      "reactions": 0,
+      "title": "Add some examples of requests in the REST API reference docs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4272,
+      "reactions": 0,
+      "title": "Panic in the local split store",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4274,
+      "reactions": 0,
+      "title": "Add a not-so-happy path for the deletion of shards in ingesters upon source/index deletion",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4285,
+      "reactions": 0,
+      "title": "Complete the minio config storage with the URI of an index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4298,
+      "reactions": 0,
+      "title": "Small improvements on the ES field cap endpoint",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4309,
+      "reactions": 0,
+      "title": "Periodically recompute the physical plan",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4310,
+      "reactions": 0,
+      "title": "Add an UI view to display the state of the cluster in a readable manner in Quickwit UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4313,
+      "reactions": 0,
+      "title": "searcher/indexer join/leave the cluster frequently",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 4314,
+      "reactions": 0,
+      "title": "Use tags and service name to derive a process ID in the jaeger REST API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4315,
+      "reactions": 0,
+      "title": "Change syntax of \"prefix\" queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4328,
+      "reactions": 0,
+      "title": "Add a note on the multi indexes search documentation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4334,
+      "reactions": 0,
+      "title": "Add documentation on local split cache configuration",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4346,
+      "reactions": 0,
+      "title": "Document aggregation queries covered in Elasticsearch compatible API page",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4349,
+      "reactions": 1,
+      "title": "better error when s3 is dysfunctional",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4356,
+      "reactions": 0,
+      "title": "CommonCrawl Indexing Code",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4357,
+      "reactions": 0,
+      "title": "Display clear error message when merge occurs between splits with mismatching schemas",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4365,
+      "reactions": 0,
+      "title": "Test and Document the new google storage.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4371,
+      "reactions": 0,
+      "title": "Allow GCS connection through the meta API.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4396,
+      "reactions": 0,
+      "title": "various real life tests",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4397,
+      "reactions": 0,
+      "title": "merge pipeline gets killed when we lose the last pipeline for a given index.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4398,
+      "reactions": 1,
+      "title": "Indexing twice the same file with the local ingest command generate worrying log errors",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4405,
+      "reactions": 0,
+      "title": "Add control plane metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4411,
+      "reactions": 0,
+      "title": "Improve PostgreSQL implementation of Shard API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4431,
+      "reactions": 4,
+      "title": "Add a terraform example to deploy Quickwit lambdas",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 4464,
+      "reactions": 0,
+      "title": "Support datetime type which preserve original input data",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4470,
+      "reactions": 0,
+      "title": "Sequential merge prevent provoke back pressure on large index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4496,
+      "reactions": 0,
+      "title": "Control Panel Add Rest API?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4497,
+      "reactions": 0,
+      "title": "Avoid marking the io killswitch as \"error\"",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4518,
+      "reactions": 0,
+      "title": "Fix and reenable test_restarting_standalone_server",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4527,
+      "reactions": 0,
+      "title": "rebuilding the known split ids set ended up not halving its size",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4529,
+      "reactions": 0,
+      "title": "Put shard in a special state after 10 retry or so.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4538,
+      "reactions": 0,
+      "title": "Remove use of FnvHashMap/Set for queue IDs and client IDs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4550,
+      "reactions": 0,
+      "title": "Apply the fd cache to the File storage too.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4560,
+      "reactions": 0,
+      "title": "make delete task hammer less the metastore",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4564,
+      "reactions": 0,
+      "title": "Support `_source_excludes` query params in elastisearch API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4566,
+      "reactions": 0,
+      "title": "Node to reset instruction should have a version attached.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4567,
+      "reactions": 0,
+      "title": "consider providing optional source config when creating index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4570,
+      "reactions": 0,
+      "title": "RetainShards could delete newly created shards",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4584,
+      "reactions": 0,
+      "title": "ES _search response should return only `_source` by default",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4589,
+      "reactions": 1,
+      "title": "Adjust quick starts settings for better UX",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4593,
+      "reactions": 0,
+      "title": " WARN quickwit_cluster::cluster: Failed to build cluster member from Chitchat node state. cluster_id=simian-simian error=could not find `enabled_services` key in node `simian-indexer-7` state",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4594,
+      "reactions": 0,
+      "title": "Clean up routing table on delete index and source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4616,
+      "reactions": 0,
+      "title": "UUID support in search stream API endpoint",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4630,
+      "reactions": 0,
+      "title": "Improve assignement of kafka source pipelines on several indexers ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 4636,
+      "reactions": 0,
+      "title": "A field_caps request on on 1000 indexes takes a huge amount of memory",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4637,
+      "reactions": 0,
+      "title": "field_caps cache is based on `partial_request_cache_capacity`.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4640,
+      "reactions": 0,
+      "title": "Difference between Lucene QL and Quickwit QL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4656,
+      "reactions": 0,
+      "title": "Add a guide to install Quickwit on EKS with a service account for S3 access",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4658,
+      "reactions": 0,
+      "title": "Add GIN index on `splits.tags` (PostgreSQL metastore)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4660,
+      "reactions": 0,
+      "title": "Add _count in ES API docs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4665,
+      "reactions": 0,
+      "title": "Fix `test_single_node_cluster` integration tests",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4694,
+      "reactions": 0,
+      "title": "Add query params extraFilters and _source_excludes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4697,
+      "reactions": 0,
+      "title": "Merge policy update footgun",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4703,
+      "reactions": 0,
+      "title": "Multi-column types not correctly handled in SortByComponent",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4723,
+      "reactions": 0,
+      "title": "Delete index via the REST API does not seem to update the control plane.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4731,
+      "reactions": 0,
+      "title": "Improving placement",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4738,
+      "reactions": 0,
+      "title": "Add a logging layer in tower to log all grpc in debug",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4769,
+      "reactions": 0,
+      "title": "[Distributed Tracing] Documentation on ingestion of OpenTelemetry HTTP protocol data",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4774,
+      "reactions": 0,
+      "title": "Optimize trace IDs collector",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4775,
+      "reactions": 0,
+      "title": "FileBased metastore non-cancellable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4781,
+      "reactions": 0,
+      "title": "[OpenAPI] some errors on the spec",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4785,
+      "reactions": 0,
+      "title": "jemalloc failure on raspberry pi 5",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 4788,
+      "reactions": 0,
+      "title": "The GCS storage is not documented",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4789,
+      "reactions": 0,
+      "title": "Create a daily benchmark for search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4793,
+      "reactions": 0,
+      "title": "Dynamic mode indexes may have spaces in the names, but strict indexes can't",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4795,
+      "reactions": 0,
+      "title": "How to configure a metastorer or index URI for Azure storage is not documented",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4797,
+      "reactions": 0,
+      "title": "Storage configuration for Azure or S3",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 4799,
+      "reactions": 0,
+      "title": "request AWS AssumeRoleWithWebIdentity API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 4817,
+      "reactions": 0,
+      "title": "splits xxxxxxx not found, failed to publish splits.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4823,
+      "reactions": 1,
+      "title": "Support Kafka's group instance id.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4824,
+      "reactions": 0,
+      "title": "Add some random prefix to split ids.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4826,
+      "reactions": 0,
+      "title": "Running second local-ingest instances breaks first one",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4839,
+      "reactions": 2,
+      "title": "Add support for logfmt ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4842,
+      "reactions": 4,
+      "title": "Add support for syslog",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4850,
+      "reactions": 0,
+      "title": "Remove the split limit present in the UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4864,
+      "reactions": 1,
+      "title": "optimize range request by transforming them to filters",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4866,
+      "reactions": 1,
+      "title": "improve concatenate fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4869,
+      "reactions": 1,
+      "title": "local file ingestion success, 0 published documents/splits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 4871,
+      "reactions": 0,
+      "title": "add tests and documentation for the top_hits aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4882,
+      "reactions": 0,
+      "title": "Control plane restart",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4883,
+      "reactions": 0,
+      "title": "Add an info metrics with the version-revision string",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4885,
+      "reactions": 0,
+      "title": "Searcher fails to answer probe fast enough.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4886,
+      "reactions": 0,
+      "title": "flaky test test_rate_limiter_acquire",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4898,
+      "reactions": 0,
+      "title": "Improve ingester/indexer decommissioning",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4902,
+      "reactions": 0,
+      "title": "Optimization: filter + scoring by timestamp",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4905,
+      "reactions": 0,
+      "title": "Too many `GetOrCreateOpenShards` requests",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4906,
+      "reactions": 0,
+      "title": "Publish our experimental build on a different image.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4908,
+      "reactions": 0,
+      "title": "Opportunities to batch / avoid truncate and delete shards operations, triggered via chitchat.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4914,
+      "reactions": 0,
+      "title": "Auto create indexes for sources other than ingest v2",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4925,
+      "reactions": 0,
+      "title": "Ingestion bug when using partition key and unsorted data",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4932,
+      "reactions": 0,
+      "title": "Add a metric for distribution of response latency for REST ingest request.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4934,
+      "reactions": 0,
+      "title": "different 404 search results using SDK and HTTP request",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 4939,
+      "reactions": 1,
+      "title": "Document input format for data sources",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4944,
+      "reactions": 0,
+      "title": "Support compression of large gRPC messages directly in client/server",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 4945,
+      "reactions": 0,
+      "title": "Dynamic fields term set query not working",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 4948,
+      "reactions": 0,
+      "title": "Add metrics on the batch distribution",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4949,
+      "reactions": 0,
+      "title": "add some spans in fetch doc",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4953,
+      "reactions": 0,
+      "title": "split_cache.max_file_descriptors parameter documentation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4964,
+      "reactions": 0,
+      "title": "Downsampling traces",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4965,
+      "reactions": 0,
+      "title": "Document the usage tracking feature",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4966,
+      "reactions": 0,
+      "title": "Add search across clusters feature",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 4999,
+      "reactions": 0,
+      "title": "`test_build_physical_plan_with_locality` is flaky",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5009,
+      "reactions": 0,
+      "title": "Lambda does not exit on errors, keeps running until timeout ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5028,
+      "reactions": 0,
+      "title": "Indexing performance drop",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5032,
+      "reactions": 0,
+      "title": " Add optimization for pure count and count aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5040,
+      "reactions": 0,
+      "title": "Aggregation performance drop in CI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5044,
+      "reactions": 0,
+      "title": "burst codec",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5045,
+      "reactions": 0,
+      "title": "DeleteTaskPlanner can stacktrace if an index is deleted before it passes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5052,
+      "reactions": 0,
+      "title": "rollback of metastore is far from perfect",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5058,
+      "reactions": 0,
+      "title": "Continuous benchmarking workflow runs on documentation changes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5059,
+      "reactions": 3,
+      "title": "warning about exposing quickwit to the internet",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5060,
+      "reactions": 0,
+      "title": "Add docs to show how to use Grafana Jaeger plugin with Quickwit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 5062,
+      "reactions": 0,
+      "title": "Cluster did not start properly",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5063,
+      "reactions": 0,
+      "title": "No count optimizations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5066,
+      "reactions": 0,
+      "title": "How to Do SubQuery Like SQL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5067,
+      "reactions": 0,
+      "title": "Record Level Permissions (Graylog Support?)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5073,
+      "reactions": 0,
+      "title": "Readd compression on the Rest API output",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5097,
+      "reactions": 0,
+      "title": "Support for relaxed search schema in ES compatible endpoint to support direct query from OpenSearch Dashboards",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5110,
+      "reactions": 0,
+      "title": "Fix the way scores are combined in the elasticsearch API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5112,
+      "reactions": 1,
+      "title": "Provide alternatives to tokenizer drops based on string length.  ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5120,
+      "reactions": 0,
+      "title": "Double sorting with aggregation not working",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5146,
+      "reactions": 0,
+      "title": "add metric for rebalance",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5152,
+      "reactions": 0,
+      "title": "Time to search metric",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5173,
+      "reactions": 0,
+      "title": "Reduce size of field caps gRPC messages",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5176,
+      "reactions": 0,
+      "title": "Address base image security vulnerabilities",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5199,
+      "reactions": 0,
+      "title": "Support custom STS endpoint",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5211,
+      "reactions": 3,
+      "title": "GCS allows only 1 write/s per key",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5213,
+      "reactions": 0,
+      "title": "[Documentation topic] Benchmark against alternatives [ manticoresearch, meilisearch, etc ]",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5220,
+      "reactions": 0,
+      "title": "Support for percolate search?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5221,
+      "reactions": 0,
+      "title": "extend explain to an explain-analyze api",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5222,
+      "reactions": 11,
+      "title": "support being the backend for OpenSearch Dashboards",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 5225,
+      "reactions": 0,
+      "title": "floating point that are whole number are shown without .0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5230,
+      "reactions": 0,
+      "title": "Plug shard weight with kafka connector",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5235,
+      "reactions": 3,
+      "title": "Clarify k8s cluster mode deployment / Helm chart use",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5239,
+      "reactions": 0,
+      "title": "Handle eventual split corruption ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5243,
+      "reactions": 0,
+      "title": "Add retry if file read stream is broken",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5245,
+      "reactions": 2,
+      "title": "Internal GRPC error without any error log on the server side",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5267,
+      "reactions": 0,
+      "title": "Large batch could be a problem",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5268,
+      "reactions": 0,
+      "title": "Es compatible API missing from our openapi",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5270,
+      "reactions": 2,
+      "title": "Test and Increase ramp up of ingest through quickwit cli",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5287,
+      "reactions": 0,
+      "title": "[refactoring] Find a solution to avoid deserializing the query_ast over and over",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5295,
+      "reactions": 0,
+      "title": "Make assigning shards logs less verbose",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5305,
+      "reactions": 0,
+      "title": "search nodes unresponsive with expensive aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5307,
+      "reactions": 0,
+      "title": "support wildcard query from es ast",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5312,
+      "reactions": 0,
+      "title": "Support X-Correlation-ID in header",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5313,
+      "reactions": 0,
+      "title": "index update from UI",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5315,
+      "reactions": 0,
+      "title": "Avoid using index ID labels on `open_shards_total` metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5319,
+      "reactions": 0,
+      "title": "fields set under tag_fields do not accept a search with negation operator",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5325,
+      "reactions": 0,
+      "title": "Strict parsing mode when indexing ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5333,
+      "reactions": 0,
+      "title": "Unable to ingest field names with periods for ip type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5343,
+      "reactions": 0,
+      "title": "doc mapper parse error on `otel_logs_v0_7`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5352,
+      "reactions": 0,
+      "title": "Add a histogram metric for SQL requests ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5363,
+      "reactions": 0,
+      "title": "null value in column node_id crashes indexing pipelines after migration issues",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5368,
+      "reactions": 0,
+      "title": "consider using a non-versionned index for otel",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5376,
+      "reactions": 0,
+      "title": "Azure Managed Identity Support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5379,
+      "reactions": 0,
+      "title": "Handle ingest errors for OTEL gRPC API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5383,
+      "reactions": 0,
+      "title": "Better resource utilisation for SQS File source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5393,
+      "reactions": 0,
+      "title": "[Tutorial topic] Add java opentelemtery  agent support tutorial ， How to join  metric、trace、log by quickwit ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5397,
+      "reactions": 0,
+      "title": "Slow Query History / Log",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5416,
+      "reactions": 0,
+      "title": "consider not retuning all columns from metastore when listing splits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5417,
+      "reactions": 0,
+      "title": "Force commit might not work with v2 ingest CLI command",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5430,
+      "reactions": 0,
+      "title": "Ingestion failure when recreating an index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5431,
+      "reactions": 1,
+      "title": "precondition failed for splits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 5435,
+      "reactions": 2,
+      "title": "Getting a `failed to load IMDS session token` on a non-AWS environment",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5436,
+      "reactions": 0,
+      "title": "Local directory clean up after index delete",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5442,
+      "reactions": 1,
+      "title": "Dedicated Root Search Nodes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5443,
+      "reactions": 0,
+      "title": "Additional Search Related Metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5444,
+      "reactions": 13,
+      "title": "Duplicate document prevention by specifying id",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5456,
+      "reactions": 1,
+      "title": "grafana ingester dashboard error",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5465,
+      "reactions": 0,
+      "title": "Documents loose after their ingestion",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5468,
+      "reactions": 0,
+      "title": "Test the opportunity to not abort timed out get_slice, but instead run a race with retried attempt",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5477,
+      "reactions": 0,
+      "title": "Optional Ingestion error handling",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5502,
+      "reactions": 2,
+      "title": "Nesting in Quickwit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5506,
+      "reactions": 0,
+      "title": "Time to first byte metric",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5515,
+      "reactions": 0,
+      "title": "unit test failing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5525,
+      "reactions": 0,
+      "title": "Sync and clean up local shards when an ingester starts",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5526,
+      "reactions": 1,
+      "title": "OTLP support for metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5528,
+      "reactions": 0,
+      "title": "Flaky unit test",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5531,
+      "reactions": 0,
+      "title": "Hot reload of node.yaml configuration",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5534,
+      "reactions": 0,
+      "title": "single datasource multiple indexers, native distributed indexing question",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5537,
+      "reactions": 0,
+      "title": "Document the field caps endpoint",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5539,
+      "reactions": 0,
+      "title": "Compile Times + Warp Types",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5547,
+      "reactions": 0,
+      "title": "Prometheus metrics for ingest wal usage are not working",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5548,
+      "reactions": 0,
+      "title": "Ingestion stops after getting the error: \"ingestion rejected due to disk limit\"",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5559,
+      "reactions": 1,
+      "title": "Limit search requests concurrency",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5561,
+      "reactions": 4,
+      "title": "Selective field indexing during field type conflicts",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5562,
+      "reactions": 0,
+      "title": "Support for OpenTelemetry logs with HTTP JSON/binary format",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5579,
+      "reactions": 0,
+      "title": "Searching for a traceId in grafana / jaeger does not work after 3 days.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5585,
+      "reactions": 0,
+      "title": "Support formatting on datehistogram aggregations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5587,
+      "reactions": 0,
+      "title": "Support `bytes` parameter on the ES `_cat` API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5588,
+      "reactions": 0,
+      "title": "Same merge planned twice",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5589,
+      "reactions": 0,
+      "title": "Ingester behavior when disk is full",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5590,
+      "reactions": 0,
+      "title": "Limit the maturity level or the size of splits to admit in the split store",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5597,
+      "reactions": 0,
+      "title": "Missing query parameters in _elastic/_cluster/health",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5602,
+      "reactions": 0,
+      "title": "does quickwit support any auth to protect the quickwit APIs?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 5604,
+      "reactions": 0,
+      "title": "Remove ingest v1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5650,
+      "reactions": 0,
+      "title": "Support per index cache strategy and time based caching condition",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5664,
+      "reactions": 0,
+      "title": "Add `drop_on_abort` option to VRL processing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5671,
+      "reactions": 0,
+      "title": "Add quickwit_storage_object_storage_put_errors_total metric",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5701,
+      "reactions": 1,
+      "title": "Merges blocked after pipeline shutdowns",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5738,
+      "reactions": 0,
+      "title": "Updating doc mapping does not update index V2 validation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5747,
+      "reactions": 0,
+      "title": "Indexing scheduling unbalanced for Kafka source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 5770,
+      "reactions": 0,
+      "title": "More granularity to the quickwit_http_requests_total metric",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5782,
+      "reactions": 1,
+      "title": "NotFound(Source) error with S3 metastore and SQS ingestion after red/black deployment",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 5785,
+      "reactions": 0,
+      "title": "OTEL_TRACES_INDEX_ID_PATTERN make customizable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5795,
+      "reactions": 3,
+      "title": "leverage s3 conditional write for concurrent s3 metastore",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 5799,
+      "reactions": 0,
+      "title": "Fix the object_storage_get_errors_total metric",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5813,
+      "reactions": 1,
+      "title": "Consider enabling more aggressive optimizations for the Release profile: Fat LTO and codegen-units = 1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5820,
+      "reactions": 1,
+      "title": "otel collector failed to export logs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5833,
+      "reactions": 0,
+      "title": "Uneven pipeline distribution across indexers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 5847,
+      "reactions": 0,
+      "title": "error spawning ingestion pipeline",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5854,
+      "reactions": 0,
+      "title": "Splits span wide time ranges when backfilling historical data from multiple time periods",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5855,
+      "reactions": 0,
+      "title": "Cannot build from source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5864,
+      "reactions": 0,
+      "title": "Default file permissions for file-based storage",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5866,
+      "reactions": 0,
+      "title": "Adding new fields to doc_mapping unexpectedly alters tag_fields behavior",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5867,
+      "reactions": 0,
+      "title": "exit_status=downstream actor exited",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5868,
+      "reactions": 0,
+      "title": "Does not consume queue if indexer > 1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5873,
+      "reactions": 1,
+      "title": "[Documentation topic] Searcher config advice",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5876,
+      "reactions": 0,
+      "title": "Some searcher quantity should be a function of the number of vCPUs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5877,
+      "reactions": 0,
+      "title": "When will tantivy 0.25 be included?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5883,
+      "reactions": 1,
+      "title": "Add Elasticsearch Style Collapse",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5887,
+      "reactions": 1,
+      "title": "Jaeger: Single lookback_period_hours causes performance vs functionality trade-off",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5901,
+      "reactions": 0,
+      "title": "Update aws sdk and in particular aws-smithy-http-client and other",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5903,
+      "reactions": 0,
+      "title": "[quickwit ui] allow configurable max hits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5911,
+      "reactions": 0,
+      "title": "Corrupt split after merge",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5915,
+      "reactions": 0,
+      "title": "downloaded_splits directory is not being cleaned up in the indexer",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5923,
+      "reactions": 0,
+      "title": "Long transaction in PostgreSQL when marking large number of splits for deletion",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 5924,
+      "reactions": 1,
+      "title": "Add even Kafka partition distribution between all or set of indexers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5926,
+      "reactions": 0,
+      "title": "Add Kafka rack awareness/Fetch from follower to Kafka source configuration",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5959,
+      "reactions": 0,
+      "title": "Enable increasing tracing level without increasing the log level",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 5980,
+      "reactions": 0,
+      "title": "Control plane is shard rate limiting when indexing capacity is available",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 5989,
+      "reactions": 0,
+      "title": "Add min/max statistics to the metastore for pruning",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6014,
+      "reactions": 0,
+      "title": "Kafka source issues after upgrade to edge: PollExceeded errors and consumption problems",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6017,
+      "reactions": 0,
+      "title": "Incorrect metric mentioned in documentation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6019,
+      "reactions": 0,
+      "title": "Cannot build from source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6049,
+      "reactions": 0,
+      "title": "Flaky tests in quickwit-indexing crate",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6063,
+      "reactions": 0,
+      "title": "Actor test `test_drain_is_called` is flaky",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6101,
+      "reactions": 0,
+      "title": "Indexing stops intermittently",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6130,
+      "reactions": 0,
+      "title": "Aggregation failing after index schema update",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6146,
+      "reactions": 0,
+      "title": "[Documentation] out of date makefile comment",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6150,
+      "reactions": 0,
+      "title": "Offloading search for lambdas for list_fields too",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6155,
+      "reactions": 0,
+      "title": "Ingest_v2 MergePipeline (Packager, Uploader) inconsistency after index update",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6167,
+      "reactions": 0,
+      "title": "migration problem",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6204,
+      "reactions": 1,
+      "title": "Migration number 25 causes CPU spike and lock contention on splits tables during metastore startup",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6210,
+      "reactions": 0,
+      "title": "Optimize S3 Bandwidth Usage via Two-Phase Progressive Leaf Search for Heavy Queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6211,
+      "reactions": 0,
+      "title": "Query can not filter",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6288,
+      "reactions": 0,
+      "title": "ExistQuery may not be accurate when relying on fast-field",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6302,
+      "reactions": 0,
+      "title": "Remove stale metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6324,
+      "reactions": 2,
+      "title": "Routing table retains stale entries for short-lived shards",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6326,
+      "reactions": 0,
+      "title": "OTLP HTTP endpoint hangs in certain conditions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6430,
+      "reactions": 0,
+      "title": "/search-plan may over-fetch split metadata from PostgreSQL metastore on wide queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6440,
+      "reactions": 1,
+      "title": "Slow query performance when using sort_by_field on queries with few matches",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6447,
+      "reactions": 0,
+      "title": "`IndexingSplitStore` copies local files that could be moved",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6473,
+      "reactions": 0,
+      "title": "filter / filters bucket aggregations rejected on _elastic/_search and native search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6474,
+      "reactions": 0,
+      "title": "Leading-`-` / bool.must_not matches documents where the field is absent",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6475,
+      "reactions": 0,
+      "title": "field:* returns 0 hits when index built with index_field_presence: false",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6476,
+      "reactions": 1,
+      "title": "Native ip / array<ip> fields don't support CIDR or wildcards",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6480,
+      "reactions": 2,
+      "title": "ingest: persistent 503s after non-graceful scale-down of indexers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 6483,
+      "reactions": 0,
+      "title": "[test] integration test",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6486,
+      "reactions": 0,
+      "title": "KQL Support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6494,
+      "reactions": 0,
+      "title": "Reduce part size on Google Storage / Opendal",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6531,
+      "reactions": 3,
+      "title": "Persistent \"no open shard found on ingester\" after some indexer restart",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 6534,
+      "reactions": 0,
+      "title": "Delete task (DeleteAndMerge) on a large split causes unbounded memory (RSS) growth → OOM crashloop",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6552,
+      "reactions": 0,
+      "title": "feat: io_uring-based file I/O for search hot path",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6565,
+      "reactions": 0,
+      "title": "test_drain_is_called is flaky.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6598,
+      "reactions": 0,
+      "title": "ingest v2: WAL truncation blocks persist/init_shards, causing ingest timeouts under load",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 6601,
+      "reactions": 0,
+      "title": "control-plane: recover from a non-converging indexing scheduler (stuck \"reapply last plan\" loop)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6607,
+      "reactions": 0,
+      "title": "GCP Pub/Sub source timeout can drop acknowledged messages before checkpoint publication",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6610,
+      "reactions": 0,
+      "title": "Restart Pod of the control plane on a panic?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6615,
+      "reactions": 0,
+      "title": "`quickwit index ingest --force` force-commits every batch with ingest v2",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6616,
+      "reactions": 0,
+      "title": "Graceful shutdown can take ~70s draining an empty replacement ingest shard",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6624,
+      "reactions": 1,
+      "title": "Support custom Azure Blob Storage endpoint / endpoint suffix for sovereign clouds",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6672,
+      "reactions": 0,
+      "title": "Azure: indexer fails with storage error(kind=Unauthorized) exactly 24h after startup when using Workload Identity",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 6676,
+      "reactions": 0,
+      "title": "doc_count_error_upper_bound is higher than necessary",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6686,
+      "reactions": 0,
+      "title": "[Documentation topic] Jaegar tutorial suggests to use jaeger-query which is no longer capable to handle quickwit 0.9",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6691,
+      "reactions": 2,
+      "title": "Problems with IngestV2 on existing indexes after Update Quickwit from 0.8 to 0.9",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6703,
+      "reactions": 0,
+      "title": "Server-Side Request Forgery via unvalidated SQS source `queue_url` in the create-source REST API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6719,
+      "reactions": 0,
+      "title": "MemorySizedCache could be leaking memory.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 6783,
+      "reactions": 0,
+      "title": "OTLP log record with an int64 body is accepted, discarded, and reported as fully successful",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 6784,
+      "reactions": 0,
+      "title": "An empty OTLP export is answered 500",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6785,
+      "reactions": 0,
+      "title": "Elasticsearch API: the `missing` sort option is ignored",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6786,
+      "reactions": 0,
+      "title": "OTLP record with `time_unix_nano: 0` is rejected with an empty `error_message`, and the response is JSON for a protobuf request",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6787,
+      "reactions": 0,
+      "title": "Elasticsearch API: a term query on a string field matches only the exact value, and no `.keyword` subfield exists",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6827,
+      "reactions": 0,
+      "title": "`quickwit-search` and `quickwit-indexing`: cancellation of a polled `oneshot` receiver can free the channel while a producer still sends",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6840,
+      "reactions": 0,
+      "title": "[bug] File-backed metastore holds the global state lock across a lazy index load, stalling unrelated metadata operations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6841,
+      "reactions": 0,
+      "title": "[bug] control plane: create_index never replies while a Ready indexer's ApplyIndexingPlan RPC is pending",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6842,
+      "reactions": 0,
+      "title": "[bug] ingest v2: `commit=wait_for` and `force` requests hang indefinitely when all documents are rejected, because the publish tracker waits for an already published position",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6846,
+      "reactions": 0,
+      "title": "[bug] ingest v2: `ShardPositionsUpdate` has no publisher on nodes without the indexer or control-plane role",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 6883,
+      "reactions": 0,
+      "title": "Since 0.9, the S3 client negotiates HTTP/2 with GCS: one TCP connection per node, ~10x lower search throughput",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6892,
+      "reactions": 0,
+      "title": "Memory regression on searcher",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    }
+  ],
+  "repository": "quickwit-oss/quickwit",
+  "schemaVersion": 1
+}

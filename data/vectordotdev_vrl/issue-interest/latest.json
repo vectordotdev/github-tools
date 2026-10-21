@@ -1,0 +1,1834 @@
+{
+  "collectedAt": "2026-10-21T18:41:24.853292+00:00",
+  "issues": [
+    {
+      "number": 4,
+      "reactions": 5,
+      "title": "Reduce boilerplate required to add VRL parsing functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 6,
+      "reactions": 0,
+      "title": "Add parser functions for Log4j and Zapr logs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 8,
+      "reactions": 1,
+      "title": "Fix year-dependent VRL tests",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 9,
+      "reactions": 0,
+      "title": "Make VRL WebAssembly artifact production-ready",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 10,
+      "reactions": 0,
+      "title": "[Web Playground] Add diff viewer if input isn't JSONL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 11,
+      "reactions": 0,
+      "title": "Add `debug` function to VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 12,
+      "reactions": 0,
+      "title": "feat(vrl): Add `encode_mime_q` encoding function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 13,
+      "reactions": 5,
+      "title": "add `sort` function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 14,
+      "reactions": 0,
+      "title": "Expand VRL web UI design beyond MVP status, using Vector's website style guide",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 15,
+      "reactions": 0,
+      "title": "[Web Playground] Make `reverse_dns()` function wasm compatible",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 17,
+      "reactions": 4,
+      "title": "[Web Playground] Make parse_groks() function wasm compatible",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 18,
+      "reactions": 0,
+      "title": "[Web Playground] Make get_hostname() function wasm compatible ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 20,
+      "reactions": 1,
+      "title": "[Web Playground] Make `log()` function wasm compatible",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 21,
+      "reactions": 0,
+      "title": "Expand VRL test harness to allow running tests in WASM environment",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 22,
+      "reactions": 0,
+      "title": "VRL Playground",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 24,
+      "reactions": 0,
+      "title": "Code suggestions can suggest writing to immutable fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 25,
+      "reactions": 1,
+      "title": "Add `query`/`reference` as a first-class VRL type.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 26,
+      "reactions": 1,
+      "title": "Allow VRL to have additional `Value` types not in Vector",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27,
+      "reactions": 0,
+      "title": "`map_values` function closure argument type def can be invalid when using `recursive: true`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 28,
+      "reactions": 0,
+      "title": "`map_values` can infinitely recurse / stack overflow",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 29,
+      "reactions": 0,
+      "title": "Find array/object elements",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 30,
+      "reactions": 1,
+      "title": "Improve raw strings",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 31,
+      "reactions": 3,
+      "title": "create `DEVELOPMENT.md` for VRL crates specifically",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 33,
+      "reactions": 0,
+      "title": "VRL: Allow queries to point to the root of a variable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 35,
+      "reactions": 0,
+      "title": "VRL: Partially fallible blocks can create invalid type definitions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 37,
+      "reactions": 0,
+      "title": "VRL: Runtime `abort` is implicitly converted to a fallible error instead of propagating",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 38,
+      "reactions": 0,
+      "title": "VRL: \"success\" value of fallible assignment expressions can have an invalid type def",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 39,
+      "reactions": 0,
+      "title": "Function arguments aren't guaranteed to resolve in order",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 40,
+      "reactions": 0,
+      "title": "chore(vrl): Improve `Kind::canonicalize`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 42,
+      "reactions": 0,
+      "title": "Typedef for `merge` vrl function with deep = true is invalid",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 43,
+      "reactions": 0,
+      "title": "unknown types of the merge operator can be invalid",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 44,
+      "reactions": 0,
+      "title": "vrl_parser::parse - 'begin <= end (1 <= 0) when slicing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 45,
+      "reactions": 0,
+      "title": "vrl_parser::parse - invalid escape",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 47,
+      "reactions": 29,
+      "title": "User defined VRL functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 48,
+      "reactions": 1,
+      "title": "Improve typedef of `del` when deleting object fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 50,
+      "reactions": 2,
+      "title": "add `parse_envoy()` support?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 51,
+      "reactions": 3,
+      "title": "Don't allow expressions with side-effects in some contexts",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 52,
+      "reactions": 1,
+      "title": "Add type_def checking to existing VRL tests",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 53,
+      "reactions": 2,
+      "title": "Add `zip` function to VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 54,
+      "reactions": 0,
+      "title": "Expand unit tests in compiler",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 55,
+      "reactions": 0,
+      "title": "Improve maintainability of expression implementations by adding doc comments and splitting up big functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 56,
+      "reactions": 6,
+      "title": "Add `any` and `all` enumeration functions to VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 57,
+      "reactions": 3,
+      "title": "VRL: `parse_logfmt` seems to actually be infallible",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 58,
+      "reactions": 1,
+      "title": "VRL: ||= operator",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 59,
+      "reactions": 0,
+      "title": "Overriding VRL values should be explicit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 60,
+      "reactions": 0,
+      "title": "Make \"fallible expression\" error in VRL specific for each expression",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 61,
+      "reactions": 1,
+      "title": "Better diagnostics for unquoted paths containing `-`s",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 62,
+      "reactions": 7,
+      "title": "`logfmt` does not conform to spec",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 63,
+      "reactions": 0,
+      "title": "Cannot use empty blocks with VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 64,
+      "reactions": 0,
+      "title": "Drop the `mode` argument for `parse_user_agent` function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 65,
+      "reactions": 1,
+      "title": "Switch `parse_grok` to call `parse_groks`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 66,
+      "reactions": 18,
+      "title": "New parser or source for Linux audit logs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 67,
+      "reactions": 7,
+      "title": "Dedicated dynamic path query syntax in VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 68,
+      "reactions": 2,
+      "title": "Syslog parsing overwrites duplicate structured data fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 69,
+      "reactions": 1,
+      "title": "vrl: `truncate()` inconsistency: operates on UTF-8 characters instead of bytes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 71,
+      "reactions": 0,
+      "title": "Deprecate lookup paths of shape `[42]foo` and `foo.`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 73,
+      "reactions": 2,
+      "title": "`parse_grok` VRL function ignores nonmatching characters at the start of the string, `parse_groks` errors",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 74,
+      "reactions": 2,
+      "title": "Merging via `|=` for fallible functions resets the left hand side when there is an error",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 76,
+      "reactions": 0,
+      "title": "Improve VRL parsing error message for unexpected EOF",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 77,
+      "reactions": 3,
+      "title": "VRL doesn't report fallibility well for statements in blocks",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 78,
+      "reactions": 10,
+      "title": "VRL: operator compare two timestamp objects",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 79,
+      "reactions": 0,
+      "title": "VRL's `del` function should update type definitions for non-external paths",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 80,
+      "reactions": 0,
+      "title": "Add function for repeating a string to VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 82,
+      "reactions": 3,
+      "title": "chore(vrl): explore arena allocation for VRL programs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 83,
+      "reactions": 0,
+      "title": "Only allow coalesing in queries (reading a value)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 84,
+      "reactions": 1,
+      "title": "Add VRL function: parse_prometheus_text",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 85,
+      "reactions": 0,
+      "title": "VRL not support decoding gzip snappy?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 87,
+      "reactions": 9,
+      "title": "VRL: add `parse_json_object` as a convenient way to parse JSON objects",
+      "unattributedComments": 0,
+      "uniqueCommenters": 6
+    },
+    {
+      "number": 88,
+      "reactions": 3,
+      "title": "Parse file path from source, assign part of path/name to value",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 89,
+      "reactions": 1,
+      "title": "The `parse_grok` function should accept aliases (helper rules) defined in a file",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 90,
+      "reactions": 0,
+      "title": "`to_timestamp` can fail if numeric values are too big",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 91,
+      "reactions": 3,
+      "title": "Allow \"type guards\" in VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 92,
+      "reactions": 0,
+      "title": "Dissallow `;` at the end of the last statement in an `if` predicate",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 93,
+      "reactions": 0,
+      "title": "Add more \"try\" suggestions to diagnostic messages",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 94,
+      "reactions": 0,
+      "title": "Invalid \"Exact\" Types Can't Be Fixed",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 95,
+      "reactions": 1,
+      "title": "Add ability to completely flatten objects via `flatten`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 96,
+      "reactions": 0,
+      "title": "Add function is_uuid on VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 97,
+      "reactions": 0,
+      "title": "Add equivalence of string.tr() on ruby to VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 98,
+      "reactions": 0,
+      "title": "Issue with `del` inside chained functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 99,
+      "reactions": 0,
+      "title": "VRL: strange path creation due to double quotes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 100,
+      "reactions": 0,
+      "title": "No way to access keys with quotes in them in VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 101,
+      "reactions": 0,
+      "title": "Keep `lib/stdlib/data/user_agent_regexes.yaml` up to date",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 102,
+      "reactions": 3,
+      "title": "Add explicit \"enum type\" to VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 104,
+      "reactions": 0,
+      "title": "`unnest` should unnest one level deeper",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 105,
+      "reactions": 0,
+      "title": "Address UX differences between VRL REPL and remap transform",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 106,
+      "reactions": 4,
+      "title": "Add new `parse_regex_any` VRL function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 107,
+      "reactions": 0,
+      "title": "improve `parse_key_value` escaping management & align it with `encode_key_value`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 108,
+      "reactions": 0,
+      "title": "[grok] support `csv` filter",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 109,
+      "reactions": 2,
+      "title": "Add `to_array` coercion function to VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 110,
+      "reactions": 0,
+      "title": "Add optimization pass to VRL compiler",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 111,
+      "reactions": 0,
+      "title": "confusing error messages in REPL mode regarding string error coalescing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 112,
+      "reactions": 1,
+      "title": "Expand supported redactors for redact",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 113,
+      "reactions": 2,
+      "title": "Unresolvable VRL compiler complaint about fallibility",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 115,
+      "reactions": 1,
+      "title": "Add `parse_host` function to VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 116,
+      "reactions": 1,
+      "title": "fields extracted using parse_regex imply incorrect type definitions when parse_regex fails",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 117,
+      "reactions": 0,
+      "title": "Unable to parse timestamp of type millisecond since unix epoch",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 118,
+      "reactions": 5,
+      "title": "Add a way to select only certain fields in VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 119,
+      "reactions": 0,
+      "title": "`parse_logfmt` unflattening",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 120,
+      "reactions": 0,
+      "title": "VRL parse function for hexstring to string",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 121,
+      "reactions": 2,
+      "title": "Add `parse_haproxy_log` VRL function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 122,
+      "reactions": 1,
+      "title": "Implement a bit-test function within VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 123,
+      "reactions": 2,
+      "title": " Support non-quoted integer path segments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 125,
+      "reactions": 1,
+      "title": "Allow `'`s around values in `parse_key_value` / `parse_logfmt`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 126,
+      "reactions": 0,
+      "title": "Add `format_csv` function to VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 127,
+      "reactions": 2,
+      "title": "Allow specification of multiple timestamp formats to parse_timestamp",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 128,
+      "reactions": 0,
+      "title": "Allow defaulting a non-existent path in VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 130,
+      "reactions": 8,
+      "title": "Add headers for `parse_csv`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 131,
+      "reactions": 2,
+      "title": "VRL: syslog priority parsing ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 132,
+      "reactions": 1,
+      "title": "Add summary of passed/skipped/failed tests to VRL test harness",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 133,
+      "reactions": 0,
+      "title": "It is possible to create excessively huge arrays in VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 134,
+      "reactions": 0,
+      "title": "Benchmark `now` and `uuidv4` vrl functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 135,
+      "reactions": 0,
+      "title": "Benchmark `del` and `exists` vrl functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 136,
+      "reactions": 0,
+      "title": "New `parse_<framework>` Remap functions (niche log parsing)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 137,
+      "reactions": 2,
+      "title": "Add function memoization",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 138,
+      "reactions": 0,
+      "title": "Allow for slice expressions in Remap",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 139,
+      "reactions": 0,
+      "title": "New `to_hive_partition` Remap function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 140,
+      "reactions": 0,
+      "title": "Support for HereDocs in Remap",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 141,
+      "reactions": 1,
+      "title": "rename `to_syslog_severity` to `parse_syslog_severity`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 143,
+      "reactions": 0,
+      "title": "Add Remap function for comparing semantic versions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 144,
+      "reactions": 2,
+      "title": "allow working with durations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 145,
+      "reactions": 1,
+      "title": "add (syntax-only) modules for functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 146,
+      "reactions": 4,
+      "title": "Add pipe operator support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 147,
+      "reactions": 2,
+      "title": "add `credit_card` filter to `redact` function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 148,
+      "reactions": 7,
+      "title": "vrl: null and unicode escapes not working in string literals",
+      "unattributedComments": 0,
+      "uniqueCommenters": 13
+    },
+    {
+      "number": 149,
+      "reactions": 0,
+      "title": "Change VRL to support compile-time-only functions, needed for semantic meaning functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 151,
+      "reactions": 0,
+      "title": "Expand `Expression:resolve_constant()` support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 153,
+      "reactions": 0,
+      "title": "Add warning for unused local variables",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 170,
+      "reactions": 0,
+      "title": "Integrate with Datadog CI app",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 186,
+      "reactions": 0,
+      "title": "VRL `Target` methods should be infallible",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 195,
+      "reactions": 0,
+      "title": "Add functions to get first/last n elements of an array",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 206,
+      "reactions": 0,
+      "title": "`verify_overwritable` can have inaccurate spans",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 215,
+      "reactions": 0,
+      "title": "CEF parser failed to parse a log message",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 242,
+      "reactions": 0,
+      "title": "Some operations can use excessive cpu/memory",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 243,
+      "reactions": 0,
+      "title": "Excessively nested expressions can cause a stack overflow",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 244,
+      "reactions": 0,
+      "title": "Consider all programs as \"abortable\"",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 254,
+      "reactions": 0,
+      "title": "integer division uses floating point path",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 261,
+      "reactions": 0,
+      "title": "`parse_groks` aliases are not type checked",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 265,
+      "reactions": 0,
+      "title": "Error if return values from functions with no side-effects are unused",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 268,
+      "reactions": 0,
+      "title": "Improve diagnostics from function fallibility caused by arguments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 270,
+      "reactions": 0,
+      "title": "Add an optional parameter to the parse_linux_authorization function to specify a timezone",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 271,
+      "reactions": 3,
+      "title": "improve parse_key_value to support nesting , match with encode_key_value",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 273,
+      "reactions": 0,
+      "title": "assert_eq confusingly fails to compare arrays of numbers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 274,
+      "reactions": 0,
+      "title": "Add function parse spring boot default log format",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 282,
+      "reactions": 0,
+      "title": "Improve the changelog format",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 284,
+      "reactions": 0,
+      "title": "Change how test runner handles deprecations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 301,
+      "reactions": 0,
+      "title": "Deprecate \"AES-*-CTR\" encryption/decryption options",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 324,
+      "reactions": 1,
+      "title": "parse_key_value vs backslash",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 348,
+      "reactions": 1,
+      "title": "VRL is not a \"safe\" language in some environments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 376,
+      "reactions": 5,
+      "title": "parse_url doesn't support duplicated query parameters",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 406,
+      "reactions": 0,
+      "title": "Restore `parse_nginx_log` parsing of the request string, optionally",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 435,
+      "reactions": 0,
+      "title": "Hope vrl supports obtaining host IP addresses",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 437,
+      "reactions": 0,
+      "title": "Docs for `parse_groks` links to a page that doesn't seem to exist any more",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 458,
+      "reactions": 1,
+      "title": "Explore support for a native code transform ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 462,
+      "reactions": 2,
+      "title": "Converting OpenTelemetry trace_id and span_id to Datadog trace_id",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 464,
+      "reactions": 0,
+      "title": "Fuzzer additional work",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 471,
+      "reactions": 0,
+      "title": "parse_klog always parse the timestamp as UTC timezone",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 501,
+      "reactions": 0,
+      "title": "Make is_json more permissive",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 502,
+      "reactions": 0,
+      "title": "Parsing auditd logs has issues due to a 0x1D character",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 503,
+      "reactions": 0,
+      "title": "Add formats parameter to parse_timestamp",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 571,
+      "reactions": 0,
+      "title": "parse_json: Provide opt-in configuration options for lossless number conversion ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 578,
+      "reactions": 0,
+      "title": "Add support for parsing ndjson",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 582,
+      "reactions": 5,
+      "title": "VRL function fallibility is dependant on argument types",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 641,
+      "reactions": 0,
+      "title": "`parse_syslog` incorrectly adds the previous year for RFC3464 timestamps when close to the new year and the system timezone is not UTC",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 686,
+      "reactions": 4,
+      "title": "`datadog_search` syntax filters doesn't work when key contains `.`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 755,
+      "reactions": 0,
+      "title": "parse_json - differs parsing floats",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 757,
+      "reactions": 0,
+      "title": "[feature enhancement] Additional merge strategies",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 771,
+      "reactions": 4,
+      "title": "[feature] tag parse_groks with the pattern that matched",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 777,
+      "reactions": 2,
+      "title": "Parse/Encode logfmt is not idempotent when values have double quotes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 781,
+      "reactions": 0,
+      "title": "parse_cef() bug",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 784,
+      "reactions": 2,
+      "title": "parse_cef where extension value contains an unescaped \"=\" character",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 790,
+      "reactions": 0,
+      "title": "parse_timestamp Invalid timestamp error",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 823,
+      "reactions": 0,
+      "title": "from_unix_timestamp float support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 829,
+      "reactions": 0,
+      "title": "Abort expression formats incorrectly",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 843,
+      "reactions": 0,
+      "title": "Nonstandard klog / glog severity levels",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 850,
+      "reactions": 0,
+      "title": "for_each doesn't affect type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 853,
+      "reactions": 1,
+      "title": "parse_syslog function ignores timezone when rfc3164",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 854,
+      "reactions": 0,
+      "title": "Multiline expressions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 865,
+      "reactions": 0,
+      "title": "Add `encode_xml` function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 880,
+      "reactions": 0,
+      "title": "Install release-plz to simplify release procedure",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 893,
+      "reactions": 4,
+      "title": "Add `parse_iana_protocol_number` and `parse_iana_protocol` function to VRL functions.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 911,
+      "reactions": 0,
+      "title": "Support for type widening",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 914,
+      "reactions": 2,
+      "title": "Add caching option to get_env_var()",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4
+    },
+    {
+      "number": 941,
+      "reactions": 0,
+      "title": "Extract iv from ciphertext",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 946,
+      "reactions": 0,
+      "title": "parse_vector VRL function?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1020,
+      "reactions": 5,
+      "title": "User-defined VRL modules",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 1021,
+      "reactions": 0,
+      "title": "idea: Optimize `Bytes` to `String` conversion in the `Value` type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1040,
+      "reactions": 1,
+      "title": "Determining if redact has redacted",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1043,
+      "reactions": 0,
+      "title": "parse_syslog follows RFC 5425 even with empty structured data, lacking key-value pairs.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1061,
+      "reactions": 2,
+      "title": "Support for Additional Data Type Conversion in Grok Patterns",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1067,
+      "reactions": 0,
+      "title": "String literal cannot produce a single backslash `\\`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1075,
+      "reactions": 0,
+      "title": "Parsing functions for openvpn logs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1084,
+      "reactions": 0,
+      "title": "Whitespace required around `!=` operator",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1088,
+      "reactions": 0,
+      "title": "parse_key_value parses first field when accept_standalone_key=false",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1095,
+      "reactions": 0,
+      "title": "JIT compilation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1096,
+      "reactions": 3,
+      "title": "Having a `match` expression syntax would be useful for inline lookups",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1105,
+      "reactions": 0,
+      "title": "`del` does not compact objects when the requested path does not exist",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1119,
+      "reactions": 0,
+      "title": "`FailedToApplyFilter` Error in `parse_grok()` improvements",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1139,
+      "reactions": 0,
+      "title": "Fold enumeration function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1154,
+      "reactions": 0,
+      "title": "VRL error message for field assignment to non-object has a one-off typo in it",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1189,
+      "reactions": 1,
+      "title": "Refactor compiler error codes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1193,
+      "reactions": 0,
+      "title": "parse_aws_alb_log function error failed to get field `client_host`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1200,
+      "reactions": 0,
+      "title": "Parsing function for binary data (struct)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1216,
+      "reactions": 0,
+      "title": "Unused expression checker improvements",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1244,
+      "reactions": 0,
+      "title": "parse_json in VRL doesn't support json-like strings (with single quotes)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1257,
+      "reactions": 0,
+      "title": "Unexpected behaviour of the object_from_array VRL fuction",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1266,
+      "reactions": 0,
+      "title": "Change `UnnecessaryCoalesce` error to a warning.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1297,
+      "reactions": 0,
+      "title": "Introduce `break` for aborting iterations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1313,
+      "reactions": 0,
+      "title": "Add option for VRL function parse_key_value to specify resulting key case",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1340,
+      "reactions": 0,
+      "title": "Byte strings/encoded payloads",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1352,
+      "reactions": 0,
+      "title": "parse_cef fails on logs with complex quoted values",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1361,
+      "reactions": 1,
+      "title": "`format_int` bad output type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1371,
+      "reactions": 0,
+      "title": "xpath support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1382,
+      "reactions": 0,
+      "title": "Add a dynamic variant of the `exists` function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1386,
+      "reactions": 2,
+      "title": "Add bitwise operators for integers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1396,
+      "reactions": 0,
+      "title": "VRL error message advice on wrong line",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1405,
+      "reactions": 0,
+      "title": "Add redact() hashing with automatically rotated salt",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1419,
+      "reactions": 0,
+      "title": "del does not delete specified path during merge",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1426,
+      "reactions": 0,
+      "title": "VRL function parse_tokens does not handle unescaped \"\\\"",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1429,
+      "reactions": 0,
+      "title": "Allow override grok patterns via aliases in `parse_groks` function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1449,
+      "reactions": 1,
+      "title": "Adding a function to calculate the event size in bytes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1451,
+      "reactions": 0,
+      "title": "Remove all `#[allow]` and `#![allow]` exceptions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1454,
+      "reactions": 0,
+      "title": "Function parse_cef() does not parsed the string, but on playground.vrl.dev website the message is parsed",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1466,
+      "reactions": 0,
+      "title": "add a `parse_apache_casandra_log()` to VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1470,
+      "reactions": 0,
+      "title": "Performance bottleneck in kubernetes_logs source caused by excessive VRL BTree insert operations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1471,
+      "reactions": 0,
+      "title": "Syslog rfc5424 parsing does not accept NILVALUE timestamp",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1478,
+      "reactions": 0,
+      "title": "`from_unix_timestamp` should support float timestamps with subsecond precision",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1503,
+      "reactions": 2,
+      "title": "Provide `arbitrary_precision` option for `serde_json` float conversions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5
+    },
+    {
+      "number": 1509,
+      "reactions": 0,
+      "title": "When parsing a CEF message, incorrect ad fields are generated that contain a dot in the name",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1511,
+      "reactions": 0,
+      "title": "Casing is slow and computationally expensive.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1535,
+      "reactions": 0,
+      "title": "xxHash functions not providing the correct output",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1536,
+      "reactions": 0,
+      "title": "parse_key_value failed when string ends with delimiter",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1537,
+      "reactions": 2,
+      "title": "unnest not preserving root field",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1539,
+      "reactions": 0,
+      "title": "Update `parse_aws_vpc_flow_log` to version 7 of the VPC flow logs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1540,
+      "reactions": 2,
+      "title": "RFC: Add Flamegraph Support to VRL Command for Performance Debugging",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1543,
+      "reactions": 0,
+      "title": "`parse_timestamp()` function does not honnor all chrono's strftime() tokens (specifically the `%z` token)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1548,
+      "reactions": 0,
+      "title": "parse_key_value problem when value missing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1552,
+      "reactions": 0,
+      "title": "parse_key_value problem when value missing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1558,
+      "reactions": 0,
+      "title": "Add `ord` and `chr` functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1559,
+      "reactions": 0,
+      "title": "Testing random functions in unit tests",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1560,
+      "reactions": 3,
+      "title": "`encode_proto` fails to encode a message if `google.protobuf.Struct` is used",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1561,
+      "reactions": 0,
+      "title": "`parse_klog` fails if the message contains newlines",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1576,
+      "reactions": 2,
+      "title": "Add ed25519 signing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1620,
+      "reactions": 1,
+      "title": "Disallow usage of implicit arithmetic methods for std types",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1636,
+      "reactions": 0,
+      "title": "Support AES-GCM in `encrypt`/`decrypt` functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1638,
+      "reactions": 0,
+      "title": "`Function::return_kind` should be checked",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1692,
+      "reactions": 0,
+      "title": "Preserve numeric precision with `decimal` type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1693,
+      "reactions": 0,
+      "title": "`parse_user_agent(\"curl/8.7.1\")` returns `\"curl\"` as the version",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1799,
+      "reactions": 0,
+      "title": "`resolve_constant` on function arguments is unsound/not deterministic when earlier arguments have side effects",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1805,
+      "reactions": 2,
+      "title": "VRL code formatter (ergonomics)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1824,
+      "reactions": 0,
+      "title": "datadog_filter: wildcard_regex fails to match strings with trailing newline",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 1845,
+      "reactions": 0,
+      "title": "chore(deps): consolidate wasm32 getrandom overrides to a single version",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1851,
+      "reactions": 0,
+      "title": "chore: migrate from quickcheck to proptest for VRL Arbitrary impls",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1859,
+      "reactions": 0,
+      "title": "Release tool: checkpointing to resume a failed publish",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1891,
+      "reactions": 0,
+      "title": "Improve `NaN` float handling in `Value`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
+      "number": 1902,
+      "reactions": 0,
+      "title": "FIPS compliance tracker",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1903,
+      "reactions": 0,
+      "title": "to_syslog_severity should also accept \"critical\" instead of just \"crit\"",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1949,
+      "reactions": 1,
+      "title": "`slice!()` operates on bytes, not characters, silently corrupts multi-byte strings",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1950,
+      "reactions": 0,
+      "title": "Missing `parse_uuid` / `parse_bool` / `parse_date` in VRL stdlib",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 1960,
+      "reactions": 1,
+      "title": "feat(compiler): support first-class for loops with break and continue",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 1993,
+      "reactions": 0,
+      "title": "Add a `range` function to generate integer arrays",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 2000,
+      "reactions": 1,
+      "title": "to_unix_timestamp supposed to return error but vector compiler indicates that's not true",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    }
+  ],
+  "repository": "vectordotdev/vrl",
+  "schemaVersion": 1
+}
