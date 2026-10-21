@@ -73,6 +73,7 @@ Fetch:
   fetch-all          Fetch issues + discussions for all repos (workflow)
   fetch-issues       Fetch all issues/PRs for a repository
   fetch-discussions  Fetch all discussions for a repository
+  fetch-issue-interest  Snapshot open-issue reactions and distinct commenters
   fetch-labels       Fetch all labels for a repository
 
 Pipeline:
@@ -314,3 +315,18 @@ The `Submit repository-health metrics` workflow provides a networked execution p
 Dispatch the workflow with `repository`, `lookback`, `activity_window`, and `metric_prefix`. The caller supplies no shell command or credentials; the workflow validates those inputs and constructs the fixed `sync-metrics` command.
 
 Tags and series are emitted in deterministic order, and an identical metric name, timestamp, and tag combination is safe to resubmit because Datadog retains the most recently submitted value. Current GitHub snapshots do not contain the full timelines for labels, issue types, PR draft transitions, discussion categories/answers, or close/reopen cycles. Historical breakdowns using those mutable fields are therefore current-state approximations. Use a new prefix version for a clean corrective backfill if the schema changes; exact lifecycle reconstruction would require fetching GitHub timeline events.
+
+### Issue interest snapshots
+
+`fetch-issue-interest --repo owner/name` writes
+`data/owner_name/issue-interest/latest.json`. It scans every open issue and all
+comment pages, then saves total issue reactions and distinct commenter counts.
+Every identifiable commenter counts once, including the author and bots;
+comments whose author is unavailable are recorded separately and cannot be
+attributed to a distinct account. Comment reactions are not included.
+
+`fetch-all` also refreshes this snapshot. This is a complete open-issue scan even
+with `--since`, because reactions may change without changing an issue's update
+timestamp. Closed issues disappear from the next complete snapshot. A failed
+request leaves the previous snapshot intact. Snapshots contain counts and issue
+titles, not comment bodies or commenter identities, and retain canonical key order.

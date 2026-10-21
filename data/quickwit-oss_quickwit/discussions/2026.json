@@ -1,10 +1,12 @@
 [
   {
+    "answerChosenAt": null,
     "author": {
       "login": "ElSamhaa"
     },
     "bodyText": "Hello, thanks for the great project. I tried browsing the docs to find if there is a way to declaratively provision indexes in quickwit in line with GitOps setups, but couldn't find any.\nAre you considering to implement this?",
     "category": {
+      "isAnswerable": false,
       "name": "New features"
     },
     "closed": false,
@@ -23,11 +25,13 @@
     "url": "https://github.com/quickwit-oss/quickwit/discussions/6087"
   },
   {
+    "answerChosenAt": null,
     "author": {
       "login": "complib2891"
     },
     "bodyText": "https://github.com/jaegertracing/jaeger/tree/main/internal/storage/v2/grpc\njust wondering if there's any plan to be compliance with jaeger v2 grpc remote storage spec, as jaeger v1 has be deprecated on dec2025",
     "category": {
+      "isAnswerable": false,
       "name": "New features"
     },
     "closed": false,
@@ -46,11 +50,13 @@
     "url": "https://github.com/quickwit-oss/quickwit/discussions/6149"
   },
   {
+    "answerChosenAt": null,
     "author": {
       "login": "patelvp"
     },
     "bodyText": "Hi,\nI’m currently evaluating a migration of our OpenSearch cluster, which contains approximately 1 billion documents distributed across 40,000 tenants. The primary motivation for this migration is cost optimization.\nAt the moment, OpenSearch keeps all data live at all times. Since each tenant has a distinct access pattern, I believe an architecture that allows us to load or activate tenant data only when needed could significantly reduce costs for our users. Additionally, our usage is heavily concentrated between 9 a.m. and 5 p.m., so the ability to scale compute resources based on demand would further improve cost efficiency.\nBased on my understanding of this architecture, it seems that both of these goals may be achievable. However, I would appreciate expert suggestions on the best way to use Quickwit in our case:\nA) Single index for all tenants\nB) One index per tenant\nC) An index pool model\nIn my local tests I noticed option B performs better but it was only for 100 tenants. I wonder what happens when you reach 40k tenants. Opensearch for instance does not allow you to create that many index per tenant it just breaks with the overhead on index management.\nOur tenants can sign up and leave at any time, and we do not archive data. Our two primary search patterns are:\n•\tA quick search on two fields across 13 document types\n•\tA full-text search across all fields\nI would greatly appreciate your recommendations on the most suitable approach for our workload.",
     "category": {
+      "isAnswerable": false,
       "name": "General"
     },
     "closed": false,
@@ -69,11 +75,13 @@
     "url": "https://github.com/quickwit-oss/quickwit/discussions/6184"
   },
   {
+    "answerChosenAt": null,
     "author": {
       "login": "Kimishu"
     },
     "bodyText": "I have a service that automatically handles quickwit index existence. If quickwit index doesn't exist, it automatically creates index + kafka-source for it via REST API. The problem is that I decided to check kafka topic's consumers and it's empty.\nHere is my kafka-source config:\n{\n  \"version\": \"0.8\",\n  \"source_id\": \"kafka-test\",\n  \"source_type\": \"kafka\",\n  \"params\": {\n    \"topic\": \"test\",\n    \"client_params\": {\n      \"bootstrap.servers\": \"kafka:9092\"\n    }\n  }\n}\nI don't know where the problem is. If i'm right, quickwit has 1 consumer by default, and I don't want it to have more consumers to reduce hardware load.\nAlso, I pinged kafka in the quickwit docker-container and it worked, the domain name resolved successfully, so quickwit sees kafka.\nMaybe I missed something?",
     "category": {
+      "isAnswerable": true,
       "name": "Q&A"
     },
     "closed": false,
@@ -92,11 +100,13 @@
     "url": "https://github.com/quickwit-oss/quickwit/discussions/6192"
   },
   {
+    "answerChosenAt": null,
     "author": {
       "login": "gitarns"
     },
     "bodyText": "Hello,\nJust a personal project: https://github.com/gitarns/qwui",
     "category": {
+      "isAnswerable": false,
       "name": "Show and tell"
     },
     "closed": false,
@@ -115,11 +125,13 @@
     "url": "https://github.com/quickwit-oss/quickwit/discussions/6250"
   },
   {
+    "answerChosenAt": null,
     "author": {
       "login": "oleksandr-zhyhalo"
     },
     "bodyText": "Hey everyone,\nWanted to share a recent project of mine — Logwiz. It's a full-stack application powered by Quickwit for log search.\n👉 https://github.com/rootprint/rootprint\nSome of the features it brings:\n\nAuthentication, including Google SSO\nAuthenticated OTEL forwarding endpoints to Quickwit(WIP)\nFrequency charts\nQuick filters powered by aggregations\n…and much more.\n\nThe focus is on logs for now, but traces are also on the roadmap.\nIt's already been adopted at my company (Beewise), where it helps us centralize logs from thousands of IoT devices :)\nAny feedback is much appreciated!",
     "category": {
+      "isAnswerable": false,
       "name": "Show and tell"
     },
     "closed": false,
@@ -134,15 +146,17 @@
     "stateReason": null,
     "title": "Rootprint - self-hosted log platform based on Quickwit.",
     "updatedAt": "2026-06-03T10:30:08Z",
-    "upvoteCount": 2,
+    "upvoteCount": 3,
     "url": "https://github.com/quickwit-oss/quickwit/discussions/6329"
   },
   {
+    "answerChosenAt": "2026-05-14T00:19:57Z",
     "author": {
       "login": "complib2891"
     },
     "bodyText": "just wondering, why this project doesn't do frequent release since 2024... is this project dead? or pending license-pull?",
     "category": {
+      "isAnswerable": true,
       "name": "Q&A"
     },
     "closed": false,
@@ -156,8 +170,33 @@
     "number": 6420,
     "stateReason": null,
     "title": "no github release beyond v0.8.2, is this project dead?",
-    "updatedAt": "2026-05-21T19:49:48Z",
+    "updatedAt": "2026-09-22T21:56:14Z",
     "upvoteCount": 0,
     "url": "https://github.com/quickwit-oss/quickwit/discussions/6420"
+  },
+  {
+    "answerChosenAt": null,
+    "author": {
+      "login": "dayaffe"
+    },
+    "bodyText": "Quickwit 0.9.2 is out with two security fixes:\n\nKafka source command execution (GHSA-g85h-2988-4cv8): some Kafka client_params could run commands on Quickwit nodes. It affects the Linux release binaries 0.4.0–0.9.1 and the 0.4.0 Docker image, even if you don't use Kafka sources. Docker images 0.5.0 and later are not affected.\nOversized columnar dictionaries (Tantivy GHSA-7pph-m7rw-cqhv): merges now reject them.\n\nShould I upgrade ASAP? The Kafka advisory is rated Critical because its score assumes the Quickwit API is reachable by an attacker. Exploiting it requires access to the Quickwit API, and Quickwit doesn't authenticate clients unless mutual TLS is enabled, so it should always run on a trusted network or behind an authenticated proxy, never directly on the internet. If your deployment already works that way, the risk is much lower, but you should still upgrade soon. If your API is reachable from an untrusted network, restrict access and upgrade now.\nKerberos users: Kafka sources using sasl.mechanisms: GSSAPI no longer run kinit automatically. Set QW_KAFKA_KINIT_CMD or renew tickets outside Quickwit.\nRelease: https://github.com/quickwit-oss/quickwit/releases/tag/v0.9.2",
+    "category": {
+      "isAnswerable": false,
+      "name": "Announcements"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2026-10-16T17:35:45Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 6906,
+    "stateReason": null,
+    "title": "Quickwit 0.9.2 security release",
+    "updatedAt": "2026-10-16T17:35:45Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/6906"
   }
 ]
