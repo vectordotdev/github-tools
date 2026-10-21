@@ -1,3 +1,4 @@
+use super::sorted_json;
 use anyhow::{Context, Result};
 use serde_json::Value;
 use std::collections::HashMap;
@@ -63,7 +64,7 @@ pub fn run(dir: &str) -> Result<()> {
         total_after += after;
 
         if before != after {
-            let json_str = serde_json::to_string_pretty(&deduped)?;
+            let json_str = sorted_json(&deduped)?;
             fs::write(&file_path, json_str)?;
             println!(
                 "  {}: {} -> {} (removed {} duplicates)",

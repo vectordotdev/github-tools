@@ -116,6 +116,7 @@ Fetches merge directly into the committed snapshot layout:
 - Discussions: `data/{owner}_{repo}/discussions/{year}.json`
 
 Use `--since 30d` (or another ISO/relative value) for an incremental refresh. Fresh records replace matching record numbers, while older snapshot data is retained.
+All saved JSON uses alphabetical object keys, including nested objects, so response key order cannot create diffs. Array order is unchanged.
 
 ## 2. Generate DB, summaries, and charts
 

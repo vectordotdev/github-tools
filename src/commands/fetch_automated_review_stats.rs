@@ -1,5 +1,6 @@
 //! Persist review comments like the other year-bucketed GitHub snapshots.
 //! Discovery is incremental; reactions on every saved comment are reconciled each run.
+use super::sorted_json;
 use crate::commands::fetch_issues::parse_since;
 use crate::config::Config;
 use anyhow::{Context, Result, bail, ensure};
@@ -261,7 +262,7 @@ fn read_records(dir: &Path) -> Result<BTreeMap<String, Comment>> {
 }
 
 fn write_json(path: &Path, value: &impl Serialize) -> Result<()> {
-    let text = format!("{}\n", serde_json::to_string_pretty(value)?);
+    let text = format!("{}\n", sorted_json(value)?);
     if fs::read_to_string(path).ok().as_deref() == Some(&text) {
         return Ok(());
     }
