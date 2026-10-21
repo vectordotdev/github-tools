@@ -1,3 +1,4 @@
+use super::sorted_json;
 use crate::config::Config;
 use anyhow::{Context, Result};
 use reqwest::blocking::Client;
@@ -32,7 +33,7 @@ pub fn run(config: &Config) -> Result<()> {
         "{}_{}_labels.json",
         config.org, config.repo
     ));
-    let json = serde_json::to_string_pretty(&labels)?;
+    let json = sorted_json(&labels)?;
     fs::write(&out_file, json)?;
     println!("Labels saved to '{}'", out_file.display());
 

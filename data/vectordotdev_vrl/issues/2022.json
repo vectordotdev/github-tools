@@ -2111,24 +2111,24 @@
     }
   },
   {
-    "id": 5082704390,
-    "number": 1891,
-    "title": "Improve `NaN` float handling in `Value`",
-    "state": "open",
-    "created_at": "2022-02-03T18:06:08Z",
-    "updated_at": "2026-08-06T15:34:44Z",
     "closed_at": null,
-    "user": {
-      "login": "fuchsnj"
-    },
+    "created_at": "2022-02-03T18:06:08Z",
+    "id": 5082704390,
+    "issue_type": "Task",
     "labels": [
       {
-        "id": 8770318842022581189,
-        "name": "vrl: compiler",
         "color": "C2E0C6",
-        "description": "Changes to the compiler"
+        "description": "Changes to the compiler",
+        "id": 8770318842022581189,
+        "name": "vrl: compiler"
       }
     ],
-    "issue_type": "Task"
+    "number": 1891,
+    "state": "open",
+    "title": "Improve `NaN` float handling in `Value`",
+    "updated_at": "2026-08-06T15:34:44Z",
+    "user": {
+      "login": "fuchsnj"
+    }
   }
 ]

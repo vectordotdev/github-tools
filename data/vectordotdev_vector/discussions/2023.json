@@ -391,27 +391,27 @@
     "url": "https://github.com/vectordotdev/vector/discussions/16095"
   },
   {
-    "number": 16098,
-    "title": "VRL return early",
-    "bodyText": "Hi! I see that return is a reserved keyword:\n\nerror[E205]: reserved keyword\n┌─ :56:3\n│\n56 │   return\n│   ^^^^^^\n│   │\n│   this identifier name is reserved for future use in the language\n│   use a different name instead\n│\n= see language documentation at https://vrl.dev\n= try your code in the VRL REPL, learn more at https://vrl.dev/examples\n\nWhat are people doing instead of returning early? Using several transforms, with some condition?\nI find the nested if err != null { if err != null { .... a bit annoying.",
-    "url": "https://github.com/vectordotdev/vector/discussions/16098",
-    "createdAt": "2023-01-24T13:19:10Z",
-    "updatedAt": "2026-10-02T14:07:36Z",
-    "closedAt": null,
-    "closed": false,
-    "stateReason": null,
-    "isAnswered": true,
-    "locked": false,
     "author": {
       "login": "arve0"
     },
+    "bodyText": "Hi! I see that return is a reserved keyword:\n\nerror[E205]: reserved keyword\n┌─ :56:3\n│\n56 │   return\n│   ^^^^^^\n│   │\n│   this identifier name is reserved for future use in the language\n│   use a different name instead\n│\n= see language documentation at https://vrl.dev\n= try your code in the VRL REPL, learn more at https://vrl.dev/examples\n\nWhat are people doing instead of returning early? Using several transforms, with some condition?\nI find the nested if err != null { if err != null { .... a bit annoying.",
     "category": {
       "name": "Q&A"
     },
+    "closed": false,
+    "closedAt": null,
     "comments": {
       "totalCount": 2
     },
-    "upvoteCount": 1
+    "createdAt": "2023-01-24T13:19:10Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 16098,
+    "stateReason": null,
+    "title": "VRL return early",
+    "updatedAt": "2026-10-02T14:07:36Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/16098"
   },
   {
     "author": {

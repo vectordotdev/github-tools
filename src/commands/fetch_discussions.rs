@@ -1,4 +1,4 @@
-use super::upsert_json_record;
+use super::sorted_json;
 use crate::commands::fetch_issues::parse_since;
 use crate::config::Config;
 use anyhow::{Context, Result};
@@ -192,13 +192,13 @@ pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) ->
         };
 
         for d in items {
-            upsert_json_record(&mut by_number, d.number, serde_json::to_value(d).unwrap());
+            by_number.insert(d.number, serde_json::to_value(d).unwrap());
         }
 
         let mut merged: Vec<Value> = by_number.into_values().collect();
         merged.sort_by_key(|v| v["number"].as_u64().unwrap_or(0));
 
-        let json_str = serde_json::to_string_pretty(&merged)?;
+        let json_str = sorted_json(&merged)?;
         fs::write(&path, json_str)?;
         println!("  {year}.json: wrote {} discussions", items.len());
     }

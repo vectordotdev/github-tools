@@ -1,4 +1,4 @@
-use super::upsert_json_record;
+use super::sorted_json;
 use crate::config::Config;
 use anyhow::{Context, Result};
 use chrono::{DateTime, Months, Utc};
@@ -231,14 +231,14 @@ fn write_year_bucketed(items: &[Value], out_dir: &Path, date_field: &str) -> Res
 
         for item in new_items {
             if let Some(n) = item["number"].as_u64() {
-                upsert_json_record(&mut by_number, n, item.clone());
+                by_number.insert(n, item.clone());
             }
         }
 
         let mut merged: Vec<Value> = by_number.into_values().collect();
         merged.sort_by_key(|v| v["number"].as_u64().unwrap_or(0));
 
-        let json_str = serde_json::to_string_pretty(&merged)?;
+        let json_str = sorted_json(&merged)?;
         fs::write(&path, json_str)?;
         counts.insert(year.clone(), new_items.len());
     }
@@ -553,6 +553,31 @@ fn stable_id(node_id: &str) -> i64 {
 mod tests {
     use super::parse_since_at;
     use chrono::{TimeZone, Utc};
+
+    #[test]
+    fn incremental_save_normalizes_retained_records_and_is_repeatable() {
+        use serde_json::{Value, json};
+        use std::fs;
+
+        let dir = std::env::temp_dir().join(format!("github-tools-sorted-snapshot-{}", std::process::id()));
+        fs::create_dir_all(&dir).unwrap();
+        let path = dir.join("2026.json");
+        let retained = json!({"title": "retained", "number": 1, "created_at": "2026-01-01"});
+        let original = json!([retained, {"title": "old", "number": 2, "obsolete": true}]);
+        fs::write(&path, serde_json::to_string_pretty(&original).unwrap()).unwrap();
+        let fresh = json!({"title": "new", "number": 2, "created_at": "2026-01-02", "labels": [{"name": "bug", "id": 3}]});
+        let added = json!({"title": "added", "number": 3, "created_at": "2026-01-03"});
+        let inputs = [added.clone(), fresh.clone()];
+
+        super::write_year_bucketed(&inputs, &dir, "created_at").unwrap();
+        let saved = fs::read_to_string(&path).unwrap();
+        let expected = json!([retained, fresh, added]);
+        assert_eq!(serde_json::from_str::<Value>(&saved).unwrap(), expected);
+        assert_eq!(saved, super::sorted_json(&expected).unwrap());
+        super::write_year_bucketed(&inputs, &dir, "created_at").unwrap();
+        assert_eq!(fs::read_to_string(&path).unwrap(), saved);
+        fs::remove_dir_all(&dir).unwrap();
+    }
 
     #[test]
     fn relative_months_preserve_day_and_time() {

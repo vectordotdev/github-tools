@@ -476,33 +476,33 @@
     }
   },
   {
-    "id": 1185245818,
-    "number": 15811,
-    "title": "chore(arm64 platform): Build packages with older glibc",
-    "state": "closed",
-    "created_at": "2023-01-04T17:47:54Z",
-    "updated_at": "2026-10-16T21:14:52Z",
     "closed_at": "2023-01-04T22:01:32Z",
-    "user": {
-      "login": "bruceg"
-    },
+    "created_at": "2023-01-04T17:47:54Z",
+    "draft": false,
+    "id": 1185245818,
+    "issue_type": null,
     "labels": [
       {
-        "id": 6526936644602743638,
-        "name": "domain: ci",
         "color": "343639",
-        "description": "Anything related to Vector's CI environment"
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain: ci"
       },
       {
-        "id": 3996083420765767120,
-        "name": "platform: arm",
         "color": "F687F6",
-        "description": "Anything `arm` platform related"
+        "description": "Anything `arm` platform related",
+        "id": 3996083420765767120,
+        "name": "platform: arm"
       }
     ],
-    "issue_type": null,
+    "number": 15811,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(arm64 platform): Build packages with older glibc",
+    "updated_at": "2026-10-16T21:14:52Z",
+    "user": {
+      "login": "bruceg"
+    }
   },
   {
     "closed_at": "2023-01-05T17:16:29Z",
@@ -588,31 +588,31 @@
     }
   },
   {
-    "id": 1519633561,
-    "number": 15817,
-    "title": "Build all packages for older glibc",
-    "state": "open",
-    "created_at": "2023-01-04T21:59:38Z",
-    "updated_at": "2026-10-16T21:15:21Z",
     "closed_at": null,
-    "user": {
-      "login": "bruceg"
-    },
+    "created_at": "2023-01-04T21:59:38Z",
+    "id": 1519633561,
+    "issue_type": "Enhancement",
     "labels": [
       {
-        "id": 9158268324614743307,
-        "name": "domain: platforms",
         "color": "343639",
-        "description": "Anything related to Vector's supported platforms"
+        "description": "Anything related to Vector's supported platforms",
+        "id": 9158268324614743307,
+        "name": "domain: platforms"
       },
       {
-        "id": 3996083420765767120,
-        "name": "platform: arm",
         "color": "F687F6",
-        "description": "Anything `arm` platform related"
+        "description": "Anything `arm` platform related",
+        "id": 3996083420765767120,
+        "name": "platform: arm"
       }
     ],
-    "issue_type": "Enhancement"
+    "number": 15817,
+    "state": "open",
+    "title": "Build all packages for older glibc",
+    "updated_at": "2026-10-16T21:15:21Z",
+    "user": {
+      "login": "bruceg"
+    }
   },
   {
     "closed_at": "2023-01-05T14:46:08Z",
@@ -3824,25 +3824,25 @@
     }
   },
   {
-    "id": 1532947610,
-    "number": 15957,
-    "title": "Render HashMap examples in the UI",
-    "state": "closed",
-    "created_at": "2023-01-13T21:40:05Z",
-    "updated_at": "2026-10-19T15:15:38Z",
     "closed_at": "2026-10-19T15:15:38Z",
-    "user": {
-      "login": "davidhuie-dd"
-    },
+    "created_at": "2023-01-13T21:40:05Z",
+    "id": 1532947610,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": "Feature"
+    "number": 15957,
+    "state": "closed",
+    "title": "Render HashMap examples in the UI",
+    "updated_at": "2026-10-19T15:15:38Z",
+    "user": {
+      "login": "davidhuie-dd"
+    }
   },
   {
     "closed_at": "2023-01-17T16:53:41Z",
@@ -10147,18 +10147,18 @@
     }
   },
   {
-    "id": 1565056398,
-    "number": 16222,
-    "title": "chore(config): mark shared types as 'advanced' at the type-level",
-    "state": "closed",
-    "created_at": "2023-01-31T21:55:00Z",
-    "updated_at": "2026-08-07T20:06:40Z",
     "closed_at": "2026-08-07T20:06:40Z",
+    "created_at": "2023-01-31T21:55:00Z",
+    "id": 1565056398,
+    "issue_type": null,
+    "labels": [],
+    "number": 16222,
+    "state": "closed",
+    "title": "chore(config): mark shared types as 'advanced' at the type-level",
+    "updated_at": "2026-08-07T20:06:40Z",
     "user": {
       "login": "tobz"
-    },
-    "labels": [],
-    "issue_type": null
+    }
   },
   {
     "closed_at": "2023-02-03T15:22:35Z",
@@ -11223,33 +11223,33 @@
     }
   },
   {
-    "id": 1227309781,
-    "number": 16262,
-    "title": "chore(deps): bump http-cache-semantics from 4.1.0 to 4.1.1 in /website",
-    "state": "closed",
-    "created_at": "2023-02-02T22:20:14Z",
-    "updated_at": "2026-10-16T20:53:27Z",
     "closed_at": "2023-02-03T13:48:06Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2023-02-02T22:20:14Z",
+    "draft": false,
+    "id": 1227309781,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 16262,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(deps): bump http-cache-semantics from 4.1.0 to 4.1.1 in /website",
+    "updated_at": "2026-10-16T20:53:27Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2023-02-08T23:09:00Z",
@@ -14165,64 +14165,64 @@
     }
   },
   {
-    "id": 1578625939,
-    "number": 16383,
-    "title": "Rewrite script wrappers in `vdev` to native code",
-    "state": "open",
-    "created_at": "2023-02-09T21:11:19Z",
-    "updated_at": "2026-10-16T19:25:23Z",
     "closed_at": null,
+    "created_at": "2023-02-09T21:11:19Z",
+    "id": 1578625939,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "BF72F6",
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type: tech debt"
+      },
+      {
+        "color": "0366d6",
+        "description": "Larger, user-centric issue that contains multiple sub-issues",
+        "id": 2317352064883706706,
+        "name": "Epic"
+      },
+      {
+        "color": "0366d6",
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
+      },
+      {
+        "color": "343639",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain: vdev"
+      }
+    ],
+    "number": 16383,
+    "state": "open",
+    "title": "Rewrite script wrappers in `vdev` to native code",
+    "updated_at": "2026-10-16T19:25:23Z",
     "user": {
       "login": "bruceg"
-    },
-    "labels": [
-      {
-        "id": 2473344330675535720,
-        "name": "type: tech debt",
-        "color": "BF72F6",
-        "description": "A code change that does not add user value."
-      },
-      {
-        "id": 2317352064883706706,
-        "name": "Epic",
-        "color": "0366d6",
-        "description": "Larger, user-centric issue that contains multiple sub-issues"
-      },
-      {
-        "id": 9188659864033715330,
-        "name": "dependencies",
-        "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
-      },
-      {
-        "id": 6235798767080406514,
-        "name": "domain: vdev",
-        "color": "343639",
-        "description": "Anything related to the vdev tooling"
-      }
-    ],
-    "issue_type": null
+    }
   },
   {
-    "id": 1578741008,
-    "number": 16384,
-    "title": "template syntax doesn't work in `datadog_archives` sink's `key_prefix`",
-    "state": "closed",
-    "created_at": "2023-02-09T22:59:38Z",
-    "updated_at": "2026-10-16T20:54:51Z",
     "closed_at": "2026-10-16T20:54:51Z",
-    "user": {
-      "login": "psemeniuk"
-    },
+    "created_at": "2023-02-09T22:59:38Z",
+    "id": 1578741008,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 6983878662099890305,
-        "name": "sink: datadog_archives",
         "color": "5ED9F6",
-        "description": "Anything `datadog_archives` sink related"
+        "description": "Anything `datadog_archives` sink related",
+        "id": 6983878662099890305,
+        "name": "sink: datadog_archives"
       }
     ],
-    "issue_type": "Bug"
+    "number": 16384,
+    "state": "closed",
+    "title": "template syntax doesn't work in `datadog_archives` sink's `key_prefix`",
+    "updated_at": "2026-10-16T20:54:51Z",
+    "user": {
+      "login": "psemeniuk"
+    }
   },
   {
     "closed_at": "2023-02-14T15:01:22Z",
@@ -14269,25 +14269,25 @@
     }
   },
   {
-    "id": 1580011569,
-    "number": 16387,
-    "title": "Include support for GCP authentication via workload identity federation",
-    "state": "open",
-    "created_at": "2023-02-10T16:40:51Z",
-    "updated_at": "2026-09-08T12:29:05Z",
     "closed_at": null,
-    "user": {
-      "login": "cahartma"
-    },
+    "created_at": "2023-02-10T16:40:51Z",
+    "id": 1580011569,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 5970174565153215818,
-        "name": "provider: gcp",
         "color": "5EAAF6",
-        "description": "Anything `gcp` service provider related"
+        "description": "Anything `gcp` service provider related",
+        "id": 5970174565153215818,
+        "name": "provider: gcp"
       }
     ],
-    "issue_type": "Feature"
+    "number": 16387,
+    "state": "open",
+    "title": "Include support for GCP authentication via workload identity federation",
+    "updated_at": "2026-09-08T12:29:05Z",
+    "user": {
+      "login": "cahartma"
+    }
   },
   {
     "closed_at": "2023-02-13T14:54:21Z",
@@ -15496,25 +15496,25 @@
     }
   },
   {
-    "id": 1584766261,
-    "number": 16438,
-    "title": "Add link to /releases to vector.dev homepage or page header/footer",
-    "state": "closed",
-    "created_at": "2023-02-14T20:16:01Z",
-    "updated_at": "2026-10-16T19:55:29Z",
     "closed_at": "2023-03-01T17:22:32Z",
-    "user": {
-      "login": "neuronull"
-    },
+    "created_at": "2023-02-14T20:16:01Z",
+    "id": 1584766261,
+    "issue_type": null,
     "labels": [
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null
+    "number": 16438,
+    "state": "closed",
+    "title": "Add link to /releases to vector.dev homepage or page header/footer",
+    "updated_at": "2026-10-16T19:55:29Z",
+    "user": {
+      "login": "neuronull"
+    }
   },
   {
     "closed_at": "2023-02-14T21:20:38Z",
@@ -19061,25 +19061,25 @@
     }
   },
   {
-    "id": 1601599714,
-    "number": 16608,
-    "title": "Documentation site search gives incomplete results",
-    "state": "closed",
-    "created_at": "2023-02-27T17:13:47Z",
-    "updated_at": "2026-10-16T19:55:32Z",
     "closed_at": "2026-05-29T20:14:31Z",
-    "user": {
-      "login": "groner"
-    },
+    "created_at": "2023-02-27T17:13:47Z",
+    "id": 1601599714,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": "Bug"
+    "number": 16608,
+    "state": "closed",
+    "title": "Documentation site search gives incomplete results",
+    "updated_at": "2026-10-16T19:55:32Z",
+    "user": {
+      "login": "groner"
+    }
   },
   {
     "closed_at": null,
@@ -21837,43 +21837,43 @@
     }
   },
   {
-    "id": 1616553309,
-    "number": 16737,
-    "title": "Support Kafka component GSSAPI authentication on musl and aarch64 platforms",
-    "state": "open",
-    "created_at": "2023-03-09T07:01:18Z",
-    "updated_at": "2026-10-16T21:15:20Z",
     "closed_at": null,
-    "user": {
-      "login": "cshimegi"
-    },
+    "created_at": "2023-03-09T07:01:18Z",
+    "id": 1616553309,
+    "issue_type": "Bug",
     "labels": [
       {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` sink related",
         "id": 531767785653386989,
-        "name": "sink: kafka",
-        "color": "5ED9F6",
-        "description": "Anything `kafka` sink related"
+        "name": "sink: kafka"
       },
       {
+        "color": "5ED9F6",
+        "description": "Anything `kafka` source related",
         "id": 5855082884786344119,
-        "name": "source: kafka",
-        "color": "5ED9F6",
-        "description": "Anything `kafka` source related"
+        "name": "source: kafka"
       },
       {
-        "id": 7735142015044067771,
-        "name": "domain: deps",
         "color": "343639",
-        "description": "Anything related to Vector's dependencies"
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain: deps"
       },
       {
-        "id": 3996083420765767120,
-        "name": "platform: arm",
         "color": "F687F6",
-        "description": "Anything `arm` platform related"
+        "description": "Anything `arm` platform related",
+        "id": 3996083420765767120,
+        "name": "platform: arm"
       }
     ],
-    "issue_type": "Bug"
+    "number": 16737,
+    "state": "open",
+    "title": "Support Kafka component GSSAPI authentication on musl and aarch64 platforms",
+    "updated_at": "2026-10-16T21:15:20Z",
+    "user": {
+      "login": "cshimegi"
+    }
   },
   {
     "closed_at": "2023-03-09T13:24:55Z",
@@ -22195,69 +22195,69 @@
     }
   },
   {
-    "id": 1270275627,
-    "number": 16750,
-    "title": "chore(datadog sinks)!: extract default_api_key into shared config struct",
-    "state": "closed",
-    "created_at": "2023-03-09T20:34:53Z",
-    "updated_at": "2026-10-16T20:58:45Z",
     "closed_at": "2023-03-13T15:01:03Z",
-    "user": {
-      "login": "neuronull"
-    },
+    "created_at": "2023-03-09T20:34:53Z",
+    "draft": false,
+    "id": 1270275627,
+    "issue_type": null,
     "labels": [
       {
-        "id": 2473344330675535720,
-        "name": "type: tech debt",
         "color": "BF72F6",
-        "description": "A code change that does not add user value."
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type: tech debt"
       },
       {
+        "color": "5ED9F6",
+        "description": "Anything `datadog_metrics` sink related",
         "id": 1943156466611436612,
-        "name": "sink: datadog_metrics",
-        "color": "5ED9F6",
-        "description": "Anything `datadog_metrics` sink related"
+        "name": "sink: datadog_metrics"
       },
       {
-        "id": 5159510221227689269,
-        "name": "meta: breaking change",
         "color": "F6707D",
-        "description": "Anything that breaks backward compatibility."
+        "description": "Anything that breaks backward compatibility.",
+        "id": 5159510221227689269,
+        "name": "meta: breaking change"
       },
       {
-        "id": 6524463192304363030,
-        "name": "domain: sinks",
         "color": "343639",
-        "description": "Anything related to Vector's sinks"
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain: sinks"
       },
       {
+        "color": "5ED9F6",
+        "description": "Anything `datadog_logs` sink related",
         "id": 6447116046887888457,
-        "name": "sink: datadog_logs",
-        "color": "5ED9F6",
-        "description": "Anything `datadog_logs` sink related"
+        "name": "sink: datadog_logs"
       },
       {
+        "color": "5ED9F6",
+        "description": "Anything `datadog_events` sink related",
         "id": 2386476290459226784,
-        "name": "sink: datadog_events",
-        "color": "5ED9F6",
-        "description": "Anything `datadog_events` sink related"
+        "name": "sink: datadog_events"
       },
       {
+        "color": "5ED9F6",
+        "description": "Anything `datadog_agent` source related",
         "id": 7637981125102974136,
-        "name": "source: datadog_agent",
-        "color": "5ED9F6",
-        "description": "Anything `datadog_agent` source related"
+        "name": "source: datadog_agent"
       },
       {
-        "id": 6555271956727986025,
-        "name": "sink: datadog_traces",
         "color": "5ED9F6",
-        "description": "Anything `datadog_traces` sink related"
+        "description": "Anything `datadog_traces` sink related",
+        "id": 6555271956727986025,
+        "name": "sink: datadog_traces"
       }
     ],
-    "issue_type": null,
+    "number": 16750,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(datadog sinks)!: extract default_api_key into shared config struct",
+    "updated_at": "2026-10-16T20:58:45Z",
+    "user": {
+      "login": "neuronull"
+    }
   },
   {
     "closed_at": "2023-03-16T01:17:39Z",
@@ -32326,33 +32326,33 @@
     }
   },
   {
-    "id": 1326194592,
-    "number": 17207,
-    "title": "chore(deps): bump yaml from 1.10.2 to 2.2.2 in /website",
-    "state": "closed",
-    "created_at": "2023-04-24T21:55:11Z",
-    "updated_at": "2026-10-16T20:53:23Z",
     "closed_at": "2023-04-26T17:11:32Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2023-04-24T21:55:11Z",
+    "draft": false,
+    "id": 1326194592,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 17207,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(deps): bump yaml from 1.10.2 to 2.2.2 in /website",
+    "updated_at": "2026-10-16T20:53:23Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": null,
@@ -32721,37 +32721,37 @@
     }
   },
   {
-    "id": 1685387051,
-    "number": 17225,
-    "title": "Update field names created by sources to use `const`",
-    "state": "open",
-    "created_at": "2023-04-26T16:49:50Z",
-    "updated_at": "2026-10-20T12:58:55Z",
     "closed_at": null,
-    "user": {
-      "login": "StephenWakely"
-    },
+    "created_at": "2023-04-26T16:49:50Z",
+    "id": 1685387051,
+    "issue_type": null,
     "labels": [
       {
-        "id": 2473344330675535720,
-        "name": "type: tech debt",
         "color": "BF72F6",
-        "description": "A code change that does not add user value."
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type: tech debt"
       },
       {
-        "id": 942722858524630774,
-        "name": "good first issue",
         "color": "DBE0E9",
-        "description": "Anything that is good for new contributors."
+        "description": "Anything that is good for new contributors.",
+        "id": 942722858524630774,
+        "name": "good first issue"
       },
       {
-        "id": 2021938762883471635,
-        "name": "domain: sources",
         "color": "343639",
-        "description": "Anything related to Vector's sources"
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain: sources"
       }
     ],
-    "issue_type": null
+    "number": 17225,
+    "state": "open",
+    "title": "Update field names created by sources to use `const`",
+    "updated_at": "2026-10-20T12:58:55Z",
+    "user": {
+      "login": "StephenWakely"
+    }
   },
   {
     "closed_at": "2023-05-02T16:34:40Z",
@@ -41873,25 +41873,25 @@
     }
   },
   {
-    "id": 1755203031,
-    "number": 17679,
-    "title": "[kubernetes_logs] certificate verify failed \"Hostname mismatch\"",
-    "state": "closed",
-    "created_at": "2023-06-13T15:51:33Z",
-    "updated_at": "2026-10-02T23:07:59Z",
     "closed_at": "2026-10-02T23:07:59Z",
-    "user": {
-      "login": "rifler"
-    },
+    "created_at": "2023-06-13T15:51:33Z",
+    "id": 1755203031,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 8380833141092437707,
-        "name": "source: kubernetes_logs",
         "color": "5ED9F6",
-        "description": "Anything `kubernetes_logs` source related"
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
       }
     ],
-    "issue_type": "Bug"
+    "number": 17679,
+    "state": "closed",
+    "title": "[kubernetes_logs] certificate verify failed \"Hostname mismatch\"",
+    "updated_at": "2026-10-02T23:07:59Z",
+    "user": {
+      "login": "rifler"
+    }
   },
   {
     "closed_at": "2023-06-13T22:24:38Z",
@@ -42379,39 +42379,39 @@
     }
   },
   {
-    "id": 1397003860,
-    "number": 17705,
-    "title": "feat(socket source): Add inode number & peer creds to events",
-    "state": "closed",
-    "created_at": "2023-06-18T06:02:45Z",
-    "updated_at": "2026-09-06T12:01:38Z",
     "closed_at": "2023-07-18T22:25:29Z",
-    "user": {
-      "login": "KJTsanaktsidis"
-    },
+    "created_at": "2023-06-18T06:02:45Z",
+    "draft": false,
+    "id": 1397003860,
+    "issue_type": null,
     "labels": [
       {
+        "color": "343639",
+        "description": "Anything related to Vector's sources",
         "id": 2021938762883471635,
-        "name": "domain: sources",
-        "color": "343639",
-        "description": "Anything related to Vector's sources"
+        "name": "domain: sources"
       },
       {
+        "color": "343639",
+        "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
-        "name": "domain: external docs",
-        "color": "343639",
-        "description": "Anything related to Vector's external, public documentation"
+        "name": "domain: external docs"
       },
       {
-        "id": 1951021668007277535,
-        "name": "meta: awaiting author",
         "color": "DBE0E9",
-        "description": "Pull requests that are awaiting their author."
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta: awaiting author"
       }
     ],
-    "issue_type": null,
+    "number": 17705,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "feat(socket source): Add inode number & peer creds to events",
+    "updated_at": "2026-09-06T12:01:38Z",
+    "user": {
+      "login": "KJTsanaktsidis"
+    }
   },
   {
     "closed_at": "2023-06-20T14:22:05Z",
@@ -44641,33 +44641,33 @@
     }
   },
   {
-    "id": 1414600222,
-    "number": 17812,
-    "title": "feat(distribution/systemd): add vector@.service and hardened-vector@.service",
-    "state": "closed",
-    "created_at": "2023-06-30T09:58:10Z",
-    "updated_at": "2026-07-27T19:59:42Z",
     "closed_at": "2026-07-27T19:59:30Z",
-    "user": {
-      "login": "FlorentinDUBOIS"
-    },
+    "created_at": "2023-06-30T09:58:10Z",
+    "draft": false,
+    "id": 1414600222,
+    "issue_type": null,
     "labels": [
       {
-        "id": 843604899509384131,
-        "name": "domain: releasing",
         "color": "343639",
-        "description": "Anything related to releasing Vector"
+        "description": "Anything related to releasing Vector",
+        "id": 843604899509384131,
+        "name": "domain: releasing"
       },
       {
-        "id": 1951021668007277535,
-        "name": "meta: awaiting author",
         "color": "DBE0E9",
-        "description": "Pull requests that are awaiting their author."
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta: awaiting author"
       }
     ],
-    "issue_type": null,
+    "number": 17812,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "feat(distribution/systemd): add vector@.service and hardened-vector@.service",
+    "updated_at": "2026-07-27T19:59:42Z",
+    "user": {
+      "login": "FlorentinDUBOIS"
+    }
   },
   {
     "closed_at": "2023-07-04T16:39:14Z",
@@ -47114,33 +47114,33 @@
     }
   },
   {
-    "id": 1428554112,
-    "number": 17937,
-    "title": "chore(deps): Bump semver from 5.7.1 to 5.7.2 in /website",
-    "state": "closed",
-    "created_at": "2023-07-11T01:46:27Z",
-    "updated_at": "2026-10-16T20:53:20Z",
     "closed_at": "2023-07-11T15:52:01Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2023-07-11T01:46:27Z",
+    "draft": false,
+    "id": 1428554112,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 17937,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(deps): Bump semver from 5.7.1 to 5.7.2 in /website",
+    "updated_at": "2026-10-16T20:53:20Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2023-07-11T14:30:35Z",
@@ -49374,31 +49374,31 @@
     }
   },
   {
-    "id": 1815400632,
-    "number": 18045,
-    "title": "Support http body data validation for http_server source",
-    "state": "open",
-    "created_at": "2023-07-21T08:35:51Z",
-    "updated_at": "2026-07-30T13:17:09Z",
     "closed_at": null,
-    "user": {
-      "login": "IFtech-A"
-    },
+    "created_at": "2023-07-21T08:35:51Z",
+    "id": 1815400632,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 2532840815751579171,
-        "name": "meta: idea",
         "color": "DBE0E9",
-        "description": "Anything in the idea phase. Needs further discussion and consensus before work can begin."
+        "description": "Anything in the idea phase. Needs further discussion and consensus before work can begin.",
+        "id": 2532840815751579171,
+        "name": "meta: idea"
       },
       {
-        "id": 4345892752843924220,
-        "name": "source: http_server",
         "color": "5ED9F6",
-        "description": "Anything `http_server` source related"
+        "description": "Anything `http_server` source related",
+        "id": 4345892752843924220,
+        "name": "source: http_server"
       }
     ],
-    "issue_type": "Feature"
+    "number": 18045,
+    "state": "open",
+    "title": "Support http body data validation for http_server source",
+    "updated_at": "2026-07-30T13:17:09Z",
+    "user": {
+      "login": "IFtech-A"
+    }
   },
   {
     "closed_at": "2024-05-22T02:37:07Z",
@@ -51988,25 +51988,25 @@
     }
   },
   {
-    "id": 1837000599,
-    "number": 18159,
-    "title": "The `aws_s3` sink should use the configured timezone for `filename_format`",
-    "state": "open",
-    "created_at": "2023-08-04T15:55:53Z",
-    "updated_at": "2026-10-18T07:58:07Z",
     "closed_at": null,
-    "user": {
-      "login": "jszwedko"
-    },
+    "created_at": "2023-08-04T15:55:53Z",
+    "id": 1837000599,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 1963617647073758968,
-        "name": "sink: aws_s3",
         "color": "5ED9F6",
-        "description": "Anything `aws_s3` sink related"
+        "description": "Anything `aws_s3` sink related",
+        "id": 1963617647073758968,
+        "name": "sink: aws_s3"
       }
     ],
-    "issue_type": "Bug"
+    "number": 18159,
+    "state": "open",
+    "title": "The `aws_s3` sink should use the configured timezone for `filename_format`",
+    "updated_at": "2026-10-18T07:58:07Z",
+    "user": {
+      "login": "jszwedko"
+    }
   },
   {
     "closed_at": "2023-08-08T18:46:49Z",
@@ -53545,18 +53545,18 @@
     }
   },
   {
-    "id": 1848514596,
-    "number": 18230,
-    "title": "FIPS compliance",
-    "state": "closed",
-    "created_at": "2023-08-13T09:52:09Z",
-    "updated_at": "2026-08-25T13:32:08Z",
     "closed_at": "2023-08-14T14:50:31Z",
+    "created_at": "2023-08-13T09:52:09Z",
+    "id": 1848514596,
+    "issue_type": "Feature",
+    "labels": [],
+    "number": 18230,
+    "state": "closed",
+    "title": "FIPS compliance",
+    "updated_at": "2026-08-25T13:32:08Z",
     "user": {
       "login": "elibramson"
-    },
-    "labels": [],
-    "issue_type": "Feature"
+    }
   },
   {
     "closed_at": "2023-08-14T16:37:56Z",
@@ -54030,25 +54030,25 @@
     }
   },
   {
-    "id": 1851871488,
-    "number": 18252,
-    "title": "Kafka sink should support Trace output",
-    "state": "closed",
-    "created_at": "2023-08-15T17:53:07Z",
-    "updated_at": "2026-10-05T18:47:15Z",
     "closed_at": "2026-03-20T21:01:01Z",
-    "user": {
-      "login": "hvtuananh"
-    },
+    "created_at": "2023-08-15T17:53:07Z",
+    "id": 1851871488,
+    "issue_type": "Enhancement",
     "labels": [
       {
-        "id": 531767785653386989,
-        "name": "sink: kafka",
         "color": "5ED9F6",
-        "description": "Anything `kafka` sink related"
+        "description": "Anything `kafka` sink related",
+        "id": 531767785653386989,
+        "name": "sink: kafka"
       }
     ],
-    "issue_type": "Enhancement"
+    "number": 18252,
+    "state": "closed",
+    "title": "Kafka sink should support Trace output",
+    "updated_at": "2026-10-05T18:47:15Z",
+    "user": {
+      "login": "hvtuananh"
+    }
   },
   {
     "closed_at": "2023-08-16T20:02:22Z",
@@ -54634,25 +54634,25 @@
     }
   },
   {
-    "id": 1854204453,
-    "number": 18281,
-    "title": "kubernetes_logs exclude_paths_glob_patterns no effect",
-    "state": "open",
-    "created_at": "2023-08-17T03:58:13Z",
-    "updated_at": "2026-10-20T15:01:26Z",
     "closed_at": null,
-    "user": {
-      "login": "kong62"
-    },
+    "created_at": "2023-08-17T03:58:13Z",
+    "id": 1854204453,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 8380833141092437707,
-        "name": "source: kubernetes_logs",
         "color": "5ED9F6",
-        "description": "Anything `kubernetes_logs` source related"
+        "description": "Anything `kubernetes_logs` source related",
+        "id": 8380833141092437707,
+        "name": "source: kubernetes_logs"
       }
     ],
-    "issue_type": "Bug"
+    "number": 18281,
+    "state": "open",
+    "title": "kubernetes_logs exclude_paths_glob_patterns no effect",
+    "updated_at": "2026-10-20T15:01:26Z",
+    "user": {
+      "login": "kong62"
+    }
   },
   {
     "closed_at": "2023-08-17T16:11:47Z",
@@ -55964,25 +55964,25 @@
     }
   },
   {
-    "id": 1860320318,
-    "number": 18336,
-    "title": "unable to be deserialized error on disk buffer block vector sending data out",
-    "state": "open",
-    "created_at": "2023-08-21T23:37:57Z",
-    "updated_at": "2026-08-29T19:18:09Z",
     "closed_at": null,
-    "user": {
-      "login": "ee07b415"
-    },
+    "created_at": "2023-08-21T23:37:57Z",
+    "id": 1860320318,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 3389798092856007937,
-        "name": "domain: buffers",
         "color": "343639",
-        "description": "Anything related to Vector's memory/disk buffers"
+        "description": "Anything related to Vector's memory/disk buffers",
+        "id": 3389798092856007937,
+        "name": "domain: buffers"
       }
     ],
-    "issue_type": "Bug"
+    "number": 18336,
+    "state": "open",
+    "title": "unable to be deserialized error on disk buffer block vector sending data out",
+    "updated_at": "2026-08-29T19:18:09Z",
+    "user": {
+      "login": "ee07b415"
+    }
   },
   {
     "closed_at": "2023-08-22T22:57:58Z",
@@ -56897,25 +56897,25 @@
     }
   },
   {
-    "id": 1866026007,
-    "number": 18382,
-    "title": "Unable to get Vector to use the FIPS AWS endpoints",
-    "state": "closed",
-    "created_at": "2023-08-24T23:37:59Z",
-    "updated_at": "2026-08-26T08:08:01Z",
     "closed_at": "2026-08-25T16:11:01Z",
-    "user": {
-      "login": "alex-rowe"
-    },
+    "created_at": "2023-08-24T23:37:59Z",
+    "id": 1866026007,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 1968677811294901969,
-        "name": "meta: confirmed",
         "color": "DBE0E9",
-        "description": "A bug that has been reproduced or confirmed."
+        "description": "A bug that has been reproduced or confirmed.",
+        "id": 1968677811294901969,
+        "name": "meta: confirmed"
       }
     ],
-    "issue_type": "Bug"
+    "number": 18382,
+    "state": "closed",
+    "title": "Unable to get Vector to use the FIPS AWS endpoints",
+    "updated_at": "2026-08-26T08:08:01Z",
+    "user": {
+      "login": "alex-rowe"
+    }
   },
   {
     "closed_at": "2023-08-26T01:23:34Z",
@@ -58122,25 +58122,25 @@
     }
   },
   {
-    "id": 1874763772,
-    "number": 18438,
-    "title": "Elasticsearch Authentication Using Api Key",
-    "state": "open",
-    "created_at": "2023-08-31T04:27:26Z",
-    "updated_at": "2026-10-09T13:34:57Z",
     "closed_at": null,
-    "user": {
-      "login": "ashekar2"
-    },
+    "created_at": "2023-08-31T04:27:26Z",
+    "id": 1874763772,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 3276119148680691006,
-        "name": "sink: elasticsearch",
         "color": "5ED9F6",
-        "description": "Anything `elasticsearch` sink related"
+        "description": "Anything `elasticsearch` sink related",
+        "id": 3276119148680691006,
+        "name": "sink: elasticsearch"
       }
     ],
-    "issue_type": "Feature"
+    "number": 18438,
+    "state": "open",
+    "title": "Elasticsearch Authentication Using Api Key",
+    "updated_at": "2026-10-09T13:34:57Z",
+    "user": {
+      "login": "ashekar2"
+    }
   },
   {
     "closed_at": "2023-09-01T20:45:04Z",
@@ -60934,37 +60934,37 @@
     }
   },
   {
-    "id": 1897167413,
-    "number": 18570,
-    "title": "`native_json` codec is not serializing/deserializing `EventMetadata`.",
-    "state": "open",
-    "created_at": "2023-09-14T19:21:34Z",
-    "updated_at": "2026-08-31T20:09:09Z",
     "closed_at": null,
-    "user": {
-      "login": "neuronull"
-    },
+    "created_at": "2023-09-14T19:21:34Z",
+    "id": 1897167413,
+    "issue_type": "Bug",
     "labels": [
       {
+        "color": "343639",
+        "description": "Anything related to Vector's internal tests",
         "id": 5489522564843688803,
-        "name": "domain: tests",
-        "color": "343639",
-        "description": "Anything related to Vector's internal tests"
+        "name": "domain: tests"
       },
       {
-        "id": 5726225094191158907,
-        "name": "meta: regression",
         "color": "c8d6e5",
-        "description": "This issue represents a regression"
+        "description": "This issue represents a regression",
+        "id": 5726225094191158907,
+        "name": "meta: regression"
       },
       {
-        "id": 24217296173635418,
-        "name": "domain: codecs",
         "color": "343639",
-        "description": "Anything related to Vector's codecs (encoding/decoding)"
+        "description": "Anything related to Vector's codecs (encoding/decoding)",
+        "id": 24217296173635418,
+        "name": "domain: codecs"
       }
     ],
-    "issue_type": "Bug"
+    "number": 18570,
+    "state": "open",
+    "title": "`native_json` codec is not serializing/deserializing `EventMetadata`.",
+    "updated_at": "2026-08-31T20:09:09Z",
+    "user": {
+      "login": "neuronull"
+    }
   },
   {
     "closed_at": "2023-09-15T11:06:28Z",
@@ -64499,33 +64499,33 @@
     }
   },
   {
-    "id": 1540344649,
-    "number": 18750,
-    "title": "chore(deps): Bump postcss from 8.4.6 to 8.4.31 in /website",
-    "state": "closed",
-    "created_at": "2023-10-03T16:38:15Z",
-    "updated_at": "2026-10-16T20:53:17Z",
     "closed_at": "2023-10-03T18:13:22Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2023-10-03T16:38:15Z",
+    "draft": false,
+    "id": 1540344649,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 18750,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(deps): Bump postcss from 8.4.6 to 8.4.31 in /website",
+    "updated_at": "2026-10-16T20:53:17Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2024-11-01T17:41:52Z",
@@ -64668,27 +64668,27 @@
     }
   },
   {
-    "id": 1540642860,
-    "number": 18758,
-    "title": "chore(website): Set download page dropdown to latest version",
-    "state": "closed",
-    "created_at": "2023-10-03T20:09:14Z",
-    "updated_at": "2026-10-16T19:59:10Z",
     "closed_at": "2023-10-03T21:59:50Z",
-    "user": {
-      "login": "devindford"
-    },
+    "created_at": "2023-10-03T20:09:14Z",
+    "draft": false,
+    "id": 1540642860,
+    "issue_type": null,
     "labels": [
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 18758,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(website): Set download page dropdown to latest version",
+    "updated_at": "2026-10-16T19:59:10Z",
+    "user": {
+      "login": "devindford"
+    }
   },
   {
     "closed_at": "2023-10-05T21:01:19Z",
@@ -66552,33 +66552,33 @@
     }
   },
   {
-    "id": 1558697836,
-    "number": 18852,
-    "title": "chore(deps): Bump @babel/traverse from 7.17.0 to 7.23.2 in /website",
-    "state": "closed",
-    "created_at": "2023-10-16T14:16:33Z",
-    "updated_at": "2026-10-16T20:53:14Z",
     "closed_at": "2023-10-16T17:56:31Z",
-    "user": {
-      "login": "dependabot"
-    },
+    "created_at": "2023-10-16T14:16:33Z",
+    "draft": false,
+    "id": 1558697836,
+    "issue_type": null,
     "labels": [
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 18852,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(deps): Bump @babel/traverse from 7.17.0 to 7.23.2 in /website",
+    "updated_at": "2026-10-16T20:53:14Z",
+    "user": {
+      "login": "dependabot"
+    }
   },
   {
     "closed_at": "2023-10-27T21:09:55Z",
@@ -66950,25 +66950,25 @@
     }
   },
   {
-    "id": 1948452960,
-    "number": 18871,
-    "title": "Semantic search vector.dev codebase and code repository",
-    "state": "open",
-    "created_at": "2023-10-17T23:23:07Z",
-    "updated_at": "2026-10-16T19:41:41Z",
     "closed_at": null,
-    "user": {
-      "login": "jonathanpv"
-    },
+    "created_at": "2023-10-17T23:23:07Z",
+    "id": 1948452960,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": "Feature"
+    "number": 18871,
+    "state": "open",
+    "title": "Semantic search vector.dev codebase and code repository",
+    "updated_at": "2026-10-16T19:41:41Z",
+    "user": {
+      "login": "jonathanpv"
+    }
   },
   {
     "closed_at": "2023-10-18T23:11:18Z",
@@ -68130,18 +68130,18 @@
     }
   },
   {
-    "id": 1958993221,
-    "number": 18917,
-    "title": "Make metrics aggregation opt-in for batches where sink supports multiple timestamps",
-    "state": "open",
-    "created_at": "2023-10-24T10:53:08Z",
-    "updated_at": "2026-08-13T13:20:59Z",
     "closed_at": null,
+    "created_at": "2023-10-24T10:53:08Z",
+    "id": 1958993221,
+    "issue_type": "Feature",
+    "labels": [],
+    "number": 18917,
+    "state": "open",
+    "title": "Make metrics aggregation opt-in for batches where sink supports multiple timestamps",
+    "updated_at": "2026-08-13T13:20:59Z",
     "user": {
       "login": "moschroe"
-    },
-    "labels": [],
-    "issue_type": "Feature"
+    }
   },
   {
     "closed_at": "2023-10-24T14:27:23Z",
@@ -70457,18 +70457,18 @@
     }
   },
   {
-    "id": 1972329432,
-    "number": 19008,
-    "title": "DEBIAN/conffiles has two trailing newlines which prevent Uyuni/SUSE Manager from importing Vector deb repo",
-    "state": "closed",
-    "created_at": "2023-11-01T12:56:25Z",
-    "updated_at": "2026-10-02T17:30:43Z",
     "closed_at": "2026-10-02T17:30:43Z",
+    "created_at": "2023-11-01T12:56:25Z",
+    "id": 1972329432,
+    "issue_type": "Bug",
+    "labels": [],
+    "number": 19008,
+    "state": "closed",
+    "title": "DEBIAN/conffiles has two trailing newlines which prevent Uyuni/SUSE Manager from importing Vector deb repo",
+    "updated_at": "2026-10-02T17:30:43Z",
     "user": {
       "login": "ypid-work"
-    },
-    "labels": [],
-    "issue_type": "Bug"
+    }
   },
   {
     "closed_at": "2023-11-02T16:08:22Z",
@@ -73721,25 +73721,25 @@
     }
   },
   {
-    "id": 1994652293,
-    "number": 19155,
-    "title": "Vector sink with disk buffer stuck after pod restart",
-    "state": "open",
-    "created_at": "2023-11-15T12:07:13Z",
-    "updated_at": "2026-10-01T07:09:20Z",
     "closed_at": null,
-    "user": {
-      "login": "kaarolch"
-    },
+    "created_at": "2023-11-15T12:07:13Z",
+    "id": 1994652293,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 3389798092856007937,
-        "name": "domain: buffers",
         "color": "343639",
-        "description": "Anything related to Vector's memory/disk buffers"
+        "description": "Anything related to Vector's memory/disk buffers",
+        "id": 3389798092856007937,
+        "name": "domain: buffers"
       }
     ],
-    "issue_type": "Bug"
+    "number": 19155,
+    "state": "open",
+    "title": "Vector sink with disk buffer stuck after pod restart",
+    "updated_at": "2026-10-01T07:09:20Z",
+    "user": {
+      "login": "kaarolch"
+    }
   },
   {
     "closed_at": "2023-11-15T17:16:29Z",
@@ -74178,37 +74178,37 @@
     }
   },
   {
-    "id": 1998236182,
-    "number": 19179,
-    "title": "Upgrade the `http` crate to version 1.0.0",
-    "state": "open",
-    "created_at": "2023-11-17T04:02:40Z",
-    "updated_at": "2026-10-20T16:35:22Z",
     "closed_at": null,
-    "user": {
-      "login": "bruceg"
-    },
+    "created_at": "2023-11-17T04:02:40Z",
+    "id": 1998236182,
+    "issue_type": "Task",
     "labels": [
       {
-        "id": 2473344330675535720,
-        "name": "type: tech debt",
         "color": "BF72F6",
-        "description": "A code change that does not add user value."
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type: tech debt"
       },
       {
-        "id": 7735142015044067771,
-        "name": "domain: deps",
         "color": "343639",
-        "description": "Anything related to Vector's dependencies"
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain: deps"
       },
       {
-        "id": 9188659864033715330,
-        "name": "dependencies",
         "color": "0366d6",
-        "description": "Pull requests that update a dependency file"
+        "description": "Pull requests that update a dependency file",
+        "id": 9188659864033715330,
+        "name": "dependencies"
       }
     ],
-    "issue_type": "Task"
+    "number": 19179,
+    "state": "open",
+    "title": "Upgrade the `http` crate to version 1.0.0",
+    "updated_at": "2026-10-20T16:35:22Z",
+    "user": {
+      "login": "bruceg"
+    }
   },
   {
     "closed_at": "2023-11-17T16:04:07Z",
@@ -74999,31 +74999,31 @@
     }
   },
   {
-    "id": 2006081089,
-    "number": 19217,
-    "title": "Disk buffer size requirements",
-    "state": "open",
-    "created_at": "2023-11-22T10:58:15Z",
-    "updated_at": "2026-10-08T16:34:20Z",
     "closed_at": null,
-    "user": {
-      "login": "zamazan4ik"
-    },
+    "created_at": "2023-11-22T10:58:15Z",
+    "id": 2006081089,
+    "issue_type": null,
     "labels": [
       {
-        "id": 4606596601252306592,
-        "name": "domain: config",
         "color": "343639",
-        "description": "Anything related to configuring Vector"
+        "description": "Anything related to configuring Vector",
+        "id": 4606596601252306592,
+        "name": "domain: config"
       },
       {
-        "id": 3389798092856007937,
-        "name": "domain: buffers",
         "color": "343639",
-        "description": "Anything related to Vector's memory/disk buffers"
+        "description": "Anything related to Vector's memory/disk buffers",
+        "id": 3389798092856007937,
+        "name": "domain: buffers"
       }
     ],
-    "issue_type": null
+    "number": 19217,
+    "state": "open",
+    "title": "Disk buffer size requirements",
+    "updated_at": "2026-10-08T16:34:20Z",
+    "user": {
+      "login": "zamazan4ik"
+    }
   },
   {
     "closed_at": null,
@@ -75640,39 +75640,39 @@
     }
   },
   {
-    "id": 1618659052,
-    "number": 19244,
-    "title": "chore(releasing): Add known issue for protobuf encoder in v0.34.0",
-    "state": "closed",
-    "created_at": "2023-11-27T20:26:06Z",
-    "updated_at": "2026-10-16T19:59:13Z",
     "closed_at": "2023-11-28T22:26:34Z",
-    "user": {
-      "login": "bruceg"
-    },
+    "created_at": "2023-11-27T20:26:06Z",
+    "draft": false,
+    "id": 1618659052,
+    "issue_type": null,
     "labels": [
       {
-        "id": 2473344330675535720,
-        "name": "type: tech debt",
         "color": "BF72F6",
-        "description": "A code change that does not add user value."
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type: tech debt"
       },
       {
-        "id": 5210716293491119031,
-        "name": "domain: external docs",
         "color": "343639",
-        "description": "Anything related to Vector's external, public documentation"
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain: external docs"
       },
       {
-        "id": 2325732780039486140,
-        "name": "domain: website",
         "color": "B04E09",
-        "description": ""
+        "description": "",
+        "id": 2325732780039486140,
+        "name": "domain: website"
       }
     ],
-    "issue_type": null,
+    "number": 19244,
     "pull_request": {},
-    "draft": false
+    "state": "closed",
+    "title": "chore(releasing): Add known issue for protobuf encoder in v0.34.0",
+    "updated_at": "2026-10-16T19:59:13Z",
+    "user": {
+      "login": "bruceg"
+    }
   },
   {
     "closed_at": null,
@@ -75825,43 +75825,43 @@
     }
   },
   {
-    "id": 2014782928,
-    "number": 19252,
-    "title": "apt-key is DEPRECATED",
-    "state": "closed",
-    "created_at": "2023-11-28T16:04:05Z",
-    "updated_at": "2026-10-16T21:11:09Z",
     "closed_at": "2026-10-16T21:11:09Z",
-    "user": {
-      "login": "dariosusman"
-    },
+    "created_at": "2023-11-28T16:04:05Z",
+    "id": 2014782928,
+    "issue_type": null,
     "labels": [
       {
-        "id": 2473344330675535720,
-        "name": "type: tech debt",
         "color": "BF72F6",
-        "description": "A code change that does not add user value."
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type: tech debt"
       },
       {
-        "id": 4144380383188086185,
-        "name": "platform: debian",
         "color": "F687F6",
-        "description": "Anything `debian` platform related"
+        "description": "Anything `debian` platform related",
+        "id": 4144380383188086185,
+        "name": "platform: debian"
       },
       {
+        "color": "343639",
+        "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
-        "name": "domain: ci",
-        "color": "343639",
-        "description": "Anything related to Vector's CI environment"
+        "name": "domain: ci"
       },
       {
-        "id": 5699211646743798198,
-        "name": "domain: internal docs",
         "color": "343639",
-        "description": "Anything related to Vector's internal documentation"
+        "description": "Anything related to Vector's internal documentation",
+        "id": 5699211646743798198,
+        "name": "domain: internal docs"
       }
     ],
-    "issue_type": null
+    "number": 19252,
+    "state": "closed",
+    "title": "apt-key is DEPRECATED",
+    "updated_at": "2026-10-16T21:11:09Z",
+    "user": {
+      "login": "dariosusman"
+    }
   },
   {
     "closed_at": null,
@@ -77019,25 +77019,25 @@
     }
   },
   {
-    "id": 2027018653,
-    "number": 19315,
-    "title": "Protobuf default recursion depth limit of 32 - fails disk buffering, codec, and Vector source/sink",
-    "state": "closed",
-    "created_at": "2023-12-05T19:57:31Z",
-    "updated_at": "2026-08-17T23:23:43Z",
     "closed_at": "2026-08-17T23:23:43Z",
-    "user": {
-      "login": "sbalmos"
-    },
+    "created_at": "2023-12-05T19:57:31Z",
+    "id": 2027018653,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 24217296173635418,
-        "name": "domain: codecs",
         "color": "343639",
-        "description": "Anything related to Vector's codecs (encoding/decoding)"
+        "description": "Anything related to Vector's codecs (encoding/decoding)",
+        "id": 24217296173635418,
+        "name": "domain: codecs"
       }
     ],
-    "issue_type": "Bug"
+    "number": 19315,
+    "state": "closed",
+    "title": "Protobuf default recursion depth limit of 32 - fails disk buffering, codec, and Vector source/sink",
+    "updated_at": "2026-08-17T23:23:43Z",
+    "user": {
+      "login": "sbalmos"
+    }
   },
   {
     "closed_at": "2023-12-06T09:39:56Z",
@@ -78281,25 +78281,25 @@
     }
   },
   {
-    "id": 2041624799,
-    "number": 19383,
-    "title": "Allow systemd socket passing for UNIX sockets (syslog source)",
-    "state": "open",
-    "created_at": "2023-12-14T12:43:23Z",
-    "updated_at": "2026-08-20T12:56:56Z",
     "closed_at": null,
-    "user": {
-      "login": "Korrigan"
-    },
+    "created_at": "2023-12-14T12:43:23Z",
+    "id": 2041624799,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 2424784285363771579,
-        "name": "source: syslog",
         "color": "5ED9F6",
-        "description": "Anything `syslog` source related"
+        "description": "Anything `syslog` source related",
+        "id": 2424784285363771579,
+        "name": "source: syslog"
       }
     ],
-    "issue_type": "Feature"
+    "number": 19383,
+    "state": "open",
+    "title": "Allow systemd socket passing for UNIX sockets (syslog source)",
+    "updated_at": "2026-08-20T12:56:56Z",
+    "user": {
+      "login": "Korrigan"
+    }
   },
   {
     "closed_at": "2023-12-14T14:07:54Z",
@@ -78571,31 +78571,31 @@
     }
   },
   {
-    "id": 2043769498,
-    "number": 19397,
-    "title": "AppendBlob support for azure_blob sink",
-    "state": "closed",
-    "created_at": "2023-12-15T13:53:44Z",
-    "updated_at": "2026-08-28T14:27:32Z",
     "closed_at": "2026-08-28T14:27:32Z",
-    "user": {
-      "login": "linuraj"
-    },
+    "created_at": "2023-12-15T13:53:44Z",
+    "id": 2043769498,
+    "issue_type": "Feature",
     "labels": [
       {
-        "id": 6524463192304363030,
-        "name": "domain: sinks",
         "color": "343639",
-        "description": "Anything related to the Vector's sinks"
+        "description": "Anything related to the Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain: sinks"
       },
       {
-        "id": 1651409443776833596,
-        "name": "sink: azure_blob",
         "color": "5ED9F6",
-        "description": "Anything `azure_blob` sink related"
+        "description": "Anything `azure_blob` sink related",
+        "id": 1651409443776833596,
+        "name": "sink: azure_blob"
       }
     ],
-    "issue_type": "Feature"
+    "number": 19397,
+    "state": "closed",
+    "title": "AppendBlob support for azure_blob sink",
+    "updated_at": "2026-08-28T14:27:32Z",
+    "user": {
+      "login": "linuraj"
+    }
   },
   {
     "closed_at": "2024-04-03T11:42:22Z",
@@ -79905,31 +79905,31 @@
     }
   },
   {
-    "id": 2054968197,
-    "number": 19460,
-    "title": "Kafka source does not have metric _component_received_events_total",
-    "state": "closed",
-    "created_at": "2023-12-24T03:01:06Z",
-    "updated_at": "2026-07-28T18:31:48Z",
     "closed_at": "2026-07-28T18:31:48Z",
-    "user": {
-      "login": "youtian001"
-    },
+    "created_at": "2023-12-24T03:01:06Z",
+    "id": 2054968197,
+    "issue_type": "Bug",
     "labels": [
       {
-        "id": 8902634565218545672,
-        "name": "domain: observability",
         "color": "343639",
-        "description": "Anything related to monitoring/observing Vector"
+        "description": "Anything related to monitoring/observing Vector",
+        "id": 8902634565218545672,
+        "name": "domain: observability"
       },
       {
-        "id": 5855082884786344119,
-        "name": "source: kafka",
         "color": "5ED9F6",
-        "description": "Anything `kafka` source related"
+        "description": "Anything `kafka` source related",
+        "id": 5855082884786344119,
+        "name": "source: kafka"
       }
     ],
-    "issue_type": "Bug"
+    "number": 19460,
+    "state": "closed",
+    "title": "Kafka source does not have metric _component_received_events_total",
+    "updated_at": "2026-07-28T18:31:48Z",
+    "user": {
+      "login": "youtian001"
+    }
   },
   {
     "closed_at": "2024-01-02T22:35:02Z",
