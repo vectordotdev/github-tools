@@ -22,6 +22,21 @@ pub struct Config {
 }
 
 impl Config {
+    /// Load optional credentials for commands that can fall back to authenticated gh.
+    pub fn load_with_optional_token(repo: &Repo, env_file: Option<&str>) -> Result<Self> {
+        match Self::load(repo, env_file) {
+            Err(error)
+                if matches!(
+                    error.downcast_ref::<env::VarError>(),
+                    Some(env::VarError::NotPresent)
+                ) =>
+            {
+                Ok(Self::for_repo(repo))
+            }
+            result => result,
+        }
+    }
+
     /// Load credentials from an env file (if given) and pair with an explicit repo.
     pub fn load(repo: &Repo, env_file: Option<&str>) -> Result<Self> {
         if let Some(path) = env_file {
