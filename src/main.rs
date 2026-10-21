@@ -4,7 +4,7 @@ use github_tools::{
     commands::{
         build_db, close_old_prs, compact, delete_stale_branches, fetch_automated_review_stats,
         fetch_discussions, fetch_issue_interest, fetch_issues, fetch_labels, generate_charts,
-        generate_summaries, purge, push_metrics, remove_legacy_label, workflows,
+        generate_summaries, purge, push_metrics, remove_legacy_label, replace_label, workflows,
     },
     config::{Config, Repo},
 };
@@ -196,6 +196,23 @@ enum Command {
         #[arg(long)]
         dry_run: bool,
         #[arg(long, help = "Skip confirmation prompt")]
+        yes: bool,
+    },
+    /// Replace label assignments on all issues, PRs and discussions (preview by default)
+    ReplaceLabel {
+        #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
+        repo: String,
+        #[arg(long, help = "Path to .env file")]
+        env_file: Option<String>,
+        #[arg(long, help = "Existing label whose assignments will be migrated")]
+        old_label: String,
+        #[arg(long, help = "Destination label; rename the source if this name does not exist")]
+        new_label: String,
+        #[arg(long, conflicts_with = "dry_run", help = "Apply the previewed replacement")]
+        apply: bool,
+        #[arg(long, help = "Explicitly request a read-only preview (the default)")]
+        dry_run: bool,
+        #[arg(long, requires = "apply", help = "Skip confirmation after printing the plan")]
         yes: bool,
     },
     /// Remove a legacy type label from issues/PRs, optionally setting the type field
@@ -412,6 +429,10 @@ fn main() -> Result<()> {
         Command::GenerateSummaries { db, repo, env_file } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             generate_summaries::run(&db, &config)
+        }
+        Command::ReplaceLabel { repo, env_file, old_label, new_label, apply, dry_run: _, yes } => {
+            let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
+            replace_label::run(&config, &old_label, &new_label, apply, yes)
         }
         Command::RemoveLegacyLabel {
             repo,
