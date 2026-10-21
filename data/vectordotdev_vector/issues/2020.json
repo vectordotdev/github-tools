@@ -1737,7 +1737,7 @@
     "title": "Add runtime metrics collection to the docker source",
     "state": "open",
     "created_at": "2020-01-19T22:22:22Z",
-    "updated_at": "2026-08-18T02:16:40Z",
+    "updated_at": "2026-09-09T00:19:21Z",
     "closed_at": null,
     "user": {
       "login": "binarylogic"
@@ -1753,7 +1753,7 @@
         "id": 1231413994313482691,
         "name": "needs: requirements",
         "color": "FFF068",
-        "description": "Needs a a list of requirements before work can be begin"
+        "description": "Needs a list of requirements before work can be begin"
       },
       {
         "id": 7462033205188313656,
@@ -4404,73 +4404,73 @@
     }
   },
   {
-    "closed_at": "2020-03-26T15:47:01Z",
-    "created_at": "2020-01-31T17:40:37Z",
     "id": 558270404,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `elasticsearch` sink related",
-        "id": 3276119148680691006,
-        "name": "sink: elasticsearch"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `splunk_hec` sink related",
-        "id": 6845382385514977530,
-        "name": "sink: splunk_hec"
-      },
-      {
-        "color": "BF72F6",
-        "description": "A code change that does not add user value.",
-        "id": 2473344330675535720,
-        "name": "type: tech debt"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `clickhouse` sink related",
-        "id": 3597518471828487572,
-        "name": "sink: clickhouse"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `datadog_metrics` sink related",
-        "id": 1943156466611436612,
-        "name": "sink: datadog_metrics"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `gcp_pubsub` sink related",
-        "id": 8071778003907366531,
-        "name": "sink: gcp_pubsub"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `new_relic_logs` sink related",
-        "id": 4882020568537868950,
-        "name": "sink: new_relic_logs"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `gcp_cloud_storage` sink related",
-        "id": 4663635422713484343,
-        "name": "sink: gcp_cloud_storage"
-      }
-    ],
     "number": 1659,
-    "state": "closed",
     "title": "Migrate http based sinks to use `HttpSink`",
-    "updated_at": "2020-07-19T23:59:28Z",
+    "state": "closed",
+    "created_at": "2020-01-31T17:40:37Z",
+    "updated_at": "2026-10-16T20:20:37Z",
+    "closed_at": "2020-03-26T15:47:01Z",
     "user": {
       "login": "LucioFranco"
-    }
+    },
+    "labels": [
+      {
+        "id": 3276119148680691006,
+        "name": "sink: elasticsearch",
+        "color": "5ED9F6",
+        "description": "Anything `elasticsearch` sink related"
+      },
+      {
+        "id": 6845382385514977530,
+        "name": "sink: splunk_hec_logs",
+        "color": "5ED9F6",
+        "description": "Anything `splunk_hec_logs` sink related"
+      },
+      {
+        "id": 2473344330675535720,
+        "name": "type: tech debt",
+        "color": "BF72F6",
+        "description": "A code change that does not add user value."
+      },
+      {
+        "id": 3597518471828487572,
+        "name": "sink: clickhouse",
+        "color": "5ED9F6",
+        "description": "Anything `clickhouse` sink related"
+      },
+      {
+        "id": 1943156466611436612,
+        "name": "sink: datadog_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `datadog_metrics` sink related"
+      },
+      {
+        "id": 6524463192304363030,
+        "name": "domain: sinks",
+        "color": "343639",
+        "description": "Anything related to Vector's sinks"
+      },
+      {
+        "id": 8071778003907366531,
+        "name": "sink: gcp_pubsub",
+        "color": "5ED9F6",
+        "description": "Anything `gcp_pubsub` sink related"
+      },
+      {
+        "id": 4663635422713484343,
+        "name": "sink: gcp_cloud_storage",
+        "color": "5ED9F6",
+        "description": "Anything `gcp_cloud_storage` sink related"
+      },
+      {
+        "id": 6859036421233790357,
+        "name": "sink: new_relic",
+        "color": "5ED9F6",
+        "description": "Anything `new_relic` sink related"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2020-02-02T16:28:05Z",
@@ -5664,43 +5664,43 @@
     }
   },
   {
-    "closed_at": "2022-05-26T16:18:21Z",
-    "created_at": "2020-02-04T23:43:39Z",
     "id": 560046721,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "DBE0E9",
-        "description": "Anything that is good for new contributors.",
-        "id": 942722858524630774,
-        "name": "good first issue"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `new_relic_logs` sink related",
-        "id": 4882020568537868950,
-        "name": "sink: new_relic_logs"
-      },
-      {
-        "color": "F69049",
-        "description": "We should have this feature, but is not required. It is medium priority.",
-        "id": 6848739542623159481,
-        "name": "have: should"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's healthchecks",
-        "id": 247640566794965911,
-        "name": "domain: healthchecks"
-      }
-    ],
     "number": 1705,
-    "state": "closed",
     "title": "Add healthcheck for the `new_relic_logs` sink",
-    "updated_at": "2026-06-01T20:51:47Z",
+    "state": "closed",
+    "created_at": "2020-02-04T23:43:39Z",
+    "updated_at": "2026-10-16T20:20:35Z",
+    "closed_at": "2022-05-26T16:18:21Z",
     "user": {
       "login": "LucioFranco"
-    }
+    },
+    "labels": [
+      {
+        "id": 942722858524630774,
+        "name": "good first issue",
+        "color": "DBE0E9",
+        "description": "Anything that is good for new contributors."
+      },
+      {
+        "id": 6848739542623159481,
+        "name": "have: should",
+        "color": "F69049",
+        "description": "We should have this feature, but is not required. It is medium priority."
+      },
+      {
+        "id": 247640566794965911,
+        "name": "domain: healthchecks",
+        "color": "343639",
+        "description": "Anything related to Vector's healthchecks"
+      },
+      {
+        "id": 6859036421233790357,
+        "name": "sink: new_relic",
+        "color": "5ED9F6",
+        "description": "Anything `new_relic` sink related"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2020-02-05T15:32:26Z",
@@ -7251,49 +7251,49 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-02-11T09:31:38Z",
     "id": 563074670,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "DBE0E9",
-        "description": "Anything in the idea phase. Needs further discussion and consensus before work can begin.",
-        "id": 2532840815751579171,
-        "name": "meta: idea"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs review & approval before work can begin.",
-        "id": 389285363867189610,
-        "name": "needs: approval"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs a a list of requirements before work can be begin",
-        "id": 1231413994313482691,
-        "name": "needs: requirements"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's reliability",
-        "id": 5669051342270066101,
-        "name": "domain: reliability"
-      }
-    ],
     "number": 1772,
-    "state": "open",
     "title": "Support dead letter queue on sinks",
-    "updated_at": "2026-06-12T20:24:49Z",
+    "state": "open",
+    "created_at": "2020-02-11T09:31:38Z",
+    "updated_at": "2026-10-14T10:49:48Z",
+    "closed_at": null,
     "user": {
       "login": "Jeffail"
-    }
+    },
+    "labels": [
+      {
+        "id": 2532840815751579171,
+        "name": "meta: idea",
+        "color": "DBE0E9",
+        "description": "Anything in the idea phase. Needs further discussion and consensus before work can begin."
+      },
+      {
+        "id": 389285363867189610,
+        "name": "needs: approval",
+        "color": "FFF068",
+        "description": "Needs review & approval before work can begin."
+      },
+      {
+        "id": 1231413994313482691,
+        "name": "needs: requirements",
+        "color": "FFF068",
+        "description": "Needs a list of requirements before work can be begin"
+      },
+      {
+        "id": 6524463192304363030,
+        "name": "domain: sinks",
+        "color": "343639",
+        "description": "Anything related to Vector's sinks"
+      },
+      {
+        "id": 5669051342270066101,
+        "name": "domain: reliability",
+        "color": "343639",
+        "description": "Anything related to Vector's reliability"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2020-02-12T10:32:14Z",
@@ -8898,49 +8898,55 @@
     }
   },
   {
-    "closed_at": "2020-10-11T09:05:18Z",
-    "created_at": "2020-02-18T20:23:52Z",
     "id": 567136701,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "DBE0E9",
-        "description": "Anything that is good for new contributors.",
-        "id": 942722858524630774,
-        "name": "good first issue"
-      },
-      {
-        "color": "87F6C9",
-        "description": "This feature is nice to have. It is low priority.",
-        "id": 1298089048407485492,
-        "name": "have: nice"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `sematext` service provider related",
-        "id": 4707123622637132876,
-        "name": "provider: sematext"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's internal data model",
-        "id": 444458867583176237,
-        "name": "domain: data model"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's metrics events",
-        "id": 3968334348399022300,
-        "name": "domain: metrics"
-      }
-    ],
     "number": 1845,
-    "state": "closed",
     "title": "Add sematext_metrics sink (wrap Influx API?)",
-    "updated_at": "2026-05-29T23:30:43Z",
+    "state": "closed",
+    "created_at": "2020-02-18T20:23:52Z",
+    "updated_at": "2026-10-16T21:05:20Z",
+    "closed_at": "2020-10-11T09:05:18Z",
     "user": {
       "login": "otisg"
-    }
+    },
+    "labels": [
+      {
+        "id": 942722858524630774,
+        "name": "good first issue",
+        "color": "DBE0E9",
+        "description": "Anything that is good for new contributors."
+      },
+      {
+        "id": 1298089048407485492,
+        "name": "have: nice",
+        "color": "87F6C9",
+        "description": "This feature is nice to have. It is low priority."
+      },
+      {
+        "id": 444458867583176237,
+        "name": "domain: data model",
+        "color": "343639",
+        "description": "Anything related to Vector's internal data model"
+      },
+      {
+        "id": 3968334348399022300,
+        "name": "domain: metrics",
+        "color": "343639",
+        "description": "Anything related to Vector's metrics events"
+      },
+      {
+        "id": 801574677671634811,
+        "name": "sink: sematext_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `sematext_metrics` sink related"
+      },
+      {
+        "id": 8712994079615624380,
+        "name": "sink: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new sink"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2022-08-01T21:25:19Z",
@@ -15054,49 +15060,49 @@
     }
   },
   {
-    "closed_at": "2022-08-02T21:40:21Z",
-    "created_at": "2020-03-20T00:48:22Z",
     "id": 584780792,
-    "issue_type": "Task",
-    "labels": [
-      {
-        "color": "F687F6",
-        "description": "Anything `dpkg` platform related",
-        "id": 5423566597892641573,
-        "name": "platform: dpkg"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `rpm` platform related",
-        "id": 6620454305878207523,
-        "name": "platform: rpm"
-      },
-      {
-        "color": "F69049",
-        "description": "We should have this feature, but is not required. It is medium priority.",
-        "id": 6848739542623159481,
-        "name": "have: should"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to releasing Vector",
-        "id": 843604899509384131,
-        "name": "domain: releasing"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to setting up or installing Vector",
-        "id": 5738710469980156706,
-        "name": "domain: setup"
-      }
-    ],
     "number": 2100,
-    "state": "closed",
     "title": "Default configuration file for deb and rpm package should use the journald source",
-    "updated_at": "2026-06-01T12:57:44Z",
+    "state": "closed",
+    "created_at": "2020-03-20T00:48:22Z",
+    "updated_at": "2026-10-16T20:35:05Z",
+    "closed_at": "2022-08-02T21:40:21Z",
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 6620454305878207523,
+        "name": "platform: rpm",
+        "color": "F687F6",
+        "description": "Anything `rpm` platform related"
+      },
+      {
+        "id": 4144380383188086185,
+        "name": "platform: debian",
+        "color": "F687F6",
+        "description": "Anything `debian` platform related"
+      },
+      {
+        "id": 6848739542623159481,
+        "name": "have: should",
+        "color": "F69049",
+        "description": "We should have this feature, but is not required. It is medium priority."
+      },
+      {
+        "id": 843604899509384131,
+        "name": "domain: releasing",
+        "color": "343639",
+        "description": "Anything related to releasing Vector"
+      },
+      {
+        "id": 5738710469980156706,
+        "name": "domain: setup",
+        "color": "343639",
+        "description": "Anything related to setting up or installing Vector"
+      }
+    ],
+    "issue_type": "Task"
   },
   {
     "closed_at": "2020-03-23T19:21:21Z",
@@ -23164,55 +23170,55 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-04-23T23:56:35Z",
     "id": 605946137,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "DBE0E9",
-        "description": "Anything that is good for new contributors.",
-        "id": 942722858524630774,
-        "name": "good first issue"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs review & approval before work can begin.",
-        "id": 389285363867189610,
-        "name": "needs: approval"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      },
-      {
-        "color": "F69049",
-        "description": "We should have this feature, but is not required. It is medium priority.",
-        "id": 6848739542623159481,
-        "name": "have: should"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `azure` service provider related",
-        "id": 7368077849538816034,
-        "name": "provider: azure"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Request or implementation of a new sink",
-        "id": 8712994079615624380,
-        "name": "sink: new"
-      }
-    ],
     "number": 2434,
-    "state": "open",
     "title": "New `azure_event_hubs` sink",
-    "updated_at": "2026-02-23T14:32:33Z",
+    "state": "open",
+    "created_at": "2020-04-23T23:56:35Z",
+    "updated_at": "2026-10-05T08:31:12Z",
+    "closed_at": null,
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 942722858524630774,
+        "name": "good first issue",
+        "color": "DBE0E9",
+        "description": "Anything that is good for new contributors."
+      },
+      {
+        "id": 389285363867189610,
+        "name": "needs: approval",
+        "color": "FFF068",
+        "description": "Needs review & approval before work can begin."
+      },
+      {
+        "id": 6524463192304363030,
+        "name": "domain: sinks",
+        "color": "343639",
+        "description": "Anything related to Vector's sinks"
+      },
+      {
+        "id": 6848739542623159481,
+        "name": "have: should",
+        "color": "F69049",
+        "description": "We should have this feature, but is not required. It is medium priority."
+      },
+      {
+        "id": 7368077849538816034,
+        "name": "provider: azure",
+        "color": "5EAAF6",
+        "description": "Anything `azure` service provider related"
+      },
+      {
+        "id": 8712994079615624380,
+        "name": "sink: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new sink"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2020-04-29T13:34:07Z",
@@ -28928,45 +28934,33 @@
     }
   },
   {
-    "closed_at": "2020-06-02T23:34:53Z",
-    "created_at": "2020-05-25T17:28:33Z",
-    "draft": false,
     "id": 422841502,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `new_relic_logs` sink related",
-        "id": 4882020568537868950,
-        "name": "sink: new_relic_logs"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `new relic` service provider related",
-        "id": 4138123970470477608,
-        "name": "provider: new relic"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `humio_logs` sink related",
-        "id": 1528110697064549952,
-        "name": "sink: humio_logs"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `humio` service provider related",
-        "id": 1617017136147185242,
-        "name": "provider: humio"
-      }
-    ],
     "number": 2682,
-    "pull_request": {},
-    "state": "closed",
     "title": "enhancement: Add compression to humio and new_relic",
-    "updated_at": "2026-06-01T20:56:26Z",
+    "state": "closed",
+    "created_at": "2020-05-25T17:28:33Z",
+    "updated_at": "2026-10-16T20:20:44Z",
+    "closed_at": "2020-06-02T23:34:53Z",
     "user": {
       "login": "fanatid"
-    }
+    },
+    "labels": [
+      {
+        "id": 1528110697064549952,
+        "name": "sink: humio_logs",
+        "color": "5ED9F6",
+        "description": "Anything `humio_logs` sink related"
+      },
+      {
+        "id": 6859036421233790357,
+        "name": "sink: new_relic",
+        "color": "5ED9F6",
+        "description": "Anything `new_relic` sink related"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2020-05-27T22:37:44Z",
@@ -32371,27 +32365,27 @@
     }
   },
   {
-    "closed_at": "2020-07-07T18:25:43Z",
-    "created_at": "2020-06-15T21:03:11Z",
-    "draft": false,
     "id": 434792973,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F687F6",
-        "description": "Anything `centos` platform related",
-        "id": 4873163311517673697,
-        "name": "platform: centos"
-      }
-    ],
     "number": 2824,
-    "pull_request": {},
-    "state": "closed",
     "title": "chore(platforms): Move the builder to centos 7",
-    "updated_at": "2020-07-23T17:33:47Z",
+    "state": "closed",
+    "created_at": "2020-06-15T21:03:11Z",
+    "updated_at": "2026-10-16T21:12:55Z",
+    "closed_at": "2020-07-07T18:25:43Z",
     "user": {
       "login": "Hoverbear"
-    }
+    },
+    "labels": [
+      {
+        "id": 843604899509384131,
+        "name": "domain: releasing",
+        "color": "343639",
+        "description": "Anything related to releasing Vector"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2020-06-19T23:31:04Z",
@@ -33758,43 +33752,37 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-06-22T18:43:11Z",
     "id": 643285492,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "FFF068",
-        "description": "Needs an RFC before work can begin.",
-        "id": 3966424988425531626,
-        "name": "needs: rfc"
-      },
-      {
-        "color": "F69049",
-        "description": "We should have this feature, but is not required. It is medium priority.",
-        "id": 6848739542623159481,
-        "name": "have: should"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `heroku` service provider related",
-        "id": 7404517810340781213,
-        "name": "provider: heroku"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `heroku_logs` source related",
-        "id": 3962069667396443356,
-        "name": "source: heroku_logs"
-      }
-    ],
     "number": 2887,
-    "state": "open",
     "title": "Heroku Integration / Heroku Button",
-    "updated_at": "2026-02-23T14:32:42Z",
+    "state": "open",
+    "created_at": "2020-06-22T18:43:11Z",
+    "updated_at": "2026-10-16T20:37:28Z",
+    "closed_at": null,
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 3966424988425531626,
+        "name": "needs: rfc",
+        "color": "FFF068",
+        "description": "Needs an RFC before work can begin."
+      },
+      {
+        "id": 6848739542623159481,
+        "name": "have: should",
+        "color": "F69049",
+        "description": "We should have this feature, but is not required. It is medium priority."
+      },
+      {
+        "id": 3962069667396443356,
+        "name": "source: heroku_logs",
+        "color": "5ED9F6",
+        "description": "Anything `heroku_logs` source related"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2020-06-24T19:54:47Z",
@@ -34127,115 +34115,61 @@
     }
   },
   {
-    "closed_at": "2020-07-08T19:52:02Z",
-    "created_at": "2020-06-24T15:52:45Z",
     "id": 644725478,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F687F6",
-        "description": "Anything `docker` platform related",
-        "id": 7462033205188313656,
-        "name": "platform: docker"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `windows` platform related",
-        "id": 8574809679641896918,
-        "name": "platform: windows"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `macos` platform related",
-        "id": 5073036331243908899,
-        "name": "platform: macos"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `homebrew` platform related",
-        "id": 8618329693031260485,
-        "name": "platform: homebrew"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `dpkg` platform related",
-        "id": 5423566597892641573,
-        "name": "platform: dpkg"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `rhel` platform related",
-        "id": 6339709803847647408,
-        "name": "platform: rhel"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `centos` platform related",
-        "id": 4873163311517673697,
-        "name": "platform: centos"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `raspbian` platform related",
-        "id": 6722681473503365688,
-        "name": "platform: raspbian"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `rpm` platform related",
-        "id": 6620454305878207523,
-        "name": "platform: rpm"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `ubuntu` platform related",
-        "id": 499998336835463044,
-        "name": "platform: ubuntu"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `debian` platform related",
-        "id": 4144380383188086185,
-        "name": "platform: debian"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `nixos` platform related",
-        "id": 8490514429600989294,
-        "name": "platform: nixos"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `nix` platform related",
-        "id": 941709866117177578,
-        "name": "platform: nix"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's supported platforms",
-        "id": 9158268324614743307,
-        "name": "domain: platforms"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `arm64` platform related",
-        "id": 5397779638003501036,
-        "name": "platform: arm64"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `x86_64` platform related",
-        "id": 2675946954756381501,
-        "name": "platform: x86_64"
-      }
-    ],
     "number": 2900,
-    "state": "closed",
     "title": "Nix Based builds",
-    "updated_at": "2020-07-08T19:52:03Z",
+    "state": "closed",
+    "created_at": "2020-06-24T15:52:45Z",
+    "updated_at": "2026-10-16T21:12:57Z",
+    "closed_at": "2020-07-08T19:52:02Z",
     "user": {
       "login": "Hoverbear"
-    }
+    },
+    "labels": [
+      {
+        "id": 7462033205188313656,
+        "name": "platform: docker",
+        "color": "F687F6",
+        "description": "Anything `docker` platform related"
+      },
+      {
+        "id": 8574809679641896918,
+        "name": "platform: windows",
+        "color": "F687F6",
+        "description": "Anything `windows` platform related"
+      },
+      {
+        "id": 5073036331243908899,
+        "name": "platform: macos",
+        "color": "F687F6",
+        "description": "Anything `macos` platform related"
+      },
+      {
+        "id": 6620454305878207523,
+        "name": "platform: rpm",
+        "color": "F687F6",
+        "description": "Anything `rpm` platform related"
+      },
+      {
+        "id": 4144380383188086185,
+        "name": "platform: debian",
+        "color": "F687F6",
+        "description": "Anything `debian` platform related"
+      },
+      {
+        "id": 941709866117177578,
+        "name": "platform: nix",
+        "color": "F687F6",
+        "description": "Anything `nix`/`nixos` platform related"
+      },
+      {
+        "id": 9158268324614743307,
+        "name": "domain: platforms",
+        "color": "343639",
+        "description": "Anything related to Vector's supported platforms"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2020-06-25T14:09:39Z",
@@ -43104,37 +43038,43 @@
     }
   },
   {
-    "closed_at": "2020-10-16T22:35:16Z",
-    "created_at": "2020-07-30T18:46:50Z",
     "id": 669078576,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      },
-      {
-        "color": "F69049",
-        "description": "We should have this feature, but is not required. It is medium priority.",
-        "id": 6848739542623159481,
-        "name": "have: should"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `humio` service provider related",
-        "id": 1617017136147185242,
-        "name": "provider: humio"
-      }
-    ],
     "number": 3271,
-    "state": "closed",
     "title": "New `humio_metrics` sink",
-    "updated_at": "2026-05-29T23:31:44Z",
+    "state": "closed",
+    "created_at": "2020-07-30T18:46:50Z",
+    "updated_at": "2026-10-16T20:38:19Z",
+    "closed_at": "2020-10-16T22:35:16Z",
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 6524463192304363030,
+        "name": "domain: sinks",
+        "color": "343639",
+        "description": "Anything related to Vector's sinks"
+      },
+      {
+        "id": 6848739542623159481,
+        "name": "have: should",
+        "color": "F69049",
+        "description": "We should have this feature, but is not required. It is medium priority."
+      },
+      {
+        "id": 8322865295908984089,
+        "name": "sink: humio_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `humio_metrics` sink related"
+      },
+      {
+        "id": 8712994079615624380,
+        "name": "sink: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new sink"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2022-12-30T00:22:10Z",
@@ -48739,33 +48679,33 @@
     }
   },
   {
-    "closed_at": "2020-10-11T09:05:18Z",
-    "created_at": "2020-08-19T17:02:04Z",
-    "draft": false,
     "id": 470299336,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector's sinks",
-        "id": 6524463192304363030,
-        "name": "domain: sinks"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `sematext` service provider related",
-        "id": 4707123622637132876,
-        "name": "provider: sematext"
-      }
-    ],
     "number": 3501,
-    "pull_request": {},
-    "state": "closed",
     "title": "feat(new sink): New `sematext_metrics` sink",
-    "updated_at": "2026-05-29T23:31:51Z",
+    "state": "closed",
+    "created_at": "2020-08-19T17:02:04Z",
+    "updated_at": "2026-10-16T21:05:10Z",
+    "closed_at": "2020-10-11T09:05:18Z",
     "user": {
       "login": "StephenWakely"
-    }
+    },
+    "labels": [
+      {
+        "id": 6524463192304363030,
+        "name": "domain: sinks",
+        "color": "343639",
+        "description": "Anything related to Vector's sinks"
+      },
+      {
+        "id": 801574677671634811,
+        "name": "sink: sematext_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `sematext_metrics` sink related"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2020-08-20T12:39:43Z",
@@ -50312,25 +50252,25 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-08-25T21:04:46Z",
     "id": 685816554,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `file` source related",
-        "id": 3167616327810328810,
-        "name": "source: file"
-      }
-    ],
     "number": 3567,
-    "state": "open",
     "title": "Should vector be maintaining open file handles to `ignore_older` files older than the cutoff?",
-    "updated_at": "2026-06-02T14:41:05Z",
+    "state": "open",
+    "created_at": "2020-08-25T21:04:46Z",
+    "updated_at": "2026-09-09T13:21:11Z",
+    "closed_at": null,
     "user": {
       "login": "jszwedko"
-    }
+    },
+    "labels": [
+      {
+        "id": 3167616327810328810,
+        "name": "source: file",
+        "color": "5ED9F6",
+        "description": "Anything `file` source related"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2020-08-28T21:40:34Z",
@@ -52440,81 +52380,57 @@
     }
   },
   {
-    "closed_at": "2020-09-12T00:33:31Z",
-    "created_at": "2020-08-31T22:39:22Z",
-    "draft": false,
     "id": 476588328,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F687F6",
-        "description": "Anything `docker` platform related",
-        "id": 7462033205188313656,
-        "name": "platform: docker"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `dpkg` platform related",
-        "id": 5423566597892641573,
-        "name": "platform: dpkg"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `centos` platform related",
-        "id": 4873163311517673697,
-        "name": "platform: centos"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `rpm` platform related",
-        "id": 6620454305878207523,
-        "name": "platform: rpm"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `ubuntu` platform related",
-        "id": 499998336835463044,
-        "name": "platform: ubuntu"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `debian` platform related",
-        "id": 4144380383188086185,
-        "name": "platform: debian"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `nix` platform related",
-        "id": 941709866117177578,
-        "name": "platform: nix"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's supported platforms",
-        "id": 9158268324614743307,
-        "name": "domain: platforms"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `arm64` platform related",
-        "id": 5397779638003501036,
-        "name": "platform: arm64"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `x86_64` platform related",
-        "id": 2675946954756381501,
-        "name": "platform: x86_64"
-      }
-    ],
     "number": 3657,
-    "pull_request": {},
-    "state": "closed",
     "title": "chore(platforms): Migrate  x86 gnu target to cross, add new aarch64 gnu target (no sasl)",
-    "updated_at": "2020-09-12T00:33:32Z",
+    "state": "closed",
+    "created_at": "2020-08-31T22:39:22Z",
+    "updated_at": "2026-10-16T21:14:59Z",
+    "closed_at": "2020-09-12T00:33:31Z",
     "user": {
       "login": "Hoverbear"
-    }
+    },
+    "labels": [
+      {
+        "id": 7462033205188313656,
+        "name": "platform: docker",
+        "color": "F687F6",
+        "description": "Anything `docker` platform related"
+      },
+      {
+        "id": 6620454305878207523,
+        "name": "platform: rpm",
+        "color": "F687F6",
+        "description": "Anything `rpm` platform related"
+      },
+      {
+        "id": 4144380383188086185,
+        "name": "platform: debian",
+        "color": "F687F6",
+        "description": "Anything `debian` platform related"
+      },
+      {
+        "id": 941709866117177578,
+        "name": "platform: nix",
+        "color": "F687F6",
+        "description": "Anything `nix`/`nixos` platform related"
+      },
+      {
+        "id": 9158268324614743307,
+        "name": "domain: platforms",
+        "color": "343639",
+        "description": "Anything related to Vector's supported platforms"
+      },
+      {
+        "id": 3996083420765767120,
+        "name": "platform: arm",
+        "color": "F687F6",
+        "description": "Anything `arm` platform related"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2020-09-01T23:32:29Z",
@@ -52852,70 +52768,70 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-09-02T10:57:24Z",
     "id": 690923742,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `syslog` source related",
-        "id": 2424784285363771579,
-        "name": "source: syslog"
-      },
-      {
-        "color": "FFF068",
-        "description": "Needs review & approval before work can begin.",
-        "id": 389285363867189610,
-        "name": "needs: approval"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's log events",
-        "id": 1603740098990692642,
-        "name": "domain: logs"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to Vector's codecs (encoding/decoding)",
-        "id": 24217296173635418,
-        "name": "domain: codecs"
-      }
-    ],
     "number": 3675,
-    "state": "open",
     "title": "Reliable Event Logging Protocol (RELP) support for syslog source module",
-    "updated_at": "2026-06-02T14:41:41Z",
+    "state": "open",
+    "created_at": "2020-09-02T10:57:24Z",
+    "updated_at": "2026-10-08T17:35:41Z",
+    "closed_at": null,
     "user": {
       "login": "calvin"
-    }
-  },
-  {
-    "closed_at": null,
-    "created_at": "2020-09-02T12:53:35Z",
-    "id": 690996434,
-    "issue_type": null,
+    },
     "labels": [
       {
-        "color": "BF72F6",
-        "description": "A code change that does not add user value.",
-        "id": 2473344330675535720,
-        "name": "type: tech debt"
+        "id": 2424784285363771579,
+        "name": "source: syslog",
+        "color": "5ED9F6",
+        "description": "Anything `syslog` source related"
       },
       {
+        "id": 389285363867189610,
+        "name": "needs: approval",
+        "color": "FFF068",
+        "description": "Needs review & approval before work can begin."
+      },
+      {
+        "id": 1603740098990692642,
+        "name": "domain: logs",
         "color": "343639",
-        "description": "Anything related to configuring Vector",
-        "id": 4606596601252306592,
-        "name": "domain: config"
+        "description": "Anything related to Vector's log events"
+      },
+      {
+        "id": 24217296173635418,
+        "name": "domain: codecs",
+        "color": "343639",
+        "description": "Anything related to Vector's codecs (encoding/decoding)"
       }
     ],
+    "issue_type": "Enhancement"
+  },
+  {
+    "id": 690996434,
     "number": 3676,
-    "state": "open",
     "title": "Unify `endpoint` handling",
-    "updated_at": "2021-01-01T17:23:37Z",
+    "state": "open",
+    "created_at": "2020-09-02T12:53:35Z",
+    "updated_at": "2026-09-17T15:49:41Z",
+    "closed_at": null,
     "user": {
       "login": "ktff"
-    }
+    },
+    "labels": [
+      {
+        "id": 2473344330675535720,
+        "name": "type: tech debt",
+        "color": "BF72F6",
+        "description": "A code change that does not add user value."
+      },
+      {
+        "id": 4606596601252306592,
+        "name": "domain: config",
+        "color": "343639",
+        "description": "Anything related to configuring Vector"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2020-09-25T14:29:21Z",
@@ -57567,27 +57483,27 @@
     }
   },
   {
-    "closed_at": "2020-09-14T19:33:23Z",
-    "created_at": "2020-09-14T18:01:35Z",
-    "draft": false,
     "id": 486787753,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "f687f6",
-        "description": "Anything `freebsd` platform related",
-        "id": 5692587040578684135,
-        "name": "platform: freebsd"
-      }
-    ],
     "number": 3871,
-    "pull_request": {},
-    "state": "closed",
     "title": "docs: Added base FreeBSD operating system",
-    "updated_at": "2021-01-19T17:04:11Z",
+    "state": "closed",
+    "created_at": "2020-09-14T18:01:35Z",
+    "updated_at": "2026-10-16T20:32:23Z",
+    "closed_at": "2020-09-14T19:33:23Z",
     "user": {
       "login": "jamtur01"
-    }
+    },
+    "labels": [
+      {
+        "id": 9158268324614743307,
+        "name": "domain: platforms",
+        "color": "343639",
+        "description": "Anything related to Vector's supported platforms"
+      }
+    ],
+    "issue_type": null,
+    "pull_request": {},
+    "draft": false
   },
   {
     "closed_at": "2020-12-04T20:26:36Z",
@@ -59050,31 +58966,31 @@
     }
   },
   {
-    "closed_at": "2020-09-29T17:43:52Z",
-    "created_at": "2020-09-16T16:19:23Z",
     "id": 702900574,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F687F6",
-        "description": "Anything `centos` platform related",
-        "id": 4873163311517673697,
-        "name": "platform: centos"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `debian` platform related",
-        "id": 4144380383188086185,
-        "name": "platform: debian"
-      }
-    ],
     "number": 3935,
-    "state": "closed",
     "title": "systemd service: Should have CAP_NET_BIND_SERVICE",
-    "updated_at": "2020-09-29T17:43:52Z",
+    "state": "closed",
+    "created_at": "2020-09-16T16:19:23Z",
+    "updated_at": "2026-10-16T21:12:46Z",
+    "closed_at": "2020-09-29T17:43:52Z",
     "user": {
       "login": "Hoverbear"
-    }
+    },
+    "labels": [
+      {
+        "id": 6620454305878207523,
+        "name": "platform: rpm",
+        "color": "F687F6",
+        "description": "Anything `rpm` platform related"
+      },
+      {
+        "id": 4144380383188086185,
+        "name": "platform: debian",
+        "color": "F687F6",
+        "description": "Anything `debian` platform related"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2020-09-16T17:07:39Z",
@@ -59509,37 +59425,31 @@
     }
   },
   {
-    "closed_at": "2022-12-29T23:56:51Z",
-    "created_at": "2020-09-16T20:48:19Z",
     "id": 703064259,
-    "issue_type": null,
-    "labels": [
-      {
-        "color": "F687F6",
-        "description": "Anything `heroku` platform related",
-        "id": 6630978156868871054,
-        "name": "platform: heroku"
-      },
-      {
-        "color": "0366d6",
-        "description": "Larger, user-centric issue that contains multiple sub-issues",
-        "id": 2317352064883706706,
-        "name": "Epic"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Request or implementation of a new source",
-        "id": 2516345231450418203,
-        "name": "source: new"
-      }
-    ],
     "number": 3960,
-    "state": "closed",
     "title": "Source logs - Heroku",
-    "updated_at": "2022-12-29T23:56:51Z",
+    "state": "closed",
+    "created_at": "2020-09-16T20:48:19Z",
+    "updated_at": "2026-10-16T20:27:39Z",
+    "closed_at": "2022-12-29T23:56:51Z",
     "user": {
       "login": "vector-vic"
-    }
+    },
+    "labels": [
+      {
+        "id": 2317352064883706706,
+        "name": "Epic",
+        "color": "0366d6",
+        "description": "Larger, user-centric issue that contains multiple sub-issues"
+      },
+      {
+        "id": 2516345231450418203,
+        "name": "source: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new source"
+      }
+    ],
+    "issue_type": null
   },
   {
     "closed_at": "2020-09-25T23:25:57Z",
@@ -69646,31 +69556,37 @@
     }
   },
   {
-    "closed_at": "2021-10-04T15:28:26Z",
-    "created_at": "2020-10-06T12:59:46Z",
     "id": 715655117,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "F69049",
-        "description": "We should have this feature, but is not required. It is medium priority.",
-        "id": 6848739542623159481,
-        "name": "have: should"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `honeycomb` service provider related",
-        "id": 4727771332829979861,
-        "name": "provider: honeycomb"
-      }
-    ],
     "number": 4407,
-    "state": "closed",
     "title": "Honeycomb and Opencensus source/sink",
-    "updated_at": "2026-05-29T23:34:08Z",
+    "state": "closed",
+    "created_at": "2020-10-06T12:59:46Z",
+    "updated_at": "2026-10-16T21:03:10Z",
+    "closed_at": "2021-10-04T15:28:26Z",
     "user": {
       "login": "gburd"
-    }
+    },
+    "labels": [
+      {
+        "id": 3416928857745703519,
+        "name": "sink: honeycomb",
+        "color": "5ED9F6",
+        "description": "Anything `honeycomb` sink related"
+      },
+      {
+        "id": 6848739542623159481,
+        "name": "have: should",
+        "color": "F69049",
+        "description": "We should have this feature, but is not required. It is medium priority."
+      },
+      {
+        "id": 8712994079615624380,
+        "name": "sink: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new sink"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2020-10-20T13:33:53Z",
@@ -71263,43 +71179,43 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-10-09T18:02:49Z",
     "id": 718329799,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "FFF068",
-        "description": "Needs review & approval before work can begin.",
-        "id": 389285363867189610,
-        "name": "needs: approval"
-      },
-      {
-        "color": "343639",
-        "description": "Anything related to the Vector Remap Language",
-        "id": 4994616880674351535,
-        "name": "domain: vrl"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `remap` transform related",
-        "id": 6529458574801774570,
-        "name": "transform: remap"
-      },
-      {
-        "color": "C2E0C6",
-        "description": "changes to VRL's standard library.",
-        "id": 7065951752534439503,
-        "name": "vrl: stdlib"
-      }
-    ],
     "number": 4478,
-    "state": "open",
     "title": "Ability to produce an event fingerprint in the remap language",
-    "updated_at": "2026-06-12T20:24:36Z",
+    "state": "closed",
+    "created_at": "2020-10-09T18:02:49Z",
+    "updated_at": "2026-09-08T14:29:58Z",
+    "closed_at": "2026-09-08T14:29:32Z",
     "user": {
       "login": "binarylogic"
-    }
+    },
+    "labels": [
+      {
+        "id": 389285363867189610,
+        "name": "needs: approval",
+        "color": "FFF068",
+        "description": "Needs review & approval before work can begin."
+      },
+      {
+        "id": 4994616880674351535,
+        "name": "domain: vrl",
+        "color": "343639",
+        "description": "Anything related to the Vector Remap Language"
+      },
+      {
+        "id": 6529458574801774570,
+        "name": "transform: remap",
+        "color": "5ED9F6",
+        "description": "Anything `remap` transform related"
+      },
+      {
+        "id": 7065951752534439503,
+        "name": "vrl: stdlib",
+        "color": "C2E0C6",
+        "description": "changes to VRL's standard library."
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": "2022-08-04T21:12:57Z",
@@ -74050,37 +73966,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-10-16T19:03:55Z",
     "id": 723460032,
-    "issue_type": "Feature",
-    "labels": [
-      {
-        "color": "5EAAF6",
-        "description": "Anything `elastic` service provider related",
-        "id": 3984707160356903689,
-        "name": "provider: elastic"
-      },
-      {
-        "color": "F69049",
-        "description": "We should have this feature, but is not required. It is medium priority.",
-        "id": 6848739542623159481,
-        "name": "have: should"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Request or implementation of a new source",
-        "id": 2516345231450418203,
-        "name": "source: new"
-      }
-    ],
     "number": 4600,
-    "state": "open",
     "title": "Add Elasticsearch Bulk API, HTTP Server Source",
-    "updated_at": "2026-02-23T14:33:30Z",
+    "state": "open",
+    "created_at": "2020-10-16T19:03:55Z",
+    "updated_at": "2026-10-16T21:24:41Z",
+    "closed_at": null,
     "user": {
       "login": "rwaweber"
-    }
+    },
+    "labels": [
+      {
+        "id": 6848739542623159481,
+        "name": "have: should",
+        "color": "F69049",
+        "description": "We should have this feature, but is not required. It is medium priority."
+      },
+      {
+        "id": 2516345231450418203,
+        "name": "source: new",
+        "color": "5ED9F6",
+        "description": "Request or implementation of a new source"
+      }
+    ],
+    "issue_type": "Feature"
   },
   {
     "closed_at": null,
@@ -76606,46 +76516,46 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-10-23T15:36:12Z",
     "id": 728319630,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `new_relic_logs` sink related",
-        "id": 4882020568537868950,
-        "name": "sink: new_relic_logs"
-      }
-    ],
     "number": 4716,
-    "state": "open",
     "title": "Support counting compressed bytes for batching",
-    "updated_at": "2026-06-02T14:45:41Z",
+    "state": "open",
+    "created_at": "2020-10-23T15:36:12Z",
+    "updated_at": "2026-10-16T20:20:32Z",
+    "closed_at": null,
     "user": {
       "login": "jszwedko"
-    }
+    },
+    "labels": [
+      {
+        "id": 6859036421233790357,
+        "name": "sink: new_relic",
+        "color": "5ED9F6",
+        "description": "Anything `new_relic` sink related"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
-    "closed_at": "2022-08-04T21:21:28Z",
-    "created_at": "2020-10-23T15:41:07Z",
     "id": 728323129,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `new_relic_logs` sink related",
-        "id": 4882020568537868950,
-        "name": "sink: new_relic_logs"
-      }
-    ],
     "number": 4717,
-    "state": "closed",
     "title": "Default to `new_relic_logs` to gzip compression",
-    "updated_at": "2026-06-02T14:45:44Z",
+    "state": "closed",
+    "created_at": "2020-10-23T15:41:07Z",
+    "updated_at": "2026-10-16T20:20:30Z",
+    "closed_at": "2022-08-04T21:21:28Z",
     "user": {
       "login": "jszwedko"
-    }
+    },
+    "labels": [
+      {
+        "id": 6859036421233790357,
+        "name": "sink: new_relic",
+        "color": "5ED9F6",
+        "description": "Anything `new_relic` sink related"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": null,
@@ -76798,31 +76708,31 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-10-23T22:15:04Z",
     "id": 728552799,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `http` sink related",
-        "id": 7439553622450385285,
-        "name": "sink: http"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `http_server` source related",
-        "id": 4345892752843924220,
-        "name": "source: http_server"
-      }
-    ],
     "number": 4724,
-    "state": "open",
     "title": "Add jitter to HTTP retry behavior",
-    "updated_at": "2026-06-02T14:45:46Z",
+    "state": "closed",
+    "created_at": "2020-10-23T22:15:04Z",
+    "updated_at": "2026-09-08T14:27:29Z",
+    "closed_at": "2026-09-08T14:27:28Z",
     "user": {
       "login": "jszwedko"
-    }
+    },
+    "labels": [
+      {
+        "id": 7439553622450385285,
+        "name": "sink: http",
+        "color": "5ED9F6",
+        "description": "Anything `http` sink related"
+      },
+      {
+        "id": 4345892752843924220,
+        "name": "source: http_server",
+        "color": "5ED9F6",
+        "description": "Anything `http_server` source related"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2020-11-05T22:56:47Z",
@@ -76979,37 +76889,25 @@
     }
   },
   {
-    "closed_at": "2020-10-27T18:05:29Z",
-    "created_at": "2020-10-25T00:15:16Z",
     "id": 728905314,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "5EAAF6",
-        "description": "Anything `heroku` service provider related",
-        "id": 7404517810340781213,
-        "name": "provider: heroku"
-      },
-      {
-        "color": "F687F6",
-        "description": "Anything `heroku` platform related",
-        "id": 6630978156868871054,
-        "name": "platform: heroku"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `heroku_logs` source related",
-        "id": 3962069667396443356,
-        "name": "source: heroku_logs"
-      }
-    ],
     "number": 4732,
-    "state": "closed",
     "title": "Support annotating logs with URL parameters for the logplex source",
-    "updated_at": "2026-06-02T14:45:48Z",
+    "state": "closed",
+    "created_at": "2020-10-25T00:15:16Z",
+    "updated_at": "2026-10-16T20:27:36Z",
+    "closed_at": "2020-10-27T18:05:29Z",
     "user": {
       "login": "jszwedko"
-    }
+    },
+    "labels": [
+      {
+        "id": 3962069667396443356,
+        "name": "source: heroku_logs",
+        "color": "5ED9F6",
+        "description": "Anything `heroku_logs` source related"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2020-10-27T18:05:29Z",
@@ -82754,37 +82652,31 @@
     }
   },
   {
-    "closed_at": "2021-09-22T16:53:30Z",
-    "created_at": "2020-11-11T16:43:25Z",
     "id": 740910761,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "343639",
-        "description": "Anything related to monitoring/observing Vector",
-        "id": 8902634565218545672,
-        "name": "domain: observability"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `new_relic_logs` sink related",
-        "id": 4882020568537868950,
-        "name": "sink: new_relic_logs"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `new relic` service provider related",
-        "id": 4138123970470477608,
-        "name": "provider: new relic"
-      }
-    ],
     "number": 4982,
-    "state": "closed",
     "title": "Define events for the `new_relic_logs` sink",
-    "updated_at": "2026-06-02T14:48:46Z",
+    "state": "closed",
+    "created_at": "2020-11-11T16:43:25Z",
+    "updated_at": "2026-10-16T20:20:28Z",
+    "closed_at": "2021-09-22T16:53:30Z",
     "user": {
       "login": "jamtur01"
-    }
+    },
+    "labels": [
+      {
+        "id": 8902634565218545672,
+        "name": "domain: observability",
+        "color": "343639",
+        "description": "Anything related to monitoring/observing Vector"
+      },
+      {
+        "id": 6859036421233790357,
+        "name": "sink: new_relic",
+        "color": "5ED9F6",
+        "description": "Anything `new_relic` sink related"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2021-09-23T19:15:13Z",
@@ -99525,43 +99417,37 @@
     }
   },
   {
-    "closed_at": null,
-    "created_at": "2020-12-28T16:20:26Z",
     "id": 775478065,
-    "issue_type": "Enhancement",
-    "labels": [
-      {
-        "color": "5ED9F6",
-        "description": "Anything `splunk_hec_logs` sink related",
-        "id": 6845382385514977530,
-        "name": "sink: splunk_hec_logs"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `new_relic_logs` sink related",
-        "id": 4882020568537868950,
-        "name": "sink: new_relic_logs"
-      },
-      {
-        "color": "5EAAF6",
-        "description": "Anything `new relic` service provider related",
-        "id": 4138123970470477608,
-        "name": "provider: new relic"
-      },
-      {
-        "color": "5ED9F6",
-        "description": "Anything `splunk_hec_metrics` sink related",
-        "id": 2729017698418463843,
-        "name": "sink: splunk_hec_metrics"
-      }
-    ],
     "number": 5740,
-    "state": "open",
     "title": "Audit HTTP sources for `rate_limit_num` defaults",
-    "updated_at": "2026-06-12T19:17:07Z",
+    "state": "open",
+    "created_at": "2020-12-28T16:20:26Z",
+    "updated_at": "2026-10-16T21:04:20Z",
+    "closed_at": null,
     "user": {
       "login": "jszwedko"
-    }
+    },
+    "labels": [
+      {
+        "id": 6845382385514977530,
+        "name": "sink: splunk_hec_logs",
+        "color": "5ED9F6",
+        "description": "Anything `splunk_hec_logs` sink related"
+      },
+      {
+        "id": 6859036421233790357,
+        "name": "sink: new_relic",
+        "color": "5ED9F6",
+        "description": "Anything `new_relic` sink related"
+      },
+      {
+        "id": 2729017698418463843,
+        "name": "sink: splunk_hec_metrics",
+        "color": "5ED9F6",
+        "description": "Anything `splunk_hec_metrics` sink related"
+      }
+    ],
+    "issue_type": "Enhancement"
   },
   {
     "closed_at": "2020-12-28T17:05:36Z",
