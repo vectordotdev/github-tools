@@ -26,7 +26,9 @@ const PALETTE: &[&str] = &[
     "#79E2F2", "#ABF5D1", "#FFE380", "#FFBDAD", "#B3D4FF",
 ];
 
-const EXCLUDE_LABELS: &[&str] = &["no-changelog", "meta: awaiting author"];
+fn exclude_label(name: &str) -> bool {
+    name == "no-changelog" || crate::labels::is_awaiting_author(name)
+}
 
 pub(crate) fn slugify(s: &str) -> String {
     s.chars()
@@ -39,26 +41,47 @@ pub(crate) fn slugify(s: &str) -> String {
 }
 
 fn label_color(name: &str) -> &'static str {
-    match name {
-        "type: bug"  | "Bug"                => "#FF4C4C",
-        "type: feature" | "Feature"         => COLOR_ANSWERED,
-        "type: enhancement" | "Enhancement" => COLOR_NEW_CONTRIBUTOR,
-        "type: task" | "Task"               => "#FFA500",
-        "domain: external docs"             => "#afab7e",
-        "domain: ci"                        => "#d6c720",
-        "dependencies" | "domain: deps"     => "#1f3f18",
-        "domain: core"                      => "#b50036",
-        "domain: sources"                   => "#2dbcbc",
-        "domain: transforms"                => "#8615bf",
-        "domain: sinks"                     => "#ad4f47",
-        _ => {
-            // DJB2 hash
-            let hash = name.bytes().fold(5381u64, |h, b| {
-                h.wrapping_mul(33).wrapping_add(b as u64)
-            });
-            PALETTE[(hash as usize) % PALETTE.len()]
-        }
+    let normalized = crate::labels::normalize(name);
+    let prefix = normalized.split_once(':').map(|(prefix, _)| prefix);
+    match prefix {
+        Some("domain") => "#94A3B8",
+        Some("codec") => "#A5B4E3",
+        Some("source") => "#85BFAF",
+        Some("sink") => "#8FB5DE",
+        Some("transform") => "#B8A5D6",
+        Some("enrichment_table") => "#A8C49A",
+        Some("platform") => "#D3A6BF",
+        Some("provider") => "#8DC2CF",
+        Some("vrl" | "stdlib") => "#B8C88D",
+        Some("type") => "#C5A7D5",
+        Some("complexity") => "#A4B5C8",
+        Some("meta") => "#BDC3CD",
+        Some("needs") => "#E3C785",
+        Some("have") => "#D7B38E",
+        Some("preview") => "#DDA391",
+        _ => match normalized.as_ref() {
+            "Bug" | "Feature" | "Enhancement" | "Task" => "#C5A7D5",
+            "dependencies" => "#94A3B8",
+            _ => {
+                let hash = normalized.bytes().fold(5381u64, |h, b| {
+                    h.wrapping_mul(33).wrapping_add(b as u64)
+                });
+                PALETTE[(hash as usize) % PALETTE.len()]
+            }
+        },
     }
+}
+
+fn resolve_type_overlays(cols: &[String]) -> Vec<(String, Vec<String>)> {
+    [("bug", "Bug"), ("feature", "Feature"), ("enhancement", "Enhancement"), ("task", "Task")]
+        .into_iter()
+        .filter_map(|(kind, native)| {
+            let name = format!("type:{kind}");
+            let matching: Vec<String> = cols.iter()
+                .filter(|col| col.as_str() == native || crate::labels::normalize(col) == name)
+                .cloned().collect();
+            (!matching.is_empty()).then_some((name, matching))
+        }).collect()
 }
 
 fn color(s: &str) -> Color {
@@ -217,7 +240,7 @@ pub fn label_breakdown(rows: &[&HashMap<String, String>]) -> Chart {
     let mut pairs: Vec<(String, i64)> = rows.iter()
         .filter_map(|r| {
             let name = r.get("label_name")?.clone();
-            if EXCLUDE_LABELS.contains(&name.as_str()) { return None; }
+            if exclude_label(&name) { return None; }
             let count = parse_i64(r.get("count").map(|s| s.as_str()).unwrap_or("0"));
             Some((name, count))
         })
@@ -258,7 +281,7 @@ pub fn label_counts_over_time(rows: &[&HashMap<String, String>]) -> Chart {
     for row in rows {
         let month = match row.get("month") { Some(m) => m.clone(), None => continue };
         let label = match row.get("label_name") { Some(l) => l.clone(), None => continue };
-        if EXCLUDE_LABELS.contains(&label.as_str()) { continue; }
+        if exclude_label(&label) { continue; }
         let count = parse_i64(row.get("count").map(|s| s.as_str()).unwrap_or("0"));
         *pivot.entry(month.clone()).or_default().entry(label.clone()).or_insert(0) += count;
         *label_totals.entry(label).or_insert(0) += count;
@@ -306,7 +329,7 @@ pub fn open_closed_by_label(rows: &[&HashMap<String, String>]) -> Option<Chart> 
     let mut pairs: Vec<(String, i64, i64)> = rows.iter()
         .filter_map(|r| {
             let name = r.get("label_name")?.clone();
-            if EXCLUDE_LABELS.contains(&name.as_str()) { return None; }
+            if exclude_label(&name) { return None; }
             if !name.starts_with("source:") && !name.starts_with("transform:") && !name.starts_with("sink:") {
                 return None;
             }
@@ -1159,27 +1182,6 @@ pub(crate) fn build(input_dir: &str, repo: &str, start: Option<&str>) -> Result<
 
     // Top 5 label columns for overlay (those that are not the standard cols)
     let _standard_issue_cols = ["month", "created_issues", "closed_issues"];
-    // Fixed type overlays matching Python's TYPE_OVERLAYS.
-    // Collects ALL matching columns per type and sums them (mirrors df[matching].sum(axis=1)),
-    // so repos that use both "type: bug" (label) and "Bug" (native type) get a continuous series.
-    const TYPE_OVERLAY_CANDIDATES: &[(&str, &[&str])] = &[
-        ("type: bug",         &["type: bug",         "Bug"]),
-        ("type: feature",     &["type: feature",     "Feature"]),
-        ("type: enhancement", &["type: enhancement", "Enhancement"]),
-        ("type: task",        &["type: task",        "Task"]),
-    ];
-    fn resolve_type_overlays(cols: &[String]) -> Vec<(String, Vec<String>)> {
-        TYPE_OVERLAY_CANDIDATES.iter()
-            .filter_map(|(name, candidates)| {
-                let matching: Vec<String> = candidates.iter()
-                    .filter(|&&c| cols.iter().any(|col| col == c))
-                    .map(|&c| c.to_string())
-                    .collect();
-                if matching.is_empty() { None } else { Some((name.to_string(), matching)) }
-            })
-            .collect()
-    }
-
     let issue_type_overlays = resolve_type_overlays(&issues_monthly_cols);
     let pr_type_overlays = resolve_type_overlays(&pr_monthly_cols);
 
@@ -1202,12 +1204,12 @@ pub(crate) fn build(input_dir: &str, repo: &str, start: Option<&str>) -> Result<
         if !issues_label_bd.is_empty() {
             let filtered = filter_by_start(&issues_label_bd, None);
             let chart = label_breakdown(&filtered);
-            entries.push(chart_to_entry_h("Top Labels (Issues)", Some("no-changelog and meta: awaiting author excluded"), &chart, 550)?);
+            entries.push(chart_to_entry_h("Top Labels (Issues)", Some("no-changelog and meta:awaiting author excluded"), &chart, 550)?);
         }
         if !issues_label_counts.is_empty() {
             let filtered = filter_by_start(&issues_label_counts, start);
             let chart = label_counts_over_time(&filtered);
-            entries.push(chart_to_entry("Label Counts Over Time (Issues)", Some("no-changelog and meta: awaiting author excluded"), &chart)?);
+            entries.push(chart_to_entry("Label Counts Over Time (Issues)", Some("no-changelog and meta:awaiting author excluded"), &chart)?);
         }
         if !issues_open_by_label.is_empty() {
             let filtered = filter_by_start(&issues_open_by_label, None);
@@ -1242,12 +1244,12 @@ pub(crate) fn build(input_dir: &str, repo: &str, start: Option<&str>) -> Result<
         if !pr_label_bd.is_empty() {
             let filtered = filter_by_start(&pr_label_bd, None);
             let chart = label_breakdown(&filtered);
-            entries.push(chart_to_entry_h("Top Labels (Pull Requests)", Some("Draft PRs excluded · no-changelog and meta: awaiting author excluded"), &chart, 550)?);
+            entries.push(chart_to_entry_h("Top Labels (Pull Requests)", Some("Draft PRs excluded · no-changelog and meta:awaiting author excluded"), &chart, 550)?);
         }
         if !pr_label_counts.is_empty() {
             let filtered = filter_by_start(&pr_label_counts, start);
             let chart = label_counts_over_time(&filtered);
-            entries.push(chart_to_entry("Label Counts Over Time (Pull Requests)", Some("Draft PRs excluded · no-changelog and meta: awaiting author excluded"), &chart)?);
+            entries.push(chart_to_entry("Label Counts Over Time (Pull Requests)", Some("Draft PRs excluded · no-changelog and meta:awaiting author excluded"), &chart)?);
         }
         if !pr_open_by_label.is_empty() {
             let filtered = filter_by_start(&pr_open_by_label, None);
@@ -1449,5 +1451,78 @@ mod ai_stats_tests {
         fs::write(&path, "broken").unwrap();
         assert!(read_ai_stats(dir.to_str().unwrap(), "test").is_err());
         fs::remove_dir_all(dir).unwrap();
+    }
+}
+
+#[cfg(test)]
+mod label_compatibility_tests {
+    use super::*;
+
+    #[test]
+    fn label_charts_exclude_both_awaiting_author_spellings() {
+        let rows: Vec<HashMap<String, String>> = [
+            "meta: awaiting author",
+            "meta:awaiting author",
+            "no-changelog",
+            "domain:ci",
+        ]
+        .into_iter()
+        .map(|name| {
+            [
+                ("label_name".into(), name.into()),
+                ("count".into(), "2".into()),
+                ("month".into(), "2020-01".into()),
+            ]
+            .into_iter()
+            .collect()
+        })
+        .collect();
+        let refs: Vec<_> = rows.iter().collect();
+        let breakdown = serde_json::to_value(label_breakdown(&refs)).unwrap();
+        assert_eq!(
+            breakdown["yAxis"][0]["data"],
+            serde_json::json!(["domain:ci"])
+        );
+        let trend = serde_json::to_value(label_counts_over_time(&refs)).unwrap();
+        assert_eq!(trend["series"].as_array().unwrap().len(), 1);
+        assert_eq!(trend["series"][0]["name"], "domain:ci");
+    }
+
+    #[test]
+    fn prefix_colors_match_for_old_and_new_labels_and_type_overlays_accept_both() {
+        for (prefix, expected) in [
+            ("domain", "#94A3B8"),
+            ("codec", "#A5B4E3"),
+            ("source", "#85BFAF"),
+            ("sink", "#8FB5DE"),
+            ("transform", "#B8A5D6"),
+            ("enrichment_table", "#A8C49A"),
+            ("platform", "#D3A6BF"),
+            ("provider", "#8DC2CF"),
+            ("vrl", "#B8C88D"),
+            ("stdlib", "#B8C88D"),
+            ("type", "#C5A7D5"),
+            ("complexity", "#A4B5C8"),
+            ("meta", "#BDC3CD"),
+            ("needs", "#E3C785"),
+            ("have", "#D7B38E"),
+            ("preview", "#DDA391"),
+        ] {
+            assert_eq!(label_color(&format!("{prefix}:example")), expected);
+            assert_eq!(label_color(&format!("{prefix}: other example")), expected);
+        }
+        let columns: Vec<String> = [
+            "type:enhancement",
+            "type: enhancement",
+            "Enhancement",
+            "not an issue type",
+        ]
+        .into_iter()
+        .map(String::from)
+        .collect();
+        assert_eq!(
+            resolve_type_overlays(&columns),
+            vec![("type:enhancement".into(), columns[..3].to_vec())]
+        );
     }
 }

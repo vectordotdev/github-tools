@@ -94,7 +94,7 @@ AI review:
   automated-review-stats  Count review bot comments by reaction (liked / disliked / no signal)
 
 Maintenance:
-  close-old-prs          Close PRs with 'meta: awaiting author' older than 6 months
+  close-old-prs          Close PRs with 'meta:awaiting author' older than 6 months
   delete-stale-branches  Delete branches with no commits in 4 years
   remove-legacy-label    Remove legacy type labels from issues/PRs
   replace-label          Replace a label on issues, PRs and discussions (preview by default)

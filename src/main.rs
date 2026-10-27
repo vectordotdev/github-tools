@@ -176,7 +176,7 @@ enum Command {
         #[arg(long, help = "Skip confirmation prompt")]
         yes: bool,
     },
-    /// Close old PRs with the 'meta: awaiting author' label
+    /// Close old PRs with the 'meta:awaiting author' label
     CloseOldPrs {
         #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
         repo: String,
