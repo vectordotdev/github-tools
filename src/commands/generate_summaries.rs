@@ -77,9 +77,9 @@ fn normalize_label_sql(col: &str) -> String {
 /// A native issue type takes precedence over an equivalent label spelling.
 fn non_type_label_sql(table: &str) -> String {
     format!(
-        "lower({}) != lower({})",
-        normalize_label_sql("labels.name"),
-        normalize_label_sql(&format!("{table}.issue_type"))
+        "(lower({label}) != lower({native}) AND lower({label}) != 'type:' || lower({table}.issue_type))",
+        label = normalize_label_sql("labels.name"),
+        native = normalize_label_sql(&format!("{table}.issue_type"))
     )
 }
 
@@ -575,6 +575,15 @@ mod label_tests {
                 .unwrap();
             assert_eq!(actual, expected);
         }
+        // Custom native issue types also take precedence over their prefixed labels.
+        conn.execute_batch("INSERT INTO issues VALUES (5, 'Incident', 'open', '2020-01-05', NULL, 0);
+            INSERT INTO labels VALUES (6, 'type: incident'), (7, 'type:incident');
+            INSERT INTO issue_labels VALUES (5, 6), (5, 7);").unwrap();
+        let retained: i64 = conn.query_row(&format!(
+            "SELECT count(*) FROM issues JOIN issue_labels ON issues.id = issue_labels.issue_id
+             JOIN labels ON labels.id = issue_labels.label_id WHERE issues.id = 5 AND {}",
+            non_type_label_sql("issues")), [], |r| r.get(0)).unwrap();
+        assert_eq!(retained, 0);
         fs::remove_dir_all(dir).unwrap();
     }
 }
