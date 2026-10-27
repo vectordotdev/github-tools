@@ -1,5 +1,6 @@
 pub mod commands;
 pub mod config;
+mod labels;
 
 /// Prompt the user for confirmation. Returns true if they type "y" or "yes".
 /// If `yes` is true, skips the prompt and returns true immediately.

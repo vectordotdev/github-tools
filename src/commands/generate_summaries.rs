@@ -56,18 +56,30 @@ fn build_where(table: &str, extra: &[&str]) -> String {
     }
 }
 
-/// Returns a SQL CASE expression that normalises legacy label aliases to their
-/// canonical form. Bare type labels (e.g. "bug", "Bug") are folded into their
-/// "type: x" equivalents so all repos produce consistent column names and colors.
+/// Normalize separator whitespace and historical aliases before grouping labels.
 fn normalize_label_sql(col: &str) -> String {
+    let normalized = format!(
+        "(CASE WHEN instr({col}, ':') > 0 \
+         THEN substr({col}, 1, instr({col}, ':')) || ltrim(substr({col}, instr({col}, ':') + 1)) \
+         ELSE {col} END)"
+    );
     format!(
         "CASE \
-         WHEN {col} = 'domain: deps' THEN 'dependencies' \
-         WHEN lower({col}) = 'bug' THEN 'type: bug' \
-         WHEN lower({col}) = 'enhancement' THEN 'type: enhancement' \
-         WHEN lower({col}) = 'feature' THEN 'type: feature' \
-         WHEN lower({col}) = 'task' THEN 'type: task' \
-         ELSE {col} END"
+         WHEN {normalized} = 'domain:deps' THEN 'dependencies' \
+         WHEN lower({normalized}) = 'bug' THEN 'type:bug' \
+         WHEN lower({normalized}) = 'enhancement' THEN 'type:enhancement' \
+         WHEN lower({normalized}) = 'feature' THEN 'type:feature' \
+         WHEN lower({normalized}) = 'task' THEN 'type:task' \
+         ELSE {normalized} END"
+    )
+}
+
+/// A native issue type takes precedence over an equivalent label spelling.
+fn non_type_label_sql(table: &str) -> String {
+    format!(
+        "lower({}) != lower({})",
+        normalize_label_sql("labels.name"),
+        normalize_label_sql(&format!("{table}.issue_type"))
     )
 }
 
@@ -97,11 +109,7 @@ fn export_monthly_summary(
         .is_ok();
 
     let wc_label = if has_issue_type {
-        let cond = format!(
-            "({table}.issue_type IS NULL \
-             OR (lower(labels.name) != lower({table}.issue_type) \
-             AND lower(labels.name) != 'type: ' || lower({table}.issue_type)))"
-        );
+        let cond = format!("({table}.issue_type IS NULL OR {})", non_type_label_sql(table));
         build_where(table, &[cond.as_str()])
     } else {
         build_where(table, &[])
@@ -223,6 +231,7 @@ fn export_label_breakdown(
         let draft_and = if table == "pull_requests" { "AND is_draft = 0" } else { "" };
         let norm = normalize_label_sql("labels.name");
         let norm_it = normalize_label_sql(&format!("{table}.issue_type"));
+        let non_type_label = non_type_label_sql(table);
         format!(
             "SELECT label_name, SUM(count) AS count FROM (
                  SELECT label_name, COUNT(*) AS count FROM (
@@ -239,8 +248,7 @@ fn export_label_breakdown(
                      JOIN issue_labels ON {table}.id = issue_labels.issue_id
                      JOIN labels ON labels.id = issue_labels.label_id
                      WHERE {table}.issue_type IS NOT NULL {draft_and}
-                     AND lower(labels.name) != lower({table}.issue_type)
-                     AND lower(labels.name) != 'type: ' || lower({table}.issue_type)
+                     AND {non_type_label}
                  ) GROUP BY label_name
                  UNION ALL
                  SELECT {norm_it} AS label_name, COUNT(*) AS count
@@ -289,6 +297,7 @@ fn export_label_timeseries(
         let draft_and = if table == "pull_requests" { "AND is_draft = 0" } else { "" };
         let norm = normalize_label_sql("labels.name");
         let norm_it = normalize_label_sql(&format!("{table}.issue_type"));
+        let non_type_label = non_type_label_sql(table);
         format!(
             "SELECT month, label_name, SUM(count) AS count FROM (
                  SELECT month, label_name, COUNT(*) AS count FROM (
@@ -305,8 +314,7 @@ fn export_label_timeseries(
                      JOIN issue_labels ON {table}.id = issue_labels.issue_id
                      JOIN labels ON labels.id = issue_labels.label_id
                      WHERE {table}.issue_type IS NOT NULL {draft_and}
-                     AND lower(labels.name) != lower({table}.issue_type)
-                     AND lower(labels.name) != 'type: ' || lower({table}.issue_type)
+                     AND {non_type_label}
                  ) GROUP BY month, label_name
                  UNION ALL
                  SELECT substr(created_at, 1, 7) AS month, {norm_it} AS label_name, COUNT(*) AS count
@@ -474,5 +482,99 @@ fn value_to_string(val: rusqlite::types::Value) -> String {
         rusqlite::types::Value::Real(f) => f.to_string(),
         rusqlite::types::Value::Text(s) => s,
         rusqlite::types::Value::Blob(b) => String::from_utf8_lossy(&b).to_string(),
+    }
+}
+
+#[cfg(test)]
+mod label_tests {
+    use super::*;
+
+    #[test]
+    fn summaries_merge_historical_names_and_do_not_double_count_native_types() {
+        let conn = Connection::open_in_memory().unwrap();
+        conn.execute_batch("CREATE TABLE issues (id INTEGER, issue_type TEXT, state TEXT, created_at TEXT, closed_at TEXT, is_draft INTEGER);
+            CREATE TABLE labels (id INTEGER, name TEXT);
+            CREATE TABLE issue_labels (issue_id INTEGER, label_id INTEGER);
+            INSERT INTO issues VALUES (1, 'Enhancement', 'open', '2020-01-01', NULL, 0),
+                (2, NULL, 'open', '2020-01-02', NULL, 0), (3, NULL, 'open', '2020-01-03', NULL, 0),
+                (4, NULL, 'open', '2020-01-04', NULL, 1);
+            INSERT INTO labels VALUES (1, 'type: enhancement'), (2, 'type:enhancement'),
+                (3, 'domain: deps'), (4, 'domain:deps'), (5, 'domain: external docs');
+            INSERT INTO issue_labels VALUES (1, 1), (1, 2), (1, 5), (2, 1), (2, 2), (3, 3), (3, 4), (4, 1);
+            CREATE TABLE pull_requests AS SELECT * FROM issues;").unwrap();
+        let dir = std::env::temp_dir().join(format!(
+            "label-summary-{}-{}",
+            std::process::id(),
+            Utc::now().timestamp_nanos_opt().unwrap()
+        ));
+        fs::create_dir_all(&dir).unwrap();
+        let config = Config {
+            github_token: String::new(),
+            org: "test".into(),
+            repo: "labels".into(),
+        };
+        for table in ["issues", "pull_requests"] {
+            export_label_breakdown(&conn, &dir, &config, table).unwrap();
+            export_label_timeseries(&conn, &dir, &config, table).unwrap();
+            export_open_by_label(&conn, &dir, &config, table).unwrap();
+            export_monthly_summary(&conn, &dir, &config, table).unwrap();
+            let expected = if table == "issues" { "3" } else { "2" };
+            for suffix in ["label_breakdown", "label_counts", "open_by_label"] {
+                let path = csv_path(&dir, &config, table, suffix);
+                let mut reader = csv::Reader::from_path(path).unwrap();
+                let rows: Vec<std::collections::HashMap<String, String>> =
+                    reader.deserialize().map(Result::unwrap).collect();
+                assert_eq!(rows.len(), 3, "{table}/{suffix}: {rows:?}");
+                let enhancement = rows
+                    .iter()
+                    .find(|r| r["label_name"] == "type:enhancement")
+                    .unwrap();
+                let count = if suffix == "open_by_label" {
+                    "open_count"
+                } else {
+                    "count"
+                };
+                assert_eq!(enhancement[count], expected, "{table}/{suffix}");
+                assert_eq!(
+                    rows.iter()
+                        .find(|r| r["label_name"] == "dependencies")
+                        .unwrap()[count],
+                    "1"
+                );
+                assert!(
+                    rows.iter()
+                        .any(|r| r["label_name"] == "domain:external docs")
+                );
+            }
+            let mut reader =
+                csv::Reader::from_path(csv_path(&dir, &config, table, "monthly_summary")).unwrap();
+            let row: std::collections::HashMap<String, String> =
+                reader.deserialize().next().unwrap().unwrap();
+            assert_eq!(row["Enhancement"], "1");
+            assert_eq!(
+                row["type:enhancement"],
+                if table == "issues" { "2" } else { "1" }
+            );
+            assert!(!row.contains_key("type: enhancement"));
+        }
+        for (input, expected) in [
+            ("Bug", "type:bug"),
+            ("type: bug", "type:bug"),
+            ("type:bug", "type:bug"),
+            ("domain: deps", "dependencies"),
+            ("domain:deps", "dependencies"),
+            ("meta: awaiting author", "meta:awaiting author"),
+            ("good first issue", "good first issue"),
+        ] {
+            let actual: String = conn
+                .query_row(
+                    &format!("SELECT {}", normalize_label_sql("?1")),
+                    [input],
+                    |r| r.get(0),
+                )
+                .unwrap();
+            assert_eq!(actual, expected);
+        }
+        fs::remove_dir_all(dir).unwrap();
     }
 }

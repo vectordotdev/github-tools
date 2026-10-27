@@ -29,9 +29,13 @@ struct TypeInfo {
 fn type_mapping() -> HashMap<&'static str, TypeInfo> {
     HashMap::from([
         ("type: bug", TypeInfo { name: "Bug" }),
+        ("type:bug", TypeInfo { name: "Bug" }),
         ("type: enhancement", TypeInfo { name: "Enhancement" }),
+        ("type:enhancement", TypeInfo { name: "Enhancement" }),
         ("type: feature", TypeInfo { name: "Feature" }),
+        ("type:feature", TypeInfo { name: "Feature" }),
         ("type: task", TypeInfo { name: "Task" }),
+        ("type:task", TypeInfo { name: "Task" }),
     ])
 }
 
@@ -391,4 +395,27 @@ pub fn run(args: &Args) -> Result<()> {
         "\nDone. Items seen={total_seen}, processed={processed_count}, changed={total_changed}, skipped/unchanged={total_skipped}."
     );
     Ok(())
+}
+
+#[cfg(test)]
+mod label_tests {
+    use super::*;
+
+    #[test]
+    fn legacy_type_migration_accepts_both_separator_spellings() {
+        let mapping = type_mapping();
+        for (kind, issue_type) in [
+            ("bug", "Bug"),
+            ("enhancement", "Enhancement"),
+            ("feature", "Feature"),
+            ("task", "Task"),
+        ] {
+            for separator in [":", ": "] {
+                assert_eq!(
+                    mapping[format!("type{separator}{kind}").as_str()].name,
+                    issue_type
+                );
+            }
+        }
+    }
 }

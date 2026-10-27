@@ -4,7 +4,6 @@ use chrono::{DateTime, Duration, Utc};
 use reqwest::blocking::Client;
 use serde_json::Value;
 
-const AWAITING_LABEL: &str = "meta: awaiting author";
 const CLOSE_COMMENT: &str = "\
 Thank you for your contribution to Vector! To keep the repository tidy and focused, \
 we are closing this PR due to inactivity. \
@@ -38,7 +37,7 @@ pub fn run(config: &Config, dry_run: bool, yes: bool) -> Result<()> {
             .map(|a| a.iter().filter_map(|l| l["name"].as_str()).collect())
             .unwrap_or_default();
 
-        if labels.contains(&AWAITING_LABEL) {
+        if labels.iter().any(|name| crate::labels::is_awaiting_author(name)) {
             matched.push((number, title.to_string(), created_dt));
         }
     }
