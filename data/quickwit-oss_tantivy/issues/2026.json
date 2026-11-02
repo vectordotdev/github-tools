@@ -1004,22 +1004,6 @@
     }
   },
   {
-    "closed_at": "2026-03-24T01:02:30Z",
-    "created_at": "2026-03-18T04:09:54Z",
-    "draft": false,
-    "id": 3412732372,
-    "issue_type": null,
-    "labels": [],
-    "number": 2854,
-    "pull_request": {},
-    "state": "closed",
-    "title": "fix: deduplicate doc counts in term aggregation for multi-valued fields",
-    "updated_at": "2026-03-24T01:02:30Z",
-    "user": {
-      "login": "nuri-yoo"
-    }
-  },
-  {
     "closed_at": "2026-03-26T12:26:15Z",
     "created_at": "2026-03-18T12:19:51Z",
     "id": 4094773064,
@@ -1063,20 +1047,6 @@
     "updated_at": "2026-03-24T07:02:14Z",
     "user": {
       "login": "PSeitz"
-    }
-  },
-  {
-    "closed_at": null,
-    "created_at": "2026-03-20T15:36:39Z",
-    "id": 4108575985,
-    "issue_type": null,
-    "labels": [],
-    "number": 2858,
-    "state": "open",
-    "title": "Soundness bug: Undefined Behavior when calling MemoryArena::read",
-    "updated_at": "2026-03-20T15:36:39Z",
-    "user": {
-      "login": "lewismosciski"
     }
   },
   {
@@ -1496,22 +1466,6 @@
     "updated_at": "2026-04-07T08:33:19Z",
     "user": {
       "login": "fulmicoton-dd"
-    }
-  },
-  {
-    "closed_at": "2026-04-04T17:49:05Z",
-    "created_at": "2026-04-03T18:25:10Z",
-    "draft": false,
-    "id": 3487134700,
-    "issue_type": null,
-    "labels": [],
-    "number": 2881,
-    "pull_request": {},
-    "state": "closed",
-    "title": "Use BinaryHeap for score-based top-K collection",
-    "updated_at": "2026-05-29T23:43:02Z",
-    "user": {
-      "login": "nuri-yoo"
     }
   },
   {
