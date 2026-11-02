@@ -383,3 +383,13 @@ with `--since`, because reactions may change without changing an issue's update
 timestamp. Closed issues disappear from the next complete snapshot. A failed
 request leaves the previous snapshot intact. Snapshots contain counts and issue
 titles, not comment bodies or commenter identities, and retain canonical key order.
+
+
+### Discussion labels
+
+Full and incremental discussion fetches save label names and verify that their
+label lists are complete. This lets consumers distinguish `meta:awaiting author`
+from discussions awaiting maintainer follow-up. Label names are sorted before
+saving, and truncated label lists fail before any year files are written.
+Snapshots created before this field was collected remain readable; refresh the
+full discussion history once to populate labels on older records.

@@ -16,6 +16,7 @@
     },
     "createdAt": "2025-01-03T22:49:20Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 1206,
     "stateReason": null,
@@ -41,6 +42,9 @@
     },
     "createdAt": "2025-01-07T07:37:13Z",
     "isAnswered": true,
+    "labels": [
+      "vrl:compiler"
+    ],
     "locked": false,
     "number": 1213,
     "stateReason": null,
@@ -66,6 +70,7 @@
     },
     "createdAt": "2025-01-22T23:04:01Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 1224,
     "stateReason": "RESOLVED",
@@ -91,6 +96,7 @@
     },
     "createdAt": "2025-01-29T19:26:27Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 1240,
     "stateReason": "RESOLVED",
@@ -116,6 +122,7 @@
     },
     "createdAt": "2025-01-30T23:06:07Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 1243,
     "stateReason": null,
@@ -141,6 +148,9 @@
     },
     "createdAt": "2025-01-31T00:23:27Z",
     "isAnswered": true,
+    "labels": [
+      "vrl:compiler"
+    ],
     "locked": false,
     "number": 1245,
     "stateReason": "RESOLVED",
@@ -166,6 +176,9 @@
     },
     "createdAt": "2025-02-12T04:15:29Z",
     "isAnswered": true,
+    "labels": [
+      "vrl:stdlib"
+    ],
     "locked": false,
     "number": 1268,
     "stateReason": "RESOLVED",
@@ -191,6 +204,7 @@
     },
     "createdAt": "2025-02-19T11:15:16Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 1278,
     "stateReason": null,
@@ -216,6 +230,9 @@
     },
     "createdAt": "2025-02-19T09:07:01Z",
     "isAnswered": true,
+    "labels": [
+      "vrl:stdlib"
+    ],
     "locked": false,
     "number": 1279,
     "stateReason": null,
@@ -241,6 +258,9 @@
     },
     "createdAt": "2025-02-23T20:34:45Z",
     "isAnswered": true,
+    "labels": [
+      "vrl:stdlib"
+    ],
     "locked": false,
     "number": 1287,
     "stateReason": null,
@@ -266,6 +286,7 @@
     },
     "createdAt": "2025-02-10T23:01:25Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 1293,
     "stateReason": "RESOLVED",
@@ -291,6 +312,10 @@
     },
     "createdAt": "2025-02-27T03:49:12Z",
     "isAnswered": true,
+    "labels": [
+      "vrl:compiler",
+      "vrl:stdlib"
+    ],
     "locked": false,
     "number": 1302,
     "stateReason": null,
@@ -316,6 +341,10 @@
     },
     "createdAt": "2025-03-03T10:12:10Z",
     "isAnswered": true,
+    "labels": [
+      "type:tech debt",
+      "vrl:stdlib"
+    ],
     "locked": false,
     "number": 1311,
     "stateReason": null,
@@ -341,6 +370,9 @@
     },
     "createdAt": "2025-03-11T10:04:30Z",
     "isAnswered": true,
+    "labels": [
+      "domain:docs"
+    ],
     "locked": false,
     "number": 1333,
     "stateReason": null,
@@ -366,6 +398,9 @@
     },
     "createdAt": "2025-03-12T17:15:06Z",
     "isAnswered": true,
+    "labels": [
+      "vrl:stdlib"
+    ],
     "locked": false,
     "number": 1336,
     "stateReason": null,
@@ -391,6 +426,7 @@
     },
     "createdAt": "2025-04-10T06:59:38Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 1377,
     "stateReason": "RESOLVED",
@@ -416,6 +452,7 @@
     },
     "createdAt": "2025-04-22T12:35:57Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 1387,
     "stateReason": null,
@@ -441,6 +478,9 @@
     },
     "createdAt": "2025-05-11T14:29:18Z",
     "isAnswered": false,
+    "labels": [
+      "vrl:stdlib"
+    ],
     "locked": false,
     "number": 1401,
     "stateReason": null,
@@ -466,6 +506,7 @@
     },
     "createdAt": "2025-05-14T16:26:03Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 1402,
     "stateReason": null,
@@ -491,6 +532,7 @@
     },
     "createdAt": "2025-05-29T17:02:21Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 1408,
     "stateReason": null,
@@ -504,7 +546,7 @@
     "author": {
       "login": "calebcall"
     },
-    "bodyText": "I have this example logs message/event:\n{\"file\":\"/var/lib/service/nodes/406a6907-6133-48d4-85f6-cc5122bdcc65/data/protocol_data/worker/worker.log\",\"hostname\":\"node.example.com\",\"message\":\"\\u001b[2m2025-06-02T03:45:06.475906Z\\u001b[0m \\u001b[32m INFO\\u001b[0m \\u001b[2mworker::controller::p2p\\u001b[0m\\u001b[2m:\\u001b[0m Sending 1 logs (606 bytes)\",\"source_type\":\"file\",\"timestamp\":\"2025-06-02T15:12:43.709155183Z\"}\nI'm trying to remove the ANSI color coding that's coming through the logs.\nI'm trying with this replace function replace(string!(.message), r'\\\\u001b\\[[0-9]*[mK]', \"\")\nNo errors, but no replacement is happening.  The regex correctly matches according to regex101 testing.  I must be doing something wrong with the replace functionality.",
+    "bodyText": "I have this example logs message/event:\n{\"file\":\"/var/lib/service/nodes/406a6907-6133-48d4-85f6-cc5122bdcc65/data/protocol_data/worker/worker.log\",\"hostname\":\"node.example.com\",\"message\":\"\\^[[2m2025-06-02T03:45:06.475906Z\\^[[0m \\^[[32m INFO\\^[[0m \\^[[2mworker::controller::p2p\\^[[0m\\^[[2m:\\^[[0m Sending 1 logs (606 bytes)\",\"source_type\":\"file\",\"timestamp\":\"2025-06-02T15:12:43.709155183Z\"}\nI'm trying to remove the ANSI color coding that's coming through the logs.\nI'm trying with this replace function replace(string!(.message), r'\\\\^[\\[[0-9]*[mK]', \"\")\nNo errors, but no replacement is happening.  The regex correctly matches according to regex101 testing.  I must be doing something wrong with the replace functionality.",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"
@@ -516,6 +558,9 @@
     },
     "createdAt": "2025-06-02T15:54:58Z",
     "isAnswered": true,
+    "labels": [
+      "vrl:stdlib"
+    ],
     "locked": false,
     "number": 1418,
     "stateReason": null,
@@ -541,6 +586,9 @@
     },
     "createdAt": "2025-07-16T01:00:44Z",
     "isAnswered": true,
+    "labels": [
+      "type:enhancement"
+    ],
     "locked": false,
     "number": 1448,
     "stateReason": null,
@@ -566,6 +614,9 @@
     },
     "createdAt": "2025-08-21T21:43:54Z",
     "isAnswered": null,
+    "labels": [
+      "vrl:compiler"
+    ],
     "locked": false,
     "number": 1480,
     "stateReason": "RESOLVED",
@@ -591,6 +642,9 @@
     },
     "createdAt": "2025-08-21T22:02:58Z",
     "isAnswered": null,
+    "labels": [
+      "vrl:compiler"
+    ],
     "locked": false,
     "number": 1481,
     "stateReason": null,
@@ -616,6 +670,7 @@
     },
     "createdAt": "2025-10-16T09:50:15Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 1541,
     "stateReason": null,
@@ -641,6 +696,7 @@
     },
     "createdAt": "2025-12-17T19:49:35Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 1584,
     "stateReason": null,
@@ -666,6 +722,7 @@
     },
     "createdAt": "2025-12-18T18:05:18Z",
     "isAnswered": null,
+    "labels": [],
     "locked": false,
     "number": 1585,
     "stateReason": null,
