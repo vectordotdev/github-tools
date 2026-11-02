@@ -142,28 +142,29 @@ fn run_with_request(
     mut request: impl FnMut(&str, Value) -> Result<Value>,
 ) -> Result<()> {
     let since_ts = since.map(parse_since).transpose()?;
+    if let Some(since) = &since_ts {
+        DateTime::parse_from_rfc3339(since).context("Invalid --since timestamp")?;
+    }
     let mut all_items = Vec::new();
     let mut node_ids = HashSet::new();
     for (field, is_pr) in [("issues", false), ("pullRequests", true)] {
-        let query = match (is_pr, since_ts.is_some()) {
-            (false, false) => ISSUES_QUERY.to_owned(),
-            (false, true) => ISSUES_SINCE_QUERY.to_owned(),
-            (true, false) => PRS_QUERY.to_owned(),
-            (true, true) => PRS_QUERY.replace(
-                "orderBy: {field: CREATED_AT, direction: DESC}",
-                "orderBy: {field: UPDATED_AT, direction: DESC}",
-            ),
+        let query = if is_pr {
+            PRS_QUERY
+        } else if since_ts.is_some() {
+            ISSUES_SINCE_QUERY
+        } else {
+            ISSUES_QUERY
         };
         let scope = format!("{}/{} {field}", config.org, config.repo);
         let items = graphql_fetch::paginate(
             &scope,
-            since_ts.as_deref(),
+            if is_pr { since_ts.as_deref() } else { None },
             |after| {
                 let mut variables = json!({"owner": config.org, "name": config.repo, "first": PAGE_SIZE, "after": after});
                 if !is_pr && let Some(since) = &since_ts {
                     variables["since"] = json!(since);
                 }
-                graphql_fetch::connection(request(&query, variables)?, &["repository", field])
+                graphql_fetch::connection(request(query, variables)?, &["repository", field])
             },
             |node| {
                 let rest = to_rest_format(&node, is_pr)?;
@@ -633,17 +634,41 @@ mod fetch_safety_tests {
                 requests[0]["variables"].get("since").is_some(),
                 since.is_some()
             );
-            for request in requests {
+            for (index, request) in requests.into_iter().enumerate() {
                 assert_eq!(request["variables"]["first"], PAGE_SIZE);
                 assert_eq!(
                     request["query"]
                         .as_str()
                         .unwrap()
                         .contains("field: UPDATED_AT"),
-                    since.is_some()
+                    since.is_some() && index < 2
                 );
             }
         }
+    }
+
+    #[test]
+    fn incremental_issues_keep_all_server_filtered_matches() {
+        let dir = TempDir::new();
+        let mut item = node(1, false);
+        item["createdAt"] = json!("2025-01-01T00:00:00Z");
+        item["updatedAt"] = json!("2025-12-31T00:00:00Z");
+        let server = Server::new(vec![
+            ok(data("issues", vec![item], None)),
+            ok(data("pullRequests", vec![], None)),
+        ]);
+        let cfg = config();
+        let client = client();
+        run_with_request(&cfg, Some("2026-01-01"), dir.path(), |query, variables| {
+            graphql_fetch::request_at(&client, &cfg, &server.url, query, variables)
+        })
+        .unwrap();
+        let saved: Vec<Value> =
+            serde_json::from_slice(&fs::read(dir.path().join("2025.json")).unwrap()).unwrap();
+        assert_eq!(saved.len(), 1);
+        assert_eq!(saved[0]["updated_at"], "2025-12-31T00:00:00Z");
+        let requests = server.finish();
+        assert_eq!(requests[0]["variables"]["since"], "2026-01-01T00:00:00Z");
     }
 
     #[test]

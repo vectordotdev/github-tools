@@ -13,50 +13,7 @@ use std::path::Path;
 const QUERY: &str = r#"
 query($owner: String!, $name: String!, $first: Int!, $after: String) {
   repository(owner: $owner, name: $name) {
-    discussions(first: $first, after: $after) {
-      pageInfo {
-        endCursor
-        hasNextPage
-      }
-      nodes {
-        id
-        number
-        title
-        bodyText
-        url
-        createdAt
-        updatedAt
-        closedAt
-        closed
-        stateReason
-        isAnswered
-        answerChosenAt
-        locked
-        author {
-          login
-        }
-        category {
-          isAnswerable
-          name
-        }
-        labels(first: 100) {
-          nodes { name }
-          pageInfo { hasNextPage }
-        }
-        comments {
-          totalCount
-        }
-        upvoteCount
-      }
-    }
-  }
-}
-"#;
-
-const QUERY_SINCE: &str = r#"
-query($owner: String!, $name: String!, $first: Int!, $after: String) {
-  repository(owner: $owner, name: $name) {
-    discussions(first: $first, after: $after, orderBy: {field: UPDATED_AT, direction: DESC}) {
+    discussions(first: $first, after: $after, orderBy: {field: CREATED_AT, direction: DESC}) {
       pageInfo {
         endCursor
         hasNextPage
@@ -214,11 +171,7 @@ fn run_with_request(
     mut request: impl FnMut(&str, Value) -> Result<Value>,
 ) -> Result<()> {
     let since_ts = since.map(parse_since).transpose()?;
-    let query = if since_ts.is_some() {
-        QUERY_SINCE
-    } else {
-        QUERY
-    };
+    let query = QUERY;
     let scope = format!("{}/{} discussions", config.org, config.repo);
     let discussions = graphql_fetch::paginate(
         &scope,
@@ -329,7 +282,7 @@ mod tests {
         let current: Discussion = serde_json::from_value(row.clone()).unwrap();
         assert_eq!(serde_json::to_value(current).unwrap(), row);
         assert!(QUERY.contains("answerChosenAt"));
-        assert!(QUERY_SINCE.contains("answerChosenAt"));
+        assert!(QUERY.contains("CREATED_AT"));
     }
     fn discussion_with_labels(labels: Value) -> Discussion {
         serde_json::from_value(json!({
@@ -367,7 +320,7 @@ mod tests {
         truncated["labels"] = json!({"nodes": [], "pageInfo": {"hasNextPage": true}});
         assert!(serde_json::from_value::<Discussion>(truncated).is_err());
         assert!(QUERY.contains("labels(first: 100)"));
-        assert!(QUERY_SINCE.contains("labels(first: 100)"));
+        assert!(QUERY.contains("CREATED_AT"));
     }
 }
 
@@ -511,12 +464,11 @@ mod fetch_safety_tests {
             assert_eq!(saved[0].get("id"), None);
             let requests = server.finish();
             assert_eq!(requests[1]["variables"]["after"], "next");
-            assert_eq!(
+            assert!(
                 requests[0]["query"]
                     .as_str()
                     .unwrap()
-                    .contains("field: UPDATED_AT"),
-                since.is_some()
+                    .contains("field: CREATED_AT")
             );
         }
     }

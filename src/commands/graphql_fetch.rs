@@ -139,7 +139,8 @@ pub(super) fn page(value: &Value) -> Result<Page<'_>> {
 }
 
 /// All six issue/PR/discussion modes, and nested labels, use this one loop.
-/// A cutoff is valid only for connections explicitly ordered by UPDATED_AT DESC.
+/// A cutoff filters records but never terminates pagination: GitHub does not
+/// consistently order the exposed updatedAt values, even with that sort requested.
 pub(super) fn paginate<T>(
     scope: &str,
     since: Option<&str>,
@@ -157,7 +158,6 @@ pub(super) fn paginate<T>(
     let mut cursors = HashSet::new();
     let mut ids = HashSet::new();
     let mut numbers = HashSet::new();
-    let mut previous_updated = None;
     let mut records = Vec::new();
     let mut page_number = 1;
     loop {
@@ -171,7 +171,6 @@ pub(super) fn paginate<T>(
                 "{context}: repeated pagination cursor {cursor}"
             );
         }
-        let mut hit_boundary = false;
         for node in page.nodes {
             let id = string(node, "id")?;
             ensure!(
@@ -190,27 +189,17 @@ pub(super) fn paginate<T>(
                 .map(|_| timestamp(node, "updatedAt"))
                 .transpose()
                 .with_context(|| item_context.clone())?;
-            if let Some(updated) = updated {
-                if let Some(previous) = previous_updated {
-                    ensure!(
-                        previous >= updated,
-                        "{item_context}: UPDATED_AT order is not descending"
-                    );
-                }
-                previous_updated = Some(updated);
-            }
-            // Validate even nodes outside the window before treating this page as a boundary.
+            // Validate every returned node, including records outside the window.
             let record = decode(node.clone()).with_context(|| item_context.clone())?;
             if updated
                 .zip(cutoff)
                 .is_some_and(|(updated, cutoff)| updated < cutoff)
             {
-                hit_boundary = true;
-            } else {
-                records.push(record);
+                continue;
             }
+            records.push(record);
         }
-        if hit_boundary || page.next_cursor.is_none() {
+        if page.next_cursor.is_none() {
             break;
         }
         after = page.next_cursor.map(str::to_owned);
@@ -491,16 +480,19 @@ mod tests {
     }
 
     #[test]
-    fn cutoff_uses_instants_includes_equal_timestamps_and_stops_after_boundary() {
+    fn cutoff_uses_instants_and_includes_equal_timestamps() {
         let records = collect(
-            vec![fixture_page(
-                vec![
-                    node(1, "2026-03-01T02:00:00+01:00"),
-                    node(2, "2026-02-28T19:00:00-05:00"),
-                    node(3, "2026-02-28T23:59:59Z"),
-                ],
-                Some("unused"),
-            )],
+            vec![
+                fixture_page(
+                    vec![
+                        node(1, "2026-03-01T02:00:00+01:00"),
+                        node(2, "2026-02-28T19:00:00-05:00"),
+                        node(3, "2026-02-28T23:59:59Z"),
+                    ],
+                    Some("next"),
+                ),
+                fixture_page(vec![], None),
+            ],
             Some("2026-03-01T00:00:00Z"),
         )
         .unwrap();
@@ -523,9 +515,30 @@ mod tests {
     }
 
     #[test]
-    fn malformed_dates_and_unsorted_boundaries_fail() {
-        for pages in [
-            vec![fixture_page(vec![node(1, "invalid")], None)],
+    fn incremental_scan_does_not_stop_before_later_recent_records() {
+        let records = collect(
+            vec![
+                fixture_page(vec![node(1, "2025-12-01T00:00:00Z")], Some("a")),
+                fixture_page(vec![node(2, "2026-03-01T00:00:00Z")], Some("b")),
+                fixture_page(
+                    vec![
+                        node(3, "2026-01-01T00:00:00Z"),
+                        node(4, "2025-12-01T00:00:00Z"),
+                    ],
+                    None,
+                ),
+            ],
+            Some("2026-01-01T00:00:00Z"),
+        )
+        .unwrap();
+        assert_eq!(
+            records
+                .iter()
+                .map(|node| node["number"].as_u64().unwrap())
+                .collect::<Vec<_>>(),
+            [2, 3]
+        );
+        let records = collect(
             vec![fixture_page(
                 vec![
                     node(1, "2025-12-01T00:00:00Z"),
@@ -533,13 +546,22 @@ mod tests {
                 ],
                 None,
             )],
-            vec![
-                fixture_page(vec![node(1, "2026-03-01T00:00:00Z")], Some("a")),
-                fixture_page(vec![node(2, "2026-03-02T00:00:00Z")], None),
-            ],
-        ] {
-            assert!(collect(pages, Some("2026-01-01T00:00:00Z")).is_err());
-        }
+            Some("2026-01-01T00:00:00Z"),
+        )
+        .unwrap();
+        assert_eq!(records.len(), 1);
+        assert_eq!(records[0]["number"], 2);
+    }
+
+    #[test]
+    fn malformed_dates_and_invalid_out_of_window_records_fail() {
+        assert!(
+            collect(
+                vec![fixture_page(vec![node(1, "invalid")], None)],
+                Some("2026-01-01T00:00:00Z")
+            )
+            .is_err()
+        );
         assert!(collect(vec![], Some("2026-02-30T00:00:00Z")).is_err());
         let result = paginate(
             "fixture",
