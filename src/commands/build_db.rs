@@ -92,9 +92,10 @@ fn create_tables(conn: &Connection) -> Result<()> {
             description TEXT
         );
         CREATE TABLE IF NOT EXISTS issue_labels (
+            item_type   TEXT NOT NULL,
             issue_id    INTEGER,
             label_id    INTEGER,
-            PRIMARY KEY (issue_id, label_id)
+            PRIMARY KEY (item_type, issue_id, label_id)
         );
         CREATE TABLE IF NOT EXISTS discussions (
             number        INTEGER PRIMARY KEY,
@@ -123,7 +124,7 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
     let mut issue_rows: Vec<IssueRow> = Vec::new();
     let mut pr_rows: Vec<PrRow> = Vec::new();
     let mut label_map: HashMap<i64, (i64, String, String, Option<String>)> = HashMap::new();
-    let mut issue_label_set: HashSet<(i64, i64)> = HashSet::new();
+    let mut issue_label_set: HashSet<(&str, i64, i64)> = HashSet::new();
 
     for item in items {
         let id = item["id"].as_i64().context("missing id")?;
@@ -136,7 +137,9 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
         let user_login = item["user"]["login"].as_str().map(|s| s.to_string());
         let issue_type = item["issue_type"].as_str().map(|s| s.to_string());
 
-        if item.get("pull_request").is_some() {
+        // GitHub issue and PR database IDs can overlap. Keep label identities typed.
+        let item_type = if item.get("pull_request").is_some() { "pull_requests" } else { "issues" };
+        if item_type == "pull_requests" {
             let is_draft = item["draft"].as_bool().unwrap_or(false);
             pr_rows.push((
                 id, number, title, state, created_at, updated_at, closed_at, user_login, is_draft,
@@ -156,7 +159,7 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
                         let desc = label["description"].as_str().map(|s| s.to_string());
                         (lbl_id, name, color, desc)
                     });
-                    issue_label_set.insert((id, lbl_id));
+                    issue_label_set.insert((item_type, id, lbl_id));
                 }
             }
         }
@@ -206,9 +209,9 @@ fn insert_data(conn: &Connection, items: &[Value]) -> Result<()> {
     println!("Inserting issue-label relationships into database...");
     {
         let mut stmt =
-            conn.prepare("INSERT OR REPLACE INTO issue_labels(issue_id, label_id) VALUES (?1, ?2)")?;
-        for (issue_id, label_id) in &issue_label_set {
-            stmt.execute(rusqlite::params![issue_id, label_id])?;
+            conn.prepare("INSERT OR REPLACE INTO issue_labels(item_type, issue_id, label_id) VALUES (?1, ?2, ?3)")?;
+        for (item_type, issue_id, label_id) in &issue_label_set {
+            stmt.execute(rusqlite::params![item_type, issue_id, label_id])?;
         }
     }
     println!("Inserted {} issue-label records.", issue_label_set.len());
@@ -266,4 +269,38 @@ pub fn load_discussions(conn: &Connection, discussions: &[Discussion]) -> Result
     }
     println!("Inserted {} discussions.", discussions.len());
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use serde_json::json;
+
+    #[test]
+    fn importing_overlapping_issue_and_pr_ids_preserves_each_label_assignment() {
+        let conn = Connection::open_in_memory().unwrap();
+        create_tables(&conn).unwrap();
+        let issue = json!({
+            "id": 7, "number": 1, "title": "Issue", "state": "open",
+            "created_at": "2020-01-01", "updated_at": "2020-01-01",
+            "labels": [{"id": 10, "name": "shared"}, {"id": 11, "name": "issue-only"}]
+        });
+        let pr = json!({
+            "id": 7, "number": 2, "title": "PR", "state": "open",
+            "created_at": "2020-01-01", "updated_at": "2020-01-01",
+            "pull_request": {}, "draft": false,
+            "labels": [{"id": 10, "name": "shared"}, {"id": 12, "name": "pr-only"}]
+        });
+        insert_data(&conn, &[issue, pr]).unwrap();
+        let mut stmt = conn.prepare(
+            "SELECT item_type, label_id FROM issue_labels ORDER BY item_type, label_id"
+        ).unwrap();
+        let assignments: Vec<(String, i64)> = stmt.query_map([], |row| {
+            Ok((row.get(0)?, row.get(1)?))
+        }).unwrap().collect::<rusqlite::Result<_>>().unwrap();
+        assert_eq!(assignments, vec![
+            ("issues".into(), 10), ("issues".into(), 11),
+            ("pull_requests".into(), 10), ("pull_requests".into(), 12),
+        ]);
+    }
 }

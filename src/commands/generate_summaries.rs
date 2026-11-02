@@ -121,7 +121,7 @@ fn export_monthly_summary(
             "SELECT DISTINCT {norm} AS norm_name
              FROM issue_labels
              JOIN labels ON labels.id = issue_labels.label_id
-             JOIN {table} ON {table}.id = issue_labels.issue_id
+             JOIN {table} ON {table}.id = issue_labels.issue_id AND issue_labels.item_type = '{table}'
              {wc_label}
              ORDER BY norm_name"
         );
@@ -130,9 +130,10 @@ fn export_monthly_summary(
             .collect::<rusqlite::Result<_>>()?
     };
 
+    // Label overlays count creations, like the native issue-type overlays.
     let label_columns_sql = label_names
         .iter()
-        .map(|l| format!("SUM(CASE WHEN lc.label_name = '{l}' THEN 1 ELSE 0 END) AS \"{l}\""))
+        .map(|l| format!("COUNT(DISTINCT CASE WHEN lc.label_name = '{l}' AND e.event = 'created' THEN e.issue_id END) AS \"{l}\""))
         .collect::<Vec<_>>()
         .join(",\n        ");
 
@@ -157,7 +158,7 @@ fn export_monthly_summary(
     } else {
         let cols = issue_type_names
             .iter()
-            .map(|t| format!("SUM(CASE WHEN it.issue_type = '{t}' AND e.event = 'created' THEN 1 ELSE 0 END) AS \"{t}\""))
+            .map(|t| format!("COUNT(DISTINCT CASE WHEN it.issue_type = '{t}' AND e.event = 'created' THEN e.issue_id END) AS \"{t}\""))
             .collect::<Vec<_>>()
             .join(",\n            ");
         format!(",\n            {cols}")
@@ -169,6 +170,7 @@ fn export_monthly_summary(
         format!("\n        LEFT JOIN {table} it ON e.issue_id = it.id")
     };
 
+    // Joining labels expands event rows; count distinct records for each event/type.
     let query = format!(
         "WITH events AS (
             SELECT substr(created_at, 1, 7) AS month, id AS issue_id, 'created' AS event
@@ -181,13 +183,13 @@ fn export_monthly_summary(
             SELECT DISTINCT issue_labels.issue_id, {norm} AS label_name
             FROM issue_labels
             JOIN labels ON labels.id = issue_labels.label_id
-            JOIN {table} ON {table}.id = issue_labels.issue_id
+            JOIN {table} ON {table}.id = issue_labels.issue_id AND issue_labels.item_type = '{table}'
             {wc_label}
         )
         SELECT
             e.month,
-            SUM(CASE WHEN e.event = 'created' THEN 1 ELSE 0 END) AS created_{table},
-            SUM(CASE WHEN e.event = 'closed' THEN 1 ELSE 0 END) AS closed_{table}{maybe_label_cols}{maybe_type_cols}
+            COUNT(DISTINCT CASE WHEN e.event = 'created' THEN e.issue_id END) AS created_{table},
+            COUNT(DISTINCT CASE WHEN e.event = 'closed' THEN e.issue_id END) AS closed_{table}{maybe_label_cols}{maybe_type_cols}
         FROM events e
         LEFT JOIN label_counts lc ON e.issue_id = lc.issue_id{maybe_type_join}
         GROUP BY e.month
@@ -221,7 +223,7 @@ fn export_label_breakdown(
                  SELECT DISTINCT issue_labels.issue_id, {norm} AS label_name
                  FROM issue_labels
                  JOIN labels ON labels.id = issue_labels.label_id
-                 JOIN {table} ON {table}.id = issue_labels.issue_id
+                 JOIN {table} ON {table}.id = issue_labels.issue_id AND issue_labels.item_type = '{table}'
                  {wc}
              )
              GROUP BY label_name
@@ -237,7 +239,7 @@ fn export_label_breakdown(
                  SELECT label_name, COUNT(*) AS count FROM (
                      SELECT DISTINCT {table}.id, {norm} AS label_name
                      FROM {table}
-                     JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                     JOIN issue_labels ON {table}.id = issue_labels.issue_id AND issue_labels.item_type = '{table}'
                      JOIN labels ON labels.id = issue_labels.label_id
                      WHERE {table}.issue_type IS NULL {draft_and}
                  ) GROUP BY label_name
@@ -245,7 +247,7 @@ fn export_label_breakdown(
                  SELECT label_name, COUNT(*) AS count FROM (
                      SELECT DISTINCT {table}.id, {norm} AS label_name
                      FROM {table}
-                     JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                     JOIN issue_labels ON {table}.id = issue_labels.issue_id AND issue_labels.item_type = '{table}'
                      JOIN labels ON labels.id = issue_labels.label_id
                      WHERE {table}.issue_type IS NOT NULL {draft_and}
                      AND {non_type_label}
@@ -286,7 +288,7 @@ fn export_label_timeseries(
             "SELECT month, label_name, COUNT(*) AS count FROM (
                  SELECT DISTINCT substr({table}.created_at, 1, 7) AS month, {table}.id, {norm} AS label_name
                  FROM {table}
-                 JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                 JOIN issue_labels ON {table}.id = issue_labels.issue_id AND issue_labels.item_type = '{table}'
                  JOIN labels ON labels.id = issue_labels.label_id
                  {wc}
              )
@@ -303,7 +305,7 @@ fn export_label_timeseries(
                  SELECT month, label_name, COUNT(*) AS count FROM (
                      SELECT DISTINCT substr({table}.created_at, 1, 7) AS month, {table}.id, {norm} AS label_name
                      FROM {table}
-                     JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                     JOIN issue_labels ON {table}.id = issue_labels.issue_id AND issue_labels.item_type = '{table}'
                      JOIN labels ON labels.id = issue_labels.label_id
                      WHERE {table}.issue_type IS NULL {draft_and}
                  ) GROUP BY month, label_name
@@ -311,7 +313,7 @@ fn export_label_timeseries(
                  SELECT month, label_name, COUNT(*) AS count FROM (
                      SELECT DISTINCT substr({table}.created_at, 1, 7) AS month, {table}.id, {norm} AS label_name
                      FROM {table}
-                     JOIN issue_labels ON {table}.id = issue_labels.issue_id
+                     JOIN issue_labels ON {table}.id = issue_labels.issue_id AND issue_labels.item_type = '{table}'
                      JOIN labels ON labels.id = issue_labels.label_id
                      WHERE {table}.issue_type IS NOT NULL {draft_and}
                      AND {non_type_label}
@@ -353,7 +355,7 @@ fn export_open_by_label(
                     CASE WHEN {table}.state = 'open' THEN 1 ELSE 0 END AS open_count,
                     CASE WHEN {table}.state = 'closed' THEN 1 ELSE 0 END AS closed_count
              FROM {table}
-             JOIN issue_labels ON {table}.id = issue_labels.issue_id
+             JOIN issue_labels ON {table}.id = issue_labels.issue_id AND issue_labels.item_type = '{table}'
              JOIN labels ON labels.id = issue_labels.label_id
              {wc}
          )
@@ -494,13 +496,15 @@ mod label_tests {
         let conn = Connection::open_in_memory().unwrap();
         conn.execute_batch("CREATE TABLE issues (id INTEGER, issue_type TEXT, state TEXT, created_at TEXT, closed_at TEXT, is_draft INTEGER);
             CREATE TABLE labels (id INTEGER, name TEXT);
-            CREATE TABLE issue_labels (issue_id INTEGER, label_id INTEGER);
+            CREATE TABLE issue_labels (item_type TEXT, issue_id INTEGER, label_id INTEGER);
             INSERT INTO issues VALUES (1, 'Enhancement', 'open', '2020-01-01', NULL, 0),
                 (2, NULL, 'open', '2020-01-02', NULL, 0), (3, NULL, 'open', '2020-01-03', NULL, 0),
                 (4, NULL, 'open', '2020-01-04', NULL, 1);
             INSERT INTO labels VALUES (1, 'type: enhancement'), (2, 'type:enhancement'),
                 (3, 'domain: deps'), (4, 'domain:deps'), (5, 'domain: external docs');
-            INSERT INTO issue_labels VALUES (1, 1), (1, 2), (1, 5), (2, 1), (2, 2), (3, 3), (3, 4), (4, 1);
+            INSERT INTO issue_labels VALUES ('issues', 1, 1), ('issues', 1, 2), ('issues', 1, 5),
+                ('issues', 2, 1), ('issues', 2, 2), ('issues', 3, 3), ('issues', 3, 4), ('issues', 4, 1);
+            INSERT INTO issue_labels SELECT 'pull_requests', issue_id, label_id FROM issue_labels;
             CREATE TABLE pull_requests AS SELECT * FROM issues;").unwrap();
         let dir = std::env::temp_dir().join(format!(
             "label-summary-{}-{}",
@@ -578,12 +582,112 @@ mod label_tests {
         // Custom native issue types also take precedence over their prefixed labels.
         conn.execute_batch("INSERT INTO issues VALUES (5, 'Incident', 'open', '2020-01-05', NULL, 0);
             INSERT INTO labels VALUES (6, 'type: incident'), (7, 'type:incident');
-            INSERT INTO issue_labels VALUES (5, 6), (5, 7);").unwrap();
+            INSERT INTO issue_labels VALUES ('issues', 5, 6), ('issues', 5, 7);").unwrap();
         let retained: i64 = conn.query_row(&format!(
             "SELECT count(*) FROM issues JOIN issue_labels ON issues.id = issue_labels.issue_id
              JOIN labels ON labels.id = issue_labels.label_id WHERE issues.id = 5 AND {}",
             non_type_label_sql("issues")), [], |r| r.get(0)).unwrap();
         assert_eq!(retained, 0);
+        fs::remove_dir_all(dir).unwrap();
+    }
+
+    #[test]
+    fn monthly_counts_ignore_label_multiplicity_and_overlays_count_creations_only() {
+        let conn = Connection::open_in_memory().unwrap();
+        conn.execute_batch(
+            "CREATE TABLE issues (id INTEGER, issue_type TEXT, state TEXT, created_at TEXT, closed_at TEXT, is_draft INTEGER);
+             CREATE TABLE pull_requests (id INTEGER, state TEXT, created_at TEXT, closed_at TEXT, is_draft INTEGER);
+             CREATE TABLE labels (id INTEGER, name TEXT);
+             CREATE TABLE issue_labels (item_type TEXT, issue_id INTEGER, label_id INTEGER);
+             INSERT INTO issues VALUES
+                (1, 'Bug', 'closed', '2020-01-05', '2020-01-20', 0),
+                (2, NULL, 'closed', '2020-01-07', '2020-02-10', 0),
+                (3, 'Bug', 'open', '2020-01-08', NULL, 0),
+                (4, NULL, 'closed', '2020-01-09', '2020-02-10', 0),
+                (5, NULL, 'closed', '2020-01-10', '2020-01-11', 1),
+                (6, NULL, 'closed', '2020-02-01', '2020-02-02', 0);
+             INSERT INTO pull_requests SELECT id, state, created_at, closed_at, is_draft FROM issues;
+             INSERT INTO labels VALUES (1, 'type: bug'), (2, 'type:bug'),
+                (3, 'domain:core'), (4, 'no-changelog'), (5, 'dependencies');
+             INSERT INTO issue_labels VALUES
+                ('issues', 1, 1), ('issues', 1, 2), ('issues', 1, 3), ('issues', 1, 4),
+                ('issues', 2, 1), ('issues', 2, 2), ('issues', 2, 5),
+                ('issues', 5, 1), ('issues', 6, 1), ('issues', 6, 3);
+             INSERT INTO issue_labels SELECT 'pull_requests', issue_id, label_id FROM issue_labels;",
+        ).unwrap();
+        let dir = std::env::temp_dir().join(format!(
+            "monthly-counts-{}-{}", std::process::id(), Utc::now().timestamp_nanos_opt().unwrap()
+        ));
+        fs::create_dir_all(&dir).unwrap();
+        let config = Config {
+            github_token: String::new(), org: "test".into(), repo: "monthly".into(),
+        };
+        for table in ["issues", "pull_requests"] {
+            export_monthly_summary(&conn, &dir, &config, table).unwrap();
+            let mut reader = csv::Reader::from_path(csv_path(&dir, &config, table, "monthly_summary")).unwrap();
+            let rows: Vec<std::collections::HashMap<String, String>> =
+                reader.deserialize().map(Result::unwrap).collect();
+            assert_eq!(rows.len(), 2);
+            let january = &rows[0];
+            let february = &rows[1];
+            assert_eq!(january["month"], "2020-01");
+            assert_eq!(january[&format!("created_{table}")], if table == "issues" { "5" } else { "4" });
+            assert_eq!(january[&format!("closed_{table}")], if table == "issues" { "2" } else { "1" });
+            assert_eq!(february[&format!("created_{table}")], "1");
+            assert_eq!(february[&format!("closed_{table}")], "3");
+            assert_eq!(january["type:bug"], "2");
+            assert_eq!(february["type:bug"], "1");
+            assert_eq!(january["domain:core"], "1");
+            assert_eq!(february["domain:core"], "1");
+            assert_eq!(february["dependencies"], "0");
+            if table == "issues" {
+                assert_eq!(january["Bug"], "2");
+                assert_eq!(february["Bug"], "0");
+            }
+        }
+        fs::remove_dir_all(dir).unwrap();
+    }
+
+    #[test]
+    fn label_summaries_keep_overlapping_issue_and_pr_ids_separate() {
+        let conn = Connection::open_in_memory().unwrap();
+        conn.execute_batch(
+            "CREATE TABLE issues (id INTEGER, issue_type TEXT, state TEXT, created_at TEXT, closed_at TEXT);
+             CREATE TABLE pull_requests (id INTEGER, state TEXT, created_at TEXT, closed_at TEXT, is_draft INTEGER);
+             CREATE TABLE labels (id INTEGER, name TEXT);
+             CREATE TABLE issue_labels (item_type TEXT, issue_id INTEGER, label_id INTEGER);
+             INSERT INTO issues VALUES (1, NULL, 'open', '2020-01-01', NULL);
+             INSERT INTO pull_requests VALUES (1, 'closed', '2020-01-01', '2020-02-01', 0);
+             INSERT INTO labels VALUES (10, 'source:demo_logs'), (11, 'sink:console');
+             INSERT INTO issue_labels VALUES ('issues', 1, 10), ('pull_requests', 1, 11);",
+        ).unwrap();
+        let dir = std::env::temp_dir().join(format!(
+            "label-identities-{}-{}", std::process::id(), Utc::now().timestamp_nanos_opt().unwrap()
+        ));
+        fs::create_dir_all(&dir).unwrap();
+        let config = Config {
+            github_token: String::new(), org: "test".into(), repo: "identities".into(),
+        };
+        for (table, expected_label, other_label) in [
+            ("issues", "source:demo_logs", "sink:console"),
+            ("pull_requests", "sink:console", "source:demo_logs"),
+        ] {
+            export_label_breakdown(&conn, &dir, &config, table).unwrap();
+            export_label_timeseries(&conn, &dir, &config, table).unwrap();
+            export_open_by_label(&conn, &dir, &config, table).unwrap();
+            export_monthly_summary(&conn, &dir, &config, table).unwrap();
+            for suffix in ["label_breakdown", "label_counts", "open_by_label"] {
+                let mut reader = csv::Reader::from_path(csv_path(&dir, &config, table, suffix)).unwrap();
+                let rows: Vec<std::collections::HashMap<String, String>> =
+                    reader.deserialize().map(Result::unwrap).collect();
+                assert_eq!(rows.len(), 1, "{table}/{suffix}");
+                assert_eq!(rows[0]["label_name"], expected_label);
+            }
+            let mut reader = csv::Reader::from_path(csv_path(&dir, &config, table, "monthly_summary")).unwrap();
+            let row: std::collections::HashMap<String, String> = reader.deserialize().next().unwrap().unwrap();
+            assert_eq!(row[expected_label], "1");
+            assert!(!row.contains_key(other_label));
+        }
         fs::remove_dir_all(dir).unwrap();
     }
 }

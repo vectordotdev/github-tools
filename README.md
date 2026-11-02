@@ -180,6 +180,8 @@ done
 
 `generate-all` builds the SQLite DB, generates CSVs into `out/summaries/`, and renders interactive HTML dashboards into `docs/`. Review the diff in `docs/` before committing.
 
+The SQLite databases are generated artifacts. After a database schema change, rerun `generate-all` before using existing databases with `generate-summaries` or `push-metrics`.
+
 ## 3. (Optional) Purge stale container images
 
 ```shell
