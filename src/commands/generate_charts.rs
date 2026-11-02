@@ -20,10 +20,12 @@ const COLOR_CREATED: &str = "#1a1a1a"; // DARK in Python — near-black for all 
 const COLOR_NEW_CONTRIBUTOR: &str = "#36B37E";
 const COLOR_RETURNING_CONTRIBUTOR: &str = "#8E5CE6";
 
+// Categorical colors with distinct hues and enough contrast on white charts.
 const PALETTE: &[&str] = &[
-    "#4C9AFF", "#36B37E", "#FF8C00", "#FF4C4C", "#6554C0",
-    "#00B8D9", "#57D9A3", "#FFC400", "#FF7452", "#998DD9",
-    "#79E2F2", "#ABF5D1", "#FFE380", "#FFBDAD", "#B3D4FF",
+    "#2563EB", "#D97706", "#08916A", "#DC4545", "#805AD5",
+    "#0891B2", "#C24186", "#8A651D", "#4F772D", "#596579",
+    "#B45309", "#155E75", "#A21CAF", "#3973AC", "#9C5645",
+    "#007A78", "#7C4D99", "#A63D58", "#657C18", "#3F5D8A",
 ];
 
 fn exclude_label(name: &str) -> bool {
@@ -42,33 +44,40 @@ pub(crate) fn slugify(s: &str) -> String {
 
 fn label_color(name: &str) -> &'static str {
     let normalized = crate::labels::normalize(name);
-    let prefix = normalized.split_once(':').map(|(prefix, _)| prefix);
-    match prefix {
-        Some("domain") => "#94A3B8",
-        Some("codec") => "#A5B4E3",
-        Some("source") => "#85BFAF",
-        Some("sink") => "#8FB5DE",
-        Some("transform") => "#B8A5D6",
-        Some("enrichment_table") => "#A8C49A",
-        Some("platform") => "#D3A6BF",
-        Some("provider") => "#8DC2CF",
-        Some("vrl" | "stdlib") => "#B8C88D",
-        Some("type") => "#C5A7D5",
-        Some("complexity") => "#A4B5C8",
-        Some("meta") => "#BDC3CD",
-        Some("needs") => "#E3C785",
-        Some("have") => "#D7B38E",
-        Some("preview") => "#DDA391",
-        _ => match normalized.as_ref() {
-            "Bug" | "Feature" | "Enhancement" | "Task" => "#C5A7D5",
-            "dependencies" => "#94A3B8",
-            _ => {
-                let hash = normalized.bytes().fold(5381u64, |h, b| {
-                    h.wrapping_mul(33).wrapping_add(b as u64)
-                });
-                PALETTE[(hash as usize) % PALETTE.len()]
-            }
-        },
+    match normalized.as_ref() {
+        "type:bug" | "Bug"                 => "#DC4545",
+        "type:feature" | "Feature"         => "#2563EB",
+        "type:enhancement" | "Enhancement" => "#08916A",
+        "type:task" | "Task"               => "#D97706",
+        "type:tech debt"                   => "#805AD5",
+        "type:chore"                       => "#596579",
+        "domain:external docs"             => "#0891B2",
+        "domain:ci"                        => "#D97706",
+        "dependencies" | "domain:deps" | "domain:dependencies" => "#4F772D",
+        "domain:core"                      => "#DC4545",
+        "domain:sources"                   => "#08916A",
+        "domain:transforms"                => "#805AD5",
+        "domain:sinks"                     => "#2563EB",
+        "domain:vdev"                      => "#C24186",
+        "domain:releasing"                 => "#155E75",
+        "domain:buffers"                   => "#C24186",
+        "domain:config"                    => "#9C5645",
+        "source:opentelemetry"             => "#596579",
+        "rust"                             => "#805AD5",
+        "performance"                      => "#D97706",
+        "area:performance"                 => "#B45309",
+        "area:ingest"                      => "#C24186",
+        "area:search"                      => "#0891B2",
+        "area:query"                       => "#805AD5",
+        "area:indexing"                    => "#8A651D",
+        "docs review on hold"              => "#596579",
+        _ => {
+            // Use the full label rather than assigning one color to an entire family.
+            let hash = normalized.bytes().fold(5381u64, |h, b| {
+                h.wrapping_mul(33).wrapping_add(b as u64)
+            });
+            PALETTE[(hash as usize) % PALETTE.len()]
+        }
     }
 }
 
@@ -1489,27 +1498,26 @@ mod label_compatibility_tests {
     }
 
     #[test]
-    fn prefix_colors_match_for_old_and_new_labels_and_type_overlays_accept_both() {
-        for (prefix, expected) in [
-            ("domain", "#94A3B8"),
-            ("codec", "#A5B4E3"),
-            ("source", "#85BFAF"),
-            ("sink", "#8FB5DE"),
-            ("transform", "#B8A5D6"),
-            ("enrichment_table", "#A8C49A"),
-            ("platform", "#D3A6BF"),
-            ("provider", "#8DC2CF"),
-            ("vrl", "#B8C88D"),
-            ("stdlib", "#B8C88D"),
-            ("type", "#C5A7D5"),
-            ("complexity", "#A4B5C8"),
-            ("meta", "#BDC3CD"),
-            ("needs", "#E3C785"),
-            ("have", "#D7B38E"),
-            ("preview", "#DDA391"),
+    fn label_colors_distinguish_types_and_accept_historical_spellings() {
+        for prefix in [
+            "domain", "codec", "source", "sink", "transform", "enrichment_table",
+            "platform", "provider", "vrl", "stdlib", "type", "complexity",
+            "meta", "needs", "have", "preview",
         ] {
-            assert_eq!(label_color(&format!("{prefix}:example")), expected);
-            assert_eq!(label_color(&format!("{prefix}: other example")), expected);
+            assert_eq!(
+                label_color(&format!("{prefix}:example")),
+                label_color(&format!("{prefix}: example")),
+            );
+        }
+        let mut type_colors = HashSet::new();
+        for (kind, native) in [
+            ("bug", "Bug"), ("feature", "Feature"),
+            ("enhancement", "Enhancement"), ("task", "Task"),
+        ] {
+            let current = label_color(&format!("type:{kind}"));
+            assert_eq!(current, label_color(&format!("type: {kind}")));
+            assert_eq!(current, label_color(native));
+            assert!(type_colors.insert(current), "issue types must have distinct colors");
         }
         let columns: Vec<String> = [
             "type:enhancement",
