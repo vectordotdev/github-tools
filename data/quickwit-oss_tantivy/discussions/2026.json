@@ -1,0 +1,27 @@
+[
+  {
+    "answerChosenAt": null,
+    "author": {
+      "login": "palmoni5"
+    },
+    "bodyText": "We index a library of books one line (paragraph) per document, because results, counts and navigation are per line. Users expect a phrase to match even when it straddles two consecutive lines, e.g. \"waters and said\" where waters ends line N and and said opens line N+1. Today that is impossible: a phrase only ever matches inside one field of one document.\nWe are solving it in our engine with a custom Query, built on the public API. At index time we store each line's first and last content position as FAST fields. At query time each phrase is split at every word boundary: the left half must end at the line's last position, the right half must start at the next line's first position, and the hits are joined on our own consecutive line id. That works for us, but it got me wondering what a Tantivy-native answer would look like. Two directions came to mind:\n1. A configurable position gap between the values of a multi-valued text field.\nPOSITION_GAP is hard-coded to 1 in postings_writer.rs. Lucene exposes the same thing per field as position_increment_gap.\n\nWith a gap of 0, a phrase could cross from one value to the next.\nWith a large gap, phrases (and sloppy phrases) would be kept inside one value.\n\nThis would make the usual \"index the bigger unit, keep the lines as values\" design work for cross-line phrases. Today a gap of 1 means an exact phrase never crosses values, while slop >= 1 silently does.\n2. Knowing which value a match came from.\nIf a section were one document with each line as a value, we would still need to report the matching line. That means mapping a match position back to its value index (and ideally to an offset inside it). A per-document list of value start positions would be enough, or a helper on the phrase scorer that exposes match positions.\nQuestions:\n\nWould a per-field position gap (an option on TextOptions/TextFieldIndexing) be acceptable upstream? I'd be happy to send a PR.\nIs there interest in exposing match positions or value boundaries, or is that intentionally out of scope?\nIs there a recommended pattern for \"phrase across adjacent documents\" that I'm missing?\n\nPhrases that span documents (adjacency by a user field) seem clearly out of scope for Tantivy; I'm mentioning them only as the motivation.",
+    "category": {
+      "isAnswerable": false,
+      "name": "Ideas"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2026-10-04T02:40:48Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 3149,
+    "stateReason": null,
+    "title": "Phrases across line boundaries: configurable position gap for multi-valued fields?",
+    "updatedAt": "2026-10-04T02:40:48Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/tantivy/discussions/3149"
+  }
+]

@@ -1,6 +1,6 @@
 [
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-26T18:39:50Z",
     "author": {
       "login": "efficacy38"
     },
@@ -12,15 +12,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-01-04T10:18:09Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24442,
     "stateReason": null,
     "title": "Memory enrichment table lookup fails due to concurrent processing?",
-    "updatedAt": "2026-01-04T10:18:09Z",
+    "updatedAt": "2026-10-26T18:39:50Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24442"
   },
@@ -29,7 +29,7 @@
     "author": {
       "login": "Jisprincess"
     },
-    "bodyText": "Question\nThe field in my ClickHouse database requires a timestamp as input. How can I convert the parsed string time into a timestamp?\nVector Config\ntransforms:\nparse_java_logs:\ntype: remap\ninputs: [java_logs]\nsource: |\n. = parse_regex!(\n.message,\nr'^(?P\\d{4}-\\d{2}-\\d{2})T(?P\\d{2}:\\d{2}:\\d{2})(?:.\\d+)?(?:+\\d{2}:\\d{2})?\\s+(?PTRACE|DEBUG|INFO|WARN|ERROR)\\s+\\d+\\s+---\\s+[(?P[^\\]]+)]\\s+[(?P[^\\]]+)]\\s+(?P[^\\s]+)\\s*:\\s*(?P.*)$'\n)\nI\nthis is a  Original log:\n2026-01-05T10:59:43.733+08:00  INFO 1 --- [seco] [pool-24-thread-1] .s.s.i.CollectEventsStatsTaskServiceImpl : _________Starting Fixed stats task device_stats_5min for time range 1767038400000 - 1767042000000, fmt-time: 2025-12-30 04:00:00 - 2025-12-30 05:00:00, currEvents: 0, statEvents: 0\nVector Logs\n2026-01-05T10:59:43.733+08:00  INFO 1 --- [sec] [pool-24-thread-1] .s.s.i.CollectEventsStatsTaskServiceImpl : _________Starting Fixed stats task device_stats_5min for time range 1767038400000 - 1767042000000, fmt-time: 2025-12-30 04:00:00 - 2025-12-30 05:00:00, currEvents: 0, statEvents: 0",
+    "bodyText": "Question\nThe field in my ClickHouse database requires a timestamp as input. How can I convert the parsed string time into a timestamp?\nVector Config\ntransforms:\nparse_java_logs:\ntype: remap\ninputs: [java_logs]\nsource: |\n. = parse_regex!(\n.message,\nr'^(?P\\d{4}-\\d{2}-\\d{2})T(?P\\d{2}:\\d{2}:\\d{2})(?:.\\d+)?(?:+\\d{2}:\\d{2})?\\s+(?PTRACE|DEBUG|INFO|WARN|ERROR)\\s+\\d+\\s+---\\s+[(?P[^]]+)]\\s+[(?P[^]]+)]\\s+(?P[^\\s]+)\\s*:\\s*(?P.*)$'\n)\nI\nthis is a  Original log:\n2026-01-05T10:59:43.733+08:00  INFO 1 --- [seco] [pool-24-thread-1] .s.s.i.CollectEventsStatsTaskServiceImpl : _________Starting Fixed stats task device_stats_5min for time range 1767038400000 - 1767042000000, fmt-time: 2025-12-30 04:00:00 - 2025-12-30 05:00:00, currEvents: 0, statEvents: 0\nVector Logs\n2026-01-05T10:59:43.733+08:00  INFO 1 --- [sec] [pool-24-thread-1] .s.s.i.CollectEventsStatsTaskServiceImpl : _________Starting Fixed stats task device_stats_5min for time range 1767038400000 - 1767042000000, fmt-time: 2025-12-30 04:00:00 - 2025-12-30 05:00:00, currEvents: 0, statEvents: 0",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"
@@ -100,7 +100,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/24447"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-23T15:14:54Z",
     "author": {
       "login": "lhh528634141"
     },
@@ -112,15 +112,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-01-06T12:50:43Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24449,
     "stateReason": null,
     "title": "Q&A aws alb add filed",
-    "updatedAt": "2026-01-06T12:51:26Z",
+    "updatedAt": "2026-10-23T15:14:54Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24449"
   },
@@ -150,7 +150,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/24475"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-26T17:33:25Z",
     "author": {
       "login": "Wellett"
     },
@@ -162,15 +162,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2026-01-15T16:02:08Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24499,
     "stateReason": null,
     "title": "What are the main issues that keep MQTT source and sink from being promoted to \"stable\"?",
-    "updatedAt": "2026-06-11T19:11:21Z",
+    "updatedAt": "2026-10-26T17:33:25Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24499"
   },
@@ -200,7 +200,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/24512"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-26T16:55:56Z",
     "author": {
       "login": "wangzhihaocom"
     },
@@ -212,20 +212,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2026-01-20T17:54:43Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24518,
     "stateReason": null,
     "title": "how does the lifecycle: preStop work in the vectordotdev Helm chart",
-    "updatedAt": "2026-01-21T18:23:22Z",
+    "updatedAt": "2026-10-26T16:55:56Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24518"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-23T17:10:40Z",
     "author": {
       "login": "luxin88"
     },
@@ -237,15 +237,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-01-21T10:55:06Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24522,
     "stateReason": null,
     "title": "Q&A Can I use S3 compatible and SQS compatible services as input sources?",
-    "updatedAt": "2026-01-22T02:20:16Z",
+    "updatedAt": "2026-10-23T17:10:39Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24522"
   },
@@ -287,7 +287,7 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-01-22T18:02:58Z",
     "isAnswered": false,
@@ -295,7 +295,7 @@
     "number": 24533,
     "stateReason": null,
     "title": "Looking for advice on high latency networks",
-    "updatedAt": "2026-01-22T18:02:58Z",
+    "updatedAt": "2026-10-26T18:29:23Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24533"
   },
@@ -334,8 +334,8 @@
       "isAnswerable": false,
       "name": "Announcements"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-23T14:34:13Z",
     "comments": {
       "totalCount": 1
     },
@@ -343,9 +343,9 @@
     "isAnswered": null,
     "locked": false,
     "number": 24544,
-    "stateReason": null,
+    "stateReason": "RESOLVED",
     "title": "Migrating support from Discord to Github Discussions",
-    "updatedAt": "2026-06-25T12:38:13Z",
+    "updatedAt": "2026-10-23T14:34:13Z",
     "upvoteCount": 3,
     "url": "https://github.com/vectordotdev/vector/discussions/24544"
   },
@@ -400,7 +400,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/24572"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-23T17:36:54Z",
     "author": {
       "login": "ilansh"
     },
@@ -412,20 +412,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2026-02-02T14:53:06Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24583,
     "stateReason": null,
     "title": "buffer_events metric",
-    "updatedAt": "2026-02-13T21:51:36Z",
+    "updatedAt": "2026-10-23T17:36:54Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/24583"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-26T18:25:28Z",
     "author": {
       "login": "johnhtodd"
     },
@@ -437,20 +437,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 2
+      "totalCount": 3
     },
     "createdAt": "2026-02-03T21:42:11Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24589,
     "stateReason": null,
     "title": "log_to_metric memory use - double what is required?",
-    "updatedAt": "2026-02-06T21:18:42Z",
+    "updatedAt": "2026-10-26T18:25:28Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/24589"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-26T18:25:18Z",
     "author": {
       "login": "valentino-aguiar-gsa"
     },
@@ -462,20 +462,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2026-02-04T12:10:57Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24592,
     "stateReason": null,
     "title": "Memory Enrichment Table with a 'metadata' file next to the log",
-    "updatedAt": "2026-02-04T20:24:35Z",
+    "updatedAt": "2026-10-26T18:25:17Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24592"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-23T17:45:14Z",
     "author": {
       "login": "ernado"
     },
@@ -487,15 +487,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-02-07T19:11:29Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24615,
     "stateReason": null,
     "title": "How to send metrics from kafka to prometheus remote write?",
-    "updatedAt": "2026-02-07T19:11:49Z",
+    "updatedAt": "2026-10-23T17:45:14Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24615"
   },
@@ -584,18 +584,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-26T18:25:06Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-02-16T15:23:23Z",
     "isAnswered": false,
     "locked": false,
     "number": 24660,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Q&A - Possible Socket (UDP) issue on 0.46.0+?",
-    "updatedAt": "2026-02-16T15:24:01Z",
+    "updatedAt": "2026-10-26T18:25:06Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24660"
   },
@@ -612,7 +612,7 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2026-02-17T08:12:23Z",
     "isAnswered": false,
@@ -620,12 +620,12 @@
     "number": 24668,
     "stateReason": null,
     "title": "Vector high CPU usage",
-    "updatedAt": "2026-05-26T02:05:10Z",
+    "updatedAt": "2026-10-26T18:25:01Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24668"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T06:26:02Z",
     "author": {
       "login": "jlambatl"
     },
@@ -637,20 +637,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-02-19T07:35:04Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24690,
     "stateReason": null,
     "title": "SQS Source wrap up",
-    "updatedAt": "2026-02-20T05:42:04Z",
+    "updatedAt": "2026-10-28T10:41:04Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24690"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-26T18:09:46Z",
     "author": {
       "login": "phemmer"
     },
@@ -662,20 +662,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-02-20T04:49:45Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24700,
     "stateReason": null,
     "title": "Dynamic schema",
-    "updatedAt": "2026-02-20T04:49:45Z",
+    "updatedAt": "2026-10-26T18:09:45Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24700"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-23T14:29:18Z",
     "author": {
       "login": "giacom0c"
     },
@@ -687,15 +687,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-02-24T10:35:23Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24721,
     "stateReason": null,
     "title": "How to implement .jks truststores for kafka Sinks",
-    "updatedAt": "2026-02-24T10:35:23Z",
+    "updatedAt": "2026-10-23T14:29:18Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24721"
   },
@@ -725,7 +725,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/24730"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-23T19:58:41Z",
     "author": {
       "login": "bmtcril"
     },
@@ -737,20 +737,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2026-03-11T13:38:03Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24892,
     "stateReason": null,
     "title": "Question about Clickhouse end-to-end acknowledgments",
-    "updatedAt": "2026-03-30T13:54:53Z",
+    "updatedAt": "2026-10-23T19:58:41Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/24892"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-23T13:57:59Z",
     "author": {
       "login": "divadpoc"
     },
@@ -762,15 +762,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2026-03-12T08:34:22Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 24906,
     "stateReason": null,
     "title": "Redis source - subscribe to pattern channel",
-    "updatedAt": "2026-03-12T09:09:39Z",
+    "updatedAt": "2026-10-26T20:01:31Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24906"
   },
@@ -784,18 +784,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-27T00:11:25Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-03-18T05:34:21Z",
     "isAnswered": false,
     "locked": false,
     "number": 24952,
-    "stateReason": null,
+    "stateReason": "RESOLVED",
     "title": "Unexpected re-processing of old log files (30h+) after OOM crash despite ignore_older_secs: 86400 and successful S3 delivery",
-    "updatedAt": "2026-03-18T05:34:21Z",
+    "updatedAt": "2026-10-27T00:11:25Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/24952"
   },
@@ -1287,7 +1287,7 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-05-20T10:01:29Z",
     "isAnswered": false,
@@ -1295,7 +1295,7 @@
     "number": 25462,
     "stateReason": null,
     "title": "Duplicate metadata fields in Splunk when streaming logs via Vector",
-    "updatedAt": "2026-05-26T09:56:02Z",
+    "updatedAt": "2026-10-26T18:00:29Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/25462"
   },
@@ -1959,8 +1959,8 @@
       "isAnswerable": false,
       "name": "Announcements"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-23T14:33:50Z",
     "comments": {
       "totalCount": 0
     },
@@ -1968,9 +1968,9 @@
     "isAnswered": null,
     "locked": false,
     "number": 26245,
-    "stateReason": null,
+    "stateReason": "RESOLVED",
     "title": "New deprecations page",
-    "updatedAt": "2026-08-27T13:43:13Z",
+    "updatedAt": "2026-10-23T14:33:50Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/26245"
   },
@@ -2100,7 +2100,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/26430"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T09:14:55Z",
     "author": {
       "login": "ellull"
     },
@@ -2109,18 +2109,18 @@
       "isAnswerable": true,
       "name": "General"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T09:14:39Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-10-16T10:47:29Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 26702,
-    "stateReason": null,
+    "stateReason": "RESOLVED",
     "title": "Named tokens for splunk_hec source",
-    "updatedAt": "2026-10-16T10:47:29Z",
+    "updatedAt": "2026-10-28T09:14:55Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/26702"
   },
@@ -2187,7 +2187,7 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2026-10-20T23:05:05Z",
     "isAnswered": false,
@@ -2195,8 +2195,83 @@
     "number": 26764,
     "stateReason": null,
     "title": "GCP BigQuery sink",
-    "updatedAt": "2026-10-20T23:05:05Z",
+    "updatedAt": "2026-10-30T00:27:00Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/26764"
+  },
+  {
+    "answerChosenAt": "2026-10-26T18:00:27Z",
+    "author": {
+      "login": "RobertAtea"
+    },
+    "bodyText": "Question\nI have a Vector sink using routes to address two other remove Vectors.\nI use the strategy: failover_primary option.\nOne the remote vectors (receivers) i have:\nkeepalive:\nmax_connection_age_secs: 300\nmax_connection_age_grace_secs: 30\nSo when the primary vector dies, the sending switches over to the secondary/failover. That works great.\nBut what I want is for the sender to switch back to primary once it is up and working again - and not wait for the current secondary to fail.\nThe max_connection_age seems to do a \"soft\" reset which is simply reconnected to secondary again on the sender.\nIs it possible to make it switch back to primary?\nWhy you ask?\nAny data going to the primary is also feeded into openobserve + s3 archive, while on the secondary there is only the s3 archive.\nSo we want the sender to always try to stay on the primary.\nIf I manually restart the vector on failover host the sender does switch over to primary.\nMaybe have some sort of option to set \"hard reset\" during max_connection_age_secs reset?\nVector Config\n\nReceiver *\n\nVector listening\nsources:\nendpoints_in:\ntype: vector\naddress: \"0.0.0.0:6000\"\nkeepalive:\nmax_connection_age_secs: 300\nmax_connection_age_grace_secs: 30\ntls:\nenabled: true\ncrt_file: \"/nissio/vector/cert/certificate.crt\"\nkey_file: \"/nissio/vector/cert/certificate.key\"\ninternal_metrics:\ntype: internal_metrics\nscrape_interval_secs: 5\n\nsender *\nsinks:\nsend_to_atea_edge:\ntype: vector\ninputs:\n- normalize\nrouting:\nendpoints:\n- \"10.30.30.31:6000\"\n- \"10.30.30.30:6000\"\nstrategy: failover_primary\nkeepalive:\ninterval_secs: 10\ntimeout_secs: 5\nacknowledgements:\nenabled: true\ntls:\nenabled: true\nverify_certificate: false\nverify_hostname: false\nbuffer:\ntype: disk\nmax_size: 42949672960\nwhen_full: block\n\nVector Logs\nNo response",
+    "category": {
+      "isAnswerable": true,
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2026-10-26T12:53:35Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 26844,
+    "stateReason": null,
+    "title": "Sink route, strategy failover_primary",
+    "updatedAt": "2026-10-27T16:09:49Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/26844"
+  },
+  {
+    "answerChosenAt": "2026-10-28T16:23:23Z",
+    "author": {
+      "login": "YuryHrytsuk"
+    },
+    "bodyText": "Question\nI want to alert when a source does not receive events. The problem is such sources have no vector_component_received_events_total metrics so I cannot write a generic alert vector_component_received_events_total == 0 because it will not capture sources that never received events\nVector Config\nNo response\nVector Logs\nNo response",
+    "category": {
+      "isAnswerable": true,
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 2
+    },
+    "createdAt": "2026-10-27T13:17:37Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 26893,
+    "stateReason": null,
+    "title": "How to alert on sources that never received events",
+    "updatedAt": "2026-10-28T16:23:23Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/26893"
+  },
+  {
+    "answerChosenAt": "2026-10-28T16:23:20Z",
+    "author": {
+      "login": "RobertAtea"
+    },
+    "bodyText": "Question\nvector 0.58.0\nI have two vector machines, one primary and one failover. Both has just now pretty much hanged.\nAll memory is full, swap is full, kswapd is taking all cpu, along with some for vector. The server are barely able to respond to commands.\nUnable to stop vector service.\n[root@NISSIO-ETUDRIFT-01 rowin]#       systemctl stop vector\nFailed to stop vector.service: Connection timed out\nSee system logs and 'systemctl status vector.service' for details.\nThe logs doesn't tell much. But it starts rather fast just after server starts.\n\n\nVector Config\nFolder for disk buffer\ndata_dir: \"/nissio/vector/cache\"\nAPI\napi:\nenabled: true\naddress: \"127.0.0.1:8686\"\nVector listening\nsources:\nendpoints_in:\ntype: vector\naddress: \"0.0.0.0:6000\"\nkeepalive:\nmax_connection_age_secs: 300\nmax_connection_age_grace_secs: 30\ntls:\nenabled: true\ncrt_file: \"/nissio/vector/cert/certificate.crt\"\nkey_file: \"/nissio/vector/cert/certificate.key\"\ninternal_metrics:\ntype: internal_metrics\nscrape_interval_secs: 5\nTransforming\ntransforms:\nnormalize:\ntype: remap\ninputs:\n- endpoints_in\nsource: |\n# Add missing .timestamp\nif !exists(.timestamp) { .timestamp = now() }\n# Set log_source to default if missing.\nif !exists(.log_source) || .log_source == \"\" { .log_source = \"default\" }\nCUSTOMER: ETUDRIFT\ncustomer_etudrift_filter:\ntype: filter\ninputs:\n- normalize\ncondition: '.customer == \"ETUDRIFT\"'\nsinks:\nSink for Zabbix to poll for metrics\nprometheus:\ntype: prometheus_exporter\ninputs:\n- internal_metrics\naddress: \"127.0.0.1:9598\"\nCUSTOMER: ETUDRIFT\ncustomer_etudrift_s3:\ntype: aws_s3\ninputs:\n- customer_etudrift_filter\nendpoint: \"\"\nbucket: \"\"\nregion: \"us-east-1\"\nforce_path_style: true\nkey_prefix: \"date=%Y-%m-%d/\"\nauth:\naccess_key_id: \"\"\nsecret_access_key: \"\"\nhealthcheck:\nenabled: true\nencoding:\ncodec: json\nframing:\nmethod: newline_delimited\nbatch:\nmax_bytes: 1073741824      # 1 GB\ntimeout_secs: 1800         # 30 min before uploading any data\nbatch_encoding:\ncodec: parquet\nschema_mode: auto_infer\ncompression:\nalgorithm: zstd\nlevel: 3\nbuffer:\ntype: disk\nmax_size: 53687091200      # 50 GiB\nwhen_full: block\nVector Logs\nOct 28 09:36:53 NISSIO-FAILOVER-01 systemd[1]: Started vector.service - Vector.\nOct 28 09:36:53 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:53.756637Z  INFO vector::app: Log level is enabled. level=\"info\"\nOct 28 09:36:53 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:53.758058Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yaml\"]\nOct 28 09:36:54 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:54.723990Z  WARN sink{component_kind=\"sink\" component_id=customer_etudrift_s3 component_type=aws_s3}: vector::sinks::aws_s3::config: Top level compression setting ignored>\nOct 28 09:36:54 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:54.724765Z  INFO vector::topology::running: Running healthchecks.\nOct 28 09:36:54 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:54.724873Z  INFO vector: Vector has started. debug=\"false\" version=\"0.58.0\" arch=\"x86_64\" revision=\"2bcad9b 2026-08-26 13:37:07.557544670\"\nOct 28 09:36:54 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:54.725071Z  INFO vector::api::grpc_server: GRPC API server bound to 127.0.0.1:8686.\nOct 28 09:36:54 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:54.725939Z  INFO vector::topology::builder: Healthcheck passed.\nOct 28 09:36:54 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:54.726023Z  INFO vector::api::grpc_server: GRPC API server started on 127.0.0.1:8686.\nOct 28 09:36:54 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:54.726202Z  INFO vector::internal_events::api: API server running. address=127.0.0.1:8686\nOct 28 09:36:54 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:54.726818Z  INFO source{component_kind=\"source\" component_id=endpoints_in component_type=vector}: vector::sources::util::grpc: Building gRPC server. address=0.0.0.0:6000\nOct 28 09:36:54 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:54.727725Z  INFO sink{component_kind=\"sink\" component_id=prometheus component_type=prometheus_exporter}: vector::sinks::prometheus::exporter: Building HTTP server. addres>\nOct 28 09:36:54 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:36:54.733289Z  INFO vector::topology::builder: Internal log [Healthcheck passed.] is being suppressed to avoid flooding.\nOct 28 09:37:09 NISSIO-FAILOVER-01 systemd[1]: Stopping vector.service - Vector...\nOct 28 09:37:09 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:09.653334Z  INFO vector::signal: Signal received. signal=\"SIGTERM\"\nOct 28 09:37:09 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:09.667140Z  INFO vector: Vector is stopping.\nOct 28 09:37:09 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:09.720484Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components=\"customer_etudrift_s3\" time_remaining=\"59 seconds left\"\nOct 28 09:37:15 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:15.177093Z  INFO vector::topology::running: Internal log [Shutting down... Waiting on running components.] is being suppressed to avoid flooding.\nOct 28 09:37:24 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:24.326393Z  INFO vector::topology::running: Internal log [Shutting down... Waiting on running components.] has been suppressed 1 times.\nOct 28 09:37:30 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:24.570807Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components=\"customer_etudrift_s3\" time_remaining=\"45 seconds left\"\nOct 28 09:37:30 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:26.929204Z  INFO vector::topology::running: Internal log [Shutting down... Waiting on running components.] is being suppressed to avoid flooding.\nOct 28 09:37:40 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:40.134115Z  INFO vector::topology::running: Internal log [Shutting down... Waiting on running components.] has been suppressed 3 times.\nOct 28 09:37:44 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:40.185994Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components=\"customer_etudrift_s3\" time_remaining=\"29 seconds left\"\nOct 28 09:37:49 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:44.882518Z  INFO vector::topology::running: Internal log [Shutting down... Waiting on running components.] is being suppressed to avoid flooding.\nOct 28 09:37:55 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:54.755669Z  INFO vector::topology::running: Internal log [Shutting down... Waiting on running components.] has been suppressed 2 times.\nOct 28 09:37:55 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:37:54.817883Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components=\"customer_etudrift_s3\" time_remaining=\"14 seconds left\"\nOct 28 09:38:06 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:38:00.024264Z  INFO vector::topology::running: Internal log [Shutting down... Waiting on running components.] is being suppressed to avoid flooding.\nOct 28 09:38:13 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:38:10.067951Z ERROR vector::topology::running: components=\"customer_etudrift_s3\" Failed to gracefully shut down in time. Killing components. internal_log_rate_limit=false\nOct 28 09:38:13 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:38:10.250235Z  INFO vector: Vector has stopped.\nOct 28 09:38:13 NISSIO-FAILOVER-01 vector[1976]: 2026-10-28T08:38:10.459975Z  INFO vector::api::grpc_server: GRPC API server shutting down.\nOct 28 09:38:39 NISSIO-FAILOVER-01 systemd[1]: vector.service: State 'stop-sigterm' timed out. Killing.\nOct 28 09:38:39 NISSIO-FAILOVER-01 systemd[1]: vector.service: Killing process 1976 (vector) with signal SIGKILL.\nOct 28 09:38:39 NISSIO-FAILOVER-01 systemd[1]: vector.service: Killing process 1978 (vector-worker) with signal SIGKILL.\nOct 28 09:38:40 NISSIO-FAILOVER-01 systemd[1]: vector.service: Main process exited, code=killed, status=9/KILL\nOct 28 09:38:40 NISSIO-FAILOVER-01 systemd[1]: vector.service: Failed with result 'timeout'.\nOct 28 09:38:40 NISSIO-FAILOVER-01 systemd[1]: Stopped vector.service - Vector.\nOct 28 09:38:40 NISSIO-FAILOVER-01 systemd[1]: vector.service: Consumed 17.734s CPU time, 3.3G memory peak, 3.8G memory swap peak.",
+    "category": {
+      "isAnswerable": true,
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 3
+    },
+    "createdAt": "2026-10-28T08:41:25Z",
+    "isAnswered": true,
+    "locked": false,
+    "number": 26919,
+    "stateReason": null,
+    "title": "Vector \"hang\" consuming ALL memory and swap",
+    "updatedAt": "2026-10-28T16:23:20Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/26919"
   }
 ]

@@ -198,5 +198,30 @@
     "updatedAt": "2026-10-16T17:35:45Z",
     "upvoteCount": 1,
     "url": "https://github.com/quickwit-oss/quickwit/discussions/6906"
+  },
+  {
+    "answerChosenAt": null,
+    "author": {
+      "login": "dayaffe"
+    },
+    "bodyText": "Users running Quickwit 0.9.2 or earlier should upgrade to 0.9.3.\nSecurity\n\nReject TLS certificate chains through the compromised emSign intermediates (RUSTSEC-2026-0382, RUSTSEC-2026-0381, RUSTSEC-2026-0383).\n\nThe bundled root store no longer includes emSign ECC Root CA - G3. TLS connections to endpoints whose certificates chain to that root will now fail verification.",
+    "category": {
+      "isAnswerable": false,
+      "name": "Announcements"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2026-10-22T19:15:34Z",
+    "isAnswered": null,
+    "locked": false,
+    "number": 6928,
+    "stateReason": null,
+    "title": "Quickwit 0.9.3 security release",
+    "updatedAt": "2026-10-22T19:15:34Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/quickwit-oss/quickwit/discussions/6928"
   }
 ]

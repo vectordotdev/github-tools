@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-21T18:41:15.008085+00:00",
+  "collectedAt": "2026-11-02T14:48:58.116709+00:00",
   "issues": [
     {
       "number": 33,
@@ -1235,7 +1235,7 @@
     },
     {
       "number": 3567,
-      "reactions": 2,
+      "reactions": 3,
       "title": "Should vector be maintaining open file handles to `ignore_older` files older than the cutoff?",
       "unattributedComments": 0,
       "uniqueCommenters": 12
@@ -1942,7 +1942,7 @@
     },
     {
       "number": 5254,
-      "reactions": 34,
+      "reactions": 35,
       "title": "Deploy Vector - Kubernetes Sidecar",
       "unattributedComments": 0,
       "uniqueCommenters": 6
@@ -2096,7 +2096,7 @@
     },
     {
       "number": 5521,
-      "reactions": 30,
+      "reactions": 31,
       "title": "Allowing Remap to manipulate Metric values",
       "unattributedComments": 0,
       "uniqueCommenters": 6
@@ -3538,7 +3538,7 @@
     },
     {
       "number": 8597,
-      "reactions": 0,
+      "reactions": 1,
       "title": "Avoid reading more than one event at a time for `fluent` source",
       "unattributedComments": 0,
       "uniqueCommenters": 2
@@ -5869,10 +5869,10 @@
     },
     {
       "number": 12585,
-      "reactions": 3,
+      "reactions": 5,
       "title": "Add support for expiring secrets",
       "unattributedComments": 0,
-      "uniqueCommenters": 6
+      "uniqueCommenters": 7
     },
     {
       "number": 12587,
@@ -5918,7 +5918,7 @@
     },
     {
       "number": 12703,
-      "reactions": 1,
+      "reactions": 2,
       "title": "Consider a different type for `Value::Object` than `BTreeMap`",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -6289,7 +6289,7 @@
     },
     {
       "number": 13260,
-      "reactions": 8,
+      "reactions": 9,
       "title": "New transform: log to span",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -6639,7 +6639,7 @@
     },
     {
       "number": 13882,
-      "reactions": 24,
+      "reactions": 25,
       "title": "Add Azure Blob Storage source",
       "unattributedComments": 0,
       "uniqueCommenters": 6
@@ -6873,7 +6873,7 @@
       "reactions": 0,
       "title": "Add metric for discarded lines to `file` source",
       "unattributedComments": 0,
-      "uniqueCommenters": 1
+      "uniqueCommenters": 2
     },
     {
       "number": 14335,
@@ -8291,7 +8291,7 @@
     },
     {
       "number": 17050,
-      "reactions": 7,
+      "reactions": 8,
       "title": "generic support for endpoint URIs using unix:// scheme",
       "unattributedComments": 0,
       "uniqueCommenters": 2
@@ -9316,7 +9316,7 @@
       "reactions": 2,
       "title": "Getting Attributes from SQS messages",
       "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 1
     },
     {
       "number": 18883,
@@ -10216,10 +10216,10 @@
     },
     {
       "number": 20266,
-      "reactions": 11,
+      "reactions": 14,
       "title": "Sink(Elasticsearch): Dropping events with AWS auth strategy",
       "unattributedComments": 0,
-      "uniqueCommenters": 2
+      "uniqueCommenters": 3
     },
     {
       "number": 20277,
@@ -10251,10 +10251,10 @@
     },
     {
       "number": 20322,
-      "reactions": 2,
+      "reactions": 3,
       "title": "Tiered buffers on overflow two bugs",
       "unattributedComments": 0,
-      "uniqueCommenters": 4
+      "uniqueCommenters": 5
     },
     {
       "number": 20324,
@@ -10510,7 +10510,7 @@
     },
     {
       "number": 20784,
-      "reactions": 7,
+      "reactions": 8,
       "title": "Batch writes in the `file` sink",
       "unattributedComments": 0,
       "uniqueCommenters": 2
@@ -10818,7 +10818,7 @@
     },
     {
       "number": 21312,
-      "reactions": 7,
+      "reactions": 8,
       "title": "feat(enrichment_tables): add json file support for enrichment tables",
       "unattributedComments": 0,
       "uniqueCommenters": 3
@@ -11189,7 +11189,7 @@
     },
     {
       "number": 22006,
-      "reactions": 20,
+      "reactions": 21,
       "title": "On kafka consumer rebalance, Vector consumer stops consuming.",
       "unattributedComments": 0,
       "uniqueCommenters": 6
@@ -12680,10 +12680,10 @@
     },
     {
       "number": 23787,
-      "reactions": 2,
+      "reactions": 3,
       "title": "watch-config does not handle git-sync symlink updates for enrichment tables (Vector 0.49.0)",
       "unattributedComments": 0,
-      "uniqueCommenters": 4
+      "uniqueCommenters": 5
     },
     {
       "number": 23801,
@@ -12820,7 +12820,7 @@
     },
     {
       "number": 24010,
-      "reactions": 3,
+      "reactions": 4,
       "title": "Block `aws_s3_source` graceful shutdown until object processing completes",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -12834,10 +12834,10 @@
     },
     {
       "number": 24020,
-      "reactions": 2,
+      "reactions": 3,
       "title": "Controlling Vector config via API",
       "unattributedComments": 0,
-      "uniqueCommenters": 4
+      "uniqueCommenters": 5
     },
     {
       "number": 24089,
@@ -12848,7 +12848,7 @@
     },
     {
       "number": 24092,
-      "reactions": 2,
+      "reactions": 3,
       "title": "Socket input in unix_datagram mode doesn't recover after crash",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -12865,7 +12865,7 @@
       "reactions": 3,
       "title": "Vector fails to reload sink with failed events",
       "unattributedComments": 0,
-      "uniqueCommenters": 1
+      "uniqueCommenters": 2
     },
     {
       "number": 24133,
@@ -13996,17 +13996,10 @@
     },
     {
       "number": 25774,
-      "reactions": 14,
+      "reactions": 15,
       "title": "Disk buffer for S3 sink is not flushed on graceful termination",
       "unattributedComments": 0,
-      "uniqueCommenters": 2
-    },
-    {
-      "number": 25790,
-      "reactions": 0,
-      "title": "datadog_agent source: support Datadog v3 series metrics intake API",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 3
     },
     {
       "number": 25792,
@@ -14080,7 +14073,7 @@
     },
     {
       "number": 25969,
-      "reactions": 0,
+      "reactions": 1,
       "title": "Enable opentelemetry sink to send data to to all available endpoints",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -14119,13 +14112,6 @@
       "title": "docker_logs: a transient stream error replays every record since the Vector process started",
       "unattributedComments": 0,
       "uniqueCommenters": 1
-    },
-    {
-      "number": 26035,
-      "reactions": 0,
-      "title": "Vector loads entire disk buffer on start up and could potentially cause OOM",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2
     },
     {
       "number": 26076,
@@ -14178,7 +14164,7 @@
     },
     {
       "number": 26117,
-      "reactions": 0,
+      "reactions": 1,
       "title": "windows_event_log: source subscribes successfully but delivers zero events when read_existing_events is false",
       "unattributedComments": 0,
       "uniqueCommenters": 1
@@ -14353,10 +14339,10 @@
     },
     {
       "number": 26492,
-      "reactions": 2,
+      "reactions": 3,
       "title": "TCP-based sources: idle connections starve busy connections (`RequestLimiter` capped at `num_threads()`)",
       "unattributedComments": 0,
-      "uniqueCommenters": 1
+      "uniqueCommenters": 3
     },
     {
       "number": 26510,
@@ -14381,10 +14367,10 @@
     },
     {
       "number": 26523,
-      "reactions": 0,
+      "reactions": 2,
       "title": "disk buffer: reader can be notified before the data file write completes, delaying the sink's send",
       "unattributedComments": 0,
-      "uniqueCommenters": 4
+      "uniqueCommenters": 5
     },
     {
       "number": 26525,
@@ -14395,7 +14381,7 @@
     },
     {
       "number": 26526,
-      "reactions": 0,
+      "reactions": 1,
       "title": "Windows service hangs in START_PENDING forever when startup fails (prepare_start error is ignored in run_service)",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -14478,13 +14464,6 @@
       "uniqueCommenters": 1
     },
     {
-      "number": 26707,
-      "reactions": 0,
-      "title": "vdev: check docs produces false positives on unstaged changes",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 26728,
       "reactions": 0,
       "title": "Make websocket source consume message-id and support last_received URL values",
@@ -14503,7 +14482,7 @@
       "reactions": 0,
       "title": "WebSocket connection repeatedly times out and restarts during sustained ingestion",
       "unattributedComments": 0,
-      "uniqueCommenters": 2
+      "uniqueCommenters": 3
     },
     {
       "number": 26737,
@@ -14518,6 +14497,174 @@
       "title": "HTTP-based sinks: retry backoff holds a concurrency-limit permit for the entire retry sequence, amplifying the blast radius of transient downstream errors.",
       "unattributedComments": 0,
       "uniqueCommenters": 1
+    },
+    {
+      "number": 26792,
+      "reactions": 0,
+      "title": "Revisit the 16 MiB HTTP/2 header list limit for gRPC (`GRPC_MAX_HEADER_LIST_SIZE`)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 26800,
+      "reactions": 1,
+      "title": "The prometheus_remote_write sink does not honour auth.load_timeout_secs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26801,
+      "reactions": 0,
+      "title": "Implement network byte metrics and deprecate serialized-byte counters",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26814,
+      "reactions": 0,
+      "title": "HTTP and socket sinks send bracketed IPv6 literals as TLS SNI and verify them as DNS names",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26820,
+      "reactions": 0,
+      "title": "Support additional event types in the `throttle` transform",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26839,
+      "reactions": 2,
+      "title": "ByteSizeOf undercounts BTreeMap node storage and Vec capacity in memory buffers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 26842,
+      "reactions": 0,
+      "title": "http_server source: requests to a wrong path return 405 instead of 404 and are counted as component errors",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 26847,
+      "reactions": 0,
+      "title": "`http_server` acknowledgements follow the global setting instead of the per-sink override",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 26887,
+      "reactions": 0,
+      "title": "file/kubernetes_logs source: lines written just before shutdown are not read (no final read after idle backoff)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26888,
+      "reactions": 0,
+      "title": "windows_event_log: never re-subscribes after `ERROR_EVT_CHANNEL_NOT_FOUND`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26899,
+      "reactions": 1,
+      "title": "Parquet codec: configurable row group size, sort order and bloom filters",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26906,
+      "reactions": 0,
+      "title": "Memory leak in internal metrics when expire_metrics_secs is set",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26917,
+      "reactions": 0,
+      "title": "vector validate panics with \"Formatting argument out of range\" when -C / VECTOR_CONFIG_DIR expands to a large number of directories",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26922,
+      "reactions": 0,
+      "title": "Failover strategy: prefer_failover",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26926,
+      "reactions": 0,
+      "title": "s3 slow performance",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 26931,
+      "reactions": 0,
+      "title": "Support the new Google SecOps (Chronicle) REST Ingestion API (logs:import) in gcp_chronicle_unstructured sink",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26936,
+      "reactions": 0,
+      "title": "kubernetes_logs stops reading log files under high load with rapid rotation and high CPU throttling",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26938,
+      "reactions": 0,
+      "title": "`webhdfs` sink permanently drops batches on transient write failures",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26950,
+      "reactions": 0,
+      "title": "Terminal errored sink responses are missing error and discarded-event metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26963,
+      "reactions": 0,
+      "title": "Support OpenMetrics exemplars in prometheus_exporter from trace-bearing log observations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26964,
+      "reactions": 0,
+      "title": "fix(opentelemetry source): preserved decoding rejects valid default empty protobuf exports",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26981,
+      "reactions": 0,
+      "title": "Build failing since 0.61.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26983,
+      "reactions": 1,
+      "title": "Windows service stays RUNNING while shutting down, so Stop-Service fails after 2 seconds",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 26985,
+      "reactions": 0,
+      "title": "Prometheus_remote_write throughput continuously degrades with histogram metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
     }
   ],
   "repository": "vectordotdev/vector",
