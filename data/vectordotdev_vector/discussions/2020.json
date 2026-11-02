@@ -16,6 +16,9 @@
     },
     "createdAt": "2020-12-10T02:52:48Z",
     "isAnswered": null,
+    "labels": [
+      "type:announcement"
+    ],
     "locked": false,
     "number": 5472,
     "stateReason": "RESOLVED",
@@ -41,6 +44,12 @@
     },
     "createdAt": "2020-07-23T08:20:01Z",
     "isAnswered": true,
+    "labels": [
+      "domain:filtering",
+      "have:should",
+      "platform:docker",
+      "transform:route"
+    ],
     "locked": false,
     "number": 13834,
     "stateReason": null,

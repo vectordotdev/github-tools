@@ -16,6 +16,10 @@
     },
     "createdAt": "2025-01-01T20:49:45Z",
     "isAnswered": true,
+    "labels": [
+      "platform:windows",
+      "source:file"
+    ],
     "locked": false,
     "number": 22103,
     "stateReason": "REOPENED",
@@ -41,6 +45,7 @@
     },
     "createdAt": "2025-01-02T02:06:05Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22104,
     "stateReason": null,
@@ -66,6 +71,7 @@
     },
     "createdAt": "2025-01-02T05:58:59Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22105,
     "stateReason": null,
@@ -91,6 +97,7 @@
     },
     "createdAt": "2025-01-02T16:13:35Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22107,
     "stateReason": "RESOLVED",
@@ -116,6 +123,7 @@
     },
     "createdAt": "2025-01-03T01:05:06Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22117,
     "stateReason": null,
@@ -141,6 +149,11 @@
     },
     "createdAt": "2025-01-04T20:32:57Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "domain:startup",
+      "platform:docker"
+    ],
     "locked": false,
     "number": 22122,
     "stateReason": null,
@@ -166,6 +179,7 @@
     },
     "createdAt": "2025-01-06T19:59:39Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22127,
     "stateReason": null,
@@ -191,6 +205,14 @@
     },
     "createdAt": "2025-01-06T20:30:53Z",
     "isAnswered": true,
+    "labels": [
+      "domain:parsing",
+      "platform:kubernetes",
+      "source:file",
+      "transform:filter",
+      "transform:reduce",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22128,
     "stateReason": null,
@@ -216,6 +238,14 @@
     },
     "createdAt": "2025-01-07T08:20:00Z",
     "isAnswered": false,
+    "labels": [
+      "domain:networking",
+      "meta:awaiting author",
+      "platform:kubernetes",
+      "provider:gcp",
+      "sink:vector",
+      "source:vector"
+    ],
     "locked": false,
     "number": 22131,
     "stateReason": null,
@@ -241,6 +271,9 @@
     },
     "createdAt": "2025-01-07T13:00:44Z",
     "isAnswered": true,
+    "labels": [
+      "domain:performance"
+    ],
     "locked": false,
     "number": 22132,
     "stateReason": null,
@@ -266,6 +299,7 @@
     },
     "createdAt": "2025-01-07T15:08:39Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22133,
     "stateReason": null,
@@ -291,6 +325,12 @@
     },
     "createdAt": "2025-01-03T08:06:36Z",
     "isAnswered": false,
+    "labels": [
+      "domain:networking",
+      "meta:awaiting author",
+      "platform:kubernetes",
+      "sink:clickhouse"
+    ],
     "locked": false,
     "number": 22137,
     "stateReason": null,
@@ -316,6 +356,7 @@
     },
     "createdAt": "2025-01-08T03:29:17Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22141,
     "stateReason": null,
@@ -341,6 +382,7 @@
     },
     "createdAt": "2025-01-08T15:19:16Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22142,
     "stateReason": null,
@@ -366,6 +408,7 @@
     },
     "createdAt": "2025-01-09T13:00:42Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22149,
     "stateReason": "DUPLICATE",
@@ -391,6 +434,9 @@
     },
     "createdAt": "2025-01-12T11:52:16Z",
     "isAnswered": false,
+    "labels": [
+      "source:aws_ecs_metrics"
+    ],
     "locked": false,
     "number": 22185,
     "stateReason": null,
@@ -416,6 +462,12 @@
     },
     "createdAt": "2025-01-13T13:38:45Z",
     "isAnswered": false,
+    "labels": [
+      "platform:helm",
+      "platform:kubernetes",
+      "sink:vector",
+      "source:vector"
+    ],
     "locked": false,
     "number": 22189,
     "stateReason": null,
@@ -441,6 +493,12 @@
     },
     "createdAt": "2025-01-14T12:52:08Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "domain:delivery",
+      "sink:clickhouse",
+      "source:kafka"
+    ],
     "locked": false,
     "number": 22197,
     "stateReason": null,
@@ -466,6 +524,10 @@
     },
     "createdAt": "2025-01-14T19:45:48Z",
     "isAnswered": false,
+    "labels": [
+      "provider:splunk",
+      "source:socket"
+    ],
     "locked": false,
     "number": 22204,
     "stateReason": null,
@@ -491,6 +553,10 @@
     },
     "createdAt": "2025-01-15T06:49:52Z",
     "isAnswered": true,
+    "labels": [
+      "domain:startup",
+      "platform:docker"
+    ],
     "locked": false,
     "number": 22210,
     "stateReason": null,
@@ -516,6 +582,9 @@
     },
     "createdAt": "2025-01-15T22:49:14Z",
     "isAnswered": true,
+    "labels": [
+      "domain:api"
+    ],
     "locked": false,
     "number": 22218,
     "stateReason": null,
@@ -541,6 +610,7 @@
     },
     "createdAt": "2025-01-16T00:04:17Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22220,
     "stateReason": "RESOLVED",
@@ -566,6 +636,9 @@
     },
     "createdAt": "2025-01-16T20:53:30Z",
     "isAnswered": true,
+    "labels": [
+      "source:aws_s3"
+    ],
     "locked": false,
     "number": 22228,
     "stateReason": null,
@@ -591,6 +664,7 @@
     },
     "createdAt": "2025-01-17T04:40:13Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22229,
     "stateReason": "RESOLVED",
@@ -616,6 +690,10 @@
     },
     "createdAt": "2025-01-17T07:47:32Z",
     "isAnswered": true,
+    "labels": [
+      "domain:opentelemetry",
+      "sink:opentelemetry"
+    ],
     "locked": false,
     "number": 22231,
     "stateReason": null,
@@ -641,6 +719,9 @@
     },
     "createdAt": "2025-01-17T12:21:55Z",
     "isAnswered": false,
+    "labels": [
+      "sink:kafka"
+    ],
     "locked": false,
     "number": 22233,
     "stateReason": "RESOLVED",
@@ -666,6 +747,7 @@
     },
     "createdAt": "2025-01-18T13:12:46Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22240,
     "stateReason": "RESOLVED",
@@ -691,6 +773,10 @@
     },
     "createdAt": "2025-01-20T13:21:42Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "source:kubernetes_logs"
+    ],
     "locked": false,
     "number": 22256,
     "stateReason": null,
@@ -716,6 +802,9 @@
     },
     "createdAt": "2025-01-21T17:43:23Z",
     "isAnswered": true,
+    "labels": [
+      "domain:deployment"
+    ],
     "locked": false,
     "number": 22265,
     "stateReason": null,
@@ -741,6 +830,7 @@
     },
     "createdAt": "2025-01-21T21:08:12Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22268,
     "stateReason": null,
@@ -766,6 +856,9 @@
     },
     "createdAt": "2025-01-22T12:35:25Z",
     "isAnswered": true,
+    "labels": [
+      "sink:loki"
+    ],
     "locked": false,
     "number": 22276,
     "stateReason": "RESOLVED",
@@ -791,6 +884,12 @@
     },
     "createdAt": "2025-01-22T16:53:32Z",
     "isAnswered": true,
+    "labels": [
+      "domain:opentelemetry",
+      "domain:traces",
+      "sink:opentelemetry",
+      "source:datadog_agent"
+    ],
     "locked": false,
     "number": 22278,
     "stateReason": null,
@@ -816,6 +915,9 @@
     },
     "createdAt": "2025-01-22T20:00:55Z",
     "isAnswered": true,
+    "labels": [
+      "sink:prometheus_remote_write"
+    ],
     "locked": false,
     "number": 22282,
     "stateReason": null,
@@ -841,6 +943,10 @@
     },
     "createdAt": "2025-01-22T23:15:27Z",
     "isAnswered": true,
+    "labels": [
+      "domain:observability",
+      "source:file"
+    ],
     "locked": false,
     "number": 22286,
     "stateReason": null,
@@ -866,6 +972,7 @@
     },
     "createdAt": "2025-01-23T16:21:07Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22289,
     "stateReason": "RESOLVED",
@@ -891,6 +998,12 @@
     },
     "createdAt": "2025-01-23T18:31:10Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "domain:delivery",
+      "sink:datadog_logs",
+      "source:http_client"
+    ],
     "locked": false,
     "number": 22291,
     "stateReason": null,
@@ -916,6 +1029,10 @@
     },
     "createdAt": "2025-01-24T05:30:35Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config",
+      "domain:topology"
+    ],
     "locked": false,
     "number": 22292,
     "stateReason": null,
@@ -941,6 +1058,9 @@
     },
     "createdAt": "2025-01-26T16:19:29Z",
     "isAnswered": false,
+    "labels": [
+      "source:file"
+    ],
     "locked": false,
     "number": 22298,
     "stateReason": "OUTDATED",
@@ -966,6 +1086,11 @@
     },
     "createdAt": "2025-01-27T23:35:59Z",
     "isAnswered": false,
+    "labels": [
+      "domain:metrics",
+      "sink:prometheus_remote_write",
+      "transform:log_to_metric"
+    ],
     "locked": false,
     "number": 22309,
     "stateReason": "OUTDATED",
@@ -991,6 +1116,10 @@
     },
     "createdAt": "2025-01-28T09:58:45Z",
     "isAnswered": false,
+    "labels": [
+      "domain:config",
+      "domain:topology"
+    ],
     "locked": false,
     "number": 22311,
     "stateReason": null,
@@ -1016,6 +1145,9 @@
     },
     "createdAt": "2025-01-28T10:58:34Z",
     "isAnswered": true,
+    "labels": [
+      "domain:unit tests"
+    ],
     "locked": false,
     "number": 22312,
     "stateReason": null,
@@ -1041,6 +1173,12 @@
     },
     "createdAt": "2025-01-28T15:03:32Z",
     "isAnswered": false,
+    "labels": [
+      "meta:awaiting author",
+      "sink:http",
+      "source:file",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22314,
     "stateReason": null,
@@ -1066,6 +1204,7 @@
     },
     "createdAt": "2025-01-29T19:43:24Z",
     "isAnswered": false,
+    "labels": [],
     "locked": true,
     "number": 22321,
     "stateReason": "RESOLVED",
@@ -1091,6 +1230,7 @@
     },
     "createdAt": "2025-01-29T21:13:22Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22322,
     "stateReason": "RESOLVED",
@@ -1116,6 +1256,9 @@
     },
     "createdAt": "2025-01-30T12:43:14Z",
     "isAnswered": true,
+    "labels": [
+      "sink:clickhouse"
+    ],
     "locked": false,
     "number": 22325,
     "stateReason": null,
@@ -1141,6 +1284,12 @@
     },
     "createdAt": "2025-01-30T19:31:10Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config",
+      "domain:enriching",
+      "domain:vrl",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22330,
     "stateReason": null,
@@ -1166,6 +1315,9 @@
     },
     "createdAt": "2025-01-30T19:33:56Z",
     "isAnswered": true,
+    "labels": [
+      "transform:log_to_metric"
+    ],
     "locked": false,
     "number": 22331,
     "stateReason": null,
@@ -1191,6 +1343,10 @@
     },
     "createdAt": "2025-01-30T20:08:44Z",
     "isAnswered": true,
+    "labels": [
+      "source:prometheus_scrape",
+      "transform:filter"
+    ],
     "locked": false,
     "number": 22333,
     "stateReason": null,
@@ -1216,6 +1372,7 @@
     },
     "createdAt": "2025-01-30T20:47:36Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22334,
     "stateReason": null,
@@ -1241,6 +1398,13 @@
     },
     "createdAt": "2025-01-31T07:24:02Z",
     "isAnswered": false,
+    "labels": [
+      "domain:performance",
+      "meta:awaiting author",
+      "sink:kafka",
+      "source:kafka",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22337,
     "stateReason": null,
@@ -1266,6 +1430,10 @@
     },
     "createdAt": "2025-01-31T07:31:25Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config",
+      "domain:security"
+    ],
     "locked": false,
     "number": 22338,
     "stateReason": null,
@@ -1291,6 +1459,9 @@
     },
     "createdAt": "2025-01-31T14:05:49Z",
     "isAnswered": true,
+    "labels": [
+      "sink:loki"
+    ],
     "locked": false,
     "number": 22340,
     "stateReason": "RESOLVED",
@@ -1316,6 +1487,7 @@
     },
     "createdAt": "2025-02-01T04:22:16Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22343,
     "stateReason": "RESOLVED",
@@ -1341,6 +1513,12 @@
     },
     "createdAt": "2025-02-03T12:33:30Z",
     "isAnswered": true,
+    "labels": [
+      "domain:parsing",
+      "domain:vrl",
+      "source:file",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22349,
     "stateReason": null,
@@ -1364,6 +1542,10 @@
     },
     "createdAt": "2025-02-03T17:01:19Z",
     "isAnswered": true,
+    "labels": [
+      "platform:kubernetes",
+      "source:journald"
+    ],
     "locked": false,
     "number": 22353,
     "stateReason": null,
@@ -1389,6 +1571,7 @@
     },
     "createdAt": "2025-02-03T17:44:32Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22355,
     "stateReason": "RESOLVED",
@@ -1414,6 +1597,9 @@
     },
     "createdAt": "2025-02-03T18:55:58Z",
     "isAnswered": true,
+    "labels": [
+      "vrl:compiler"
+    ],
     "locked": false,
     "number": 22358,
     "stateReason": null,
@@ -1439,6 +1625,11 @@
     },
     "createdAt": "2025-02-04T15:49:16Z",
     "isAnswered": true,
+    "labels": [
+      "domain:auth",
+      "provider:aws",
+      "sink:aws_s3"
+    ],
     "locked": false,
     "number": 22365,
     "stateReason": null,
@@ -1464,6 +1655,9 @@
     },
     "createdAt": "2025-02-04T22:13:41Z",
     "isAnswered": false,
+    "labels": [
+      "meta:idea"
+    ],
     "locked": false,
     "number": 22367,
     "stateReason": null,
@@ -1489,6 +1683,9 @@
     },
     "createdAt": "2025-02-06T09:05:23Z",
     "isAnswered": false,
+    "labels": [
+      "source:docker_logs"
+    ],
     "locked": false,
     "number": 22375,
     "stateReason": "OUTDATED",
@@ -1514,6 +1711,10 @@
     },
     "createdAt": "2025-02-06T12:54:31Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics",
+      "platform:windows"
+    ],
     "locked": false,
     "number": 22376,
     "stateReason": null,
@@ -1539,6 +1740,7 @@
     },
     "createdAt": "2025-02-06T19:31:48Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22377,
     "stateReason": "RESOLVED",
@@ -1564,6 +1766,10 @@
     },
     "createdAt": "2025-02-07T05:20:19Z",
     "isAnswered": true,
+    "labels": [
+      "sink:vector",
+      "source:vector"
+    ],
     "locked": false,
     "number": 22382,
     "stateReason": null,
@@ -1589,6 +1795,9 @@
     },
     "createdAt": "2025-02-07T12:33:52Z",
     "isAnswered": false,
+    "labels": [
+      "domain:security"
+    ],
     "locked": false,
     "number": 22383,
     "stateReason": null,
@@ -1614,6 +1823,10 @@
     },
     "createdAt": "2025-02-07T14:57:58Z",
     "isAnswered": true,
+    "labels": [
+      "domain:unit tests",
+      "transform:dedupe"
+    ],
     "locked": false,
     "number": 22385,
     "stateReason": null,
@@ -1639,6 +1852,12 @@
     },
     "createdAt": "2025-02-08T04:40:41Z",
     "isAnswered": false,
+    "labels": [
+      "domain:metrics",
+      "provider:datadog",
+      "sink:datadog_metrics",
+      "source:datadog_agent"
+    ],
     "locked": false,
     "number": 22388,
     "stateReason": "OUTDATED",
@@ -1664,6 +1883,10 @@
     },
     "createdAt": "2025-02-09T08:26:18Z",
     "isAnswered": true,
+    "labels": [
+      "sink:kafka",
+      "source:kafka"
+    ],
     "locked": false,
     "number": 22390,
     "stateReason": null,
@@ -1689,6 +1912,9 @@
     },
     "createdAt": "2025-02-09T20:48:17Z",
     "isAnswered": true,
+    "labels": [
+      "source:aws_s3"
+    ],
     "locked": false,
     "number": 22391,
     "stateReason": null,
@@ -1714,6 +1940,10 @@
     },
     "createdAt": "2025-02-10T15:11:58Z",
     "isAnswered": false,
+    "labels": [
+      "domain:buffers",
+      "sink:aws_s3"
+    ],
     "locked": false,
     "number": 22407,
     "stateReason": null,
@@ -1739,6 +1969,7 @@
     },
     "createdAt": "2025-02-11T03:06:43Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22419,
     "stateReason": null,
@@ -1764,6 +1995,9 @@
     },
     "createdAt": "2025-02-11T17:40:49Z",
     "isAnswered": true,
+    "labels": [
+      "sink:elasticsearch"
+    ],
     "locked": false,
     "number": 22422,
     "stateReason": null,
@@ -1789,6 +2023,10 @@
     },
     "createdAt": "2025-02-11T20:33:09Z",
     "isAnswered": true,
+    "labels": [
+      "transform:exclusive_route",
+      "transform:route"
+    ],
     "locked": false,
     "number": 22423,
     "stateReason": null,
@@ -1814,6 +2052,9 @@
     },
     "createdAt": "2025-02-12T11:38:23Z",
     "isAnswered": true,
+    "labels": [
+      "sink:http"
+    ],
     "locked": false,
     "number": 22425,
     "stateReason": null,
@@ -1839,6 +2080,12 @@
     },
     "createdAt": "2025-02-12T12:52:35Z",
     "isAnswered": false,
+    "labels": [
+      "meta:awaiting author",
+      "platform:kubernetes",
+      "provider:aws",
+      "sink:aws_s3"
+    ],
     "locked": false,
     "number": 22426,
     "stateReason": null,
@@ -1864,6 +2111,9 @@
     },
     "createdAt": "2025-02-12T20:04:59Z",
     "isAnswered": true,
+    "labels": [
+      "source:aws_s3"
+    ],
     "locked": false,
     "number": 22430,
     "stateReason": null,
@@ -1889,6 +2139,7 @@
     },
     "createdAt": "2025-02-13T09:55:54Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22432,
     "stateReason": null,
@@ -1914,6 +2165,10 @@
     },
     "createdAt": "2025-02-13T23:09:24Z",
     "isAnswered": true,
+    "labels": [
+      "domain:filtering",
+      "transform:sample"
+    ],
     "locked": false,
     "number": 22436,
     "stateReason": null,
@@ -1939,6 +2194,9 @@
     },
     "createdAt": "2025-02-14T07:29:05Z",
     "isAnswered": false,
+    "labels": [
+      "domain:config"
+    ],
     "locked": false,
     "number": 22438,
     "stateReason": null,
@@ -1964,6 +2222,11 @@
     },
     "createdAt": "2025-02-14T13:11:02Z",
     "isAnswered": true,
+    "labels": [
+      "domain:performance",
+      "transform:route",
+      "transform:throttle"
+    ],
     "locked": false,
     "number": 22439,
     "stateReason": null,
@@ -1989,6 +2252,9 @@
     },
     "createdAt": "2025-02-14T20:18:24Z",
     "isAnswered": true,
+    "labels": [
+      "sink:datadog_events"
+    ],
     "locked": false,
     "number": 22444,
     "stateReason": null,
@@ -2014,6 +2280,11 @@
     },
     "createdAt": "2025-02-17T11:51:23Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "domain:templating",
+      "sink:file"
+    ],
     "locked": false,
     "number": 22457,
     "stateReason": null,
@@ -2039,6 +2310,12 @@
     },
     "createdAt": "2025-02-17T16:31:25Z",
     "isAnswered": true,
+    "labels": [
+      "domain:parsing",
+      "domain:vrl",
+      "source:file",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22461,
     "stateReason": null,
@@ -2064,6 +2341,7 @@
     },
     "createdAt": "2025-02-19T10:30:04Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22472,
     "stateReason": null,
@@ -2089,6 +2367,10 @@
     },
     "createdAt": "2025-02-20T12:42:16Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "sink:loki"
+    ],
     "locked": false,
     "number": 22478,
     "stateReason": null,
@@ -2114,6 +2396,11 @@
     },
     "createdAt": "2025-02-20T23:35:44Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics",
+      "domain:privacy",
+      "source:host_metrics"
+    ],
     "locked": false,
     "number": 22488,
     "stateReason": null,
@@ -2139,6 +2426,11 @@
     },
     "createdAt": "2025-02-21T19:13:42Z",
     "isAnswered": false,
+    "labels": [
+      "platform:windows",
+      "sink:file",
+      "source:file"
+    ],
     "locked": false,
     "number": 22492,
     "stateReason": "OUTDATED",
@@ -2164,6 +2456,11 @@
     },
     "createdAt": "2025-02-23T20:03:09Z",
     "isAnswered": true,
+    "labels": [
+      "domain:delivery",
+      "sink:aws_s3",
+      "source:kafka"
+    ],
     "locked": false,
     "number": 22494,
     "stateReason": null,
@@ -2189,6 +2486,11 @@
     },
     "createdAt": "2025-02-24T01:18:22Z",
     "isAnswered": true,
+    "labels": [
+      "domain:parsing",
+      "domain:vrl",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22495,
     "stateReason": null,
@@ -2214,6 +2516,12 @@
     },
     "createdAt": "2025-02-24T04:07:44Z",
     "isAnswered": true,
+    "labels": [
+      "domain:filtering",
+      "domain:vrl",
+      "transform:filter",
+      "transform:sample"
+    ],
     "locked": false,
     "number": 22496,
     "stateReason": null,
@@ -2239,6 +2547,15 @@
     },
     "createdAt": "2025-02-24T05:49:18Z",
     "isAnswered": false,
+    "labels": [
+      "domain:buffers",
+      "domain:delivery",
+      "domain:memory",
+      "meta:awaiting author",
+      "platform:kubernetes",
+      "sink:elasticsearch",
+      "source:http_server"
+    ],
     "locked": false,
     "number": 22498,
     "stateReason": null,
@@ -2264,6 +2581,9 @@
     },
     "createdAt": "2025-02-25T06:02:14Z",
     "isAnswered": true,
+    "labels": [
+      "domain:releasing"
+    ],
     "locked": false,
     "number": 22509,
     "stateReason": null,
@@ -2289,6 +2609,11 @@
     },
     "createdAt": "2025-02-26T00:38:43Z",
     "isAnswered": true,
+    "labels": [
+      "domain:cli",
+      "domain:tests",
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 22515,
     "stateReason": null,
@@ -2314,6 +2639,9 @@
     },
     "createdAt": "2025-02-26T01:11:02Z",
     "isAnswered": true,
+    "labels": [
+      "domain:delivery"
+    ],
     "locked": false,
     "number": 22516,
     "stateReason": null,
@@ -2339,6 +2667,11 @@
     },
     "createdAt": "2025-02-26T14:48:03Z",
     "isAnswered": false,
+    "labels": [
+      "domain:delivery",
+      "meta:awaiting author",
+      "source:kafka"
+    ],
     "locked": false,
     "number": 22524,
     "stateReason": null,
@@ -2364,6 +2697,12 @@
     },
     "createdAt": "2025-02-26T22:09:47Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "domain:metrics",
+      "sink:opentelemetry",
+      "source:internal_metrics"
+    ],
     "locked": false,
     "number": 22529,
     "stateReason": null,
@@ -2389,6 +2728,9 @@
     },
     "createdAt": "2025-02-27T18:43:13Z",
     "isAnswered": true,
+    "labels": [
+      "domain:external docs"
+    ],
     "locked": false,
     "number": 22534,
     "stateReason": null,
@@ -2414,6 +2756,14 @@
     },
     "createdAt": "2025-02-28T06:11:45Z",
     "isAnswered": false,
+    "labels": [
+      "domain:memory",
+      "domain:performance",
+      "meta:awaiting author",
+      "sink:prometheus_exporter",
+      "sink:prometheus_remote_write",
+      "source:kafka"
+    ],
     "locked": false,
     "number": 22538,
     "stateReason": null,
@@ -2439,6 +2789,7 @@
     },
     "createdAt": "2025-02-28T21:29:25Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22545,
     "stateReason": null,
@@ -2464,6 +2815,11 @@
     },
     "createdAt": "2025-03-03T08:27:19Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "domain:vrl",
+      "source:journald"
+    ],
     "locked": false,
     "number": 22567,
     "stateReason": null,
@@ -2489,6 +2845,13 @@
     },
     "createdAt": "2025-03-03T10:04:01Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics",
+      "domain:observability",
+      "sink:prometheus_exporter",
+      "source:host_metrics",
+      "source:internal_metrics"
+    ],
     "locked": false,
     "number": 22570,
     "stateReason": null,
@@ -2514,6 +2877,12 @@
     },
     "createdAt": "2025-03-03T14:38:06Z",
     "isAnswered": false,
+    "labels": [
+      "domain:buffers",
+      "meta:awaiting author",
+      "sink:prometheus_exporter",
+      "source:internal_metrics"
+    ],
     "locked": false,
     "number": 22571,
     "stateReason": null,
@@ -2539,6 +2908,10 @@
     },
     "createdAt": "2025-03-03T19:35:26Z",
     "isAnswered": true,
+    "labels": [
+      "transform:exclusive_route",
+      "transform:route"
+    ],
     "locked": false,
     "number": 22579,
     "stateReason": null,
@@ -2564,6 +2937,7 @@
     },
     "createdAt": "2025-03-04T15:10:37Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22588,
     "stateReason": null,
@@ -2589,6 +2963,9 @@
     },
     "createdAt": "2025-03-04T15:55:21Z",
     "isAnswered": true,
+    "labels": [
+      "transform:log_to_metric"
+    ],
     "locked": false,
     "number": 22589,
     "stateReason": null,
@@ -2614,6 +2991,9 @@
     },
     "createdAt": "2025-03-04T21:04:08Z",
     "isAnswered": true,
+    "labels": [
+      "sink:gcp_chronicle_unstructured"
+    ],
     "locked": false,
     "number": 22590,
     "stateReason": null,
@@ -2639,6 +3019,9 @@
     },
     "createdAt": "2025-03-05T11:59:57Z",
     "isAnswered": true,
+    "labels": [
+      "sink:loki"
+    ],
     "locked": false,
     "number": 22595,
     "stateReason": null,
@@ -2664,6 +3047,12 @@
     },
     "createdAt": "2025-03-05T19:59:51Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config",
+      "domain:delivery",
+      "sink:http",
+      "source:http_server"
+    ],
     "locked": false,
     "number": 22599,
     "stateReason": null,
@@ -2689,6 +3078,7 @@
     },
     "createdAt": "2025-03-05T22:58:05Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22600,
     "stateReason": null,
@@ -2714,6 +3104,12 @@
     },
     "createdAt": "2025-03-06T09:46:32Z",
     "isAnswered": true,
+    "labels": [
+      "domain:observability",
+      "sink:kafka",
+      "source:http_server",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22602,
     "stateReason": null,
@@ -2739,6 +3135,10 @@
     },
     "createdAt": "2025-03-06T20:25:18Z",
     "isAnswered": false,
+    "labels": [
+      "domain:codecs",
+      "provider:datadog"
+    ],
     "locked": false,
     "number": 22605,
     "stateReason": "OUTDATED",
@@ -2764,6 +3164,9 @@
     },
     "createdAt": "2025-03-07T05:02:41Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics"
+    ],
     "locked": false,
     "number": 22608,
     "stateReason": null,
@@ -2789,6 +3192,10 @@
     },
     "createdAt": "2025-03-07T05:20:28Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22612,
     "stateReason": null,
@@ -2814,6 +3221,11 @@
     },
     "createdAt": "2025-03-12T03:09:35Z",
     "isAnswered": true,
+    "labels": [
+      "sink:http",
+      "transform:filter",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22636,
     "stateReason": null,
@@ -2839,6 +3251,7 @@
     },
     "createdAt": "2025-03-12T15:59:31Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22640,
     "stateReason": null,
@@ -2864,6 +3277,9 @@
     },
     "createdAt": "2025-03-12T18:03:49Z",
     "isAnswered": true,
+    "labels": [
+      "sink:splunk_hec_logs"
+    ],
     "locked": false,
     "number": 22642,
     "stateReason": null,
@@ -2889,6 +3305,11 @@
     },
     "createdAt": "2025-03-12T21:19:43Z",
     "isAnswered": false,
+    "labels": [
+      "domain:metrics",
+      "platform:kubernetes",
+      "provider:datadog"
+    ],
     "locked": false,
     "number": 22649,
     "stateReason": "OUTDATED",
@@ -2914,6 +3335,10 @@
     },
     "createdAt": "2025-03-13T19:21:14Z",
     "isAnswered": false,
+    "labels": [
+      "domain:external docs",
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 22654,
     "stateReason": "OUTDATED",
@@ -2939,6 +3364,9 @@
     },
     "createdAt": "2025-03-14T07:57:26Z",
     "isAnswered": true,
+    "labels": [
+      "source:exec"
+    ],
     "locked": false,
     "number": 22655,
     "stateReason": null,
@@ -2964,6 +3392,10 @@
     },
     "createdAt": "2025-03-14T09:09:17Z",
     "isAnswered": true,
+    "labels": [
+      "sink:statsd",
+      "source:statsd"
+    ],
     "locked": false,
     "number": 22656,
     "stateReason": "RESOLVED",
@@ -2989,6 +3421,7 @@
     },
     "createdAt": "2025-03-14T15:58:04Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22657,
     "stateReason": "RESOLVED",
@@ -3014,6 +3447,10 @@
     },
     "createdAt": "2025-03-16T10:56:45Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "sink:kafka"
+    ],
     "locked": false,
     "number": 22660,
     "stateReason": null,
@@ -3039,6 +3476,12 @@
     },
     "createdAt": "2025-03-17T10:12:20Z",
     "isAnswered": true,
+    "labels": [
+      "domain:delivery",
+      "domain:observability",
+      "sink:kafka",
+      "source:file"
+    ],
     "locked": false,
     "number": 22670,
     "stateReason": null,
@@ -3064,6 +3507,7 @@
     },
     "createdAt": "2025-03-18T01:19:38Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22677,
     "stateReason": null,
@@ -3089,6 +3533,9 @@
     },
     "createdAt": "2025-03-18T13:36:39Z",
     "isAnswered": true,
+    "labels": [
+      "source:file"
+    ],
     "locked": false,
     "number": 22682,
     "stateReason": "OUTDATED",
@@ -3114,6 +3561,11 @@
     },
     "createdAt": "2025-03-18T14:07:02Z",
     "isAnswered": false,
+    "labels": [
+      "domain:performance",
+      "meta:awaiting author",
+      "platform:arm"
+    ],
     "locked": false,
     "number": 22683,
     "stateReason": null,
@@ -3139,6 +3591,7 @@
     },
     "createdAt": "2025-03-19T13:39:25Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22690,
     "stateReason": "RESOLVED",
@@ -3164,6 +3617,9 @@
     },
     "createdAt": "2025-03-20T11:28:47Z",
     "isAnswered": true,
+    "labels": [
+      "sink:socket"
+    ],
     "locked": false,
     "number": 22697,
     "stateReason": "RESOLVED",
@@ -3189,6 +3645,9 @@
     },
     "createdAt": "2025-03-21T04:19:58Z",
     "isAnswered": true,
+    "labels": [
+      "source:syslog"
+    ],
     "locked": false,
     "number": 22703,
     "stateReason": null,
@@ -3214,6 +3673,9 @@
     },
     "createdAt": "2025-03-21T14:47:22Z",
     "isAnswered": true,
+    "labels": [
+      "transform:reduce"
+    ],
     "locked": false,
     "number": 22705,
     "stateReason": null,
@@ -3239,6 +3701,9 @@
     },
     "createdAt": "2025-03-23T14:34:37Z",
     "isAnswered": true,
+    "labels": [
+      "source:file"
+    ],
     "locked": false,
     "number": 22708,
     "stateReason": null,
@@ -3264,6 +3729,7 @@
     },
     "createdAt": "2025-03-23T17:49:23Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22709,
     "stateReason": null,
@@ -3289,6 +3755,12 @@
     },
     "createdAt": "2025-03-24T11:11:38Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "domain:delivery",
+      "sink:elasticsearch",
+      "source:kafka"
+    ],
     "locked": false,
     "number": 22715,
     "stateReason": null,
@@ -3314,6 +3786,7 @@
     },
     "createdAt": "2025-03-24T14:21:14Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22717,
     "stateReason": null,
@@ -3339,6 +3812,9 @@
     },
     "createdAt": "2025-03-24T15:09:29Z",
     "isAnswered": true,
+    "labels": [
+      "sink:amqp"
+    ],
     "locked": false,
     "number": 22718,
     "stateReason": null,
@@ -3364,6 +3840,11 @@
     },
     "createdAt": "2025-03-24T21:25:20Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics",
+      "sink:prometheus_remote_write",
+      "transform:log_to_metric"
+    ],
     "locked": false,
     "number": 22722,
     "stateReason": null,
@@ -3389,6 +3870,13 @@
     },
     "createdAt": "2025-03-25T11:31:24Z",
     "isAnswered": true,
+    "labels": [
+      "domain:security",
+      "sink:elasticsearch",
+      "sink:http",
+      "sink:vector",
+      "source:http_server"
+    ],
     "locked": false,
     "number": 22723,
     "stateReason": null,
@@ -3414,6 +3902,7 @@
     },
     "createdAt": "2025-03-25T19:10:04Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22726,
     "stateReason": null,
@@ -3439,6 +3928,7 @@
     },
     "createdAt": "2025-03-25T21:59:17Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22728,
     "stateReason": "RESOLVED",
@@ -3464,6 +3954,9 @@
     },
     "createdAt": "2025-03-26T08:05:38Z",
     "isAnswered": true,
+    "labels": [
+      "source:datadog_agent"
+    ],
     "locked": false,
     "number": 22729,
     "stateReason": null,
@@ -3489,6 +3982,10 @@
     },
     "createdAt": "2025-03-26T17:30:34Z",
     "isAnswered": false,
+    "labels": [
+      "sink:vector",
+      "source:vector"
+    ],
     "locked": false,
     "number": 22730,
     "stateReason": null,
@@ -3514,6 +4011,10 @@
     },
     "createdAt": "2025-03-28T16:20:14Z",
     "isAnswered": true,
+    "labels": [
+      "source:kubernetes_logs",
+      "transform:reduce"
+    ],
     "locked": false,
     "number": 22740,
     "stateReason": null,
@@ -3539,6 +4040,9 @@
     },
     "createdAt": "2025-03-30T20:01:30Z",
     "isAnswered": true,
+    "labels": [
+      "sink:influxdb_logs"
+    ],
     "locked": false,
     "number": 22751,
     "stateReason": null,
@@ -3564,6 +4068,11 @@
     },
     "createdAt": "2025-04-01T21:40:14Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics",
+      "domain:traces",
+      "source:datadog_agent"
+    ],
     "locked": false,
     "number": 22773,
     "stateReason": null,
@@ -3589,6 +4098,7 @@
     },
     "createdAt": "2025-04-01T22:18:23Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22774,
     "stateReason": null,
@@ -3614,6 +4124,7 @@
     },
     "createdAt": "2025-04-02T16:40:32Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22781,
     "stateReason": null,
@@ -3639,6 +4150,10 @@
     },
     "createdAt": "2025-04-07T03:18:38Z",
     "isAnswered": false,
+    "labels": [
+      "domain:enrichment_tables",
+      "domain:external docs"
+    ],
     "locked": false,
     "number": 22806,
     "stateReason": "RESOLVED",
@@ -3664,6 +4179,11 @@
     },
     "createdAt": "2025-04-08T04:11:55Z",
     "isAnswered": true,
+    "labels": [
+      "sink:datadog_metrics",
+      "sink:datadog_traces",
+      "source:datadog_agent"
+    ],
     "locked": false,
     "number": 22828,
     "stateReason": "RESOLVED",
@@ -3689,6 +4209,9 @@
     },
     "createdAt": "2025-04-09T07:52:54Z",
     "isAnswered": false,
+    "labels": [
+      "sink:aws_s3"
+    ],
     "locked": false,
     "number": 22839,
     "stateReason": "RESOLVED",
@@ -3714,6 +4237,13 @@
     },
     "createdAt": "2025-04-09T15:11:06Z",
     "isAnswered": false,
+    "labels": [
+      "domain:performance",
+      "enrichment_table:file",
+      "meta:awaiting author",
+      "source:file",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22841,
     "stateReason": null,
@@ -3739,6 +4269,9 @@
     },
     "createdAt": "2025-04-09T18:49:03Z",
     "isAnswered": true,
+    "labels": [
+      "source:http_server"
+    ],
     "locked": false,
     "number": 22843,
     "stateReason": null,
@@ -3764,6 +4297,9 @@
     },
     "createdAt": "2025-04-10T13:56:54Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics"
+    ],
     "locked": false,
     "number": 22848,
     "stateReason": null,
@@ -3789,6 +4325,13 @@
     },
     "createdAt": "2025-04-11T01:59:36Z",
     "isAnswered": false,
+    "labels": [
+      "domain:buffers",
+      "domain:memory",
+      "meta:awaiting author",
+      "sink:http",
+      "source:http_server"
+    ],
     "locked": false,
     "number": 22852,
     "stateReason": null,
@@ -3814,6 +4357,10 @@
     },
     "createdAt": "2025-04-13T17:01:15Z",
     "isAnswered": true,
+    "labels": [
+      "sink:influxdb_metrics",
+      "sink:prometheus_remote_write"
+    ],
     "locked": false,
     "number": 22863,
     "stateReason": "RESOLVED",
@@ -3839,6 +4386,10 @@
     },
     "createdAt": "2025-04-14T12:05:44Z",
     "isAnswered": true,
+    "labels": [
+      "domain:deployment",
+      "platform:debian"
+    ],
     "locked": false,
     "number": 22867,
     "stateReason": null,
@@ -3864,6 +4415,10 @@
     },
     "createdAt": "2025-04-11T22:51:27Z",
     "isAnswered": true,
+    "labels": [
+      "sink:clickhouse",
+      "source:aws_s3"
+    ],
     "locked": false,
     "number": 22868,
     "stateReason": "RESOLVED",
@@ -3889,6 +4444,12 @@
     },
     "createdAt": "2025-04-14T15:16:41Z",
     "isAnswered": false,
+    "labels": [
+      "domain:config",
+      "meta:awaiting author",
+      "needs:more info",
+      "transform:sample"
+    ],
     "locked": false,
     "number": 22869,
     "stateReason": null,
@@ -3914,6 +4475,9 @@
     },
     "createdAt": "2025-04-14T23:34:17Z",
     "isAnswered": true,
+    "labels": [
+      "source:opentelemetry"
+    ],
     "locked": false,
     "number": 22876,
     "stateReason": null,
@@ -3939,6 +4503,7 @@
     },
     "createdAt": "2025-04-15T12:43:30Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22880,
     "stateReason": null,
@@ -3964,6 +4529,7 @@
     },
     "createdAt": "2025-04-15T11:56:27Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22884,
     "stateReason": null,
@@ -3989,6 +4555,11 @@
     },
     "createdAt": "2025-04-15T16:40:13Z",
     "isAnswered": true,
+    "labels": [
+      "domain:opentelemetry",
+      "sink:opentelemetry",
+      "source:opentelemetry"
+    ],
     "locked": false,
     "number": 22885,
     "stateReason": null,
@@ -4014,6 +4585,9 @@
     },
     "createdAt": "2025-04-16T00:26:54Z",
     "isAnswered": true,
+    "labels": [
+      "source:file"
+    ],
     "locked": false,
     "number": 22890,
     "stateReason": null,
@@ -4039,6 +4613,9 @@
     },
     "createdAt": "2025-04-16T03:14:57Z",
     "isAnswered": true,
+    "labels": [
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22891,
     "stateReason": "RESOLVED",
@@ -4064,6 +4641,9 @@
     },
     "createdAt": "2025-04-16T09:41:05Z",
     "isAnswered": false,
+    "labels": [
+      "domain:performance"
+    ],
     "locked": false,
     "number": 22892,
     "stateReason": null,
@@ -4089,6 +4669,7 @@
     },
     "createdAt": "2025-04-16T14:15:05Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22894,
     "stateReason": null,
@@ -4114,6 +4695,11 @@
     },
     "createdAt": "2025-04-17T03:21:09Z",
     "isAnswered": false,
+    "labels": [
+      "meta:awaiting author",
+      "platform:kubernetes",
+      "sink:file"
+    ],
     "locked": false,
     "number": 22898,
     "stateReason": null,
@@ -4139,6 +4725,7 @@
     },
     "createdAt": "2025-04-17T13:49:42Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 22901,
     "stateReason": "RESOLVED",
@@ -4164,6 +4751,13 @@
     },
     "createdAt": "2025-04-17T14:02:11Z",
     "isAnswered": false,
+    "labels": [
+      "domain:observability",
+      "meta:awaiting author",
+      "platform:windows",
+      "sink:datadog_logs",
+      "source:internal_metrics"
+    ],
     "locked": false,
     "number": 22902,
     "stateReason": null,
@@ -4189,6 +4783,13 @@
     },
     "createdAt": "2025-04-17T17:19:52Z",
     "isAnswered": true,
+    "labels": [
+      "domain:data model",
+      "domain:metrics",
+      "domain:opentelemetry",
+      "sink:opentelemetry",
+      "source:datadog_agent"
+    ],
     "locked": false,
     "number": 22904,
     "stateReason": null,
@@ -4214,6 +4815,9 @@
     },
     "createdAt": "2025-04-17T21:44:08Z",
     "isAnswered": true,
+    "labels": [
+      "transform:filter"
+    ],
     "locked": false,
     "number": 22905,
     "stateReason": null,
@@ -4239,6 +4843,9 @@
     },
     "createdAt": "2025-04-20T12:47:35Z",
     "isAnswered": false,
+    "labels": [
+      "domain:administration"
+    ],
     "locked": false,
     "number": 22910,
     "stateReason": null,
@@ -4264,6 +4871,11 @@
     },
     "createdAt": "2025-04-21T06:27:48Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics",
+      "sink:prometheus_exporter",
+      "source:statsd"
+    ],
     "locked": false,
     "number": 22913,
     "stateReason": null,
@@ -4289,6 +4901,11 @@
     },
     "createdAt": "2025-04-21T09:21:36Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "domain:performance",
+      "sink:elasticsearch"
+    ],
     "locked": false,
     "number": 22915,
     "stateReason": null,
@@ -4314,6 +4931,9 @@
     },
     "createdAt": "2025-04-21T11:00:56Z",
     "isAnswered": true,
+    "labels": [
+      "domain:validation"
+    ],
     "locked": false,
     "number": 22916,
     "stateReason": null,
@@ -4339,6 +4959,9 @@
     },
     "createdAt": "2025-04-21T22:34:01Z",
     "isAnswered": true,
+    "labels": [
+      "sink:splunk_hec_logs"
+    ],
     "locked": false,
     "number": 22919,
     "stateReason": null,
@@ -4364,6 +4987,9 @@
     },
     "createdAt": "2025-04-22T14:10:18Z",
     "isAnswered": true,
+    "labels": [
+      "domain:performance"
+    ],
     "locked": false,
     "number": 22924,
     "stateReason": null,
@@ -4389,6 +5015,10 @@
     },
     "createdAt": "2025-04-23T13:04:52Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl",
+      "transform:lua"
+    ],
     "locked": false,
     "number": 22932,
     "stateReason": null,
@@ -4414,6 +5044,9 @@
     },
     "createdAt": "2025-04-23T16:35:20Z",
     "isAnswered": true,
+    "labels": [
+      "transform:sample"
+    ],
     "locked": false,
     "number": 22937,
     "stateReason": null,
@@ -4439,6 +5072,10 @@
     },
     "createdAt": "2025-04-23T19:23:23Z",
     "isAnswered": false,
+    "labels": [
+      "meta:awaiting author",
+      "sink:honeycomb"
+    ],
     "locked": false,
     "number": 22939,
     "stateReason": null,
@@ -4464,6 +5101,10 @@
     },
     "createdAt": "2025-04-24T13:31:02Z",
     "isAnswered": false,
+    "labels": [
+      "transform:dedupe",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22943,
     "stateReason": "OUTDATED",
@@ -4489,6 +5130,9 @@
     },
     "createdAt": "2025-04-25T21:00:26Z",
     "isAnswered": true,
+    "labels": [
+      "domain:architecture"
+    ],
     "locked": false,
     "number": 22951,
     "stateReason": null,
@@ -4514,6 +5158,7 @@
     },
     "createdAt": "2025-04-27T03:09:46Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 22953,
     "stateReason": "OUTDATED",
@@ -4539,6 +5184,11 @@
     },
     "createdAt": "2025-04-16T17:03:29Z",
     "isAnswered": true,
+    "labels": [
+      "domain:opentelemetry",
+      "platform:kubernetes",
+      "source:opentelemetry"
+    ],
     "locked": false,
     "number": 22959,
     "stateReason": null,
@@ -4564,6 +5214,11 @@
     },
     "createdAt": "2025-04-29T17:06:33Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config",
+      "domain:reload",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22961,
     "stateReason": null,
@@ -4589,6 +5244,10 @@
     },
     "createdAt": "2025-04-30T11:37:57Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "transform:log_to_metric"
+    ],
     "locked": false,
     "number": 22965,
     "stateReason": null,
@@ -4614,6 +5273,10 @@
     },
     "createdAt": "2025-05-01T03:34:46Z",
     "isAnswered": false,
+    "labels": [
+      "domain:vrl",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 22972,
     "stateReason": null,
@@ -4639,6 +5302,10 @@
     },
     "createdAt": "2025-05-01T06:45:34Z",
     "isAnswered": true,
+    "labels": [
+      "domain:external docs",
+      "transform:sample"
+    ],
     "locked": false,
     "number": 22983,
     "stateReason": null,
@@ -4664,6 +5331,9 @@
     },
     "createdAt": "2025-05-02T03:52:51Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 22987,
     "stateReason": null,
@@ -4689,6 +5359,9 @@
     },
     "createdAt": "2025-05-02T16:51:04Z",
     "isAnswered": true,
+    "labels": [
+      "platform:kubernetes"
+    ],
     "locked": false,
     "number": 22990,
     "stateReason": "RESOLVED",
@@ -4714,6 +5387,11 @@
     },
     "createdAt": "2025-05-03T01:45:57Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "domain:opentelemetry",
+      "sink:opentelemetry"
+    ],
     "locked": false,
     "number": 22991,
     "stateReason": null,
@@ -4739,6 +5417,9 @@
     },
     "createdAt": "2025-05-05T20:51:27Z",
     "isAnswered": true,
+    "labels": [
+      "sink:aws_s3"
+    ],
     "locked": false,
     "number": 22994,
     "stateReason": null,
@@ -4764,6 +5445,11 @@
     },
     "createdAt": "2025-05-06T09:42:36Z",
     "isAnswered": true,
+    "labels": [
+      "domain:auth",
+      "provider:aws",
+      "sink:aws_s3"
+    ],
     "locked": false,
     "number": 22997,
     "stateReason": null,
@@ -4789,6 +5475,9 @@
     },
     "createdAt": "2025-05-07T02:26:52Z",
     "isAnswered": false,
+    "labels": [
+      "source:host_metrics"
+    ],
     "locked": false,
     "number": 23001,
     "stateReason": null,
@@ -4814,6 +5503,11 @@
     },
     "createdAt": "2025-05-07T07:04:46Z",
     "isAnswered": true,
+    "labels": [
+      "platform:kubernetes",
+      "sink:loki",
+      "source:kubernetes_logs"
+    ],
     "locked": false,
     "number": 23002,
     "stateReason": null,
@@ -4839,6 +5533,7 @@
     },
     "createdAt": "2025-05-07T07:05:47Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 23003,
     "stateReason": "RESOLVED",
@@ -4864,6 +5559,9 @@
     },
     "createdAt": "2025-05-07T15:40:55Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 23005,
     "stateReason": null,
@@ -4889,6 +5587,11 @@
     },
     "createdAt": "2025-05-07T16:58:55Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config",
+      "provider:splunk",
+      "sink:splunk_hec_logs"
+    ],
     "locked": false,
     "number": 23006,
     "stateReason": null,
@@ -4914,6 +5617,7 @@
     },
     "createdAt": "2025-05-07T17:55:20Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23007,
     "stateReason": null,
@@ -4939,6 +5643,13 @@
     },
     "createdAt": "2025-05-08T07:05:47Z",
     "isAnswered": false,
+    "labels": [
+      "domain:buffers",
+      "meta:awaiting author",
+      "platform:windows",
+      "sink:vector",
+      "source:file"
+    ],
     "locked": false,
     "number": 23009,
     "stateReason": "REOPENED",
@@ -4964,6 +5675,9 @@
     },
     "createdAt": "2025-05-08T18:23:59Z",
     "isAnswered": true,
+    "labels": [
+      "source:logstash"
+    ],
     "locked": false,
     "number": 23012,
     "stateReason": null,
@@ -4989,6 +5703,9 @@
     },
     "createdAt": "2025-05-08T19:43:27Z",
     "isAnswered": true,
+    "labels": [
+      "sink:aws_s3"
+    ],
     "locked": false,
     "number": 23013,
     "stateReason": null,
@@ -5014,6 +5731,10 @@
     },
     "createdAt": "2025-05-09T19:40:17Z",
     "isAnswered": true,
+    "labels": [
+      "transform:exclusive_route",
+      "transform:route"
+    ],
     "locked": false,
     "number": 23019,
     "stateReason": null,
@@ -5039,6 +5760,9 @@
     },
     "createdAt": "2025-05-12T07:27:35Z",
     "isAnswered": true,
+    "labels": [
+      "sink:aws_cloudwatch_logs"
+    ],
     "locked": false,
     "number": 23031,
     "stateReason": null,
@@ -5064,6 +5788,10 @@
     },
     "createdAt": "2025-05-12T08:12:13Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "sink:http"
+    ],
     "locked": false,
     "number": 23032,
     "stateReason": null,
@@ -5089,6 +5817,7 @@
     },
     "createdAt": "2025-05-12T10:06:17Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 23033,
     "stateReason": "RESOLVED",
@@ -5114,6 +5843,9 @@
     },
     "createdAt": "2025-05-13T20:12:04Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs"
+    ],
     "locked": false,
     "number": 23043,
     "stateReason": null,
@@ -5139,6 +5871,9 @@
     },
     "createdAt": "2025-05-14T10:07:38Z",
     "isAnswered": true,
+    "labels": [
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23045,
     "stateReason": null,
@@ -5164,6 +5899,9 @@
     },
     "createdAt": "2025-05-14T11:13:28Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 23046,
     "stateReason": null,
@@ -5189,6 +5927,9 @@
     },
     "createdAt": "2025-05-14T15:37:32Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics"
+    ],
     "locked": false,
     "number": 23050,
     "stateReason": null,
@@ -5214,6 +5955,9 @@
     },
     "createdAt": "2025-05-16T18:24:48Z",
     "isAnswered": true,
+    "labels": [
+      "domain:security"
+    ],
     "locked": false,
     "number": 23065,
     "stateReason": null,
@@ -5239,6 +5983,11 @@
     },
     "createdAt": "2025-05-21T15:21:36Z",
     "isAnswered": true,
+    "labels": [
+      "domain:log_namespace",
+      "domain:vrl",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23088,
     "stateReason": null,
@@ -5264,6 +6013,11 @@
     },
     "createdAt": "2025-05-21T22:20:27Z",
     "isAnswered": false,
+    "labels": [
+      "domain:performance",
+      "provider:aws",
+      "source:aws_s3"
+    ],
     "locked": false,
     "number": 23090,
     "stateReason": "OUTDATED",
@@ -5289,6 +6043,9 @@
     },
     "createdAt": "2025-05-22T07:51:28Z",
     "isAnswered": true,
+    "labels": [
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23092,
     "stateReason": null,
@@ -5314,6 +6071,11 @@
     },
     "createdAt": "2025-05-24T08:31:52Z",
     "isAnswered": true,
+    "labels": [
+      "meta:awaiting author",
+      "platform:kubernetes",
+      "source:kubernetes_logs"
+    ],
     "locked": false,
     "number": 23099,
     "stateReason": null,
@@ -5339,6 +6101,7 @@
     },
     "createdAt": "2025-05-24T16:33:06Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23100,
     "stateReason": null,
@@ -5364,6 +6127,7 @@
     },
     "createdAt": "2025-05-26T09:30:52Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23107,
     "stateReason": "RESOLVED",
@@ -5389,6 +6153,9 @@
     },
     "createdAt": "2025-05-26T10:36:20Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics"
+    ],
     "locked": false,
     "number": 23108,
     "stateReason": "RESOLVED",
@@ -5414,6 +6181,9 @@
     },
     "createdAt": "2025-05-26T10:46:35Z",
     "isAnswered": false,
+    "labels": [
+      "sink:opentelemetry"
+    ],
     "locked": false,
     "number": 23109,
     "stateReason": null,
@@ -5439,6 +6209,9 @@
     },
     "createdAt": "2025-05-27T13:51:13Z",
     "isAnswered": true,
+    "labels": [
+      "domain:shutdown"
+    ],
     "locked": false,
     "number": 23114,
     "stateReason": null,
@@ -5464,6 +6237,10 @@
     },
     "createdAt": "2025-05-27T19:05:51Z",
     "isAnswered": true,
+    "labels": [
+      "domain:enrichment_tables",
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 23115,
     "stateReason": null,
@@ -5489,6 +6266,7 @@
     },
     "createdAt": "2025-05-30T01:44:18Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23122,
     "stateReason": "RESOLVED",
@@ -5514,6 +6292,12 @@
     },
     "createdAt": "2025-05-30T14:10:04Z",
     "isAnswered": false,
+    "labels": [
+      "domain:buffers",
+      "domain:performance",
+      "provider:aws",
+      "sink:aws_s3"
+    ],
     "locked": true,
     "number": 23124,
     "stateReason": "RESOLVED",
@@ -5539,6 +6323,12 @@
     },
     "createdAt": "2025-06-02T06:05:58Z",
     "isAnswered": false,
+    "labels": [
+      "platform:kubernetes",
+      "sink:elasticsearch",
+      "source:kubernetes_logs",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23144,
     "stateReason": "OUTDATED",
@@ -5564,6 +6354,7 @@
     },
     "createdAt": "2025-06-03T18:08:20Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23149,
     "stateReason": null,
@@ -5589,6 +6380,10 @@
     },
     "createdAt": "2025-06-03T23:53:34Z",
     "isAnswered": true,
+    "labels": [
+      "domain:enrichment_tables",
+      "enrichment_table:memory"
+    ],
     "locked": false,
     "number": 23150,
     "stateReason": null,
@@ -5614,6 +6409,10 @@
     },
     "createdAt": "2025-06-04T13:12:44Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "sink:kafka"
+    ],
     "locked": false,
     "number": 23152,
     "stateReason": null,
@@ -5639,6 +6438,7 @@
     },
     "createdAt": "2025-06-04T14:14:47Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 23153,
     "stateReason": "RESOLVED",
@@ -5664,6 +6464,11 @@
     },
     "createdAt": "2025-06-04T16:11:12Z",
     "isAnswered": false,
+    "labels": [
+      "domain:delivery",
+      "needs:more info",
+      "source:opentelemetry"
+    ],
     "locked": false,
     "number": 23154,
     "stateReason": "OUTDATED",
@@ -5689,6 +6494,7 @@
     },
     "createdAt": "2025-06-05T17:25:34Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23158,
     "stateReason": null,
@@ -5714,6 +6520,11 @@
     },
     "createdAt": "2025-06-06T01:02:17Z",
     "isAnswered": false,
+    "labels": [
+      "domain:vrl",
+      "meta:awaiting author",
+      "platform:kubernetes"
+    ],
     "locked": false,
     "number": 23159,
     "stateReason": null,
@@ -5739,6 +6550,9 @@
     },
     "createdAt": "2025-06-06T19:40:15Z",
     "isAnswered": true,
+    "labels": [
+      "source:http_client"
+    ],
     "locked": false,
     "number": 23164,
     "stateReason": null,
@@ -5764,6 +6578,9 @@
     },
     "createdAt": "2025-06-09T17:30:22Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 23169,
     "stateReason": null,
@@ -5789,6 +6606,12 @@
     },
     "createdAt": "2025-06-09T22:04:40Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "domain:delivery",
+      "sink:axiom",
+      "sink:http"
+    ],
     "locked": false,
     "number": 23177,
     "stateReason": null,
@@ -5814,6 +6637,9 @@
     },
     "createdAt": "2025-06-10T16:58:22Z",
     "isAnswered": true,
+    "labels": [
+      "domain:performance"
+    ],
     "locked": false,
     "number": 23181,
     "stateReason": null,
@@ -5839,6 +6665,9 @@
     },
     "createdAt": "2025-06-11T00:26:51Z",
     "isAnswered": true,
+    "labels": [
+      "provider:aws"
+    ],
     "locked": false,
     "number": 23184,
     "stateReason": null,
@@ -5864,6 +6693,9 @@
     },
     "createdAt": "2025-06-11T23:54:24Z",
     "isAnswered": true,
+    "labels": [
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23193,
     "stateReason": null,
@@ -5889,6 +6721,7 @@
     },
     "createdAt": "2025-06-12T02:35:05Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23194,
     "stateReason": null,
@@ -5914,6 +6747,9 @@
     },
     "createdAt": "2025-06-12T14:44:23Z",
     "isAnswered": true,
+    "labels": [
+      "transform:log_to_metric"
+    ],
     "locked": false,
     "number": 23198,
     "stateReason": null,
@@ -5939,6 +6775,9 @@
     },
     "createdAt": "2025-06-12T22:50:50Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config"
+    ],
     "locked": false,
     "number": 23200,
     "stateReason": null,
@@ -5964,6 +6803,9 @@
     },
     "createdAt": "2025-06-13T10:21:40Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config"
+    ],
     "locked": false,
     "number": 23202,
     "stateReason": null,
@@ -5989,6 +6831,10 @@
     },
     "createdAt": "2025-06-13T20:32:48Z",
     "isAnswered": false,
+    "labels": [
+      "meta:awaiting author",
+      "source:host_metrics"
+    ],
     "locked": false,
     "number": 23203,
     "stateReason": null,
@@ -6014,6 +6860,10 @@
     },
     "createdAt": "2025-06-13T21:37:48Z",
     "isAnswered": false,
+    "labels": [
+      "domain:logs",
+      "domain:metrics"
+    ],
     "locked": false,
     "number": 23205,
     "stateReason": null,
@@ -6039,6 +6889,11 @@
     },
     "createdAt": "2025-06-14T16:10:37Z",
     "isAnswered": false,
+    "labels": [
+      "domain:config",
+      "sink:greptimedb",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23208,
     "stateReason": "OUTDATED",
@@ -6064,6 +6919,7 @@
     },
     "createdAt": "2025-06-16T10:40:19Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23212,
     "stateReason": "RESOLVED",
@@ -6089,6 +6945,12 @@
     },
     "createdAt": "2025-06-17T02:16:25Z",
     "isAnswered": false,
+    "labels": [
+      "domain:auth",
+      "domain:security",
+      "meta:awaiting author",
+      "sink:kafka"
+    ],
     "locked": false,
     "number": 23219,
     "stateReason": null,
@@ -6114,6 +6976,10 @@
     },
     "createdAt": "2025-06-19T05:33:29Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "source:kafka"
+    ],
     "locked": false,
     "number": 23232,
     "stateReason": null,
@@ -6139,6 +7005,9 @@
     },
     "createdAt": "2025-06-19T09:47:38Z",
     "isAnswered": true,
+    "labels": [
+      "source:http_server"
+    ],
     "locked": false,
     "number": 23233,
     "stateReason": null,
@@ -6164,6 +7033,7 @@
     },
     "createdAt": "2025-06-19T14:56:21Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23234,
     "stateReason": null,
@@ -6189,6 +7059,13 @@
     },
     "createdAt": "2025-06-20T05:34:17Z",
     "isAnswered": false,
+    "labels": [
+      "domain:buffers",
+      "domain:performance",
+      "provider:aws",
+      "sink:splunk_hec_logs",
+      "source:aws_s3"
+    ],
     "locked": false,
     "number": 23235,
     "stateReason": "OUTDATED",
@@ -6214,6 +7091,7 @@
     },
     "createdAt": "2025-06-23T17:19:20Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23249,
     "stateReason": null,
@@ -6239,6 +7117,10 @@
     },
     "createdAt": "2025-06-24T09:12:34Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23255,
     "stateReason": null,
@@ -6264,6 +7146,10 @@
     },
     "createdAt": "2025-06-25T13:53:03Z",
     "isAnswered": false,
+    "labels": [
+      "domain:delivery",
+      "sink:socket"
+    ],
     "locked": false,
     "number": 23264,
     "stateReason": "OUTDATED",
@@ -6289,6 +7175,13 @@
     },
     "createdAt": "2025-06-30T01:16:11Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "domain:config",
+      "domain:delivery",
+      "meta:awaiting author",
+      "source:aws_sqs"
+    ],
     "locked": false,
     "number": 23289,
     "stateReason": null,
@@ -6302,7 +7195,7 @@
     "author": {
       "login": "andarotajo"
     },
-    "bodyText": "I've been experimenting with getting my Home Assistant logs via syslog and it works great so far. What I noticed today though is that after parsing the syslog message using . |= parse_syslog!(.message) my messages have a \"\\u0000\" at the end,  like this:\n{\n  \"appname\": \"addon_core_mosquitto\",\n  \"facility\": \"user\",\n  \"host\": \"haos\"\n  \"hostname\": \"haos\",\n  \"message\": \"2025-06-30 12:04:18: Client <unknown> closed its connection.\\u0000\",\n  \"severity\": \"info\",\n  \"source_type\": \"syslog\",\n  \"timestamp\": \"2025-06-30T12:04:19Z\"\n}\nI'm currently trying to remove that to clean up the line but for some reason I can't get it to work using\n.message = replace(.message, s'\\u0000', \"\")\nWould love some help on how to clean the message up here",
+    "bodyText": "I've been experimenting with getting my Home Assistant logs via syslog and it works great so far. What I noticed today though is that after parsing the syslog message using . |= parse_syslog!(.message) my messages have a \"\\^@\" at the end,  like this:\n{\n  \"appname\": \"addon_core_mosquitto\",\n  \"facility\": \"user\",\n  \"host\": \"haos\"\n  \"hostname\": \"haos\",\n  \"message\": \"2025-06-30 12:04:18: Client <unknown> closed its connection.\\^@\",\n  \"severity\": \"info\",\n  \"source_type\": \"syslog\",\n  \"timestamp\": \"2025-06-30T12:04:19Z\"\n}\nI'm currently trying to remove that to clean up the line but for some reason I can't get it to work using\n.message = replace(.message, s'\\^@', \"\")\nWould love some help on how to clean the message up here",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"
@@ -6314,10 +7207,13 @@
     },
     "createdAt": "2025-06-30T10:08:27Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 23293,
     "stateReason": null,
-    "title": "Removing \"\\u0000\" from the end of a message",
+    "title": "Removing \"\\^@\" from the end of a message",
     "updatedAt": "2025-06-30T13:52:13Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/23293"
@@ -6339,6 +7235,9 @@
     },
     "createdAt": "2025-07-01T14:35:41Z",
     "isAnswered": true,
+    "labels": [
+      "domain:dev"
+    ],
     "locked": false,
     "number": 23319,
     "stateReason": "RESOLVED",
@@ -6364,6 +7263,12 @@
     },
     "createdAt": "2025-07-02T08:43:11Z",
     "isAnswered": false,
+    "labels": [
+      "domain:performance",
+      "meta:awaiting author",
+      "sink:blackhole",
+      "source:kafka"
+    ],
     "locked": false,
     "number": 23326,
     "stateReason": null,
@@ -6389,6 +7294,11 @@
     },
     "createdAt": "2025-07-03T06:18:48Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics",
+      "domain:vrl",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23333,
     "stateReason": null,
@@ -6414,6 +7324,10 @@
     },
     "createdAt": "2025-07-05T09:23:31Z",
     "isAnswered": true,
+    "labels": [
+      "source:docker_logs",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23341,
     "stateReason": null,
@@ -6439,6 +7353,7 @@
     },
     "createdAt": "2025-07-10T16:24:13Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23356,
     "stateReason": null,
@@ -6464,6 +7379,10 @@
     },
     "createdAt": "2025-07-14T10:22:00Z",
     "isAnswered": true,
+    "labels": [
+      "domain:performance",
+      "platform:kubernetes"
+    ],
     "locked": false,
     "number": 23369,
     "stateReason": null,
@@ -6489,6 +7408,9 @@
     },
     "createdAt": "2025-07-14T21:22:29Z",
     "isAnswered": true,
+    "labels": [
+      "sink:new_relic"
+    ],
     "locked": false,
     "number": 23375,
     "stateReason": null,
@@ -6514,6 +7436,11 @@
     },
     "createdAt": "2025-07-15T12:58:20Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "domain:observability",
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 23379,
     "stateReason": null,
@@ -6539,6 +7466,7 @@
     },
     "createdAt": "2025-07-17T01:18:59Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23391,
     "stateReason": null,
@@ -6564,6 +7492,13 @@
     },
     "createdAt": "2025-07-18T08:04:17Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "domain:opentelemetry",
+      "domain:traces",
+      "sink:opentelemetry",
+      "source:opentelemetry"
+    ],
     "locked": false,
     "number": 23394,
     "stateReason": null,
@@ -6589,6 +7524,7 @@
     },
     "createdAt": "2025-07-22T04:13:14Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23409,
     "stateReason": null,
@@ -6614,6 +7550,7 @@
     },
     "createdAt": "2025-07-24T00:05:27Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23419,
     "stateReason": null,
@@ -6639,6 +7576,13 @@
     },
     "createdAt": "2025-07-25T08:44:36Z",
     "isAnswered": false,
+    "labels": [
+      "domain:performance",
+      "meta:awaiting author",
+      "needs:more info",
+      "sink:file",
+      "source:file"
+    ],
     "locked": false,
     "number": 23428,
     "stateReason": null,
@@ -6664,6 +7608,9 @@
     },
     "createdAt": "2025-07-25T10:58:36Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs"
+    ],
     "locked": false,
     "number": 23429,
     "stateReason": null,
@@ -6689,6 +7636,7 @@
     },
     "createdAt": "2025-07-25T18:48:34Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 23437,
     "stateReason": "RESOLVED",
@@ -6714,6 +7662,9 @@
     },
     "createdAt": "2025-07-28T07:28:28Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config"
+    ],
     "locked": false,
     "number": 23447,
     "stateReason": null,
@@ -6739,6 +7690,12 @@
     },
     "createdAt": "2025-07-29T12:37:50Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl",
+      "sink:clickhouse",
+      "source:kafka",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23457,
     "stateReason": null,
@@ -6764,6 +7721,9 @@
     },
     "createdAt": "2025-07-30T10:13:10Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 23467,
     "stateReason": null,
@@ -6789,6 +7749,7 @@
     },
     "createdAt": "2025-07-30T10:54:09Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23469,
     "stateReason": null,
@@ -6814,6 +7775,7 @@
     },
     "createdAt": "2025-07-31T07:51:53Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23478,
     "stateReason": null,
@@ -6839,6 +7801,7 @@
     },
     "createdAt": "2025-07-31T18:04:05Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23482,
     "stateReason": null,
@@ -6864,6 +7827,9 @@
     },
     "createdAt": "2025-07-31T21:58:05Z",
     "isAnswered": true,
+    "labels": [
+      "sink:http"
+    ],
     "locked": false,
     "number": 23483,
     "stateReason": null,
@@ -6889,6 +7855,10 @@
     },
     "createdAt": "2025-08-01T06:02:24Z",
     "isAnswered": true,
+    "labels": [
+      "domain:performance",
+      "transform:lua"
+    ],
     "locked": false,
     "number": 23502,
     "stateReason": null,
@@ -6914,6 +7884,11 @@
     },
     "createdAt": "2025-08-04T07:27:59Z",
     "isAnswered": false,
+    "labels": [
+      "domain:config",
+      "domain:performance",
+      "meta:awaiting author"
+    ],
     "locked": false,
     "number": 23516,
     "stateReason": "OUTDATED",
@@ -6939,6 +7914,9 @@
     },
     "createdAt": "2025-08-04T07:37:11Z",
     "isAnswered": true,
+    "labels": [
+      "sink:postgres"
+    ],
     "locked": false,
     "number": 23517,
     "stateReason": null,
@@ -6964,6 +7942,7 @@
     },
     "createdAt": "2025-08-04T20:21:15Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23521,
     "stateReason": null,
@@ -6989,6 +7968,12 @@
     },
     "createdAt": "2025-08-05T21:38:12Z",
     "isAnswered": true,
+    "labels": [
+      "domain:log_namespace",
+      "domain:parsing",
+      "source:file",
+      "transform:reduce"
+    ],
     "locked": false,
     "number": 23531,
     "stateReason": null,
@@ -7014,6 +7999,12 @@
     },
     "createdAt": "2025-08-05T21:42:58Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config",
+      "domain:networking",
+      "meta:awaiting author",
+      "source:syslog"
+    ],
     "locked": false,
     "number": 23532,
     "stateReason": null,
@@ -7039,6 +8030,7 @@
     },
     "createdAt": "2025-08-06T11:29:39Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23534,
     "stateReason": null,
@@ -7064,6 +8056,9 @@
     },
     "createdAt": "2025-08-06T13:42:32Z",
     "isAnswered": true,
+    "labels": [
+      "source:http_server"
+    ],
     "locked": false,
     "number": 23535,
     "stateReason": null,
@@ -7089,6 +8084,12 @@
     },
     "createdAt": "2025-08-07T17:59:23Z",
     "isAnswered": false,
+    "labels": [
+      "domain:delivery",
+      "meta:awaiting author",
+      "provider:aws",
+      "source:aws_s3"
+    ],
     "locked": false,
     "number": 23555,
     "stateReason": null,
@@ -7114,6 +8115,9 @@
     },
     "createdAt": "2025-08-13T10:25:02Z",
     "isAnswered": true,
+    "labels": [
+      "source:file"
+    ],
     "locked": false,
     "number": 23584,
     "stateReason": null,
@@ -7139,6 +8143,7 @@
     },
     "createdAt": "2025-08-13T14:47:47Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23589,
     "stateReason": "RESOLVED",
@@ -7164,6 +8169,7 @@
     },
     "createdAt": "2025-08-13T20:07:32Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 23592,
     "stateReason": null,
@@ -7189,6 +8195,7 @@
     },
     "createdAt": "2025-08-14T03:21:10Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23595,
     "stateReason": null,
@@ -7214,6 +8221,12 @@
     },
     "createdAt": "2025-08-18T02:02:17Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "domain:config",
+      "sink:loki",
+      "source:kubernetes_logs"
+    ],
     "locked": false,
     "number": 23604,
     "stateReason": null,
@@ -7239,6 +8252,7 @@
     },
     "createdAt": "2025-08-19T19:05:50Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23614,
     "stateReason": null,
@@ -7264,6 +8278,12 @@
     },
     "createdAt": "2025-08-20T04:54:18Z",
     "isAnswered": false,
+    "labels": [
+      "domain:config",
+      "meta:awaiting author",
+      "platform:kubernetes",
+      "source:kubernetes_logs"
+    ],
     "locked": false,
     "number": 23618,
     "stateReason": null,
@@ -7289,6 +8309,9 @@
     },
     "createdAt": "2025-08-22T05:49:02Z",
     "isAnswered": true,
+    "labels": [
+      "source:file"
+    ],
     "locked": false,
     "number": 23629,
     "stateReason": "RESOLVED",
@@ -7314,6 +8337,10 @@
     },
     "createdAt": "2025-08-22T06:47:40Z",
     "isAnswered": true,
+    "labels": [
+      "platform:kubernetes",
+      "source:file"
+    ],
     "locked": false,
     "number": 23630,
     "stateReason": null,
@@ -7339,6 +8366,9 @@
     },
     "createdAt": "2025-08-22T15:57:06Z",
     "isAnswered": true,
+    "labels": [
+      "source:http_server"
+    ],
     "locked": false,
     "number": 23636,
     "stateReason": null,
@@ -7364,6 +8394,13 @@
     },
     "createdAt": "2025-08-24T09:00:52Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "domain:config",
+      "domain:opentelemetry",
+      "sink:opentelemetry",
+      "source:opentelemetry"
+    ],
     "locked": false,
     "number": 23639,
     "stateReason": null,
@@ -7389,6 +8426,9 @@
     },
     "createdAt": "2025-08-26T20:11:17Z",
     "isAnswered": true,
+    "labels": [
+      "sink:file"
+    ],
     "locked": false,
     "number": 23656,
     "stateReason": "RESOLVED",
@@ -7414,6 +8454,9 @@
     },
     "createdAt": "2025-08-29T21:10:17Z",
     "isAnswered": true,
+    "labels": [
+      "sink:datadog_metrics"
+    ],
     "locked": false,
     "number": 23675,
     "stateReason": null,
@@ -7439,6 +8482,9 @@
     },
     "createdAt": "2025-09-01T12:05:16Z",
     "isAnswered": true,
+    "labels": [
+      "source:http_client"
+    ],
     "locked": false,
     "number": 23692,
     "stateReason": null,
@@ -7464,6 +8510,10 @@
     },
     "createdAt": "2025-09-01T12:46:27Z",
     "isAnswered": true,
+    "labels": [
+      "sink:opentelemetry",
+      "source:opentelemetry"
+    ],
     "locked": false,
     "number": 23693,
     "stateReason": null,
@@ -7489,6 +8539,9 @@
     },
     "createdAt": "2025-09-02T15:08:09Z",
     "isAnswered": true,
+    "labels": [
+      "domain:deployment"
+    ],
     "locked": false,
     "number": 23703,
     "stateReason": null,
@@ -7514,6 +8567,7 @@
     },
     "createdAt": "2025-09-03T00:50:09Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23708,
     "stateReason": null,
@@ -7539,6 +8593,9 @@
     },
     "createdAt": "2025-09-04T02:40:46Z",
     "isAnswered": true,
+    "labels": [
+      "sink:aws_s3"
+    ],
     "locked": false,
     "number": 23719,
     "stateReason": null,
@@ -7564,6 +8621,10 @@
     },
     "createdAt": "2025-09-04T21:13:26Z",
     "isAnswered": true,
+    "labels": [
+      "domain:templating",
+      "sink:loki"
+    ],
     "locked": false,
     "number": 23726,
     "stateReason": "RESOLVED",
@@ -7589,6 +8650,10 @@
     },
     "createdAt": "2025-09-09T20:01:03Z",
     "isAnswered": true,
+    "labels": [
+      "domain:parsing",
+      "source:docker_logs"
+    ],
     "locked": false,
     "number": 23744,
     "stateReason": null,
@@ -7614,6 +8679,10 @@
     },
     "createdAt": "2025-09-10T06:30:38Z",
     "isAnswered": true,
+    "labels": [
+      "domain:performance",
+      "platform:windows"
+    ],
     "locked": false,
     "number": 23745,
     "stateReason": null,
@@ -7639,6 +8708,11 @@
     },
     "createdAt": "2025-09-10T15:32:41Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "sink:file",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23749,
     "stateReason": null,
@@ -7664,6 +8738,11 @@
     },
     "createdAt": "2025-09-10T17:22:32Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "domain:networking",
+      "source:socket"
+    ],
     "locked": false,
     "number": 23751,
     "stateReason": null,
@@ -7689,6 +8768,7 @@
     },
     "createdAt": "2025-09-10T00:04:21Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23753,
     "stateReason": null,
@@ -7714,6 +8794,7 @@
     },
     "createdAt": "2025-09-12T10:22:14Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23765,
     "stateReason": "RESOLVED",
@@ -7739,6 +8820,11 @@
     },
     "createdAt": "2025-09-12T14:16:28Z",
     "isAnswered": true,
+    "labels": [
+      "domain:parsing",
+      "domain:vrl",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23769,
     "stateReason": null,
@@ -7764,6 +8850,7 @@
     },
     "createdAt": "2025-09-14T16:44:47Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 23775,
     "stateReason": null,
@@ -7787,6 +8874,7 @@
     },
     "createdAt": "2025-09-16T08:14:26Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23785,
     "stateReason": null,
@@ -7812,6 +8900,9 @@
     },
     "createdAt": "2025-09-17T10:35:54Z",
     "isAnswered": true,
+    "labels": [
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23794,
     "stateReason": null,
@@ -7837,6 +8928,7 @@
     },
     "createdAt": "2025-09-17T18:44:08Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23798,
     "stateReason": null,
@@ -7862,6 +8954,9 @@
     },
     "createdAt": "2025-09-19T06:11:32Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 23811,
     "stateReason": null,
@@ -7887,6 +8982,9 @@
     },
     "createdAt": "2025-09-20T21:07:50Z",
     "isAnswered": true,
+    "labels": [
+      "enrichment_table:memory"
+    ],
     "locked": false,
     "number": 23826,
     "stateReason": null,
@@ -7912,6 +9010,9 @@
     },
     "createdAt": "2025-09-23T15:10:59Z",
     "isAnswered": true,
+    "labels": [
+      "sink:http"
+    ],
     "locked": false,
     "number": 23832,
     "stateReason": null,
@@ -7937,6 +9038,9 @@
     },
     "createdAt": "2025-09-23T23:13:13Z",
     "isAnswered": true,
+    "labels": [
+      "transform:reduce"
+    ],
     "locked": false,
     "number": 23837,
     "stateReason": "RESOLVED",
@@ -7962,6 +9066,10 @@
     },
     "createdAt": "2025-09-24T16:23:17Z",
     "isAnswered": true,
+    "labels": [
+      "meta:awaiting author",
+      "platform:windows"
+    ],
     "locked": false,
     "number": 23846,
     "stateReason": "RESOLVED",
@@ -7987,6 +9095,7 @@
     },
     "createdAt": "2025-09-25T20:07:04Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23856,
     "stateReason": null,
@@ -8012,6 +9121,11 @@
     },
     "createdAt": "2025-09-28T15:18:16Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config",
+      "platform:kubernetes",
+      "source:kubernetes_logs"
+    ],
     "locked": false,
     "number": 23862,
     "stateReason": null,
@@ -8037,6 +9151,9 @@
     },
     "createdAt": "2025-09-29T23:49:09Z",
     "isAnswered": true,
+    "labels": [
+      "sink:datadog_logs"
+    ],
     "locked": false,
     "number": 23871,
     "stateReason": null,
@@ -8062,6 +9179,10 @@
     },
     "createdAt": "2025-10-01T11:24:27Z",
     "isAnswered": true,
+    "labels": [
+      "source:datadog_agent",
+      "source:internal_metrics"
+    ],
     "locked": false,
     "number": 23897,
     "stateReason": null,
@@ -8087,6 +9208,9 @@
     },
     "createdAt": "2025-10-01T16:03:14Z",
     "isAnswered": true,
+    "labels": [
+      "platform:kubernetes"
+    ],
     "locked": false,
     "number": 23902,
     "stateReason": null,
@@ -8112,6 +9236,11 @@
     },
     "createdAt": "2025-10-01T19:39:54Z",
     "isAnswered": false,
+    "labels": [
+      "domain:parsing",
+      "domain:vrl",
+      "meta:awaiting author"
+    ],
     "locked": false,
     "number": 23911,
     "stateReason": "OUTDATED",
@@ -8137,6 +9266,14 @@
     },
     "createdAt": "2025-10-02T03:59:59Z",
     "isAnswered": false,
+    "labels": [
+      "domain:buffers",
+      "domain:delivery",
+      "meta:awaiting author",
+      "provider:datadog",
+      "sink:datadog_metrics",
+      "source:datadog_agent"
+    ],
     "locked": false,
     "number": 23914,
     "stateReason": null,
@@ -8162,6 +9299,7 @@
     },
     "createdAt": "2025-10-02T22:03:45Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 23933,
     "stateReason": "RESOLVED",
@@ -8187,6 +9325,7 @@
     },
     "createdAt": "2025-10-02T22:14:01Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 23934,
     "stateReason": "RESOLVED",
@@ -8212,6 +9351,11 @@
     },
     "createdAt": "2025-10-03T09:35:28Z",
     "isAnswered": false,
+    "labels": [
+      "needs:more info",
+      "sink:aws_s3",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23936,
     "stateReason": "OUTDATED",
@@ -8237,6 +9381,7 @@
     },
     "createdAt": "2025-10-06T03:08:02Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23946,
     "stateReason": null,
@@ -8262,6 +9407,7 @@
     },
     "createdAt": "2025-10-06T14:59:30Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23950,
     "stateReason": null,
@@ -8287,6 +9433,11 @@
     },
     "createdAt": "2025-10-07T08:06:44Z",
     "isAnswered": true,
+    "labels": [
+      "domain:cli",
+      "domain:config",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 23955,
     "stateReason": null,
@@ -8312,6 +9463,9 @@
     },
     "createdAt": "2025-10-07T14:45:45Z",
     "isAnswered": true,
+    "labels": [
+      "source:syslog"
+    ],
     "locked": false,
     "number": 23959,
     "stateReason": null,
@@ -8335,6 +9489,10 @@
     },
     "createdAt": "2025-10-07T19:50:09Z",
     "isAnswered": false,
+    "labels": [
+      "domain:performance",
+      "needs:more info"
+    ],
     "locked": false,
     "number": 23960,
     "stateReason": null,
@@ -8360,6 +9518,7 @@
     },
     "createdAt": "2025-10-08T17:38:50Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23967,
     "stateReason": "RESOLVED",
@@ -8385,6 +9544,7 @@
     },
     "createdAt": "2025-10-09T06:48:25Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 23970,
     "stateReason": "RESOLVED",
@@ -8410,6 +9570,10 @@
     },
     "createdAt": "2025-10-09T08:44:05Z",
     "isAnswered": true,
+    "labels": [
+      "domain:enrichment_tables",
+      "enrichment_table:memory"
+    ],
     "locked": false,
     "number": 23972,
     "stateReason": null,
@@ -8435,6 +9599,7 @@
     },
     "createdAt": "2025-10-10T11:16:46Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 23981,
     "stateReason": null,
@@ -8460,6 +9625,9 @@
     },
     "createdAt": "2025-10-10T13:52:07Z",
     "isAnswered": true,
+    "labels": [
+      "domain:dev"
+    ],
     "locked": false,
     "number": 23982,
     "stateReason": null,
@@ -8485,6 +9653,7 @@
     },
     "createdAt": "2025-10-15T08:24:09Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24005,
     "stateReason": null,
@@ -8510,6 +9679,10 @@
     },
     "createdAt": "2025-10-16T10:09:31Z",
     "isAnswered": false,
+    "labels": [
+      "domain:enrichment_tables",
+      "domain:performance"
+    ],
     "locked": false,
     "number": 24012,
     "stateReason": null,
@@ -8535,6 +9708,9 @@
     },
     "createdAt": "2025-10-17T14:39:34Z",
     "isAnswered": true,
+    "labels": [
+      "sink:datadog_logs"
+    ],
     "locked": false,
     "number": 24022,
     "stateReason": "RESOLVED",
@@ -8560,6 +9736,9 @@
     },
     "createdAt": "2025-10-21T16:39:55Z",
     "isAnswered": true,
+    "labels": [
+      "source:kafka"
+    ],
     "locked": false,
     "number": 24039,
     "stateReason": "RESOLVED",
@@ -8573,7 +9752,7 @@
     "author": {
       "login": "amarnathpv"
     },
-    "bodyText": "Question\nI am attempting to decompress the data that is contained in the message payload. Despite the file being in gz format, I am unable to decompress the data using the decode_* option.\nAny clue?\nI tried converting below \"message\" payload to base64 conversion, but didn't help either.\nVector Config\n[api]\nenabled = true\naddress = \"0.0.0.0:8686\"\n\n[sources.s3_logs]\ntype = \"aws_s3\"\nregion = \"eu-west-2\"\nsqs.queue_url = \"https://sqs.eu-west-2.amazonaws.com/xxxxxxxxxx/vector-s3-log-queue\"\n\ncompression = \"none\"\ndecoding.codec = \"bytes\"\n\n[sources.s3_logs.auth]\naccess_key_id = \"xxxxxxxxx\"\nsecret_access_key = \"xxxxxxxxx\"\n\n[transforms.decompress_message]\ntype = \"remap\"\ninputs = [\"s3_logs\"]\nsource = '''\n  #.message_decoded, err = decode_zlib(.message)\n  #.message_decoded, err = decode_zstd(.message)\n  .message_decoded, err = decode_gzip(.message)\n  if err != null { abort }\n'''\n\n[sinks.console]\ntype = \"console\"\ninputs = [\"decompress_message\"]\nencoding.codec = \"json\"\nVector Logs\n{\"bucket\":\"euw2a-s3-app-01\",\"message\":\"�U�\\u0007\\u0014y�b��]zA�\\u0007=�}HS�B 諼\\u0010#\\u0018�\\u0002I���\\u0002Y��]��\\b�s3\\u0010w���\\u0005�\\u001d���7q��ҩ�0��*�.�MpR\",\"object\":\"clm/2025/10/22/20/euw2a-kinds-app-01-2-2025-10-22-20-24-57-752185ba-3e48-45de-b14f-045525c33064.gz\",\"region\":\"eu-west-2\",\"source_type\":\"aws_s3\",\"timestamp\":\"2025-10-22T20:40:04Z\"}\n{\"bucket\":\"euw2a-s3-app-01\",\"message\":\"����$ކ(\\u001b]�4IM��\\u0019i��\\\"\\u0003�\\u0004���X�_a��\\u001d����\\u001aI�9��\\u0018n��򂔿�=yE;5�DTC�W̹]{G7fƃ�.\\u0012Ƒ\\u0019,b_���\\u0011q\\u001f�\\u0003_��qme\\u0007�m�|�/���\\u0017\\tn�\\u0005�w`\\u001b��\",\"object\":\"clm/2025/10/22/20/euw2a-kinds-app-01-2-2025-10-22-20-24-57-752185ba-3e48-45de-b14f-045525c33064.gz\",\"region\":\"eu-west-2\",\"source_type\":\"aws_s3\",\"timestamp\":\"2025-10-22T20:40:04Z\"}\n{\"bucket\":\"euw2a-s3-app-01\",\"message\":\"�1h�\\f��o�� �:�\\r�I�<\\\\�\\u001f�Ys�\\u000e�]\\u0006\\u0001W\\u0003\\u0001�8S��V\\u0000\\u001c\\\\�\\u0012��Bz4}�ɠ�\\u0011=�!���4I�\\u0015r�\\u001e�$\\u0015���D�\\\"`�S�'g��>�8��\\u0019�ݪ�(X��Zd��d%\\u001c���C�;C\\u001f\\u0017鯔��C���p��7�Ͻ�O�\\u0010��2��-��\\u000e\\f=�\\\\����\\\\�jQZ��쬥`\\u000f<��\\u0019����Ǯ)^�\\u001b�\\u000b2\",\"object\":\"clm/2025/10/22/20/euw2a-kinds-app-01-2-2025-10-22-20-24-57-752185ba-3e48-45de-b14f-045525c33064.gz\",\"region\":\"eu-west-2\",\"source_type\":\"aws_s3\",\"timestamp\":\"2025-10-22T20:40:04Z\"}\n{\"bucket\":\"euw2a-s3-app-01\",\"message\":\"���\",\"object\":\"clm/2025/10/22/20/euw2a-kinds-app-01-2-2025-10-22-20-24-57-752185ba-3e48-45de-b14f-045525c33064.gz\",\"region\":\"eu-west-2\",\"source_type\":\"aws_s3\",\"timestamp\":\"2025-10-22T20:40:04Z\"}",
+    "bodyText": "Question\nI am attempting to decompress the data that is contained in the message payload. Despite the file being in gz format, I am unable to decompress the data using the decode_* option.\nAny clue?\nI tried converting below \"message\" payload to base64 conversion, but didn't help either.\nVector Config\n[api]\nenabled = true\naddress = \"0.0.0.0:8686\"\n\n[sources.s3_logs]\ntype = \"aws_s3\"\nregion = \"eu-west-2\"\nsqs.queue_url = \"https://sqs.eu-west-2.amazonaws.com/xxxxxxxxxx/vector-s3-log-queue\"\n\ncompression = \"none\"\ndecoding.codec = \"bytes\"\n\n[sources.s3_logs.auth]\naccess_key_id = \"xxxxxxxxx\"\nsecret_access_key = \"xxxxxxxxx\"\n\n[transforms.decompress_message]\ntype = \"remap\"\ninputs = [\"s3_logs\"]\nsource = '''\n  #.message_decoded, err = decode_zlib(.message)\n  #.message_decoded, err = decode_zstd(.message)\n  .message_decoded, err = decode_gzip(.message)\n  if err != null { abort }\n'''\n\n[sinks.console]\ntype = \"console\"\ninputs = [\"decompress_message\"]\nencoding.codec = \"json\"\nVector Logs\n{\"bucket\":\"euw2a-s3-app-01\",\"message\":\"�U�\\^G\\^Ty�b��]zA�\\^G=�}HS�B 諼\\^P#\\^X�\\^BI���\\^BY��]��\\b�s3\\^Pw���\\^E�\\^]���7q��ҩ�0��*�.�MpR\",\"object\":\"clm/2025/10/22/20/euw2a-kinds-app-01-2-2025-10-22-20-24-57-752185ba-3e48-45de-b14f-045525c33064.gz\",\"region\":\"eu-west-2\",\"source_type\":\"aws_s3\",\"timestamp\":\"2025-10-22T20:40:04Z\"}\n{\"bucket\":\"euw2a-s3-app-01\",\"message\":\"����$ކ(\\^[]�4IM��\\^Yi��\\\"\\^C�\\^D���X�_a��\\^]����\\^ZI�9��\\^Xn��򂔿�=yE;5�DTC�W̹]{G7fƃ�.\\^RƑ\\^Y,b_���\\^Qq\\^_�\\^C_��qme\\^G�m�|�/���\\^W\\tn�\\^E�w`\\^[��\",\"object\":\"clm/2025/10/22/20/euw2a-kinds-app-01-2-2025-10-22-20-24-57-752185ba-3e48-45de-b14f-045525c33064.gz\",\"region\":\"eu-west-2\",\"source_type\":\"aws_s3\",\"timestamp\":\"2025-10-22T20:40:04Z\"}\n{\"bucket\":\"euw2a-s3-app-01\",\"message\":\"�1h�\\f��o�� �:�\\r�I�<\\\\�\\^_�Ys�\\^N�]\\^F\\^AW\\^C\\^A�8S��V\\^@\\^\\\\\\�\\^R��Bz4}�ɠ�\\^Q=�!���4I�\\^Ur�\\^^�$\\^U���D�\\\"`�S�'g��>�8��\\^Y�ݪ�(X��Zd��d%\\^\\���C�;C\\^_\\^W鯔��C���p��7�Ͻ�O�\\^P��2��-��\\^N\\f=�\\\\����\\\\�jQZ��쬥`\\^O<��\\^Y����Ǯ)^�\\^[�\\u000b2\",\"object\":\"clm/2025/10/22/20/euw2a-kinds-app-01-2-2025-10-22-20-24-57-752185ba-3e48-45de-b14f-045525c33064.gz\",\"region\":\"eu-west-2\",\"source_type\":\"aws_s3\",\"timestamp\":\"2025-10-22T20:40:04Z\"}\n{\"bucket\":\"euw2a-s3-app-01\",\"message\":\"���\",\"object\":\"clm/2025/10/22/20/euw2a-kinds-app-01-2-2025-10-22-20-24-57-752185ba-3e48-45de-b14f-045525c33064.gz\",\"region\":\"eu-west-2\",\"source_type\":\"aws_s3\",\"timestamp\":\"2025-10-22T20:40:04Z\"}",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"
@@ -8585,6 +9764,11 @@
     },
     "createdAt": "2025-10-23T10:28:13Z",
     "isAnswered": true,
+    "labels": [
+      "domain:compression",
+      "provider:aws",
+      "source:aws_s3"
+    ],
     "locked": false,
     "number": 24059,
     "stateReason": null,
@@ -8610,6 +9794,7 @@
     },
     "createdAt": "2025-10-23T23:53:52Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 24067,
     "stateReason": "RESOLVED",
@@ -8635,6 +9820,10 @@
     },
     "createdAt": "2025-10-25T15:58:39Z",
     "isAnswered": true,
+    "labels": [
+      "domain:parsing",
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 24076,
     "stateReason": null,
@@ -8660,6 +9849,9 @@
     },
     "createdAt": "2025-10-27T18:23:03Z",
     "isAnswered": true,
+    "labels": [
+      "domain:performance"
+    ],
     "locked": false,
     "number": 24087,
     "stateReason": null,
@@ -8685,6 +9877,7 @@
     },
     "createdAt": "2025-10-28T12:32:34Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24095,
     "stateReason": null,
@@ -8710,6 +9903,9 @@
     },
     "createdAt": "2025-10-29T15:42:26Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 24105,
     "stateReason": null,
@@ -8735,6 +9931,10 @@
     },
     "createdAt": "2025-09-19T03:42:24Z",
     "isAnswered": true,
+    "labels": [
+      "platform:kubernetes",
+      "type:feature"
+    ],
     "locked": false,
     "number": 24111,
     "stateReason": null,
@@ -8760,6 +9960,10 @@
     },
     "createdAt": "2025-11-04T10:24:32Z",
     "isAnswered": true,
+    "labels": [
+      "provider:azure",
+      "sink:azure_blob"
+    ],
     "locked": false,
     "number": 24137,
     "stateReason": null,
@@ -8785,6 +9989,11 @@
     },
     "createdAt": "2025-11-05T00:06:02Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "domain:config",
+      "source:socket"
+    ],
     "locked": false,
     "number": 24149,
     "stateReason": null,
@@ -8810,6 +10019,9 @@
     },
     "createdAt": "2025-11-05T10:47:35Z",
     "isAnswered": true,
+    "labels": [
+      "sink:opentelemetry"
+    ],
     "locked": false,
     "number": 24151,
     "stateReason": null,
@@ -8835,6 +10047,9 @@
     },
     "createdAt": "2025-11-06T14:35:01Z",
     "isAnswered": true,
+    "labels": [
+      "domain:delivery"
+    ],
     "locked": false,
     "number": 24171,
     "stateReason": null,
@@ -8860,6 +10075,7 @@
     },
     "createdAt": "2025-11-09T22:00:20Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 24196,
     "stateReason": null,
@@ -8885,6 +10101,9 @@
     },
     "createdAt": "2025-11-10T13:05:49Z",
     "isAnswered": true,
+    "labels": [
+      "provider:aws"
+    ],
     "locked": false,
     "number": 24199,
     "stateReason": null,
@@ -8910,6 +10129,9 @@
     },
     "createdAt": "2025-11-10T13:10:40Z",
     "isAnswered": true,
+    "labels": [
+      "sink:elasticsearch"
+    ],
     "locked": false,
     "number": 24200,
     "stateReason": null,
@@ -8935,6 +10157,7 @@
     },
     "createdAt": "2025-11-11T23:07:14Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24216,
     "stateReason": null,
@@ -8960,6 +10183,9 @@
     },
     "createdAt": "2025-11-12T19:26:58Z",
     "isAnswered": true,
+    "labels": [
+      "needs:more info"
+    ],
     "locked": false,
     "number": 24221,
     "stateReason": "RESOLVED",
@@ -8985,6 +10211,11 @@
     },
     "createdAt": "2025-11-12T19:33:04Z",
     "isAnswered": true,
+    "labels": [
+      "domain:security",
+      "domain:vrl",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 24222,
     "stateReason": null,
@@ -9010,6 +10241,7 @@
     },
     "createdAt": "2025-11-13T07:56:31Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24226,
     "stateReason": null,
@@ -9035,6 +10267,11 @@
     },
     "createdAt": "2025-11-13T08:45:45Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config",
+      "domain:observability",
+      "sink:http"
+    ],
     "locked": false,
     "number": 24227,
     "stateReason": null,
@@ -9060,6 +10297,14 @@
     },
     "createdAt": "2025-11-13T11:01:48Z",
     "isAnswered": false,
+    "labels": [
+      "domain:delivery",
+      "meta:awaiting author",
+      "needs:more info",
+      "sink:elasticsearch",
+      "sink:vector",
+      "source:vector"
+    ],
     "locked": false,
     "number": 24228,
     "stateReason": null,
@@ -9085,6 +10330,9 @@
     },
     "createdAt": "2025-11-14T16:04:09Z",
     "isAnswered": true,
+    "labels": [
+      "domain:observability"
+    ],
     "locked": false,
     "number": 24242,
     "stateReason": null,
@@ -9110,6 +10358,7 @@
     },
     "createdAt": "2025-11-15T05:51:18Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24248,
     "stateReason": null,
@@ -9135,6 +10384,9 @@
     },
     "createdAt": "2025-11-15T18:11:26Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 24249,
     "stateReason": null,
@@ -9160,6 +10412,7 @@
     },
     "createdAt": "2025-11-16T15:16:41Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24250,
     "stateReason": "RESOLVED",
@@ -9185,6 +10438,9 @@
     },
     "createdAt": "2025-11-17T15:50:31Z",
     "isAnswered": true,
+    "labels": [
+      "domain:external docs"
+    ],
     "locked": false,
     "number": 24251,
     "stateReason": "RESOLVED",
@@ -9210,6 +10466,9 @@
     },
     "createdAt": "2025-11-17T16:21:21Z",
     "isAnswered": true,
+    "labels": [
+      "sink:clickhouse"
+    ],
     "locked": false,
     "number": 24252,
     "stateReason": null,
@@ -9235,6 +10494,10 @@
     },
     "createdAt": "2025-11-18T10:30:27Z",
     "isAnswered": true,
+    "labels": [
+      "sink:vector",
+      "source:vector"
+    ],
     "locked": false,
     "number": 24265,
     "stateReason": null,
@@ -9260,6 +10523,12 @@
     },
     "createdAt": "2025-11-19T13:40:59Z",
     "isAnswered": true,
+    "labels": [
+      "domain:config",
+      "domain:networking",
+      "domain:performance",
+      "sink:elasticsearch"
+    ],
     "locked": false,
     "number": 24274,
     "stateReason": null,
@@ -9285,6 +10554,7 @@
     },
     "createdAt": "2025-11-19T23:22:38Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24282,
     "stateReason": "RESOLVED",
@@ -9310,6 +10580,11 @@
     },
     "createdAt": "2025-11-20T11:49:50Z",
     "isAnswered": true,
+    "labels": [
+      "domain:buffers",
+      "domain:delivery",
+      "domain:durability"
+    ],
     "locked": false,
     "number": 24286,
     "stateReason": null,
@@ -9335,6 +10610,10 @@
     },
     "createdAt": "2025-11-21T20:40:04Z",
     "isAnswered": true,
+    "labels": [
+      "domain:tests",
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 24294,
     "stateReason": null,
@@ -9360,6 +10639,7 @@
     },
     "createdAt": "2025-11-25T12:45:56Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24298,
     "stateReason": "DUPLICATE",
@@ -9385,6 +10665,10 @@
     },
     "createdAt": "2025-11-25T12:50:29Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 24299,
     "stateReason": null,
@@ -9410,6 +10694,7 @@
     },
     "createdAt": "2025-11-26T09:29:54Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24303,
     "stateReason": "RESOLVED",
@@ -9435,6 +10720,7 @@
     },
     "createdAt": "2025-11-28T12:35:49Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 24311,
     "stateReason": "RESOLVED",
@@ -9460,6 +10746,13 @@
     },
     "createdAt": "2025-12-01T13:37:36Z",
     "isAnswered": true,
+    "labels": [
+      "domain:codecs",
+      "meta:awaiting author",
+      "provider:aws",
+      "provider:datadog",
+      "source:datadog_agent"
+    ],
     "locked": false,
     "number": 24315,
     "stateReason": null,
@@ -9485,6 +10778,7 @@
     },
     "createdAt": "2025-12-05T03:03:23Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 24343,
     "stateReason": null,
@@ -9510,6 +10804,9 @@
     },
     "createdAt": "2025-12-05T17:50:48Z",
     "isAnswered": true,
+    "labels": [
+      "domain:templating"
+    ],
     "locked": false,
     "number": 24344,
     "stateReason": null,
@@ -9535,6 +10832,11 @@
     },
     "createdAt": "2025-12-08T14:49:03Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics",
+      "domain:templating",
+      "sink:prometheus_remote_write"
+    ],
     "locked": false,
     "number": 24350,
     "stateReason": null,
@@ -9560,6 +10862,9 @@
     },
     "createdAt": "2025-12-09T08:14:45Z",
     "isAnswered": true,
+    "labels": [
+      "platform:windows"
+    ],
     "locked": false,
     "number": 24353,
     "stateReason": null,
@@ -9585,6 +10890,13 @@
     },
     "createdAt": "2025-12-09T21:38:49Z",
     "isAnswered": false,
+    "labels": [
+      "domain:config",
+      "domain:templating",
+      "meta:awaiting author",
+      "provider:aws",
+      "sink:aws_s3"
+    ],
     "locked": false,
     "number": 24359,
     "stateReason": null,
@@ -9610,6 +10922,7 @@
     },
     "createdAt": "2025-12-09T23:55:27Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24360,
     "stateReason": null,
@@ -9635,6 +10948,7 @@
     },
     "createdAt": "2025-12-10T09:42:28Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24362,
     "stateReason": "RESOLVED",
@@ -9660,6 +10974,9 @@
     },
     "createdAt": "2025-12-12T08:53:03Z",
     "isAnswered": true,
+    "labels": [
+      "domain:vrl"
+    ],
     "locked": false,
     "number": 24369,
     "stateReason": null,
@@ -9685,6 +11002,13 @@
     },
     "createdAt": "2025-12-17T10:10:58Z",
     "isAnswered": false,
+    "labels": [
+      "domain:memory",
+      "domain:performance",
+      "meta:awaiting author",
+      "needs:more info",
+      "source:file"
+    ],
     "locked": false,
     "number": 24390,
     "stateReason": null,
@@ -9710,6 +11034,9 @@
     },
     "createdAt": "2025-12-17T11:30:11Z",
     "isAnswered": true,
+    "labels": [
+      "source:redis"
+    ],
     "locked": false,
     "number": 24391,
     "stateReason": null,
@@ -9735,6 +11062,7 @@
     },
     "createdAt": "2025-12-18T12:21:29Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 24396,
     "stateReason": null,
@@ -9760,6 +11088,11 @@
     },
     "createdAt": "2025-12-18T13:16:20Z",
     "isAnswered": true,
+    "labels": [
+      "domain:durability",
+      "domain:observability",
+      "transform:remap"
+    ],
     "locked": false,
     "number": 24398,
     "stateReason": null,
@@ -9785,6 +11118,13 @@
     },
     "createdAt": "2025-12-22T11:09:37Z",
     "isAnswered": true,
+    "labels": [
+      "domain:metrics",
+      "sink:postgres",
+      "source:file",
+      "transform:aggregate",
+      "transform:log_to_metric"
+    ],
     "locked": false,
     "number": 24403,
     "stateReason": null,
@@ -9810,6 +11150,7 @@
     },
     "createdAt": "2025-12-23T09:21:37Z",
     "isAnswered": true,
+    "labels": [],
     "locked": false,
     "number": 24407,
     "stateReason": null,
@@ -9835,6 +11176,7 @@
     },
     "createdAt": "2025-12-30T14:51:07Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 24423,
     "stateReason": null,
@@ -9860,6 +11202,7 @@
     },
     "createdAt": "2025-12-31T00:04:22Z",
     "isAnswered": false,
+    "labels": [],
     "locked": false,
     "number": 24424,
     "stateReason": null,

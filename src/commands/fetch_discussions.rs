@@ -3,7 +3,7 @@ use crate::commands::fetch_issues::parse_since;
 use crate::config::Config;
 use anyhow::{Context, Result};
 use reqwest::blocking::Client;
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize, Deserializer, Serialize};
 use serde_json::{json, Value};
 use std::collections::BTreeMap;
 use std::fs;
@@ -39,6 +39,10 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
         category {
           isAnswerable
           name
+        }
+        labels(first: 100) {
+          nodes { name }
+          pageInfo { hasNextPage }
         }
         comments {
           totalCount
@@ -78,6 +82,10 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
           isAnswerable
           name
         }
+        labels(first: 100) {
+          nodes { name }
+          pageInfo { hasNextPage }
+        }
         comments {
           totalCount
         }
@@ -105,6 +113,8 @@ pub struct Discussion {
     pub locked: bool,
     pub author: Option<Author>,
     pub category: Category,
+    #[serde(default, skip_serializing_if = "Option::is_none", deserialize_with = "deserialize_labels")]
+    pub labels: Option<Vec<String>>,
     pub comments: Comments,
     pub upvote_count: u64,
 }
@@ -125,6 +135,56 @@ pub struct Category {
 #[serde(rename_all = "camelCase")]
 pub struct Comments {
     pub total_count: u64,
+}
+
+#[derive(Deserialize)]
+#[serde(untagged)]
+enum LabelInput {
+    Saved(Vec<String>),
+    Connection {
+        nodes: Vec<Label>,
+        #[serde(rename = "pageInfo")]
+        page_info: LabelPageInfo,
+    },
+}
+
+#[derive(Deserialize)]
+struct Label {
+    name: String,
+}
+
+#[derive(Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct LabelPageInfo {
+    has_next_page: bool,
+}
+
+fn deserialize_labels<'de, D: Deserializer<'de>>(deserializer: D) -> std::result::Result<Option<Vec<String>>, D::Error> {
+    match Option::<LabelInput>::deserialize(deserializer)? {
+        None => Ok(None),
+        Some(LabelInput::Saved(names)) => Ok(Some(names)),
+        Some(LabelInput::Connection { nodes, page_info }) => {
+            if page_info.has_next_page {
+                return Err(serde::de::Error::custom("Incomplete discussion labels"));
+            }
+            Ok(Some(nodes.into_iter().map(|label| label.name).collect()))
+        }
+    }
+}
+
+fn validate_labels(discussions: &mut [Discussion]) -> Result<()> {
+    for discussion in discussions {
+        let labels = discussion.labels.as_mut().with_context(|| {
+            format!("Missing labels for discussion #{}", discussion.number)
+        })?;
+        anyhow::ensure!(
+            labels.iter().all(|label| !label.trim().is_empty()),
+            "Invalid label for discussion #{}",
+            discussion.number
+        );
+        labels.sort();
+    }
+    Ok(())
 }
 
 #[derive(Deserialize)]
@@ -164,12 +224,13 @@ pub fn run(config: &Config, since: Option<&str>) -> Result<()> {
 pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) -> Result<()> {
     let since_ts = since.map(parse_since).transpose()?;
 
-    let discussions = if let Some(ref ts) = since_ts {
+    let mut discussions = if let Some(ref ts) = since_ts {
         println!("Fetching discussions updated since {ts}...");
         fetch_discussions_since(client, config, ts)?
     } else {
         fetch_all_discussions(client, config)?
     };
+    validate_labels(&mut discussions)?;
 
     println!("Total discussions fetched: {}", discussions.len());
 
@@ -374,4 +435,40 @@ mod tests {
         assert!(QUERY.contains("answerChosenAt"));
         assert!(QUERY_SINCE.contains("answerChosenAt"));
     }
+
+    fn discussion_with_labels(labels: Value) -> Discussion {
+        serde_json::from_value(json!({
+            "number": 1, "title": "Question", "bodyText": "", "url": "https://github.com/example/discussions/1",
+            "createdAt": "2026-01-01T00:00:00Z", "updatedAt": "2026-01-03T00:00:00Z",
+            "closedAt": null, "closed": false, "stateReason": null, "isAnswered": false,
+            "locked": false, "author": null, "category": {"name": "Q&A", "isAnswerable": true},
+            "comments": {"totalCount": 1}, "upvoteCount": 0, "labels": labels
+        })).unwrap()
+    }
+
+    #[test]
+    fn discussion_labels_are_complete_and_stably_ordered() {
+        let mut rows = vec![discussion_with_labels(json!({
+            "nodes": [{"name": "z"}, {"name": "meta:awaiting author"}],
+            "pageInfo": {"hasNextPage": false}
+        }))];
+        validate_labels(&mut rows).unwrap();
+        let saved = serde_json::to_value(&rows[0]).unwrap();
+        assert_eq!(saved["labels"], json!(["meta:awaiting author", "z"]));
+        let mut reloaded = vec![serde_json::from_value(saved.clone()).unwrap()];
+        validate_labels(&mut reloaded).unwrap();
+        assert_eq!(serde_json::to_value(&reloaded[0]).unwrap(), saved);
+        let mut empty = vec![discussion_with_labels(json!({"nodes": [], "pageInfo": {"hasNextPage": false}}))];
+        validate_labels(&mut empty).unwrap();
+        for labels in [Value::Null,
+            json!({"nodes": [{"name": " "}], "pageInfo": {"hasNextPage": false}})] {
+            assert!(validate_labels(&mut [discussion_with_labels(labels)]).is_err());
+        }
+        let mut truncated = serde_json::to_value(&empty[0]).unwrap();
+        truncated["labels"] = json!({"nodes": [], "pageInfo": {"hasNextPage": true}});
+        assert!(serde_json::from_value::<Discussion>(truncated).is_err());
+        assert!(QUERY.contains("labels(first: 100)"));
+        assert!(QUERY_SINCE.contains("labels(first: 100)"));
+    }
+
 }
