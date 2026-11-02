@@ -484,8 +484,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:41:03Z",
     "comments": {
       "totalCount": 1
     },
@@ -493,9 +493,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 7778,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Exploring vector to expose metrics related logs to prometheus",
-    "updatedAt": "2022-08-16T11:08:40Z",
+    "updatedAt": "2026-10-28T17:41:03Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/7778"
   },
@@ -1359,8 +1359,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T13:32:09Z",
     "comments": {
       "totalCount": 2
     },
@@ -1368,9 +1368,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 9615,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Support for both starts_when and ends_when in reduce transform",
-    "updatedAt": "2024-09-04T12:20:06Z",
+    "updatedAt": "2026-10-29T13:32:09Z",
     "upvoteCount": 9,
     "url": "https://github.com/vectordotdev/vector/discussions/9615"
   },
@@ -1879,7 +1879,7 @@
     "author": {
       "login": "ottramst"
     },
-    "bodyText": "Hello,\nThanks for the awesome project!\nI have a slight problem with using VRL with nested fields (mainly renaming).\nConfiguration\n  sources:\n    var_log_kubelet:\n      type: file\n      include:\n        - /var/log/kubelet/kubelet.ERROR\n        - /var/log/kubelet/kubelet.WARNING\n  transforms:\n    kubelet_parse:\n      type: remap\n      inputs:\n        - var_log_kubelet\n      source: |\n        . = parse_klog!(.message)\n        .@timestamp = del(.timestamp)\n    aws_ec2_metadata:\n      type: aws_ec2_metadata\n      inputs:\n        - kubelet_parse\n      fields:\n        - ami-id\n        - availability-zone\n        - instance-id\n        - local-hostname\n        - local-ipv4\n        - public-hostname\n        - public-ipv4\n        - region\n    ecs_transform:\n      type: remap\n      inputs:\n        - aws_ec2_metadata\n      source: |\n        .cloud.region = del(.region)\n        .cloud.availability_zone = del(.availability-zone)\n  sinks:\n    console:\n      type: console\n      inputs:\n        - ecs_transform\n      target: stdout\n      encoding: json\n\nPlease note the transforms.ecs_transform.source configuration.\nWhen the source contains only cloud.region = del(.region) then everything works and the field is renamed successfully.\nProblems start when I start adding other renames like .cloud.availability_zone = del(.availability-zone), which starts producing errors:\n{\"timestamp\":\"2021-12-07T15:11:30.771645Z\",\"level\":\"INFO\",\"message\":\"Log level is enabled.\",\"level\":\"\\\"vector=info,codec=info,vrl=info,file_source=info,tower_limit=trace,rdkafka=info\\\"\",\"target\":\"vector::app\"}\n{\"timestamp\":\"2021-12-07T15:11:30.771754Z\",\"level\":\"INFO\",\"message\":\"Loading configs.\",\"paths\":\"[\\\"/etc/vector\\\"]\",\"target\":\"vector::app\"}\n{\"timestamp\":\"2021-12-07T15:11:30.797327Z\",\"level\":\"ERROR\",\"message\":\"Configuration error.\",\"error\":\"Transform \\\"ecs_transform\\\": \\n\\^[[0m\\^[[1m\\^[[38;5;9merror[E701]\\^[[0m\\^[[1m: call to undefined variable\\^[[0m\\n  \\^[[0m\\^[[34m┌─\\^[[0m :2:46\\n  \\^[[0m\\^[[34m│\\^[[0m\\n\\^[[0m\\^[[34m2\\^[[0m \\^[[0m\\^[[34m│\\^[[0m .cloud.availability_zone = del(.availability-\\^[[0m\\^[[31mzone\\^[[0m)\\n  \\^[[0m\\^[[34m│\\^[[0m                                              \\^[[0m\\^[[31m^^^^\\^[[0m\\n  \\^[[0m\\^[[34m│\\^[[0m                                              \\^[[0m\\^[[31m│\\^[[0m\\n  \\^[[0m\\^[[34m│\\^[[0m                                              \\^[[0m\\^[[31mundefined variable\\^[[0m\\n  \\^[[0m\\^[[34m│\\^[[0m                                              \\^[[0m\\^[[34mdid you mean \\\"true\\\"?\\^[[0m\\n  \\^[[0m\\^[[34m│\\^[[0m\\n  \\^[[0m\\^[[34m=\\^[[0m see language documentation at https://vrl.dev\\n\\n\\^[[0m\\^[[1m\\^[[38;5;9merror[E630]\\^[[0m\\^[[1m: fallible argument\\^[[0m\\n  \\^[[0m\\^[[34m┌─\\^[[0m :2:32\\n  \\^[[0m\\^[[34m│\\^[[0m\\n\\^[[0m\\^[[34m2\\^[[0m \\^[[0m\\^[[34m│\\^[[0m .cloud.availability_zone = del(\\^[[0m\\^[[31m.availability-zone\\^[[0m)\\n  \\^[[0m\\^[[34m│\\^[[0m                                \\^[[0m\\^[[31m^^^^^^^^^^^^^^^^^^\\^[[0m\\n  \\^[[0m\\^[[34m│\\^[[0m                                \\^[[0m\\^[[31m│\\^[[0m\\n  \\^[[0m\\^[[34m│\\^[[0m                                \\^[[0m\\^[[31mthis expression can fail\\^[[0m\\n  \\^[[0m\\^[[34m│\\^[[0m                                \\^[[0m\\^[[34mhandle the error before passing it in as an argument\\^[[0m\\n  \\^[[0m\\^[[34m│\\^[[0m\\n  \\^[[0m\\^[[34m=\\^[[0m see documentation about error handling at https://errors.vrl.dev/#handling\\n  \\^[[0m\\^[[34m=\\^[[0m see language documentation at https://vrl.dev\\n\",\"target\":\"vector::topology\"}\n\nAlso can confirm that if the source features only .cloud.availability_zone = del(.availability-zone) I get the same exact error.\nNot sure where to go from here, any help and/or guidance will be greatly appreciated.\nThank you!",
+    "bodyText": "Hello,\nThanks for the awesome project!\nI have a slight problem with using VRL with nested fields (mainly renaming).\nConfiguration\n  sources:\n    var_log_kubelet:\n      type: file\n      include:\n        - /var/log/kubelet/kubelet.ERROR\n        - /var/log/kubelet/kubelet.WARNING\n  transforms:\n    kubelet_parse:\n      type: remap\n      inputs:\n        - var_log_kubelet\n      source: |\n        . = parse_klog!(.message)\n        .@timestamp = del(.timestamp)\n    aws_ec2_metadata:\n      type: aws_ec2_metadata\n      inputs:\n        - kubelet_parse\n      fields:\n        - ami-id\n        - availability-zone\n        - instance-id\n        - local-hostname\n        - local-ipv4\n        - public-hostname\n        - public-ipv4\n        - region\n    ecs_transform:\n      type: remap\n      inputs:\n        - aws_ec2_metadata\n      source: |\n        .cloud.region = del(.region)\n        .cloud.availability_zone = del(.availability-zone)\n  sinks:\n    console:\n      type: console\n      inputs:\n        - ecs_transform\n      target: stdout\n      encoding: json\n\nPlease note the transforms.ecs_transform.source configuration.\nWhen the source contains only cloud.region = del(.region) then everything works and the field is renamed successfully.\nProblems start when I start adding other renames like .cloud.availability_zone = del(.availability-zone), which starts producing errors:\n{\"timestamp\":\"2021-12-07T15:11:30.771645Z\",\"level\":\"INFO\",\"message\":\"Log level is enabled.\",\"level\":\"\\\"vector=info,codec=info,vrl=info,file_source=info,tower_limit=trace,rdkafka=info\\\"\",\"target\":\"vector::app\"}\n{\"timestamp\":\"2021-12-07T15:11:30.771754Z\",\"level\":\"INFO\",\"message\":\"Loading configs.\",\"paths\":\"[\\\"/etc/vector\\\"]\",\"target\":\"vector::app\"}\n{\"timestamp\":\"2021-12-07T15:11:30.797327Z\",\"level\":\"ERROR\",\"message\":\"Configuration error.\",\"error\":\"Transform \\\"ecs_transform\\\": \\n\\u001b[0m\\u001b[1m\\u001b[38;5;9merror[E701]\\u001b[0m\\u001b[1m: call to undefined variable\\u001b[0m\\n  \\u001b[0m\\u001b[34m┌─\\u001b[0m :2:46\\n  \\u001b[0m\\u001b[34m│\\u001b[0m\\n\\u001b[0m\\u001b[34m2\\u001b[0m \\u001b[0m\\u001b[34m│\\u001b[0m .cloud.availability_zone = del(.availability-\\u001b[0m\\u001b[31mzone\\u001b[0m)\\n  \\u001b[0m\\u001b[34m│\\u001b[0m                                              \\u001b[0m\\u001b[31m^^^^\\u001b[0m\\n  \\u001b[0m\\u001b[34m│\\u001b[0m                                              \\u001b[0m\\u001b[31m│\\u001b[0m\\n  \\u001b[0m\\u001b[34m│\\u001b[0m                                              \\u001b[0m\\u001b[31mundefined variable\\u001b[0m\\n  \\u001b[0m\\u001b[34m│\\u001b[0m                                              \\u001b[0m\\u001b[34mdid you mean \\\"true\\\"?\\u001b[0m\\n  \\u001b[0m\\u001b[34m│\\u001b[0m\\n  \\u001b[0m\\u001b[34m=\\u001b[0m see language documentation at https://vrl.dev\\n\\n\\u001b[0m\\u001b[1m\\u001b[38;5;9merror[E630]\\u001b[0m\\u001b[1m: fallible argument\\u001b[0m\\n  \\u001b[0m\\u001b[34m┌─\\u001b[0m :2:32\\n  \\u001b[0m\\u001b[34m│\\u001b[0m\\n\\u001b[0m\\u001b[34m2\\u001b[0m \\u001b[0m\\u001b[34m│\\u001b[0m .cloud.availability_zone = del(\\u001b[0m\\u001b[31m.availability-zone\\u001b[0m)\\n  \\u001b[0m\\u001b[34m│\\u001b[0m                                \\u001b[0m\\u001b[31m^^^^^^^^^^^^^^^^^^\\u001b[0m\\n  \\u001b[0m\\u001b[34m│\\u001b[0m                                \\u001b[0m\\u001b[31m│\\u001b[0m\\n  \\u001b[0m\\u001b[34m│\\u001b[0m                                \\u001b[0m\\u001b[31mthis expression can fail\\u001b[0m\\n  \\u001b[0m\\u001b[34m│\\u001b[0m                                \\u001b[0m\\u001b[34mhandle the error before passing it in as an argument\\u001b[0m\\n  \\u001b[0m\\u001b[34m│\\u001b[0m\\n  \\u001b[0m\\u001b[34m=\\u001b[0m see documentation about error handling at https://errors.vrl.dev/#handling\\n  \\u001b[0m\\u001b[34m=\\u001b[0m see language documentation at https://vrl.dev\\n\",\"target\":\"vector::topology\"}\n\nAlso can confirm that if the source features only .cloud.availability_zone = del(.availability-zone) I get the same exact error.\nNot sure where to go from here, any help and/or guidance will be greatly appreciated.\nThank you!",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"

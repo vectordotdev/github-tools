@@ -48,10 +48,10 @@
     "issue_type": null,
     "labels": [
       {
-        "color": "5ED9F6",
+        "color": "8FB5DE",
         "description": "Anything `aws_s3` sink related",
         "id": 1963617647073758968,
-        "name": "sink: aws_s3"
+        "name": "sink:aws_s3"
       }
     ],
     "number": 20,
@@ -153,46 +153,46 @@
     "issue_type": "Feature",
     "labels": [
       {
-        "color": "FFF068",
+        "color": "E3C785",
         "description": "Needs review & approval before work can begin.",
         "id": 389285363867189610,
-        "name": "needs: approval"
+        "name": "needs:approval"
       },
       {
-        "color": "FFF068",
-        "description": "Needs a a list of requirements before work can be begin",
+        "color": "E3C785",
+        "description": "Needs a list of requirements before work can be begin",
         "id": 1231413994313482691,
-        "name": "needs: requirements"
+        "name": "needs:requirements"
       },
       {
-        "color": "343639",
-        "description": "Anything related to the Vector's sources",
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
         "id": 2021938762883471635,
-        "name": "domain: sources"
+        "name": "domain:sources"
       },
       {
-        "color": "5EAAF6",
+        "color": "8DC2CF",
         "description": "Anything `aws` service provider related",
         "id": 7964646415162525070,
-        "name": "provider: aws"
+        "name": "provider:aws"
       },
       {
-        "color": "F69049",
+        "color": "D7B38E",
         "description": "We should have this feature, but is not required. It is medium priority.",
         "id": 6848739542623159481,
-        "name": "have: should"
+        "name": "have:should"
       },
       {
-        "color": "343639",
+        "color": "94A3B8",
         "description": "Anything related to Vector's log events",
         "id": 1603740098990692642,
-        "name": "domain: logs"
+        "name": "domain:logs"
       },
       {
-        "color": "5ED9F6",
+        "color": "85BFAF",
         "description": "Request or implementation of a new source",
         "id": 2516345231450418203,
-        "name": "source: new"
+        "name": "source:new"
       }
     ],
     "number": 33,
@@ -210,10 +210,10 @@
     "issue_type": null,
     "labels": [
       {
-        "color": "5ED9F6",
+        "color": "8FB5DE",
         "description": "Anything `elasticsearch` sink related",
         "id": 3276119148680691006,
-        "name": "sink: elasticsearch"
+        "name": "sink:elasticsearch"
       }
     ],
     "number": 34,
@@ -613,10 +613,10 @@
     "issue_type": null,
     "labels": [
       {
-        "color": "343639",
+        "color": "94A3B8",
         "description": "Anything related to Vector's internal tests",
         "id": 5489522564843688803,
-        "name": "domain: tests"
+        "name": "domain:tests"
       }
     ],
     "number": 60,
@@ -634,10 +634,10 @@
     "issue_type": "Feature",
     "labels": [
       {
-        "color": "5ED9F6",
+        "color": "B8A5D6",
         "description": "Anything `lua` transform related",
         "id": 299908738200752377,
-        "name": "transform: lua"
+        "name": "transform:lua"
       }
     ],
     "number": 61,

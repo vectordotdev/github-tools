@@ -34,18 +34,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:37:20Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-01-04T15:27:29Z",
     "isAnswered": false,
     "locked": false,
     "number": 15806,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Histogram counter drops to 0 and then returns to the last value during vector pod restart",
-    "updatedAt": "2023-01-09T18:42:56Z",
+    "updatedAt": "2026-10-28T19:37:20Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/15806"
   },
@@ -359,8 +359,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:41:06Z",
     "comments": {
       "totalCount": 1
     },
@@ -368,9 +368,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 16064,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Repetitious logs from vector source file",
-    "updatedAt": "2023-02-14T14:54:30Z",
+    "updatedAt": "2026-10-28T17:41:06Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16064"
   },
@@ -609,23 +609,23 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T13:42:35Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-02-01T00:47:59Z",
     "isAnswered": false,
     "locked": false,
     "number": 16225,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Vector throwing 401 with basic_auth for loki sink",
-    "updatedAt": "2024-11-19T16:26:47Z",
+    "updatedAt": "2026-10-29T13:42:35Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/16225"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:29:11Z",
     "author": {
       "login": "Quyzi"
     },
@@ -637,15 +637,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 2
+      "totalCount": 3
     },
     "createdAt": "2023-02-02T20:24:50Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 16257,
     "stateReason": null,
     "title": "How to properly glob k8s logs source?",
-    "updatedAt": "2023-02-03T19:38:00Z",
+    "updatedAt": "2026-10-29T16:29:11Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16257"
   },
@@ -709,8 +709,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:41:15Z",
     "comments": {
       "totalCount": 3
     },
@@ -718,9 +718,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 16278,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Is support available for GCP authentication via workload identity federation ?",
-    "updatedAt": "2023-02-10T21:07:16Z",
+    "updatedAt": "2026-10-28T17:41:15Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16278"
   },
@@ -800,7 +800,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/16361"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T17:41:21Z",
     "author": {
       "login": "LinTechSo"
     },
@@ -815,12 +815,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-02-11T09:32:16Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 16395,
     "stateReason": null,
     "title": "multiline support in vrl",
-    "updatedAt": "2023-02-13T10:29:48Z",
+    "updatedAt": "2026-10-28T17:41:21Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/16395"
   },
@@ -934,8 +934,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:59:59Z",
     "comments": {
       "totalCount": 1
     },
@@ -943,9 +943,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 16498,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Archiving a directory for sinking to a server",
-    "updatedAt": "2023-02-22T10:55:28Z",
+    "updatedAt": "2026-10-28T19:59:59Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16498"
   },
@@ -1259,23 +1259,23 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:37:18Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-03-02T09:49:16Z",
     "isAnswered": false,
     "locked": false,
     "number": 16663,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "aarch64-unknown-linux-gnu build ERROR",
-    "updatedAt": "2023-03-02T12:17:45Z",
+    "updatedAt": "2026-10-28T19:37:18Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16663"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T14:03:48Z",
     "author": {
       "login": "nicolasmf"
     },
@@ -1287,15 +1287,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 2
+      "totalCount": 3
     },
     "createdAt": "2023-03-02T15:41:24Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 16667,
     "stateReason": null,
     "title": "How can I aggregate logs based on fields",
-    "updatedAt": "2023-03-03T08:07:40Z",
+    "updatedAt": "2026-10-29T14:03:48Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/16667"
   },
@@ -1334,18 +1334,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T14:28:09Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-03-06T09:34:11Z",
     "isAnswered": false,
     "locked": false,
     "number": 16696,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "vector source There are too many source files",
-    "updatedAt": "2023-03-06T09:34:12Z",
+    "updatedAt": "2026-10-29T14:28:09Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16696"
   },
@@ -1500,7 +1500,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/16796"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:21:53Z",
     "author": {
       "login": "mattzech"
     },
@@ -1512,15 +1512,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-03-14T21:34:34Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 16801,
     "stateReason": null,
     "title": "log_to_metric transform errors",
-    "updatedAt": "2023-03-16T16:16:01Z",
+    "updatedAt": "2026-10-29T16:21:52Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/16801"
   },
@@ -1534,18 +1534,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T20:23:56Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-03-16T00:46:24Z",
     "isAnswered": false,
     "locked": false,
     "number": 16813,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Vector Agent - Kubernetes source fails to follow configs \"ignore_older_secs: 86400\" and \"read_from: end\"",
-    "updatedAt": "2023-03-17T23:14:20Z",
+    "updatedAt": "2026-10-28T20:23:56Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/16813"
   },
@@ -1600,7 +1600,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/16827"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T20:05:16Z",
     "author": {
       "login": "Fritzss"
     },
@@ -1615,17 +1615,17 @@
       "totalCount": 3
     },
     "createdAt": "2023-03-20T09:40:22Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 16868,
     "stateReason": "REOPENED",
     "title": "recursive func for parse_json",
-    "updatedAt": "2023-03-23T13:52:58Z",
+    "updatedAt": "2026-10-28T20:05:15Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16868"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:18:32Z",
     "author": {
       "login": "arve0"
     },
@@ -1637,15 +1637,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 2
+      "totalCount": 3
     },
     "createdAt": "2023-03-21T13:58:26Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 16884,
     "stateReason": null,
     "title": "to_timestamp does not honor timezone global setting?",
-    "updatedAt": "2023-03-25T00:33:48Z",
+    "updatedAt": "2026-10-29T16:18:32Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16884"
   },
@@ -1700,7 +1700,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/16889"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:40:46Z",
     "author": {
       "login": "chaporgin"
     },
@@ -1715,12 +1715,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-03-23T09:57:31Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 16925,
     "stateReason": null,
     "title": "Kafka sink and dead letter queue with JSON schema/Avro",
-    "updatedAt": "2023-03-23T13:57:19Z",
+    "updatedAt": "2026-10-28T19:40:46Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16925"
   },
@@ -1759,8 +1759,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:41:17Z",
     "comments": {
       "totalCount": 1
     },
@@ -1768,14 +1768,14 @@
     "isAnswered": false,
     "locked": false,
     "number": 16945,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Sink one gauge metric to prometheus by remote write, query get multiple",
-    "updatedAt": "2023-03-27T15:32:03Z",
+    "updatedAt": "2026-10-28T17:41:17Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16945"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:18:29Z",
     "author": {
       "login": "siddharthb78"
     },
@@ -1787,15 +1787,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-03-27T09:17:10Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 16967,
     "stateReason": null,
     "title": "Parse multiple lines in a log file",
-    "updatedAt": "2023-03-27T12:49:34Z",
+    "updatedAt": "2026-10-29T16:18:29Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16967"
   },
@@ -1825,7 +1825,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/16978"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T20:09:24Z",
     "author": {
       "login": "baodrate"
     },
@@ -1840,12 +1840,12 @@
       "totalCount": 2
     },
     "createdAt": "2023-03-28T23:04:58Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 16986,
     "stateReason": null,
     "title": "Parsing CRI-formatted logs from `file` source?",
-    "updatedAt": "2025-11-26T16:34:53Z",
+    "updatedAt": "2026-10-28T20:09:24Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/16986"
   },
@@ -1959,8 +1959,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:51:34Z",
     "comments": {
       "totalCount": 1
     },
@@ -1968,14 +1968,14 @@
     "isAnswered": false,
     "locked": false,
     "number": 17177,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "elasticsearch/opensearch fails to authenticate with 403",
-    "updatedAt": "2023-04-27T16:10:26Z",
+    "updatedAt": "2026-10-28T19:51:34Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/17177"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T20:05:12Z",
     "author": {
       "login": "clumbo"
     },
@@ -1990,12 +1990,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-04-19T18:20:37Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17178,
     "stateReason": null,
     "title": "CPU in percentage",
-    "updatedAt": "2023-04-19T21:10:51Z",
+    "updatedAt": "2026-10-28T20:05:12Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17178"
   },
@@ -2109,18 +2109,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T20:09:31Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-04-20T00:00:05Z",
     "isAnswered": false,
     "locked": false,
     "number": 17205,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Kafka / Event Hub Source",
-    "updatedAt": "2023-04-24T20:28:15Z",
+    "updatedAt": "2026-10-28T20:09:31Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17205"
   },
@@ -2150,7 +2150,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17212"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:55:50Z",
     "author": {
       "login": "emlim23"
     },
@@ -2162,20 +2162,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-04-27T07:44:48Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17234,
     "stateReason": null,
     "title": "Sample vector.toml file",
-    "updatedAt": "2023-04-27T16:04:28Z",
+    "updatedAt": "2026-10-29T16:55:50Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17234"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:40:44Z",
     "author": {
       "login": "ryanhendersonabs"
     },
@@ -2190,12 +2190,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-04-28T19:12:43Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17245,
     "stateReason": null,
     "title": "Azure Monitor Metrics sink?",
-    "updatedAt": "2023-04-28T19:52:09Z",
+    "updatedAt": "2026-10-28T19:40:44Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17245"
   },
@@ -2275,7 +2275,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17254"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:49:09Z",
     "author": {
       "login": "LinTechSo"
     },
@@ -2290,12 +2290,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-04-30T13:51:13Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17255,
     "stateReason": null,
     "title": "how load secrets in vector",
-    "updatedAt": "2023-05-01T13:37:11Z",
+    "updatedAt": "2026-10-28T19:49:08Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17255"
   },
@@ -2309,8 +2309,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:35:01Z",
     "comments": {
       "totalCount": 1
     },
@@ -2318,9 +2318,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 17280,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Vector does not appear to work with Python's RotatingFileHandler",
-    "updatedAt": "2023-05-03T20:40:53Z",
+    "updatedAt": "2026-10-28T17:35:01Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/17280"
   },
@@ -2350,7 +2350,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17284"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:38:27Z",
     "author": {
       "login": "uglyliu"
     },
@@ -2362,15 +2362,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 3
+      "totalCount": 4
     },
     "createdAt": "2023-05-03T07:48:28Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17291,
     "stateReason": null,
     "title": "How to process this log with remap",
-    "updatedAt": "2023-05-14T03:47:09Z",
+    "updatedAt": "2026-10-29T16:38:27Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17291"
   },
@@ -2500,7 +2500,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17374"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T17:35:00Z",
     "author": {
       "login": "VitaliiNykyforov"
     },
@@ -2515,17 +2515,17 @@
       "totalCount": 1
     },
     "createdAt": "2023-05-14T14:48:46Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17381,
     "stateReason": null,
     "title": "How to debug - Message production error: MessageSizeTooLarge",
-    "updatedAt": "2023-05-16T07:20:08Z",
+    "updatedAt": "2026-10-28T17:35:00Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17381"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T20:29:20Z",
     "author": {
       "login": "danhul"
     },
@@ -2537,15 +2537,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 6
+      "totalCount": 7
     },
     "createdAt": "2023-05-15T04:25:54Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17382,
     "stateReason": null,
     "title": "Vector reports fields in GCP service account credentials.json file are unknown",
-    "updatedAt": "2023-06-13T17:42:19Z",
+    "updatedAt": "2026-10-28T20:29:20Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17382"
   },
@@ -2675,7 +2675,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17449"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T20:29:15Z",
     "author": {
       "login": "uglyliu"
     },
@@ -2687,15 +2687,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-05-22T14:26:32Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17454,
     "stateReason": null,
     "title": "not discard the log when the parsing rules cannot be matched",
-    "updatedAt": "2023-05-23T08:07:27Z",
+    "updatedAt": "2026-10-28T20:29:15Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17454"
   },
@@ -2750,7 +2750,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17492"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T17:55:29Z",
     "author": {
       "login": "gwosty"
     },
@@ -2765,12 +2765,12 @@
       "totalCount": 2
     },
     "createdAt": "2023-05-26T09:39:50Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17498,
     "stateReason": null,
     "title": "Filter events based on a list of values",
-    "updatedAt": "2023-05-26T15:59:23Z",
+    "updatedAt": "2026-10-28T17:55:28Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17498"
   },
@@ -2884,18 +2884,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T16:10:28Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-05-28T07:36:31Z",
     "isAnswered": false,
     "locked": false,
     "number": 17522,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Do retrying requests require lots of memory?",
-    "updatedAt": "2023-12-04T08:59:52Z",
+    "updatedAt": "2026-10-29T16:10:28Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/17522"
   },
@@ -2925,7 +2925,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17527"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:35:28Z",
     "author": {
       "login": "bmgante"
     },
@@ -2940,12 +2940,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-05-29T16:31:52Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17528,
     "stateReason": null,
     "title": "How metrics behave with Vector with multiple pods",
-    "updatedAt": "2023-05-30T17:14:31Z",
+    "updatedAt": "2026-10-28T19:35:28Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17528"
   },
@@ -3009,8 +3009,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T20:30:50Z",
     "comments": {
       "totalCount": 0
     },
@@ -3018,9 +3018,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 17545,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "there's no journalctl in alpine/distroless image variant",
-    "updatedAt": "2023-05-31T06:45:28Z",
+    "updatedAt": "2026-10-28T20:30:50Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17545"
   },
@@ -3050,7 +3050,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17550"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:59:16Z",
     "author": {
       "login": "humanhuang"
     },
@@ -3062,15 +3062,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-05-31T07:41:59Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17552,
     "stateReason": null,
     "title": "how to unespace unicode using VRL?",
-    "updatedAt": "2023-05-31T14:48:27Z",
+    "updatedAt": "2026-10-28T19:59:16Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17552"
   },
@@ -3084,18 +3084,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:55:38Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-05-31T19:30:49Z",
     "isAnswered": false,
     "locked": false,
     "number": 17558,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Getting Null Values, instead of parsed values",
-    "updatedAt": "2023-05-31T20:30:42Z",
+    "updatedAt": "2026-10-28T17:55:38Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17558"
   },
@@ -3125,7 +3125,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17561"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:49:15Z",
     "author": {
       "login": "LinTechSo"
     },
@@ -3140,17 +3140,17 @@
       "totalCount": 1
     },
     "createdAt": "2023-06-01T18:44:20Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17568,
     "stateReason": null,
     "title": "Need help: timestamp",
-    "updatedAt": "2023-06-23T20:14:06Z",
+    "updatedAt": "2026-10-28T19:49:14Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17568"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:34:41Z",
     "author": {
       "login": "hickersonj"
     },
@@ -3162,20 +3162,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-06-02T18:37:31Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17584,
     "stateReason": null,
     "title": "Is it possible to obtain kubernetes (node/pod level) metrics and forward them to a sink?",
-    "updatedAt": "2023-06-02T18:37:31Z",
+    "updatedAt": "2026-10-29T16:34:41Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17584"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T20:30:49Z",
     "author": {
       "login": "sbalmos"
     },
@@ -3190,12 +3190,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-06-06T13:52:38Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17611,
     "stateReason": null,
     "title": "(s3 source) Select only certain objects to process from S3-SQS events?",
-    "updatedAt": "2023-06-14T19:25:19Z",
+    "updatedAt": "2026-10-28T20:30:49Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17611"
   },
@@ -3275,7 +3275,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17626"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T12:43:38Z",
     "author": {
       "login": "mikelorant"
     },
@@ -3290,12 +3290,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-06-08T02:54:28Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17630,
     "stateReason": null,
     "title": "Reading JSON events from AWS CloudWatch Logs",
-    "updatedAt": "2023-06-14T23:53:22Z",
+    "updatedAt": "2026-10-29T12:43:38Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/17630"
   },
@@ -3334,8 +3334,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T15:11:06Z",
     "comments": {
       "totalCount": 0
     },
@@ -3343,9 +3343,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 17635,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Should the Host Metrics source scrape all network interfaces on the host?",
-    "updatedAt": "2023-06-08T07:40:21Z",
+    "updatedAt": "2026-10-29T15:11:06Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17635"
   },
@@ -3359,18 +3359,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:37:14Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-06-08T08:19:52Z",
     "isAnswered": false,
     "locked": false,
     "number": 17636,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "error logs help",
-    "updatedAt": "2023-06-08T08:19:53Z",
+    "updatedAt": "2026-10-28T19:37:14Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/17636"
   },
@@ -3475,7 +3475,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17677"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T17:55:25Z",
     "author": {
       "login": "lzwaan"
     },
@@ -3490,12 +3490,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-06-14T10:05:21Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17691,
     "stateReason": null,
     "title": "Regex replace including right square bracket but is ignored?",
-    "updatedAt": "2023-06-14T11:16:25Z",
+    "updatedAt": "2026-10-28T17:55:25Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17691"
   },
@@ -3509,8 +3509,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:49:17Z",
     "comments": {
       "totalCount": 1
     },
@@ -3518,9 +3518,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 17699,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "source.file multiline generates \\n\\t and How to handle characters like this?",
-    "updatedAt": "2023-06-16T04:06:11Z",
+    "updatedAt": "2026-10-28T19:49:17Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17699"
   },
@@ -3750,7 +3750,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17830"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:49:06Z",
     "author": {
       "login": "loveyang2012"
     },
@@ -3765,12 +3765,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-07-01T14:26:52Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17831,
     "stateReason": null,
     "title": "How to get the original message ?",
-    "updatedAt": "2023-07-05T16:18:52Z",
+    "updatedAt": "2026-10-28T19:49:06Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17831"
   },
@@ -3809,8 +3809,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:34:58Z",
     "comments": {
       "totalCount": 1
     },
@@ -3818,9 +3818,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 17854,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Source file: allow to skip file header (lines)",
-    "updatedAt": "2023-07-06T09:07:38Z",
+    "updatedAt": "2026-10-28T17:34:58Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17854"
   },
@@ -3859,8 +3859,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:34:56Z",
     "comments": {
       "totalCount": 3
     },
@@ -3868,9 +3868,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 17873,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Vector source/sink not propagating non-retryable failures",
-    "updatedAt": "2023-07-18T19:26:02Z",
+    "updatedAt": "2026-10-28T17:34:56Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17873"
   },
@@ -3950,7 +3950,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17902"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:22:02Z",
     "author": {
       "login": "tangguangliang"
     },
@@ -3962,20 +3962,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-07-10T10:08:53Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17924,
     "stateReason": null,
     "title": "How to implement customized fetch data when remap, similar to geoip",
-    "updatedAt": "2023-07-11T02:34:29Z",
+    "updatedAt": "2026-10-29T16:22:02Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17924"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T17:34:55Z",
     "author": {
       "login": "manojkdn"
     },
@@ -3990,17 +3990,17 @@
       "totalCount": 1
     },
     "createdAt": "2023-07-10T12:02:16Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17925,
     "stateReason": null,
     "title": "Getting error in filter condition",
-    "updatedAt": "2023-07-10T14:12:56Z",
+    "updatedAt": "2026-10-28T17:34:54Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17925"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:21:50Z",
     "author": {
       "login": "zzzz465"
     },
@@ -4012,15 +4012,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-07-11T07:35:58Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17940,
     "stateReason": null,
     "title": "how to use serviceaccount token for authentication?",
-    "updatedAt": "2023-07-11T07:35:59Z",
+    "updatedAt": "2026-10-29T16:21:50Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/17940"
   },
@@ -4125,7 +4125,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/17959"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:59:23Z",
     "author": {
       "login": "kholisrag"
     },
@@ -4137,15 +4137,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-07-14T07:54:57Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 17971,
     "stateReason": null,
     "title": "[ASK] Why sources `file` and Sinks `console` generated random log?",
-    "updatedAt": "2023-07-14T14:39:58Z",
+    "updatedAt": "2026-10-28T19:59:23Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/17971"
   },
@@ -4209,18 +4209,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:37:11Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-07-18T16:32:25Z",
     "isAnswered": false,
     "locked": false,
     "number": 18015,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Corrupt disk buffer at startup causes crash?",
-    "updatedAt": "2023-07-18T16:32:26Z",
+    "updatedAt": "2026-10-28T19:37:11Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18015"
   },
@@ -4309,18 +4309,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:51:37Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-07-20T22:14:23Z",
     "isAnswered": false,
     "locked": false,
     "number": 18038,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "ECS cluster with Vector agent running to ingest API data and S3 object",
-    "updatedAt": "2023-07-24T14:37:33Z",
+    "updatedAt": "2026-10-28T19:51:37Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18038"
   },
@@ -4400,7 +4400,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/18067"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:26:27Z",
     "author": {
       "login": "rk3094"
     },
@@ -4412,15 +4412,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-07-25T11:49:42Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18077,
     "stateReason": null,
     "title": "How to parse a specific key of a json object and store it in a new field using vector remap language",
-    "updatedAt": "2023-07-25T11:56:17Z",
+    "updatedAt": "2026-10-29T16:26:27Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18077"
   },
@@ -4659,18 +4659,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:37:08Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-08-08T09:43:50Z",
     "isAnswered": false,
     "locked": false,
     "number": 18179,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "vector send same message repeatedly",
-    "updatedAt": "2023-08-08T09:43:52Z",
+    "updatedAt": "2026-10-28T19:37:08Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18179"
   },
@@ -4684,18 +4684,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T14:09:55Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-08-10T09:51:19Z",
     "isAnswered": false,
     "locked": false,
     "number": 18205,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "When the data source is Kafka, can it be automatically created when the Topic does not exist?",
-    "updatedAt": "2023-08-10T10:03:36Z",
+    "updatedAt": "2026-10-29T14:09:55Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18205"
   },
@@ -4859,8 +4859,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:34:53Z",
     "comments": {
       "totalCount": 2
     },
@@ -4868,9 +4868,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 18273,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Source: UDP & protobuf",
-    "updatedAt": "2023-08-26T19:08:03Z",
+    "updatedAt": "2026-10-28T17:34:53Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18273"
   },
@@ -4909,18 +4909,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:42:13Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-08-20T09:08:58Z",
     "isAnswered": false,
     "locked": false,
     "number": 18314,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "The consumption speed will be fast for a while, and slow for a while",
-    "updatedAt": "2023-08-20T09:09:26Z",
+    "updatedAt": "2026-10-28T19:42:13Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18314"
   },
@@ -4950,7 +4950,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/18351"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:35:26Z",
     "author": {
       "login": "41405465"
     },
@@ -4965,12 +4965,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-08-24T01:32:14Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18368,
     "stateReason": null,
     "title": "Is there a way to convert timestamp to local time on output?",
-    "updatedAt": "2023-09-01T14:27:16Z",
+    "updatedAt": "2026-10-28T19:35:26Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/18368"
   },
@@ -5009,18 +5009,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:55:32Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-08-25T08:41:17Z",
     "isAnswered": false,
     "locked": false,
     "number": 18384,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Can't run vector on centos 7 arm",
-    "updatedAt": "2023-09-05T18:58:02Z",
+    "updatedAt": "2026-10-28T17:55:32Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18384"
   },
@@ -5034,8 +5034,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:34:51Z",
     "comments": {
       "totalCount": 1
     },
@@ -5043,9 +5043,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 18409,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Vector enabled using Systemctl is throwing Request timeout error",
-    "updatedAt": "2023-09-01T14:46:02Z",
+    "updatedAt": "2026-10-28T17:34:51Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18409"
   },
@@ -5075,7 +5075,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/18418"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T20:23:48Z",
     "author": {
       "login": "vedantroy"
     },
@@ -5090,12 +5090,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-08-30T01:25:41Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18428,
     "stateReason": null,
     "title": "What is the recommended setup for running vector.dev in a docker-compose?",
-    "updatedAt": "2023-09-18T21:32:12Z",
+    "updatedAt": "2026-10-28T20:23:48Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18428"
   },
@@ -5175,7 +5175,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/18467"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:18:26Z",
     "author": {
       "login": "LinTechSo"
     },
@@ -5187,20 +5187,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-09-02T13:05:54Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18468,
     "stateReason": null,
     "title": "Monitoring any parse error metrics from remap component",
-    "updatedAt": "2023-09-02T13:05:54Z",
+    "updatedAt": "2026-10-29T16:18:26Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/18468"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:55:53Z",
     "author": {
       "login": "yangshike"
     },
@@ -5212,15 +5212,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 2
+      "totalCount": 3
     },
     "createdAt": "2023-09-05T10:06:18Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18479,
     "stateReason": "REOPENED",
     "title": "About Message Sorting（source : kafka, sinks: clickhouse）",
-    "updatedAt": "2023-09-12T10:37:19Z",
+    "updatedAt": "2026-10-29T16:55:52Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18479"
   },
@@ -5309,18 +5309,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:55:35Z",
     "comments": {
-      "totalCount": 2
+      "totalCount": 3
     },
     "createdAt": "2023-09-12T12:38:58Z",
     "isAnswered": false,
     "locked": false,
     "number": 18542,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "[sink elasticsearch] mapper_parsing_exception, as object, but found a concrete value",
-    "updatedAt": "2023-09-13T09:32:26Z",
+    "updatedAt": "2026-10-28T17:55:35Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18542"
   },
@@ -5334,8 +5334,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:40:50Z",
     "comments": {
       "totalCount": 1
     },
@@ -5343,9 +5343,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 18557,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Solution for vector to vector metrics data pipeline using http",
-    "updatedAt": "2023-09-19T17:28:20Z",
+    "updatedAt": "2026-10-28T19:40:50Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18557"
   },
@@ -5359,8 +5359,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:29:35Z",
     "comments": {
       "totalCount": 1
     },
@@ -5368,9 +5368,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 18577,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Getting Attributes from SQS messages",
-    "updatedAt": "2023-10-18T12:18:58Z",
+    "updatedAt": "2026-10-28T17:29:35Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18577"
   },
@@ -5400,7 +5400,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/18578"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:51:28Z",
     "author": {
       "login": "RoeiSagi"
     },
@@ -5415,12 +5415,12 @@
       "totalCount": 2
     },
     "createdAt": "2023-09-18T09:58:10Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18585,
     "stateReason": null,
     "title": "AWS source auth.assume_role isn't working",
-    "updatedAt": "2024-10-14T14:34:01Z",
+    "updatedAt": "2026-10-28T19:51:28Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18585"
   },
@@ -5559,8 +5559,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:29:33Z",
     "comments": {
       "totalCount": 2
     },
@@ -5568,9 +5568,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 18614,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Prometheus Remote Write to Victoria Metrics",
-    "updatedAt": "2023-09-21T12:52:15Z",
+    "updatedAt": "2026-10-28T17:29:34Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18614"
   },
@@ -5704,7 +5704,7 @@
     "author": {
       "login": "alex-rowe"
     },
-    "bodyText": "When using auditd set to log_format = ENRICHED there is a \"group separator\" character between the existing fields and unenriched fields.\nThis causes Vector to not split on this field when using parse_key_value.\nWhen attempting to use strip_ansi_escape_codes, this only removes the value, but we need to split on it.\nWhen attempting to use replace, we get errors for unexpected error: invalid escape character: \\u\nAn example log line would be:\ntype=SYSCALL msg=audit(1695946364.453:9863): arch=c000003e syscall=257 success=yes exit=8 a0=ffffff9c a1=7f8f9b31cd80 a2=80002 a3=0 items=1 ppid=8221 pid=9287 auid=4294967295 uid=0 gid=1002 euid=0 suid=0 fsuid=0 egid=1002 sgid=1002 fsgid=1002 tty=pts0 ses=4294967295 comm=\"sudo\" exe=\"/usr/bin/sudo\" key=\"logins\"ARCH=x86_64 SYSCALL=openat AUID=\"unset\" UID=\"root\" GID=\"ssm-user\" EUID=\"root\" SUID=\"root\" FSUID=\"root\" EGID=\"ssm-user\" SGID=\"ssm-user\" FSGID=\"ssm-user\"\n\nAnd key=\"logins\"ARCH=x86_64 are shown as joined when viewing using cat or tail etc.\nWhen using the transform .message = parse_key_value!(string!(.message)) we get the following:\n\"key\": \"(null)\\^]ARCH=x86_64\",\n\nIs there a recommended way we can replace \\^] with a whitespace before we send it to parse_key_value so that it properly gets picked up a two fields, not one?\nA separate question may be the possibility of a parse_auditd function.\nExtra information here:\n\nlinux-audit/audit-userspace#140\nhttps://github.com/linux-audit/audit-documentation/wiki/SPEC-Audit-Event-Enrichment",
+    "bodyText": "When using auditd set to log_format = ENRICHED there is a \"group separator\" character between the existing fields and unenriched fields.\nThis causes Vector to not split on this field when using parse_key_value.\nWhen attempting to use strip_ansi_escape_codes, this only removes the value, but we need to split on it.\nWhen attempting to use replace, we get errors for unexpected error: invalid escape character: \\u\nAn example log line would be:\ntype=SYSCALL msg=audit(1695946364.453:9863): arch=c000003e syscall=257 success=yes exit=8 a0=ffffff9c a1=7f8f9b31cd80 a2=80002 a3=0 items=1 ppid=8221 pid=9287 auid=4294967295 uid=0 gid=1002 euid=0 suid=0 fsuid=0 egid=1002 sgid=1002 fsgid=1002 tty=pts0 ses=4294967295 comm=\"sudo\" exe=\"/usr/bin/sudo\" key=\"logins\"ARCH=x86_64 SYSCALL=openat AUID=\"unset\" UID=\"root\" GID=\"ssm-user\" EUID=\"root\" SUID=\"root\" FSUID=\"root\" EGID=\"ssm-user\" SGID=\"ssm-user\" FSGID=\"ssm-user\"\n\nAnd key=\"logins\"ARCH=x86_64 are shown as joined when viewing using cat or tail etc.\nWhen using the transform .message = parse_key_value!(string!(.message)) we get the following:\n\"key\": \"(null)\\u001dARCH=x86_64\",\n\nIs there a recommended way we can replace \\u001d with a whitespace before we send it to parse_key_value so that it properly gets picked up a two fields, not one?\nA separate question may be the possibility of a parse_auditd function.\nExtra information here:\n\nlinux-audit/audit-userspace#140\nhttps://github.com/linux-audit/audit-documentation/wiki/SPEC-Audit-Event-Enrichment",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"
@@ -5734,8 +5734,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:29:32Z",
     "comments": {
       "totalCount": 1
     },
@@ -5743,9 +5743,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 18720,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "How to remove \".\": {}, from JSON?",
-    "updatedAt": "2023-10-02T14:44:22Z",
+    "updatedAt": "2026-10-28T17:29:32Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18720"
   },
@@ -5784,18 +5784,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T20:00:01Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-10-02T21:19:04Z",
     "isAnswered": false,
     "locked": false,
     "number": 18743,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Internal_log_rate_limit=true",
-    "updatedAt": "2023-10-03T14:59:06Z",
+    "updatedAt": "2026-10-28T20:00:01Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18743"
   },
@@ -5875,7 +5875,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/18775"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T17:29:30Z",
     "author": {
       "login": "tadej0mins"
     },
@@ -5890,12 +5890,12 @@
       "totalCount": 3
     },
     "createdAt": "2023-10-06T08:53:52Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18791,
     "stateReason": null,
     "title": "Timestamp literal in tests",
-    "updatedAt": "2024-12-13T08:15:20Z",
+    "updatedAt": "2026-10-28T17:29:30Z",
     "upvoteCount": 3,
     "url": "https://github.com/vectordotdev/vector/discussions/18791"
   },
@@ -5934,8 +5934,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T15:15:02Z",
     "comments": {
       "totalCount": 0
     },
@@ -5943,9 +5943,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 18821,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Multi line multi key label in header csv",
-    "updatedAt": "2023-10-11T16:04:23Z",
+    "updatedAt": "2026-10-29T15:15:02Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18821"
   },
@@ -5975,7 +5975,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/18835"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:35:30Z",
     "author": {
       "login": "xxsdnol"
     },
@@ -5990,12 +5990,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-10-13T10:14:18Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18836,
     "stateReason": null,
     "title": "How to obtain multi-line logs from syslog",
-    "updatedAt": "2023-10-19T17:37:45Z",
+    "updatedAt": "2026-10-28T19:35:30Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18836"
   },
@@ -6075,7 +6075,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/18860"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:34:29Z",
     "author": {
       "login": "MichaelShapira"
     },
@@ -6087,20 +6087,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-10-17T13:43:32Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18862,
     "stateReason": null,
     "title": "Traces information from Vector to AWS x-ray",
-    "updatedAt": "2023-10-22T07:44:32Z",
+    "updatedAt": "2026-10-29T16:34:28Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18862"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:13:38Z",
     "author": {
       "login": "rnhurt"
     },
@@ -6112,20 +6112,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-10-19T14:01:13Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18885,
     "stateReason": null,
     "title": "Is it possible to set the StorageResolution of a CloudWatch Metric?",
-    "updatedAt": "2023-10-19T14:01:14Z",
+    "updatedAt": "2026-10-29T16:13:38Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/18885"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:13:42Z",
     "author": {
       "login": "Manniac07"
     },
@@ -6137,20 +6137,20 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-10-19T22:24:21Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18891,
     "stateReason": null,
     "title": "Let me try one more question",
-    "updatedAt": "2023-10-20T12:36:25Z",
+    "updatedAt": "2026-10-29T16:13:41Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18891"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T13:31:48Z",
     "author": {
       "login": "james-stevens"
     },
@@ -6159,18 +6159,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T20:05:14Z",
     "comments": {
-      "totalCount": 3
+      "totalCount": 4
     },
     "createdAt": "2023-10-20T16:15:10Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18897,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Trying to capture protobufServer() output from PowerDNS recursor, but not seeing anything (v0.33.0)",
-    "updatedAt": "2024-03-20T09:46:18Z",
+    "updatedAt": "2026-10-29T13:31:48Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18897"
   },
@@ -6200,7 +6200,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/18912"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:18:35Z",
     "author": {
       "login": "u-kyou"
     },
@@ -6212,15 +6212,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-10-24T11:58:49Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18920,
     "stateReason": null,
     "title": "Can Vector processing metrics data from Kafka to Prometheus directly",
-    "updatedAt": "2023-10-24T14:27:23Z",
+    "updatedAt": "2026-10-29T16:18:35Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18920"
   },
@@ -6250,7 +6250,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/18926"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:29:18Z",
     "author": {
       "login": "nabokihms"
     },
@@ -6262,15 +6262,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-10-25T21:26:30Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 18943,
     "stateReason": null,
     "title": "The right way to profile vector",
-    "updatedAt": "2023-10-25T21:26:31Z",
+    "updatedAt": "2026-10-29T16:29:18Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/18943"
   },
@@ -6425,7 +6425,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/19072"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T14:20:19Z",
     "author": {
       "login": "rbarrois"
     },
@@ -6437,15 +6437,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-11-07T11:12:36Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 19073,
     "stateReason": null,
     "title": "What is the exact, complete behaviour of health checks?",
-    "updatedAt": "2023-11-07T13:15:13Z",
+    "updatedAt": "2026-10-29T14:20:19Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19073"
   },
@@ -6459,18 +6459,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T16:29:15Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-11-07T16:03:21Z",
     "isAnswered": false,
     "locked": false,
     "number": 19076,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "vector stops scraping after a random amount of time",
-    "updatedAt": "2023-11-07T16:03:52Z",
+    "updatedAt": "2026-10-29T16:29:15Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19076"
   },
@@ -6650,7 +6650,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/19172"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:55:56Z",
     "author": {
       "login": "fam11251"
     },
@@ -6662,15 +6662,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-11-16T09:41:34Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 19173,
     "stateReason": null,
     "title": "Help me write a configuration for using vectors to ssh to the server and retrieve log files from the server.",
-    "updatedAt": "2023-11-16T15:54:22Z",
+    "updatedAt": "2026-10-29T16:55:55Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19173"
   },
@@ -6725,7 +6725,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/19176"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T17:29:28Z",
     "author": {
       "login": "epmpub"
     },
@@ -6740,12 +6740,12 @@
       "totalCount": 3
     },
     "createdAt": "2023-11-20T01:10:52Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 19193,
     "stateReason": null,
     "title": "Why Vector VRL remap can't del field of JSON file?",
-    "updatedAt": "2023-11-23T05:41:58Z",
+    "updatedAt": "2026-10-28T17:29:28Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19193"
   },
@@ -6825,7 +6825,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/19221"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:26:21Z",
     "author": {
       "login": "Angel0r"
     },
@@ -6837,15 +6837,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-11-23T09:21:27Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 19229,
     "stateReason": null,
     "title": "Upgrade failed on vector helm chart",
-    "updatedAt": "2023-11-23T09:21:28Z",
+    "updatedAt": "2026-10-29T16:26:21Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/19229"
   },
@@ -6859,18 +6859,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T15:15:06Z",
     "comments": {
-      "totalCount": 2
+      "totalCount": 3
     },
     "createdAt": "2023-11-27T22:36:18Z",
     "isAnswered": false,
     "locked": false,
     "number": 19245,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "csv parsing help please",
-    "updatedAt": "2023-11-28T23:19:24Z",
+    "updatedAt": "2026-10-29T15:15:06Z",
     "upvoteCount": 2,
     "url": "https://github.com/vectordotdev/vector/discussions/19245"
   },
@@ -6884,8 +6884,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:35:36Z",
     "comments": {
       "totalCount": 0
     },
@@ -6893,14 +6893,14 @@
     "isAnswered": false,
     "locked": false,
     "number": 19261,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Vector stops writing and when Tracing is enabled Vector crashes after about an hour",
-    "updatedAt": "2023-11-29T20:55:28Z",
+    "updatedAt": "2026-10-28T19:35:36Z",
     "upvoteCount": 3,
     "url": "https://github.com/vectordotdev/vector/discussions/19261"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:49:10Z",
     "author": {
       "login": "jamhamblin"
     },
@@ -6915,12 +6915,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-11-30T09:54:40Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 19265,
     "stateReason": "REOPENED",
     "title": "SASL_SSL security.protocol for kafka source",
-    "updatedAt": "2023-11-30T16:58:28Z",
+    "updatedAt": "2026-10-28T19:49:10Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19265"
   },
@@ -6959,8 +6959,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T13:52:58Z",
     "comments": {
       "totalCount": 0
     },
@@ -6968,9 +6968,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 19295,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Scrap all /metrics endpoints pods from DaemonSet, like Prometheus (Pod&ServiceMonitor)",
-    "updatedAt": "2023-12-04T15:24:05Z",
+    "updatedAt": "2026-10-29T13:52:58Z",
     "upvoteCount": 4,
     "url": "https://github.com/vectordotdev/vector/discussions/19295"
   },
@@ -7009,18 +7009,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:35:33Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-12-04T20:13:32Z",
     "isAnswered": false,
     "locked": false,
     "number": 19302,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Finally got an error for my previous question",
-    "updatedAt": "2023-12-04T21:55:16Z",
+    "updatedAt": "2026-10-28T19:35:33Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19302"
   },
@@ -7050,7 +7050,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/19303"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:40:49Z",
     "author": {
       "login": "RafaelLobox"
     },
@@ -7065,12 +7065,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-12-05T14:38:27Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 19310,
     "stateReason": null,
     "title": "Events dropping when webhook is off",
-    "updatedAt": "2023-12-05T16:45:15Z",
+    "updatedAt": "2026-10-28T19:40:48Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19310"
   },
@@ -7100,7 +7100,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/19311"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:44:00Z",
     "author": {
       "login": "bmgante"
     },
@@ -7112,15 +7112,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-12-05T22:34:55Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 19316,
     "stateReason": null,
     "title": "Counters increase return no value",
-    "updatedAt": "2023-12-12T17:16:45Z",
+    "updatedAt": "2026-10-29T16:44:00Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19316"
   },
@@ -7175,7 +7175,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/19336"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:34:38Z",
     "author": {
       "login": "Manniac07"
     },
@@ -7187,15 +7187,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-12-11T16:24:02Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 19357,
     "stateReason": null,
     "title": "reading 2 inputs",
-    "updatedAt": "2023-12-11T16:24:03Z",
+    "updatedAt": "2026-10-29T16:34:38Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19357"
   },
@@ -7209,18 +7209,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T16:43:57Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2023-12-12T00:04:34Z",
     "isAnswered": false,
     "locked": false,
     "number": 19362,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "How do you process an entire CSV file all at one time",
-    "updatedAt": "2023-12-15T17:59:59Z",
+    "updatedAt": "2026-10-29T16:43:57Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19362"
   },
@@ -7275,7 +7275,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/19374"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T19:35:24Z",
     "author": {
       "login": "olivermussell"
     },
@@ -7290,12 +7290,12 @@
       "totalCount": 1
     },
     "createdAt": "2023-12-13T16:27:12Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 19380,
     "stateReason": null,
     "title": "Run transform conditionally in aggregator model",
-    "updatedAt": "2023-12-13T17:39:32Z",
+    "updatedAt": "2026-10-28T19:35:24Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19380"
   },
@@ -7309,18 +7309,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T20:09:28Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-12-15T10:05:35Z",
     "isAnswered": false,
     "locked": false,
     "number": 19396,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Kubernetes source: stderr instead of stdout for all logs",
-    "updatedAt": "2023-12-15T10:05:36Z",
+    "updatedAt": "2026-10-28T20:09:28Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19396"
   },
@@ -7359,18 +7359,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-29T13:24:08Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2023-12-16T02:58:43Z",
     "isAnswered": false,
     "locked": false,
     "number": 19412,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "ransforms resolves nested arrays by remap",
-    "updatedAt": "2023-12-18T15:55:23Z",
+    "updatedAt": "2026-10-29T13:24:08Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19412"
   },
@@ -7425,7 +7425,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/19423"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T20:23:50Z",
     "author": {
       "login": "zzmg"
     },
@@ -7440,12 +7440,12 @@
       "totalCount": 4
     },
     "createdAt": "2023-12-13T10:14:51Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 19433,
     "stateReason": null,
     "title": "source_lag_time_seconds get large number",
-    "updatedAt": "2026-05-08T02:49:59Z",
+    "updatedAt": "2026-10-28T20:23:50Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/19433"
   },
@@ -7454,7 +7454,7 @@
     "author": {
       "login": "hanshuebner"
     },
-    "bodyText": "Hello,\nI'm trying to convert some protobuf messages to JSON for debugging purposes, and I noticed that the resulting JSON contains the literal bytes of bytes fields in protobuf messages.  Is there a way to have protobuf bytes fields be encoded as base64 strings instead?\nMy vector.toml file:\n[sources.http]\ntype = \"http_server\"\naddress = \"0.0.0.0:4318\"\nstrict_path = false\ndecoding.codec = \"protobuf\"\ndecoding.protobuf.desc_file = \"trace.desc\"\ndecoding.protobuf.message_type = \"opentelemetry.proto.trace.v1.TracesData\"\n\n[sinks.console]\ntype = \"console\"\ninputs = [ \"*\" ]\nencoding.codec = \"json\"\n\nJSON output sample (elided and reformatted):\n{\n  \"path\": \"/v1/traces\",\n  \"resource_spans\": [\n    {\n      \"schema_url\": \"\",\n      \"scope_spans\": [\n          \"spans\": [\n            {\n              \"attributes\": [],\n              \"dropped_attributes_count\": 0,\n              \"dropped_events_count\": 0,\n              \"dropped_links_count\": 0,\n              \"end_time_unix_nano\": 1703091504825214464,\n              \"events\": [],\n              \"flags\": 0,\n              \"kind\": \"SPAN_KIND_INTERNAL\",\n              \"links\": [],\n              \"name\": \"kong.header_filter.plugin.opentelemetry\",\n              \"parent_span_id\": \"J@���͡L\",\n              \"span_id\": \"�b�4\\^O��\\n\",\n              \"start_time_unix_nano\": 1703091504825208064,\n              \"status\": {\n                \"code\": \"STATUS_CODE_UNSET\",\n                \"message\": \"\"\n              },\n              \"trace_id\": \"۸��پ_�yğ�Hl��\",\n              \"trace_state\": \"\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"source_type\": \"http_server\",\n  \"timestamp\": \"2023-12-20T16:58:24.834998494Z\"\n}\n\nNotice the parent_span_id, span_id and trace_id containing the unencoded byte data.\nThank you!\nHans",
+    "bodyText": "Hello,\nI'm trying to convert some protobuf messages to JSON for debugging purposes, and I noticed that the resulting JSON contains the literal bytes of bytes fields in protobuf messages.  Is there a way to have protobuf bytes fields be encoded as base64 strings instead?\nMy vector.toml file:\n[sources.http]\ntype = \"http_server\"\naddress = \"0.0.0.0:4318\"\nstrict_path = false\ndecoding.codec = \"protobuf\"\ndecoding.protobuf.desc_file = \"trace.desc\"\ndecoding.protobuf.message_type = \"opentelemetry.proto.trace.v1.TracesData\"\n\n[sinks.console]\ntype = \"console\"\ninputs = [ \"*\" ]\nencoding.codec = \"json\"\n\nJSON output sample (elided and reformatted):\n{\n  \"path\": \"/v1/traces\",\n  \"resource_spans\": [\n    {\n      \"schema_url\": \"\",\n      \"scope_spans\": [\n          \"spans\": [\n            {\n              \"attributes\": [],\n              \"dropped_attributes_count\": 0,\n              \"dropped_events_count\": 0,\n              \"dropped_links_count\": 0,\n              \"end_time_unix_nano\": 1703091504825214464,\n              \"events\": [],\n              \"flags\": 0,\n              \"kind\": \"SPAN_KIND_INTERNAL\",\n              \"links\": [],\n              \"name\": \"kong.header_filter.plugin.opentelemetry\",\n              \"parent_span_id\": \"J@���͡L\",\n              \"span_id\": \"�b�4\\u000f��\\n\",\n              \"start_time_unix_nano\": 1703091504825208064,\n              \"status\": {\n                \"code\": \"STATUS_CODE_UNSET\",\n                \"message\": \"\"\n              },\n              \"trace_id\": \"۸��پ_�yğ�Hl��\",\n              \"trace_state\": \"\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"source_type\": \"http_server\",\n  \"timestamp\": \"2023-12-20T16:58:24.834998494Z\"\n}\n\nNotice the parent_span_id, span_id and trace_id containing the unencoded byte data.\nThank you!\nHans",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"

@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-21T18:41:50.909874+00:00",
+  "collectedAt": "2026-11-02T14:48:15.218340+00:00",
   "issues": [
     {
       "number": 103,
@@ -1714,7 +1714,7 @@
       "reactions": 0,
       "title": "Quickwit UI index explorator takes space on small screens [quickwit-ui]",
       "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 1
     },
     {
       "number": 3207,
@@ -4739,6 +4739,13 @@
       "title": "Memory regression on searcher",
       "unattributedComments": 0,
       "uniqueCommenters": 0
+    },
+    {
+      "number": 6923,
+      "reactions": 0,
+      "title": "Splits left behind by a moved or deleted pipeline are never merged: proposal for a one-shot `defrag` tool",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
     }
   ],
   "repository": "quickwit-oss/quickwit",

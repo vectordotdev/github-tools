@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-21T18:41:24.853292+00:00",
+  "collectedAt": "2026-11-02T14:48:04.643710+00:00",
   "issues": [
     {
       "number": 4,
@@ -444,7 +444,7 @@
     },
     {
       "number": 82,
-      "reactions": 3,
+      "reactions": 4,
       "title": "chore(vrl): explore arena allocation for VRL programs",
       "unattributedComments": 0,
       "uniqueCommenters": 1
@@ -1787,13 +1787,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 1903,
-      "reactions": 0,
-      "title": "to_syslog_severity should also accept \"critical\" instead of just \"crit\"",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 1949,
       "reactions": 1,
       "title": "`slice!()` operates on bytes, not characters, silently corrupts multi-byte strings",
@@ -1813,20 +1806,6 @@
       "title": "feat(compiler): support first-class for loops with break and continue",
       "unattributedComments": 0,
       "uniqueCommenters": 2
-    },
-    {
-      "number": 1993,
-      "reactions": 0,
-      "title": "Add a `range` function to generate integer arrays",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
-      "number": 2000,
-      "reactions": 1,
-      "title": "to_unix_timestamp supposed to return error but vector compiler indicates that's not true",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1
     }
   ],
   "repository": "vectordotdev/vrl",

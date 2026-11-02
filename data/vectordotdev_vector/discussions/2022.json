@@ -950,7 +950,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/11705"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T17:55:27Z",
     "author": {
       "login": "StefanSa"
     },
@@ -965,12 +965,12 @@
       "totalCount": 1
     },
     "createdAt": "2022-03-09T14:10:13Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 11745,
     "stateReason": null,
     "title": "[parse_url] unable to parse url: relative URL without a base\"",
-    "updatedAt": "2022-08-16T10:56:59Z",
+    "updatedAt": "2026-10-28T17:55:27Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/11745"
   },
@@ -1379,7 +1379,7 @@
     "author": {
       "login": "musenotdead"
     },
-    "bodyText": "Hi everyone :)\nOur company just recently started using Vector and we love it so far and it vast functionality. One of our main use cases is to have Vector put multicast UDP data onto a Kafka topic (see below for the basic configuration). The issue I am running into is that the message put onto Kafka isn't the raw packet data and looks to be UTF8 encoded.  See below for the expected data vs received data. Is there any way to fix this? Is there a configuration parameter I am missing?\nvector 0.20.0 (x86_64-unknown-linux-gnu 2a706a3 2022-02-11)\nVector Configuration File\n[sources.in]\ntype = \"socket\" # required\naddress = \"224.3.3.100:61000\" # required, required when mode = \"tcp\" or mode = \"udp\"\nmode = \"udp\" # required\ndecoding.codec = \"bytes\"\n# framing = { method = \"bytes\" }\n\n[sinks.out]\n# General\ntype = \"kafka\" # required\ninputs = [\"in\"] # required\nbootstrap_servers = \"kafka:9094\" # required\nkey_field = \"user_id\" # required\ntopic = \"live_data\" # required\nencoding.codec = \"json\" # required\n\nExpected Data\n00 17 0e 02 55 55 aa aa  00 ff 00 ac 03 a3 49 c9\n00 00 00 00 0b 00 48 df  df 01 01 02 00 06 01 0b\neb a4 0f db 1f 74 50 fe  6c ea f9 22 fb 12 00 00\n00 3f fc 00 00 0b ce 41  01 00 0a e9 78 0a 58 1d\n01 20 00 01 41 00 00 00  00 00 00 02 00 00 00 00 \n00 00 d8 b7 7c 00 00 00  00 00 50 ca     \n\nReceived Data\nHere is the data on Kafka:\n{\"host\":\"192.148.154.5:53016\",\"message\":\"\\^@\\^W\\^N\\^BUU��\\^@�\\^@�\\^C�I�\\^@\\^@\\^@\\^@\\u000b\\^@H��\\^A\\^A\\^B\\^@\\^F\\^A\\u000b�\\^O�\\^_tP�l��\\\"�\\^R\\^@\\^@\\^@?�\\^@\\^@\\u000b�A\\^A\\^@\\n�x\\nX\\^]\\^A \\^@\\^AA\\^@\\^@\\^@\\^@\\^@\\^@\\^B\\^@\\^@\\^@\\^@\\^@\\^@ط|\\^@\\^@\\^@\\^@\\^@P�\",\"source_type\":\"socket\",\"timestamp\":\"2022-04-05T12:00:16.843574010Z\"}\n\nWhich translates to:\n00 17 0E 02 55 55 EF BF BD EF BF BD 00 EF BF BD 00 EF BF BD 03 EF BF BD 49 EF BF BD 00 00 00 00 0B 00 48 EF BF BD EF BF BD 01 01 02 00 06 01 0B EF BF BD 0F EF BF BD 1F 74 50 EF BF BD 6C EF BF BD EF BF BD 22 EF BF BD 12 00 00 00 3F EF BF BD 00 00 0B EF BF BD 41 01 00 0A EF BF BD 78 0A 58 1D 01 20 00 01 41 00 00 00 00 00 00 02 00 00 00 00 00 00 D8 B7 7C 00 00 00 00 00 50 EF BF BD\n\nThanks for any help in advance! We are looking forward to deploying Vector across our products :)",
+    "bodyText": "Hi everyone :)\nOur company just recently started using Vector and we love it so far and it vast functionality. One of our main use cases is to have Vector put multicast UDP data onto a Kafka topic (see below for the basic configuration). The issue I am running into is that the message put onto Kafka isn't the raw packet data and looks to be UTF8 encoded.  See below for the expected data vs received data. Is there any way to fix this? Is there a configuration parameter I am missing?\nvector 0.20.0 (x86_64-unknown-linux-gnu 2a706a3 2022-02-11)\nVector Configuration File\n[sources.in]\ntype = \"socket\" # required\naddress = \"224.3.3.100:61000\" # required, required when mode = \"tcp\" or mode = \"udp\"\nmode = \"udp\" # required\ndecoding.codec = \"bytes\"\n# framing = { method = \"bytes\" }\n\n[sinks.out]\n# General\ntype = \"kafka\" # required\ninputs = [\"in\"] # required\nbootstrap_servers = \"kafka:9094\" # required\nkey_field = \"user_id\" # required\ntopic = \"live_data\" # required\nencoding.codec = \"json\" # required\n\nExpected Data\n00 17 0e 02 55 55 aa aa  00 ff 00 ac 03 a3 49 c9\n00 00 00 00 0b 00 48 df  df 01 01 02 00 06 01 0b\neb a4 0f db 1f 74 50 fe  6c ea f9 22 fb 12 00 00\n00 3f fc 00 00 0b ce 41  01 00 0a e9 78 0a 58 1d\n01 20 00 01 41 00 00 00  00 00 00 02 00 00 00 00 \n00 00 d8 b7 7c 00 00 00  00 00 50 ca     \n\nReceived Data\nHere is the data on Kafka:\n{\"host\":\"192.148.154.5:53016\",\"message\":\"\\u0000\\u0017\\u000e\\u0002UU��\\u0000�\\u0000�\\u0003�I�\\u0000\\u0000\\u0000\\u0000\\u000b\\u0000H��\\u0001\\u0001\\u0002\\u0000\\u0006\\u0001\\u000b�\\u000f�\\u001ftP�l��\\\"�\\u0012\\u0000\\u0000\\u0000?�\\u0000\\u0000\\u000b�A\\u0001\\u0000\\n�x\\nX\\u001d\\u0001 \\u0000\\u0001A\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0002\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000ط|\\u0000\\u0000\\u0000\\u0000\\u0000P�\",\"source_type\":\"socket\",\"timestamp\":\"2022-04-05T12:00:16.843574010Z\"}\n\nWhich translates to:\n00 17 0E 02 55 55 EF BF BD EF BF BD 00 EF BF BD 00 EF BF BD 03 EF BF BD 49 EF BF BD 00 00 00 00 0B 00 48 EF BF BD EF BF BD 01 01 02 00 06 01 0B EF BF BD 0F EF BF BD 1F 74 50 EF BF BD 6C EF BF BD EF BF BD 22 EF BF BD 12 00 00 00 3F EF BF BD 00 00 0B EF BF BD 41 01 00 0A EF BF BD 78 0A 58 1D 01 20 00 01 41 00 00 00 00 00 00 02 00 00 00 00 00 00 D8 B7 7C 00 00 00 00 00 50 EF BF BD\n\nThanks for any help in advance! We are looking forward to deploying Vector across our products :)",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"
@@ -1529,7 +1529,7 @@
     "author": {
       "login": "fpytloun"
     },
-    "bodyText": "Is there a way how to handle unicode when parsing JSON with parse_json function like this:\nmsg_parsed, err = parse_json(string!(.message))\n\nIf JSON contains unicode in field value, eg.\n\\\"req_body\\\":\\\"��\\\\^@\\\\^E\\\"\n\nparsing will fail with:\nfunction call error for \\\"parse_json\\\" at (20:49): unable to parse json: invalid unicode code point at line 1 column 8587\n\nMessage is read from kafka.\nAny idea how to properly escape or url-encode message before parsing or some other way?",
+    "bodyText": "Is there a way how to handle unicode when parsing JSON with parse_json function like this:\nmsg_parsed, err = parse_json(string!(.message))\n\nIf JSON contains unicode in field value, eg.\n\\\"req_body\\\":\\\"��\\\\u0000\\\\u0005\\\"\n\nparsing will fail with:\nfunction call error for \\\"parse_json\\\" at (20:49): unable to parse json: invalid unicode code point at line 1 column 8587\n\nMessage is read from kafka.\nAny idea how to properly escape or url-encode message before parsing or some other way?",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"
@@ -1729,7 +1729,7 @@
     "author": {
       "login": "syzcch"
     },
-    "bodyText": "I want to use Vector to ingest some gzip files then use remap to parse them. We put some log files with json format into a gzip file to do the test.\nHere is my config:\ndata_dir = \"/home/elk/log/\"\n[sources.gz_logs]\ntype = \"file\"\ninclude = [ \"/home/elk/log/*.gz\" ]\n\n[transforms.parse_logs]\ntype = \"remap\"\ninputs = [\"gz_logs\"]\nsource = '''\n. = parse_json!(.message)\n'''\n\n[sinks.print]\ntype = \"console\"\ninputs = [\"parse_logs\"]\nencoding.codec = \"json\"\n\nFinally, I got error messages:\n2022-04-24T11:08:10.581077Z ERROR transform{component_kind=\"transform\" component_id=parse_logs component_type=remap component_name=parse_logs}: vector::internal_events::remap: Mapping failed with event. error=\"function call error for \\\"parse_json\\\" at (4:25): unable to parse json: expected ident at line 1 column 2\" error_type=\"conversion_failed\" stage=\"processing\" internal_log_rate_secs=10\n2022-04-24T11:08:10.582872Z ERROR transform{component_kind=\"transform\" component_id=parse_logs component_type=remap component_name=parse_logs}: vector::internal_events::remap: Internal log [Mapping failed with event.] is being rate limited.\n\n{\"file\":\"/home/elk/log/test-requests.log.tar.gz\",\"\"message\":\"test-requests.log.3\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@\\^@0000644\\^@�\\^@\\^@\\^@\\^AJh*0000144\\^@00000137445\\^@14214062002\\^@014131\\^@ ......\n\nCould you help me to solve it please? Thank you so much for your help.",
+    "bodyText": "I want to use Vector to ingest some gzip files then use remap to parse them. We put some log files with json format into a gzip file to do the test.\nHere is my config:\ndata_dir = \"/home/elk/log/\"\n[sources.gz_logs]\ntype = \"file\"\ninclude = [ \"/home/elk/log/*.gz\" ]\n\n[transforms.parse_logs]\ntype = \"remap\"\ninputs = [\"gz_logs\"]\nsource = '''\n. = parse_json!(.message)\n'''\n\n[sinks.print]\ntype = \"console\"\ninputs = [\"parse_logs\"]\nencoding.codec = \"json\"\n\nFinally, I got error messages:\n2022-04-24T11:08:10.581077Z ERROR transform{component_kind=\"transform\" component_id=parse_logs component_type=remap component_name=parse_logs}: vector::internal_events::remap: Mapping failed with event. error=\"function call error for \\\"parse_json\\\" at (4:25): unable to parse json: expected ident at line 1 column 2\" error_type=\"conversion_failed\" stage=\"processing\" internal_log_rate_secs=10\n2022-04-24T11:08:10.582872Z ERROR transform{component_kind=\"transform\" component_id=parse_logs component_type=remap component_name=parse_logs}: vector::internal_events::remap: Internal log [Mapping failed with event.] is being rate limited.\n\n{\"file\":\"/home/elk/log/test-requests.log.tar.gz\",\"\"message\":\"test-requests.log.3\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u0000\\u00000000644\\u0000�\\u0000\\u0000\\u0000\\u0001Jh*0000144\\u000000000137445\\u000014214062002\\u0000014131\\u0000 ......\n\nCould you help me to solve it please? Thank you so much for your help.",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"
@@ -2084,8 +2084,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:41:02Z",
     "comments": {
       "totalCount": 1
     },
@@ -2093,9 +2093,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 12815,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Can't find some metrics from internal_metrics",
-    "updatedAt": "2022-05-23T14:35:38Z",
+    "updatedAt": "2026-10-28T17:41:02Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/12815"
   },
@@ -3209,18 +3209,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:38:24Z",
     "comments": {
-      "totalCount": 3
+      "totalCount": 4
     },
     "createdAt": "2022-07-15T09:28:20Z",
     "isAnswered": false,
     "locked": false,
     "number": 13565,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Question on Vector PubSub Source throughput capability",
-    "updatedAt": "2022-07-29T22:33:26Z",
+    "updatedAt": "2026-10-28T19:38:24Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/13565"
   },
@@ -3959,8 +3959,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:41:14Z",
     "comments": {
       "totalCount": 3
     },
@@ -3968,9 +3968,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 14137,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "syslog TLS error in vector",
-    "updatedAt": "2022-09-07T19:16:46Z",
+    "updatedAt": "2026-10-28T17:41:14Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14137"
   },
@@ -4184,18 +4184,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:38:21Z",
     "comments": {
-      "totalCount": 2
+      "totalCount": 3
     },
     "createdAt": "2022-09-07T08:14:58Z",
     "isAnswered": false,
     "locked": false,
     "number": 14304,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Setting Vector up in production env, but got some wired error msgs, please help us. Urgent!",
-    "updatedAt": "2022-09-23T09:07:23Z",
+    "updatedAt": "2026-10-28T19:38:21Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14304"
   },
@@ -4334,8 +4334,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T20:09:18Z",
     "comments": {
       "totalCount": 1
     },
@@ -4343,9 +4343,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 14430,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "How to sink original data through sink type http",
-    "updatedAt": "2022-09-19T09:05:41Z",
+    "updatedAt": "2026-10-28T20:09:18Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14430"
   },
@@ -4384,8 +4384,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:41:00Z",
     "comments": {
       "totalCount": 1
     },
@@ -4393,9 +4393,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 14460,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Events miss/ Data loss",
-    "updatedAt": "2022-09-23T21:38:12Z",
+    "updatedAt": "2026-10-28T17:41:00Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14460"
   },
@@ -4409,8 +4409,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:40:58Z",
     "comments": {
       "totalCount": 1
     },
@@ -4418,9 +4418,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 14472,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Http Sources ingesting data after 3 invocations each time",
-    "updatedAt": "2022-09-19T21:14:18Z",
+    "updatedAt": "2026-10-28T17:40:58Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14472"
   },
@@ -4459,18 +4459,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:38:17Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2022-09-23T13:44:22Z",
     "isAnswered": false,
     "locked": false,
     "number": 14533,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Failed writing checkpoints. error=Permission denied",
-    "updatedAt": "2022-09-26T16:13:30Z",
+    "updatedAt": "2026-10-28T19:38:18Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14533"
   },
@@ -4634,18 +4634,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:38:14Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2022-09-27T08:54:00Z",
     "isAnswered": false,
     "locked": false,
     "number": 14592,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Why do I need to wait half an hour for INFO: found new file?",
-    "updatedAt": "2022-10-11T00:11:53Z",
+    "updatedAt": "2026-10-28T19:38:14Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14592"
   },
@@ -4684,8 +4684,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:38:11Z",
     "comments": {
       "totalCount": 1
     },
@@ -4693,9 +4693,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 14640,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Got too many parse json error when we facing to huge volume logs",
-    "updatedAt": "2022-10-27T01:47:45Z",
+    "updatedAt": "2026-10-28T19:38:11Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14640"
   },
@@ -4734,18 +4734,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-23T13:56:06Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2022-09-30T13:36:03Z",
     "isAnswered": false,
     "locked": false,
     "number": 14662,
-    "stateReason": null,
+    "stateReason": "RESOLVED",
     "title": "upload crt in vector using helm",
-    "updatedAt": "2022-10-06T12:56:28Z",
+    "updatedAt": "2026-10-23T13:56:06Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14662"
   },
@@ -4809,18 +4809,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:37:28Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2022-10-05T10:06:44Z",
     "isAnswered": false,
     "locked": false,
     "number": 14730,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Expected behaviour? internal_metrics values monotonically increasing even after taking monotonic difference",
-    "updatedAt": "2022-10-07T06:59:18Z",
+    "updatedAt": "2026-10-28T19:37:28Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14730"
   },
@@ -4925,7 +4925,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/14794"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T17:41:19Z",
     "author": {
       "login": "godber"
     },
@@ -4940,12 +4940,12 @@
       "totalCount": 1
     },
     "createdAt": "2022-10-12T20:47:20Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 14824,
     "stateReason": null,
     "title": "Testing vector config by reading vector tap from stdin",
-    "updatedAt": "2022-10-14T22:05:58Z",
+    "updatedAt": "2026-10-28T17:41:19Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/14824"
   },
@@ -5159,8 +5159,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:41:10Z",
     "comments": {
       "totalCount": 1
     },
@@ -5168,9 +5168,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 15114,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Prometheus remote write unable to read",
-    "updatedAt": "2022-11-28T20:43:11Z",
+    "updatedAt": "2026-10-28T17:41:10Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/15114"
   },
@@ -5509,18 +5509,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:35:41Z",
     "comments": {
-      "totalCount": 0
+      "totalCount": 1
     },
     "createdAt": "2022-11-17T13:43:49Z",
     "isAnswered": false,
     "locked": false,
     "number": 15283,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "How to solve the memory leak issue when using HTTP Server?",
-    "updatedAt": "2022-11-17T13:43:50Z",
+    "updatedAt": "2026-10-28T19:35:41Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/15283"
   },
@@ -5734,8 +5734,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:35:38Z",
     "comments": {
       "totalCount": 1
     },
@@ -5743,9 +5743,9 @@
     "isAnswered": false,
     "locked": false,
     "number": 15467,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Large amount files will lead to slow throughput rate to kafka",
-    "updatedAt": "2022-12-06T09:58:35Z",
+    "updatedAt": "2026-10-28T19:35:38Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/15467"
   },
@@ -6059,8 +6059,8 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T17:41:08Z",
     "comments": {
       "totalCount": 1
     },
@@ -6068,14 +6068,14 @@
     "isAnswered": false,
     "locked": false,
     "number": 15698,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Assume role with aws s3 source",
-    "updatedAt": "2022-12-22T17:20:45Z",
+    "updatedAt": "2026-10-28T17:41:08Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/15698"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-28T20:23:47Z",
     "author": {
       "login": "yuanqixun"
     },
@@ -6090,12 +6090,12 @@
       "totalCount": 1
     },
     "createdAt": "2022-12-02T16:36:04Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 15725,
     "stateReason": null,
     "title": "kubernetes_log error for self signed certificate",
-    "updatedAt": "2022-12-23T23:02:38Z",
+    "updatedAt": "2026-10-28T20:23:47Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/15725"
   },
@@ -6150,7 +6150,7 @@
     "url": "https://github.com/vectordotdev/vector/discussions/15760"
   },
   {
-    "answerChosenAt": null,
+    "answerChosenAt": "2026-10-29T16:21:56Z",
     "author": {
       "login": "therus000"
     },
@@ -6162,15 +6162,15 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2022-12-28T11:56:11Z",
-    "isAnswered": false,
+    "isAnswered": true,
     "locked": false,
     "number": 15762,
     "stateReason": null,
     "title": "Kubernetes audit logs",
-    "updatedAt": "2024-04-24T13:55:15Z",
+    "updatedAt": "2026-10-29T16:21:55Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/15762"
   },
@@ -6234,18 +6234,18 @@
       "isAnswerable": true,
       "name": "Q&A"
     },
-    "closed": false,
-    "closedAt": null,
+    "closed": true,
+    "closedAt": "2026-10-28T19:37:23Z",
     "comments": {
-      "totalCount": 1
+      "totalCount": 2
     },
     "createdAt": "2022-12-29T15:47:41Z",
     "isAnswered": false,
     "locked": false,
     "number": 15778,
-    "stateReason": null,
+    "stateReason": "OUTDATED",
     "title": "Elasticsearch sink issue",
-    "updatedAt": "2023-01-10T08:04:50Z",
+    "updatedAt": "2026-10-28T19:37:23Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/15778"
   }

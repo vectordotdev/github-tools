@@ -559,7 +559,7 @@ fn build_label_map(
         "SELECT il.issue_id, l.name \
          FROM issue_labels il \
          JOIN labels l ON l.id = il.label_id \
-         JOIN {table} t ON t.id = il.issue_id \
+         JOIN {table} t ON t.id = il.issue_id AND il.item_type = '{table}' \
          WHERE {condition}"
     );
     let mut stmt = conn.prepare(&query)?;
@@ -820,7 +820,7 @@ mod tests {
                 is_draft BOOLEAN
             );
             CREATE TABLE labels (id INTEGER PRIMARY KEY, name TEXT);
-            CREATE TABLE issue_labels (issue_id INTEGER, label_id INTEGER);
+            CREATE TABLE issue_labels (item_type TEXT, issue_id INTEGER, label_id INTEGER);
             CREATE TABLE discussions (
                 category TEXT, is_answered BOOLEAN, created_at TEXT, closed_at TEXT, closed BOOLEAN
             );
@@ -834,7 +834,7 @@ mod tests {
                 (5, 'closed', '2026-08-01T00:00:00Z', '2026-08-27T00:00:00Z', 0),
                 (6, 'open', '2026-08-01T00:00:00Z', NULL, 1);
             INSERT INTO labels VALUES (10, 'domain: API'), (11, 'good first issue');
-            INSERT INTO issue_labels VALUES (1, 10), (2, 11), (4, 10);
+            INSERT INTO issue_labels VALUES ('issues', 1, 10), ('issues', 2, 11), ('pull_requests', 4, 10);
             INSERT INTO discussions VALUES
                 ('Q&A', 0, '2026-08-20T00:00:00Z', NULL, 0),
                 ('Ideas', 1, '2026-08-01T00:00:00Z', '2026-08-24T00:00:00Z', 1);
@@ -842,6 +842,19 @@ mod tests {
         )
         .unwrap();
         conn
+    }
+
+    #[test]
+    fn metric_labels_keep_overlapping_issue_and_pr_ids_separate() {
+        let conn = test_database();
+        conn.execute_batch(
+            "INSERT INTO pull_requests VALUES (1, 'open', '2026-08-01T00:00:00Z', NULL, 0);
+             INSERT INTO issue_labels VALUES ('pull_requests', 1, 11);"
+        ).unwrap();
+        let issue_labels = build_label_map(&conn, "issues", "t.id = 1", &[]).unwrap();
+        let pr_labels = build_label_map(&conn, "pull_requests", "t.id = 1", &[]).unwrap();
+        assert_eq!(issue_labels[&1], vec!["domain: API"]);
+        assert_eq!(pr_labels[&1], vec!["good first issue"]);
     }
 
     #[test]

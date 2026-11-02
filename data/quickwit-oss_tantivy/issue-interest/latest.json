@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-21T18:42:04.946829+00:00",
+  "collectedAt": "2026-11-02T14:48:05.398789+00:00",
   "issues": [
     {
       "number": 7,
@@ -2008,7 +2008,7 @@
       "reactions": 0,
       "title": "Synonym support",
       "unattributedComments": 0,
-      "uniqueCommenters": 4
+      "uniqueCommenters": 5
     },
     {
       "number": 2631,
@@ -2291,13 +2291,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 2924,
-      "reactions": 3,
-      "title": "Make BM25 parameters (k1, b) configurable",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 2925,
       "reactions": 0,
       "title": "QueryParser: build RegexPhraseQuery from phrases containing regex/wildcard tokens",
@@ -2350,20 +2343,6 @@
       "number": 2980,
       "reactions": 0,
       "title": "wrong sorting for missing key of type string in term aggregation",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
-      "number": 3031,
-      "reactions": 0,
-      "title": "QueryParser::parse_query panics on `- *` instead of returning Err (Exist query without a field)",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
-      "number": 3032,
-      "reactions": 0,
-      "title": "parse_query_lenient does not terminate on `a:(^` (unclosed group with a boost)",
       "unattributedComments": 0,
       "uniqueCommenters": 1
     },
@@ -2434,6 +2413,27 @@
       "number": 3200,
       "reactions": 0,
       "title": "`FuzzyTermQuery::new_prefix` with distance 2 misses terms whose prefix is within 2 edits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3203,
+      "reactions": 0,
+      "title": "SnippetGenerator does not highlight terms with capital letters on a case-preserving tokenizer",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3230,
+      "reactions": 0,
+      "title": "Block-WAND pruning can return the wrong top hit without fieldnorms",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3232,
+      "reactions": 0,
+      "title": "Switch winapi dependency to windows/windows-sys",
       "unattributedComments": 0,
       "uniqueCommenters": 0
     }
