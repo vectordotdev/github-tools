@@ -3,7 +3,7 @@ use charming::{
     Chart,
     component::{Axis, Grid, Legend, VisualMap, VisualMapType},
     element::{
-        AxisLabel, AxisType, Color, ItemStyle, LineStyle, LineStyleType, Tooltip, Trigger,
+        AxisLabel, AxisType, Color, ItemStyle, Tooltip, Trigger,
     },
     series::{Bar, Heatmap, Line},
 };
@@ -81,16 +81,24 @@ fn label_color(name: &str) -> &'static str {
     }
 }
 
-fn resolve_type_overlays(cols: &[String]) -> Vec<(String, Vec<String>)> {
-    [("bug", "Bug"), ("feature", "Feature"), ("enhancement", "Enhancement"), ("task", "Task")]
-        .into_iter()
-        .filter_map(|(kind, native)| {
-            let name = format!("type:{kind}");
-            let matching: Vec<String> = cols.iter()
-                .filter(|col| col.as_str() == native || crate::labels::normalize(col) == name)
-                .cloned().collect();
-            (!matching.is_empty()).then_some((name, matching))
-        }).collect()
+// Include every type label, merging historical spellings and native issue types.
+fn resolve_type_columns(cols: &[String]) -> Vec<(String, Vec<String>)> {
+    let mut types: BTreeMap<String, Vec<String>> = BTreeMap::new();
+    for col in cols {
+        let normalized = crate::labels::normalize(col);
+        let kind = match normalized.as_ref() {
+            "Bug" => "bug",
+            "Feature" => "feature",
+            "Enhancement" => "enhancement",
+            "Task" => "task",
+            other => match other.strip_prefix("type:") {
+                Some(kind) if !kind.trim().is_empty() => kind.trim(),
+                _ => continue,
+            },
+        };
+        types.entry(format!("type:{kind}")).or_default().push(col.clone());
+    }
+    types.into_iter().collect()
 }
 
 fn color(s: &str) -> Color {
@@ -138,14 +146,10 @@ fn parse_i64(s: &str) -> i64 {
 // ── Chart builders ─────────────────────────────────────────────────────────────
 
 /// 1. Monthly trend: line chart with created vs closed series.
-///    Also optionally adds dashed overlay lines for label type columns.
-///
-/// `type_overlays`: (series_name, columns_to_sum) — mirrors Python's df[matching].sum(axis=1).
 pub fn monthly_trend(
     rows: &[&HashMap<String, String>],
     created_col: &str,
     closed_col: &str,
-    type_overlays: &[(String, Vec<String>)],
 ) -> Chart {
     let months: Vec<String> = rows.iter()
         .filter_map(|r| r.get("month").cloned())
@@ -157,7 +161,7 @@ pub fn monthly_trend(
         .map(|r| parse_i64(r.get(closed_col).map(|s| s.as_str()).unwrap_or("0")))
         .collect();
 
-    let mut chart = Chart::new()
+    Chart::new()
         .tooltip(Tooltip::new().trigger(Trigger::Axis))
         .legend(Legend::new().bottom("0"))
         .grid(Grid::new().left("3%").right("4%").bottom("15%").contain_label(true))
@@ -179,9 +183,30 @@ pub fn monthly_trend(
                 .name("Closed")
                 .data(closed.to_vec())
                 .item_style(ItemStyle::new().color(color(COLOR_CLOSED))),
-        );
+        )
+}
 
-    for (series_name, cols) in type_overlays {
+/// Monthly counts by type, combining historical labels and native issue types.
+fn monthly_types(
+    rows: &[&HashMap<String, String>],
+    type_columns: &[(String, Vec<String>)],
+) -> Chart {
+    let months: Vec<String> = rows.iter()
+        .filter_map(|r| r.get("month").cloned())
+        .collect();
+    let mut chart = Chart::new()
+        .tooltip(Tooltip::new().trigger(Trigger::Axis))
+        .legend(Legend::new().bottom("0"))
+        .grid(Grid::new().left("3%").right("4%").bottom("15%").contain_label(true))
+        .x_axis(
+            Axis::new()
+                .type_(AxisType::Category)
+                .data(months)
+                .axis_label(AxisLabel::new().rotate(45.0).interval(2.0)),
+        )
+        .y_axis(Axis::new().type_(AxisType::Value));
+
+    for (series_name, cols) in type_columns {
         let vals: Vec<i64> = rows.iter()
             .map(|r| cols.iter().map(|c| parse_i64(r.get(c.as_str()).map(|s| s.as_str()).unwrap_or("0"))).sum())
             .collect();
@@ -190,7 +215,6 @@ pub fn monthly_trend(
             Line::new()
                 .name(series_name.as_str())
                 .data(vals.to_vec())
-                .line_style(LineStyle::new().type_(LineStyleType::Dashed))
                 .item_style(ItemStyle::new().color(color(c))),
         );
     }
@@ -1189,10 +1213,8 @@ pub(crate) fn build(input_dir: &str, repo: &str, start: Option<&str>) -> Result<
         first.keys().cloned().collect()
     } else { vec![] };
 
-    // Top 5 label columns for overlay (those that are not the standard cols)
-    let _standard_issue_cols = ["month", "created_issues", "closed_issues"];
-    let issue_type_overlays = resolve_type_overlays(&issues_monthly_cols);
-    let pr_type_overlays = resolve_type_overlays(&pr_monthly_cols);
+    let issue_type_columns = resolve_type_columns(&issues_monthly_cols);
+    let pr_type_columns = resolve_type_columns(&pr_monthly_cols);
 
     // ── Build chart sections ──
     let mut sections: Vec<(&str, Vec<ChartEntry>)> = Vec::new();
@@ -1206,9 +1228,12 @@ pub(crate) fn build(input_dir: &str, repo: &str, start: Option<&str>) -> Result<
                 &filtered,
                 "created_issues",
                 "closed_issues",
-                &issue_type_overlays,
             );
             entries.push(chart_to_entry("Monthly Trend (Issues)", None, &chart)?);
+            if !issue_type_columns.is_empty() {
+                let chart = monthly_types(&filtered, &issue_type_columns);
+                entries.push(chart_to_entry("Monthly Types (Issues)", None, &chart)?);
+            }
         }
         if !issues_label_bd.is_empty() {
             let filtered = filter_by_start(&issues_label_bd, None);
@@ -1246,9 +1271,12 @@ pub(crate) fn build(input_dir: &str, repo: &str, start: Option<&str>) -> Result<
                 &filtered,
                 "created_pull_requests",
                 "closed_pull_requests",
-                &pr_type_overlays,
             );
             entries.push(chart_to_entry("Monthly Trend (Pull Requests)", Some("Draft PRs excluded"), &chart)?);
+            if !pr_type_columns.is_empty() {
+                let chart = monthly_types(&filtered, &pr_type_columns);
+                entries.push(chart_to_entry("Monthly Types (Pull Requests)", Some("Draft PRs excluded"), &chart)?);
+            }
         }
         if !pr_label_bd.is_empty() {
             let filtered = filter_by_start(&pr_label_bd, None);
@@ -1529,7 +1557,7 @@ mod label_compatibility_tests {
         .map(String::from)
         .collect();
         assert_eq!(
-            resolve_type_overlays(&columns),
+            resolve_type_columns(&columns),
             vec![("type:enhancement".into(), columns[..3].to_vec())]
         );
     }
