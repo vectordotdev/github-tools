@@ -1,0 +1,1003 @@
+{
+  "collectedAt": "2026-11-03T14:09:57.754022+00:00",
+  "excludedAwaitingAuthorPrs": 68,
+  "excludedBotPrs": 27,
+  "excludedDrafts": 120,
+  "openPrs": 476,
+  "prs": [
+    {
+      "createdAt": "2024-05-14T14:34:09+00:00",
+      "number": 20495,
+      "title": "chore(vrl): remote store/enrichment table RFC",
+      "updatedAt": "2025-07-10T15:43:12+00:00"
+    },
+    {
+      "createdAt": "2025-06-09T07:54:18+00:00",
+      "number": 23168,
+      "title": "feat(sinks): Loki Sink supports setting requests of persistent connection",
+      "updatedAt": "2026-06-28T06:16:15+00:00"
+    },
+    {
+      "createdAt": "2025-09-17T05:12:14+00:00",
+      "number": 23793,
+      "title": "feat(internal_metrics source): expose topology connections as metrics",
+      "updatedAt": "2026-05-24T22:32:26+00:00"
+    },
+    {
+      "createdAt": "2025-11-06T04:38:29+00:00",
+      "number": 24166,
+      "title": "feat(platforms): add s390x architecture support",
+      "updatedAt": "2025-11-18T15:23:22+00:00"
+    },
+    {
+      "createdAt": "2025-11-21T17:06:18+00:00",
+      "number": 24292,
+      "title": "fix(splunk_hec): validate and flatten fields",
+      "updatedAt": "2026-03-20T20:05:22+00:00"
+    },
+    {
+      "createdAt": "2025-12-15T10:07:28+00:00",
+      "number": 24382,
+      "title": "fix(aws_kinesis_streams sink): metrics with partial failure retry exhausted",
+      "updatedAt": "2026-05-24T22:32:04+00:00"
+    },
+    {
+      "createdAt": "2026-01-17T18:55:40+00:00",
+      "number": 24510,
+      "title": "feat(codecs): MessagePack decoder",
+      "updatedAt": "2026-11-02T23:04:56+00:00"
+    },
+    {
+      "createdAt": "2026-01-21T15:33:27+00:00",
+      "number": 24524,
+      "title": "fix(buffers): treat I/O errors as recoverable to prevent panics",
+      "updatedAt": "2026-06-03T08:06:32+00:00"
+    },
+    {
+      "createdAt": "2026-01-22T03:01:12+00:00",
+      "number": 24530,
+      "title": "fix(auth): add RefreshingFileCredentialsProvider for credential rotation",
+      "updatedAt": "2026-01-22T09:19:41+00:00"
+    },
+    {
+      "createdAt": "2026-01-26T23:09:49+00:00",
+      "number": 24547,
+      "title": "feat(new transform): add `stdio` transform",
+      "updatedAt": "2026-05-24T22:31:53+00:00"
+    },
+    {
+      "createdAt": "2026-01-27T17:04:32+00:00",
+      "number": 24553,
+      "title": "feat(new_relic sink): add override_endpoint configuration option",
+      "updatedAt": "2026-05-24T22:31:49+00:00"
+    },
+    {
+      "createdAt": "2026-01-28T05:08:16+00:00",
+      "number": 24562,
+      "title": "enhancement(deployment): include http provider config in containers",
+      "updatedAt": "2026-01-28T18:40:47+00:00"
+    },
+    {
+      "createdAt": "2026-01-28T21:18:46+00:00",
+      "number": 24568,
+      "title": "enhancement(reduce transform): add max_bytes configuration option",
+      "updatedAt": "2026-05-24T22:31:45+00:00"
+    },
+    {
+      "createdAt": "2026-02-03T09:56:44+00:00",
+      "number": 24585,
+      "title": "enhancement(codecs): Avro codec Object Container File encode/decode support",
+      "updatedAt": "2026-10-28T11:46:32+00:00"
+    },
+    {
+      "createdAt": "2026-02-10T06:36:17+00:00",
+      "number": 24628,
+      "title": "feat(new source): add netflow source with NetFlow v5 support (PR 1/5)",
+      "updatedAt": "2026-09-01T08:26:11+00:00"
+    },
+    {
+      "createdAt": "2026-02-10T15:24:30+00:00",
+      "number": 24633,
+      "title": "feat(new sink): Azure Data Explorer Sink",
+      "updatedAt": "2026-09-23T19:35:31+00:00"
+    },
+    {
+      "createdAt": "2026-02-12T00:53:31+00:00",
+      "number": 24644,
+      "title": "feat(prometheus_scrape source): add configurable headers, gzip compression, and redirect following",
+      "updatedAt": "2026-05-24T22:31:36+00:00"
+    },
+    {
+      "createdAt": "2026-02-12T10:21:31+00:00",
+      "number": 24647,
+      "title": "fix(kafka source): Prevent stale lag after consumer rebalance",
+      "updatedAt": "2026-10-01T14:11:01+00:00"
+    },
+    {
+      "createdAt": "2026-02-15T05:14:25+00:00",
+      "number": 24657,
+      "title": "feat(syslog source): add lossy option for UTF-8 handling",
+      "updatedAt": "2026-11-02T14:26:19+00:00"
+    },
+    {
+      "createdAt": "2026-02-17T15:47:56+00:00",
+      "number": 24670,
+      "title": "fix(aws_s3 source): complete in-flight SQS message processing before shutdown",
+      "updatedAt": "2026-05-24T22:31:27+00:00"
+    },
+    {
+      "createdAt": "2026-02-19T15:31:31+00:00",
+      "number": 24693,
+      "title": "feat(new source): Add gcp_cloud_storage source",
+      "updatedAt": "2026-03-23T04:31:27+00:00"
+    },
+    {
+      "createdAt": "2026-02-27T21:43:40+00:00",
+      "number": 24786,
+      "title": "fix(sources): gcp_pubsub source connections through configured proxy",
+      "updatedAt": "2026-03-07T14:42:49+00:00"
+    },
+    {
+      "createdAt": "2026-03-13T10:48:54+00:00",
+      "number": 24915,
+      "title": "fix(dnstap source): close TCP connection after sending FINISH to prevent CLOSE_WAIT socket leak",
+      "updatedAt": "2026-05-24T22:31:09+00:00"
+    },
+    {
+      "createdAt": "2026-03-15T10:31:10+00:00",
+      "number": 24930,
+      "title": "feat(sinks): add dlq logic on sink and support for elasticsearch ",
+      "updatedAt": "2026-03-15T11:28:37+00:00"
+    },
+    {
+      "createdAt": "2026-03-27T04:37:10+00:00",
+      "number": 25055,
+      "title": "feat(new sink): add dedicated syslog sink for RFC 5424/3164 output",
+      "updatedAt": "2026-10-12T09:17:40+00:00"
+    },
+    {
+      "createdAt": "2026-04-02T05:32:34+00:00",
+      "number": 25108,
+      "title": "feat(http_server source): add configuration for custom HTTP responses",
+      "updatedAt": "2026-06-30T05:11:38+00:00"
+    },
+    {
+      "createdAt": "2026-04-02T13:10:34+00:00",
+      "number": 25109,
+      "title": "chore(buffers): add regression test for #18336 torn-tail recovery",
+      "updatedAt": "2026-08-29T19:42:22+00:00"
+    },
+    {
+      "createdAt": "2026-04-06T16:33:02+00:00",
+      "number": 25128,
+      "title": "fix(aws_cloudwatch_logs sink): Skip healthcheck for templated group names",
+      "updatedAt": "2026-05-24T22:30:48+00:00"
+    },
+    {
+      "createdAt": "2026-04-06T19:26:04+00:00",
+      "number": 25130,
+      "title": "fix(kafka source): track contiguous offsets before committing to Kafka",
+      "updatedAt": "2026-05-24T22:30:46+00:00"
+    },
+    {
+      "createdAt": "2026-04-08T07:41:21+00:00",
+      "number": 25141,
+      "title": "feat(honeycomb sink): add samplerate_field config option",
+      "updatedAt": "2026-11-01T13:59:09+00:00"
+    },
+    {
+      "createdAt": "2026-04-09T06:53:53+00:00",
+      "number": 25149,
+      "title": "fix(gcp_pubsub source): treat expected stream closures as non-errors",
+      "updatedAt": "2026-08-07T18:07:53+00:00"
+    },
+    {
+      "createdAt": "2026-04-14T06:22:59+00:00",
+      "number": 25182,
+      "title": "chore(aws_s3 source): add custom endpoint for sqs",
+      "updatedAt": "2026-05-24T22:29:09+00:00"
+    },
+    {
+      "createdAt": "2026-04-18T10:07:58+00:00",
+      "number": 25219,
+      "title": "feat(new sink): add YDB sink support",
+      "updatedAt": "2026-06-05T04:20:57+00:00"
+    },
+    {
+      "createdAt": "2026-04-19T23:26:06+00:00",
+      "number": 25220,
+      "title": "feat(prometheus_remote_write source, prometheus_remote_write sink): add support for Prometheus native histograms",
+      "updatedAt": "2026-07-13T13:13:35+00:00"
+    },
+    {
+      "createdAt": "2026-04-24T04:14:15+00:00",
+      "number": 25258,
+      "title": "enhancement(aws_kinesis_streams sink): Re-randomize partition key on partial failure retry",
+      "updatedAt": "2026-07-13T13:13:35+00:00"
+    },
+    {
+      "createdAt": "2026-04-26T03:43:45+00:00",
+      "number": 25270,
+      "title": "fix(aws_s3 source, aws_sqs source): cap poll_secs at AWS limit of 20",
+      "updatedAt": "2026-07-13T13:13:19+00:00"
+    },
+    {
+      "createdAt": "2026-04-30T00:53:46+00:00",
+      "number": 25330,
+      "title": "fix(topology): prevent source pump deadlock during sink config reload",
+      "updatedAt": "2026-10-25T15:37:01+00:00"
+    },
+    {
+      "createdAt": "2026-05-01T13:53:01+00:00",
+      "number": 25338,
+      "title": "feat(codecs): make avro codec optional via cargo feature flag",
+      "updatedAt": "2026-07-13T13:12:57+00:00"
+    },
+    {
+      "createdAt": "2026-05-04T16:32:40+00:00",
+      "number": 25356,
+      "title": "feat(config): graduated deprecation policy for removed config fields",
+      "updatedAt": "2026-07-13T13:12:57+00:00"
+    },
+    {
+      "createdAt": "2026-05-06T09:40:51+00:00",
+      "number": 25378,
+      "title": "fix(redis sink): treat PUBLISH with 0 subscribers as success",
+      "updatedAt": "2026-07-13T13:13:19+00:00"
+    },
+    {
+      "createdAt": "2026-05-10T10:05:07+00:00",
+      "number": 25405,
+      "title": "feat(reduce transform): Add max_bytes limit to flush groups by size",
+      "updatedAt": "2026-07-13T13:12:57+00:00"
+    },
+    {
+      "createdAt": "2026-05-11T18:12:21+00:00",
+      "number": 25412,
+      "title": "feat(prometheus_exporter sink): add SAR auth strategy",
+      "updatedAt": "2026-07-21T20:02:00+00:00"
+    },
+    {
+      "createdAt": "2026-05-14T04:52:13+00:00",
+      "number": 25431,
+      "title": "enhancement(performance): udp batch implementation (experiment)",
+      "updatedAt": "2026-07-13T13:13:07+00:00"
+    },
+    {
+      "createdAt": "2026-05-14T07:36:33+00:00",
+      "number": 25432,
+      "title": "feat(vector sink): vector connection concurrency",
+      "updatedAt": "2026-07-13T13:13:35+00:00"
+    },
+    {
+      "createdAt": "2026-05-18T20:24:31+00:00",
+      "number": 25454,
+      "title": "enhancement(gcp_cloud_storage sink): Add support for OIDC via Workload Identity Federation",
+      "updatedAt": "2026-07-24T14:03:07+00:00"
+    },
+    {
+      "createdAt": "2026-05-26T05:52:00+00:00",
+      "number": 25496,
+      "title": "fix(metrics): add _total suffix to memory enrichment counters",
+      "updatedAt": "2026-07-13T13:12:43+00:00"
+    },
+    {
+      "createdAt": "2026-05-27T15:59:05+00:00",
+      "number": 25509,
+      "title": "enhancement(file sink): batch writes per partition to reduce syscall …",
+      "updatedAt": "2026-07-13T13:13:35+00:00"
+    },
+    {
+      "createdAt": "2026-05-30T15:45:44+00:00",
+      "number": 25538,
+      "title": "fix(dnstap source): don't delete the socket file during config validation",
+      "updatedAt": "2026-10-29T12:40:55+00:00"
+    },
+    {
+      "createdAt": "2026-05-31T12:00:49+00:00",
+      "number": 25540,
+      "title": "fix(dnstap source): unwrap IPv4-mapped IPv6 client addresses reported as INET",
+      "updatedAt": "2026-10-29T11:07:24+00:00"
+    },
+    {
+      "createdAt": "2026-05-31T18:34:47+00:00",
+      "number": 25541,
+      "title": "fix(gcp_cloud_storage sink): apply timezone to key_prefix strftime",
+      "updatedAt": "2026-10-29T12:39:24+00:00"
+    },
+    {
+      "createdAt": "2026-06-15T14:45:45+00:00",
+      "number": 25625,
+      "title": "enhancement(kafka source): add support for consuming records with null bodies",
+      "updatedAt": "2026-07-13T13:13:35+00:00"
+    },
+    {
+      "createdAt": "2026-06-20T19:42:23+00:00",
+      "number": 25659,
+      "title": "fix(aws_cloudwatch_logs sink): Parse string and integer `.timestamp` values",
+      "updatedAt": "2026-07-13T13:13:19+00:00"
+    },
+    {
+      "createdAt": "2026-06-30T09:46:30+00:00",
+      "number": 25705,
+      "title": "feat(clickhouse sink): add drain_shaping to pace recovery from disk-buffer backlogs",
+      "updatedAt": "2026-07-13T13:04:20+00:00"
+    },
+    {
+      "createdAt": "2026-07-01T12:50:03+00:00",
+      "number": 25724,
+      "title": "enhancement(redis source): add pchannel pattern subscribe support",
+      "updatedAt": "2026-09-22T09:33:48+00:00"
+    },
+    {
+      "createdAt": "2026-07-01T19:48:33+00:00",
+      "number": 25734,
+      "title": "perf(arrow codec): optimize scalar RecordBatch encoding",
+      "updatedAt": "2026-07-13T13:04:20+00:00"
+    },
+    {
+      "createdAt": "2026-07-02T11:21:30+00:00",
+      "number": 25740,
+      "title": "Add memory buffer drop_oldest mode",
+      "updatedAt": "2026-10-25T17:56:24+00:00"
+    },
+    {
+      "createdAt": "2026-07-06T11:51:22+00:00",
+      "number": 25751,
+      "title": "feat(kafka source, kafka sink): support AWS MSK IAM auth via SASL/OAUTHBEARER",
+      "updatedAt": "2026-09-09T15:07:25+00:00"
+    },
+    {
+      "createdAt": "2026-07-08T10:59:32+00:00",
+      "number": 25776,
+      "title": "enchancement(internal_logs_source)!: decouple internal_logs log level from vector startup log level",
+      "updatedAt": "2026-07-13T13:04:20+00:00"
+    },
+    {
+      "createdAt": "2026-07-08T19:24:17+00:00",
+      "number": 25782,
+      "title": "enhancement(vector source, vector sink): enable HTTP/2 adaptive flow-control windows",
+      "updatedAt": "2026-07-13T13:04:20+00:00"
+    },
+    {
+      "createdAt": "2026-07-11T05:55:44+00:00",
+      "number": 25803,
+      "title": "fix(aws_s3 sink): restrict checksum calculation to fix R2 InvalidRequest",
+      "updatedAt": "2026-09-09T04:51:10+00:00"
+    },
+    {
+      "createdAt": "2026-07-12T03:00:54+00:00",
+      "number": 25808,
+      "title": "feat(vector source, vector sink): Add vector source fetch mode and sink serve mode",
+      "updatedAt": "2026-07-15T05:29:31+00:00"
+    },
+    {
+      "createdAt": "2026-07-12T04:59:53+00:00",
+      "number": 25810,
+      "title": "fix(windows platform): report SERVICE_STOPPED to SCM when startup fails",
+      "updatedAt": "2026-07-12T04:59:54+00:00"
+    },
+    {
+      "createdAt": "2026-07-15T15:52:01+00:00",
+      "number": 25844,
+      "title": "fix(sink socket): fix regression for udp socket recovery after error (#25804)",
+      "updatedAt": "2026-07-21T20:02:30+00:00"
+    },
+    {
+      "createdAt": "2026-07-17T07:46:35+00:00",
+      "number": 25880,
+      "title": "feat(host_metrics source): add ROOTFS_ROOT support",
+      "updatedAt": "2026-08-06T08:39:07+00:00"
+    },
+    {
+      "createdAt": "2026-07-20T05:58:17+00:00",
+      "number": 25897,
+      "title": "fix(file source): avoid warning for empty files too small to fingerprint",
+      "updatedAt": "2026-08-09T19:15:39+00:00"
+    },
+    {
+      "createdAt": "2026-07-21T17:23:21+00:00",
+      "number": 25915,
+      "title": "fix(aws sinks): ensure component_sent_bytes_total carries component and region labels",
+      "updatedAt": "2026-07-30T15:42:00+00:00"
+    },
+    {
+      "createdAt": "2026-07-22T17:40:35+00:00",
+      "number": 25924,
+      "title": "feat(grpc connection management): add jitter controls to grpc max age",
+      "updatedAt": "2026-08-17T21:17:33+00:00"
+    },
+    {
+      "createdAt": "2026-07-23T20:51:28+00:00",
+      "number": 25939,
+      "title": "feat(clickhouse sink): add extra_query_params for arbitrary ClickHouse settings",
+      "updatedAt": "2026-10-20T23:10:47+00:00"
+    },
+    {
+      "createdAt": "2026-07-29T09:38:02+00:00",
+      "number": 25965,
+      "title": "feat(buffers): add reject when_full mode for disk buffers",
+      "updatedAt": "2026-10-16T04:33:32+00:00"
+    },
+    {
+      "createdAt": "2026-07-29T23:48:24+00:00",
+      "number": 25971,
+      "title": "feat(file sink): add parquet batch encoding to file sink",
+      "updatedAt": "2026-07-30T01:02:41+00:00"
+    },
+    {
+      "createdAt": "2026-07-30T03:20:34+00:00",
+      "number": 25972,
+      "title": "feat(reduce transform): add max_groups option to bound memory usage",
+      "updatedAt": "2026-07-30T14:00:17+00:00"
+    },
+    {
+      "createdAt": "2026-07-31T21:32:53+00:00",
+      "number": 25988,
+      "title": "fix(buffers): recheck disk buffer progress before waiting",
+      "updatedAt": "2026-07-31T23:18:07+00:00"
+    },
+    {
+      "createdAt": "2026-08-05T05:44:09+00:00",
+      "number": 26025,
+      "title": "fix(opentelemetry source): implement standard gRPC health checking protocol",
+      "updatedAt": "2026-08-05T23:41:24+00:00"
+    },
+    {
+      "createdAt": "2026-08-11T13:19:04+00:00",
+      "number": 26081,
+      "title": "enhancement(file sink): batch writes per partition to reduce syscall …",
+      "updatedAt": "2026-09-22T06:50:13+00:00"
+    },
+    {
+      "createdAt": "2026-08-12T19:08:09+00:00",
+      "number": 26089,
+      "title": "fix(sources): only signal shutdown once for TCP sources",
+      "updatedAt": "2026-08-12T19:08:20+00:00"
+    },
+    {
+      "createdAt": "2026-08-13T21:50:04+00:00",
+      "number": 26107,
+      "title": "feat(azure_blob source): add Azure Blob Storage source",
+      "updatedAt": "2026-08-17T19:55:33+00:00"
+    },
+    {
+      "createdAt": "2026-08-14T10:15:01+00:00",
+      "number": 26110,
+      "title": "feat(prometheus_scrape source): add `scrape_delay` to stagger scrapes",
+      "updatedAt": "2026-08-14T10:22:34+00:00"
+    },
+    {
+      "createdAt": "2026-08-15T05:40:48+00:00",
+      "number": 26118,
+      "title": "fix(windows_event_log source): correct wevtapi error codes and re-subscribe on unusable handles",
+      "updatedAt": "2026-11-02T14:08:48+00:00"
+    },
+    {
+      "createdAt": "2026-08-15T15:46:58+00:00",
+      "number": 26121,
+      "title": "fix(packaging): use sysconfig environment file in RPMs (#26076)",
+      "updatedAt": "2026-08-15T15:59:33+00:00"
+    },
+    {
+      "createdAt": "2026-08-17T10:49:16+00:00",
+      "number": 26125,
+      "title": "fix(windows_event_log): soft bookmark resume before future-events fallback",
+      "updatedAt": "2026-09-24T13:25:29+00:00"
+    },
+    {
+      "createdAt": "2026-08-18T12:41:21+00:00",
+      "number": 26135,
+      "title": "Fix datadog_metrics handling of Prometheus +Inf histogram buckets",
+      "updatedAt": "2026-09-23T05:58:00+00:00"
+    },
+    {
+      "createdAt": "2026-08-24T05:09:46+00:00",
+      "number": 26185,
+      "title": "feat(config): add `mutually_exclusive` for optional exclusive field groups",
+      "updatedAt": "2026-09-12T03:57:32+00:00"
+    },
+    {
+      "createdAt": "2026-08-26T02:04:19+00:00",
+      "number": 26221,
+      "title": "feat(clickhouse sink): add retry_strategy option",
+      "updatedAt": "2026-08-28T09:23:18+00:00"
+    },
+    {
+      "createdAt": "2026-08-31T17:46:30+00:00",
+      "number": 26267,
+      "title": "feat(aws_s3 source): add optional, SQS-specific authentication option",
+      "updatedAt": "2026-08-31T18:23:06+00:00"
+    },
+    {
+      "createdAt": "2026-09-03T20:00:52+00:00",
+      "number": 26304,
+      "title": "feat(postgres sink): Add Upsert support",
+      "updatedAt": "2026-09-18T20:14:39+00:00"
+    },
+    {
+      "createdAt": "2026-09-05T21:35:11+00:00",
+      "number": 26312,
+      "title": "fix(disk buffer): record drop_newest discards from disk buffers",
+      "updatedAt": "2026-11-02T15:23:02+00:00"
+    },
+    {
+      "createdAt": "2026-09-07T14:17:31+00:00",
+      "number": 26316,
+      "title": "fix(buffers): report a record ID behind the acked ID as a monotonicity violation",
+      "updatedAt": "2026-09-07T14:29:02+00:00"
+    },
+    {
+      "createdAt": "2026-09-08T01:24:48+00:00",
+      "number": 26318,
+      "title": "fix(prometheus_remote_write source): skip NaN histogram and summary counts",
+      "updatedAt": "2026-10-19T03:10:26+00:00"
+    },
+    {
+      "createdAt": "2026-09-08T05:55:11+00:00",
+      "number": 26320,
+      "title": "enhancement(gcp sinks): Add support for Workload Identity Federation via external_account credentials",
+      "updatedAt": "2026-10-01T22:58:14+00:00"
+    },
+    {
+      "createdAt": "2026-09-09T18:45:59+00:00",
+      "number": 26334,
+      "title": "fix(file source): discard stale checkpoints instead of silently dropping data",
+      "updatedAt": "2026-10-26T13:58:43+00:00"
+    },
+    {
+      "createdAt": "2026-09-10T06:21:44+00:00",
+      "number": 26343,
+      "title": "Add aws_kinesis_streams source with KCL-style closed-shard completion.",
+      "updatedAt": "2026-09-27T11:14:34+00:00"
+    },
+    {
+      "createdAt": "2026-09-10T06:24:19+00:00",
+      "number": 26344,
+      "title": "Log Elasticsearch bulk rejections at debug with per-item error details.",
+      "updatedAt": "2026-09-17T08:08:52+00:00"
+    },
+    {
+      "createdAt": "2026-09-12T18:29:53+00:00",
+      "number": 26367,
+      "title": "fix(deb): preserve vector.yaml on upgrade and relocate examples",
+      "updatedAt": "2026-10-01T07:04:37+00:00"
+    },
+    {
+      "createdAt": "2026-09-14T14:22:11+00:00",
+      "number": 26369,
+      "title": "perf(source_sender): share output state to make per-request clones cheaper",
+      "updatedAt": "2026-09-14T19:42:04+00:00"
+    },
+    {
+      "createdAt": "2026-09-16T14:33:14+00:00",
+      "number": 26397,
+      "title": "feat(nats source): support end-to-end acknowledgements",
+      "updatedAt": "2026-10-01T12:25:31+00:00"
+    },
+    {
+      "createdAt": "2026-09-17T10:08:10+00:00",
+      "number": 26410,
+      "title": "fix(buffers): complete disk writes before notifying readers",
+      "updatedAt": "2026-10-25T16:05:02+00:00"
+    },
+    {
+      "createdAt": "2026-09-20T07:46:37+00:00",
+      "number": 26438,
+      "title": "fix(kafka source): wait for aborted partition consumers before continuing a rebalance",
+      "updatedAt": "2026-10-02T06:12:39+00:00"
+    },
+    {
+      "createdAt": "2026-09-22T01:11:29+00:00",
+      "number": 26453,
+      "title": "fix(file source): strip BOM and CRLF line endings",
+      "updatedAt": "2026-10-14T06:22:46+00:00"
+    },
+    {
+      "createdAt": "2026-09-24T15:37:58+00:00",
+      "number": 26475,
+      "title": "feat(config)!: parse configuration before interpolation",
+      "updatedAt": "2026-11-02T14:25:04+00:00"
+    },
+    {
+      "createdAt": "2026-09-24T18:24:24+00:00",
+      "number": 26477,
+      "title": "fix(windows_event_log source): keep only_event_ids XPath query shallow",
+      "updatedAt": "2026-09-24T18:24:37+00:00"
+    },
+    {
+      "createdAt": "2026-09-24T22:57:19+00:00",
+      "number": 26479,
+      "title": "feat: add victoriametrics sink",
+      "updatedAt": "2026-10-19T23:13:22+00:00"
+    },
+    {
+      "createdAt": "2026-09-28T20:41:08+00:00",
+      "number": 26502,
+      "title": "chore(ci): run arch-independent jobs on Arm runners",
+      "updatedAt": "2026-09-28T20:47:03+00:00"
+    },
+    {
+      "createdAt": "2026-09-30T15:06:40+00:00",
+      "number": 26517,
+      "title": "enhancement(codecs): add json.bytes_format option to encode binary data as base64",
+      "updatedAt": "2026-09-30T21:14:32+00:00"
+    },
+    {
+      "createdAt": "2026-09-30T18:28:46+00:00",
+      "number": 26518,
+      "title": "perf(internal_logs source): decouple broadcast drain from downstream send and batch events",
+      "updatedAt": "2026-10-14T20:10:45+00:00"
+    },
+    {
+      "createdAt": "2026-10-02T14:32:07+00:00",
+      "number": 26530,
+      "title": "fix(buffers): Flush tokio file to guarantee write has finished in buf…",
+      "updatedAt": "2026-10-02T14:43:01+00:00"
+    },
+    {
+      "createdAt": "2026-10-02T15:50:11+00:00",
+      "number": 26532,
+      "title": "feat(elasticsearch sink): add api_key authentication strategy",
+      "updatedAt": "2026-10-23T12:11:33+00:00"
+    },
+    {
+      "createdAt": "2026-10-07T05:40:02+00:00",
+      "number": 26566,
+      "title": "fix(kubernetes_logs source): merge partial events per stream",
+      "updatedAt": "2026-10-07T06:10:39+00:00"
+    },
+    {
+      "createdAt": "2026-10-07T10:01:29+00:00",
+      "number": 26567,
+      "title": "fix(kubernetes_logs): share compatible Kubernetes metadata watches",
+      "updatedAt": "2026-10-23T13:24:26+00:00"
+    },
+    {
+      "createdAt": "2026-10-07T15:41:48+00:00",
+      "number": 26573,
+      "title": "fix(kubernetes_logs source): do not merge partial CRI log lines across streams",
+      "updatedAt": "2026-10-07T15:42:00+00:00"
+    },
+    {
+      "createdAt": "2026-10-08T21:50:41+00:00",
+      "number": 26605,
+      "title": "feat(codecs): convert native Vector logs to OTLP in otlp serializer",
+      "updatedAt": "2026-10-13T16:20:12+00:00"
+    },
+    {
+      "createdAt": "2026-10-09T03:33:35+00:00",
+      "number": 26610,
+      "title": "fix(websocket_server sink): release listener and connections on shutdown",
+      "updatedAt": "2026-10-10T08:58:01+00:00"
+    },
+    {
+      "createdAt": "2026-10-09T18:21:28+00:00",
+      "number": 26628,
+      "title": "feat(sinks): Add on-conflict config support to postgres sink",
+      "updatedAt": "2026-10-10T02:50:09+00:00"
+    },
+    {
+      "createdAt": "2026-10-09T22:53:36+00:00",
+      "number": 26635,
+      "title": "chore(datadog_logs sink): Output truncated messages as strings",
+      "updatedAt": "2026-10-09T22:56:28+00:00"
+    },
+    {
+      "createdAt": "2026-10-12T18:24:01+00:00",
+      "number": 26641,
+      "title": "fix(topology): apply fanout control messages while components are idle",
+      "updatedAt": "2026-10-15T11:25:12+00:00"
+    },
+    {
+      "createdAt": "2026-10-13T14:16:10+00:00",
+      "number": 26647,
+      "title": "fix(buffers): split oversized disk_v2 records instead of dropping all their events",
+      "updatedAt": "2026-10-13T14:22:53+00:00"
+    },
+    {
+      "createdAt": "2026-10-14T20:52:28+00:00",
+      "number": 26688,
+      "title": "fix(topology): don't hang a reload on a sink that stops polling its input",
+      "updatedAt": "2026-10-17T20:27:28+00:00"
+    },
+    {
+      "createdAt": "2026-10-15T12:51:16+00:00",
+      "number": 26693,
+      "title": "enhancement(redis source): add `list.batch_size` to read multiple list entries per round trip",
+      "updatedAt": "2026-10-29T15:02:41+00:00"
+    },
+    {
+      "createdAt": "2026-10-16T00:11:53+00:00",
+      "number": 26700,
+      "title": "fix(reduce transform): apply merge strategies once for field names that need quoting",
+      "updatedAt": "2026-10-19T22:08:45+00:00"
+    },
+    {
+      "createdAt": "2026-10-16T00:11:56+00:00",
+      "number": 26701,
+      "title": "fix(reduce transform): keep fields whose names contain quotes or backslashes",
+      "updatedAt": "2026-10-19T22:08:19+00:00"
+    },
+    {
+      "createdAt": "2026-10-16T17:18:36+00:00",
+      "number": 26709,
+      "title": "fix(sources): report a closed output channel in file and kubernetes_logs",
+      "updatedAt": "2026-10-16T17:28:45+00:00"
+    },
+    {
+      "createdAt": "2026-10-16T19:57:46+00:00",
+      "number": 26715,
+      "title": "feat(aws_s3 source): add configurable timeouts for the S3 client",
+      "updatedAt": "2026-10-18T21:28:12+00:00"
+    },
+    {
+      "createdAt": "2026-10-17T17:15:34+00:00",
+      "number": 26724,
+      "title": "chore(vdev): Rewrite 'cue.sh vet' to vdev",
+      "updatedAt": "2026-10-18T07:18:05+00:00"
+    },
+    {
+      "createdAt": "2026-10-18T03:20:22+00:00",
+      "number": 26726,
+      "title": "fix(postgres): retry batch on session termination and connection exceptions",
+      "updatedAt": "2026-10-20T04:56:10+00:00"
+    },
+    {
+      "createdAt": "2026-10-18T09:47:20+00:00",
+      "number": 26727,
+      "title": "fix(amqp sink): bound pending publish requests",
+      "updatedAt": "2026-10-31T11:24:07+00:00"
+    },
+    {
+      "createdAt": "2026-10-19T12:11:32+00:00",
+      "number": 26731,
+      "title": "fix(mqtt source): resubscribe when the broker lost the session",
+      "updatedAt": "2026-10-27T10:10:13+00:00"
+    },
+    {
+      "createdAt": "2026-10-19T17:06:30+00:00",
+      "number": 26738,
+      "title": "fix(elasticsearch sink): bound pending requests during retries",
+      "updatedAt": "2026-10-19T23:05:36+00:00"
+    },
+    {
+      "createdAt": "2026-10-19T17:38:18+00:00",
+      "number": 26739,
+      "title": "fix(file source): don't remove files skipped by ignore_older_secs before reading them",
+      "updatedAt": "2026-10-19T17:41:19+00:00"
+    },
+    {
+      "createdAt": "2026-10-20T19:12:55+00:00",
+      "number": 26753,
+      "title": "feat(ci): integrate COSE package repository publishing",
+      "updatedAt": "2026-10-28T20:01:25+00:00"
+    },
+    {
+      "createdAt": "2026-10-21T17:29:49+00:00",
+      "number": 26787,
+      "title": "fix(sinks): release concurrency permit during retry backoff",
+      "updatedAt": "2026-10-21T21:55:45+00:00"
+    },
+    {
+      "createdAt": "2026-10-22T08:46:55+00:00",
+      "number": 26797,
+      "title": "fix(kubernetes_logs source): annotate init and sidecar containers with container metadata",
+      "updatedAt": "2026-10-22T08:53:08+00:00"
+    },
+    {
+      "createdAt": "2026-10-22T16:49:24+00:00",
+      "number": 26802,
+      "title": "feat(clickhouse): support custom HTTP headers with templated values",
+      "updatedAt": "2026-10-22T16:57:23+00:00"
+    },
+    {
+      "createdAt": "2026-10-22T17:17:47+00:00",
+      "number": 26803,
+      "title": "fix(aws-auth): Honour AWS auth.load_timeout_secs for non-AWS sinks",
+      "updatedAt": "2026-11-02T15:13:40+00:00"
+    },
+    {
+      "createdAt": "2026-10-23T19:01:41+00:00",
+      "number": 26824,
+      "title": "feat(websocket source): add replay on reconnect support",
+      "updatedAt": "2026-11-03T08:50:20+00:00"
+    },
+    {
+      "createdAt": "2026-10-24T22:29:34+00:00",
+      "number": 26841,
+      "title": "fix(sinks): reject batches that fail encoding",
+      "updatedAt": "2026-10-30T16:49:58+00:00"
+    },
+    {
+      "createdAt": "2026-10-26T21:42:41+00:00",
+      "number": 26853,
+      "title": "fix(config): keep watching symlinked component files after atomic swaps",
+      "updatedAt": "2026-10-27T16:33:57+00:00"
+    },
+    {
+      "createdAt": "2026-10-27T01:49:49+00:00",
+      "number": 26884,
+      "title": "feat(unix source): Cleanup orphaned unix socket files on startup",
+      "updatedAt": "2026-10-27T02:23:30+00:00"
+    },
+    {
+      "createdAt": "2026-10-27T02:05:15+00:00",
+      "number": 26885,
+      "title": "fix(gcp_cloud_storage sink): retry requests on connection errors",
+      "updatedAt": "2026-10-28T02:41:59+00:00"
+    },
+    {
+      "createdAt": "2026-10-27T06:38:54+00:00",
+      "number": 26886,
+      "title": "fix(sinks): report component_sent_bytes_total before compression",
+      "updatedAt": "2026-10-27T07:59:03+00:00"
+    },
+    {
+      "createdAt": "2026-10-27T11:52:00+00:00",
+      "number": 26889,
+      "title": "docs(datadog_agent source): document series API compatibility",
+      "updatedAt": "2026-10-29T06:29:00+00:00"
+    },
+    {
+      "createdAt": "2026-10-27T17:54:55+00:00",
+      "number": 26907,
+      "title": "fix(metrics): free expired metrics from the timeout cache",
+      "updatedAt": "2026-10-29T22:35:04+00:00"
+    },
+    {
+      "createdAt": "2026-10-28T10:07:51+00:00",
+      "number": 26920,
+      "title": "enhancement(aws_sqs source): Adaptive polling concurrency (#13322)",
+      "updatedAt": "2026-10-31T22:47:07+00:00"
+    },
+    {
+      "createdAt": "2026-10-28T10:34:49+00:00",
+      "number": 26921,
+      "title": "chore(dev): add datadog agent trace e2e test",
+      "updatedAt": "2026-11-03T13:20:32+00:00"
+    },
+    {
+      "createdAt": "2026-10-28T19:19:02+00:00",
+      "number": 26930,
+      "title": "fix(file): reuse fingerprinted file handles",
+      "updatedAt": "2026-10-28T21:00:34+00:00"
+    },
+    {
+      "createdAt": "2026-10-29T04:10:11+00:00",
+      "number": 26935,
+      "title": "fix(gcp_chronicle_unstructured): retry transient errors",
+      "updatedAt": "2026-10-29T04:13:22+00:00"
+    },
+    {
+      "createdAt": "2026-10-29T15:09:27+00:00",
+      "number": 26946,
+      "title": "fix(buffers): retry transient EOF behind published disk progress",
+      "updatedAt": "2026-10-30T05:08:33+00:00"
+    },
+    {
+      "createdAt": "2026-10-29T17:23:56+00:00",
+      "number": 26951,
+      "title": "fix(sinks): account for terminal errored requests",
+      "updatedAt": "2026-11-02T15:03:04+00:00"
+    },
+    {
+      "createdAt": "2026-10-29T18:18:44+00:00",
+      "number": 26957,
+      "title": "fix(webhdfs sink): retry transient write failures via Tower middleware (#26938)",
+      "updatedAt": "2026-10-31T21:49:00+00:00"
+    },
+    {
+      "createdAt": "2026-10-30T13:20:48+00:00",
+      "number": 26965,
+      "title": "enhancement(sinks): add a zstd window_log compression option",
+      "updatedAt": "2026-11-02T10:44:02+00:00"
+    },
+    {
+      "createdAt": "2026-10-30T14:00:32+00:00",
+      "number": 26966,
+      "title": "fix(sinks): Correct source acknowledgement precedence calculation (#26847)",
+      "updatedAt": "2026-11-03T06:14:00+00:00"
+    },
+    {
+      "createdAt": "2026-10-30T14:37:15+00:00",
+      "number": 26968,
+      "title": "fix(opentelemetry source): accept empty OTLP exports and HTTP JSON",
+      "updatedAt": "2026-10-30T17:51:57+00:00"
+    },
+    {
+      "createdAt": "2026-10-30T14:38:46+00:00",
+      "number": 26969,
+      "title": "fix(buffers): flush partial sink batches during disk-buffer shutdown",
+      "updatedAt": "2026-11-02T22:27:20+00:00"
+    },
+    {
+      "createdAt": "2026-10-30T15:55:55+00:00",
+      "number": 26972,
+      "title": "chore(ci): report multiservice e2e results on the PR",
+      "updatedAt": "2026-11-02T17:37:56+00:00"
+    },
+    {
+      "createdAt": "2026-10-30T16:22:11+00:00",
+      "number": 26975,
+      "title": "Reduce parquet memory usage by batching input chunks",
+      "updatedAt": "2026-10-30T16:29:47+00:00"
+    },
+    {
+      "createdAt": "2026-10-30T18:10:38+00:00",
+      "number": 26978,
+      "title": "chore(ci): skip untargeted matrices for integration and e2e review commands",
+      "updatedAt": "2026-11-02T14:31:53+00:00"
+    },
+    {
+      "createdAt": "2026-10-31T01:44:05+00:00",
+      "number": 26982,
+      "title": "feat(http_client source, prometheus_scrape source): add HTTP redirect following support",
+      "updatedAt": "2026-10-31T07:32:49+00:00"
+    },
+    {
+      "createdAt": "2026-10-31T07:30:51+00:00",
+      "number": 26984,
+      "title": "fix(windows platform): report SERVICE_STOP_PENDING while the service shuts down",
+      "updatedAt": "2026-11-02T20:09:50+00:00"
+    },
+    {
+      "createdAt": "2026-10-31T13:23:49+00:00",
+      "number": 26986,
+      "title": "chore(gcp_cloud_storage sink): deprecate `api_key` configuration option",
+      "updatedAt": "2026-11-01T09:34:43+00:00"
+    },
+    {
+      "createdAt": "2026-11-01T23:16:35+00:00",
+      "number": 26991,
+      "title": "refactor(redis source): use const for field names",
+      "updatedAt": "2026-11-01T23:56:34+00:00"
+    },
+    {
+      "createdAt": "2026-11-02T12:33:02+00:00",
+      "number": 26992,
+      "title": "fix(file source): report lines discarded for size at EOF",
+      "updatedAt": "2026-11-03T03:55:17+00:00"
+    },
+    {
+      "createdAt": "2026-11-02T14:25:52+00:00",
+      "number": 26993,
+      "title": "fix(codecs): stop dropping non-UTF-8 syslog frames and killing TCP connections in OctetCountingDecoder",
+      "updatedAt": "2026-11-03T11:09:38+00:00"
+    },
+    {
+      "createdAt": "2026-11-02T14:44:52+00:00",
+      "number": 26994,
+      "title": "feat(source): File source zstd support",
+      "updatedAt": "2026-11-02T14:51:01+00:00"
+    },
+    {
+      "createdAt": "2026-11-02T14:48:08+00:00",
+      "number": 26995,
+      "title": "fix(file source): recognize a multi-byte delimiter split by EOF",
+      "updatedAt": "2026-11-03T04:17:25+00:00"
+    },
+    {
+      "createdAt": "2026-11-02T15:02:45+00:00",
+      "number": 26996,
+      "title": "fix(sinks): account for partial deliveries across retries",
+      "updatedAt": "2026-11-02T15:15:03+00:00"
+    },
+    {
+      "createdAt": "2026-11-02T16:17:31+00:00",
+      "number": 26998,
+      "title": "chore(aws): run the AWS SDK HTTP client on hyper 1",
+      "updatedAt": "2026-11-02T21:52:56+00:00"
+    },
+    {
+      "createdAt": "2026-11-03T14:03:01+00:00",
+      "number": 27014,
+      "title": "chore(deps): update pulldown-cmark to fix deny check",
+      "updatedAt": "2026-11-03T14:07:37+00:00"
+    }
+  ],
+  "repository": "vectordotdev/vector",
+  "reviewedPrs": 96,
+  "schemaVersion": 1,
+  "unknownPrs": 0
+}

@@ -3,8 +3,9 @@ use clap::{Parser, Subcommand};
 use github_tools::{
     commands::{
         build_db, close_old_prs, compact, delete_stale_branches, fetch_automated_review_stats,
-        fetch_discussions, fetch_issue_interest, fetch_issues, fetch_labels, generate_charts,
-        generate_summaries, purge, push_metrics, remove_legacy_label, replace_label, workflows,
+        fetch_discussions, fetch_first_review, fetch_issue_interest, fetch_issues, fetch_labels,
+        generate_charts, generate_summaries, purge, push_metrics, remove_legacy_label, replace_label,
+        workflows,
     },
     config::{Config, Repo},
 };
@@ -23,6 +24,13 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
+    /// Snapshot open PRs waiting for their first submitted human review
+    FetchFirstReview {
+        #[arg(long)]
+        repo: String,
+        #[arg(long)]
+        env_file: Option<String>,
+    },
     /// Fetch all labels for a repository
     FetchLabels {
         #[arg(long, help = "Repository, e.g. vectordotdev/vector")]
@@ -330,6 +338,10 @@ fn main() -> Result<()> {
     let cli = Cli::parse();
 
     match cli.command {
+        Command::FetchFirstReview { repo, env_file } => {
+            let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
+            fetch_first_review::run(&config)
+        }
         Command::FetchLabels { repo, env_file } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_labels::run(&config)

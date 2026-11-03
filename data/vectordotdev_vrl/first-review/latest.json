@@ -1,0 +1,91 @@
+{
+  "collectedAt": "2026-11-03T14:09:59.457664+00:00",
+  "excludedAwaitingAuthorPrs": 8,
+  "excludedBotPrs": 3,
+  "excludedDrafts": 12,
+  "openPrs": 44,
+  "prs": [
+    {
+      "createdAt": "2026-01-27T15:59:53+00:00",
+      "number": 1614,
+      "title": "enhancement(stdlib): add IPv4-mapped IPv6 support to ip_cidr_contains",
+      "updatedAt": "2026-06-16T13:15:03+00:00"
+    },
+    {
+      "createdAt": "2026-02-24T15:21:59+00:00",
+      "number": 1656,
+      "title": "feat(parse json): add arbitrary_precision for serde_json",
+      "updatedAt": "2026-02-24T15:21:59+00:00"
+    },
+    {
+      "createdAt": "2026-06-13T09:29:30+00:00",
+      "number": 1816,
+      "title": "feat(stdlib): Add support for parsing nginx error_log_tag",
+      "updatedAt": "2026-07-17T18:30:39+00:00"
+    },
+    {
+      "createdAt": "2026-06-15T10:42:13+00:00",
+      "number": 1818,
+      "title": "chore(tests): checks function return type",
+      "updatedAt": "2026-06-15T14:09:42+00:00"
+    },
+    {
+      "createdAt": "2026-07-08T19:33:29+00:00",
+      "number": 1855,
+      "title": "fix(datadog_filter): make wildcard regexes match across newlines",
+      "updatedAt": "2026-07-09T00:17:14+00:00"
+    },
+    {
+      "createdAt": "2026-07-23T19:43:16+00:00",
+      "number": 1865,
+      "title": "chore(compiler): speed up typecheck for deep else-if ladders (remove quadratic complexity)",
+      "updatedAt": "2026-08-07T22:49:39+00:00"
+    },
+    {
+      "createdAt": "2026-08-07T22:31:31+00:00",
+      "number": 1895,
+      "title": "chore(compiler): perf speedup through type-state sharing",
+      "updatedAt": "2026-10-22T07:23:12+00:00"
+    },
+    {
+      "createdAt": "2026-10-21T00:53:51+00:00",
+      "number": 2006,
+      "title": "enhancement(value): store objects in a sorted vector with inline keys",
+      "updatedAt": "2026-10-30T18:17:05+00:00"
+    },
+    {
+      "createdAt": "2026-10-24T15:31:59+00:00",
+      "number": 2012,
+      "title": "feat(stdlib): add `log10` and `pow` functions",
+      "updatedAt": "2026-10-24T15:41:42+00:00"
+    },
+    {
+      "createdAt": "2026-10-31T17:17:21+00:00",
+      "number": 2032,
+      "title": "enhancement(compiler): cache structurally-constant object literals",
+      "updatedAt": "2026-11-03T11:12:53+00:00"
+    },
+    {
+      "createdAt": "2026-11-02T12:50:32+00:00",
+      "number": 2036,
+      "title": "enhancement(stdlib): accept an array of formats in parse_timestamp",
+      "updatedAt": "2026-11-02T13:49:10+00:00"
+    },
+    {
+      "createdAt": "2026-11-03T11:47:56+00:00",
+      "number": 2037,
+      "title": "enhancement(stdlib): fold constant `get` value arguments at compile time",
+      "updatedAt": "2026-11-03T11:51:06+00:00"
+    },
+    {
+      "createdAt": "2026-11-03T13:26:57+00:00",
+      "number": 2038,
+      "title": "chore(deps): consolidate wasm getrandom overrides",
+      "updatedAt": "2026-11-03T13:31:37+00:00"
+    }
+  ],
+  "repository": "vectordotdev/vrl",
+  "reviewedPrs": 8,
+  "schemaVersion": 1,
+  "unknownPrs": 0
+}
