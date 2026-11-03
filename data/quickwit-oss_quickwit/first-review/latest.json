@@ -1,0 +1,511 @@
+{
+  "collectedAt": "2026-11-03T14:10:04.328687+00:00",
+  "excludedAwaitingAuthorPrs": 0,
+  "excludedBotPrs": 11,
+  "excludedDrafts": 41,
+  "openPrs": 183,
+  "prs": [
+    {
+      "createdAt": "2023-06-19T08:44:17+00:00",
+      "number": 3562,
+      "title": "wasm RFC",
+      "updatedAt": "2025-09-23T13:16:07+00:00"
+    },
+    {
+      "createdAt": "2024-01-02T16:15:43+00:00",
+      "number": 4341,
+      "title": "Add query matching keywords in elasticsearch response.",
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "createdAt": "2024-07-31T15:01:19+00:00",
+      "number": 5282,
+      "title": "Avoid deserializing QueryAST for every split.",
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "createdAt": "2024-07-31T21:26:20+00:00",
+      "number": 5285,
+      "title": "docs: using-vector.md: Delete host field introduced by Vector 0.40.0.",
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "createdAt": "2024-10-02T10:15:43+00:00",
+      "number": 5469,
+      "title": "make some cache kind configureable",
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "createdAt": "2024-10-15T15:36:33+00:00",
+      "number": 5492,
+      "title": "fix(query-documentation): typo range query",
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "createdAt": "2024-11-15T15:24:44+00:00",
+      "number": 5550,
+      "title": "send extended_bounds in ms",
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "createdAt": "2024-11-20T16:12:45+00:00",
+      "number": 5557,
+      "title": "add histogram to more core s3 calls",
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "createdAt": "2025-06-22T13:45:44+00:00",
+      "number": 5812,
+      "title": "Fix typos in comments",
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "createdAt": "2025-07-16T10:32:10+00:00",
+      "number": 5844,
+      "title": "Update metric docs",
+      "updatedAt": "2025-12-08T10:50:11+00:00"
+    },
+    {
+      "createdAt": "2025-09-13T04:34:35+00:00",
+      "number": 5894,
+      "title": "Add missing max_file_descriptors option to split cache configuration",
+      "updatedAt": "2025-09-29T17:03:57+00:00"
+    },
+    {
+      "createdAt": "2025-10-11T03:51:24+00:00",
+      "number": 5931,
+      "title": "feat: https://github.com/quickwit-oss/quickwit/issues/470",
+      "updatedAt": "2025-10-11T03:51:24+00:00"
+    },
+    {
+      "createdAt": "2025-10-29T13:08:06+00:00",
+      "number": 5957,
+      "title": "Add composite aggregation",
+      "updatedAt": "2026-10-22T23:01:43+00:00"
+    },
+    {
+      "createdAt": "2025-12-09T02:07:48+00:00",
+      "number": 6013,
+      "title": "Update dashboard and docs for split_search_outcome metric",
+      "updatedAt": "2026-10-22T23:00:43+00:00"
+    },
+    {
+      "createdAt": "2025-12-09T14:35:33+00:00",
+      "number": 6015,
+      "title": "UI editable config",
+      "updatedAt": "2026-10-22T23:00:41+00:00"
+    },
+    {
+      "createdAt": "2026-03-09T19:59:32+00:00",
+      "number": 6196,
+      "title": "fix: Properly shutdown quickwit-serve when subcomponents panic or otherwise error.",
+      "updatedAt": "2026-10-22T22:57:45+00:00"
+    },
+    {
+      "createdAt": "2026-04-05T17:22:59+00:00",
+      "number": 6265,
+      "title": "feat: add Nix flake with package, devShell, and NixOS module",
+      "updatedAt": "2026-10-22T22:56:36+00:00"
+    },
+    {
+      "createdAt": "2026-04-15T12:20:06+00:00",
+      "number": 6309,
+      "title": "Make fast-field normalizers truncate large token instead of dropping",
+      "updatedAt": "2026-10-22T22:55:50+00:00"
+    },
+    {
+      "createdAt": "2026-04-22T13:16:08+00:00",
+      "number": 6331,
+      "title": "Reduce mem usage lookups when indexing",
+      "updatedAt": "2026-10-22T22:55:25+00:00"
+    },
+    {
+      "createdAt": "2026-05-16T08:29:05+00:00",
+      "number": 6438,
+      "title": "fix(cli): correct merge command description",
+      "updatedAt": "2026-10-22T22:53:17+00:00"
+    },
+    {
+      "createdAt": "2026-06-03T07:46:52+00:00",
+      "number": 6487,
+      "title": "fix(config): set MD5 checksums for DigitalOcean and GCS flavors since they don't support CRC32C, and explicitly set CRC32C for MinIO",
+      "updatedAt": "2026-10-22T22:52:20+00:00"
+    },
+    {
+      "createdAt": "2026-06-29T14:47:29+00:00",
+      "number": 6561,
+      "title": "feat(pulsar): support distributed indexing",
+      "updatedAt": "2026-10-22T22:50:50+00:00"
+    },
+    {
+      "createdAt": "2026-07-07T14:42:43+00:00",
+      "number": 6581,
+      "title": "enforce retention at query time",
+      "updatedAt": "2026-10-22T22:50:30+00:00"
+    },
+    {
+      "createdAt": "2026-07-09T15:34:57+00:00",
+      "number": 6585,
+      "title": "control-plane: warn when the scheduler is stuck reapplying a non-converging plan",
+      "updatedAt": "2026-10-22T22:50:25+00:00"
+    },
+    {
+      "createdAt": "2026-07-11T03:38:57+00:00",
+      "number": 6590,
+      "title": "Add IPFS storage backend support",
+      "updatedAt": "2026-10-22T22:50:20+00:00"
+    },
+    {
+      "createdAt": "2026-07-13T10:39:01+00:00",
+      "number": 6599,
+      "title": "ingest: batch WAL truncation in the shard-positions gossip handler",
+      "updatedAt": "2026-10-22T22:50:14+00:00"
+    },
+    {
+      "createdAt": "2026-07-13T16:07:31+00:00",
+      "number": 6602,
+      "title": "control-plane: rebuild the plan when the scheduler is stuck reapplying a non-converging plan",
+      "updatedAt": "2026-10-22T22:50:10+00:00"
+    },
+    {
+      "createdAt": "2026-07-20T07:29:10+00:00",
+      "number": 6618,
+      "title": "use macro with cache to load env",
+      "updatedAt": "2026-10-22T22:49:59+00:00"
+    },
+    {
+      "createdAt": "2026-07-24T08:30:08+00:00",
+      "number": 6622,
+      "title": "Don't log NotFound as a critical error in delete_evicted_splits",
+      "updatedAt": "2026-10-22T22:49:54+00:00"
+    },
+    {
+      "createdAt": "2026-07-25T15:15:58+00:00",
+      "number": 6629,
+      "title": "Fix UI dependency vulnerabilities",
+      "updatedAt": "2026-10-22T22:49:52+00:00"
+    },
+    {
+      "createdAt": "2026-07-27T13:36:35+00:00",
+      "number": 6635,
+      "title": "fix(storage): skip caching splits larger than the split cache budget",
+      "updatedAt": "2026-10-22T22:49:44+00:00"
+    },
+    {
+      "createdAt": "2026-07-31T14:46:59+00:00",
+      "number": 6647,
+      "title": "indexing: label published split docs by publication type",
+      "updatedAt": "2026-10-22T22:49:25+00:00"
+    },
+    {
+      "createdAt": "2026-08-06T14:33:48+00:00",
+      "number": 6666,
+      "title": "fix: sovereign Azure storage token scopes for managed identity",
+      "updatedAt": "2026-11-03T10:41:37+00:00"
+    },
+    {
+      "createdAt": "2026-08-13T08:05:39+00:00",
+      "number": 6687,
+      "title": "fix(storage): re-read the Azure federated token file on every exchange",
+      "updatedAt": "2026-10-22T22:48:46+00:00"
+    },
+    {
+      "createdAt": "2026-08-25T13:45:02+00:00",
+      "number": 6720,
+      "title": "Take into account key size for MemorySizedCache",
+      "updatedAt": "2026-10-22T22:48:14+00:00"
+    },
+    {
+      "createdAt": "2026-08-28T12:47:15+00:00",
+      "number": 6732,
+      "title": "ui(deps): remove unused dep @testing-library/user-event",
+      "updatedAt": "2026-10-22T22:48:05+00:00"
+    },
+    {
+      "createdAt": "2026-08-28T17:12:11+00:00",
+      "number": 6733,
+      "title": "feat(ui): create index",
+      "updatedAt": "2026-10-22T22:48:03+00:00"
+    },
+    {
+      "createdAt": "2026-08-29T10:21:11+00:00",
+      "number": 6747,
+      "title": "feat(api): indices as alias for indexes",
+      "updatedAt": "2026-10-22T22:47:51+00:00"
+    },
+    {
+      "createdAt": "2026-08-31T14:15:58+00:00",
+      "number": 6750,
+      "title": "Preserve aggregation candidates during root merging",
+      "updatedAt": "2026-10-22T22:47:44+00:00"
+    },
+    {
+      "createdAt": "2026-08-31T15:19:24+00:00",
+      "number": 6751,
+      "title": "docs(rest-api): add sort_by example",
+      "updatedAt": "2026-10-22T22:47:42+00:00"
+    },
+    {
+      "createdAt": "2026-09-04T18:42:54+00:00",
+      "number": 6768,
+      "title": "feat(indexer): drain indexing pipelines on planned teardowns",
+      "updatedAt": "2026-10-23T09:39:01+00:00"
+    },
+    {
+      "createdAt": "2026-09-06T21:25:36+00:00",
+      "number": 6769,
+      "title": "Reset ingester shards periodically while running",
+      "updatedAt": "2026-10-22T22:47:20+00:00"
+    },
+    {
+      "createdAt": "2026-09-08T03:37:02+00:00",
+      "number": 6778,
+      "title": "do not prune intermediate aggregation results at the root",
+      "updatedAt": "2026-10-22T22:47:10+00:00"
+    },
+    {
+      "createdAt": "2026-09-08T04:30:08+00:00",
+      "number": 6779,
+      "title": "reduce the multipart part size on the opendal backends",
+      "updatedAt": "2026-10-22T22:47:08+00:00"
+    },
+    {
+      "createdAt": "2026-09-09T10:16:36+00:00",
+      "number": 6788,
+      "title": "limit tag pruning to where it works",
+      "updatedAt": "2026-10-22T22:47:03+00:00"
+    },
+    {
+      "createdAt": "2026-09-09T14:36:58+00:00",
+      "number": 6789,
+      "title": "Skip split searches for match_none queries",
+      "updatedAt": "2026-10-22T22:47:01+00:00"
+    },
+    {
+      "createdAt": "2026-09-15T07:17:30+00:00",
+      "number": 6801,
+      "title": "fix(otlp): return application/x-protobuf response format on otlp endpoints",
+      "updatedAt": "2026-10-22T22:46:45+00:00"
+    },
+    {
+      "createdAt": "2026-09-16T07:42:34+00:00",
+      "number": 6803,
+      "title": "fix(metastore): keep the shard table entry of sources holding no shard",
+      "updatedAt": "2026-10-22T22:46:42+00:00"
+    },
+    {
+      "createdAt": "2026-09-17T07:45:13+00:00",
+      "number": 6805,
+      "title": "Support JSON subfields in list terms",
+      "updatedAt": "2026-10-22T22:46:38+00:00"
+    },
+    {
+      "createdAt": "2026-09-23T04:13:56+00:00",
+      "number": 6817,
+      "title": "fix(datetime): parse `e` as the ISO day-of-week, Monday is 1",
+      "updatedAt": "2026-10-22T22:46:22+00:00"
+    },
+    {
+      "createdAt": "2026-09-23T12:10:03+00:00",
+      "number": 6818,
+      "title": "Track affinity and retries on search_split_search_outcome metric",
+      "updatedAt": "2026-10-22T22:46:20+00:00"
+    },
+    {
+      "createdAt": "2026-09-26T13:59:59+00:00",
+      "number": 6826,
+      "title": "feat(storage): add conditional writes for compare-and-swap",
+      "updatedAt": "2026-10-22T22:46:05+00:00"
+    },
+    {
+      "createdAt": "2026-09-28T12:24:39+00:00",
+      "number": 6828,
+      "title": "Move indexer-specific gossip to gRPC",
+      "updatedAt": "2026-10-22T22:46:03+00:00"
+    },
+    {
+      "createdAt": "2026-09-28T15:42:50+00:00",
+      "number": 6829,
+      "title": "fix(es-api): reject unsupported sort missing values instead of ignoring them",
+      "updatedAt": "2026-10-22T22:46:01+00:00"
+    },
+    {
+      "createdAt": "2026-09-28T16:24:40+00:00",
+      "number": 6830,
+      "title": "Add search_after cursor paging to the native search API",
+      "updatedAt": "2026-10-22T22:46:00+00:00"
+    },
+    {
+      "createdAt": "2026-09-28T16:42:31+00:00",
+      "number": 6831,
+      "title": "Make resource_attributes and span_status fast fields in otel-traces index",
+      "updatedAt": "2026-10-22T22:45:58+00:00"
+    },
+    {
+      "createdAt": "2026-09-29T11:59:19+00:00",
+      "number": 6845,
+      "title": "fix(metastore): do not hold the state guard across a lazy index load",
+      "updatedAt": "2026-10-22T22:45:44+00:00"
+    },
+    {
+      "createdAt": "2026-09-30T10:11:36+00:00",
+      "number": 6850,
+      "title": "fix(ingest): do not track a persist that appended no record",
+      "updatedAt": "2026-10-22T22:45:36+00:00"
+    },
+    {
+      "createdAt": "2026-09-30T11:41:57+00:00",
+      "number": 6851,
+      "title": "fix: Accept empty OTLP logs exports as a no-op",
+      "updatedAt": "2026-10-22T22:45:34+00:00"
+    },
+    {
+      "createdAt": "2026-10-01T05:55:39+00:00",
+      "number": 6857,
+      "title": "fix(control-plane): do not hold the create-index reply for the plan rebuild",
+      "updatedAt": "2026-10-22T22:45:26+00:00"
+    },
+    {
+      "createdAt": "2026-10-02T17:17:34+00:00",
+      "number": 6864,
+      "title": "fix(ingest): Report sources without open shards in ingester persist responses",
+      "updatedAt": "2026-10-22T22:45:15+00:00"
+    },
+    {
+      "createdAt": "2026-10-09T15:19:45+00:00",
+      "number": 6894,
+      "title": "Remove replication remnant in control plane",
+      "updatedAt": "2026-10-22T22:44:39+00:00"
+    },
+    {
+      "createdAt": "2026-10-09T15:21:52+00:00",
+      "number": 6895,
+      "title": "Refactor out legacy parts of ingest controller",
+      "updatedAt": "2026-10-22T22:44:38+00:00"
+    },
+    {
+      "createdAt": "2026-10-09T17:49:24+00:00",
+      "number": 6896,
+      "title": "Process indexing tasks from new RPC",
+      "updatedAt": "2026-10-22T22:44:36+00:00"
+    },
+    {
+      "createdAt": "2026-10-09T22:51:15+00:00",
+      "number": 6897,
+      "title": "New scaling controller and logic",
+      "updatedAt": "2026-10-22T22:44:34+00:00"
+    },
+    {
+      "createdAt": "2026-10-12T11:02:17+00:00",
+      "number": 6900,
+      "title": "feat(azure): add support for user-assigned azure managed identity",
+      "updatedAt": "2026-10-22T22:44:31+00:00"
+    },
+    {
+      "createdAt": "2026-10-12T11:49:32+00:00",
+      "number": 6901,
+      "title": "Cache regex and wildcard hitsets during warmup",
+      "updatedAt": "2026-10-22T22:44:29+00:00"
+    },
+    {
+      "createdAt": "2026-10-17T05:29:33+00:00",
+      "number": 6908,
+      "title": "fix(rest-client): only send the commit mode with the last ingest batch",
+      "updatedAt": "2026-10-31T13:56:28+00:00"
+    },
+    {
+      "createdAt": "2026-10-17T19:46:49+00:00",
+      "number": 6909,
+      "title": "feat: metastore recovery cli",
+      "updatedAt": "2026-10-22T22:44:17+00:00"
+    },
+    {
+      "createdAt": "2026-10-19T18:54:02+00:00",
+      "number": 6910,
+      "title": "Migrate Azure blob storage to the 1.0 Azure SDK",
+      "updatedAt": "2026-10-29T20:25:05+00:00"
+    },
+    {
+      "createdAt": "2026-10-19T20:51:31+00:00",
+      "number": 6912,
+      "title": "Limit decompressed body size",
+      "updatedAt": "2026-10-22T22:44:11+00:00"
+    },
+    {
+      "createdAt": "2026-10-20T08:19:00+00:00",
+      "number": 6913,
+      "title": "feat(indexing): measure pipeline stage durations and waits",
+      "updatedAt": "2026-10-22T22:44:09+00:00"
+    },
+    {
+      "createdAt": "2026-10-20T10:44:40+00:00",
+      "number": 6914,
+      "title": "aws: use HTTP/1.1 for the S3 HTTP client to restore GCS throughput",
+      "updatedAt": "2026-10-22T22:44:07+00:00"
+    },
+    {
+      "createdAt": "2026-10-22T10:25:03+00:00",
+      "number": 6922,
+      "title": "Add datadog_v2 tokenizer with dot-separated parts",
+      "updatedAt": "2026-10-22T22:43:53+00:00"
+    },
+    {
+      "createdAt": "2026-10-22T17:27:34+00:00",
+      "number": 6927,
+      "title": "Restore anonymous usage telemetry",
+      "updatedAt": "2026-11-02T19:24:29+00:00"
+    },
+    {
+      "createdAt": "2026-10-23T01:10:30+00:00",
+      "number": 6933,
+      "title": "Update doc examples/tutorials using the dynamic mappings",
+      "updatedAt": "2026-10-23T01:13:17+00:00"
+    },
+    {
+      "createdAt": "2026-10-23T01:10:59+00:00",
+      "number": 6934,
+      "title": "Add docs on tokenizers, filters and tokenizer API",
+      "updatedAt": "2026-10-23T01:12:50+00:00"
+    },
+    {
+      "createdAt": "2026-10-27T15:43:06+00:00",
+      "number": 6954,
+      "title": "Refactor pipeline schedule",
+      "updatedAt": "2026-10-27T16:19:59+00:00"
+    },
+    {
+      "createdAt": "2026-10-27T16:55:39+00:00",
+      "number": 6955,
+      "title": "feat(api): allow creating an index without the default sources",
+      "updatedAt": "2026-10-28T17:22:51+00:00"
+    },
+    {
+      "createdAt": "2026-10-28T23:20:15+00:00",
+      "number": 6957,
+      "title": "fix(search): honor multi_match scoring modes",
+      "updatedAt": "2026-10-28T23:23:39+00:00"
+    },
+    {
+      "createdAt": "2026-10-31T10:42:23+00:00",
+      "number": 6967,
+      "title": "Fold serialization and packaging into the Indexer",
+      "updatedAt": "2026-11-02T09:45:36+00:00"
+    },
+    {
+      "createdAt": "2026-11-02T14:28:16+00:00",
+      "number": 6979,
+      "title": "feat(ui): make index explorer collapsible",
+      "updatedAt": "2026-11-02T14:31:04+00:00"
+    },
+    {
+      "createdAt": "2026-11-03T10:22:56+00:00",
+      "number": 6984,
+      "title": "fix: start shard publication tracking on every ingest router node",
+      "updatedAt": "2026-11-03T10:25:32+00:00"
+    }
+  ],
+  "repository": "quickwit-oss/quickwit",
+  "reviewedPrs": 48,
+  "schemaVersion": 1,
+  "unknownPrs": 0
+}

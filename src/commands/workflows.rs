@@ -1,8 +1,8 @@
 /// High-level workflow commands that orchestrate multiple sub-commands,
 /// replacing fetch_all_slow.sh, generate_all.sh, and purge_all.sh.
 use crate::commands::{
-    build_db, fetch_discussions, fetch_issue_interest, fetch_issues, generate_charts, generate_summaries,
-    purge, push_metrics,
+    build_db, fetch_discussions, fetch_first_review, fetch_issue_interest, fetch_issues, generate_charts,
+    generate_summaries, purge, push_metrics,
 };
 use crate::config::{Config, Repo};
 use anyhow::Result;
@@ -30,6 +30,7 @@ fn fetch_all_with_config(config: &Config, since: Option<&str>) -> Result<()> {
     fetch_issues::run_with_client(&client, config, since)?;
     fetch_discussions::run_with_client(&client, config, since)?;
     fetch_issue_interest::run(config)?;
+    fetch_first_review::run(config)?;
     Ok(())
 }
 

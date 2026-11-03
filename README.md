@@ -74,6 +74,7 @@ Fetch:
   fetch-issues       Fetch all issues/PRs for a repository
   fetch-discussions  Fetch all discussions for a repository
   fetch-issue-interest  Snapshot open-issue reactions and distinct commenters
+  fetch-first-review  Snapshot open PRs awaiting a first human review
   fetch-labels       Fetch all labels for a repository
 
 Pipeline:
@@ -386,6 +387,30 @@ timestamp. Closed issues disappear from the next complete snapshot. A failed
 request leaves the previous snapshot intact. Snapshots contain counts and issue
 titles, not comment bodies or commenter identities, and retain canonical key order.
 
+
+### First-review snapshots
+
+`fetch-first-review --repo owner/name` writes
+`data/owner_name/first-review/latest.json` after reading every open PR page and
+all submitted review pages for eligible PRs. It also runs in `fetch-all`,
+regardless of `--since`. It accepts `GITHUB_TOKEN` or reuses authenticated `gh`
+without extracting its token.
+
+The queue contains PRs with no submitted review from another human account.
+Approvals, change requests, comments submitted as reviews, and dismissed reviews
+all count as having received a first review. Pending reviews, bot reviews, self
+reviews and general conversation comments do not count. Drafts, bot-authored
+PRs and PRs marked `meta:awaiting author` (including the historical colon-space
+spelling) are excluded. Unavailable author/reviewer identities are reported as
+unknown when a first human review cannot be established, rather than treated as
+unreviewed. Age is measured from creation, including time in draft; readiness
+transitions are not reconstructed.
+
+Snapshots save queue titles and dates plus coverage counts, without review bodies
+or reviewer identities. Failed or malformed pages leave the previous snapshot
+intact. PRs are saved in number order with canonical object keys; consumers can
+sort by creation date to show the oldest first. The initial snapshots cover
+Vector, VRL, Quickwit and Tantivy.
 
 ### Discussion labels
 
