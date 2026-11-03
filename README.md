@@ -170,6 +170,8 @@ Fetches merge directly into the committed snapshot layout:
 Use `--since 30d` (or another ISO/relative value) for an incremental refresh. Fresh records replace matching record numbers, while older snapshot data is retained.
 All saved JSON uses alphabetical object keys, including nested objects, so response key order cannot create diffs. Array order is unchanged.
 
+Issue/PR and discussion fetches reject HTTP or GraphQL failures, malformed API records, and invalid or repeated pagination cursors. Each command completes its requested pages, including all issue/PR label pages, before writing its snapshots. Issues use the API’s `since` filter. PRs and discussions traverse every page in creation order and apply the timestamp cutoff locally; the API’s update ordering does not consistently match its exposed timestamps. `fetch-all` still runs and saves its collectors sequentially.
+
 ## 2. Generate DB, summaries, and charts
 
 ```shell

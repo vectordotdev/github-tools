@@ -1,16 +1,14 @@
-use super::sorted_json;
+use super::{graphql_fetch, sorted_json};
 use crate::config::Config;
-use anyhow::{Context, Result};
+use anyhow::{Context, Result, bail, ensure};
 use chrono::{DateTime, Months, Utc};
+use graphql_fetch::{PAGE_SIZE, nullable_timestamp, required, string, timestamp};
 use reqwest::blocking::Client;
-use serde_json::{json, Value};
-use std::collections::{hash_map::DefaultHasher, BTreeMap};
+use serde_json::{Value, json};
+use std::collections::{BTreeMap, HashSet, hash_map::DefaultHasher};
 use std::fs;
 use std::hash::{Hash, Hasher};
 use std::path::Path;
-
-const GRAPHQL_URL: &str = "https://api.github.com/graphql";
-const PAGE_SIZE: u32 = 100;
 
 const ISSUES_QUERY: &str = r#"
 query($owner: String!, $name: String!, $first: Int!, $after: String) {
@@ -21,6 +19,7 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
         hasNextPage
       }
       nodes {
+        id
         databaseId
         number
         title
@@ -35,6 +34,7 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
           name
         }
         labels(first: 100) {
+          pageInfo { hasNextPage endCursor }
           nodes {
             id
             name
@@ -57,6 +57,7 @@ query($owner: String!, $name: String!, $first: Int!, $after: String, $since: Dat
         hasNextPage
       }
       nodes {
+        id
         databaseId
         number
         title
@@ -71,6 +72,7 @@ query($owner: String!, $name: String!, $first: Int!, $after: String, $since: Dat
           name
         }
         labels(first: 100) {
+          pageInfo { hasNextPage endCursor }
           nodes {
             id
             name
@@ -93,6 +95,7 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
         hasNextPage
       }
       nodes {
+        id
         databaseId
         number
         title
@@ -105,6 +108,7 @@ query($owner: String!, $name: String!, $first: Int!, $after: String) {
           login
         }
         labels(first: 100) {
+          pageInfo { hasNextPage endCursor }
           nodes {
             id
             name
@@ -123,45 +127,112 @@ pub fn run(config: &Config, since: Option<&str>) -> Result<()> {
 }
 
 pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) -> Result<()> {
+    let out_dir = Path::new("data")
+        .join(format!("{}_{}", config.org, config.repo))
+        .join("issues");
+    run_with_request(config, since, &out_dir, |query, variables| {
+        graphql_fetch::request(client, config, query, variables)
+    })
+}
+
+fn run_with_request(
+    config: &Config,
+    since: Option<&str>,
+    out_dir: &Path,
+    mut request: impl FnMut(&str, Value) -> Result<Value>,
+) -> Result<()> {
     let since_ts = since.map(parse_since).transpose()?;
+    if let Some(since) = &since_ts {
+        DateTime::parse_from_rfc3339(since).context("Invalid --since timestamp")?;
+    }
     let mut all_items = Vec::new();
-
-    println!("Fetching issues via GraphQL{}...",
-        since_ts.as_ref().map(|s| format!(" (since {s})")).unwrap_or_default());
-    let issues = if let Some(ref ts) = since_ts {
-        fetch_paginated_since(client, config, ISSUES_SINCE_QUERY, "issues", ts)?
-    } else {
-        fetch_paginated(client, config, ISSUES_QUERY, "issues")?
-    };
-    println!("Total issues fetched: {}", issues.len());
-    for node in issues {
-        all_items.push(to_rest_format(&node, false));
+    let mut node_ids = HashSet::new();
+    for (field, is_pr) in [("issues", false), ("pullRequests", true)] {
+        let query = if is_pr {
+            PRS_QUERY
+        } else if since_ts.is_some() {
+            ISSUES_SINCE_QUERY
+        } else {
+            ISSUES_QUERY
+        };
+        let scope = format!("{}/{} {field}", config.org, config.repo);
+        let items = graphql_fetch::paginate(
+            &scope,
+            if is_pr { since_ts.as_deref() } else { None },
+            |after| {
+                let mut variables = json!({"owner": config.org, "name": config.repo, "first": PAGE_SIZE, "after": after});
+                if !is_pr && let Some(since) = &since_ts {
+                    variables["since"] = json!(since);
+                }
+                graphql_fetch::connection(request(query, variables)?, &["repository", field])
+            },
+            |node| {
+                let rest = to_rest_format(&node, is_pr)?;
+                Ok((node, rest))
+            },
+        )?;
+        println!("Total {field} fetched: {}", items.len());
+        for (node, mut rest) in items {
+            ensure!(
+                node_ids.insert(string(&node, "id")?.to_owned()),
+                "Issue and PR node IDs overlap in fetched repository"
+            );
+            if graphql_fetch::page(&node["labels"])?.next_cursor.is_some() {
+                let mut first_page = Some(node["labels"].clone());
+                let scope = format!("{scope} #{} labels", rest["number"]);
+                let labels = graphql_fetch::paginate(
+                    &scope,
+                    None,
+                    |after| {
+                        if let Some(first) = first_page.take() {
+                            return Ok(first);
+                        }
+                        graphql_fetch::connection(
+                            request(
+                                LABELS_QUERY,
+                                json!({"id": node["id"], "first": PAGE_SIZE, "after": after}),
+                            )?,
+                            &["node", "labels"],
+                        )
+                    },
+                    |label| label_to_rest(&label),
+                )?;
+                rest["labels"] = json!(labels);
+            }
+            all_items.push(rest);
+        }
     }
-
-    println!("Fetching pull requests via GraphQL{}...",
-        since_ts.as_ref().map(|s| format!(" (since {s})")).unwrap_or_default());
-    let prs = if let Some(ref ts) = since_ts {
-        fetch_paginated_since_prs(client, config, PRS_QUERY, "pullRequests", ts)?
-    } else {
-        fetch_paginated(client, config, PRS_QUERY, "pullRequests")?
-    };
-    println!("Total pull requests fetched: {}", prs.len());
-    for node in prs {
-        all_items.push(to_rest_format(&node, true));
+    let mut numbers = HashSet::new();
+    for item in &all_items {
+        let number = required(item, "number")?
+            .as_u64()
+            .context("Invalid converted record number")?;
+        ensure!(
+            numbers.insert(number),
+            "Issue and PR numbers overlap in fetched repository"
+        );
     }
-
-    println!("Total issues/PRs fetched: {}", all_items.len());
-
-    let repo_prefix = format!("{}_{}", config.org, config.repo);
-    let out_dir = Path::new("data").join(&repo_prefix).join("issues");
-    fs::create_dir_all(&out_dir)?;
-    let written = write_year_bucketed(&all_items, &out_dir, "created_at")?;
+    // No directories or snapshots are touched until both collections and all nested pages succeed.
+    fs::create_dir_all(out_dir)?;
+    let written = write_year_bucketed(&all_items, out_dir, "created_at")?;
     for (year, count) in &written {
         println!("  {year}.json: wrote {count} items");
     }
-
     Ok(())
 }
+
+const LABELS_QUERY: &str = r#"
+query($id: ID!, $first: Int!, $after: String) {
+  node(id: $id) {
+    ... on Labelable {
+      labels(first: $first, after: $after) {
+        pageInfo { hasNextPage endCursor }
+        nodes { id name color description }
+      }
+    }
+  }
+}
+"#;
 
 /// Parse a --since value: ISO date (2026-01-01), YYYY-MM (2026-01), or relative (3m, 1y, 30d).
 pub fn parse_since(input: &str) -> Result<String> {
@@ -202,7 +273,11 @@ fn parse_since_at(input: &str, now: DateTime<Utc>) -> Result<String> {
 }
 
 /// Append items to year-bucketed JSON files based on a date field.
-fn write_year_bucketed(items: &[Value], out_dir: &Path, date_field: &str) -> Result<BTreeMap<String, usize>> {
+fn write_year_bucketed(
+    items: &[Value],
+    out_dir: &Path,
+    date_field: &str,
+) -> Result<BTreeMap<String, usize>> {
     let mut by_year: BTreeMap<String, Vec<Value>> = BTreeMap::new();
     for item in items {
         let year = item[date_field]
@@ -222,7 +297,8 @@ fn write_year_bucketed(items: &[Value], out_dir: &Path, date_field: &str) -> Res
         let mut by_number: std::collections::HashMap<u64, Value> = if path.exists() {
             let json = fs::read_to_string(&path)?;
             let existing: Vec<Value> = serde_json::from_str(&json).unwrap_or_default();
-            existing.into_iter()
+            existing
+                .into_iter()
                 .filter_map(|v| v["number"].as_u64().map(|n| (n, v)))
                 .collect()
         } else {
@@ -245,300 +321,81 @@ fn write_year_bucketed(items: &[Value], out_dir: &Path, date_field: &str) -> Res
     Ok(counts)
 }
 
-fn fetch_paginated(
-    client: &Client,
-    config: &Config,
-    query: &str,
-    field_name: &str,
-) -> Result<Vec<Value>> {
-    let mut all_nodes = Vec::new();
-    let mut after: Option<String> = None;
-    let mut page = 1;
-
-    loop {
-        println!("Fetching page {page} (batch size: {PAGE_SIZE}, type: {field_name})...");
-
-        let body = json!({
-            "query": query,
-            "variables": {
-                "owner": config.org,
-                "name": config.repo,
-                "first": PAGE_SIZE,
-                "after": after,
-            }
-        });
-
-        let response = client
-            .post(GRAPHQL_URL)
-            .header("Authorization", format!("Bearer {}", config.github_token))
-            .header("Accept", "application/vnd.github+json")
-            .header("User-Agent", "github-tools")
-            .json(&body)
-            .send()
-            .context("Failed to send GraphQL request")?;
-
-        if !response.status().is_success() {
-            let status = response.status();
-            let text = response.text().unwrap_or_default();
-            eprintln!("Warning: GraphQL request failed ({status}): {text}");
-            break;
+/// Convert only complete, validated API records to the existing snapshot shape.
+fn to_rest_format(node: &Value, is_pr: bool) -> Result<Value> {
+    let id = required(node, "databaseId")?
+        .as_i64()
+        .filter(|id| *id > 0)
+        .context("Invalid databaseId")?;
+    let number = required(node, "number")?
+        .as_u64()
+        .filter(|number| *number > 0)
+        .context("Invalid number")?;
+    let title = string(node, "title")?;
+    let state = match string(node, "state")? {
+        "OPEN" => "open",
+        "CLOSED" => "closed",
+        "MERGED" if is_pr => "closed",
+        state => bail!(
+            "Invalid {} state {state}",
+            if is_pr { "PR" } else { "issue" }
+        ),
+    };
+    timestamp(node, "createdAt")?;
+    timestamp(node, "updatedAt")?;
+    nullable_timestamp(node, "closedAt")?;
+    let author = required(node, "author")?;
+    let login = if author.is_null() {
+        None
+    } else {
+        Some(string(author, "login")?)
+    };
+    let issue_type = if is_pr {
+        None
+    } else {
+        let value = required(node, "issueType")?;
+        if value.is_null() {
+            None
+        } else {
+            Some(string(value, "name")?)
         }
-
-        let result: Value = response.json().context("Failed to parse GraphQL response")?;
-
-        if let Some(errors) = result.get("errors") {
-            eprintln!("Warning: GraphQL errors: {errors}");
-            break;
-        }
-
-        let connection = &result["data"]["repository"][field_name];
-        let nodes = connection["nodes"]
-            .as_array()
-            .context("Missing nodes in GraphQL response")?;
-        let has_next = connection["pageInfo"]["hasNextPage"]
-            .as_bool()
-            .unwrap_or(false);
-        let end_cursor = connection["pageInfo"]["endCursor"]
-            .as_str()
-            .map(|s| s.to_string());
-
-        all_nodes.extend(nodes.iter().cloned());
-        println!(
-            "Page {page} fetched. Total collected: {}",
-            all_nodes.len()
-        );
-
-        if !has_next {
-            println!("Reached the last page.");
-            break;
-        }
-        after = end_cursor;
-        page += 1;
-    }
-
-    Ok(all_nodes)
-}
-
-/// Like fetch_paginated but passes a $since variable for issues filterBy.
-fn fetch_paginated_since(
-    client: &Client,
-    config: &Config,
-    query: &str,
-    field_name: &str,
-    since: &str,
-) -> Result<Vec<Value>> {
-    let mut all_nodes = Vec::new();
-    let mut after: Option<String> = None;
-    let mut page = 1;
-
-    loop {
-        println!("Fetching page {page} (batch size: {PAGE_SIZE}, type: {field_name})...");
-
-        let body = json!({
-            "query": query,
-            "variables": {
-                "owner": config.org,
-                "name": config.repo,
-                "first": PAGE_SIZE,
-                "after": after,
-                "since": since,
-            }
-        });
-
-        let response = client
-            .post(GRAPHQL_URL)
-            .header("Authorization", format!("Bearer {}", config.github_token))
-            .header("Accept", "application/vnd.github+json")
-            .header("User-Agent", "github-tools")
-            .json(&body)
-            .send()
-            .context("Failed to send GraphQL request")?;
-
-        if !response.status().is_success() {
-            let status = response.status();
-            let text = response.text().unwrap_or_default();
-            eprintln!("Warning: GraphQL request failed ({status}): {text}");
-            break;
-        }
-
-        let result: Value = response.json().context("Failed to parse GraphQL response")?;
-
-        if let Some(errors) = result.get("errors") {
-            eprintln!("Warning: GraphQL errors: {errors}");
-            break;
-        }
-
-        let connection = &result["data"]["repository"][field_name];
-        let nodes = connection["nodes"]
-            .as_array()
-            .context("Missing nodes in GraphQL response")?;
-        let has_next = connection["pageInfo"]["hasNextPage"]
-            .as_bool()
-            .unwrap_or(false);
-        let end_cursor = connection["pageInfo"]["endCursor"]
-            .as_str()
-            .map(|s| s.to_string());
-
-        all_nodes.extend(nodes.iter().cloned());
-        println!(
-            "Page {page} fetched. Total collected: {}",
-            all_nodes.len()
-        );
-
-        if !has_next {
-            println!("Reached the last page.");
-            break;
-        }
-        after = end_cursor;
-        page += 1;
-    }
-
-    Ok(all_nodes)
-}
-
-/// For PRs (no filterBy support): order by UPDATED_AT DESC and stop when we hit items older than since.
-fn fetch_paginated_since_prs(
-    client: &Client,
-    config: &Config,
-    query: &str,
-    field_name: &str,
-    since: &str,
-) -> Result<Vec<Value>> {
-    // Swap orderBy to UPDATED_AT for since mode
-    let query = query.replace(
-        "orderBy: {field: CREATED_AT, direction: DESC}",
-        "orderBy: {field: UPDATED_AT, direction: DESC}",
-    );
-    let mut all_nodes = Vec::new();
-    let mut after: Option<String> = None;
-    let mut page = 1;
-
-    loop {
-        println!("Fetching page {page} (batch size: {PAGE_SIZE}, type: {field_name})...");
-
-        let body = json!({
-            "query": query,
-            "variables": {
-                "owner": config.org,
-                "name": config.repo,
-                "first": PAGE_SIZE,
-                "after": after,
-            }
-        });
-
-        let response = client
-            .post(GRAPHQL_URL)
-            .header("Authorization", format!("Bearer {}", config.github_token))
-            .header("Accept", "application/vnd.github+json")
-            .header("User-Agent", "github-tools")
-            .json(&body)
-            .send()
-            .context("Failed to send GraphQL request")?;
-
-        if !response.status().is_success() {
-            let status = response.status();
-            let text = response.text().unwrap_or_default();
-            eprintln!("Warning: GraphQL request failed ({status}): {text}");
-            break;
-        }
-
-        let result: Value = response.json().context("Failed to parse GraphQL response")?;
-
-        if let Some(errors) = result.get("errors") {
-            eprintln!("Warning: GraphQL errors: {errors}");
-            break;
-        }
-
-        let connection = &result["data"]["repository"][field_name];
-        let nodes = connection["nodes"]
-            .as_array()
-            .context("Missing nodes in GraphQL response")?;
-        let has_next = connection["pageInfo"]["hasNextPage"]
-            .as_bool()
-            .unwrap_or(false);
-        let end_cursor = connection["pageInfo"]["endCursor"]
-            .as_str()
-            .map(|s| s.to_string());
-
-        // Check if any node has updatedAt < since — if so, we've gone past the window
-        let mut hit_boundary = false;
-        for node in nodes {
-            let updated = node["updatedAt"].as_str().unwrap_or("");
-            if updated < since {
-                hit_boundary = true;
-            } else {
-                all_nodes.push(node.clone());
-            }
-        }
-
-        println!(
-            "Page {page} fetched. Total collected: {}",
-            all_nodes.len()
-        );
-
-        if hit_boundary || !has_next {
-            if hit_boundary {
-                println!("Reached items older than --since cutoff.");
-            } else {
-                println!("Reached the last page.");
-            }
-            break;
-        }
-        after = end_cursor;
-        page += 1;
-    }
-
-    Ok(all_nodes)
-}
-
-/// Convert a GraphQL node into the REST API JSON shape that build_db.rs expects.
-fn to_rest_format(node: &Value, is_pr: bool) -> Value {
-    let labels: Vec<Value> = node["labels"]["nodes"]
-        .as_array()
-        .map(|arr| {
-            arr.iter()
-                .map(|l| {
-                    json!({
-                        "id": stable_id(l["id"].as_str().unwrap_or("")),
-                        "name": l["name"],
-                        "color": l["color"],
-                        "description": l["description"],
-                    })
-                })
-                .collect()
-        })
-        .unwrap_or_default();
-
-    // GraphQL returns OPEN/CLOSED/MERGED; REST uses open/closed
-    let state = node["state"]
-        .as_str()
-        .unwrap_or("open")
-        .to_lowercase()
-        .replace("merged", "closed");
-
-    let issue_type = node["issueType"]["name"].as_str().map(|s| s.to_string());
-
+    };
+    let labels = required(node, "labels")?;
+    let labels = graphql_fetch::page(labels)?
+        .nodes
+        .iter()
+        .map(label_to_rest)
+        .collect::<Result<Vec<_>>>()?;
     let mut item = json!({
-        "id": node["databaseId"],
-        "number": node["number"],
-        "title": node["title"],
-        "state": state,
-        "created_at": node["createdAt"],
-        "updated_at": node["updatedAt"],
-        "closed_at": node["closedAt"],
-        "user": {
-            "login": node["author"]["login"],
-        },
-        "labels": labels,
-        "issue_type": issue_type,
+        "id": id, "number": number, "title": title, "state": state,
+        "created_at": node["createdAt"], "updated_at": node["updatedAt"], "closed_at": node["closedAt"],
+        "user": {"login": login}, "labels": labels, "issue_type": issue_type,
     });
-
     if is_pr {
+        let draft = required(node, "isDraft")?
+            .as_bool()
+            .context("Invalid isDraft")?;
         item["pull_request"] = json!({});
-        item["draft"] = json!(node["isDraft"].as_bool().unwrap_or(false));
+        item["draft"] = json!(draft);
     }
+    Ok(item)
+}
 
-    item
+fn label_to_rest(label: &Value) -> Result<Value> {
+    let id = string(label, "id")?;
+    ensure!(!id.trim().is_empty(), "Empty label ID");
+    let name = string(label, "name")?;
+    let color = string(label, "color")?;
+    ensure!(
+        color.len() == 6 && color.bytes().all(|byte| byte.is_ascii_hexdigit()),
+        "Invalid label color"
+    );
+    let description = required(label, "description")?;
+    ensure!(
+        description.is_null() || description.is_string(),
+        "Invalid label description"
+    );
+    Ok(json!({"id": stable_id(id), "name": name, "color": color, "description": description}))
 }
 
 /// Produce a stable i64 from a GraphQL node ID string, for use as a database key.
@@ -559,7 +416,10 @@ mod tests {
         use serde_json::{Value, json};
         use std::fs;
 
-        let dir = std::env::temp_dir().join(format!("github-tools-sorted-snapshot-{}", std::process::id()));
+        let dir = std::env::temp_dir().join(format!(
+            "github-tools-sorted-snapshot-{}",
+            std::process::id()
+        ));
         fs::create_dir_all(&dir).unwrap();
         let path = dir.join("2026.json");
         let retained = json!({"title": "retained", "number": 1, "created_at": "2026-01-01"});
@@ -584,5 +444,335 @@ mod tests {
         let now = Utc.with_ymd_and_hms(2026, 9, 3, 14, 25, 30).unwrap();
 
         assert_eq!(parse_since_at("3m", now).unwrap(), "2026-06-03T14:25:30Z");
+    }
+}
+
+#[cfg(test)]
+mod fetch_safety_tests {
+    use super::*;
+    use crate::commands::graphql_fetch::test_support::{Server, TempDir, client, config, ok, page};
+
+    fn label(number: u64) -> Value {
+        json!({"id": format!("L{number}"), "name": format!("label {number}"), "color": "abcdef", "description": null})
+    }
+    fn node(number: u64, is_pr: bool) -> Value {
+        let mut value = json!({
+            "id": format!("{}{number}", if is_pr { "PR" } else { "I" }), "databaseId": 100 + number,
+            "number": number, "title": format!("Item {number}"), "state": "OPEN",
+            "createdAt": "2026-01-01T00:00:00Z", "updatedAt": "2026-03-01T00:00:00Z", "closedAt": null,
+            "author": null, "labels": page(vec![label(1)], None),
+        });
+        if is_pr {
+            value["isDraft"] = json!(false);
+        } else {
+            value["issueType"] = Value::Null;
+        }
+        value
+    }
+    fn data(field: &str, nodes: Vec<Value>, next: Option<&str>) -> Value {
+        let mut data = json!({"repository": {}});
+        data["repository"][field] = page(nodes, next);
+        data
+    }
+    fn failures(phase: &str) -> Vec<((u16, String), &'static str)> {
+        let malformed = if phase.ends_with("labels") {
+            let mut invalid = label(2);
+            invalid["color"] = json!("invalid");
+            json!({"node": {"labels": page(vec![invalid], None)}})
+        } else {
+            let mut invalid = node(3, phase == "pullRequests");
+            invalid["title"] = Value::Null;
+            data(phase, vec![invalid], None)
+        };
+        vec![
+            (ok(malformed), "Invalid"),
+            ((503, json!({"data": {}}).to_string()), "503"),
+            (
+                (
+                    200,
+                    json!({"data": {"repository": {}}, "errors": [{"message": "fixture failure"}]})
+                        .to_string(),
+                ),
+                "fixture failure",
+            ),
+            ((200, "{".into()), "Malformed GitHub GraphQL JSON"),
+        ]
+    }
+
+    #[test]
+    fn later_page_failures_preserve_all_year_files_in_every_issue_and_pr_mode() {
+        for since in [None, Some("2026-01-01")] {
+            for phase in ["issues", "pullRequests", "issue-labels", "pr-labels"] {
+                for (failure, marker) in failures(phase) {
+                    let dir = TempDir::new();
+                    let before = [
+                        ("2025.json", b"[{\"number\":80,\"retained\":true}]".to_vec()),
+                        ("2026.json", b"[{\"number\":90,\"retained\":true}]".to_vec()),
+                    ];
+                    for (name, bytes) in &before {
+                        fs::write(dir.path().join(name), bytes).unwrap();
+                    }
+                    let mut issue = node(1, false);
+                    let mut pr = node(2, true);
+                    let responses = match phase {
+                        "issues" => vec![
+                            ok(data("issues", vec![issue], Some("next-issues"))),
+                            failure,
+                        ],
+                        "pullRequests" => vec![
+                            ok(data("issues", vec![issue], None)),
+                            ok(data("pullRequests", vec![pr], Some("next-prs"))),
+                            failure,
+                        ],
+                        "issue-labels" => {
+                            issue["labels"] = page(vec![label(1)], Some("next-labels"));
+                            vec![ok(data("issues", vec![issue], None)), failure]
+                        }
+                        "pr-labels" => {
+                            pr["labels"] = page(vec![label(1)], Some("next-labels"));
+                            vec![
+                                ok(data("issues", vec![], None)),
+                                ok(data("pullRequests", vec![pr], None)),
+                                failure,
+                            ]
+                        }
+                        _ => unreachable!(),
+                    };
+                    let count = responses.len();
+                    let server = Server::new(responses);
+                    let cfg = config();
+                    let client = client();
+                    let error = run_with_request(&cfg, since, dir.path(), |query, variables| {
+                        graphql_fetch::request_at(&client, &cfg, &server.url, query, variables)
+                    })
+                    .unwrap_err();
+                    let message = format!("{error:#}");
+                    assert!(message.contains(marker), "{phase}: {message}");
+                    assert!(message.contains("page 2"), "{phase}: {message}");
+                    for (name, bytes) in before {
+                        assert_eq!(fs::read(dir.path().join(name)).unwrap(), bytes);
+                    }
+                    assert_eq!(fs::read_dir(dir.path()).unwrap().count(), 2);
+                    let requests = server.finish();
+                    assert_eq!(requests.len(), count);
+                    assert_eq!(
+                        requests.last().unwrap()["variables"]["after"],
+                        if phase.ends_with("labels") {
+                            "next-labels"
+                        } else if phase == "issues" {
+                            "next-issues"
+                        } else {
+                            "next-prs"
+                        }
+                    );
+                }
+            }
+        }
+    }
+
+    #[test]
+    fn healthy_full_and_incremental_modes_preserve_snapshot_shape_and_follow_each_cursor() {
+        for since in [None, Some("2026-01-01")] {
+            let dir = TempDir::new();
+            let server = Server::new(vec![
+                ok(data("issues", vec![node(1, false)], Some("issues-next"))),
+                ok(data("issues", vec![node(2, false)], None)),
+                ok(data("pullRequests", vec![node(3, true)], Some("prs-next"))),
+                ok(data("pullRequests", vec![node(4, true)], None)),
+            ]);
+            let cfg = config();
+            let client = client();
+            run_with_request(&cfg, since, dir.path(), |query, variables| {
+                graphql_fetch::request_at(&client, &cfg, &server.url, query, variables)
+            })
+            .unwrap();
+            let saved: Vec<Value> =
+                serde_json::from_slice(&fs::read(dir.path().join("2026.json")).unwrap()).unwrap();
+            assert_eq!(saved.len(), 4);
+            assert_eq!(
+                saved
+                    .iter()
+                    .map(|row| row["number"].as_u64().unwrap())
+                    .collect::<Vec<_>>(),
+                [1, 2, 3, 4]
+            );
+            for (index, row) in saved.iter().enumerate() {
+                assert_eq!(row["id"], 101 + index);
+                assert_eq!(row["state"], "open");
+                assert_eq!(row["created_at"], "2026-01-01T00:00:00Z");
+                assert_eq!(row["updated_at"], "2026-03-01T00:00:00Z");
+                assert!(row["closed_at"].is_null());
+                assert_eq!(row["user"], json!({"login": null}));
+                assert_eq!(
+                    row["labels"],
+                    json!([{"id": stable_id("L1"), "name": "label 1", "color": "abcdef", "description": null}])
+                );
+                assert_eq!(row.get("pull_request").is_some(), index >= 2);
+                assert_eq!(
+                    row.get("draft"),
+                    if index >= 2 {
+                        Some(&Value::Bool(false))
+                    } else {
+                        None
+                    }
+                );
+            }
+            let requests = server.finish();
+            assert_eq!(
+                requests
+                    .iter()
+                    .map(|request| request["variables"]["after"].clone())
+                    .collect::<Vec<_>>(),
+                [
+                    Value::Null,
+                    json!("issues-next"),
+                    Value::Null,
+                    json!("prs-next")
+                ]
+            );
+            assert_eq!(
+                requests[0]["variables"].get("since").is_some(),
+                since.is_some()
+            );
+            for (index, request) in requests.into_iter().enumerate() {
+                assert_eq!(request["variables"]["first"], PAGE_SIZE);
+                assert_eq!(
+                    request["query"]
+                        .as_str()
+                        .unwrap()
+                        .contains("field: UPDATED_AT"),
+                    since.is_some() && index < 2
+                );
+            }
+        }
+    }
+
+    #[test]
+    fn incremental_issues_keep_all_server_filtered_matches() {
+        let dir = TempDir::new();
+        let mut item = node(1, false);
+        item["createdAt"] = json!("2025-01-01T00:00:00Z");
+        item["updatedAt"] = json!("2025-12-31T00:00:00Z");
+        let server = Server::new(vec![
+            ok(data("issues", vec![item], None)),
+            ok(data("pullRequests", vec![], None)),
+        ]);
+        let cfg = config();
+        let client = client();
+        run_with_request(&cfg, Some("2026-01-01"), dir.path(), |query, variables| {
+            graphql_fetch::request_at(&client, &cfg, &server.url, query, variables)
+        })
+        .unwrap();
+        let saved: Vec<Value> =
+            serde_json::from_slice(&fs::read(dir.path().join("2025.json")).unwrap()).unwrap();
+        assert_eq!(saved.len(), 1);
+        assert_eq!(saved[0]["updated_at"], "2025-12-31T00:00:00Z");
+        let requests = server.finish();
+        assert_eq!(requests[0]["variables"]["since"], "2026-01-01T00:00:00Z");
+    }
+
+    #[test]
+    fn nested_label_pagination_keeps_more_than_the_first_hundred_labels() {
+        for is_pr in [false, true] {
+            let dir = TempDir::new();
+            let mut item = node(1, is_pr);
+            item["labels"] = page((1..=100).map(label).collect(), Some("label-100"));
+            let field = if is_pr { "pullRequests" } else { "issues" };
+            let mut responses = vec![];
+            if is_pr {
+                responses.push(ok(data("issues", vec![], None)));
+            }
+            responses.push(ok(data(field, vec![item], None)));
+            responses.push(ok(
+                json!({"node": {"labels": page(vec![label(101)], None)}}),
+            ));
+            if !is_pr {
+                responses.push(ok(data("pullRequests", vec![], None)));
+            }
+            let server = Server::new(responses);
+            let cfg = config();
+            let client = client();
+            run_with_request(&cfg, None, dir.path(), |query, variables| {
+                graphql_fetch::request_at(&client, &cfg, &server.url, query, variables)
+            })
+            .unwrap();
+            let saved: Vec<Value> =
+                serde_json::from_slice(&fs::read(dir.path().join("2026.json")).unwrap()).unwrap();
+            assert_eq!(saved[0]["labels"].as_array().unwrap().len(), 101);
+            assert_eq!(saved[0]["labels"][100]["name"], "label 101");
+            let requests = server.finish();
+            let nested = &requests[if is_pr { 2 } else { 1 }];
+            assert!(
+                nested["query"]
+                    .as_str()
+                    .unwrap()
+                    .contains("... on Labelable")
+            );
+            assert_eq!(nested["variables"]["id"], if is_pr { "PR1" } else { "I1" });
+            assert_eq!(nested["variables"]["after"], "label-100");
+        }
+    }
+
+    #[test]
+    fn invalid_api_records_do_not_become_default_values() {
+        for is_pr in [false, true] {
+            let valid = node(1, is_pr);
+            let mut fields = vec![
+                "databaseId",
+                "number",
+                "title",
+                "state",
+                "createdAt",
+                "updatedAt",
+                "closedAt",
+                "author",
+                "labels",
+            ];
+            fields.push(if is_pr { "isDraft" } else { "issueType" });
+            for field in fields {
+                let mut broken = valid.clone();
+                broken.as_object_mut().unwrap().remove(field);
+                assert!(
+                    to_rest_format(&broken, is_pr).is_err(),
+                    "Accepted missing {field}"
+                );
+            }
+            for (pointer, replacement) in [
+                ("/databaseId", Value::Null),
+                ("/databaseId", json!(0)),
+                ("/number", json!(-1)),
+                ("/title", json!(1)),
+                ("/state", json!("UNKNOWN")),
+                ("/createdAt", json!("2026-02-30T00:00:00Z")),
+                ("/updatedAt", json!("bad")),
+                ("/closedAt", json!("bad")),
+                ("/author", json!({})),
+                ("/labels/nodes/0/id", json!("")),
+                ("/labels/nodes/0/color", json!("zzzzzz")),
+                ("/labels/nodes/0/description", json!(9)),
+                ("/labels/pageInfo/hasNextPage", Value::Null),
+            ] {
+                let mut broken = valid.clone();
+                *broken.pointer_mut(pointer).unwrap() = replacement;
+                assert!(
+                    to_rest_format(&broken, is_pr).is_err(),
+                    "Accepted {pointer}"
+                );
+            }
+            let mut broken = valid.clone();
+            broken[if is_pr { "isDraft" } else { "issueType" }] =
+                if is_pr { Value::Null } else { json!({}) };
+            assert!(to_rest_format(&broken, is_pr).is_err());
+        }
+        let mut issue = node(1, false);
+        issue["state"] = json!("CLOSED");
+        assert!(to_rest_format(&issue, false).unwrap()["closed_at"].is_null());
+        issue["state"] = json!("MERGED");
+        assert!(to_rest_format(&issue, false).is_err());
+        let mut pr = node(1, true);
+        pr["state"] = json!("MERGED");
+        assert_eq!(to_rest_format(&pr, true).unwrap()["state"], "closed");
+        pr["isDraft"] = json!(true);
+        assert_eq!(to_rest_format(&pr, true).unwrap()["draft"], true);
     }
 }
