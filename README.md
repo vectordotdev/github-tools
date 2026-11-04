@@ -75,6 +75,7 @@ Fetch:
   fetch-discussions  Fetch all discussions for a repository
   fetch-issue-interest  Snapshot open-issue reactions and distinct commenters
   fetch-first-review  Snapshot open PRs awaiting a first human review
+  fetch-pr-contributors  Snapshot Team & Community PR backlog
   fetch-labels       Fetch all labels for a repository
 
 Pipeline:
@@ -420,3 +421,28 @@ from discussions awaiting maintainer follow-up. Label names are sorted before
 saving, and truncated label lists fail before any year files are written.
 Snapshots created before this field was collected remain readable; refresh the
 full discussion history once to populate labels on older records.
+
+### Team & Community PR snapshots
+
+`fetch-pr-contributors --repo owner/name` writes
+`data/owner_name/pr-contributors/latest.json`. It reads the complete effective
+collaborator connection (including inherited access) and every open PR page.
+Team means Write, Maintain or Admin access to that repository. Community means
+other confirmed human accounts. Bots and unknown/deleted authors have separate
+counts; drafts are excluded. Access and pagination failures preserve the prior
+file. Authentication uses `GITHUB_TOKEN` or existing `gh` credentials and must
+permit reading the target repository's collaborators.
+
+The collector also counts open, non-draft PRs at up to 100 real path-affecting
+Git revisions of the saved issue/PR year files, retaining the latest save per UTC
+day. **Current permissions are applied to every saved date**; these are not
+historical employment or permission records. Account types missing from old
+snapshots are resolved from GitHub; unresolved identities stay unknown.
+Incomplete draft states or duplicate records produce explicit gaps, not partial
+counts. The collection adds a current live point and saves only aggregate counts,
+source revisions and dates, never the collaborator roster or individual access.
+A full local Git history supplies the complete available context; a shallow
+checkout can only include its available revisions.
+
+`fetch-all` refreshes this snapshot regardless of its `--since` option. The command
+does not change permissions, PRs, or repository settings.
