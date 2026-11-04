@@ -10,6 +10,7 @@ pub mod fetch_discussions;
 pub mod fetch_issues;
 pub mod fetch_issue_interest;
 pub mod fetch_first_review;
+pub mod fetch_pr_contributors;
 pub mod fetch_labels;
 mod graphql_fetch;
 pub mod generate_summaries;

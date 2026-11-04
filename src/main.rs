@@ -3,7 +3,7 @@ use clap::{Parser, Subcommand};
 use github_tools::{
     commands::{
         build_db, close_old_prs, compact, delete_stale_branches, fetch_automated_review_stats,
-        fetch_discussions, fetch_first_review, fetch_issue_interest, fetch_issues, fetch_labels,
+        fetch_discussions, fetch_first_review, fetch_pr_contributors, fetch_issue_interest, fetch_issues, fetch_labels,
         generate_charts, generate_summaries, purge, push_metrics, remove_legacy_label, replace_label,
         workflows,
     },
@@ -24,6 +24,13 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
+    /// Snapshot Team & Community PR backlog using effective repository permissions
+    FetchPrContributors {
+        #[arg(long)]
+        repo: String,
+        #[arg(long)]
+        env_file: Option<String>,
+    },
     /// Snapshot open PRs waiting for their first submitted human review
     FetchFirstReview {
         #[arg(long)]
@@ -338,6 +345,10 @@ fn main() -> Result<()> {
     let cli = Cli::parse();
 
     match cli.command {
+        Command::FetchPrContributors { repo, env_file } => {
+            let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
+            fetch_pr_contributors::run(&config)
+        }
         Command::FetchFirstReview { repo, env_file } => {
             let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_first_review::run(&config)
