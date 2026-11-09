@@ -144,21 +144,12 @@ fn saved_authors(value: &Value) -> Result<Vec<Value>> {
     }
     Ok(authors)
 }
-fn history(path: &str) -> Result<Vec<Saved>> {
-    // Only real path-affecting commits; no event-based reconstruction or filled dates.
-    let log = String::from_utf8(git(&[
-        "log",
-        "-100",
-        "--format=%H %cI",
-        "HEAD",
-        "--",
-        path,
-    ])?)?;
+fn history(path: &str, config: &Config) -> Result<Vec<Saved>> {
+    let revisions = super::save_backlog_history::issue_revisions(config)?;
     let mut cache: HashMap<String, Option<SavedYear>> = HashMap::new();
     let mut days = BTreeMap::new();
-    for line in log.lines() {
-        let (sha, date) = line.split_once(' ').context("Invalid history revision")?;
-        let at = DateTime::parse_from_rfc3339(date)?
+    for (sha, date) in revisions {
+        let at = DateTime::parse_from_rfc3339(&date)?
             .with_timezone(&Utc)
             .to_rfc3339();
         if days
@@ -167,7 +158,7 @@ fn history(path: &str) -> Result<Vec<Saved>> {
         {
             continue;
         }
-        let tree = String::from_utf8(git(&["ls-tree", "-r", sha, "--", path])?)?;
+        let tree = String::from_utf8(git(&["ls-tree", "-r", &sha, "--", path])?)?;
         let mut all = Vec::new();
         let mut complete = false;
         let mut numbers = HashSet::new();
@@ -340,7 +331,10 @@ fn collect(
 
 pub fn run(config: &Config) -> Result<()> {
     let root = Path::new("data").join(format!("{}_{}", config.org, config.repo));
-    let saved = history(root.join("issues").to_str().context("Invalid data path")?)?;
+    let saved = history(
+        root.join("issues").to_str().context("Invalid data path")?,
+        config,
+    )?;
     let client = Client::new();
     let snapshot = collect(config, &saved, |q, v| {
         if q.starts_with("query{") {

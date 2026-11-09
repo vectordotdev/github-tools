@@ -132,7 +132,8 @@ pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) ->
         .join("issues");
     run_with_request(config, since, &out_dir, |query, variables| {
         graphql_fetch::request(client, config, query, variables)
-    })
+    })?;
+    super::save_backlog_history::record_collection(config, "issues", since)
 }
 
 fn run_with_request(
