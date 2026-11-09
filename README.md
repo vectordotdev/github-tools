@@ -76,6 +76,7 @@ Fetch:
   fetch-issue-interest  Snapshot open-issue reactions and distinct commenters
   fetch-first-review  Snapshot open PRs awaiting a first human review
   fetch-pr-contributors  Snapshot Team & Community PR backlog
+  save-backlog-history  Export compact Outstanding history from local Git
   fetch-labels       Fetch all labels for a repository
 
 Pipeline:
@@ -446,3 +447,36 @@ checkout can only include its available revisions.
 
 `fetch-all` refreshes this snapshot regardless of its `--since` option. The command
 does not change permissions, PRs, or repository settings.
+
+### Compact Outstanding history
+
+`save-backlog-history --repo owner/name` writes
+`data/owner_name/backlog-history/latest.json` without GitHub credentials. It
+materializes Issues, non-draft PRs (including bots and awaiting-author work), and
+open unanswered Q&A counts from up to 100 source revisions per collection.
+A full Git checkout is required. All year partitions are included; malformed
+records, duplicates, or missing draft/answer state remain explicit gaps. Zero is
+preserved. The exporter finishes all reads before atomically replacing the file.
+Uncommitted raw changes without matching collection metadata are rejected.
+
+Historical dates have `dateBasis: saved`: they identify when a state was saved,
+not when GitHub was fully collected. Semantically identical JSON is ignored, so
+key sorting or whitespace cannot create a fresh observation. The latest point
+per UTC day is retained, including unavailable totals. Real changes with equal
+totals remain separate observations. No daily points or past states are inferred
+from creation/closure dates.
+
+Successful issue/PR and discussion fetches now write aggregate-only collection
+metadata in `collection-metadata/`: completion time, full/incremental coverage,
+and a fingerprint of the saved year contents. Only a matching fingerprint can
+supply `dateBasis: collected`. A full scan still uses the existing upsert rules;
+records no longer visible in GitHub may remain in the saved files. An incremental
+scan is not proof that every older record was refreshed. Old dates are never
+retroactively promoted to collection dates. Standalone fetch commands and
+`fetch-all` refresh the rollup after saving their source data. A failed collector
+does not update its metadata or the rollup.
+
+The contributor collector shares the same historical observation selection,
+removing formatting-only dates on its next successful refresh. Its current
+permission classification and live PR point retain their existing definitions.
+The compact history adds no author list or per-person access data.

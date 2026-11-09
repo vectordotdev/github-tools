@@ -2,7 +2,7 @@
 /// replacing fetch_all_slow.sh, generate_all.sh, and purge_all.sh.
 use crate::commands::{
     build_db, fetch_discussions, fetch_first_review, fetch_pr_contributors, fetch_issue_interest, fetch_issues, generate_charts,
-    generate_summaries, purge, push_metrics,
+    generate_summaries, purge, push_metrics, save_backlog_history,
 };
 use crate::config::{Config, Repo};
 use anyhow::Result;
@@ -29,6 +29,7 @@ fn fetch_all_with_config(config: &Config, since: Option<&str>) -> Result<()> {
     let client = Client::new();
     fetch_issues::run_with_client(&client, config, since)?;
     fetch_discussions::run_with_client(&client, config, since)?;
+    save_backlog_history::run(config)?;
     fetch_issue_interest::run(config)?;
     fetch_first_review::run(config)?;
     fetch_pr_contributors::run(config)?;

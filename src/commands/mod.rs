@@ -19,6 +19,7 @@ pub mod push_metrics;
 pub mod remove_legacy_label;
 pub mod replace_label;
 pub mod workflows;
+pub mod save_backlog_history;
 
 /// Serialize snapshots with alphabetical object keys at every depth.
 pub(super) fn sorted_json(value: &impl Serialize) -> serde_json::Result<String> {
