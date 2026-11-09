@@ -1,9 +1,9 @@
 {
-  "collectedAt": "2026-11-03T14:10:04.328687+00:00",
+  "collectedAt": "2026-11-09T14:46:49.605043+00:00",
   "excludedAwaitingAuthorPrs": 0,
-  "excludedBotPrs": 11,
-  "excludedDrafts": 41,
-  "openPrs": 183,
+  "excludedBotPrs": 3,
+  "excludedDrafts": 46,
+  "openPrs": 181,
   "prs": [
     {
       "createdAt": "2023-06-19T08:44:17+00:00",
@@ -159,7 +159,7 @@
       "createdAt": "2026-07-13T10:39:01+00:00",
       "number": 6599,
       "title": "ingest: batch WAL truncation in the shard-positions gossip handler",
-      "updatedAt": "2026-10-22T22:50:14+00:00"
+      "updatedAt": "2026-11-04T18:12:31+00:00"
     },
     {
       "createdAt": "2026-07-13T16:07:31+00:00",
@@ -201,13 +201,13 @@
       "createdAt": "2026-08-06T14:33:48+00:00",
       "number": 6666,
       "title": "fix: sovereign Azure storage token scopes for managed identity",
-      "updatedAt": "2026-11-03T10:41:37+00:00"
+      "updatedAt": "2026-11-04T18:12:40+00:00"
     },
     {
       "createdAt": "2026-08-13T08:05:39+00:00",
       "number": 6687,
       "title": "fix(storage): re-read the Azure federated token file on every exchange",
-      "updatedAt": "2026-10-22T22:48:46+00:00"
+      "updatedAt": "2026-11-04T18:12:46+00:00"
     },
     {
       "createdAt": "2026-08-25T13:45:02+00:00",
@@ -303,7 +303,7 @@
       "createdAt": "2026-09-23T04:13:56+00:00",
       "number": 6817,
       "title": "fix(datetime): parse `e` as the ISO day-of-week, Monday is 1",
-      "updatedAt": "2026-10-22T22:46:22+00:00"
+      "updatedAt": "2026-11-04T18:13:06+00:00"
     },
     {
       "createdAt": "2026-09-23T12:10:03+00:00",
@@ -345,13 +345,13 @@
       "createdAt": "2026-09-29T11:59:19+00:00",
       "number": 6845,
       "title": "fix(metastore): do not hold the state guard across a lazy index load",
-      "updatedAt": "2026-10-22T22:45:44+00:00"
+      "updatedAt": "2026-11-04T18:13:11+00:00"
     },
     {
       "createdAt": "2026-09-30T10:11:36+00:00",
       "number": 6850,
       "title": "fix(ingest): do not track a persist that appended no record",
-      "updatedAt": "2026-10-22T22:45:36+00:00"
+      "updatedAt": "2026-11-04T18:13:17+00:00"
     },
     {
       "createdAt": "2026-09-30T11:41:57+00:00",
@@ -369,7 +369,7 @@
       "createdAt": "2026-10-02T17:17:34+00:00",
       "number": 6864,
       "title": "fix(ingest): Report sources without open shards in ingester persist responses",
-      "updatedAt": "2026-10-22T22:45:15+00:00"
+      "updatedAt": "2026-11-04T18:13:23+00:00"
     },
     {
       "createdAt": "2026-10-09T15:19:45+00:00",
@@ -408,12 +408,6 @@
       "updatedAt": "2026-10-22T22:44:29+00:00"
     },
     {
-      "createdAt": "2026-10-17T05:29:33+00:00",
-      "number": 6908,
-      "title": "fix(rest-client): only send the commit mode with the last ingest batch",
-      "updatedAt": "2026-10-31T13:56:28+00:00"
-    },
-    {
       "createdAt": "2026-10-17T19:46:49+00:00",
       "number": 6909,
       "title": "feat: metastore recovery cli",
@@ -423,19 +417,7 @@
       "createdAt": "2026-10-19T18:54:02+00:00",
       "number": 6910,
       "title": "Migrate Azure blob storage to the 1.0 Azure SDK",
-      "updatedAt": "2026-10-29T20:25:05+00:00"
-    },
-    {
-      "createdAt": "2026-10-19T20:51:31+00:00",
-      "number": 6912,
-      "title": "Limit decompressed body size",
-      "updatedAt": "2026-10-22T22:44:11+00:00"
-    },
-    {
-      "createdAt": "2026-10-20T08:19:00+00:00",
-      "number": 6913,
-      "title": "feat(indexing): measure pipeline stage durations and waits",
-      "updatedAt": "2026-10-22T22:44:09+00:00"
+      "updatedAt": "2026-11-04T18:13:37+00:00"
     },
     {
       "createdAt": "2026-10-20T10:44:40+00:00",
@@ -450,12 +432,6 @@
       "updatedAt": "2026-10-22T22:43:53+00:00"
     },
     {
-      "createdAt": "2026-10-22T17:27:34+00:00",
-      "number": 6927,
-      "title": "Restore anonymous usage telemetry",
-      "updatedAt": "2026-11-02T19:24:29+00:00"
-    },
-    {
       "createdAt": "2026-10-23T01:10:30+00:00",
       "number": 6933,
       "title": "Update doc examples/tutorials using the dynamic mappings",
@@ -466,12 +442,6 @@
       "number": 6934,
       "title": "Add docs on tokenizers, filters and tokenizer API",
       "updatedAt": "2026-10-23T01:12:50+00:00"
-    },
-    {
-      "createdAt": "2026-10-27T15:43:06+00:00",
-      "number": 6954,
-      "title": "Refactor pipeline schedule",
-      "updatedAt": "2026-10-27T16:19:59+00:00"
     },
     {
       "createdAt": "2026-10-27T16:55:39+00:00",
@@ -486,12 +456,6 @@
       "updatedAt": "2026-10-28T23:23:39+00:00"
     },
     {
-      "createdAt": "2026-10-31T10:42:23+00:00",
-      "number": 6967,
-      "title": "Fold serialization and packaging into the Indexer",
-      "updatedAt": "2026-11-02T09:45:36+00:00"
-    },
-    {
       "createdAt": "2026-11-02T14:28:16+00:00",
       "number": 6979,
       "title": "feat(ui): make index explorer collapsible",
@@ -501,11 +465,29 @@
       "createdAt": "2026-11-03T10:22:56+00:00",
       "number": 6984,
       "title": "fix: start shard publication tracking on every ingest router node",
-      "updatedAt": "2026-11-03T10:25:32+00:00"
+      "updatedAt": "2026-11-04T18:14:02+00:00"
+    },
+    {
+      "createdAt": "2026-11-05T17:50:56+00:00",
+      "number": 6992,
+      "title": "fix(storage): stop repeating the error source in Display",
+      "updatedAt": "2026-11-06T15:15:57+00:00"
+    },
+    {
+      "createdAt": "2026-11-06T20:11:13+00:00",
+      "number": 6999,
+      "title": "fix(config): compile VRL transforms on source writes, not on reads",
+      "updatedAt": "2026-11-06T20:28:53+00:00"
+    },
+    {
+      "createdAt": "2026-11-09T02:49:37+00:00",
+      "number": 7001,
+      "title": "Fix retention scheduling after index recreation",
+      "updatedAt": "2026-11-09T06:45:16+00:00"
     }
   ],
   "repository": "quickwit-oss/quickwit",
-  "reviewedPrs": 48,
+  "reviewedPrs": 52,
   "schemaVersion": 1,
   "unknownPrs": 0
 }

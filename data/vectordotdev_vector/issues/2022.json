@@ -816,7 +816,7 @@
     "number": 10728,
     "state": "open",
     "title": "Vector sink - Allow setting max duration/max messages for a TCP connection",
-    "updated_at": "2026-09-25T08:44:48Z",
+    "updated_at": "2026-11-07T03:12:48Z",
     "user": {
       "login": "alexandv"
     }
@@ -2282,7 +2282,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T21:43:14Z",
     "created_at": "2022-01-11T04:50:25Z",
     "id": 1098649708,
     "issue_type": "Bug",
@@ -2295,9 +2295,9 @@
       }
     ],
     "number": 10787,
-    "state": "open",
+    "state": "closed",
     "title": "CloudWatch sink group_name can't contain templated variables during validate",
-    "updated_at": "2026-03-27T18:32:34Z",
+    "updated_at": "2026-11-03T21:43:15Z",
     "user": {
       "login": "archoversight"
     }
@@ -3118,7 +3118,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Try out tokio-rs/tokio #4383",
-    "updated_at": "2022-02-01T20:46:32Z",
+    "updated_at": "2026-11-03T23:05:17Z",
     "user": {
       "login": "blt"
     }
@@ -3157,7 +3157,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Use updated tokio-console, no lost wakers",
-    "updated_at": "2022-01-24T17:57:47Z",
+    "updated_at": "2026-11-03T23:05:18Z",
     "user": {
       "login": "blt"
     }
@@ -4184,7 +4184,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T21:45:13Z",
     "created_at": "2022-01-14T20:57:21Z",
     "id": 1104117478,
     "issue_type": "Feature",
@@ -4203,9 +4203,9 @@
       }
     ],
     "number": 10870,
-    "state": "open",
+    "state": "closed",
     "title": "Consider expanding the cases where Vector retries requests",
-    "updated_at": "2026-09-02T04:58:49Z",
+    "updated_at": "2026-11-02T21:45:13Z",
     "user": {
       "login": "jszwedko"
     }
@@ -8938,7 +8938,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(buffers): switch to in-memory v2 by default, remove in-memory v1",
-    "updated_at": "2022-02-08T22:25:10Z",
+    "updated_at": "2026-11-03T22:45:25Z",
     "user": {
       "login": "blt"
     }
@@ -14559,7 +14559,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Soak test without metrics",
-    "updated_at": "2022-02-10T21:48:56Z",
+    "updated_at": "2026-11-03T23:05:05Z",
     "user": {
       "login": "jszwedko"
     }
@@ -17420,7 +17420,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: [retypist] `src/api`",
-    "updated_at": "2022-02-28T16:41:01Z",
+    "updated_at": "2026-11-03T23:05:01Z",
     "user": {
       "login": "blt"
     }
@@ -17499,7 +17499,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: [retypist] `src/config`",
-    "updated_at": "2022-02-28T16:41:05Z",
+    "updated_at": "2026-11-03T23:05:01Z",
     "user": {
       "login": "blt"
     }
@@ -17676,7 +17676,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: [retypist] `src/internal_events`",
-    "updated_at": "2022-02-28T16:40:43Z",
+    "updated_at": "2026-11-03T23:05:01Z",
     "user": {
       "login": "blt"
     }
@@ -20544,7 +20544,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Remove unused dependencies",
-    "updated_at": "2022-02-28T21:59:26Z",
+    "updated_at": "2026-11-03T23:05:00Z",
     "user": {
       "login": "jszwedko"
     }
@@ -21697,7 +21697,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Retypist changes",
-    "updated_at": "2022-03-06T14:21:40Z",
+    "updated_at": "2026-11-03T23:05:00Z",
     "user": {
       "login": "blt"
     }
@@ -21864,7 +21864,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Quick experiment to understand emission costs",
-    "updated_at": "2022-03-06T14:21:34Z",
+    "updated_at": "2026-11-03T23:05:03Z",
     "user": {
       "login": "blt"
     }
@@ -24280,7 +24280,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Make http_gen payloads smaller",
-    "updated_at": "2022-03-10T00:19:02Z",
+    "updated_at": "2026-11-03T23:05:05Z",
     "user": {
       "login": "blt"
     }
@@ -24347,12 +24347,19 @@
     "draft": true,
     "id": 875812844,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 11760,
     "pull_request": {},
     "state": "open",
     "title": "docs(delivery): added first draft of e2e ack guide",
-    "updated_at": "2025-07-10T15:43:13Z",
+    "updated_at": "2026-11-03T16:03:25Z",
     "user": {
       "login": "barieom"
     }
@@ -24763,7 +24770,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Experiment with removing CPU limit",
-    "updated_at": "2022-03-10T22:02:45Z",
+    "updated_at": "2026-11-03T23:05:20Z",
     "user": {
       "login": "blt"
     }
@@ -24959,7 +24966,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "docs: Update Algolia configuration",
-    "updated_at": "2022-03-11T00:05:09Z",
+    "updated_at": "2026-11-03T23:05:19Z",
     "user": {
       "login": "jszwedko"
     }
@@ -25688,7 +25695,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(sources): New amqp (Rabbitmq) Source/Sink",
-    "updated_at": "2022-03-14T16:01:23Z",
+    "updated_at": "2026-11-03T23:04:59Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -29053,7 +29060,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Experiment with running soaks on a single machine",
-    "updated_at": "2022-04-28T16:07:12Z",
+    "updated_at": "2026-11-03T23:05:06Z",
     "user": {
       "login": "blt"
     }
@@ -29719,7 +29726,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "build with docker",
-    "updated_at": "2023-01-12T08:13:42Z",
+    "updated_at": "2026-11-03T23:04:33Z",
     "user": {
       "login": "jdrouet"
     }
@@ -31745,7 +31752,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(vrl): iteration support",
-    "updated_at": "2022-07-01T10:21:35Z",
+    "updated_at": "2026-11-03T23:04:36Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -32422,7 +32429,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Upgrade to Rust 1.59.0",
-    "updated_at": "2022-06-15T19:30:49Z",
+    "updated_at": "2026-11-03T23:05:02Z",
     "user": {
       "login": "jszwedko"
     }
@@ -35513,7 +35520,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(codecs): parse timestamps from json strings",
-    "updated_at": "2022-04-30T01:33:41Z",
+    "updated_at": "2026-11-03T23:04:38Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -36179,7 +36186,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Use 'fast' use agent parsing",
-    "updated_at": "2022-04-20T16:50:44Z",
+    "updated_at": "2026-11-03T23:04:29Z",
     "user": {
       "login": "blt"
     }
@@ -36195,7 +36202,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Remove user agent parsing from http pipelines soak",
-    "updated_at": "2022-04-20T16:51:18Z",
+    "updated_at": "2026-11-03T23:04:50Z",
     "user": {
       "login": "blt"
     }
@@ -36376,7 +36383,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Use soak self-run builder instances, cache locally",
-    "updated_at": "2022-04-20T00:02:51Z",
+    "updated_at": "2026-11-03T23:04:29Z",
     "user": {
       "login": "blt"
     }
@@ -37197,7 +37204,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: try disabling metrics",
-    "updated_at": "2022-04-25T20:18:51Z",
+    "updated_at": "2026-11-03T23:05:16Z",
     "user": {
       "login": "jszwedko"
     }
@@ -37288,7 +37295,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Add a remap nullified http -> pipelines soak",
-    "updated_at": "2022-05-13T21:29:41Z",
+    "updated_at": "2026-11-03T23:04:32Z",
     "user": {
       "login": "blt"
     }
@@ -38861,7 +38868,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(vrl): expand expose of constant values",
-    "updated_at": "2023-03-28T15:15:39Z",
+    "updated_at": "2026-11-03T23:04:36Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -39663,7 +39670,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: experiment to see overhead of calculating event sizes",
-    "updated_at": "2022-04-27T17:48:08Z",
+    "updated_at": "2026-11-03T23:05:04Z",
     "user": {
       "login": "jszwedko"
     }
@@ -41087,7 +41094,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(vrl): test common program performance optimization",
-    "updated_at": "2022-07-01T10:18:39Z",
+    "updated_at": "2026-11-03T23:04:36Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -42169,7 +42176,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Use ndjson encoding, not parse_json",
-    "updated_at": "2022-10-11T07:09:46Z",
+    "updated_at": "2026-11-03T23:05:19Z",
     "user": {
       "login": "blt"
     }
@@ -43414,7 +43421,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Adjust global allocator logic switch to be uniform",
-    "updated_at": "2022-05-13T21:30:22Z",
+    "updated_at": "2026-11-03T23:05:13Z",
     "user": {
       "login": "blt"
     }
@@ -43581,7 +43588,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Refactor pipelines soaks to use `datadog_agent` as input",
-    "updated_at": "2022-07-21T16:55:22Z",
+    "updated_at": "2026-11-03T23:05:19Z",
     "user": {
       "login": "jszwedko"
     }
@@ -43651,7 +43658,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.21.2",
-    "updated_at": "2022-05-05T21:20:23Z",
+    "updated_at": "2026-11-03T23:04:55Z",
     "user": {
       "login": "jszwedko"
     }
@@ -43999,7 +44006,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Introduce http_remap_blackhole",
-    "updated_at": "2022-05-13T21:29:58Z",
+    "updated_at": "2026-11-03T23:04:32Z",
     "user": {
       "login": "blt"
     }
@@ -44809,7 +44816,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(vrl): optimize performance for void root expressions",
-    "updated_at": "2022-07-01T10:16:31Z",
+    "updated_at": "2026-11-03T23:04:36Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -45226,7 +45233,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Experimental PR to understand user-agent parsing costs",
-    "updated_at": "2022-05-13T21:30:08Z",
+    "updated_at": "2026-11-03T23:04:50Z",
     "user": {
       "login": "blt"
     }
@@ -45882,7 +45889,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "[WIP]  Hide value::Value's BTreeMap inside an opauqe Object",
-    "updated_at": "2023-02-01T23:01:09Z",
+    "updated_at": "2026-11-03T23:05:20Z",
     "user": {
       "login": "blt"
     }
@@ -46291,7 +46298,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(vrl): change `Expression::resolve` to return `Cow<Value>`",
-    "updated_at": "2022-07-01T10:14:16Z",
+    "updated_at": "2026-11-03T23:04:35Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -46498,7 +46505,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Test half-sized http->pipelines",
-    "updated_at": "2022-05-13T21:29:16Z",
+    "updated_at": "2026-11-03T23:04:32Z",
     "user": {
       "login": "blt"
     }
@@ -46710,7 +46717,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(vrl): internal mutability experiment",
-    "updated_at": "2022-07-01T10:15:31Z",
+    "updated_at": "2026-11-03T23:04:35Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -46841,7 +46848,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: add back basic per-stage pipeline metrics",
-    "updated_at": "2022-05-17T19:10:03Z",
+    "updated_at": "2026-11-03T23:04:53Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -47245,7 +47252,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Upgrade Rust to 1.59.0",
-    "updated_at": "2022-06-15T19:30:31Z",
+    "updated_at": "2026-11-03T23:05:19Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -47421,7 +47428,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement!(honeycomb sink, codecs): Integrate `encoding::Encoder` with `honeycomb` sink",
-    "updated_at": "2022-06-10T01:40:26Z",
+    "updated_at": "2026-11-03T23:04:51Z",
     "user": {
       "login": "pablosichert"
     }
@@ -50509,7 +50516,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Update spec to unify health related metrics",
-    "updated_at": "2023-02-01T22:54:38Z",
+    "updated_at": "2026-11-03T23:05:18Z",
     "user": {
       "login": "binarylogic"
     }
@@ -51239,7 +51246,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Vector Performance Engineering post",
-    "updated_at": "2023-03-24T16:58:29Z",
+    "updated_at": "2026-11-03T23:04:53Z",
     "user": {
       "login": "blt"
     }
@@ -52012,7 +52019,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "LLVM backend for VRL soak tests experiments",
-    "updated_at": "2022-10-17T07:43:23Z",
+    "updated_at": "2026-11-03T23:04:52Z",
     "user": {
       "login": "pablosichert"
     }
@@ -52870,7 +52877,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Remove soak_comment.yml",
-    "updated_at": "2022-06-06T23:34:53Z",
+    "updated_at": "2026-11-03T23:05:00Z",
     "user": {
       "login": "blt"
     }
@@ -53223,7 +53230,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-04T17:46:42Z",
     "created_at": "2022-06-07T18:22:33Z",
     "id": 1263696929,
     "issue_type": "Bug",
@@ -53242,9 +53249,9 @@
       }
     ],
     "number": 13017,
-    "state": "open",
+    "state": "closed",
     "title": "Integration test containers not being removed after test failure.",
-    "updated_at": "2026-02-21T20:37:15Z",
+    "updated_at": "2026-11-04T17:46:42Z",
     "user": {
       "login": "neuronull"
     }
@@ -55390,7 +55397,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(splunk_hec_logs sink): enable raw event endpoint for text codec",
-    "updated_at": "2022-06-16T11:21:04Z",
+    "updated_at": "2026-11-03T23:05:11Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -56872,7 +56879,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(transforms): Implement `transform_all` for remap and condition transforms",
-    "updated_at": "2023-02-24T16:37:26Z",
+    "updated_at": "2026-11-03T23:04:53Z",
     "user": {
       "login": "pablosichert"
     }
@@ -58618,7 +58625,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "WIP: Implement `Expression::resolve_batch` interface for VRL",
-    "updated_at": "2022-10-17T07:41:26Z",
+    "updated_at": "2026-11-03T23:04:52Z",
     "user": {
       "login": "pablosichert"
     }
@@ -64043,7 +64050,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(vrl): Optimize error in VRL `??` operator",
-    "updated_at": "2022-10-17T16:21:36Z",
+    "updated_at": "2026-11-03T23:04:51Z",
     "user": {
       "login": "pablosichert"
     }
@@ -64246,7 +64253,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: point tonic at temporary fork that incorporates a fix to remove the compression feature flag",
-    "updated_at": "2022-07-11T20:26:31Z",
+    "updated_at": "2026-11-03T23:05:11Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -66087,7 +66094,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "add null to unknown type",
-    "updated_at": "2022-07-15T19:54:35Z",
+    "updated_at": "2026-11-03T23:04:31Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -66303,7 +66310,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(vrl): add `Kind::insert`",
-    "updated_at": "2022-07-19T15:59:02Z",
+    "updated_at": "2026-11-03T23:04:31Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -69869,7 +69876,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(new source): new `azure_event_hubs` source.",
-    "updated_at": "2022-08-09T10:05:39Z",
+    "updated_at": "2026-11-03T23:05:08Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -72278,7 +72285,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(config): simplify and prep providers a bit",
-    "updated_at": "2023-02-02T17:54:38Z",
+    "updated_at": "2026-11-03T23:04:59Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -74486,7 +74493,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(config): add full enterprise provider",
-    "updated_at": "2022-10-21T22:25:57Z",
+    "updated_at": "2026-11-03T23:04:59Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -76686,7 +76693,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(vector): WIP — estimated JSON-encoded event size",
-    "updated_at": "2023-06-30T23:14:43Z",
+    "updated_at": "2026-11-03T23:04:34Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -76736,7 +76743,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(VRL): Make VRL `abort`s unrecoverable / fix `panic`s",
-    "updated_at": "2024-03-14T18:49:18Z",
+    "updated_at": "2026-11-03T23:04:52Z",
     "user": {
       "login": "pablosichert"
     }
@@ -76765,7 +76772,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Revert \"fix(packaging): Revert recent packaging and service changes\"",
-    "updated_at": "2023-02-01T23:03:04Z",
+    "updated_at": "2026-11-03T23:05:02Z",
     "user": {
       "login": "spencergilbert"
     }
@@ -77870,7 +77877,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(prometheus_remote_write sink): use common test helpers in tests",
-    "updated_at": "2023-02-01T23:03:47Z",
+    "updated_at": "2026-11-03T23:04:58Z",
     "user": {
       "login": "prognant"
     }
@@ -78000,13 +78007,19 @@
         "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
         "name": "domain:ci"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 14100,
     "pull_request": {},
     "state": "open",
     "title": "chore: build vector-dev image for linux/arm64 in addition to linux/amd64 to enable Apple Silicon development",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-03T16:03:30Z",
     "user": {
       "login": "bencooper222"
     }
@@ -78059,7 +78072,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.24.0 release",
-    "updated_at": "2022-08-30T20:32:44Z",
+    "updated_at": "2026-11-03T23:04:55Z",
     "user": {
       "login": "jszwedko"
     }
@@ -78331,7 +78344,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(vector): WIP — estimated JSON-encoded event size v2",
-    "updated_at": "2023-06-30T23:14:50Z",
+    "updated_at": "2026-11-03T23:04:34Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -78377,7 +78390,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(vrl): Add failling coalesce assignment test",
-    "updated_at": "2022-08-26T14:41:25Z",
+    "updated_at": "2026-11-03T23:04:30Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -91621,13 +91634,19 @@
         "description": null,
         "id": 4191376575049891724,
         "name": "domain:rfc"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 14708,
     "pull_request": {},
     "state": "open",
     "title": "chore: RFC for handling discarded events",
-    "updated_at": "2026-03-18T19:08:21Z",
+    "updated_at": "2026-11-03T16:03:36Z",
     "user": {
       "login": "bruceg"
     }
@@ -92436,7 +92455,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(ci): Add CI for testing web-playground ",
-    "updated_at": "2023-03-28T13:09:59Z",
+    "updated_at": "2026-11-03T23:04:38Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -94315,7 +94334,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(vrl): add `sort` function",
-    "updated_at": "2023-03-28T15:34:23Z",
+    "updated_at": "2026-11-03T23:04:37Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -94668,7 +94687,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore!(vrl): Call `parse_groks` in implementation of `parse_grok`",
-    "updated_at": "2023-03-28T13:40:56Z",
+    "updated_at": "2026-11-03T23:04:51Z",
     "user": {
       "login": "pablosichert"
     }
@@ -96027,7 +96046,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(source): create a new docker_stats source",
-    "updated_at": "2023-06-28T13:31:32Z",
+    "updated_at": "2026-11-03T23:04:27Z",
     "user": {
       "login": "jdrouet"
     }
@@ -97069,7 +97088,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: RFC for demo mode",
-    "updated_at": "2026-07-02T12:56:59Z",
+    "updated_at": "2026-11-03T23:05:09Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -98241,7 +98260,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(sources): measure estimated JSON encoded event sizes",
-    "updated_at": "2022-12-01T20:41:40Z",
+    "updated_at": "2026-11-03T23:04:34Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -98264,7 +98283,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(sinks): measure estimated JSON encoded event sizes",
-    "updated_at": "2022-12-01T20:41:26Z",
+    "updated_at": "2026-11-03T23:04:35Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -99218,7 +99237,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "POC for demo mode",
-    "updated_at": "2026-07-02T12:57:22Z",
+    "updated_at": "2026-11-03T23:05:08Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -100476,7 +100495,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(geoip transform): add log namespace support to geoip transform",
-    "updated_at": "2022-11-03T19:36:31Z",
+    "updated_at": "2026-11-03T23:04:32Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -102216,7 +102235,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(amqp source, amqp sink): Flatten `connection` options",
-    "updated_at": "2022-12-21T20:45:04Z",
+    "updated_at": "2026-11-03T23:04:30Z",
     "user": {
       "login": "jszwedko"
     }
@@ -103124,7 +103143,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Example xtask setup",
-    "updated_at": "2023-02-01T23:04:59Z",
+    "updated_at": "2026-11-03T23:05:22Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -104745,7 +104764,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(vrl): Fix playground window.run_vrl is not a function error",
-    "updated_at": "2022-11-16T19:33:24Z",
+    "updated_at": "2026-11-03T23:04:37Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -104768,7 +104787,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(vrl): Add diff viewer on playground",
-    "updated_at": "2023-03-28T13:04:21Z",
+    "updated_at": "2026-11-03T23:04:37Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -104923,7 +104942,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(redis source): mark redis_key field as possibly undefined",
-    "updated_at": "2024-03-14T18:49:19Z",
+    "updated_at": "2026-11-03T23:04:26Z",
     "user": {
       "login": "davidhuie-dd"
     }
@@ -105104,7 +105123,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(splunk_hec sink): change time to see if CI has a lingering bad record",
-    "updated_at": "2022-11-17T19:23:59Z",
+    "updated_at": "2026-11-03T23:05:11Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -105189,7 +105208,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "[DO NOT MERGE] Intentionally break the build",
-    "updated_at": "2022-11-17T23:27:33Z",
+    "updated_at": "2026-11-03T23:05:05Z",
     "user": {
       "login": "blt"
     }
@@ -107290,7 +107309,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(datadog_agent source) Add tag simplification.",
-    "updated_at": "2023-04-12T19:09:38Z",
+    "updated_at": "2026-11-03T23:05:05Z",
     "user": {
       "login": "gaylatea"
     }
@@ -109057,7 +109076,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(elasticsearch sink): Gunzip Elasticsearch responses when necessary",
-    "updated_at": "2024-03-14T18:49:20Z",
+    "updated_at": "2026-11-03T23:04:26Z",
     "user": {
       "login": "davidhuie-dd"
     }
@@ -109347,7 +109366,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(config, docs): bootstrap the conversion of sources/sinks to the machine-generated Cue documentation",
-    "updated_at": "2023-02-01T23:07:04Z",
+    "updated_at": "2026-11-03T23:05:14Z",
     "user": {
       "login": "tobz"
     }
@@ -110247,7 +110266,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(internal_events): add `source` identifier to specific internal events",
-    "updated_at": "2023-06-30T23:16:08Z",
+    "updated_at": "2026-11-03T23:04:33Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -112088,7 +112107,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(prometheus_scrape source,  prometheus_remote_write source): allow duplicate labels",
-    "updated_at": "2022-12-14T17:14:16Z",
+    "updated_at": "2026-11-03T23:05:10Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -112183,7 +112202,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(prometheus_exporter sink): allow duplicate tags",
-    "updated_at": "2022-12-14T17:14:40Z",
+    "updated_at": "2026-11-03T23:05:10Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -112506,7 +112525,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Update AWS SDKs to 0.23.0",
-    "updated_at": "2023-02-03T15:18:58Z",
+    "updated_at": "2026-11-03T23:04:47Z",
     "user": {
       "login": "jszwedko"
     }
@@ -113342,7 +113361,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Try zig again",
-    "updated_at": "2022-12-20T01:00:26Z",
+    "updated_at": "2026-11-03T23:05:17Z",
     "user": {
       "login": "jszwedko"
     }
@@ -114257,7 +114276,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(internal_events): add `source` tag to `EventsSent`",
-    "updated_at": "2024-03-14T18:49:43Z",
+    "updated_at": "2026-11-03T23:04:33Z",
     "user": {
       "login": "JeanMertz"
     }

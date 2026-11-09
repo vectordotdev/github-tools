@@ -6548,7 +6548,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-04T14:32:07Z",
     "created_at": "2026-07-01T17:30:38Z",
     "id": 4787850351,
     "issue_type": "Task",
@@ -6567,9 +6567,9 @@
       }
     ],
     "number": 1845,
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): consolidate wasm32 getrandom overrides to a single version",
-    "updated_at": "2026-07-01T17:30:54Z",
+    "updated_at": "2026-11-04T14:32:07Z",
     "user": {
       "login": "pront"
     }
@@ -9175,7 +9175,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(compiler): implement first-class for loops",
-    "updated_at": "2026-10-30T14:19:59Z",
+    "updated_at": "2026-11-04T18:49:01Z",
     "user": {
       "login": "jimmystewpot"
     }
@@ -10475,17 +10475,17 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-04T16:03:38Z",
     "created_at": "2026-10-21T03:46:43Z",
-    "draft": true,
+    "draft": false,
     "id": 4946081684,
     "issue_type": null,
     "labels": [],
     "number": 2007,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps)!: upgrade protobuf dependencies to Prost 0.14",
-    "updated_at": "2026-10-21T14:22:44Z",
+    "updated_at": "2026-11-04T16:07:19Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -10574,19 +10574,12 @@
     "draft": false,
     "id": 4996702476,
     "issue_type": null,
-    "labels": [
-      {
-        "color": "975c5b",
-        "description": "PR is pending a docs team review",
-        "id": 3009349329363320512,
-        "name": "docs review on hold"
-      }
-    ],
+    "labels": [],
     "number": 2012,
     "pull_request": {},
     "state": "open",
     "title": "feat(stdlib): add `log10` and `pow` functions",
-    "updated_at": "2026-10-24T15:41:42Z",
+    "updated_at": "2026-11-05T18:20:52Z",
     "user": {
       "login": "lchabert"
     }
@@ -11049,7 +11042,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T19:10:22Z",
     "created_at": "2026-10-30T20:13:10Z",
     "draft": false,
     "id": 5090446326,
@@ -11064,9 +11057,9 @@
     ],
     "number": 2030,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(releasing): align breaking changelog format with Vector",
-    "updated_at": "2026-10-30T22:07:20Z",
+    "updated_at": "2026-11-02T19:10:24Z",
     "user": {
       "login": "pront"
     }
@@ -11105,7 +11098,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(compiler): cache structurally-constant object literals",
-    "updated_at": "2026-11-01T12:35:55Z",
+    "updated_at": "2026-11-07T12:45:48Z",
     "user": {
       "login": "yackushevas"
     }
@@ -11133,14 +11126,14 @@
     "number": 2033,
     "pull_request": {},
     "state": "open",
-    "title": "chore(deps): bump the prost group with 4 updates",
-    "updated_at": "2026-11-01T04:09:09Z",
+    "title": "chore(deps): bump the prost group across 1 directory with 4 updates",
+    "updated_at": "2026-11-04T17:03:16Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-04T14:51:52Z",
     "created_at": "2026-11-01T04:23:41Z",
     "draft": false,
     "id": 5104329266,
@@ -11161,15 +11154,15 @@
     ],
     "number": 2034,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump the cargo-major group across 1 directory with 16 updates",
-    "updated_at": "2026-11-01T04:29:31Z",
+    "updated_at": "2026-11-04T14:51:57Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-04T19:38:46Z",
     "created_at": "2026-11-01T14:55:04Z",
     "draft": false,
     "id": 5108508648,
@@ -11190,9 +11183,9 @@
     ],
     "number": 2035,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(ci): bump rust-lang/crates-io-auth-action from 1.0.5 to 1.0.6 in the github_actions group",
-    "updated_at": "2026-11-01T15:01:53Z",
+    "updated_at": "2026-11-04T19:38:48Z",
     "user": {
       "login": "dependabot"
     }
@@ -11215,9 +11208,123 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(stdlib): accept an array of formats in parse_timestamp",
-    "updated_at": "2026-11-02T13:49:10Z",
+    "updated_at": "2026-11-04T01:36:33Z",
     "user": {
       "login": "sainad2222"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T11:47:56Z",
+    "draft": false,
+    "id": 5136692717,
+    "issue_type": null,
+    "labels": [],
+    "number": 2037,
+    "pull_request": {},
+    "state": "open",
+    "title": "enhancement(stdlib): fold constant `get` value arguments at compile time",
+    "updated_at": "2026-11-07T11:52:06Z",
+    "user": {
+      "login": "yackushevas"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T14:32:04Z",
+    "created_at": "2026-11-03T13:26:57Z",
+    "draft": false,
+    "id": 5138029779,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2038,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): consolidate wasm getrandom overrides",
+    "updated_at": "2026-11-04T14:32:04Z",
+    "user": {
+      "login": "titaneric"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T16:54:43Z",
+    "created_at": "2026-11-04T14:52:25Z",
+    "draft": false,
+    "id": 5156333012,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2039,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): apply 11 compatible major upgrades",
+    "updated_at": "2026-11-04T16:54:53Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-04T16:54:01Z",
+    "draft": true,
+    "id": 5158171993,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2040,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): upgrade mlua to 0.12",
+    "updated_at": "2026-11-04T16:54:03Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T16:05:05Z",
+    "created_at": "2026-11-06T15:46:42Z",
+    "draft": false,
+    "id": 5190494921,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2041,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): update crates with RUSTSEC advisories and clean up deny.toml",
+    "updated_at": "2026-11-06T16:05:07Z",
+    "user": {
+      "login": "thomasqueirozb"
     }
   }
 ]

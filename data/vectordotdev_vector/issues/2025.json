@@ -3961,7 +3961,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(datadog service): support filtering on ddtags and ddsource in datadog search syntax",
-    "updated_at": "2025-01-27T17:19:40Z",
+    "updated_at": "2026-11-05T13:54:27Z",
     "user": {
       "login": "20agbekodo"
     }
@@ -4471,7 +4471,7 @@
     "number": 22310,
     "state": "open",
     "title": "SSL errors in log with http_endpoint with tls",
-    "updated_at": "2026-08-28T16:16:13Z",
+    "updated_at": "2026-11-08T08:32:06Z",
     "user": {
       "login": "robinpecha"
     }
@@ -10434,7 +10434,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Bump the azure group with 4 updates",
-    "updated_at": "2025-05-13T15:47:24Z",
+    "updated_at": "2026-11-03T22:45:23Z",
     "user": {
       "login": "dependabot"
     }
@@ -13874,13 +13874,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 22789,
     "pull_request": {},
     "state": "open",
     "title": "feat!(opentelemetry sink): Add support for encoders",
-    "updated_at": "2026-01-19T17:13:47Z",
+    "updated_at": "2026-11-03T16:35:46Z",
     "user": {
       "login": "fbs"
     }
@@ -21278,7 +21284,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(sinks): Loki Sink supports setting requests of persistent connection",
-    "updated_at": "2026-06-28T06:16:15Z",
+    "updated_at": "2026-11-07T03:27:11Z",
     "user": {
       "login": "tiantangkuohai"
     }
@@ -25195,7 +25201,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T21:14:03Z",
     "created_at": "2025-07-09T19:39:19Z",
     "id": 3216945361,
     "issue_type": "Task",
@@ -25214,9 +25220,9 @@
       }
     ],
     "number": 23350,
-    "state": "open",
+    "state": "closed",
     "title": "update `prost-*` and `tonic-*` crates",
-    "updated_at": "2025-07-09T19:39:19Z",
+    "updated_at": "2026-11-05T21:14:03Z",
     "user": {
       "login": "pront"
     }
@@ -26503,7 +26509,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(elasticsearch sink): match only when feature is enabled",
-    "updated_at": "2025-07-30T17:47:51Z",
+    "updated_at": "2026-11-03T22:45:23Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -26711,7 +26717,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(ci): add changelog fragments upper limit per PR",
-    "updated_at": "2025-07-22T19:12:42Z",
+    "updated_at": "2026-11-03T22:45:22Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -29423,7 +29429,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(log_to_metric transform): fix config parsing",
-    "updated_at": "2025-08-05T16:00:09Z",
+    "updated_at": "2026-11-03T22:45:24Z",
     "user": {
       "login": "pront"
     }
@@ -33406,7 +33412,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-06T10:08:51Z",
     "created_at": "2025-09-01T17:54:21Z",
     "draft": false,
     "id": 2790488442,
@@ -33439,9 +33445,9 @@
     ],
     "number": 23694,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "feat(aggregate transform): Event-time based aggregation support",
-    "updated_at": "2026-05-24T22:32:28Z",
+    "updated_at": "2026-11-06T10:09:02Z",
     "user": {
       "login": "adiwab"
     }
@@ -38615,13 +38621,19 @@
         "description": "Anything related to Vector's sources",
         "id": 2021938762883471635,
         "name": "domain:sources"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 23916,
     "pull_request": {},
     "state": "open",
     "title": "feat(new source):Initial addition of GCS support",
-    "updated_at": "2026-04-14T16:39:53Z",
+    "updated_at": "2026-11-03T16:35:58Z",
     "user": {
       "login": "deangalvin-cb"
     }
@@ -42920,13 +42932,19 @@
         "description": "Anything `redis` source related",
         "id": 210342434853879155,
         "name": "source:redis"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24100,
     "pull_request": {},
     "state": "open",
     "title": "feat(redis source): add reconnecting pubsub session for channel `data_type`",
-    "updated_at": "2026-05-24T22:32:18Z",
+    "updated_at": "2026-11-03T16:36:02Z",
     "user": {
       "login": "gibranbadrul"
     }
@@ -44608,6 +44626,12 @@
         "name": "domain:ci"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -44618,7 +44642,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(platforms): add s390x architecture support",
-    "updated_at": "2025-11-18T15:23:22Z",
+    "updated_at": "2026-11-03T15:15:03Z",
     "user": {
       "login": "binhnguyenduc"
     }
@@ -46185,7 +46209,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T03:34:31Z",
     "created_at": "2025-11-13T14:10:33Z",
     "draft": true,
     "id": 3007099740,
@@ -46212,9 +46236,9 @@
     ],
     "number": 24230,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix(nats source): prevent slow consumer log explosion",
-    "updated_at": "2025-11-18T14:17:23Z",
+    "updated_at": "2026-11-03T03:34:44Z",
     "user": {
       "login": "benjamin-awd"
     }
@@ -46947,12 +46971,18 @@
         "description": "Anything `mongodb_metrics` source related",
         "id": 6038198057219253635,
         "name": "source:mongodb_metrics"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "A bug that has been reproduced or confirmed.",
+        "id": 1968677811294901969,
+        "name": "meta:confirmed"
       }
     ],
     "number": 24261,
     "state": "open",
     "title": "MongoDB Metrics source fails with `DeserializationError` on newer versions of WiredTiger",
-    "updated_at": "2026-02-21T20:42:42Z",
+    "updated_at": "2026-11-06T17:57:02Z",
     "user": {
       "login": "maxcorbin"
     }
@@ -47611,13 +47641,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24292,
     "pull_request": {},
     "state": "open",
     "title": "fix(splunk_hec): validate and flatten fields",
-    "updated_at": "2026-03-20T20:05:22Z",
+    "updated_at": "2026-11-03T16:36:07Z",
     "user": {
       "login": "matt-simons"
     }
@@ -48380,13 +48416,19 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain:external docs"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24328,
     "pull_request": {},
     "state": "open",
     "title": "feat(aws_cloudwatch_logs sink): implement log_group_class config for CloudWatch Logs sink",
-    "updated_at": "2026-05-24T22:32:12Z",
+    "updated_at": "2026-11-03T16:36:12Z",
     "user": {
       "login": "cahartma"
     }

@@ -546,7 +546,7 @@
     "author": {
       "login": "calebcall"
     },
-    "bodyText": "I have this example logs message/event:\n{\"file\":\"/var/lib/service/nodes/406a6907-6133-48d4-85f6-cc5122bdcc65/data/protocol_data/worker/worker.log\",\"hostname\":\"node.example.com\",\"message\":\"\\^[[2m2025-06-02T03:45:06.475906Z\\^[[0m \\^[[32m INFO\\^[[0m \\^[[2mworker::controller::p2p\\^[[0m\\^[[2m:\\^[[0m Sending 1 logs (606 bytes)\",\"source_type\":\"file\",\"timestamp\":\"2025-06-02T15:12:43.709155183Z\"}\nI'm trying to remove the ANSI color coding that's coming through the logs.\nI'm trying with this replace function replace(string!(.message), r'\\\\^[\\[[0-9]*[mK]', \"\")\nNo errors, but no replacement is happening.  The regex correctly matches according to regex101 testing.  I must be doing something wrong with the replace functionality.",
+    "bodyText": "I have this example logs message/event:\n{\"file\":\"/var/lib/service/nodes/406a6907-6133-48d4-85f6-cc5122bdcc65/data/protocol_data/worker/worker.log\",\"hostname\":\"node.example.com\",\"message\":\"\\u001b[2m2025-06-02T03:45:06.475906Z\\u001b[0m \\u001b[32m INFO\\u001b[0m \\u001b[2mworker::controller::p2p\\u001b[0m\\u001b[2m:\\u001b[0m Sending 1 logs (606 bytes)\",\"source_type\":\"file\",\"timestamp\":\"2025-06-02T15:12:43.709155183Z\"}\nI'm trying to remove the ANSI color coding that's coming through the logs.\nI'm trying with this replace function replace(string!(.message), r'\\\\u001b\\[[0-9]*[mK]', \"\")\nNo errors, but no replacement is happening.  The regex correctly matches according to regex101 testing.  I must be doing something wrong with the replace functionality.",
     "category": {
       "isAnswerable": true,
       "name": "Q&A"

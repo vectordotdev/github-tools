@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-02T14:48:15.218340+00:00",
+  "collectedAt": "2026-11-09T14:46:45.093736+00:00",
   "issues": [
     {
       "number": 103,
@@ -4724,7 +4724,7 @@
       "reactions": 0,
       "title": "[bug] ingest v2: `ShardPositionsUpdate` has no publisher on nodes without the indexer or control-plane role",
       "unattributedComments": 0,
-      "uniqueCommenters": 1
+      "uniqueCommenters": 2
     },
     {
       "number": 6883,
@@ -4746,6 +4746,34 @@
       "title": "Splits left behind by a moved or deleted pipeline are never merged: proposal for a one-shot `defrag` tool",
       "unattributedComments": 0,
       "uniqueCommenters": 1
+    },
+    {
+      "number": 7000,
+      "reactions": 0,
+      "title": "Retention stops after deleting and recreating an index with the same ID",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 7002,
+      "reactions": 0,
+      "title": "[bug] File-backed metastore blocks all reads of an index while writing its metadata",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 7003,
+      "reactions": 0,
+      "title": "[bug] File-backed metastore blocks index reads during each metadata polling reload",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 7004,
+      "reactions": 0,
+      "title": "[bug] Indexing split cache eviction blocks merge fetches while deleting splits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
     }
   ],
   "repository": "quickwit-oss/quickwit",

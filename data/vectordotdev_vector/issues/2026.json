@@ -566,6 +566,12 @@
         "name": "source:new"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -576,7 +582,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(new source): add kubernetes_events source",
-    "updated_at": "2026-10-29T15:04:07Z",
+    "updated_at": "2026-11-03T16:36:16Z",
     "user": {
       "login": "elohmeier"
     }
@@ -947,7 +953,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): bump lru to 0.16.3",
-    "updated_at": "2026-01-09T18:22:42Z",
+    "updated_at": "2026-11-03T22:45:24Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -2158,12 +2164,19 @@
     "draft": false,
     "id": 3184412021,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 24510,
     "pull_request": {},
     "state": "open",
     "title": "feat(codecs): MessagePack decoder",
-    "updated_at": "2026-01-17T19:28:20Z",
+    "updated_at": "2026-11-03T16:36:19Z",
     "user": {
       "login": "keuin"
     }
@@ -3057,6 +3070,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "AB3B4B",
         "description": "",
         "id": 81604373089705258,
@@ -3073,7 +3092,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(kafka source): add multithreading option for kafka source",
-    "updated_at": "2026-08-27T10:14:19Z",
+    "updated_at": "2026-11-03T16:36:26Z",
     "user": {
       "login": "esensar"
     }
@@ -4753,13 +4772,19 @@
         "description": "Anything `aws_s3` source related",
         "id": 7036930517801581248,
         "name": "source:aws_s3"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24616,
     "pull_request": {},
     "state": "open",
     "title": "feat(aws_s3 source): add custom SQS authentication option",
-    "updated_at": "2026-05-24T22:31:41Z",
+    "updated_at": "2026-11-03T16:36:30Z",
     "user": {
       "login": "kfirg-cetu"
     }
@@ -6582,7 +6607,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(datadog_logs): Emit warn logs for misconfigured reserved attributes",
-    "updated_at": "2026-03-03T15:59:37Z",
+    "updated_at": "2026-11-05T13:54:28Z",
     "user": {
       "login": "20agbekodo"
     }
@@ -8807,7 +8832,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(new sink): new `gcp_bigquery` sink",
-    "updated_at": "2026-10-30T19:19:59Z",
+    "updated_at": "2026-11-06T00:33:38Z",
     "user": {
       "login": "james9909"
     }
@@ -9590,7 +9615,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(deps): bump openssl-probe from 0.1.6 to 0.2.1",
-    "updated_at": "2026-10-27T13:38:58Z",
+    "updated_at": "2026-11-05T01:38:49Z",
     "user": {
       "login": "dependabot"
     }
@@ -10178,6 +10203,12 @@
         "name": "domain:deps"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -10188,7 +10219,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(deps): bump evmap to 11.0.0",
-    "updated_at": "2026-03-26T12:37:26Z",
+    "updated_at": "2026-11-03T16:36:34Z",
     "user": {
       "login": "mushrowan"
     }
@@ -12130,6 +12161,12 @@
         "name": "domain:vdev"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -12140,7 +12177,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(tests): pin otel collector images by digest",
-    "updated_at": "2026-03-11T16:39:11Z",
+    "updated_at": "2026-11-03T16:36:38Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -13614,7 +13651,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): update vrl to decouple cli from stdlib",
-    "updated_at": "2026-03-17T18:25:23Z",
+    "updated_at": "2026-11-03T22:45:24Z",
     "user": {
       "login": "pront"
     }
@@ -17230,13 +17267,19 @@
         "description": "Anything related to releasing Vector",
         "id": 843604899509384131,
         "name": "domain:releasing"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25072,
     "pull_request": {},
     "state": "open",
     "title": "feat(deployment): add sd_notify integration with watchdog support",
-    "updated_at": "2026-04-17T14:08:39Z",
+    "updated_at": "2026-11-03T16:36:42Z",
     "user": {
       "login": "newtonne"
     }
@@ -17617,12 +17660,19 @@
     "draft": false,
     "id": 3474270597,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 25087,
     "pull_request": {},
     "state": "open",
     "title": "feat(config): gcp_secret_manager secret provider",
-    "updated_at": "2026-05-14T16:51:07Z",
+    "updated_at": "2026-11-03T16:36:47Z",
     "user": {
       "login": "sonnens"
     }
@@ -17788,13 +17838,19 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain:external docs"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25093,
     "pull_request": {},
     "state": "open",
     "title": "feat(codecs): fetch Avro schema dynamically from Confluent Schema Registry",
-    "updated_at": "2026-04-10T12:56:55Z",
+    "updated_at": "2026-11-03T16:36:52Z",
     "user": {
       "login": "omwbennett"
     }
@@ -18153,6 +18209,12 @@
         "name": "domain:ci"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -18163,7 +18225,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(ci): add scorecard security scan to merge queue",
-    "updated_at": "2026-04-13T15:14:18Z",
+    "updated_at": "2026-11-03T16:36:56Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -18655,7 +18717,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T21:43:13Z",
     "created_at": "2026-04-06T16:33:02Z",
     "draft": false,
     "id": 3493945165,
@@ -18676,9 +18738,9 @@
     ],
     "number": 25128,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix(aws_cloudwatch_logs sink): Skip healthcheck for templated group names",
-    "updated_at": "2026-05-24T22:30:48Z",
+    "updated_at": "2026-11-03T21:43:24Z",
     "user": {
       "login": "iandelahorne"
     }
@@ -18734,7 +18796,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T15:03:16Z",
     "created_at": "2026-04-06T19:31:59Z",
     "draft": false,
     "id": 3494644003,
@@ -18761,9 +18823,9 @@
     ],
     "number": 25131,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix(api): restart api server during reload with address from the new config if necessary",
-    "updated_at": "2026-07-08T12:55:35Z",
+    "updated_at": "2026-11-03T15:03:29Z",
     "user": {
       "login": "garryliu-stripe"
     }
@@ -20073,7 +20135,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(splunk_hec source): Support custom extractors",
-    "updated_at": "2026-05-05T14:52:33Z",
+    "updated_at": "2026-11-05T13:54:30Z",
     "user": {
       "login": "20agbekodo"
     }
@@ -20113,17 +20175,35 @@
         "name": "domain:sources"
       },
       {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
         "color": "85BFAF",
         "description": "Anything `aws_s3` source related",
         "id": 7036930517801581248,
         "name": "source:aws_s3"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
       }
     ],
     "number": 25182,
     "pull_request": {},
     "state": "open",
-    "title": "chore(aws_s3 source): add custom endpoint for sqs",
-    "updated_at": "2026-05-24T22:29:09Z",
+    "title": "enhancement(aws_s3 source): support separate SQS endpoints",
+    "updated_at": "2026-11-03T21:08:18Z",
     "user": {
       "login": "serge-r"
     }
@@ -20576,6 +20656,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -20586,7 +20672,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(deps): remove old rustls and webpki dependencies",
-    "updated_at": "2026-04-24T15:16:43Z",
+    "updated_at": "2026-11-03T16:37:04Z",
     "user": {
       "login": "graphcareful"
     }
@@ -20911,13 +20997,19 @@
         "description": "A value-adding code addition that introduce new functionality.",
         "id": 6628384246314085318,
         "name": "type:feature"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25216,
     "pull_request": {},
     "state": "open",
     "title": "feat(gcp_cloud_storage sink): add Parquet encoder",
-    "updated_at": "2026-07-13T13:13:35Z",
+    "updated_at": "2026-11-03T16:37:09Z",
     "user": {
       "login": "sonnens"
     }
@@ -21068,6 +21160,12 @@
         "name": "domain:core"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "AB3B4B",
         "description": "",
         "id": 81604373089705258,
@@ -21078,7 +21176,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(prometheus_remote_write source, prometheus_remote_write sink): add support for Prometheus native histograms",
-    "updated_at": "2026-07-13T13:13:35Z",
+    "updated_at": "2026-11-03T16:37:13Z",
     "user": {
       "login": "sanjams2"
     }
@@ -21363,7 +21461,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(splunk_hec source): Emit warn on unauthenticated request",
-    "updated_at": "2026-07-15T15:55:47Z",
+    "updated_at": "2026-11-05T13:54:29Z",
     "user": {
       "login": "20agbekodo"
     }
@@ -23608,6 +23706,12 @@
         "name": "domain:deps"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -23618,7 +23722,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(deps): bump databend-client from 0.28.2 to 0.34.0",
-    "updated_at": "2026-05-27T19:57:18Z",
+    "updated_at": "2026-11-03T16:37:17Z",
     "user": {
       "login": "dependabot"
     }
@@ -24094,7 +24198,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Second-round decoder for splunk_hec source",
-    "updated_at": "2026-07-13T13:15:33Z",
+    "updated_at": "2026-11-05T13:54:28Z",
     "user": {
       "login": "20agbekodo"
     }
@@ -24239,6 +24343,12 @@
         "name": "source:kubernetes_logs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "AB3B4B",
         "description": "",
         "id": 81604373089705258,
@@ -24249,7 +24359,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(kubernetes_logs source): add end-to-end\n  acknowledgement support",
-    "updated_at": "2026-07-13T13:13:35Z",
+    "updated_at": "2026-11-03T16:37:27Z",
     "user": {
       "login": "connoryy"
     }
@@ -24278,13 +24388,19 @@
         "description": "Anything related to core crates i.e. vector-core, core-common, etc",
         "id": 6154848213855315177,
         "name": "domain:core"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25326,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(topology): add per-sink authoritative\n  acknowledgement control",
-    "updated_at": "2026-07-13T13:13:06Z",
+    "updated_at": "2026-11-03T16:37:31Z",
     "user": {
       "login": "connoryy"
     }
@@ -25043,6 +25159,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "AB3B4B",
         "description": "",
         "id": 81604373089705258,
@@ -25059,7 +25181,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(codecs): Allow encoder to add avro schema id prefix",
-    "updated_at": "2026-07-13T13:12:57Z",
+    "updated_at": "2026-11-03T16:37:39Z",
     "user": {
       "login": "YaZasnyal"
     }
@@ -25163,13 +25285,19 @@
         "description": "A value-adding code addition that introduce new functionality.",
         "id": 6628384246314085318,
         "name": "type:feature"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25356,
     "pull_request": {},
     "state": "open",
     "title": "feat(config): graduated deprecation policy for removed config fields",
-    "updated_at": "2026-07-13T13:12:57Z",
+    "updated_at": "2026-11-03T16:37:43Z",
     "user": {
       "login": "joshcoughlan"
     }
@@ -27379,13 +27507,19 @@
         "description": "Anything related to Vector's sources",
         "id": 2021938762883471635,
         "name": "domain:sources"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25431,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(performance): udp batch implementation (experiment)",
-    "updated_at": "2026-07-13T13:13:07Z",
+    "updated_at": "2026-11-03T16:37:49Z",
     "user": {
       "login": "splitice"
     }
@@ -28021,13 +28155,19 @@
         "description": "Anything `gcp_cloud_storage` sink related",
         "id": 4663635422713484343,
         "name": "sink:gcp_cloud_storage"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25454,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(gcp_cloud_storage sink): Add support for OIDC via Workload Identity Federation",
-    "updated_at": "2026-07-24T14:03:07Z",
+    "updated_at": "2026-11-03T16:37:53Z",
     "user": {
       "login": "ganelo"
     }
@@ -28916,7 +29056,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(tag_cardinality_limit transform): add sliding-window TTL for tag values",
-    "updated_at": "2026-11-02T12:35:55Z",
+    "updated_at": "2026-11-06T10:54:12Z",
     "user": {
       "login": "kaarolch"
     }
@@ -29617,13 +29757,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25509,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(file sink): batch writes per partition to reduce syscall …",
-    "updated_at": "2026-07-13T13:13:35Z",
+    "updated_at": "2026-11-03T16:38:00Z",
     "user": {
       "login": "FotoVerite"
     }
@@ -30395,7 +30541,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(datadog_agent source): add API key validation",
-    "updated_at": "2026-10-29T12:48:26Z",
+    "updated_at": "2026-11-05T08:45:27Z",
     "user": {
       "login": "xfocus3"
     }
@@ -30889,13 +31035,19 @@
         "description": "Anything related to releasing Vector",
         "id": 843604899509384131,
         "name": "domain:releasing"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25552,
     "pull_request": {},
     "state": "open",
     "title": "feat(releasing): include shell completions in deb, rpm, and archive packages",
-    "updated_at": "2026-07-13T13:12:57Z",
+    "updated_at": "2026-11-03T16:38:04Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -31256,7 +31408,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(sources): post-processing in SourceSender",
-    "updated_at": "2026-07-13T13:12:57Z",
+    "updated_at": "2026-11-05T13:54:29Z",
     "user": {
       "login": "20agbekodo"
     }
@@ -31755,6 +31907,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -31765,7 +31923,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(new transform): add AWS ECS metadata transform",
-    "updated_at": "2026-07-21T02:14:26Z",
+    "updated_at": "2026-11-03T16:38:08Z",
     "user": {
       "login": "hrko"
     }
@@ -33251,13 +33409,19 @@
         "description": "Anything related to Vector's sources",
         "id": 2021938762883471635,
         "name": "domain:sources"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25625,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(kafka source): add support for consuming records with null bodies",
-    "updated_at": "2026-07-13T13:13:35Z",
+    "updated_at": "2026-11-03T16:38:22Z",
     "user": {
       "login": "nviliunov-evolution-throwaway"
     }
@@ -34171,6 +34335,12 @@
         "name": "domain:sources"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "C5A7D5",
         "description": "A bug fix",
         "id": 4342356432556481912,
@@ -34181,7 +34351,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(syslog source): parse network device syslog variants",
-    "updated_at": "2026-07-13T13:13:19Z",
+    "updated_at": "2026-11-03T16:38:27Z",
     "user": {
       "login": "vitalvas"
     }
@@ -35302,6 +35472,12 @@
         "name": "domain:buffers"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "C5A7D5",
         "description": "A bug fix",
         "id": 4342356432556481912,
@@ -35312,7 +35488,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(disk buffer): recover from decode errors during initialization seek",
-    "updated_at": "2026-09-23T13:09:43Z",
+    "updated_at": "2026-11-02T21:45:54Z",
     "user": {
       "login": "apurvanisal5"
     }
@@ -35726,6 +35902,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -35736,7 +35918,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(clickhouse sink): add drain_shaping to pace recovery from disk-buffer backlogs",
-    "updated_at": "2026-07-13T13:04:20Z",
+    "updated_at": "2026-11-03T16:38:31Z",
     "user": {
       "login": "ku524"
     }
@@ -36483,7 +36665,7 @@
     "pull_request": {},
     "state": "open",
     "title": "docs(website): add kubernetes autoscaling guide",
-    "updated_at": "2026-09-11T22:12:13Z",
+    "updated_at": "2026-11-06T21:32:46Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -37012,7 +37194,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(kafka source, kafka sink): support AWS MSK IAM auth via SASL/OAUTHBEARER",
-    "updated_at": "2026-09-09T15:07:25Z",
+    "updated_at": "2026-11-03T15:25:43Z",
     "user": {
       "login": "gecube"
     }
@@ -38049,7 +38231,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(mqtt source): support end-to-end acknowledgements",
-    "updated_at": "2026-10-28T19:34:51Z",
+    "updated_at": "2026-11-05T18:51:36Z",
     "user": {
       "login": "antaresindustries"
     }
@@ -38602,13 +38784,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25808,
     "pull_request": {},
     "state": "open",
     "title": "feat(vector source, vector sink): Add vector source fetch mode and sink serve mode",
-    "updated_at": "2026-07-15T05:29:31Z",
+    "updated_at": "2026-11-03T16:38:39Z",
     "user": {
       "login": "Voldemat"
     }
@@ -40233,6 +40421,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -40243,7 +40437,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(aws_S3 source): Add timeout for aws operations.",
-    "updated_at": "2026-07-21T17:33:16Z",
+    "updated_at": "2026-11-03T16:38:45Z",
     "user": {
       "login": "petere-datadog"
     }
@@ -41029,6 +41223,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -41039,7 +41239,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(socket source): add opt-in PROXY protocol v2 support",
-    "updated_at": "2026-09-14T12:44:10Z",
+    "updated_at": "2026-11-03T16:38:51Z",
     "user": {
       "login": "rjshrjndrn"
     }
@@ -41650,13 +41850,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 25930,
     "pull_request": {},
     "state": "open",
     "title": "prototype: adding option to randomly select a host from DNS",
-    "updated_at": "2026-07-23T12:47:39Z",
+    "updated_at": "2026-11-03T16:38:55Z",
     "user": {
       "login": "jimrollenhagen"
     }
@@ -41879,7 +42085,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(clickhouse sink): add extra_query_params for arbitrary ClickHouse settings",
-    "updated_at": "2026-10-20T23:10:47Z",
+    "updated_at": "2026-11-06T17:26:28Z",
     "user": {
       "login": "valerypetrov"
     }
@@ -42803,6 +43009,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -42813,7 +43025,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(file sink): add parquet batch encoding to file sink",
-    "updated_at": "2026-07-30T01:02:41Z",
+    "updated_at": "2026-11-03T16:39:04Z",
     "user": {
       "login": "sonnens"
     }
@@ -45480,6 +45692,12 @@
         "name": "domain:sinks"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -45490,7 +45708,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(tests): drop influxdb from prometheus integration tests",
-    "updated_at": "2026-08-07T21:49:35Z",
+    "updated_at": "2026-11-03T16:39:08Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -45889,7 +46107,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(file sink): batch writes per partition to reduce syscall …",
-    "updated_at": "2026-09-22T06:50:13Z",
+    "updated_at": "2026-11-05T01:54:05Z",
     "user": {
       "login": "scMarkus"
     }
@@ -46175,6 +46393,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -46185,7 +46409,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(sources): add disconnect_mode option to TCP sources",
-    "updated_at": "2026-10-22T18:11:02Z",
+    "updated_at": "2026-11-03T16:39:12Z",
     "user": {
       "login": "tronboto"
     }
@@ -46549,7 +46773,7 @@
     "number": 26104,
     "state": "open",
     "title": "Migrate packages.timber.io artifacts to dd-cose-releases and retire obsolete content",
-    "updated_at": "2026-10-26T19:27:23Z",
+    "updated_at": "2026-11-03T20:59:46Z",
     "user": {
       "login": "pront"
     }
@@ -46913,7 +47137,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(windows_event_log source): correct wevtapi error codes and re-subscribe on unusable handles",
-    "updated_at": "2026-11-02T14:08:48Z",
+    "updated_at": "2026-11-05T10:57:08Z",
     "user": {
       "login": "pos-ei-don"
     }
@@ -47564,13 +47788,19 @@
         "description": "Anything related to core crates i.e. vector-core, core-common, etc",
         "id": 6154848213855315177,
         "name": "domain:core"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 26144,
     "pull_request": {},
     "state": "open",
     "title": "fix(topology): remove metrics for retired components",
-    "updated_at": "2026-08-19T08:05:41Z",
+    "updated_at": "2026-11-03T16:39:17Z",
     "user": {
       "login": "Jansen-w"
     }
@@ -47919,6 +48149,12 @@
         "name": "domain:ci"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -47929,7 +48165,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(ci): cache libsasl2 packages to avoid flaky apt",
-    "updated_at": "2026-08-19T22:56:25Z",
+    "updated_at": "2026-11-03T16:39:21Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -49155,13 +49391,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 26205,
     "pull_request": {},
     "state": "open",
     "title": "feat(databricks_zerobus): Allow ingestion of variant data",
-    "updated_at": "2026-10-08T19:31:15Z",
+    "updated_at": "2026-11-03T16:39:28Z",
     "user": {
       "login": "flaviofcruz"
     }
@@ -49765,12 +50007,6 @@
         "description": "Deploy a VRL Playground preview site for this PR",
         "id": 8667078690144480245,
         "name": "preview:playground"
-      },
-      {
-        "color": "DDA391",
-        "description": "Deploy a Rust Doc preview site for this PR",
-        "id": 1556723049916106147,
-        "name": "preview:rust-doc"
       }
     ],
     "number": 26232,
@@ -49841,12 +50077,6 @@
         "description": "Deploy a VRL Playground preview site for this PR",
         "id": 8667078690144480245,
         "name": "preview:playground"
-      },
-      {
-        "color": "DDA391",
-        "description": "Deploy a Rust Doc preview site for this PR",
-        "id": 1556723049916106147,
-        "name": "preview:rust-doc"
       }
     ],
     "number": 26234,
@@ -50753,7 +50983,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(tls): add configurable minimum and maximum TLS versions",
-    "updated_at": "2026-10-30T20:46:22Z",
+    "updated_at": "2026-11-05T17:26:34Z",
     "user": {
       "login": "sainad2222"
     }
@@ -51166,7 +51396,7 @@
   {
     "closed_at": null,
     "created_at": "2026-09-01T15:35:28Z",
-    "draft": true,
+    "draft": false,
     "id": 4413753512,
     "issue_type": null,
     "labels": [
@@ -51204,8 +51434,8 @@
     "number": 26281,
     "pull_request": {},
     "state": "open",
-    "title": "feat(codecs): base native JSON on Protobuf",
-    "updated_at": "2026-09-25T20:16:44Z",
+    "title": "feat(codecs): use Protobuf for native JSON",
+    "updated_at": "2026-11-05T19:34:36Z",
     "user": {
       "login": "pront"
     }
@@ -52053,7 +52283,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(disk buffer): record drop_newest discards from disk buffers",
-    "updated_at": "2026-09-08T16:45:50Z",
+    "updated_at": "2026-11-02T15:23:02Z",
     "user": {
       "login": "jonahgetz"
     }
@@ -52198,13 +52428,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 26320,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(gcp sinks): Add support for Workload Identity Federation via external_account credentials",
-    "updated_at": "2026-10-01T22:58:14Z",
+    "updated_at": "2026-11-03T16:39:38Z",
     "user": {
       "login": "jesumyip"
     }
@@ -52357,13 +52593,19 @@
         "description": "Anything related to core crates i.e. vector-core, core-common, etc",
         "id": 6154848213855315177,
         "name": "domain:core"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 26326,
     "pull_request": {},
     "state": "open",
     "title": "fix(config): reject unavailable local timezones",
-    "updated_at": "2026-09-09T20:32:14Z",
+    "updated_at": "2026-11-03T16:39:42Z",
     "user": {
       "login": "pront"
     }
@@ -52818,6 +53060,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -52828,7 +53076,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(azure_blob sink)!: make storage API version configurable",
-    "updated_at": "2026-09-09T20:55:40Z",
+    "updated_at": "2026-11-03T16:39:46Z",
     "user": {
       "login": "opencow"
     }
@@ -53330,6 +53578,12 @@
         "name": "domain:core"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -53346,7 +53600,7 @@
     "pull_request": {},
     "state": "open",
     "title": "refactor(concurrency): replace arc-swap with standard locks",
-    "updated_at": "2026-09-11T17:17:06Z",
+    "updated_at": "2026-11-03T16:39:51Z",
     "user": {
       "login": "pront"
     }
@@ -55254,7 +55508,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(deps): bump the http-upgrade group across 1 directory with 15 updates",
-    "updated_at": "2026-11-01T04:13:25Z",
+    "updated_at": "2026-11-02T16:31:01Z",
     "user": {
       "login": "dependabot"
     }
@@ -55610,7 +55864,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(kafka source): wait for aborted partition consumers before continuing a rebalance",
-    "updated_at": "2026-10-02T06:12:39Z",
+    "updated_at": "2026-11-05T05:31:55Z",
     "user": {
       "login": "sandervandegeijn"
     }
@@ -56662,7 +56916,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(config)!: parse configuration before interpolation",
-    "updated_at": "2026-11-02T14:25:04Z",
+    "updated_at": "2026-11-05T19:53:47Z",
     "user": {
       "login": "pront"
     }
@@ -57754,13 +58008,19 @@
         "description": "Anything related to Vector's sources",
         "id": 2021938762883471635,
         "name": "domain:sources"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 26516,
     "pull_request": {},
     "state": "open",
     "title": "memory(kubernetes_logs): avoid per-line allocations in the partial event merger",
-    "updated_at": "2026-10-02T15:49:03Z",
+    "updated_at": "2026-11-03T16:39:58Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -57795,7 +58055,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(codecs): add json.bytes_format option to encode binary data as base64",
-    "updated_at": "2026-09-30T21:14:32Z",
+    "updated_at": "2026-11-05T12:37:09Z",
     "user": {
       "login": "Danielku15"
     }
@@ -58983,7 +59243,7 @@
     "number": 26564,
     "state": "open",
     "title": "Disk buffer (v2) acknowledges in-flight and read-ahead records before delivery after a restart with buffered history; a later SIGKILL loses them",
-    "updated_at": "2026-10-06T21:43:30Z",
+    "updated_at": "2026-11-04T08:21:26Z",
     "user": {
       "login": "sxb009"
     }
@@ -59043,7 +59303,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(kubernetes_logs): share compatible Kubernetes metadata watches",
-    "updated_at": "2026-10-23T13:24:26Z",
+    "updated_at": "2026-11-06T12:40:37Z",
     "user": {
       "login": "anisimov-es"
     }
@@ -59636,7 +59896,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T19:32:34Z",
     "created_at": "2026-10-08T16:21:36Z",
     "draft": false,
     "id": 4789742879,
@@ -59677,19 +59937,13 @@
         "description": "",
         "id": 3830908165064591176,
         "name": "domain:opentelemetry"
-      },
-      {
-        "color": "605f58",
-        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
-        "id": 6102271970520709555,
-        "name": "docs review on hold"
       }
     ],
     "number": 26590,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(opentelemetry): map OTLP traces onto the RFC 25329 typed event",
-    "updated_at": "2026-10-30T22:12:21Z",
+    "updated_at": "2026-11-05T19:32:47Z",
     "user": {
       "login": "bruceg"
     }
@@ -60096,6 +60350,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -60106,7 +60366,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(codecs): convert native Vector logs to OTLP in otlp serializer",
-    "updated_at": "2026-10-13T16:20:12Z",
+    "updated_at": "2026-11-03T16:40:07Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -60135,7 +60395,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(codecs): convert native OTLP traces through the typed trace model in otlp serializer",
-    "updated_at": "2026-10-23T20:20:56Z",
+    "updated_at": "2026-11-05T19:32:36Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -61978,7 +62238,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T13:54:27Z",
     "created_at": "2026-10-14T15:06:53Z",
     "draft": true,
     "id": 4859962018,
@@ -61986,9 +62246,9 @@
     "labels": [],
     "number": 26671,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix(tap): avoid duplicate tap sinks on reload and log dropped tap events",
-    "updated_at": "2026-10-15T14:05:41Z",
+    "updated_at": "2026-11-05T13:54:39Z",
     "user": {
       "login": "20agbekodo"
     }
@@ -63023,13 +63283,19 @@
         "description": "Anything related to Vector's sources",
         "id": 2021938762883471635,
         "name": "domain:sources"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 26709,
     "pull_request": {},
     "state": "open",
     "title": "fix(sources): report a closed output channel in file and kubernetes_logs",
-    "updated_at": "2026-10-16T17:28:45Z",
+    "updated_at": "2026-11-03T16:40:11Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -63489,7 +63755,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(vdev): Rewrite 'cue.sh vet' to vdev",
-    "updated_at": "2026-10-18T07:18:05Z",
+    "updated_at": "2026-11-03T16:36:59Z",
     "user": {
       "login": "Captain1653"
     }
@@ -63638,7 +63904,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(mqtt source): resubscribe when the broker lost the session",
-    "updated_at": "2026-10-27T10:10:13Z",
+    "updated_at": "2026-11-09T10:34:23Z",
     "user": {
       "login": "florissmit10"
     }
@@ -64206,7 +64472,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T16:48:00Z",
     "created_at": "2026-10-20T19:12:55Z",
     "draft": false,
     "id": 4941041812,
@@ -64229,19 +64495,13 @@
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
         "name": "no-changelog"
-      },
-      {
-        "color": "605f58",
-        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
-        "id": 6102271970520709555,
-        "name": "docs review on hold"
       }
     ],
     "number": 26753,
     "pull_request": {},
-    "state": "open",
-    "title": "feat(ci): integrate COSE package repository publishing",
-    "updated_at": "2026-10-28T20:01:25Z",
+    "state": "closed",
+    "title": "feat(ci): publish apt/yum repositories to COSE",
+    "updated_at": "2026-11-05T16:48:13Z",
     "user": {
       "login": "pront"
     }
@@ -64657,7 +64917,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(websocket source): prevent unexpected pong timeouts when reconnecting",
-    "updated_at": "2026-10-26T20:00:21Z",
+    "updated_at": "2026-11-09T09:11:45Z",
     "user": {
       "login": "esensar"
     }
@@ -65094,7 +65354,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(sinks): release concurrency permit during retry backoff",
-    "updated_at": "2026-10-21T21:55:45Z",
+    "updated_at": "2026-11-07T04:02:59Z",
     "user": {
       "login": "valerypetrov"
     }
@@ -65223,8 +65483,8 @@
     "labels": [],
     "number": 26792,
     "state": "open",
-    "title": "Revisit the 16 MiB HTTP/2 header list limit for gRPC (`GRPC_MAX_HEADER_LIST_SIZE`)",
-    "updated_at": "2026-10-26T20:50:56Z",
+    "title": "Revisit the 16 MiB HTTP/2 header list limit (`HTTP2_MAX_HEADER_LIST_SIZE`)",
+    "updated_at": "2026-11-04T15:35:45Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -65330,7 +65590,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T16:34:34Z",
     "created_at": "2026-10-22T03:58:13Z",
     "draft": false,
     "id": 4961872550,
@@ -65381,9 +65641,9 @@
     ],
     "number": 26795,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "perf(metrics): Pre-size Datadog and StatsD metric tags",
-    "updated_at": "2026-10-30T18:05:02Z",
+    "updated_at": "2026-11-03T16:34:48Z",
     "user": {
       "login": "bruceg"
     }
@@ -65536,6 +65796,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -65546,7 +65812,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(clickhouse): support custom HTTP headers with templated values",
-    "updated_at": "2026-10-22T16:57:23Z",
+    "updated_at": "2026-11-03T16:40:27Z",
     "user": {
       "login": "rmvn27"
     }
@@ -65562,7 +65828,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(aws-auth): Honour AWS auth.load_timeout_secs for non-AWS sinks",
-    "updated_at": "2026-10-22T18:10:13Z",
+    "updated_at": "2026-11-02T15:13:40Z",
     "user": {
       "login": "byronwolfman"
     }
@@ -65759,7 +66025,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T17:03:46Z",
     "created_at": "2026-10-23T12:43:18Z",
     "draft": true,
     "id": 4982905373,
@@ -65780,9 +66046,9 @@
     ],
     "number": 26811,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix(dev): exercise typed trace mapping in multiservice otel trace e2e test",
-    "updated_at": "2026-10-23T14:14:23Z",
+    "updated_at": "2026-11-02T17:04:07Z",
     "user": {
       "login": "tessneau"
     }
@@ -66100,7 +66366,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(websocket source): add replay on reconnect support",
-    "updated_at": "2026-10-28T16:46:53Z",
+    "updated_at": "2026-11-06T08:45:44Z",
     "user": {
       "login": "esensar"
     }
@@ -66176,9 +66442,9 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T20:42:17Z",
     "created_at": "2026-10-23T19:26:38Z",
-    "draft": true,
+    "draft": false,
     "id": 4988157885,
     "issue_type": null,
     "labels": [
@@ -66191,9 +66457,9 @@
     ],
     "number": 26827,
     "pull_request": {},
-    "state": "open",
-    "title": "chore(internal_events): remove cast lint allows from internal events",
-    "updated_at": "2026-10-23T19:26:40Z",
+    "state": "closed",
+    "title": "chore(internal_events): centralize lossy metric conversions",
+    "updated_at": "2026-11-05T20:42:29Z",
     "user": {
       "login": "JinchengCao"
     }
@@ -66351,6 +66617,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -66361,7 +66633,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(topology): add opt-in reload sink drain limit",
-    "updated_at": "2026-10-26T22:18:07Z",
+    "updated_at": "2026-11-03T16:40:39Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -66435,7 +66707,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-04T17:46:40Z",
     "created_at": "2026-10-24T09:14:32Z",
     "draft": false,
     "id": 4994145131,
@@ -66446,13 +66718,19 @@
         "description": "Anything related to the vdev tooling",
         "id": 6235798767080406514,
         "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       }
     ],
     "number": 26838,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix(vdev): ensure integration test containers despawn",
-    "updated_at": "2026-10-30T15:45:31Z",
+    "updated_at": "2026-11-04T20:02:07Z",
     "user": {
       "login": "Captain1653"
     }
@@ -66855,7 +67133,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(config): keep watching symlinked component files after atomic swaps",
-    "updated_at": "2026-10-27T16:33:57Z",
+    "updated_at": "2026-11-07T00:56:24Z",
     "user": {
       "login": "iShiBin"
     }
@@ -67207,7 +67485,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T02:34:57Z",
     "created_at": "2026-10-26T23:52:06Z",
     "draft": false,
     "id": 5026403840,
@@ -67228,9 +67506,9 @@
     ],
     "number": 26866,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump the tokio group with 2 updates",
-    "updated_at": "2026-11-01T04:04:10Z",
+    "updated_at": "2026-11-05T02:35:09Z",
     "user": {
       "login": "dependabot"
     }
@@ -67451,7 +67729,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T03:35:44Z",
     "created_at": "2026-10-27T00:11:06Z",
     "draft": false,
     "id": 5026563518,
@@ -67472,9 +67750,9 @@
     ],
     "number": 26874,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump bytes from 1.11.1 to 1.12.1",
-    "updated_at": "2026-10-27T14:02:13Z",
+    "updated_at": "2026-11-05T03:35:54Z",
     "user": {
       "login": "dependabot"
     }
@@ -67568,6 +67846,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Anything that breaks backward compatibility.",
+        "id": 5159510221227689269,
+        "name": "meta:breaking change"
+      },
+      {
         "color": "94A3B8",
         "description": "Anything related to Vector's dependencies",
         "id": 7735142015044067771,
@@ -67584,13 +67868,13 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(deps): bump mongodb from 3.7.0 to 3.9.1",
-    "updated_at": "2026-10-27T14:02:26Z",
+    "updated_at": "2026-11-09T14:31:27Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T02:34:57Z",
     "created_at": "2026-10-27T00:12:46Z",
     "draft": false,
     "id": 5026577308,
@@ -67611,9 +67895,9 @@
     ],
     "number": 26879,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump lapin from 4.4.0 to 4.12.3",
-    "updated_at": "2026-10-27T14:12:22Z",
+    "updated_at": "2026-11-05T02:35:08Z",
     "user": {
       "login": "dependabot"
     }
@@ -67648,7 +67932,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T17:03:58Z",
     "created_at": "2026-10-27T00:13:19Z",
     "draft": false,
     "id": 5026581755,
@@ -67669,15 +67953,15 @@
     ],
     "number": 26881,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump pulsar from 6.7.2 to 6.9.1",
-    "updated_at": "2026-10-27T14:14:35Z",
+    "updated_at": "2026-11-05T17:04:10Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T03:35:44Z",
     "created_at": "2026-10-27T00:13:35Z",
     "draft": false,
     "id": 5026583994,
@@ -67698,9 +67982,9 @@
     ],
     "number": 26882,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump proptest from 1.11.0 to 1.12.0",
-    "updated_at": "2026-10-27T14:07:26Z",
+    "updated_at": "2026-11-05T03:35:56Z",
     "user": {
       "login": "dependabot"
     }
@@ -67812,7 +68096,7 @@
     "number": 26887,
     "state": "open",
     "title": "file/kubernetes_logs source: lines written just before shutdown are not read (no final read after idle backoff)",
-    "updated_at": "2026-10-27T07:03:22Z",
+    "updated_at": "2026-11-07T16:59:43Z",
     "user": {
       "login": "taemin-rpls"
     }
@@ -68346,17 +68630,29 @@
         "name": "type:feature"
       },
       {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
         "color": "85BFAF",
         "description": "Anything `datadog_agent` source related",
         "id": 7637981125102974136,
         "name": "source:datadog_agent"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
       }
     ],
     "number": 26910,
     "pull_request": {},
     "state": "open",
     "title": "feat(datadog_agent): Accept indexed trace payloads",
-    "updated_at": "2026-10-29T12:46:33Z",
+    "updated_at": "2026-11-06T17:47:04Z",
     "user": {
       "login": "bruceg"
     }
@@ -68385,7 +68681,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T23:25:52Z",
     "created_at": "2026-10-27T22:32:34Z",
     "draft": false,
     "id": 5042106296,
@@ -68424,15 +68720,15 @@
     ],
     "number": 26912,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(vector-common): Move ExtraContext out of the binary crate",
-    "updated_at": "2026-10-29T18:40:36Z",
+    "updated_at": "2026-11-02T23:26:02Z",
     "user": {
       "login": "bruceg"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T00:19:27Z",
     "created_at": "2026-10-27T22:32:37Z",
     "draft": false,
     "id": 5042106872,
@@ -68465,15 +68761,15 @@
     ],
     "number": 26913,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(vector-common): Move spawn helpers out of the binary crate",
-    "updated_at": "2026-10-29T18:39:49Z",
+    "updated_at": "2026-11-03T00:19:37Z",
     "user": {
       "login": "bruceg"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T01:39:17Z",
     "created_at": "2026-10-27T22:32:41Z",
     "draft": false,
     "id": 5042107388,
@@ -68512,9 +68808,9 @@
     ],
     "number": 26914,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(vector): Move utilization and cpu_time out of the binary crate",
-    "updated_at": "2026-10-29T18:40:22Z",
+    "updated_at": "2026-11-03T01:39:28Z",
     "user": {
       "login": "bruceg"
     }
@@ -68555,7 +68851,7 @@
     "pull_request": {},
     "state": "open",
     "title": "build: Share workspace package version",
-    "updated_at": "2026-10-29T18:55:49Z",
+    "updated_at": "2026-11-03T15:29:14Z",
     "user": {
       "login": "bruceg"
     }
@@ -68626,9 +68922,9 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-06T14:26:04Z",
     "created_at": "2026-10-28T10:34:49Z",
-    "draft": true,
+    "draft": false,
     "id": 5049025946,
     "issue_type": null,
     "labels": [
@@ -68637,13 +68933,19 @@
         "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
         "name": "domain:ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       }
     ],
     "number": 26921,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(dev): add datadog agent trace e2e test",
-    "updated_at": "2026-11-02T14:45:25Z",
+    "updated_at": "2026-11-06T14:26:15Z",
     "user": {
       "login": "tessneau"
     }
@@ -68862,7 +69164,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(file): reuse fingerprinted file handles",
-    "updated_at": "2026-10-28T21:00:34Z",
+    "updated_at": "2026-11-04T18:59:02Z",
     "user": {
       "login": "pznamensky"
     }
@@ -69091,7 +69393,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T17:28:49Z",
     "created_at": "2026-10-29T11:03:33Z",
     "draft": false,
     "id": 5066822293,
@@ -69108,19 +69410,13 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain:external docs"
-      },
-      {
-        "color": "605f58",
-        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
-        "id": 6102271970520709555,
-        "name": "docs review on hold"
       }
     ],
     "number": 26940,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "feat(datadog_agent source): forward APM stats payloads on a new apm_stats output",
-    "updated_at": "2026-10-30T08:11:48Z",
+    "updated_at": "2026-11-05T17:29:00Z",
     "user": {
       "login": "antoninferrand"
     }
@@ -69149,7 +69445,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T19:33:15Z",
     "created_at": "2026-10-29T13:44:39Z",
     "draft": false,
     "id": 5069145425,
@@ -69170,9 +69466,9 @@
     ],
     "number": 26942,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore: remove new_ret_no_self and redundant match_wild_err_arm allows",
-    "updated_at": "2026-10-30T20:14:50Z",
+    "updated_at": "2026-11-02T19:33:26Z",
     "user": {
       "login": "JinchengCao"
     }
@@ -69338,7 +69634,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T21:24:15Z",
     "created_at": "2026-10-29T15:46:03Z",
     "draft": false,
     "id": 5071146297,
@@ -69371,9 +69667,9 @@
     ],
     "number": 26949,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore: remove type_complexity allow",
-    "updated_at": "2026-10-30T20:21:24Z",
+    "updated_at": "2026-11-02T21:24:31Z",
     "user": {
       "login": "JinchengCao"
     }
@@ -69410,7 +69706,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(sinks): account for terminal errored requests",
-    "updated_at": "2026-10-30T13:52:32Z",
+    "updated_at": "2026-11-02T15:03:04Z",
     "user": {
       "login": "Shuricky"
     }
@@ -69683,6 +69979,12 @@
         "name": "domain:releasing"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -69693,7 +69995,7 @@
     "pull_request": {},
     "state": "open",
     "title": "docs(docker): fix dead transforms and releases links in Docker README",
-    "updated_at": "2026-10-30T17:21:46Z",
+    "updated_at": "2026-11-03T16:40:55Z",
     "user": {
       "login": "sarankumar1325"
     }
@@ -69755,31 +70057,12 @@
     "draft": false,
     "id": 5085574700,
     "issue_type": null,
-    "labels": [
-      {
-        "color": "94A3B8",
-        "description": "Anything related to Vector's topology code",
-        "id": 1103341506812725494,
-        "name": "domain:topology"
-      },
-      {
-        "color": "94A3B8",
-        "description": "Anything related to Vector's sources",
-        "id": 2021938762883471635,
-        "name": "domain:sources"
-      },
-      {
-        "color": "94A3B8",
-        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
-        "id": 6154848213855315177,
-        "name": "domain:core"
-      }
-    ],
+    "labels": [],
     "number": 26966,
     "pull_request": {},
     "state": "open",
     "title": "fix(sinks): Correct source acknowledgement precedence calculation (#26847)",
-    "updated_at": "2026-11-01T19:00:35Z",
+    "updated_at": "2026-11-08T23:50:10Z",
     "user": {
       "login": "johannesfloriangeiger"
     }
@@ -69842,19 +70125,25 @@
         "description": "Anything related to Vector's topology code",
         "id": 1103341506812725494,
         "name": "domain:topology"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
       }
     ],
     "number": 26969,
     "pull_request": {},
     "state": "open",
     "title": "fix(buffers): flush partial sink batches during disk-buffer shutdown",
-    "updated_at": "2026-10-30T16:16:52Z",
+    "updated_at": "2026-11-05T15:35:07Z",
     "user": {
       "login": "garryliu-stripe"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T17:35:02Z",
     "created_at": "2026-10-30T14:44:04Z",
     "draft": false,
     "id": 5086176203,
@@ -69875,9 +70164,9 @@
     ],
     "number": 26970,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump the aws group across 1 directory with 7 updates",
-    "updated_at": "2026-11-01T04:08:54Z",
+    "updated_at": "2026-11-03T17:35:13Z",
     "user": {
       "login": "dependabot"
     }
@@ -69941,7 +70230,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(ci): report multiservice e2e results on the PR",
-    "updated_at": "2026-11-02T13:00:27Z",
+    "updated_at": "2026-11-04T14:01:50Z",
     "user": {
       "login": "tessneau"
     }
@@ -69970,7 +70259,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T22:25:50Z",
     "created_at": "2026-10-30T16:21:54Z",
     "draft": false,
     "id": 5087526540,
@@ -69995,12 +70284,6 @@
         "name": "no-changelog"
       },
       {
-        "color": "605f58",
-        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
-        "id": 6102271970520709555,
-        "name": "docs review on hold"
-      },
-      {
         "color": "DDA391",
         "description": "Deploy a vector.dev preview site for this PR",
         "id": 6258386920796282305,
@@ -70009,9 +70292,9 @@
     ],
     "number": 26974,
     "pull_request": {},
-    "state": "open",
-    "title": "feat(releasing): generate inline upgrade guides with VRL migrations",
-    "updated_at": "2026-10-30T19:58:32Z",
+    "state": "closed",
+    "title": "feat(releasing): inline Vector upgrade guides",
+    "updated_at": "2026-11-02T22:26:02Z",
     "user": {
       "login": "pront"
     }
@@ -70036,6 +70319,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -70046,7 +70335,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Reduce parquet memory usage by batching input chunks",
-    "updated_at": "2026-10-30T16:29:47Z",
+    "updated_at": "2026-11-03T16:41:00Z",
     "user": {
       "login": "dmeeuwis"
     }
@@ -70068,7 +70357,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T16:29:42Z",
     "created_at": "2026-10-30T17:08:45Z",
     "draft": false,
     "id": 5088178929,
@@ -70101,9 +70390,9 @@
     ],
     "number": 26977,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(sinks): move sink config types and test mocks to native HTTP 1",
-    "updated_at": "2026-10-30T20:27:46Z",
+    "updated_at": "2026-11-02T16:29:57Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -70161,31 +70450,50 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T22:15:00Z",
     "created_at": "2026-10-30T20:00:34Z",
-    "draft": true,
+    "draft": false,
     "id": 5090312555,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
     "number": 26980,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore: remove redundant clippy allows",
-    "updated_at": "2026-10-30T20:00:34Z",
+    "updated_at": "2026-11-02T22:15:11Z",
     "user": {
       "login": "JinchengCao"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T21:24:17Z",
     "created_at": "2026-10-30T21:57:02Z",
     "id": 6127578631,
     "issue_type": null,
     "labels": [],
     "number": 26981,
-    "state": "open",
+    "state": "closed",
     "title": "Build failing since 0.61.0",
-    "updated_at": "2026-10-30T21:57:02Z",
+    "updated_at": "2026-11-02T23:15:01Z",
     "user": {
       "login": "darix"
     }
@@ -70208,7 +70516,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(http_client source, prometheus_scrape source): add HTTP redirect following support",
-    "updated_at": "2026-10-31T07:32:49Z",
+    "updated_at": "2026-11-05T04:14:29Z",
     "user": {
       "login": "titilambert"
     }
@@ -70238,7 +70546,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(windows platform): report SERVICE_STOP_PENDING while the service shuts down",
-    "updated_at": "2026-10-31T07:36:46Z",
+    "updated_at": "2026-11-07T14:13:52Z",
     "user": {
       "login": "AdzerKI"
     }
@@ -70258,7 +70566,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T19:05:47Z",
     "created_at": "2026-10-31T13:23:49Z",
     "draft": false,
     "id": 5097893976,
@@ -70277,23 +70585,23 @@
         "name": "domain:external docs"
       },
       {
-        "color": "605f58",
-        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
-        "id": 6102271970520709555,
-        "name": "docs review on hold"
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
       }
     ],
     "number": 26986,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(gcp_cloud_storage sink): deprecate `api_key` configuration option",
-    "updated_at": "2026-11-01T09:34:43Z",
+    "updated_at": "2026-11-05T20:11:03Z",
     "user": {
       "login": "Captain1653"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T02:14:09Z",
     "created_at": "2026-11-01T04:08:06Z",
     "draft": false,
     "id": 5104230694,
@@ -70314,15 +70622,15 @@
     ],
     "number": 26987,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump the docker-images group across 3 directories with 3 updates",
-    "updated_at": "2026-11-01T04:10:19Z",
+    "updated_at": "2026-11-05T02:14:19Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T21:44:43Z",
     "created_at": "2026-11-01T04:19:58Z",
     "draft": false,
     "id": 5104305670,
@@ -70343,15 +70651,15 @@
     ],
     "number": 26988,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump the patches group across 1 directory with 19 updates",
-    "updated_at": "2026-11-01T04:24:48Z",
+    "updated_at": "2026-11-02T21:44:54Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T17:03:06Z",
     "created_at": "2026-11-01T04:37:17Z",
     "draft": false,
     "id": 5104414368,
@@ -70384,15 +70692,15 @@
     ],
     "number": 26989,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): bump the cargo-major group across 1 directory with 35 updates",
-    "updated_at": "2026-11-01T04:42:56Z",
+    "updated_at": "2026-11-02T17:03:22Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T02:34:57Z",
     "created_at": "2026-11-01T05:05:02Z",
     "draft": false,
     "id": 5104566673,
@@ -70419,9 +70727,9 @@
     ],
     "number": 26990,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(website deps): bump the npm_and_yarn group in /website with 4 updates",
-    "updated_at": "2026-11-01T05:07:49Z",
+    "updated_at": "2026-11-05T02:35:07Z",
     "user": {
       "login": "dependabot"
     }
@@ -70460,7 +70768,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(file source): report lines discarded for size at EOF",
-    "updated_at": "2026-11-02T12:48:55Z",
+    "updated_at": "2026-11-03T03:55:17Z",
     "user": {
       "login": "vivek-raj1"
     }
@@ -70476,7 +70784,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(codecs): stop dropping non-UTF-8 syslog frames and killing TCP connections in OctetCountingDecoder",
-    "updated_at": "2026-11-02T14:42:44Z",
+    "updated_at": "2026-11-07T11:35:06Z",
     "user": {
       "login": "yackushevas"
     }
@@ -70487,14 +70795,3069 @@
     "draft": false,
     "id": 5122187540,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 26994,
     "pull_request": {},
     "state": "open",
     "title": "feat(source): File source zstd support",
-    "updated_at": "2026-11-02T14:46:01Z",
+    "updated_at": "2026-11-03T16:41:08Z",
     "user": {
       "login": "fidgetlol"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-02T14:48:08Z",
+    "draft": false,
+    "id": 5122234799,
+    "issue_type": null,
+    "labels": [],
+    "number": 26995,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(file source): recognize a multi-byte delimiter split by EOF",
+    "updated_at": "2026-11-03T04:17:25Z",
+    "user": {
+      "login": "vivek-raj1"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-02T15:02:45Z",
+    "draft": false,
+    "id": 5122452328,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      }
+    ],
+    "number": 26996,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(sinks): account for partial deliveries across retries",
+    "updated_at": "2026-11-04T18:42:21Z",
+    "user": {
+      "login": "Shuricky"
+    }
+  },
+  {
+    "closed_at": "2026-11-02T18:58:16Z",
+    "created_at": "2026-11-02T16:13:02Z",
+    "draft": false,
+    "id": 5123498360,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain:ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 26997,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): avoid GitHub API rate limit in K8s E2E minikube setup",
+    "updated_at": "2026-11-02T18:58:34Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T17:26:24Z",
+    "created_at": "2026-11-02T16:17:31Z",
+    "draft": false,
+    "id": 5123559866,
+    "issue_type": null,
+    "labels": [],
+    "number": 26998,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(aws): run the AWS SDK HTTP client on hyper 1",
+    "updated_at": "2026-11-03T17:26:37Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-02T16:34:43Z",
+    "draft": false,
+    "id": 5123799353,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 26999,
+    "pull_request": {},
+    "state": "open",
+    "title": "enhancement(config): skip ignored-field diagnostics for component types without a schema",
+    "updated_at": "2026-11-03T14:16:32Z",
+    "user": {
+      "login": "gwenaskell"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T16:34:43Z",
+    "created_at": "2026-11-02T16:43:29Z",
+    "draft": false,
+    "id": 5123921835,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      }
+    ],
+    "number": 27000,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(datadog_agent source): add `enabled_data_types` option and deprecate `disable_*` options",
+    "updated_at": "2026-11-04T16:36:37Z",
+    "user": {
+      "login": "antoninferrand"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T15:24:20Z",
+    "created_at": "2026-11-02T17:04:19Z",
+    "draft": false,
+    "id": 5124206800,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain:deps"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27001,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the cargo-major group across 1 directory with 36 updates",
+    "updated_at": "2026-11-04T15:24:42Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T10:08:02Z",
+    "created_at": "2026-11-02T17:43:31Z",
+    "draft": false,
+    "id": 5124757975,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "94A3B8",
+        "description": null,
+        "id": 4191376575049891724,
+        "name": "domain:rfc"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27002,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs(rfc): account for Datadog idx trace payloads in the trace data model",
+    "updated_at": "2026-11-05T10:08:12Z",
+    "user": {
+      "login": "tessneau"
+    }
+  },
+  {
+    "closed_at": "2026-11-02T19:27:46Z",
+    "created_at": "2026-11-02T18:52:34Z",
+    "draft": false,
+    "id": 5125686326,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain:ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27003,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): migrate macOS 14 runners to macOS 15",
+    "updated_at": "2026-11-02T19:27:58Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-02T21:24:15Z",
+    "created_at": "2026-11-02T19:37:10Z",
+    "draft": false,
+    "id": 5126275747,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's topology code",
+        "id": 1103341506812725494,
+        "name": "domain:topology"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27005,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore: remove unreachable_pub allows from api, topology and internal_telemetry",
+    "updated_at": "2026-11-02T21:24:27Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-02T19:42:07Z",
+    "id": 6169688408,
+    "issue_type": "Task",
+    "labels": [],
+    "number": 27006,
+    "state": "open",
+    "title": "Ad-hoc deprecation tracker",
+    "updated_at": "2026-11-02T20:25:27Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-02T20:49:34Z",
+    "created_at": "2026-11-02T19:50:43Z",
+    "draft": false,
+    "id": 5126451643,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27007,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs(deprecations): add notices for metrics replaced by component_errors_total",
+    "updated_at": "2026-11-02T20:49:43Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-02T20:34:18Z",
+    "created_at": "2026-11-02T19:54:07Z",
+    "draft": false,
+    "id": 5126493828,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27008,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(observability): remove stale deprecation comment for events_discarded_total",
+    "updated_at": "2026-11-02T20:34:28Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-02T21:24:15Z",
+    "created_at": "2026-11-02T20:30:27Z",
+    "draft": false,
+    "id": 5126963900,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27009,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(deps): fix cargo auditable builds failing on vdev aws-config feature",
+    "updated_at": "2026-11-02T21:24:38Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-02T21:24:16Z",
+    "created_at": "2026-11-02T20:42:47Z",
+    "draft": false,
+    "id": 5127116583,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27010,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(website): wait for page load in VRL search browser test",
+    "updated_at": "2026-11-02T21:24:26Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T20:50:12Z",
+    "created_at": "2026-11-02T21:45:17Z",
+    "draft": false,
+    "id": 5127923440,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27011,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 20 updates",
+    "updated_at": "2026-11-03T20:50:25Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T17:30:34Z",
+    "created_at": "2026-11-02T21:53:45Z",
+    "draft": false,
+    "id": 5128029212,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain:transforms"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27012,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(sources): migrate HTTP client sources, aws_ec2_metadata and http provider to the native Hyper 1 client",
+    "updated_at": "2026-11-03T17:30:46Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-02T22:34:53Z",
+    "created_at": "2026-11-02T22:25:22Z",
+    "draft": false,
+    "id": 5128407969,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      }
+    ],
+    "number": 27013,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(sinks): Correct source acknowledgement precedence calculation (#26847)",
+    "updated_at": "2026-11-02T22:35:06Z",
+    "user": {
+      "login": "johannesfloriangeiger"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T15:04:13Z",
+    "created_at": "2026-11-03T14:03:01Z",
+    "draft": false,
+    "id": 5138558496,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27014,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): update pulldown-cmark to fix deny check",
+    "updated_at": "2026-11-03T15:04:24Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T15:38:54Z",
+    "draft": false,
+    "id": 5140063733,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's topology code",
+        "id": 1103341506812725494,
+        "name": "domain:topology"
+      }
+    ],
+    "number": 27015,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(topology): return the diff applied by a successful reload",
+    "updated_at": "2026-11-04T14:12:10Z",
+    "user": {
+      "login": "gwenaskell"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T16:11:18Z",
+    "draft": false,
+    "id": 5140566637,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Anything that breaks backward compatibility.",
+        "id": 5159510221227689269,
+        "name": "meta:breaking change"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      }
+    ],
+    "number": 27016,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(kafka source): allow null for message_key in schema definition",
+    "updated_at": "2026-11-06T16:32:08Z",
+    "user": {
+      "login": "Captain1653"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T18:48:37Z",
+    "created_at": "2026-11-03T17:35:13Z",
+    "draft": false,
+    "id": 5141776404,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain:deps"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27017,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the aws group across 1 directory with 8 updates",
+    "updated_at": "2026-11-04T18:48:57Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T17:46:41Z",
+    "created_at": "2026-11-03T17:46:23Z",
+    "draft": false,
+    "id": 5141923769,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27018,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Reduce parquet memory usage by batching input chunks",
+    "updated_at": "2026-11-03T17:46:53Z",
+    "user": {
+      "login": "dmeeuwis"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T20:20:03Z",
+    "created_at": "2026-11-03T17:48:01Z",
+    "draft": false,
+    "id": 5141945279,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27019,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(http): delete the legacy hyper 0.14 HTTP client and proxy connector",
+    "updated_at": "2026-11-03T20:20:17Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T18:21:43Z",
+    "id": 6188640558,
+    "issue_type": "Bug",
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's memory/disk buffers",
+        "id": 3389798092856007937,
+        "name": "domain:buffers"
+      }
+    ],
+    "number": 27020,
+    "state": "open",
+    "title": "Disk-buffer reclamation can stall behind one retrying request, even with E2E acknowledgements disabled",
+    "updated_at": "2026-11-03T18:22:41Z",
+    "user": {
+      "login": "graphcareful"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T20:20:03Z",
+    "created_at": "2026-11-03T18:27:45Z",
+    "draft": false,
+    "id": 5142471423,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain:transforms"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27021,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(http): rename http::client_v1::HttpClient to http::HttpClient",
+    "updated_at": "2026-11-03T20:20:15Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T21:12:45Z",
+    "created_at": "2026-11-03T19:17:37Z",
+    "draft": false,
+    "id": 5143135601,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain:transforms"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27023,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore: remove unreachable_pub allows from components, transforms, kafka, kubernetes and tap",
+    "updated_at": "2026-11-04T21:12:57Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T21:54:52Z",
+    "created_at": "2026-11-03T19:30:37Z",
+    "draft": false,
+    "id": 5143302978,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27024,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(enrichment_tables): remove unsafe_op_in_unsafe_fn and dead_code allows from memory table",
+    "updated_at": "2026-11-03T21:55:04Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T21:19:04Z",
+    "created_at": "2026-11-03T19:42:41Z",
+    "draft": false,
+    "id": 5143458341,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27025,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(vector-core, vector-buffers): remove remaining small clippy allows",
+    "updated_at": "2026-11-03T21:19:14Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T21:26:59Z",
+    "created_at": "2026-11-03T20:16:20Z",
+    "draft": false,
+    "id": 5143887908,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27026,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore: remove crate-level async_fn_in_trait allows",
+    "updated_at": "2026-11-03T21:27:11Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T21:43:13Z",
+    "created_at": "2026-11-03T20:30:49Z",
+    "draft": false,
+    "id": 5144071520,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain:ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27027,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): expire GHCR nightly images after 14 days",
+    "updated_at": "2026-11-03T21:43:26Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T22:17:34Z",
+    "created_at": "2026-11-03T20:48:01Z",
+    "draft": false,
+    "id": 5144285507,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      }
+    ],
+    "number": 27028,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(websocket): upgrade tokio-tungstenite to 0.30 (http 1)",
+    "updated_at": "2026-11-03T22:17:46Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T19:14:05Z",
+    "created_at": "2026-11-03T20:51:33Z",
+    "draft": false,
+    "id": 5144328336,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27029,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 21 updates",
+    "updated_at": "2026-11-04T19:14:20Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T21:35:31Z",
+    "id": 6191561198,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's networking",
+        "id": 7280804221978411925,
+        "name": "domain:networking"
+      },
+      {
+        "color": "8FB5DE",
+        "description": "Anything `websocket_server` sink related",
+        "id": 691742871510568783,
+        "name": "sink:websocket_server"
+      }
+    ],
+    "number": 27030,
+    "state": "open",
+    "title": "Revisit the WebSocket read buffer size (`read_buffer_size`) after the `tokio-tungstenite` 0.30 upgrade",
+    "updated_at": "2026-11-03T22:00:48Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T21:57:36Z",
+    "created_at": "2026-11-03T21:50:29Z",
+    "draft": false,
+    "id": 5145042671,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      },
+      {
+        "color": "DDA391",
+        "description": "Deploy a vector.dev preview site for this PR",
+        "id": 6258386920796282305,
+        "name": "preview:website"
+      }
+    ],
+    "number": 27031,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(website): publish release-page updates",
+    "updated_at": "2026-11-03T21:57:46Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T20:26:47Z",
+    "created_at": "2026-11-03T22:18:51Z",
+    "draft": false,
+    "id": 5145373004,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27032,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore: remove unreachable_pub allow from internal_events",
+    "updated_at": "2026-11-04T20:26:57Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T17:51:11Z",
+    "created_at": "2026-11-03T22:21:24Z",
+    "draft": false,
+    "id": 5145404090,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      },
+      {
+        "color": "DDA391",
+        "description": "Deploy a vector.dev preview site for this PR",
+        "id": 6258386920796282305,
+        "name": "preview:website"
+      }
+    ],
+    "number": 27033,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(releasing): inline VRL upgrade guides",
+    "updated_at": "2026-11-04T17:51:38Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T16:34:43Z",
+    "created_at": "2026-11-03T23:04:06Z",
+    "draft": false,
+    "id": 5145874973,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain:transforms"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      }
+    ],
+    "number": 27034,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(sources): run the HTTP servers on hyper 1 and warp 0.4",
+    "updated_at": "2026-11-04T16:35:20Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T15:33:27Z",
+    "created_at": "2026-11-04T01:25:28Z",
+    "draft": false,
+    "id": 5147234933,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27035,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(website): generate missing release descriptions",
+    "updated_at": "2026-11-04T15:33:39Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T18:15:37Z",
+    "created_at": "2026-11-04T03:23:05Z",
+    "draft": false,
+    "id": 5148295459,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27036,
+    "pull_request": {},
+    "state": "closed",
+    "title": "refactor(internal_logs source): use const for field names",
+    "updated_at": "2026-11-06T18:15:48Z",
+    "user": {
+      "login": "anpawo"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-04T09:06:15Z",
+    "draft": false,
+    "id": 5151779650,
+    "issue_type": null,
+    "labels": [],
+    "number": 27037,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(buffers): do not acknowledge records replayed during disk buffer …",
+    "updated_at": "2026-11-04T09:12:38Z",
+    "user": {
+      "login": "omerfarukalkilic"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T14:47:56Z",
+    "created_at": "2026-11-04T12:50:45Z",
+    "draft": false,
+    "id": 5154531295,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27038,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump databricks-zerobus-ingest-sdk 2.7.1 -> 3.1.1",
+    "updated_at": "2026-11-04T14:48:08Z",
+    "user": {
+      "login": "teodordelibasic-db"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T14:47:57Z",
+    "created_at": "2026-11-04T13:34:29Z",
+    "draft": false,
+    "id": 5155168998,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain:ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27039,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): improve RPM package setup diagnostics",
+    "updated_at": "2026-11-04T14:48:08Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T20:16:48Z",
+    "created_at": "2026-11-04T15:12:47Z",
+    "draft": false,
+    "id": 5156653318,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27040,
+    "pull_request": {},
+    "state": "closed",
+    "title": "test: consolidate tooling tests and stabilize website fragment navigation",
+    "updated_at": "2026-11-04T20:17:03Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T21:15:18Z",
+    "created_at": "2026-11-04T15:25:35Z",
+    "draft": false,
+    "id": 5156855312,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain:deps"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27041,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the cargo-major group across 1 directory with 33 updates",
+    "updated_at": "2026-11-04T21:15:32Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-04T15:33:52Z",
+    "draft": false,
+    "id": 5156993051,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27042,
+    "pull_request": {},
+    "state": "open",
+    "title": "enhancement(datadog_metrics sink): add expire_metrics_secs for series cache TTL",
+    "updated_at": "2026-11-06T11:25:52Z",
+    "user": {
+      "login": "kaarolch"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T18:48:54Z",
+    "created_at": "2026-11-04T16:36:21Z",
+    "draft": false,
+    "id": 5157913429,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's topology code",
+        "id": 1103341506812725494,
+        "name": "domain:topology"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27043,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): move to reqwest 0.13 and drop the hyper 0.14 test stack",
+    "updated_at": "2026-11-04T18:49:07Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T18:27:04Z",
+    "created_at": "2026-11-04T16:42:25Z",
+    "draft": false,
+    "id": 5158002078,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      }
+    ],
+    "number": 27044,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(grpc): upgrade Tonic and Prost to 0.14",
+    "updated_at": "2026-11-05T18:27:14Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T09:00:01Z",
+    "created_at": "2026-11-04T17:07:15Z",
+    "draft": false,
+    "id": 5158370029,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain:transforms"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      }
+    ],
+    "number": 27045,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(aggregate_metrics): add late events handling options",
+    "updated_at": "2026-11-06T09:00:16Z",
+    "user": {
+      "login": "dd-sebastien-lb"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T19:43:34Z",
+    "created_at": "2026-11-04T18:46:34Z",
+    "id": 6209170328,
+    "issue_type": "Bug",
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to releasing Vector",
+        "id": 843604899509384131,
+        "name": "domain:releasing"
+      }
+    ],
+    "number": 27046,
+    "state": "closed",
+    "title": "apt/deb repo not updated with latest vector 0.61.0 package",
+    "updated_at": "2026-11-04T19:43:40Z",
+    "user": {
+      "login": "dariosusman"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T21:03:44Z",
+    "created_at": "2026-11-04T19:14:53Z",
+    "draft": false,
+    "id": 5160120671,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27047,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 22 updates",
+    "updated_at": "2026-11-04T21:03:57Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-11-04T20:46:42Z",
+    "created_at": "2026-11-04T19:50:54Z",
+    "draft": false,
+    "id": 5160611075,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27048,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(http): rename the HTTP 1 migration aliases and v1 APIs to their final names",
+    "updated_at": "2026-11-04T20:46:54Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T03:35:44Z",
+    "created_at": "2026-11-04T21:04:08Z",
+    "draft": false,
+    "id": 5161593995,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27049,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group across 1 directory with 12 updates",
+    "updated_at": "2026-11-05T03:35:55Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T21:04:36Z",
+    "created_at": "2026-11-04T21:15:56Z",
+    "draft": false,
+    "id": 5161747001,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's dependencies",
+        "id": 7735142015044067771,
+        "name": "domain:deps"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27050,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): update cargo-major dependencies without zstd",
+    "updated_at": "2026-11-05T21:04:47Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-04T21:26:17Z",
+    "draft": false,
+    "id": 5161875904,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain:transforms"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27051,
+    "pull_request": {},
+    "state": "open",
+    "title": "enhancement(throttle transform): Configure discard metric tags",
+    "updated_at": "2026-11-04T23:38:10Z",
+    "user": {
+      "login": "akashvbabu91"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-04T21:27:08Z",
+    "id": 6211710313,
+    "issue_type": "Feature",
+    "labels": [],
+    "number": 27052,
+    "state": "open",
+    "title": "throttle: support custom event-derived tags on discard metrics",
+    "updated_at": "2026-11-05T02:34:17Z",
+    "user": {
+      "login": "akashvbabu91"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T15:56:53Z",
+    "created_at": "2026-11-04T21:37:45Z",
+    "draft": false,
+    "id": 5162021959,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27053,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(sinks): remove unreachable_pub diagnostics from util and amqp through datadog",
+    "updated_at": "2026-11-05T15:57:07Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T15:56:53Z",
+    "created_at": "2026-11-04T21:37:48Z",
+    "draft": false,
+    "id": 5162022617,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27054,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(sinks): remove unreachable_pub diagnostics from doris through websocket_server",
+    "updated_at": "2026-11-05T15:57:08Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T15:56:53Z",
+    "created_at": "2026-11-04T21:44:26Z",
+    "draft": false,
+    "id": 5162103470,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27055,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore: remove unreachable_pub allows from sources and config",
+    "updated_at": "2026-11-05T15:57:06Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T02:14:09Z",
+    "created_at": "2026-11-04T21:58:01Z",
+    "draft": false,
+    "id": 5162272488,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27056,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): vendor datadog-agent-metrics-v3 from Saluki",
+    "updated_at": "2026-11-05T02:14:19Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-04T23:43:32Z",
+    "id": 6213581551,
+    "issue_type": null,
+    "labels": [],
+    "number": 27057,
+    "state": "open",
+    "title": "kafka source: Microsoft Entra ID authentication for Azure Event Hubs (SASL/OAUTHBEARER with managed identity or workload identity)",
+    "updated_at": "2026-11-04T23:43:32Z",
+    "user": {
+      "login": "ckelner"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-04T23:43:41Z",
+    "draft": true,
+    "id": 5163467826,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27058,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(kafka source): add Microsoft Entra ID token provider for SASL/OAUTHBEARER",
+    "updated_at": "2026-11-04T23:44:03Z",
+    "user": {
+      "login": "ckelner"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T09:27:35Z",
+    "id": 6220424781,
+    "issue_type": null,
+    "labels": [],
+    "number": 27059,
+    "state": "open",
+    "title": "windows_event_log: task_name/opcode_name come from an earlier event (EvtFormatMessage on a reused publisher metadata handle)",
+    "updated_at": "2026-11-05T09:49:56Z",
+    "user": {
+      "login": "igor-issp"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T20:41:03Z",
+    "created_at": "2026-11-05T14:25:54Z",
+    "draft": false,
+    "id": 5173177369,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27060,
+    "pull_request": {},
+    "state": "closed",
+    "title": "refactor(journald source): use const for field names",
+    "updated_at": "2026-11-05T20:41:16Z",
+    "user": {
+      "login": "LastPatriot"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T20:56:01Z",
+    "created_at": "2026-11-05T15:20:31Z",
+    "draft": false,
+    "id": 5174006175,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27061,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(vdev): accept deprecations in changelog checks",
+    "updated_at": "2026-11-05T20:56:14Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T15:29:08Z",
+    "draft": false,
+    "id": 5174136883,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      }
+    ],
+    "number": 27062,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(vdev): run e2e capture finalization in the harness",
+    "updated_at": "2026-11-06T14:32:34Z",
+    "user": {
+      "login": "tessneau"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T15:51:58Z",
+    "draft": false,
+    "id": 5174477878,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "C5A7D5",
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type:tech debt"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's performance",
+        "id": 7501419672228520413,
+        "name": "domain:performance"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27063,
+    "pull_request": {},
+    "state": "open",
+    "title": "perf(fanout): Reuse send futures across batches",
+    "updated_at": "2026-11-05T17:58:59Z",
+    "user": {
+      "login": "bruceg"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T20:20:37Z",
+    "created_at": "2026-11-05T15:59:48Z",
+    "draft": false,
+    "id": 5174600219,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27064,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore: remove unreachable_pub allow from sinks",
+    "updated_at": "2026-11-05T20:20:49Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T16:57:46Z",
+    "id": 6227756910,
+    "issue_type": "Task",
+    "labels": [
+      {
+        "color": "C5A7D5",
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type:tech debt"
+      }
+    ],
+    "number": 27065,
+    "state": "open",
+    "title": "Revisit and remove the temporary GreptimeDB SDK fork",
+    "updated_at": "2026-11-05T17:48:52Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T17:08:53Z",
+    "id": 6227940976,
+    "issue_type": "Bug",
+    "labels": [],
+    "number": 27066,
+    "state": "open",
+    "title": "Vector attempts to parse things that look like variables in comments",
+    "updated_at": "2026-11-05T19:47:44Z",
+    "user": {
+      "login": "iancward"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T17:48:57Z",
+    "draft": true,
+    "id": 5176098398,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain:transforms"
+      }
+    ],
+    "number": 27067,
+    "pull_request": {},
+    "state": "open",
+    "title": " feat(reduce): add concurrency option to reduce groups across parallel tasks",
+    "updated_at": "2026-11-09T10:15:10Z",
+    "user": {
+      "login": "armleth"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T21:26:33Z",
+    "created_at": "2026-11-05T20:19:04Z",
+    "draft": false,
+    "id": 5178100955,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "C5A7D5",
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type:tech debt"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's trace events",
+        "id": 8438374436545425338,
+        "name": "domain:traces"
+      },
+      {
+        "color": "8FB5DE",
+        "description": "Anything `opentelemetry` sink related",
+        "id": 2424438130306630529,
+        "name": "sink:opentelemetry"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      },
+      {
+        "color": "94A3B8",
+        "description": "",
+        "id": 3830908165064591176,
+        "name": "domain:opentelemetry"
+      }
+    ],
+    "number": 27068,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(opentelemetry): Decode OTLP attributes through an `AttributeDecoder`",
+    "updated_at": "2026-11-05T21:26:46Z",
+    "user": {
+      "login": "bruceg"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T20:21:42Z",
+    "draft": false,
+    "id": 5178137545,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "C5A7D5",
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type:tech debt"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's trace events",
+        "id": 8438374436545425338,
+        "name": "domain:traces"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27069,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(opentelemetry): Share resource and scope across trace partitions",
+    "updated_at": "2026-11-05T20:59:15Z",
+    "user": {
+      "login": "bruceg"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T20:23:51Z",
+    "draft": false,
+    "id": 5178165046,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "C5A7D5",
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type:tech debt"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's trace events",
+        "id": 8438374436545425338,
+        "name": "domain:traces"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "8FB5DE",
+        "description": "Anything `opentelemetry` sink related",
+        "id": 2424438130306630529,
+        "name": "sink:opentelemetry"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      },
+      {
+        "color": "94A3B8",
+        "description": "",
+        "id": 3830908165064591176,
+        "name": "domain:opentelemetry"
+      }
+    ],
+    "number": 27070,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(opentelemetry): Index typed trace encode groups",
+    "updated_at": "2026-11-05T20:59:34Z",
+    "user": {
+      "login": "bruceg"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T21:04:36Z",
+    "created_at": "2026-11-05T20:25:04Z",
+    "draft": false,
+    "id": 5178181332,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27071,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(website deps): bump @babel/cli from 8.0.6 to 8.1.0",
+    "updated_at": "2026-11-05T21:04:46Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T21:04:36Z",
+    "created_at": "2026-11-05T20:36:54Z",
+    "draft": false,
+    "id": 5178337623,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27072,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): ignore RUSTSEC-2026-0441 in deny.toml",
+    "updated_at": "2026-11-05T21:04:46Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T20:48:40Z",
+    "draft": false,
+    "id": 5178491137,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Anything that breaks backward compatibility.",
+        "id": 5159510221227689269,
+        "name": "meta:breaking change"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27073,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(host_metrics source)!: remove deprecated process_runtime counter",
+    "updated_at": "2026-11-05T21:42:12Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T16:27:33Z",
+    "created_at": "2026-11-05T20:58:20Z",
+    "draft": false,
+    "id": 5178621300,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Anything that breaks backward compatibility.",
+        "id": 5159510221227689269,
+        "name": "meta:breaking change"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      }
+    ],
+    "number": 27074,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(internal_metrics source)!: remove deprecated internal_metrics_cardinality_total counter",
+    "updated_at": "2026-11-06T16:27:45Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T22:37:11Z",
+    "created_at": "2026-11-05T21:07:53Z",
+    "draft": false,
+    "id": 5178739892,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27075,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): update yanked crates and clean up deny.toml",
+    "updated_at": "2026-11-05T22:37:21Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T14:50:15Z",
+    "created_at": "2026-11-05T21:29:04Z",
+    "draft": false,
+    "id": 5179000915,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Anything that breaks backward compatibility.",
+        "id": 5159510221227689269,
+        "name": "meta:breaking change"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      }
+    ],
+    "number": 27076,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(buffers)!: remove deprecated buffer max size metrics",
+    "updated_at": "2026-11-06T14:50:27Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T01:47:44Z",
+    "draft": false,
+    "id": 5181558331,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "C5A7D5",
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type:tech debt"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to templating Vector's configuration values",
+        "id": 443926775612715918,
+        "name": "domain:templating"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27077,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(vector): Move template out of the binary crate",
+    "updated_at": "2026-11-06T01:54:39Z",
+    "user": {
+      "login": "bruceg"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T10:49:19Z",
+    "id": 6241298736,
+    "issue_type": "Feature",
+    "labels": [],
+    "number": 27078,
+    "state": "open",
+    "title": "Confinement checks should not be applied to the `elasticsearch` sink `data_stream.*` attributes",
+    "updated_at": "2026-11-06T10:49:19Z",
+    "user": {
+      "login": "s-at-ik"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T17:38:17Z",
+    "created_at": "2026-11-06T11:38:31Z",
+    "draft": false,
+    "id": 5187248963,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain:ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27079,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): align review e2e job and retry timeouts",
+    "updated_at": "2026-11-06T17:38:29Z",
+    "user": {
+      "login": "tessneau"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T14:07:55Z",
+    "draft": false,
+    "id": 5189071728,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain:transforms"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27080,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(remap): allow changing a metric's type between counter and gauge",
+    "updated_at": "2026-11-06T15:16:41Z",
+    "user": {
+      "login": "sghall"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T15:45:43Z",
+    "draft": true,
+    "id": 5190479513,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      }
+    ],
+    "number": 27081,
+    "pull_request": {},
+    "state": "open",
+    "title": "enhancement(sinks): improve retry failure logging",
+    "updated_at": "2026-11-09T14:21:27Z",
+    "user": {
+      "login": "20agbekodo"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T16:02:22Z",
+    "id": 6246070922,
+    "issue_type": null,
+    "labels": [],
+    "number": 27082,
+    "state": "open",
+    "title": "feat(source:okta): Add configurable limit parameter for page size",
+    "updated_at": "2026-11-06T16:02:22Z",
+    "user": {
+      "login": "topkoa"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T16:26:16Z",
+    "draft": false,
+    "id": 5191077634,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27083,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(buffers): release disk_v2 ledger lock when all buffer handles are dropped",
+    "updated_at": "2026-11-07T00:58:25Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T18:24:00Z",
+    "draft": true,
+    "id": 5192631784,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      }
+    ],
+    "number": 27084,
+    "pull_request": {},
+    "state": "open",
+    "title": "enhancement(mongodb_metrics source): support MongoDB 8.0 serverStatus layout",
+    "updated_at": "2026-11-06T20:36:53Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T21:51:09Z",
+    "created_at": "2026-11-06T18:51:32Z",
+    "draft": false,
+    "id": 5192974290,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's topology code",
+        "id": 1103341506812725494,
+        "name": "domain:topology"
+      },
+      {
+        "color": "C5A7D5",
+        "description": "A code change that does not add user value.",
+        "id": 2473344330675535720,
+        "name": "type:tech debt"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain:transforms"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to the vdev tooling",
+        "id": 6235798767080406514,
+        "name": "domain:vdev"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27085,
+    "pull_request": {},
+    "state": "closed",
+    "title": "refactor: remove emit! and register! macros",
+    "updated_at": "2026-11-06T21:51:20Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T19:26:43Z",
+    "draft": true,
+    "id": 5193423996,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to releasing Vector",
+        "id": 843604899509384131,
+        "name": "domain:releasing"
+      }
+    ],
+    "number": 27086,
+    "pull_request": {},
+    "state": "open",
+    "title": "docs: announce APT/YUM signing key migration",
+    "updated_at": "2026-11-06T19:26:53Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T19:46:21Z",
+    "draft": true,
+    "id": 5193652895,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's CI environment",
+        "id": 6526936644602743638,
+        "name": "domain:ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27087,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(ci): render SMP regression reports locally",
+    "updated_at": "2026-11-06T20:55:45Z",
+    "user": {
+      "login": "Arpafaucon"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T20:45:03Z",
+    "draft": false,
+    "id": 5194376743,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27088,
+    "pull_request": {},
+    "state": "open",
+    "title": "docs(website): fix outdated code snippets in quickstart and guides",
+    "updated_at": "2026-11-06T22:21:30Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T20:47:37Z",
+    "draft": false,
+    "id": 5194407953,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27089,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(agents): improve maturity eval skill accuracy",
+    "updated_at": "2026-11-06T22:08:01Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T21:04:45Z",
+    "id": 6250638043,
+    "issue_type": null,
+    "labels": [],
+    "number": 27090,
+    "state": "open",
+    "title": "docker_logs: a container's last log line is emitted twice when the container exits",
+    "updated_at": "2026-11-06T21:04:45Z",
+    "user": {
+      "login": "paulmakepeace"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T21:34:58Z",
+    "draft": false,
+    "id": 5194974166,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27091,
+    "pull_request": {},
+    "state": "open",
+    "title": "docs(website): fix broken code snippets in AWS guides",
+    "updated_at": "2026-11-06T22:19:13Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-07T01:41:32Z",
+    "draft": true,
+    "id": 5197275597,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27092,
+    "pull_request": {},
+    "state": "open",
+    "title": "test(http): cover streaming request bodies on the native and AWS transports",
+    "updated_at": "2026-11-07T01:41:53Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-07T01:41:40Z",
+    "draft": true,
+    "id": 5197276378,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 27093,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(aws): forward the size hint, end of stream and trailers of SDK request bodies",
+    "updated_at": "2026-11-07T01:42:01Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-07T01:41:46Z",
+    "draft": true,
+    "id": 5197277017,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      }
+    ],
+    "number": 27094,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(sinks): request and decode compressed responses in every HttpService sink",
+    "updated_at": "2026-11-07T01:41:57Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-07T05:49:38Z",
+    "draft": false,
+    "id": 5198890996,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      }
+    ],
+    "number": 27095,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(docker_logs): prevent duplicate final logs on reattachment",
+    "updated_at": "2026-11-07T07:28:01Z",
+    "user": {
+      "login": "titaneric"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-07T08:10:14Z",
+    "draft": false,
+    "id": 5199760327,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      }
+    ],
+    "number": 27096,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(kafka source): remove obsolete rdkafka#681 workaround",
+    "updated_at": "2026-11-07T08:15:23Z",
+    "user": {
+      "login": "Captain1653"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-07T15:11:47Z",
+    "draft": true,
+    "id": 5202949457,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's topology code",
+        "id": 1103341506812725494,
+        "name": "domain:topology"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's transform components",
+        "id": 4876837993745139454,
+        "name": "domain:transforms"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sinks",
+        "id": 6524463192304363030,
+        "name": "domain:sinks"
+      },
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's external, public documentation",
+        "id": 5210716293491119031,
+        "name": "domain:external docs"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27097,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(metrics): measure sink CPU usage, including spawned subtasks",
+    "updated_at": "2026-11-07T16:18:11Z",
+    "user": {
+      "login": "gwenaskell"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-07T17:09:27Z",
+    "draft": false,
+    "id": 5204014303,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's sources",
+        "id": 2021938762883471635,
+        "name": "domain:sources"
+      }
+    ],
+    "number": 27098,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(file): read watched files once more before shutdown",
+    "updated_at": "2026-11-08T03:35:36Z",
+    "user": {
+      "login": "titaneric"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-08T09:05:44Z",
+    "draft": true,
+    "id": 5210078433,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      }
+    ],
+    "number": 27099,
+    "pull_request": {},
+    "state": "open",
+    "title": "perf(core): update log event JSON size cache incrementally on insert and remove",
+    "updated_at": "2026-11-08T09:07:34Z",
+    "user": {
+      "login": "gwenaskell"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-08T20:01:09Z",
+    "draft": false,
+    "id": 5214641246,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to core crates i.e. vector-core, core-common, etc",
+        "id": 6154848213855315177,
+        "name": "domain:core"
+      }
+    ],
+    "number": 27100,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(amqp sink): properly load DER and inline PEM CA certificates in `tls.ca_file`",
+    "updated_at": "2026-11-09T14:37:59Z",
+    "user": {
+      "login": "Captain1653"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-09T13:57:35Z",
+    "id": 6287462335,
+    "issue_type": "Bug",
+    "labels": [],
+    "number": 27101,
+    "state": "open",
+    "title": "s3 sink hang?",
+    "updated_at": "2026-11-09T13:57:35Z",
+    "user": {
+      "login": "RobertAtea"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-09T14:39:03Z",
+    "draft": true,
+    "id": 5225655251,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 115157577543356499,
+        "name": "no-changelog"
+      },
+      {
+        "color": "605f58",
+        "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
+        "id": 6102271970520709555,
+        "name": "docs review on hold"
+      }
+    ],
+    "number": 27102,
+    "pull_request": {},
+    "state": "open",
+    "title": "docs: set a four-week minimum deprecation window",
+    "updated_at": "2026-11-09T14:39:13Z",
+    "user": {
+      "login": "pront"
     }
   }
 ]

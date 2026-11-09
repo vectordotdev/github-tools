@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-02T14:48:05.398789+00:00",
+  "collectedAt": "2026-11-09T14:47:43.403780+00:00",
   "issues": [
     {
       "number": 7,
@@ -615,7 +615,7 @@
       "reactions": 0,
       "title": "Investigate the bottleneck in the search benchmark using toplev",
       "unattributedComments": 0,
-      "uniqueCommenters": 2
+      "uniqueCommenters": 3
     },
     {
       "number": 1034,
@@ -2435,7 +2435,49 @@
       "reactions": 0,
       "title": "Switch winapi dependency to windows/windows-sys",
       "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 3235,
+      "reactions": 0,
+      "title": "Preserve outer and inner array nullability (`NULL`, `[]`, `[null, ...]`) in `tantivy-columnar`",
+      "unattributedComments": 0,
       "uniqueCommenters": 0
+    },
+    {
+      "number": 3237,
+      "reactions": 0,
+      "title": "BooleanWeight::explain suppresses real errors from matching child weights",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3238,
+      "reactions": 0,
+      "title": "Phrase-prefix and unbounded fast-field range scorers ignore boosts",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3245,
+      "reactions": 0,
+      "title": "Doc store costs 4 bytes per document when the schema has no stored fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 3246,
+      "reactions": 0,
+      "title": "PhraseQuery with a slop above 255 matches terms further apart (u8 carried slop)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 3247,
+      "reactions": 0,
+      "title": "PhraseScorer::seek_danger asserts target >= doc, which Exclude::new violates (debug panic with a phrase under MustNot)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
     }
   ],
   "repository": "quickwit-oss/tantivy",

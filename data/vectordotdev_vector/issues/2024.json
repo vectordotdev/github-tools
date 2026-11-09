@@ -1339,7 +1339,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.35.0 release",
-    "updated_at": "2026-03-05T16:11:13Z",
+    "updated_at": "2026-11-03T23:04:56Z",
     "user": {
       "login": "jszwedko"
     }
@@ -2298,7 +2298,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(ci): Revert \"chore: Update AWS crates (#19312)\"",
-    "updated_at": "2024-03-14T18:50:24Z",
+    "updated_at": "2026-11-03T23:04:44Z",
     "user": {
       "login": "jszwedko"
     }
@@ -4291,7 +4291,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(config api): Add `graphql` field to toggle graphql endpoint",
-    "updated_at": "2026-03-05T16:11:17Z",
+    "updated_at": "2026-11-03T22:45:24Z",
     "user": {
       "login": "sebastiantia"
     }
@@ -5688,7 +5688,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(datadog_logs sink): allow batching up to full payload limit",
-    "updated_at": "2024-03-14T18:50:25Z",
+    "updated_at": "2026-11-03T23:04:24Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -6629,7 +6629,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(new sink): Bare-bones Sumo Logic sink implementation",
-    "updated_at": "2024-03-14T18:50:26Z",
+    "updated_at": "2026-11-03T23:05:03Z",
     "user": {
       "login": "sebastiantia"
     }
@@ -7103,7 +7103,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T21:49:05Z",
     "created_at": "2024-01-31T20:23:35Z",
     "id": 2110903028,
     "issue_type": "Bug",
@@ -7116,9 +7116,9 @@
       }
     ],
     "number": 19759,
-    "state": "open",
+    "state": "closed",
     "title": "Unknown buffer disk limitation",
-    "updated_at": "2026-05-29T23:20:27Z",
+    "updated_at": "2026-11-02T21:49:05Z",
     "user": {
       "login": "m1cha3lf"
     }
@@ -8124,7 +8124,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.36.0 release",
-    "updated_at": "2026-03-05T16:11:20Z",
+    "updated_at": "2026-11-03T23:04:57Z",
     "user": {
       "login": "jszwedko"
     }
@@ -9546,7 +9546,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "http::Response is required to be cloneable",
-    "updated_at": "2024-02-16T18:37:55Z",
+    "updated_at": "2026-11-03T23:05:04Z",
     "user": {
       "login": "sebastiantia"
     }
@@ -9615,7 +9615,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: expose test util through feature flag",
-    "updated_at": "2024-02-16T15:03:20Z",
+    "updated_at": "2026-11-03T23:05:03Z",
     "user": {
       "login": "sebastiantia"
     }
@@ -12610,7 +12610,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(website): test cargo update",
-    "updated_at": "2026-03-05T16:11:24Z",
+    "updated_at": "2026-11-03T23:04:24Z",
     "user": {
       "login": "devindford"
     }
@@ -13524,7 +13524,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Revert bump of flate2 from 1.0.27 to 1.0.28 (#18850)",
-    "updated_at": "2024-03-27T21:16:28Z",
+    "updated_at": "2026-11-03T23:04:45Z",
     "user": {
       "login": "jszwedko"
     }
@@ -13776,7 +13776,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(dev, releasing): Have Cargo.toml `release` profile match what releases are published with",
-    "updated_at": "2026-01-13T21:34:43Z",
+    "updated_at": "2026-11-03T23:04:43Z",
     "user": {
       "login": "jszwedko"
     }
@@ -17140,7 +17140,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.37.0 release",
-    "updated_at": "2026-03-05T16:11:27Z",
+    "updated_at": "2026-11-03T23:04:57Z",
     "user": {
       "login": "jszwedko"
     }
@@ -17450,7 +17450,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(codecs): Enable float_roundtrip for serde_json to preserve precision of floats",
-    "updated_at": "2024-03-27T21:16:04Z",
+    "updated_at": "2026-11-03T23:04:46Z",
     "user": {
       "login": "jszwedko"
     }
@@ -19384,7 +19384,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.37.1 release",
-    "updated_at": "2026-03-05T16:11:29Z",
+    "updated_at": "2026-11-03T23:04:42Z",
     "user": {
       "login": "jszwedko"
     }
@@ -22227,7 +22227,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Update issue templates to point to GH discussions",
-    "updated_at": "2024-04-29T14:13:13Z",
+    "updated_at": "2026-11-03T23:04:39Z",
     "user": {
       "login": "jszwedko"
     }
@@ -22942,7 +22942,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(healthchecks): instrument healthchecks with component span",
-    "updated_at": "2024-09-30T15:13:49Z",
+    "updated_at": "2026-11-03T23:05:09Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -25040,13 +25040,19 @@
         "description": null,
         "id": 4191376575049891724,
         "name": "domain:rfc"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 20495,
     "pull_request": {},
     "state": "open",
     "title": "chore(vrl): remote store/enrichment table RFC",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-03T15:11:57Z",
     "user": {
       "login": "lsampras"
     }
@@ -29034,7 +29040,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Update aws-config crate",
-    "updated_at": "2025-03-19T20:52:24Z",
+    "updated_at": "2026-11-03T23:04:47Z",
     "user": {
       "login": "jszwedko"
     }
@@ -29194,7 +29200,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.39.0 release",
-    "updated_at": "2026-03-05T16:11:36Z",
+    "updated_at": "2026-11-03T23:04:57Z",
     "user": {
       "login": "jszwedko"
     }
@@ -29270,7 +29276,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(ci): Update minikube to v1.33.1",
-    "updated_at": "2024-06-14T18:25:36Z",
+    "updated_at": "2026-11-03T23:04:47Z",
     "user": {
       "login": "jszwedko"
     }
@@ -30153,7 +30159,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(upgrade smp): Update to SMP 0.15.1",
-    "updated_at": "2024-12-16T17:23:39Z",
+    "updated_at": "2026-11-03T23:05:06Z",
     "user": {
       "login": "scottopell"
     }
@@ -30416,7 +30422,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(dev): Build development image on arm64 too",
-    "updated_at": "2025-07-23T18:48:58Z",
+    "updated_at": "2026-11-03T23:04:41Z",
     "user": {
       "login": "jszwedko"
     }
@@ -30757,7 +30763,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(update fluent RD tests) - Set client addresses to localhost and scrape target telemetry",
-    "updated_at": "2024-12-16T17:23:43Z",
+    "updated_at": "2026-11-03T23:05:06Z",
     "user": {
       "login": "scottopell"
     }
@@ -31941,7 +31947,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(docs): Document that AWS `endpoint` config needs to have a trailing `/`",
-    "updated_at": "2026-03-05T16:11:39Z",
+    "updated_at": "2026-11-03T23:04:42Z",
     "user": {
       "login": "jszwedko"
     }
@@ -33044,7 +33050,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(ci): Have Vector `master` use `main` of VRL",
-    "updated_at": "2024-10-03T19:47:57Z",
+    "updated_at": "2026-11-03T23:04:41Z",
     "user": {
       "login": "jszwedko"
     }
@@ -33633,7 +33639,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(ci): Pin EventstoreDB to 24.2",
-    "updated_at": "2024-07-18T20:41:53Z",
+    "updated_at": "2026-11-03T23:04:42Z",
     "user": {
       "login": "jszwedko"
     }
@@ -34632,7 +34638,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Bump `metrics` crate to 0.23.0",
-    "updated_at": "2024-10-11T20:48:59Z",
+    "updated_at": "2026-11-03T23:04:23Z",
     "user": {
       "login": "bruceg"
     }
@@ -35037,7 +35043,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T19:05:49Z",
     "created_at": "2024-07-25T09:59:55Z",
     "id": 2429551215,
     "issue_type": "Bug",
@@ -35050,9 +35056,9 @@
       }
     ],
     "number": 20927,
-    "state": "open",
+    "state": "closed",
     "title": "GCP Cloud Storage sink shouldn't include api_key",
-    "updated_at": "2026-02-21T20:41:15Z",
+    "updated_at": "2026-11-05T19:05:49Z",
     "user": {
       "login": "nipsufn"
     }
@@ -35920,7 +35926,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Enable rdkafka curl feature",
-    "updated_at": "2024-09-24T22:34:34Z",
+    "updated_at": "2026-11-03T23:04:42Z",
     "user": {
       "login": "jszwedko"
     }
@@ -35982,7 +35988,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(aws provider): Add ability to disable request signing",
-    "updated_at": "2026-03-05T16:11:41Z",
+    "updated_at": "2026-11-03T23:04:39Z",
     "user": {
       "login": "jszwedko"
     }
@@ -39828,7 +39834,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(tap): Don't send events if output is empty",
-    "updated_at": "2024-08-27T15:11:01Z",
+    "updated_at": "2026-11-03T23:05:13Z",
     "user": {
       "login": "ArunPiduguDD"
     }
@@ -40263,7 +40269,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(core): Check for overflow for arithmetic",
-    "updated_at": "2024-10-31T21:24:30Z",
+    "updated_at": "2026-11-03T23:04:45Z",
     "user": {
       "login": "jszwedko"
     }
@@ -46709,13 +46715,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 21432,
     "pull_request": {},
     "state": "open",
     "title": "[DRAFT]:: encoding events before batching ",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-03T16:03:46Z",
     "user": {
       "login": "TypicalDefender"
     }
@@ -48121,6 +48133,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 115157577543356499,
@@ -48131,7 +48149,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(build.rs) Allow reading the git short has from the build environment",
-    "updated_at": "2026-03-16T14:24:34Z",
+    "updated_at": "2026-11-03T16:03:52Z",
     "user": {
       "login": "darix"
     }
@@ -48984,7 +49002,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.42.0 release",
-    "updated_at": "2026-03-05T16:11:55Z",
+    "updated_at": "2026-11-03T23:04:58Z",
     "user": {
       "login": "jszwedko"
     }
