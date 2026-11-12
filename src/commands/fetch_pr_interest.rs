@@ -1,16 +1,16 @@
 //! Saved PR engagement plus the engagement of explicitly linked closing issues.
-use super::{fetch_first_review, graphql_fetch as gql, sorted_json};
+use super::{
+    graphql_fetch as gql,
+    interest::{Commenters, Engagement},
+    snapshots,
+};
 use crate::config::Config;
 use anyhow::{Context, Result, ensure};
 use chrono::Utc;
 use reqwest::blocking::Client;
 use serde::Serialize;
 use serde_json::{Value, json};
-use std::{
-    collections::{HashMap, HashSet},
-    fs,
-    path::Path,
-};
+use std::{collections::HashMap, path::Path};
 
 const ISSUE: &str = r#"fragment InterestIssue on Issue {
   id issueNumber: number title state repository { nameWithOwner isPrivate }
@@ -39,13 +39,6 @@ const COMMENTS: &str = r#"query($id:ID!,$after:String) {
   }
 }"#;
 
-#[derive(Clone, Serialize)]
-#[serde(rename_all = "camelCase")]
-struct Engagement {
-    reactions: u64,
-    unique_commenters: usize,
-    unattributed_comments: usize,
-}
 #[derive(Clone, Serialize)]
 #[serde(rename_all = "camelCase")]
 struct LinkedIssue {
@@ -119,23 +112,18 @@ fn engagement(
             &["node", "comments"],
         )
     })?;
-    let mut authors = HashSet::new();
-    let mut unattributed = 0;
+    let mut commenters = Commenters::default();
     for comment in comments {
         let author = gql::required(&comment, "author")?;
         if author.is_null() {
-            unattributed += 1;
+            commenters.add(None);
         } else {
             let login = gql::string(author, "login")?;
             ensure!(!login.trim().is_empty(), "Empty commenter login");
-            authors.insert(login.to_lowercase());
+            commenters.add(Some(login));
         }
     }
-    Ok(Engagement {
-        reactions,
-        unique_commenters: authors.len(),
-        unattributed_comments: unattributed,
-    })
+    Ok(commenters.finish(reactions))
 }
 fn collect(
     config: &Config,
@@ -242,10 +230,7 @@ fn run_with_fetch(
     fetch: impl FnMut(&str, Value) -> Result<Value>,
 ) -> Result<()> {
     let snapshot = collect(config, fetch)?;
-    fs::create_dir_all(directory)?;
-    let temporary = directory.join("latest.json.tmp");
-    fs::write(&temporary, sorted_json(&snapshot)?)?;
-    fs::rename(temporary, directory.join("latest.json"))?;
+    snapshots::save_latest(directory, &snapshot)?;
     println!(
         "Saved PR interest for {} non-draft PRs in {}",
         snapshot.prs.len(),
@@ -260,14 +245,16 @@ pub fn run(config: &Config) -> Result<()> {
         &Path::new("data")
             .join(format!("{}_{}", config.org, config.repo))
             .join("pr-interest"),
-        |q, v| fetch_first_review::request(&client, config, q, v),
+        |q, v| gql::request_authenticated(&client, config, q, v),
     )
 }
 
 #[cfg(test)]
 mod tests {
+    use super::super::sorted_json;
     use super::gql::test_support::{TempDir, config, page};
     use super::*;
+    use std::fs;
     fn comments(more: bool) -> Value {
         page(
             vec![
@@ -315,6 +302,19 @@ mod tests {
             result.prs[1].linked_issues[0].engagement.unique_commenters,
             2
         );
+        assert_eq!(
+            serde_json::to_value(&result.prs[0]).unwrap(),
+            json!({
+                "number": 1, "title": "Change", "updatedAt": "2026-11-01T00:00:00+00:00",
+                "reactions": 2, "uniqueCommenters": 1, "unattributedComments": 1,
+                "linkedIssues": [
+                    {"repository": "one/repo", "number": 7, "title": "Demand", "state": "CLOSED",
+                     "reactions": 7, "uniqueCommenters": 2, "unattributedComments": 1},
+                    {"repository": "two/repo", "number": 7, "title": "Demand", "state": "CLOSED",
+                     "reactions": 7, "uniqueCommenters": 2, "unattributedComments": 1}
+                ]
+            })
+        );
         let saved = sorted_json(&result).unwrap();
         assert!(
             !saved.contains("Alice")
@@ -322,6 +322,17 @@ mod tests {
                 && !saved.contains("comments-2")
         );
     }
+    #[test]
+    fn empty_commenter_logins_remain_errors() {
+        for login in ["", " "] {
+            let mut node = pr(1, false, page(vec![], None));
+            node["comments"]["nodes"][0]["author"]["login"] = json!(login);
+            assert!(collect(&config(), |_, _| Ok(json!({
+                "repository": {"pullRequests": page(vec![node.clone()], None)}
+            }))).is_err());
+        }
+    }
+
     #[test]
     fn failed_or_invalid_nested_pages_leave_previous_snapshot_intact() {
         for bad in [

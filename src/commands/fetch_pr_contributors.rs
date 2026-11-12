@@ -1,7 +1,7 @@
 //! Aggregate PR backlog by effective repository access. Never persist the roster.
 use super::{
-    fetch_first_review::{self, Actor},
-    graphql_fetch, sorted_json,
+    github_actor::{self, Actor},
+    graphql_fetch, snapshots,
 };
 use crate::config::Config;
 use anyhow::{Context, Result, ensure};
@@ -11,7 +11,6 @@ use serde::Serialize;
 use serde_json::{Value, json};
 use std::{
     collections::{BTreeMap, HashMap, HashSet},
-    fs,
     path::Path,
     process::Command,
 };
@@ -99,7 +98,7 @@ fn access(
 fn count(authors: &[Value], team: &HashSet<String>) -> Result<Counts> {
     let mut counts = Counts::default();
     for author in authors {
-        match fetch_first_review::actor(author)? {
+        match github_actor::actor(author)? {
             Actor::Bot => counts.bots += 1,
             Actor::Unknown => counts.unknown += 1,
             Actor::Human(login) if team.contains(&login) => counts.team += 1,
@@ -338,16 +337,13 @@ pub fn run(config: &Config) -> Result<()> {
     let client = Client::new();
     let snapshot = collect(config, &saved, |q, v| {
         if q.starts_with("query{") {
-            fetch_first_review::request_accounts(&client, config, q)
+            graphql_fetch::request_accounts(&client, config, q)
         } else {
-            fetch_first_review::request(&client, config, q, v)
+            graphql_fetch::request_authenticated(&client, config, q, v)
         }
     })?;
     let directory = root.join("pr-contributors");
-    fs::create_dir_all(&directory)?;
-    let temp = directory.join("latest.json.tmp");
-    fs::write(&temp, sorted_json(&snapshot)?)?;
-    fs::rename(temp, directory.join("latest.json"))?;
+    snapshots::save_latest(&directory, &snapshot)?;
     let counts = snapshot
         .points
         .last()
@@ -368,6 +364,7 @@ pub fn run(config: &Config) -> Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::commands::sorted_json;
     use graphql_fetch::test_support::{config, page};
     fn human(login: &str) -> Value {
         json!({"__typename":"User","login":login})
