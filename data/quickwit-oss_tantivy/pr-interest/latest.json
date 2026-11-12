@@ -1,0 +1,1499 @@
+{
+  "collectedAt": "2026-11-12T15:00:07.339378+00:00",
+  "excludedDrafts": 25,
+  "openPrs": 165,
+  "prs": [
+    {
+      "linkedIssues": [],
+      "number": 955,
+      "reactions": 0,
+      "title": "add score mode into Inverted Index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2023-02-22T02:24:02+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1015,
+      "reactions": 1,
+      "title": "Document index file formats - Issue/981",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4,
+      "updatedAt": "2023-05-31T18:40:05+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1073,
+      "reactions": 0,
+      "title": "add search_tokenizer on TextFieldIndexing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2023-02-22T02:24:02+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1319,
+      "reactions": 0,
+      "title": "Expull: replace read_to_end with iterator over bytes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2023-02-22T02:24:02+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 1392,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "Include slop in the scoring formula for the phrasescorer",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 1414,
+      "reactions": 0,
+      "title": "Phrase query: scale score on used slop",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2023-02-22T02:24:02+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1512,
+      "reactions": 0,
+      "title": "[feat] SegmentAttributes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5,
+      "updatedAt": "2026-10-18T19:12:43+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 1530,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "Add f32 support ",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 1599,
+      "reactions": 0,
+      "title": "WIP: add conversion for f32 and fixed precision number",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2023-02-22T02:24:02+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1819,
+      "reactions": 0,
+      "title": "Implement extended stats aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2023-02-22T02:24:02+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1979,
+      "reactions": 0,
+      "title": "clarify tokenizer docs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2023-04-03T16:17:35+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2118,
+      "reactions": 1,
+      "title": "Simplify aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2023-07-12T06:31:29+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2122,
+      "reactions": 0,
+      "title": "add failing test check_num_columnar_fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2023-07-14T03:39:50+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2126,
+      "reactions": 0,
+      "title": "Add preserve original on ascii folding filter.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2023-07-18T00:56:30+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2152,
+      "reactions": 0,
+      "title": "POC: Setting thread affinity on indexer threads",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2023-09-03T11:10:27+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2190,
+      "reactions": 0,
+      "title": "change Err from Debug to Display",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2023-09-27T03:03:04+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2201,
+      "reactions": 0,
+      "title": "fixes Deregister FileWatcher in MmapDirectory #2200",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2024-02-14T05:59:49+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2276,
+      "reactions": 0,
+      "title": "RFC: Transparently fetch multiple documents grouped per block",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2023-12-11T14:24:41+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2286,
+      "reactions": 0,
+      "title": "term_freq in TermFrequencyRecorder untested",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2024-07-03T05:52:05+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2304,
+      "reactions": 0,
+      "title": "feat: add a simple way to chain two tokenizers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4,
+      "updatedAt": "2024-02-05T06:25:40+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2308,
+      "reactions": 0,
+      "title": "Make allocating field names avoidable for range and exists queries.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2024-04-10T09:36:15+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2343,
+      "reactions": 0,
+      "title": "change debug_assert to assert in term length",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2024-04-09T11:27:14+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2361,
+      "reactions": 0,
+      "title": "Provide StoreReader::enumerate to simplify creation of secondary indexes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2024-05-23T06:31:11+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2362,
+      "reactions": 0,
+      "title": "Extend DocumentDeserialize with a stateful variant DocumentDeserializeSeed",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2024-05-27T16:52:32+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2371,
+      "reactions": 0,
+      "title": "tantivy document memory experiment",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2024-05-20T04:00:58+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2419,
+      "reactions": 0,
+      "title": "update basic_search example",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2024-05-30T13:56:35+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2458,
+      "reactions": 0,
+      "title": "add key_as_string for numbers in term agg",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2024-07-25T05:21:07+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2491,
+      "reactions": 0,
+      "title": "Update ARCHITECTURE.md",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2024-09-06T21:53:33+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2502,
+      "reactions": 0,
+      "title": "Fix description for QueryParserError::ExpectedFloat",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2024-09-26T21:38:03+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2511,
+      "reactions": 0,
+      "title": "ci: Switch from actions-rs/toolchain to dtolnay/rust-toolchain",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2024-10-09T06:06:35+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2513,
+      "reactions": 2,
+      "title": "feat(QueryParser): add support for patterns like \"field:*\".",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2024-11-19T08:19:16+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2553,
+      "reactions": 0,
+      "title": "Add `has_merging_threads` function to IndexWriter",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-04-18T10:07:48+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2555,
+      "reactions": 0,
+      "title": "accept * as field name",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-02-17T02:17:45+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2574,
+      "reactions": 0,
+      "title": "Update nom requirement from 7 to 8",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-04-03T13:57:07+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2601,
+      "reactions": 0,
+      "title": "Add method to take clauses out of boolean query",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-05-01T08:25:52+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2623,
+      "reactions": 1,
+      "title": "Add support for u128 datatype",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-01-26T21:18:28+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2627,
+      "reactions": 0,
+      "title": "Update `LogMergePolicy` to skip to a target number of documents",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-01-06T00:50:49+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2632,
+      "reactions": 0,
+      "title": "refactoring",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-06-30T10:54:33+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2636,
+      "reactions": 2,
+      "title": "feat(snippet): report range of snippets in original text",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-05-12T13:20:22+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2648,
+      "reactions": 0,
+      "title": "Refactor deserialization to support borrowed types",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-06-14T02:40:42+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2655,
+      "reactions": 0,
+      "title": "QueryParser: make empty-query behaviour configurable (set_empty_query_match_all)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-03T09:01:02+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2680,
+      "reactions": 0,
+      "title": "Clippy and cleanups",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-08-13T10:44:36+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2682,
+      "reactions": 0,
+      "title": "Add soft-commit and NRT overlay: IndexWriter::soft_commit, IndexWriter::nrt_searcher, and NrtDirectory",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2025-09-03T08:44:39+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2689,
+      "reactions": 0,
+      "title": "Added unit test for aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-08-28T10:52:25+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2718,
+      "reactions": 0,
+      "title": "Add a fast-field variant of TermSet",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-02-08T16:51:27+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2725,
+      "reactions": 0,
+      "title": "fix: Fix json range query with different number type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2025-10-30T09:23:54+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2729,
+      "reactions": 5,
+      "title": "Geo-search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4,
+      "updatedAt": "2026-11-10T18:16:04+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2746,
+      "reactions": 0,
+      "title": "Add polish stemmer proposal",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-01-02T12:02:12+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2747,
+      "reactions": 0,
+      "title": "convert SegmentReader into a Trait",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-11-26T09:59:36+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2752,
+      "reactions": 0,
+      "title": "perf(columnar): Use PGM-index for O(1) position→docid lookups in multi-valued columns",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2025-12-01T14:06:10+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2755,
+      "reactions": 0,
+      "title": "Flatheadmill geo",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-12-04T10:42:34+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2785,
+      "reactions": 0,
+      "title": "Added seek_doc to weight",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-01-06T16:44:05+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2803,
+      "reactions": 1,
+      "title": "fix(aggs): top_hits panics with unknown fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-01-25T12:40:10+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2804,
+      "reactions": 0,
+      "title": "Adds fuzzy query support to the QueryParser",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-01-17T17:21:02+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2819,
+      "reactions": 0,
+      "title": "Postings writer codex + inverted index reader as trait",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-03-02T08:36:03+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2840,
+      "reactions": 0,
+      "title": "Add tiered merge policy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-02-23T09:55:50+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2871,
+      "reactions": 0,
+      "title": "Update rand_distr requirement from 0.5 to 0.6",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-05-12T07:10:27+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2872,
+      "reactions": 0,
+      "title": "Update oneshot requirement from 0.1.13 to 0.2.1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-05-12T07:10:28+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2874,
+      "reactions": 0,
+      "title": "Update rand requirement from 0.9 to 0.10",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-04-15T06:58:29+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2913,
+      "reactions": 0,
+      "title": "fix: Missing sentinel is now considered in term agg requests with exclude + missing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-08-13T00:41:18+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2919,
+      "reactions": 0,
+      "title": "Update fs4 requirement from 0.13.1 to 1.1.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-06-04T15:52:39+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2921,
+      "reactions": 0,
+      "title": "fix(query-grammar): handle set_field(None) on Exists without panic",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-05-04T02:34:09+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 2285,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "CLOSED",
+          "title": "term_freq in TermFrequencyRecorder is untested",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 2934,
+      "reactions": 0,
+      "title": "postings: add a basic test for TermFrequencyRecorder",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-05-17T13:14:24+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2937,
+      "reactions": 0,
+      "title": "Implement exponential search for rank -> docid batch lookup",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-06-08T10:16:53+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2941,
+      "reactions": 0,
+      "title": "Refactor tests from more_asserts crate to assertables crate",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-05-28T20:07:18+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2942,
+      "reactions": 1,
+      "title": "Improve BufferedUnionScorer performance by ~9%",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-06-12T07:30:33+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2946,
+      "reactions": 0,
+      "title": "bench: compare UnicodeSegmenterTokenizer vs alyze UAX#29 tokenizer",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-06-02T16:29:02+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2955,
+      "reactions": 1,
+      "title": "Bump github/codeql-action from 4.36.1 to 4.36.2",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-08-07T09:59:14+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2964,
+      "reactions": 1,
+      "title": "Fix MoreLikeThis panic on indexes with deleted documents",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-08-05T16:47:23+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2967,
+      "reactions": 1,
+      "title": "Update itertools requirement from 0.14.0 to 0.15.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-07-20T07:52:31+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 2390,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "Implementing Block WAND optimization for more queries",
+          "unattributedComments": 0,
+          "uniqueCommenters": 4
+        }
+      ],
+      "number": 2995,
+      "reactions": 2,
+      "title": "Convert BMW implementations into publicly-available PruningScorers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-08-27T23:31:30+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2998,
+      "reactions": 1,
+      "title": "Allow sharing one merge thread pool across IndexWriters",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-07-14T22:03:01+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2999,
+      "reactions": 1,
+      "title": "Reuse indexing worker threads across commits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-07-15T07:55:05+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3002,
+      "reactions": 1,
+      "title": "Floor DateTime truncation for pre-epoch timestamps",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-07-21T17:18:22+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3009,
+      "reactions": 0,
+      "title": "Make doc store binary format more compact (#903)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-07-22T12:53:44+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 971,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "Generate meaningful SegmentIDs instead of pure random",
+          "unattributedComments": 0,
+          "uniqueCommenters": 4
+        }
+      ],
+      "number": 3012,
+      "reactions": 1,
+      "title": "Generate meaningful segment ids using UUIDv7",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-07-25T16:11:35+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3025,
+      "reactions": 1,
+      "title": "Fix nested all-negative boolean clauses matching zero documents",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-08-08T21:10:45+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3043,
+      "reactions": 0,
+      "title": "SIMD batch unpacking for the u64 fast field codecs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-08-26T07:40:51+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3050,
+      "reactions": 0,
+      "title": "fix(columnar): estimate BlockwiseLinear's residuals per block, not per column",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-09-16T17:48:55+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3058,
+      "reactions": 2,
+      "title": "Add read-only directory support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-09-02T17:15:36+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3031,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "CLOSED",
+          "title": "QueryParser::parse_query panics on `- *` instead of returning Err (Exist query without a field)",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 3075,
+      "reactions": 2,
+      "title": "fix(query-grammar): handle set_field(None) on Exists without panic",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-09-05T03:30:57+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 2666,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "IndexWriter's committed_opstamp is never updated after commits, breaking rollback and causing data integrity issues",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 3105,
+      "reactions": 2,
+      "title": "Fix IndexWriter::commit_opstamp() never updating after a successful commit (#2666)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-19T03:09:56+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3113,
+      "reactions": 1,
+      "title": "Bump codecov/codecov-action from 7.0.0 to 7.1.1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-09-18T20:04:37+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3117,
+      "reactions": 1,
+      "title": "postings: add dense bitset block codec (Lucene-style unary coding)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-09-22T07:02:31+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3118,
+      "reactions": 1,
+      "title": "postings: read dense bitset blocks (skip marker + BlockInfo::Dense)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-09-22T07:02:31+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3119,
+      "reactions": 1,
+      "title": "postings: write dense bitset blocks when smaller than FOR",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-09-29T07:36:43+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3121,
+      "reactions": 0,
+      "title": "Update cranelift-jit requirement from 0.134.3 to 0.136.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-26T10:10:57+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3122,
+      "reactions": 1,
+      "title": "Update cranelift requirement from 0.134.3 to 0.136.1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-26T10:10:58+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3123,
+      "reactions": 0,
+      "title": "Update cranelift-module requirement from 0.134.3 to 0.136.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-26T10:11:00+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3124,
+      "reactions": 1,
+      "title": "Keep emptied segments that are being merged",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-09-23T20:47:00+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 2776,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "About 15% regression on string sorts",
+          "unattributedComments": 0,
+          "uniqueCommenters": 3
+        }
+      ],
+      "number": 3125,
+      "reactions": 1,
+      "title": "Batch term lookups when converting sort keys",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-09-24T22:22:18+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3127,
+      "reactions": 1,
+      "title": "Update cranelift-native requirement from 0.134.3 to 0.136.1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-26T10:11:01+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 2945,
+          "reactions": 3,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "README.md and benchmarks statement",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 3128,
+      "reactions": 1,
+      "title": "docs: fix README benchmark statement to match current results",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-09-25T16:10:59+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3131,
+      "reactions": 1,
+      "title": "postings: bulk-OR dense blocks into bitset windows (Lucene intoBitSet)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-09-26T14:38:51+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3132,
+      "reactions": 2,
+      "title": "perf(phrase): prune exact matches before positions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-09-27T01:12:44+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3140,
+      "reactions": 1,
+      "title": "Fix range aggregation with fractional bounds on integer columns",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-09-30T03:32:05+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 2436,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "monotonic mapping broken for `get_docids_for_value_range`",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 3141,
+      "reactions": 1,
+      "title": "Fix value range queries on coerced numerical columns",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-01T04:46:57+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 2908,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "Terms aggregation requests where the missing key matches an existing key don't return the missing bucket",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 3142,
+      "reactions": 1,
+      "title": "Merge terms agg missing bucket into a term with the same key",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-01T04:47:00+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3145,
+      "reactions": 1,
+      "title": "fix: parse each zstd doc store option and do not panic on malformed input",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-02T03:50:32+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3168,
+      "reactions": 1,
+      "title": "Bump actions/upload-artifact from 7.0.1 to 7.0.2",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-09T20:33:54+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3170,
+      "reactions": 1,
+      "title": "Spatial fields and geo queries on S2 cells",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-11T10:00:58+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3184,
+      "reactions": 1,
+      "title": "Bump ossf/scorecard-action from 2.4.4 to 2.5.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-14T02:40:27+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3186,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "A reopened IndexWriter's first op reuses the last commit's opstamp, so a delete can be skipped by a merge (duplicate after upsert)",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 3187,
+      "reactions": 2,
+      "title": "indexer: give a new writer's first operation the opstamp after the last commit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-14T15:49:31+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3188,
+      "reactions": 1,
+      "title": "Add blockwise linear V2 with constant-time column opening",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-14T12:13:03+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3189,
+      "reactions": 2,
+      "title": "Stop RegexPhraseWeight's term scan once max_expansions is exceeded",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-14T23:34:09+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3190,
+      "reactions": 2,
+      "title": "Read sparse RegexPhraseQuery terms once",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-10-26T12:00:26+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3191,
+      "reactions": 2,
+      "title": "Make RegexPhraseQuery generic over the term Automaton",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-14T23:35:47+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3193,
+          "reactions": 1,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "`PhraseScorer::seek_danger` debug assertion fails when a phrase is excluded (`MustNot`) and its first match is after the first candidate",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 3194,
+      "reactions": 2,
+      "title": "fix(query): allow seek_danger targets below the current doc",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-16T05:36:46+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 2645,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "segment_postings assertion failed: self.doc() <= target",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 3198,
+      "reactions": 1,
+      "title": "Do not seek backwards when explaining a document",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-17T14:12:42+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3203,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "SnippetGenerator does not highlight terms with capital letters on a case-preserving tokenizer",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 3204,
+      "reactions": 2,
+      "title": "snippet: match document tokens against query terms exactly",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T13:54:10+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3172,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "DynamicTermDictionary is not accounted for in AggregationLimits",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 3205,
+      "reactions": 2,
+      "title": "aggregation: charge the term dictionary of computed text sources against the memory limit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-09T14:38:25+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3206,
+      "reactions": 1,
+      "title": "Bump Swatinem/rust-cache from 2.9.1 to 2.9.3",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T20:05:37+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 2980,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "wrong sorting for missing key of type string in term aggregation",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 3207,
+      "reactions": 1,
+      "title": "Fix missing string key ordering during terms aggregation pruning",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-26T09:02:42+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3211,
+      "reactions": 1,
+      "title": "Add SpanQuery: word-distance matching over any term source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-24T21:10:23+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3212,
+      "reactions": 2,
+      "title": "Add opt-in MatchedTermsSink to automaton queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-10-24T22:55:04+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3213,
+      "reactions": 2,
+      "title": "Add opt-in expansion cap to automaton queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-24T20:20:48+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3214,
+      "reactions": 1,
+      "title": "Add ZeroWidthChars to group terms under an expansion cap",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-24T20:23:33+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3215,
+      "reactions": 1,
+      "title": "Fix sloppy phrase queries matching extra documents when scoring is disabled",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-10-28T17:32:05+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3216,
+      "reactions": 1,
+      "title": "Added bench",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-27T07:36:41+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3219,
+      "reactions": 2,
+      "title": "Expose TermDictionary::term_info_from_ord",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-27T22:59:19+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3220,
+      "reactions": 2,
+      "title": "Merge the top hits of segments in doc order",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-28T12:55:53+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3221,
+      "reactions": 1,
+      "title": "Replace composite with multi-terms aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-29T09:41:49+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3224,
+      "reactions": 1,
+      "title": "Choose Boolean unions by estimated match density",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-04T06:57:16+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3225,
+      "reactions": 1,
+      "title": "Memoize jitexpr value sources per input term ord",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-04T12:35:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3226,
+      "reactions": 2,
+      "title": "Document the query-grammar subcrate",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-31T11:39:45+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3228,
+      "reactions": 1,
+      "title": "Remove TermSetQuery / Optional BitSet in Union",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-30T19:02:18+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3229,
+      "reactions": 2,
+      "title": "Update datasketches to 0.6.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-01T03:14:43+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3231,
+      "reactions": 2,
+      "title": "Fix conjunction pruning bounds and score accumulation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-03T01:21:14+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3232,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "Switch winapi dependency to windows/windows-sys",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 3233,
+      "reactions": 2,
+      "title": "Remove unused winapi dependency",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-02T16:19:27+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 2891,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "Missing key handling in cardinality is glitchy",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 3234,
+      "reactions": 2,
+      "title": "Fix numeric cardinality keys across segments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-09T17:19:51+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3230,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "Block-WAND pruning can return the wrong top hit without fieldnorms",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 3236,
+      "reactions": 2,
+      "title": "Fix Block-WAND bounds and JSON conjunction scoring",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-03T13:45:23+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3239,
+      "reactions": 1,
+      "title": "Preserve scorer boost context in explanations",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-03T23:43:38+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3240,
+      "reactions": 2,
+      "title": "Fix collapse_overlapped_ranges docs: adjacent ranges are not merged",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-04T11:07:02+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3242,
+      "reactions": 2,
+      "title": "Accept any whitespace and parentheses after query operators",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-05T14:35:42+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3243,
+      "reactions": 2,
+      "title": "Return FieldDoesNotExist for query JSON paths containing a nul byte",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-05T19:55:19+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3246,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "PhraseQuery with a slop above 255 matches terms further apart (u8 carried slop)",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 3248,
+      "reactions": 1,
+      "title": "fix(query): preserve phrase slop above 255",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-06T18:21:05+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3249,
+      "reactions": 1,
+      "title": "Bump github/codeql-action/upload-sarif from 4.36.1 to 4.39.3",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-06T20:04:00+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3250,
+      "reactions": 2,
+      "title": "Guard against overflow on exclusive IP range bounds",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-07T20:10:19+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3247,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "PhraseScorer::seek_danger asserts target >= doc, which Exclude::new violates (debug panic with a phrase under MustNot)",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 3251,
+      "reactions": 2,
+      "title": "fix(phrase): handle target < doc in PhraseScorer::seek_danger",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-08T11:32:00+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3255,
+      "reactions": 1,
+      "title": "Add ability to disable fsync when using `MmapDirectory`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-11T23:05:46+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3257,
+      "reactions": 2,
+      "title": "Apply the registered raw analyzer to raw fast fields",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-12T12:08:00+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3256,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "PhrasePrefixQuery ignores the Bm25StatisticsProvider passed via EnableScoring",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 3258,
+      "reactions": 2,
+      "title": "Use injected BM25 statistics in PhrasePrefixQuery",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-12T14:39:58+00:00"
+    }
+  ],
+  "repository": "quickwit-oss/tantivy",
+  "schemaVersion": 1
+}
