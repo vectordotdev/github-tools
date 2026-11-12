@@ -3,7 +3,7 @@ use clap::{Parser, Subcommand};
 use github_tools::{
     commands::{
         build_db, close_old_prs, compact, delete_stale_branches, fetch_automated_review_stats,
-        fetch_discussions, fetch_first_review, fetch_pr_contributors, fetch_issue_interest, fetch_issues, fetch_labels,
+        fetch_discussions, fetch_first_review, fetch_pr_contributors, fetch_issue_interest, fetch_pr_interest, fetch_issues, fetch_labels,
         generate_charts, generate_summaries, purge, push_metrics, remove_legacy_label, replace_label,
         workflows, save_backlog_history,
     },
@@ -61,6 +61,13 @@ enum Command {
     },
     /// Snapshot open issues ranked by reactions and distinct commenters
     FetchIssueInterest {
+        #[arg(long)]
+        repo: String,
+        #[arg(long)]
+        env_file: Option<String>,
+    },
+    /// Snapshot open non-draft PR interest including explicitly linked issues
+    FetchPrInterest {
         #[arg(long)]
         repo: String,
         #[arg(long)]
@@ -367,6 +374,10 @@ fn main() -> Result<()> {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_issues::run(&config, since.as_deref())?;
             save_backlog_history::run(&config)
+        }
+        Command::FetchPrInterest { repo, env_file } => {
+            let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
+            fetch_pr_interest::run(&config)
         }
         Command::FetchIssueInterest { repo, env_file } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;

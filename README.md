@@ -74,6 +74,7 @@ Fetch:
   fetch-issues       Fetch all issues/PRs for a repository
   fetch-discussions  Fetch all discussions for a repository
   fetch-issue-interest  Snapshot open-issue reactions and distinct commenters
+  fetch-pr-interest     Snapshot PR interest including linked closing issues
   fetch-first-review  Snapshot open PRs awaiting a first human review
   fetch-pr-contributors  Snapshot Team & Community PR backlog
   save-backlog-history  Export compact Outstanding history from local Git
@@ -480,3 +481,20 @@ The contributor collector shares the same historical observation selection,
 removing formatting-only dates on its next successful refresh. Its current
 permission classification and live PR point retain their existing definitions.
 The compact history adds no author list or per-person access data.
+
+### PR interest snapshots
+
+`fetch-pr-interest --repo owner/name` writes `data/owner_name/pr-interest/latest.json`.
+It runs in `fetch-all`, including with `--since`, and accepts `GITHUB_TOKEN` or
+existing authenticated `gh`. Every open non-draft PR contributes its reactions
+and distinct conversation commenters. GitHub `closingIssuesReferences` supplies
+explicit closing links, including manual links, closed issues, and cross-repository
+issues; arbitrary mentions are excluded. Each linked issue contributes the same
+counts and is included once per PR. Linked issues shared by PRs reuse one collected
+result. Commenters include authors and bots, matching issue interest; unavailable
+authors are counted separately. Inline review comments, review bodies, and comment
+reactions are excluded.
+
+All PR, linked-issue, and comment pages must succeed before atomically replacing
+the previous snapshot. Saved data contains titles, repository/issue numbers,
+update times and aggregate counts, with no comment bodies or commenter identities.
