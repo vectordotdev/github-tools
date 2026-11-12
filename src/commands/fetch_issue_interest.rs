@@ -1,4 +1,7 @@
-use super::sorted_json;
+use super::{
+    interest::{Commenters, Engagement},
+    snapshots,
+};
 use crate::config::Config;
 use anyhow::{Context, Result, bail, ensure};
 use chrono::Utc;
@@ -6,7 +9,6 @@ use reqwest::blocking::Client;
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
 use std::collections::HashSet;
-use std::fs;
 use std::path::Path;
 
 pub const ISSUES_QUERY: &str = r#"
@@ -67,9 +69,8 @@ struct Issue {
 pub struct InterestIssue {
     number: u64,
     title: String,
-    reactions: u64,
-    unique_commenters: usize,
-    unattributed_comments: usize,
+    #[serde(flatten)]
+    engagement: Engagement,
 }
 #[derive(Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -112,18 +113,12 @@ pub fn collect(
             .context("Invalid issue page")?;
         for issue in page.nodes {
             ensure!(numbers.insert(issue.number), "Duplicate issue in snapshot");
-            let mut authors = HashSet::new();
-            let mut unattributed = 0;
+            let mut commenters = Commenters::default();
             let mut comments = issue.comments;
             let mut comment_cursors = HashSet::new();
             loop {
                 for comment in comments.nodes {
-                    match comment.author {
-                        Some(author) if !author.login.is_empty() => {
-                            authors.insert(author.login.to_lowercase());
-                        }
-                        _ => unattributed += 1,
-                    }
+                    commenters.add(comment.author.as_ref().map(|author| author.login.as_str()));
                 }
                 let Some(cursor) = next_cursor(&comments.page_info, &mut comment_cursors)? else {
                     break;
@@ -138,9 +133,7 @@ pub fn collect(
             issues.push(InterestIssue {
                 number: issue.number,
                 title: issue.title,
-                reactions: issue.reactions.total_count,
-                unique_commenters: authors.len(),
-                unattributed_comments: unattributed,
+                engagement: commenters.finish(issue.reactions.total_count),
             });
         }
         println!("Read interest for {} open issues", issues.len());
@@ -180,11 +173,7 @@ pub fn run(config: &Config) -> Result<()> {
     let directory = Path::new("data")
         .join(format!("{}_{}", config.org, config.repo))
         .join("issue-interest");
-    fs::create_dir_all(&directory)?;
-    let temporary = directory.join("latest.json.tmp");
-    fs::write(&temporary, sorted_json(&snapshot)?)?;
-    fs::rename(&temporary, directory.join("latest.json"))?;
-    Ok(())
+    snapshots::save_latest(&directory, &snapshot)
 }
 
 #[cfg(test)]
@@ -208,7 +197,7 @@ mod tests {
             calls += 1;
             Ok(match calls {
                 1 => json!({"repository": {"issues": {"nodes": [{"number": 9, "title": "First", "reactions": {"totalCount": 10},
-                    "comments": comments(&[Some("Author"), Some("AUTHOR"), Some("bot[bot]"), None], true)}],
+                    "comments": comments(&[Some("Author"), Some("AUTHOR"), Some("bot[bot]"), None, Some("")], true)}],
                     "pageInfo": {"hasNextPage": true, "endCursor": "next-issues"}}}}),
                 2 => { assert_eq!(variables["number"], 9); assert_eq!(variables["after"], "next-comments");
                     json!({"repository": {"issue": {"comments": comments(&[Some("author"), Some("other")], false)}}}) },
@@ -219,10 +208,15 @@ mod tests {
             })
         }).unwrap();
         assert_eq!(calls, 3);
-        assert_eq!(result.issues[0].number, 2);
-        assert_eq!(result.issues[1].unique_commenters, 3);
-        assert_eq!(result.issues[1].unattributed_comments, 1);
-        assert_eq!(result.issues[1].reactions, 10);
+        assert_eq!(
+            serde_json::to_value(&result.issues).unwrap(),
+            json!([
+                {"number": 2, "title": "Second", "reactions": 0,
+                 "uniqueCommenters": 0, "unattributedComments": 0},
+                {"number": 9, "title": "First", "reactions": 10,
+                 "uniqueCommenters": 3, "unattributedComments": 2}
+            ])
+        );
     }
     #[test]
     fn fails_on_bad_or_failed_pages_instead_of_returning_partial_results() {

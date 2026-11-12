@@ -4,8 +4,13 @@ use anyhow::{Context, Result, bail, ensure};
 use chrono::{DateTime, Utc};
 use reqwest::blocking::Client;
 use serde_json::{Value, json};
-use std::collections::HashSet;
-use std::time::Duration;
+use std::{
+    collections::HashSet,
+    io::Write,
+    path::Path,
+    process::{Command, Stdio},
+    time::Duration,
+};
 
 const GRAPHQL_URL: &str = "https://api.github.com/graphql";
 pub(super) const PAGE_SIZE: u32 = 100;
@@ -52,6 +57,115 @@ pub(super) fn request_at(
         "Missing or invalid GraphQL data"
     );
     Ok(value["data"].take())
+}
+
+/// Use an explicit token or the existing authenticated GitHub CLI session.
+pub(super) fn request_authenticated(
+    client: &Client,
+    config: &Config,
+    query: &str,
+    variables: Value,
+) -> Result<Value> {
+    request_checked(client, config, query, variables, false)
+}
+
+/// Account lookups may return NOT_FOUND for deleted users or bot identities.
+/// All other GraphQL/transport failures remain fatal.
+pub(super) fn request_accounts(client: &Client, config: &Config, query: &str) -> Result<Value> {
+    request_checked(client, config, query, json!({}), true)
+}
+
+fn decode_response(value: Value, allow_missing_accounts: bool) -> Result<Value> {
+    if let Some(errors) = value.get("errors") {
+        ensure!(
+            allow_missing_accounts,
+            "GraphQL response contains errors: {errors}"
+        );
+        let errors = errors
+            .as_array()
+            .filter(|e| !e.is_empty())
+            .context("Invalid GraphQL errors")?;
+        for error in errors {
+            let path = error["path"]
+                .as_array()
+                .context("Missing account error path")?;
+            let alias = path
+                .first()
+                .and_then(Value::as_str)
+                .context("Missing account alias")?;
+            ensure!(
+                error["type"] == "NOT_FOUND"
+                    && path.len() == 1
+                    && alias.starts_with('a')
+                    && alias[1..].parse::<usize>().is_ok()
+                    && value["data"].get(alias).is_some_and(Value::is_null),
+                "GraphQL account lookup failed: {error}"
+            );
+        }
+    }
+    ensure!(value["data"].is_object(), "Missing GraphQL data");
+    Ok(value["data"].clone())
+}
+
+fn request_checked(
+    client: &Client,
+    config: &Config,
+    query: &str,
+    variables: Value,
+    allow_missing_accounts: bool,
+) -> Result<Value> {
+    if !config.github_token.is_empty() {
+        if !allow_missing_accounts {
+            return request(client, config, query, variables);
+        }
+        let response = client
+            .post(GRAPHQL_URL)
+            .bearer_auth(&config.github_token)
+            .header("User-Agent", "github-tools")
+            .timeout(Duration::from_secs(60))
+            .json(&json!({"query":query,"variables":variables}))
+            .send()?;
+        ensure!(
+            response.status().is_success(),
+            "GitHub account lookup HTTP error: {}",
+            response.status()
+        );
+        return decode_response(response.json()?, true);
+    }
+    // Reuse gh authentication without extracting its token.
+    let executable = if cfg!(target_os = "macos") && Path::new("/opt/homebrew/bin/gh").exists() {
+        "/opt/homebrew/bin/gh"
+    } else {
+        "gh"
+    };
+    let mut child = Command::new(executable)
+        .args(["api", "graphql", "--hostname", "github.com", "--input", "-"])
+        .stdin(Stdio::piped())
+        .stdout(Stdio::piped())
+        .stderr(Stdio::piped())
+        .spawn()
+        .context("Could not start authenticated gh")?;
+    let written = child
+        .stdin
+        .take()
+        .context("Missing gh stdin")?
+        .write_all(&serde_json::to_vec(
+            &json!({"query":query,"variables":variables}),
+        )?);
+    let output = child.wait_with_output()?;
+    written?;
+    ensure!(
+        output.status.success() || allow_missing_accounts && !output.stdout.is_empty(),
+        "GitHub request failed: {}",
+        String::from_utf8_lossy(&output.stderr)
+    );
+    let value: Value = serde_json::from_slice(&output.stdout)?;
+    ensure!(
+        output.status.success() || value.get("errors").is_some(),
+        "GitHub request failed: {}",
+        String::from_utf8_lossy(&output.stderr)
+    );
+    decode_response(value, allow_missing_accounts)
 }
 
 pub(super) fn connection(mut data: Value, path: &[&str]) -> Result<Value> {
@@ -351,6 +465,20 @@ pub(super) mod test_support {
 mod tests {
     use super::test_support::{Server, client, config, ok, page as fixture_page};
     use super::*;
+
+    #[test]
+    fn missing_account_lookups_are_unknown_but_partial_and_transport_errors_still_fail() {
+        let missing = json!({"data":{"a0":null},"errors":[{"type":"NOT_FOUND","path":["a0"]}]});
+        assert!(decode_response(missing.clone(), true).unwrap()["a0"].is_null());
+        assert!(decode_response(missing, false).is_err());
+        for error in [
+            json!({"type":"RATE_LIMITED","path":["a0"]}),
+            json!({"type":"NOT_FOUND","path":["repository"]}),
+            json!({"type":"FORBIDDEN","path":["a0"]}),
+        ] {
+            assert!(decode_response(json!({"data":{"a0":null},"errors":[error]}), true).is_err());
+        }
+    }
 
     fn node(number: u64, updated: &str) -> Value {
         json!({"id": format!("N{number}"), "number": number, "updatedAt": updated})

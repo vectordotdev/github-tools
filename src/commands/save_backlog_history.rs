@@ -1,5 +1,5 @@
 //! Materialize saved backlog observations once, instead of rebuilding them in the UI.
-use super::sorted_json;
+use super::{snapshots, sorted_json};
 use crate::config::Config;
 use anyhow::{Context, Result, ensure};
 use chrono::{DateTime, Utc};
@@ -210,19 +210,12 @@ fn points(
             .then(|| "Incomplete saved snapshot".to_owned()),
     })
 }
-fn atomic(path: &Path, value: &impl Serialize) -> Result<()> {
-    fs::create_dir_all(path.parent().context("Missing output directory")?)?;
-    let temp = path.with_extension("json.tmp");
-    fs::write(&temp, sorted_json(value)?)?;
-    fs::rename(temp, path)?;
-    Ok(())
-}
 /// Record when a successful collector completed and bind that timestamp to its exact saved contents.
 pub(super) fn record_collection(config: &Config, kind: &str, since: Option<&str>) -> Result<()> {
     let repo = Path::new(".");
     let root = format!("data/{}_{}", config.org, config.repo);
     let state = state(repo, &read_working(repo, &root, kind)?, kind)?;
-    atomic(
+    snapshots::save(
         &repo.join(metadata_path(&root, kind)),
         &Collection {
             schema_version: 1,
@@ -391,7 +384,7 @@ pub fn run(config: &Config) -> Result<()> {
         &root,
         &format!("{}/{}", config.org, config.repo),
     )?;
-    atomic(
+    snapshots::save(
         &Path::new(&root).join("backlog-history/latest.json"),
         &snapshot,
     )?;
@@ -564,7 +557,7 @@ mod tests {
             coverage: "full".into(),
             fingerprint: state.fingerprint,
         };
-        atomic(&f.0.join(metadata_path(root, "issues")), &metadata).unwrap();
+        snapshots::save(&f.0.join(metadata_path(root, "issues")), &metadata).unwrap();
         let history = build(&f.0, root, "example/repo").unwrap();
         let point = history.series["issues"].last().unwrap();
         assert_eq!(point.date_basis, "collected");
@@ -595,7 +588,7 @@ mod tests {
             coverage: "incremental".into(),
             fingerprint: state.fingerprint,
         };
-        atomic(&f.0.join(metadata_path(root, "issues")), &metadata).unwrap();
+        snapshots::save(&f.0.join(metadata_path(root, "issues")), &metadata).unwrap();
         f.commit("2026-11-08T13:00:00Z");
         f.write(
             &file,
