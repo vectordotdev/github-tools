@@ -371,7 +371,7 @@ fn main() -> Result<()> {
             fetch_labels::run(&config)
         }
         Command::FetchIssues { repo, env_file, since } => {
-            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
+            let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_issues::run(&config, since.as_deref())?;
             save_backlog_history::run(&config)
         }
@@ -380,11 +380,11 @@ fn main() -> Result<()> {
             fetch_pr_interest::run(&config)
         }
         Command::FetchIssueInterest { repo, env_file } => {
-            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
+            let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_issue_interest::run(&config)
         }
         Command::FetchDiscussions { repo, env_file, since } => {
-            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
+            let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_discussions::run(&config, since.as_deref())?;
             save_backlog_history::run(&config)
         }
@@ -393,7 +393,7 @@ fn main() -> Result<()> {
             build_db::run(&input, &config)
         }
         Command::AutomatedReviewStats { repo, env_file, bot_login, since, full_refresh } => {
-            let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
+            let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_automated_review_stats::run(&config, bot_login.as_deref(), since.as_deref(), full_refresh)
         }
         Command::Compact { dir } => compact::run(&dir),

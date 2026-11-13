@@ -138,7 +138,16 @@ fn request_checked(
     } else {
         "gh"
     };
-    let mut child = Command::new(executable)
+    request_gh(Command::new(executable), query, variables, allow_missing_accounts)
+}
+
+fn request_gh(
+    mut command: Command,
+    query: &str,
+    variables: Value,
+    allow_missing_accounts: bool,
+) -> Result<Value> {
+    let mut child = command
         .args(["api", "graphql", "--hostname", "github.com", "--input", "-"])
         .stdin(Stdio::piped())
         .stdout(Stdio::piped())
@@ -465,6 +474,39 @@ pub(super) mod test_support {
 mod tests {
     use super::test_support::{Server, client, config, ok, page as fixture_page};
     use super::*;
+
+    #[test]
+    #[cfg(unix)]
+    fn gh_transport_preserves_variables_and_rejects_partial_or_failed_responses() {
+        let dir = super::test_support::TempDir::new();
+        let path = dir.path().join("request.json");
+        let fixture = |response: &str, code: u8| {
+            let mut command = Command::new("/bin/sh");
+            command.env_clear().args([
+                "-c",
+                "cat > \"$GH_FIXTURE_REQUEST\"; printf '%s' \"$GH_FIXTURE_RESPONSE\"; exit \"$GH_FIXTURE_EXIT\"",
+            ]);
+            command.env("GH_FIXTURE_REQUEST", &path)
+                .env("GH_FIXTURE_RESPONSE", response)
+                .env("GH_FIXTURE_EXIT", code.to_string());
+            command
+        };
+        let query = "query($after: String) { viewer { login } }";
+        let variables = json!({"after":"cursor-with-\"quotes\"\nand-newline"});
+        assert_eq!(
+            request_gh(fixture(r#"{"data":{"viewer":{"login":"example"}}}"#, 0), query, variables.clone(), false).unwrap(),
+            json!({"viewer":{"login":"example"}})
+        );
+        let saved: Value = serde_json::from_slice(&std::fs::read(&path).unwrap()).unwrap();
+        assert_eq!(saved, json!({"query":query,"variables":variables}));
+        for (response, code) in [
+            (r#"{"data":{"viewer":{"login":"example"}}}"#, 1),
+            (r#"{"data":{"viewer":null},"errors":[{"type":"FORBIDDEN"}]}"#, 0),
+            ("malformed-json", 0),
+        ] {
+            assert!(request_gh(fixture(response, code), query, json!({}), false).is_err());
+        }
+    }
 
     #[test]
     fn missing_account_lookups_are_unknown_but_partial_and_transport_errors_still_fail() {

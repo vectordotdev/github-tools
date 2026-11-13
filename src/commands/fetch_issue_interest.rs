@@ -1,4 +1,5 @@
 use super::{
+    graphql_fetch,
     interest::{Commenters, Engagement},
     snapshots,
 };
@@ -154,6 +155,9 @@ pub fn collect(
 pub fn run(config: &Config) -> Result<()> {
     let client = Client::new();
     let snapshot = collect(config, |query, variables| {
+        if config.github_token.is_empty() {
+            return graphql_fetch::request_authenticated(&client, config, query, variables);
+        }
         let response: Value = client
             .post("https://api.github.com/graphql")
             .bearer_auth(&config.github_token)

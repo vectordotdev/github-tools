@@ -265,8 +265,9 @@ fn collect(
                 .get(format!("a{i}"))
                 .context("Missing historical account lookup")?
                 .clone();
-            // Bot logins are not RepositoryOwner objects; retain known bot identities.
-            let value = if value.is_null()
+            // A bot login can also name an organization, such as dependabot.
+            // Neither owner lookup replaces the known bot identity in saved PRs.
+            let value = if (value.is_null() || value["__typename"] == "Organization")
                 && (login.ends_with("[bot]")
                     || [
                         "dependabot",
@@ -453,6 +454,36 @@ mod tests {
             .is_err()
         );
         assert!(access(&config(),&mut |_,_|Ok(json!({"repository":{"collaborators":{"edges":[{"node":{"id":"1","login":"person"},"permission":"NEW_ROLE"}],"pageInfo":{"hasNextPage":false,"endCursor":null}}}}))).is_err());
+    }
+
+    #[test]
+    fn historical_bot_identity_survives_a_same_named_organization_lookup() {
+        let saved = vec![Saved {
+            date: "2026-01-01T00:00:00Z".to_owned(),
+            revision: "a".repeat(40),
+            authors: Some(vec![
+                json!({"login":"dependabot"}),
+                json!({"login":"example-org"}),
+                Value::Null,
+            ]),
+        }];
+        let result = collect(&config(), &saved, |q, _| {
+            if q.contains("collaborators") {
+                Ok(json!({"repository":{"collaborators":{"edges":[],"pageInfo":{"hasNextPage":false,"endCursor":null}}}}))
+            } else if q.contains("pullRequests") {
+                Ok(json!({"repository":{"pullRequests":page(vec![],None)}}))
+            } else {
+                assert!(q.contains("repositoryOwner(login:\"dependabot\")"));
+                Ok(json!({
+                    "a0":{"__typename":"Organization","login":"dependabot"},
+                    "a1":{"__typename":"Organization","login":"example-org"}
+                }))
+            }
+        }).unwrap();
+        assert_eq!(
+            result.points[0].counts,
+            Some(Counts { team: 0, community: 0, bots: 1, unknown: 2 })
+        );
     }
 
     #[test]

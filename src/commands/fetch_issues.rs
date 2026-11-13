@@ -131,7 +131,7 @@ pub fn run_with_client(client: &Client, config: &Config, since: Option<&str>) ->
         .join(format!("{}_{}", config.org, config.repo))
         .join("issues");
     run_with_request(config, since, &out_dir, |query, variables| {
-        graphql_fetch::request(client, config, query, variables)
+        graphql_fetch::request_authenticated(client, config, query, variables)
     })?;
     super::save_backlog_history::record_collection(config, "issues", since)
 }

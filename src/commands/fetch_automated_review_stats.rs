@@ -159,6 +159,14 @@ fn root(config: &Config) -> PathBuf {
 }
 
 fn query(client: &Client, config: &Config, query: &str, variables: Value) -> Result<Value> {
+    if config.github_token.is_empty() {
+        return super::graphql_fetch::request_authenticated(
+            client,
+            config,
+            &query.replace("COMMENT_FIELDS", COMMENT_FIELDS),
+            variables,
+        );
+    }
     let response = client.post("https://api.github.com/graphql")
         .bearer_auth(&config.github_token)
         .header("User-Agent", "github-tools")
