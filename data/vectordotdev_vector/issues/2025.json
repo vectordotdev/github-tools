@@ -744,7 +744,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-11T19:30:43Z",
     "created_at": "2025-01-08T22:51:40Z",
     "id": 2776493651,
     "issue_type": "Bug",
@@ -757,9 +757,9 @@
       }
     ],
     "number": 22145,
-    "state": "open",
+    "state": "closed",
     "title": "Secrets in commented-out lines in vector.toml cause config validation to fail",
-    "updated_at": "2026-02-21T20:42:13Z",
+    "updated_at": "2026-11-11T19:30:43Z",
     "user": {
       "login": "chradcliffe"
     }
@@ -5341,7 +5341,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(kubernetes_logs source): Wire up acknowledgement support via existing file ack support",
-    "updated_at": "2026-03-16T14:24:36Z",
+    "updated_at": "2026-11-12T14:42:54Z",
     "user": {
       "login": "ganelo"
     }
@@ -19736,7 +19736,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-12T21:24:17Z",
     "created_at": "2025-05-22T07:19:37Z",
     "id": 3082329417,
     "issue_type": "Bug",
@@ -19749,9 +19749,9 @@
       }
     ],
     "number": 23091,
-    "state": "open",
+    "state": "closed",
     "title": "log_to_metric in all_metrics mode dropping integer-valued metrics",
-    "updated_at": "2026-05-29T23:26:22Z",
+    "updated_at": "2026-11-12T21:24:17Z",
     "user": {
       "login": null
     }
@@ -22692,15 +22692,15 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-12T17:14:57Z",
     "created_at": "2025-06-22T01:10:57Z",
     "id": 3165558314,
     "issue_type": "Bug",
     "labels": [],
     "number": 23243,
-    "state": "open",
+    "state": "closed",
     "title": "vector tap panics on broken pipe",
-    "updated_at": "2026-05-29T23:26:37Z",
+    "updated_at": "2026-11-12T17:14:57Z",
     "user": {
       "login": "lopopolo"
     }
@@ -26887,7 +26887,7 @@
     "number": 23421,
     "state": "open",
     "title": "possibility to enable or disable force lowercase for labels on loki sink",
-    "updated_at": "2026-05-30T00:13:17Z",
+    "updated_at": "2026-11-13T12:53:37Z",
     "user": {
       "login": "lat1992"
     }
@@ -40672,7 +40672,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(kubernetes_logs source) support k8s API based logs ",
-    "updated_at": "2026-10-31T18:28:58Z",
+    "updated_at": "2026-11-09T15:55:27Z",
     "user": {
       "login": "titaneric"
     }

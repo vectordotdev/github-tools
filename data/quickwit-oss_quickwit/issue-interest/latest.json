@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-09T14:46:45.093736+00:00",
+  "collectedAt": "2026-11-13T15:01:21.011097+00:00",
   "issues": [
     {
       "number": 103,
@@ -4772,6 +4772,13 @@
       "number": 7004,
       "reactions": 0,
       "title": "[bug] Indexing split cache eviction blocks merge fetches while deleting splits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 7006,
+      "reactions": 0,
+      "title": "0.9.3: `(A OR B) AND (id:x OR id:y OR id:z)` silently drops matching documents (tantivy BufferedUnion `seek_danger`, fixed on main, not released)",
       "unattributedComments": 0,
       "uniqueCommenters": 0
     }

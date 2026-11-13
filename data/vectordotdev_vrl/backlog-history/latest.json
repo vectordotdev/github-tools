@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T18:49:37.575220+00:00",
+  "generatedAt": "2026-11-13T14:59:05.927735+00:00",
   "repository": "vectordotdev/vrl",
   "schemaVersion": 1,
   "series": {
@@ -42,6 +42,22 @@
         "dateBasis": "saved",
         "reason": null,
         "sourceRevision": "1d53b8f58ea77529be93c54840f1210d2c156e6c",
+        "total": 5
+      },
+      {
+        "coverage": null,
+        "date": "2026-11-09T15:18:14+00:00",
+        "dateBasis": "saved",
+        "reason": null,
+        "sourceRevision": "33744b528e6210795a64edb0af036758df79b4e9",
+        "total": 5
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-13T14:58:46.789210+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
         "total": 5
       }
     ],
@@ -101,6 +117,22 @@
         "reason": null,
         "sourceRevision": "a40a7040f18a58f7bc150a6b1389c2b653d8213c",
         "total": 258
+      },
+      {
+        "coverage": null,
+        "date": "2026-11-09T15:18:14+00:00",
+        "dateBasis": "saved",
+        "reason": null,
+        "sourceRevision": "33744b528e6210795a64edb0af036758df79b4e9",
+        "total": 256
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-13T14:58:44.109331+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 256
       }
     ],
     "prs": [
@@ -159,6 +191,22 @@
         "reason": null,
         "sourceRevision": "a40a7040f18a58f7bc150a6b1389c2b653d8213c",
         "total": 31
+      },
+      {
+        "coverage": null,
+        "date": "2026-11-09T15:18:14+00:00",
+        "dateBasis": "saved",
+        "reason": null,
+        "sourceRevision": "33744b528e6210795a64edb0af036758df79b4e9",
+        "total": 29
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-13T14:58:44.109331+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 27
       }
     ]
   }

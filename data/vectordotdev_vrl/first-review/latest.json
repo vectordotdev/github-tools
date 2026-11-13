@@ -1,9 +1,9 @@
 {
-  "collectedAt": "2026-11-09T14:45:23.848579+00:00",
+  "collectedAt": "2026-11-13T14:59:16.874787+00:00",
   "excludedAwaitingAuthorPrs": 8,
-  "excludedBotPrs": 1,
-  "excludedDrafts": 12,
-  "openPrs": 41,
+  "excludedBotPrs": 0,
+  "excludedDrafts": 13,
+  "openPrs": 40,
   "prs": [
     {
       "createdAt": "2026-01-27T15:59:53+00:00",
@@ -57,19 +57,13 @@
       "createdAt": "2026-10-31T17:17:21+00:00",
       "number": 2032,
       "title": "enhancement(compiler): cache structurally-constant object literals",
-      "updatedAt": "2026-11-07T12:45:48+00:00"
+      "updatedAt": "2026-11-13T14:31:27+00:00"
     },
     {
       "createdAt": "2026-11-02T12:50:32+00:00",
       "number": 2036,
       "title": "enhancement(stdlib): accept an array of formats in parse_timestamp",
       "updatedAt": "2026-11-04T01:36:33+00:00"
-    },
-    {
-      "createdAt": "2026-11-03T11:47:56+00:00",
-      "number": 2037,
-      "title": "enhancement(stdlib): fold constant `get` value arguments at compile time",
-      "updatedAt": "2026-11-07T11:52:06+00:00"
     }
   ],
   "repository": "vectordotdev/vrl",

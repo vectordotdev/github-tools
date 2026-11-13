@@ -1,8 +1,8 @@
 {
-  "collectedAt": "2026-11-09T14:46:49.605043+00:00",
+  "collectedAt": "2026-11-13T15:01:36.240742+00:00",
   "excludedAwaitingAuthorPrs": 0,
-  "excludedBotPrs": 3,
-  "excludedDrafts": 46,
+  "excludedBotPrs": 2,
+  "excludedDrafts": 43,
   "openPrs": 181,
   "prs": [
     {
@@ -261,13 +261,13 @@
       "createdAt": "2026-09-08T03:37:02+00:00",
       "number": 6778,
       "title": "do not prune intermediate aggregation results at the root",
-      "updatedAt": "2026-10-22T22:47:10+00:00"
+      "updatedAt": "2026-11-13T02:08:39+00:00"
     },
     {
       "createdAt": "2026-09-08T04:30:08+00:00",
       "number": 6779,
       "title": "reduce the multipart part size on the opendal backends",
-      "updatedAt": "2026-10-22T22:47:08+00:00"
+      "updatedAt": "2026-11-13T02:36:11+00:00"
     },
     {
       "createdAt": "2026-09-09T10:16:36+00:00",
@@ -378,12 +378,6 @@
       "updatedAt": "2026-10-22T22:44:39+00:00"
     },
     {
-      "createdAt": "2026-10-09T15:21:52+00:00",
-      "number": 6895,
-      "title": "Refactor out legacy parts of ingest controller",
-      "updatedAt": "2026-10-22T22:44:38+00:00"
-    },
-    {
       "createdAt": "2026-10-09T17:49:24+00:00",
       "number": 6896,
       "title": "Process indexing tasks from new RPC",
@@ -405,7 +399,7 @@
       "createdAt": "2026-10-12T11:49:32+00:00",
       "number": 6901,
       "title": "Cache regex and wildcard hitsets during warmup",
-      "updatedAt": "2026-10-22T22:44:29+00:00"
+      "updatedAt": "2026-11-13T14:50:58+00:00"
     },
     {
       "createdAt": "2026-10-17T19:46:49+00:00",
@@ -462,6 +456,12 @@
       "updatedAt": "2026-11-02T14:31:04+00:00"
     },
     {
+      "createdAt": "2026-11-02T15:57:36+00:00",
+      "number": 6982,
+      "title": "Add best effort actor priority and make IndexSerializer high priority",
+      "updatedAt": "2026-11-10T13:29:31+00:00"
+    },
+    {
       "createdAt": "2026-11-03T10:22:56+00:00",
       "number": 6984,
       "title": "fix: start shard publication tracking on every ingest router node",
@@ -474,20 +474,20 @@
       "updatedAt": "2026-11-06T15:15:57+00:00"
     },
     {
-      "createdAt": "2026-11-06T20:11:13+00:00",
-      "number": 6999,
-      "title": "fix(config): compile VRL transforms on source writes, not on reads",
-      "updatedAt": "2026-11-06T20:28:53+00:00"
+      "createdAt": "2026-11-11T22:48:03+00:00",
+      "number": 7010,
+      "title": "Disable mmap dir fsync for indexers and compactors",
+      "updatedAt": "2026-11-11T23:12:38+00:00"
     },
     {
-      "createdAt": "2026-11-09T02:49:37+00:00",
-      "number": 7001,
-      "title": "Fix retention scheduling after index recreation",
-      "updatedAt": "2026-11-09T06:45:16+00:00"
+      "createdAt": "2026-11-13T09:01:37+00:00",
+      "number": 7011,
+      "title": "Validate metastore configs when loading node config",
+      "updatedAt": "2026-11-13T09:06:48+00:00"
     }
   ],
   "repository": "quickwit-oss/quickwit",
-  "reviewedPrs": 52,
+  "reviewedPrs": 56,
   "schemaVersion": 1,
   "unknownPrs": 0
 }

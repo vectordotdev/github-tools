@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T18:50:10.910442+00:00",
+  "generatedAt": "2026-11-13T15:01:02.153397+00:00",
   "repository": "quickwit-oss/quickwit",
   "schemaVersion": 1,
   "series": {
@@ -42,6 +42,14 @@
         "dateBasis": "saved",
         "reason": null,
         "sourceRevision": "1d53b8f58ea77529be93c54840f1210d2c156e6c",
+        "total": 12
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-13T15:00:29.513263+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
         "total": 12
       }
     ],
@@ -125,6 +133,22 @@
         "reason": null,
         "sourceRevision": "a40a7040f18a58f7bc150a6b1389c2b653d8213c",
         "total": 678
+      },
+      {
+        "coverage": null,
+        "date": "2026-11-09T15:18:14+00:00",
+        "dateBasis": "saved",
+        "reason": null,
+        "sourceRevision": "33744b528e6210795a64edb0af036758df79b4e9",
+        "total": 682
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-13T15:00:26.119322+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 683
       }
     ],
     "prs": [
@@ -207,6 +231,22 @@
         "reason": null,
         "sourceRevision": "a40a7040f18a58f7bc150a6b1389c2b653d8213c",
         "total": 144
+      },
+      {
+        "coverage": null,
+        "date": "2026-11-09T15:18:14+00:00",
+        "dateBasis": "saved",
+        "reason": null,
+        "sourceRevision": "33744b528e6210795a64edb0af036758df79b4e9",
+        "total": 136
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-13T15:00:26.119322+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 139
       }
     ]
   }

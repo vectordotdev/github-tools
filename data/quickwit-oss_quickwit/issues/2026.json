@@ -11987,7 +11987,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(storage): add per-bucket S3 configuration via storage.s3.buckets",
-    "updated_at": "2026-10-23T06:44:09Z",
+    "updated_at": "2026-11-12T08:24:04Z",
     "user": {
       "login": "papaharry"
     }
@@ -19040,7 +19040,7 @@
     "pull_request": {},
     "state": "open",
     "title": "do not prune intermediate aggregation results at the root",
-    "updated_at": "2026-10-22T22:47:10Z",
+    "updated_at": "2026-11-13T02:08:39Z",
     "user": {
       "login": "DeviousCardi"
     }
@@ -19069,7 +19069,7 @@
     "pull_request": {},
     "state": "open",
     "title": "reduce the multipart part size on the opendal backends",
-    "updated_at": "2026-10-22T22:47:08Z",
+    "updated_at": "2026-11-13T02:36:11Z",
     "user": {
       "login": "DeviousCardi"
     }
@@ -20023,7 +20023,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Spread indexing pipelines behind an environment variable",
-    "updated_at": "2026-10-27T10:09:10Z",
+    "updated_at": "2026-11-10T15:35:57Z",
     "user": {
       "login": "loutPhilipps"
     }
@@ -22086,7 +22086,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Optimize HitSet seeking and counting",
-    "updated_at": "2026-10-22T22:44:51Z",
+    "updated_at": "2026-11-13T14:54:56Z",
     "user": {
       "login": "PSeitz"
     }
@@ -22351,7 +22351,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Refactor out legacy parts of ingest controller",
-    "updated_at": "2026-10-22T22:44:38Z",
+    "updated_at": "2026-11-09T16:48:15Z",
     "user": {
       "login": "nadav-govari"
     }
@@ -22530,7 +22530,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Cache regex and wildcard hitsets during warmup",
-    "updated_at": "2026-10-22T22:44:29Z",
+    "updated_at": "2026-11-13T14:50:58Z",
     "user": {
       "login": "PSeitz"
     }
@@ -23308,7 +23308,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Restore anonymous usage telemetry",
-    "updated_at": "2026-11-06T15:24:47Z",
+    "updated_at": "2026-11-12T19:55:16Z",
     "user": {
       "login": "dayaffe"
     }
@@ -24274,7 +24274,7 @@
   {
     "closed_at": null,
     "created_at": "2026-10-29T16:36:52Z",
-    "draft": true,
+    "draft": false,
     "id": 5071897325,
     "issue_type": null,
     "labels": [
@@ -24283,6 +24283,12 @@
         "description": "S3, GCS, Azure and local storage",
         "id": 1907476925564528387,
         "name": "area:storage"
+      },
+      {
+        "color": "0e8a16",
+        "description": "A new capability, such as an endpoint, query type, source, setting or command",
+        "id": 2190467787450955896,
+        "name": "type:feature"
       },
       {
         "color": "a2eeef",
@@ -24301,7 +24307,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Use Feuer Disk-Cache",
-    "updated_at": "2026-11-09T14:23:26Z",
+    "updated_at": "2026-11-13T12:59:26Z",
     "user": {
       "login": "PSeitz"
     }
@@ -24336,7 +24342,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Two phase commit init shards",
-    "updated_at": "2026-11-06T20:08:24Z",
+    "updated_at": "2026-11-09T17:20:44Z",
     "user": {
       "login": "nadav-govari"
     }
@@ -24556,7 +24562,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-10T18:49:41Z",
     "created_at": "2026-11-01T22:14:45Z",
     "draft": false,
     "id": 5112104598,
@@ -24577,9 +24583,9 @@
     ],
     "number": 6971,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump sea-query from 0.32.7 to 1.0.2 in /quickwit",
-    "updated_at": "2026-11-05T19:19:59Z",
+    "updated_at": "2026-11-10T18:49:42Z",
     "user": {
       "login": "dependabot"
     }
@@ -24765,7 +24771,7 @@
     "pull_request": {},
     "state": "open",
     "title": "build(deps): bump vrl from 0.37.0 to 0.38.0 in /quickwit",
-    "updated_at": "2026-11-05T19:23:28Z",
+    "updated_at": "2026-11-11T14:05:37Z",
     "user": {
       "login": "dependabot"
     }
@@ -24888,7 +24894,7 @@
   {
     "closed_at": null,
     "created_at": "2026-11-02T15:57:36Z",
-    "draft": true,
+    "draft": false,
     "id": 5123277509,
     "issue_type": null,
     "labels": [
@@ -24915,7 +24921,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Add best effort actor priority and make IndexSerializer high priority",
-    "updated_at": "2026-11-03T16:49:42Z",
+    "updated_at": "2026-11-10T13:29:31Z",
     "user": {
       "login": "fulmicoton-dd"
     }
@@ -25014,7 +25020,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Fix OOM - Streaming Coalescing in Quickwit ",
-    "updated_at": "2026-11-06T18:01:12Z",
+    "updated_at": "2026-11-13T09:53:22Z",
     "user": {
       "login": "PSeitz"
     }
@@ -25150,15 +25156,28 @@
   {
     "closed_at": null,
     "created_at": "2026-11-05T13:32:45Z",
-    "draft": true,
+    "draft": false,
     "id": 5172409037,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
     "number": 6990,
     "pull_request": {},
     "state": "open",
     "title": "Enforce the warmup memory limit while warmup data is downloaded",
-    "updated_at": "2026-11-09T10:24:32Z",
+    "updated_at": "2026-11-10T14:04:02Z",
     "user": {
       "login": "fulmicoton-dd"
     }
@@ -25238,7 +25257,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Do not retry splits that ran out of warmup memory",
-    "updated_at": "2026-11-09T10:24:33Z",
+    "updated_at": "2026-11-10T15:55:13Z",
     "user": {
       "login": "fulmicoton-dd"
     }
@@ -25308,7 +25327,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Build optimizations- reduce dependencies, better proto compilation",
-    "updated_at": "2026-11-05T23:34:36Z",
+    "updated_at": "2026-11-09T17:07:09Z",
     "user": {
       "login": "nadav-govari"
     }
@@ -25330,7 +25349,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-10T09:39:26Z",
     "created_at": "2026-11-06T16:08:29Z",
     "draft": false,
     "id": 5190821077,
@@ -25351,9 +25370,9 @@
     ],
     "number": 6997,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Give x10 memory to queries starting by ?* as well",
-    "updated_at": "2026-11-08T11:52:28Z",
+    "updated_at": "2026-11-10T09:39:27Z",
     "user": {
       "login": "loutPhilipps"
     }
@@ -25388,7 +25407,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-10T16:15:12Z",
     "created_at": "2026-11-06T20:11:13Z",
     "draft": false,
     "id": 5193946389,
@@ -25415,9 +25434,9 @@
     ],
     "number": 6999,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix(config): compile VRL transforms on source writes, not on reads",
-    "updated_at": "2026-11-06T20:28:53Z",
+    "updated_at": "2026-11-10T16:15:15Z",
     "user": {
       "login": "dayaffe"
     }
@@ -25473,7 +25492,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Fix retention scheduling after index recreation",
-    "updated_at": "2026-11-09T06:45:16Z",
+    "updated_at": "2026-11-13T10:03:41Z",
     "user": {
       "login": "honganan"
     }
@@ -25574,17 +25593,219 @@
   {
     "closed_at": null,
     "created_at": "2026-11-09T10:07:13Z",
-    "draft": true,
+    "draft": false,
     "id": 5222139584,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "0e8a16",
+        "description": "A new capability, such as an endpoint, query type, source, setting or command",
+        "id": 2190467787450955896,
+        "name": "type:feature"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      },
+      {
+        "color": "e99695",
+        "description": "APIs, config, metrics or data formats change incompatibly",
+        "id": 3124399196811027651,
+        "name": "meta:breaking-change"
+      }
+    ],
     "number": 7005,
     "pull_request": {},
     "state": "open",
     "title": "Add a per-split warmup memory limit",
-    "updated_at": "2026-11-09T10:24:33Z",
+    "updated_at": "2026-11-10T15:41:30Z",
     "user": {
       "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-10T14:24:03Z",
+    "id": 6308793157,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      },
+      {
+        "color": "c5def5",
+        "description": "Query language, ES query DSL, aggregations",
+        "id": 6561393434152843714,
+        "name": "area:query"
+      },
+      {
+        "color": "fbca04",
+        "description": "The bot labeled it and no maintainer has confirmed yet",
+        "id": 6665141372089049609,
+        "name": "needs-triage"
+      }
+    ],
+    "number": 7006,
+    "state": "open",
+    "title": "0.9.3: `(A OR B) AND (id:x OR id:y OR id:z)` silently drops matching documents (tantivy BufferedUnion `seek_danger`, fixed on main, not released)",
+    "updated_at": "2026-11-10T14:24:14Z",
+    "user": {
+      "login": "VaHughes"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-10T16:15:25Z",
+    "draft": true,
+    "id": 5244721465,
+    "issue_type": null,
+    "labels": [],
+    "number": 7007,
+    "pull_request": {},
+    "state": "open",
+    "title": "Cap shard scale-up by indexing CPU capacity",
+    "updated_at": "2026-11-10T16:15:25Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-11-10T22:37:34Z",
+    "created_at": "2026-11-10T21:29:57Z",
+    "draft": false,
+    "id": 5249235272,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "CI, test infrastructure, dev environment",
+        "id": 4984374509985217181,
+        "name": "area:ci"
+      }
+    ],
+    "number": 7008,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update Rust to 1.99",
+    "updated_at": "2026-11-10T22:37:37Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-11-10T23:03:51Z",
+    "created_at": "2026-11-10T22:00:45Z",
+    "draft": false,
+    "id": 5249666860,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Kafka, Kinesis, Pulsar, SQS, Pub/Sub and file sources",
+        "id": 6819608011975247486,
+        "name": "area:sources"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      }
+    ],
+    "number": 7009,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Log suggest truncate message delays",
+    "updated_at": "2026-11-10T23:03:53Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-11T22:48:03Z",
+    "draft": false,
+    "id": 5267937026,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d4c5f9",
+        "description": "Speed, memory or cost is the point. Added on top of the code areas",
+        "id": 798951655199625886,
+        "name": "area:performance"
+      },
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      }
+    ],
+    "number": 7010,
+    "pull_request": {},
+    "state": "open",
+    "title": "Disable mmap dir fsync for indexers and compactors",
+    "updated_at": "2026-11-11T23:12:38Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-13T09:01:37Z",
+    "draft": false,
+    "id": 5292904348,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Metastore, migrations, retention, garbage collection, delete tasks",
+        "id": 6611180433184842639,
+        "name": "area:metastore"
+      },
+      {
+        "color": "e99695",
+        "description": "APIs, config, metrics or data formats change incompatibly",
+        "id": 3124399196811027651,
+        "name": "meta:breaking-change"
+      }
+    ],
+    "number": 7011,
+    "pull_request": {},
+    "state": "open",
+    "title": "Validate metastore configs when loading node config",
+    "updated_at": "2026-11-13T09:06:48Z",
+    "user": {
+      "login": "shuheiktgw"
     }
   }
 ]

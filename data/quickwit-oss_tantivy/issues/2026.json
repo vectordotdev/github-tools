@@ -4192,7 +4192,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Replace unmaintained rust-stemmers with frostem",
-    "updated_at": "2026-08-06T09:23:04Z",
+    "updated_at": "2026-11-11T14:41:43Z",
     "user": {
       "login": "Xuanwo"
     }
@@ -7292,7 +7292,7 @@
     "pull_request": {},
     "state": "open",
     "title": "snippet: match document tokens against query terms exactly",
-    "updated_at": "2026-10-22T13:54:10Z",
+    "updated_at": "2026-11-13T11:15:53Z",
     "user": {
       "login": "knowack1"
     }
@@ -7801,7 +7801,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Fix numeric cardinality keys across segments",
-    "updated_at": "2026-11-02T16:54:06Z",
+    "updated_at": "2026-11-09T17:19:51Z",
     "user": {
       "login": "hakarrr"
     }
@@ -7859,7 +7859,7 @@
     "number": 3238,
     "state": "open",
     "title": "Phrase-prefix and unbounded fast-field range scorers ignore boosts",
-    "updated_at": "2026-11-03T18:58:22Z",
+    "updated_at": "2026-11-13T11:50:59Z",
     "user": {
       "login": "kylebernhardy"
     }
@@ -8122,6 +8122,146 @@
     "updated_at": "2026-11-09T03:09:03Z",
     "user": {
       "login": "wsxiaoys"
+    }
+  },
+  {
+    "closed_at": "2026-11-10T20:29:40Z",
+    "created_at": "2026-11-10T16:52:47Z",
+    "draft": false,
+    "id": 5245285508,
+    "issue_type": null,
+    "labels": [],
+    "number": 3254,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Avoid copying blocks in docstore reader with `Decompressor::None`",
+    "updated_at": "2026-11-10T20:29:43Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-11T22:20:16Z",
+    "draft": false,
+    "id": 5267625778,
+    "issue_type": null,
+    "labels": [],
+    "number": 3255,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add ability to disable fsync when using `MmapDirectory`",
+    "updated_at": "2026-11-11T23:05:46Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-12T10:07:54Z",
+    "id": 6347467674,
+    "issue_type": null,
+    "labels": [],
+    "number": 3256,
+    "state": "open",
+    "title": "PhrasePrefixQuery ignores the Bm25StatisticsProvider passed via EnableScoring",
+    "updated_at": "2026-11-12T14:27:21Z",
+    "user": {
+      "login": "ztorchan"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-12T12:02:03Z",
+    "draft": false,
+    "id": 5277018908,
+    "issue_type": null,
+    "labels": [],
+    "number": 3257,
+    "pull_request": {},
+    "state": "open",
+    "title": "Apply the registered raw analyzer to raw fast fields",
+    "updated_at": "2026-11-12T12:08:00Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-12T14:38:00Z",
+    "draft": false,
+    "id": 5279363594,
+    "issue_type": null,
+    "labels": [],
+    "number": 3258,
+    "pull_request": {},
+    "state": "open",
+    "title": "Use injected BM25 statistics in PhrasePrefixQuery",
+    "updated_at": "2026-11-12T14:39:58Z",
+    "user": {
+      "login": "0xamlab"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-13T08:47:12Z",
+    "id": 6367994422,
+    "issue_type": null,
+    "labels": [],
+    "number": 3259,
+    "state": "open",
+    "title": "SnippetGenerator highlights terms from negated (`MustNot`) clauses",
+    "updated_at": "2026-11-13T08:47:12Z",
+    "user": {
+      "login": "knowack1"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-13T10:50:58Z",
+    "draft": false,
+    "id": 5294183862,
+    "issue_type": null,
+    "labels": [],
+    "number": 3260,
+    "pull_request": {},
+    "state": "open",
+    "title": "Do not highlight terms of negated clauses in snippets",
+    "updated_at": "2026-11-13T10:52:43Z",
+    "user": {
+      "login": "LeeYudok"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-13T11:24:58Z",
+    "draft": false,
+    "id": 5294619842,
+    "issue_type": null,
+    "labels": [],
+    "number": 3261,
+    "pull_request": {},
+    "state": "open",
+    "title": "Replace read coalescing with batch reads",
+    "updated_at": "2026-11-13T11:29:24Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-13T12:22:41Z",
+    "draft": false,
+    "id": 5295393794,
+    "issue_type": null,
+    "labels": [],
+    "number": 3262,
+    "pull_request": {},
+    "state": "open",
+    "title": "Fix ignored boosts in phrase-prefix and unbounded range scorers",
+    "updated_at": "2026-11-13T12:26:13Z",
+    "user": {
+      "login": "akasakariko"
     }
   }
 ]

@@ -1,7 +1,7 @@
 {
-  "collectedAt": "2026-11-12T14:59:59.298359+00:00",
+  "collectedAt": "2026-11-13T15:01:29.986009+00:00",
   "excludedDrafts": 43,
-  "openPrs": 180,
+  "openPrs": 181,
   "prs": [
     {
       "linkedIssues": [],
@@ -913,7 +913,7 @@
       "title": "do not prune intermediate aggregation results at the root",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-22T22:47:10+00:00"
+      "updatedAt": "2026-11-13T02:08:39+00:00"
     },
     {
       "linkedIssues": [
@@ -932,7 +932,7 @@
       "title": "reduce the multipart part size on the opendal backends",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-22T22:47:08+00:00"
+      "updatedAt": "2026-11-13T02:36:11+00:00"
     },
     {
       "linkedIssues": [],
@@ -1213,11 +1213,11 @@
     {
       "linkedIssues": [],
       "number": 6885,
-      "reactions": 2,
+      "reactions": 1,
       "title": "Optimize HitSet seeking and counting",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-22T22:44:51+00:00"
+      "updatedAt": "2026-11-13T14:54:56+00:00"
     },
     {
       "linkedIssues": [],
@@ -1317,7 +1317,7 @@
       "title": "Cache regex and wildcard hitsets during warmup",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-22T22:44:29+00:00"
+      "updatedAt": "2026-11-13T14:50:58+00:00"
     },
     {
       "linkedIssues": [],
@@ -1400,7 +1400,7 @@
       "title": "Restore anonymous usage telemetry",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-09T19:24:02+00:00"
+      "updatedAt": "2026-11-12T19:55:16+00:00"
     },
     {
       "linkedIssues": [
@@ -1493,7 +1493,7 @@
       "title": "Use Feuer Disk-Cache",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T10:22:14+00:00"
+      "updatedAt": "2026-11-13T12:59:26+00:00"
     },
     {
       "linkedIssues": [],
@@ -1614,7 +1614,7 @@
       "title": "Fix retention scheduling after index recreation",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-11T07:41:37+00:00"
+      "updatedAt": "2026-11-13T10:03:41+00:00"
     },
     {
       "linkedIssues": [],
@@ -1633,6 +1633,15 @@
       "unattributedComments": 0,
       "uniqueCommenters": 1,
       "updatedAt": "2026-11-11T23:12:38+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7011,
+      "reactions": 1,
+      "title": "Validate metastore configs when loading node config",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-13T09:06:48+00:00"
     }
   ],
   "repository": "quickwit-oss/quickwit",
