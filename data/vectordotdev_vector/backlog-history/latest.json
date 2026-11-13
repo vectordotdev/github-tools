@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T18:49:29.965411+00:00",
+  "generatedAt": "2026-11-13T14:55:03.276524+00:00",
   "repository": "vectordotdev/vector",
   "schemaVersion": 1,
   "series": {
@@ -58,6 +58,22 @@
         "dateBasis": "saved",
         "reason": null,
         "sourceRevision": "1d53b8f58ea77529be93c54840f1210d2c156e6c",
+        "total": 31
+      },
+      {
+        "coverage": null,
+        "date": "2026-11-09T15:18:14+00:00",
+        "dateBasis": "saved",
+        "reason": null,
+        "sourceRevision": "33744b528e6210795a64edb0af036758df79b4e9",
+        "total": 31
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-13T14:54:45.216655+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
         "total": 31
       }
     ],
@@ -133,6 +149,22 @@
         "reason": null,
         "sourceRevision": "308d53d146b1e4c14329044b5b07cecb9470d4c1",
         "total": 2095
+      },
+      {
+        "coverage": null,
+        "date": "2026-11-09T15:18:14+00:00",
+        "dateBasis": "saved",
+        "reason": null,
+        "sourceRevision": "33744b528e6210795a64edb0af036758df79b4e9",
+        "total": 2100
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-13T14:53:42.619406+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 2093
       }
     ],
     "prs": [
@@ -207,6 +239,22 @@
         "reason": null,
         "sourceRevision": "308d53d146b1e4c14329044b5b07cecb9470d4c1",
         "total": 355
+      },
+      {
+        "coverage": null,
+        "date": "2026-11-09T15:18:14+00:00",
+        "dateBasis": "saved",
+        "reason": null,
+        "sourceRevision": "33744b528e6210795a64edb0af036758df79b4e9",
+        "total": 353
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-13T14:53:42.619406+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 361
       }
     ]
   }

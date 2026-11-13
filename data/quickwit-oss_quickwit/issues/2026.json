@@ -1010,7 +1010,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix: Support datetime with timezone and with millis",
-    "updated_at": "2026-10-22T22:59:10Z",
+    "updated_at": "2026-11-04T18:12:24Z",
     "user": {
       "login": "Darkheir"
     }
@@ -11987,7 +11987,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(storage): add per-bucket S3 configuration via storage.s3.buckets",
-    "updated_at": "2026-10-23T06:44:09Z",
+    "updated_at": "2026-11-12T08:24:04Z",
     "user": {
       "login": "papaharry"
     }
@@ -14060,7 +14060,7 @@
     "pull_request": {},
     "state": "open",
     "title": "ingest: batch WAL truncation in the shard-positions gossip handler",
-    "updated_at": "2026-10-22T22:50:14Z",
+    "updated_at": "2026-11-04T18:12:31Z",
     "user": {
       "login": "aanufriev-celonis"
     }
@@ -15922,7 +15922,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix: sovereign Azure storage token scopes for managed identity",
-    "updated_at": "2026-10-22T22:49:04Z",
+    "updated_at": "2026-11-04T18:12:40Z",
     "user": {
       "login": "deenkar"
     }
@@ -16464,7 +16464,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(storage): re-read the Azure federated token file on every exchange",
-    "updated_at": "2026-10-22T22:48:46Z",
+    "updated_at": "2026-11-04T18:12:46Z",
     "user": {
       "login": "siva-abstract-security"
     }
@@ -16666,7 +16666,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Migrate Azure blob storage to azure_storage_blob 1.0.0",
-    "updated_at": "2026-10-22T22:48:37Z",
+    "updated_at": "2026-11-04T18:12:52Z",
     "user": {
       "login": "siva-abstract-security"
     }
@@ -18134,7 +18134,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix: ignore null objects",
-    "updated_at": "2026-10-22T22:47:48Z",
+    "updated_at": "2026-11-04T18:12:58Z",
     "user": {
       "login": "cemremengu"
     }
@@ -19040,7 +19040,7 @@
     "pull_request": {},
     "state": "open",
     "title": "do not prune intermediate aggregation results at the root",
-    "updated_at": "2026-10-22T22:47:10Z",
+    "updated_at": "2026-11-13T02:08:39Z",
     "user": {
       "login": "DeviousCardi"
     }
@@ -19069,7 +19069,7 @@
     "pull_request": {},
     "state": "open",
     "title": "reduce the multipart part size on the opendal backends",
-    "updated_at": "2026-10-22T22:47:08Z",
+    "updated_at": "2026-11-13T02:36:11Z",
     "user": {
       "login": "DeviousCardi"
     }
@@ -20023,7 +20023,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Spread indexing pipelines behind an environment variable",
-    "updated_at": "2026-10-27T10:09:10Z",
+    "updated_at": "2026-11-10T15:35:57Z",
     "user": {
       "login": "loutPhilipps"
     }
@@ -20107,7 +20107,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(datetime): parse `e` as the ISO day-of-week, Monday is 1",
-    "updated_at": "2026-10-22T22:46:22Z",
+    "updated_at": "2026-11-04T18:13:06Z",
     "user": {
       "login": "rawsun007"
     }
@@ -20937,7 +20937,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Add Parquet bulk load to `quickwit tool local-ingest`",
-    "updated_at": "2026-11-02T11:32:33Z",
+    "updated_at": "2026-11-03T09:19:51Z",
     "user": {
       "login": "fmassot"
     }
@@ -20989,7 +20989,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(metastore): do not hold the state guard across a lazy index load",
-    "updated_at": "2026-10-22T22:45:44Z",
+    "updated_at": "2026-11-04T18:13:11Z",
     "user": {
       "login": "aayushbaluni"
     }
@@ -21016,7 +21016,7 @@
     "number": 6846,
     "state": "open",
     "title": "[bug] ingest v2: `ShardPositionsUpdate` has no publisher on nodes without the indexer or control-plane role",
-    "updated_at": "2026-10-22T22:43:33Z",
+    "updated_at": "2026-11-03T10:23:00Z",
     "user": {
       "login": "YZL0v3ZZ"
     }
@@ -21144,7 +21144,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(ingest): do not track a persist that appended no record",
-    "updated_at": "2026-10-22T22:45:36Z",
+    "updated_at": "2026-11-04T18:13:17Z",
     "user": {
       "login": "aayushbaluni"
     }
@@ -21510,7 +21510,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(ingest): Report sources without open shards in ingester persist responses",
-    "updated_at": "2026-10-22T22:45:15Z",
+    "updated_at": "2026-11-04T18:13:23Z",
     "user": {
       "login": "dayaffe"
     }
@@ -21644,7 +21644,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Wait for uploader tasks before actor shutdown",
-    "updated_at": "2026-10-22T22:45:07Z",
+    "updated_at": "2026-11-04T18:13:28Z",
     "user": {
       "login": "fmassot"
     }
@@ -22086,7 +22086,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Optimize HitSet seeking and counting",
-    "updated_at": "2026-10-22T22:44:51Z",
+    "updated_at": "2026-11-13T14:54:56Z",
     "user": {
       "login": "PSeitz"
     }
@@ -22225,7 +22225,7 @@
     "pull_request": {},
     "state": "open",
     "title": "IndexerStateReporter task",
-    "updated_at": "2026-10-22T22:44:43Z",
+    "updated_at": "2026-11-02T16:35:49Z",
     "user": {
       "login": "nadav-govari"
     }
@@ -22351,7 +22351,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Refactor out legacy parts of ingest controller",
-    "updated_at": "2026-10-22T22:44:38Z",
+    "updated_at": "2026-11-09T16:48:15Z",
     "user": {
       "login": "nadav-govari"
     }
@@ -22530,7 +22530,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Cache regex and wildcard hitsets during warmup",
-    "updated_at": "2026-10-22T22:44:29Z",
+    "updated_at": "2026-11-13T14:50:58Z",
     "user": {
       "login": "PSeitz"
     }
@@ -22757,7 +22757,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Migrate Azure blob storage to the 1.0 Azure SDK",
-    "updated_at": "2026-10-29T20:25:05Z",
+    "updated_at": "2026-11-04T18:13:37Z",
     "user": {
       "login": "dayaffe"
     }
@@ -22792,7 +22792,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-06T16:55:26Z",
     "created_at": "2026-10-19T20:51:31Z",
     "draft": false,
     "id": 4927256937,
@@ -22825,9 +22825,9 @@
     ],
     "number": 6912,
     "pull_request": {},
-    "state": "open",
-    "title": "Limit decompressed body size",
-    "updated_at": "2026-10-22T22:44:11Z",
+    "state": "closed",
+    "title": "Limit request body sizes on ingest endpoints",
+    "updated_at": "2026-11-06T16:55:28Z",
     "user": {
       "login": "guilload"
     }
@@ -22835,7 +22835,7 @@
   {
     "closed_at": null,
     "created_at": "2026-10-20T08:19:00Z",
-    "draft": false,
+    "draft": true,
     "id": 4933010713,
     "issue_type": null,
     "labels": [
@@ -22861,8 +22861,8 @@
     "number": 6913,
     "pull_request": {},
     "state": "open",
-    "title": "feat(indexing): measure pipeline stage durations and waits",
-    "updated_at": "2026-10-22T22:44:09Z",
+    "title": "Actor metrics",
+    "updated_at": "2026-11-05T07:17:40Z",
     "user": {
       "login": "PSeitz"
     }
@@ -23250,7 +23250,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Track live heap bytes through the global allocator",
-    "updated_at": "2026-10-26T09:04:34Z",
+    "updated_at": "2026-11-03T15:44:00Z",
     "user": {
       "login": "PSeitz"
     }
@@ -23308,7 +23308,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Restore anonymous usage telemetry",
-    "updated_at": "2026-10-30T15:57:31Z",
+    "updated_at": "2026-11-12T19:55:16Z",
     "user": {
       "login": "dayaffe"
     }
@@ -23587,7 +23587,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-06T14:28:36Z",
     "created_at": "2026-10-23T18:03:51Z",
     "draft": false,
     "id": 4987165493,
@@ -23608,9 +23608,9 @@
     ],
     "number": 6940,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump google-cloud-gax from 0.19.2 to 1.15.0 in /quickwit in the google-cloud group across 1 directory",
-    "updated_at": "2026-11-01T22:15:39Z",
+    "updated_at": "2026-11-06T14:28:38Z",
     "user": {
       "login": "dependabot"
     }
@@ -23912,7 +23912,7 @@
     "pull_request": {},
     "state": "open",
     "title": "build(deps): bump the npm-dependencies group across 1 directory with 31 updates",
-    "updated_at": "2026-11-01T22:26:41Z",
+    "updated_at": "2026-11-04T20:46:54Z",
     "user": {
       "login": "dependabot"
     }
@@ -23953,7 +23953,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T15:57:10Z",
     "created_at": "2026-10-23T18:37:00Z",
     "draft": false,
     "id": 4987582120,
@@ -23974,9 +23974,9 @@
     ],
     "number": 6952,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump the pip group across 3 directories with 3 updates",
-    "updated_at": "2026-10-23T18:38:25Z",
+    "updated_at": "2026-11-05T15:57:12Z",
     "user": {
       "login": "dependabot"
     }
@@ -24040,7 +24040,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Refactor pipeline schedule",
-    "updated_at": "2026-10-27T16:19:59Z",
+    "updated_at": "2026-11-06T15:19:25Z",
     "user": {
       "login": "loutPhilipps"
     }
@@ -24274,7 +24274,7 @@
   {
     "closed_at": null,
     "created_at": "2026-10-29T16:36:52Z",
-    "draft": true,
+    "draft": false,
     "id": 5071897325,
     "issue_type": null,
     "labels": [
@@ -24283,6 +24283,12 @@
         "description": "S3, GCS, Azure and local storage",
         "id": 1907476925564528387,
         "name": "area:storage"
+      },
+      {
+        "color": "0e8a16",
+        "description": "A new capability, such as an endpoint, query type, source, setting or command",
+        "id": 2190467787450955896,
+        "name": "type:feature"
       },
       {
         "color": "a2eeef",
@@ -24301,7 +24307,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Use Feuer Disk-Cache",
-    "updated_at": "2026-11-02T10:57:46Z",
+    "updated_at": "2026-11-13T12:59:26Z",
     "user": {
       "login": "PSeitz"
     }
@@ -24336,7 +24342,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Two phase commit init shards",
-    "updated_at": "2026-10-30T16:07:24Z",
+    "updated_at": "2026-11-09T17:20:44Z",
     "user": {
       "login": "nadav-govari"
     }
@@ -24424,7 +24430,7 @@
   {
     "closed_at": null,
     "created_at": "2026-10-31T10:42:23Z",
-    "draft": false,
+    "draft": true,
     "id": 5096793504,
     "issue_type": null,
     "labels": [
@@ -24451,13 +24457,13 @@
     "pull_request": {},
     "state": "open",
     "title": "Fold serialization and packaging into the Indexer",
-    "updated_at": "2026-11-02T09:45:36Z",
+    "updated_at": "2026-11-03T16:41:57Z",
     "user": {
       "login": "PSeitz"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T15:14:36Z",
     "created_at": "2026-11-01T22:11:56Z",
     "draft": false,
     "id": 5112082616,
@@ -24484,15 +24490,15 @@
     ],
     "number": 6968,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump node from `e3ffe0c` to `6d2c7d5`",
-    "updated_at": "2026-11-01T22:13:39Z",
+    "updated_at": "2026-11-02T15:14:39Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T15:21:48Z",
     "created_at": "2026-11-01T22:11:59Z",
     "draft": false,
     "id": 5112083049,
@@ -24519,15 +24525,15 @@
     ],
     "number": 6969,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump debian from `7ff6ba3` to `99c0b25`",
-    "updated_at": "2026-11-01T22:13:47Z",
+    "updated_at": "2026-11-02T15:21:50Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T21:26:52Z",
     "created_at": "2026-11-01T22:14:09Z",
     "draft": false,
     "id": 5112100182,
@@ -24548,15 +24554,15 @@
     ],
     "number": 6970,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump the aws group in /quickwit with 4 updates",
-    "updated_at": "2026-11-01T22:16:14Z",
+    "updated_at": "2026-11-03T21:26:55Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-10T18:49:41Z",
     "created_at": "2026-11-01T22:14:45Z",
     "draft": false,
     "id": 5112104598,
@@ -24577,15 +24583,15 @@
     ],
     "number": 6971,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump sea-query from 0.32.7 to 1.0.2 in /quickwit",
-    "updated_at": "2026-11-01T22:19:37Z",
+    "updated_at": "2026-11-10T18:49:42Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T21:10:35Z",
     "created_at": "2026-11-01T22:15:00Z",
     "draft": false,
     "id": 5112106418,
@@ -24606,15 +24612,15 @@
     ],
     "number": 6972,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump lambda_runtime from 1.4.0 to 1.5.0 in /quickwit",
-    "updated_at": "2026-11-01T22:16:52Z",
+    "updated_at": "2026-11-03T21:10:37Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T19:36:35Z",
     "created_at": "2026-11-01T22:15:15Z",
     "draft": false,
     "id": 5112108294,
@@ -24635,15 +24641,15 @@
     ],
     "number": 6973,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump sysinfo from 0.39.6 to 0.40.1 in /quickwit",
-    "updated_at": "2026-11-01T22:17:22Z",
+    "updated_at": "2026-11-05T19:36:37Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T15:39:01Z",
     "created_at": "2026-11-01T22:15:27Z",
     "draft": false,
     "id": 5112109945,
@@ -24664,15 +24670,15 @@
     ],
     "number": 6974,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump ureq from 3.4.2 to 3.5.0 in /quickwit",
-    "updated_at": "2026-11-01T22:18:31Z",
+    "updated_at": "2026-11-05T15:39:03Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-03T21:10:34Z",
     "created_at": "2026-11-01T22:15:56Z",
     "draft": false,
     "id": 5112113708,
@@ -24693,15 +24699,15 @@
     ],
     "number": 6975,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump uuid from 1.28.0 to 1.29.0 in /quickwit",
-    "updated_at": "2026-11-01T22:17:33Z",
+    "updated_at": "2026-11-03T21:10:36Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T15:38:32Z",
     "created_at": "2026-11-01T22:16:05Z",
     "draft": false,
     "id": 5112114787,
@@ -24728,9 +24734,9 @@
     ],
     "number": 6976,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump the github-actions group with 3 updates",
-    "updated_at": "2026-11-01T22:17:25Z",
+    "updated_at": "2026-11-02T15:38:34Z",
     "user": {
       "login": "dependabot"
     }
@@ -24753,19 +24759,25 @@
         "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
         "id": 3198312636878800864,
         "name": "type:chore"
+      },
+      {
+        "color": "e99695",
+        "description": "APIs, config, metrics or data formats change incompatibly",
+        "id": 3124399196811027651,
+        "name": "meta:breaking-change"
       }
     ],
     "number": 6977,
     "pull_request": {},
     "state": "open",
     "title": "build(deps): bump vrl from 0.37.0 to 0.38.0 in /quickwit",
-    "updated_at": "2026-11-01T22:20:03Z",
+    "updated_at": "2026-11-11T14:05:37Z",
     "user": {
       "login": "dependabot"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-02T16:55:31Z",
     "created_at": "2026-11-02T14:15:47Z",
     "draft": false,
     "id": 5121765898,
@@ -24792,9 +24804,9 @@
     ],
     "number": 6978,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Enable gossip protocol V1 by default",
-    "updated_at": "2026-11-02T14:20:31Z",
+    "updated_at": "2026-11-02T16:55:31Z",
     "user": {
       "login": "Platane"
     }
@@ -24826,6 +24838,974 @@
     "updated_at": "2026-11-02T14:31:04Z",
     "user": {
       "login": "dawidthecactus"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-02T15:24:12Z",
+    "draft": true,
+    "id": 5122786698,
+    "issue_type": null,
+    "labels": [],
+    "number": 6980,
+    "pull_request": {},
+    "state": "open",
+    "title": "(Calculated fields) Allow aggregations on calculated fields (refresh of #6905)",
+    "updated_at": "2026-11-02T15:57:11Z",
+    "user": {
+      "login": "Mallets"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T15:02:19Z",
+    "created_at": "2026-11-02T15:40:07Z",
+    "draft": false,
+    "id": 5123018269,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Added by Dependabot",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "c5def5",
+        "description": "Web UI",
+        "id": 3269640562008226985,
+        "name": "area:ui"
+      },
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      }
+    ],
+    "number": 6981,
+    "pull_request": {},
+    "state": "closed",
+    "title": "build(deps): bump follow-redirects from 1.16.1 to 1.16.2 in /quickwit/quickwit-ui in the npm-security group across 1 directory",
+    "updated_at": "2026-11-03T15:02:22Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-02T15:57:36Z",
+    "draft": false,
+    "id": 5123277509,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0e8a16",
+        "description": "A new capability, such as an endpoint, query type, source, setting or command",
+        "id": 2190467787450955896,
+        "name": "type:feature"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      },
+      {
+        "color": "c5def5",
+        "description": "Server layer, CLI, config, actors, shared crates",
+        "id": 4255442775243768848,
+        "name": "area:core"
+      }
+    ],
+    "number": 6982,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add best effort actor priority and make IndexSerializer high priority",
+    "updated_at": "2026-11-10T13:29:31Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-11-03T11:09:00Z",
+    "created_at": "2026-11-02T22:01:11Z",
+    "draft": false,
+    "id": 5128115042,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0e8a16",
+        "description": "A new capability, such as an endpoint, query type, source, setting or command",
+        "id": 2190467787450955896,
+        "name": "type:feature"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      },
+      {
+        "color": "c5def5",
+        "description": "Quickwit's own metrics, logs and traces",
+        "id": 6990182148964070640,
+        "name": "area:instrumentation"
+      }
+    ],
+    "number": 6983,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add query source to search and resource-usage logs",
+    "updated_at": "2026-11-03T11:09:02Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T10:22:56Z",
+    "draft": false,
+    "id": 5135566597,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Ingest API, Ingest V2, WAL, shards, _bulk writes",
+        "id": 7540669830975836018,
+        "name": "area:ingest"
+      }
+    ],
+    "number": 6984,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix: start shard publication tracking on every ingest router node",
+    "updated_at": "2026-11-04T18:14:02Z",
+    "user": {
+      "login": "mvanhorn"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T11:29:50Z",
+    "draft": true,
+    "id": 5136442138,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "S3, GCS, Azure and local storage",
+        "id": 1907476925564528387,
+        "name": "area:storage"
+      },
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
+    "number": 6985,
+    "pull_request": {},
+    "state": "open",
+    "title": "Fix OOM - Streaming Coalescing in Quickwit ",
+    "updated_at": "2026-11-13T09:53:22Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T19:49:41Z",
+    "created_at": "2026-11-04T23:25:37Z",
+    "draft": false,
+    "id": 5163284880,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Quickwit's own metrics, logs and traces",
+        "id": 6990182148964070640,
+        "name": "area:instrumentation"
+      },
+      {
+        "color": "c5def5",
+        "description": "Server layer, CLI, config, actors, shared crates",
+        "id": 4255442775243768848,
+        "name": "area:core"
+      }
+    ],
+    "number": 6986,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add additional Tokio metrics",
+    "updated_at": "2026-11-06T19:49:42Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T01:19:35Z",
+    "created_at": "2026-11-04T23:59:28Z",
+    "draft": false,
+    "id": 5163622912,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Server layer, CLI, config, actors, shared crates",
+        "id": 4255442775243768848,
+        "name": "area:core"
+      }
+    ],
+    "number": 6987,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Override tokio runtimes num threads via env vars",
+    "updated_at": "2026-11-05T01:19:37Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T12:33:12Z",
+    "created_at": "2026-11-05T09:45:59Z",
+    "draft": false,
+    "id": 5169452642,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
+    "number": 6988,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Move warmup memory accounting to a shared atomic",
+    "updated_at": "2026-11-06T12:33:16Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T13:27:19Z",
+    "created_at": "2026-11-05T13:19:33Z",
+    "draft": false,
+    "id": 5172229110,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "S3, GCS, Azure and local storage",
+        "id": 1907476925564528387,
+        "name": "area:storage"
+      },
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
+    "number": 6989,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Move compute_index_size to HotDirectory::num_bytes_without_doc_store",
+    "updated_at": "2026-11-05T13:27:22Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T13:32:45Z",
+    "draft": false,
+    "id": 5172409037,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
+    "number": 6990,
+    "pull_request": {},
+    "state": "open",
+    "title": "Enforce the warmup memory limit while warmup data is downloaded",
+    "updated_at": "2026-11-10T14:04:02Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T18:20:32Z",
+    "created_at": "2026-11-05T15:28:39Z",
+    "draft": false,
+    "id": 5174130071,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      }
+    ],
+    "number": 6991,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Make Packager::process_indexed_split synchronous",
+    "updated_at": "2026-11-05T18:20:35Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T17:50:56Z",
+    "draft": false,
+    "id": 5176123285,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "S3, GCS, Azure and local storage",
+        "id": 1907476925564528387,
+        "name": "area:storage"
+      },
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Metastore, migrations, retention, garbage collection, delete tasks",
+        "id": 6611180433184842639,
+        "name": "area:metastore"
+      }
+    ],
+    "number": 6992,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(storage): stop repeating the error source in Display",
+    "updated_at": "2026-11-06T15:15:57Z",
+    "user": {
+      "login": "CloudCorpRecords"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T18:06:21Z",
+    "draft": true,
+    "id": 5176328315,
+    "issue_type": null,
+    "labels": [],
+    "number": 6993,
+    "pull_request": {},
+    "state": "open",
+    "title": "Do not retry splits that ran out of warmup memory",
+    "updated_at": "2026-11-10T15:55:13Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T13:44:30Z",
+    "created_at": "2026-11-05T18:24:48Z",
+    "draft": false,
+    "id": 5176566742,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      },
+      {
+        "color": "c5def5",
+        "description": "Query language, ES query DSL, aggregations",
+        "id": 6561393434152843714,
+        "name": "area:query"
+      }
+    ],
+    "number": 6994,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Log query features in root_resource_stats",
+    "updated_at": "2026-11-06T13:44:31Z",
+    "user": {
+      "login": "Abdul-Andha"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T18:46:54Z",
+    "draft": false,
+    "id": 5176877833,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "Server layer, CLI, config, actors, shared crates",
+        "id": 4255442775243768848,
+        "name": "area:core"
+      },
+      {
+        "color": "c5def5",
+        "description": "CI, test infrastructure, dev environment",
+        "id": 4984374509985217181,
+        "name": "area:ci"
+      }
+    ],
+    "number": 6995,
+    "pull_request": {},
+    "state": "open",
+    "title": "Build optimizations- reduce dependencies, better proto compilation",
+    "updated_at": "2026-11-09T17:07:09Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T17:11:29Z",
+    "created_at": "2026-11-06T13:54:33Z",
+    "draft": true,
+    "id": 5188880889,
+    "issue_type": null,
+    "labels": [],
+    "number": 6996,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Add doc_target_reached label to published split metrics",
+    "updated_at": "2026-11-06T17:11:29Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": "2026-11-10T09:39:26Z",
+    "created_at": "2026-11-06T16:08:29Z",
+    "draft": false,
+    "id": 5190821077,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
+    "number": 6997,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Give x10 memory to queries starting by ?* as well",
+    "updated_at": "2026-11-10T09:39:27Z",
+    "user": {
+      "login": "loutPhilipps"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T16:50:19Z",
+    "created_at": "2026-11-06T16:20:20Z",
+    "draft": false,
+    "id": 5190992848,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "CI, test infrastructure, dev environment",
+        "id": 4984374509985217181,
+        "name": "area:ci"
+      }
+    ],
+    "number": 6998,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): retry commit status updates on transient API errors",
+    "updated_at": "2026-11-06T16:50:20Z",
+    "user": {
+      "login": "dayaffe"
+    }
+  },
+  {
+    "closed_at": "2026-11-10T16:15:12Z",
+    "created_at": "2026-11-06T20:11:13Z",
+    "draft": false,
+    "id": 5193946389,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Kafka, Kinesis, Pulsar, SQS, Pub/Sub and file sources",
+        "id": 6819608011975247486,
+        "name": "area:sources"
+      },
+      {
+        "color": "c5def5",
+        "description": "Metastore, migrations, retention, garbage collection, delete tasks",
+        "id": 6611180433184842639,
+        "name": "area:metastore"
+      }
+    ],
+    "number": 6999,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(config): compile VRL transforms on source writes, not on reads",
+    "updated_at": "2026-11-10T16:15:15Z",
+    "user": {
+      "login": "dayaffe"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-09T02:48:29Z",
+    "id": 6278956588,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "Metastore, migrations, retention, garbage collection, delete tasks",
+        "id": 6611180433184842639,
+        "name": "area:metastore"
+      },
+      {
+        "color": "fbca04",
+        "description": "The bot labeled it and no maintainer has confirmed yet",
+        "id": 6665141372089049609,
+        "name": "needs-triage"
+      }
+    ],
+    "number": 7000,
+    "state": "open",
+    "title": "Retention stops after deleting and recreating an index with the same ID",
+    "updated_at": "2026-11-09T02:48:37Z",
+    "user": {
+      "login": "honganan"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-09T02:49:37Z",
+    "draft": false,
+    "id": 5217911153,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Metastore, migrations, retention, garbage collection, delete tasks",
+        "id": 6611180433184842639,
+        "name": "area:metastore"
+      }
+    ],
+    "number": 7001,
+    "pull_request": {},
+    "state": "open",
+    "title": "Fix retention scheduling after index recreation",
+    "updated_at": "2026-11-13T10:03:41Z",
+    "user": {
+      "login": "honganan"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-09T08:13:13Z",
+    "id": 6282419500,
+    "issue_type": "Bug",
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "Metastore, migrations, retention, garbage collection, delete tasks",
+        "id": 6611180433184842639,
+        "name": "area:metastore"
+      },
+      {
+        "color": "fbca04",
+        "description": "The bot labeled it and no maintainer has confirmed yet",
+        "id": 6665141372089049609,
+        "name": "needs-triage"
+      }
+    ],
+    "number": 7002,
+    "state": "open",
+    "title": "[bug] File-backed metastore blocks all reads of an index while writing its metadata",
+    "updated_at": "2026-11-09T08:13:22Z",
+    "user": {
+      "login": "YZL0v3ZZ"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-09T08:32:23Z",
+    "id": 6282676885,
+    "issue_type": "Bug",
+    "labels": [
+      {
+        "color": "d4c5f9",
+        "description": "Speed, memory or cost is the point. Added on top of the code areas",
+        "id": 798951655199625886,
+        "name": "area:performance"
+      },
+      {
+        "color": "c5def5",
+        "description": "Metastore, migrations, retention, garbage collection, delete tasks",
+        "id": 6611180433184842639,
+        "name": "area:metastore"
+      },
+      {
+        "color": "fbca04",
+        "description": "The bot labeled it and no maintainer has confirmed yet",
+        "id": 6665141372089049609,
+        "name": "needs-triage"
+      }
+    ],
+    "number": 7003,
+    "state": "open",
+    "title": "[bug] File-backed metastore blocks index reads during each metadata polling reload",
+    "updated_at": "2026-11-09T08:32:34Z",
+    "user": {
+      "login": "YZL0v3ZZ"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-09T08:52:40Z",
+    "id": 6282948248,
+    "issue_type": "Bug",
+    "labels": [
+      {
+        "color": "d4c5f9",
+        "description": "Speed, memory or cost is the point. Added on top of the code areas",
+        "id": 798951655199625886,
+        "name": "area:performance"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      },
+      {
+        "color": "fbca04",
+        "description": "The bot labeled it and no maintainer has confirmed yet",
+        "id": 6665141372089049609,
+        "name": "needs-triage"
+      }
+    ],
+    "number": 7004,
+    "state": "open",
+    "title": "[bug] Indexing split cache eviction blocks merge fetches while deleting splits",
+    "updated_at": "2026-11-09T11:05:10Z",
+    "user": {
+      "login": "YZL0v3ZZ"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-09T10:07:13Z",
+    "draft": false,
+    "id": 5222139584,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0e8a16",
+        "description": "A new capability, such as an endpoint, query type, source, setting or command",
+        "id": 2190467787450955896,
+        "name": "type:feature"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      },
+      {
+        "color": "e99695",
+        "description": "APIs, config, metrics or data formats change incompatibly",
+        "id": 3124399196811027651,
+        "name": "meta:breaking-change"
+      }
+    ],
+    "number": 7005,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add a per-split warmup memory limit",
+    "updated_at": "2026-11-10T15:41:30Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-10T14:24:03Z",
+    "id": 6308793157,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      },
+      {
+        "color": "c5def5",
+        "description": "Query language, ES query DSL, aggregations",
+        "id": 6561393434152843714,
+        "name": "area:query"
+      },
+      {
+        "color": "fbca04",
+        "description": "The bot labeled it and no maintainer has confirmed yet",
+        "id": 6665141372089049609,
+        "name": "needs-triage"
+      }
+    ],
+    "number": 7006,
+    "state": "open",
+    "title": "0.9.3: `(A OR B) AND (id:x OR id:y OR id:z)` silently drops matching documents (tantivy BufferedUnion `seek_danger`, fixed on main, not released)",
+    "updated_at": "2026-11-10T14:24:14Z",
+    "user": {
+      "login": "VaHughes"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-10T16:15:25Z",
+    "draft": true,
+    "id": 5244721465,
+    "issue_type": null,
+    "labels": [],
+    "number": 7007,
+    "pull_request": {},
+    "state": "open",
+    "title": "Cap shard scale-up by indexing CPU capacity",
+    "updated_at": "2026-11-10T16:15:25Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-11-10T22:37:34Z",
+    "created_at": "2026-11-10T21:29:57Z",
+    "draft": false,
+    "id": 5249235272,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "CI, test infrastructure, dev environment",
+        "id": 4984374509985217181,
+        "name": "area:ci"
+      }
+    ],
+    "number": 7008,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update Rust to 1.99",
+    "updated_at": "2026-11-10T22:37:37Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-11-10T23:03:51Z",
+    "created_at": "2026-11-10T22:00:45Z",
+    "draft": false,
+    "id": 5249666860,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Kafka, Kinesis, Pulsar, SQS, Pub/Sub and file sources",
+        "id": 6819608011975247486,
+        "name": "area:sources"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      }
+    ],
+    "number": 7009,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Log suggest truncate message delays",
+    "updated_at": "2026-11-10T23:03:53Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-11T22:48:03Z",
+    "draft": false,
+    "id": 5267937026,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d4c5f9",
+        "description": "Speed, memory or cost is the point. Added on top of the code areas",
+        "id": 798951655199625886,
+        "name": "area:performance"
+      },
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      }
+    ],
+    "number": 7010,
+    "pull_request": {},
+    "state": "open",
+    "title": "Disable mmap dir fsync for indexers and compactors",
+    "updated_at": "2026-11-11T23:12:38Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-13T09:01:37Z",
+    "draft": false,
+    "id": 5292904348,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Metastore, migrations, retention, garbage collection, delete tasks",
+        "id": 6611180433184842639,
+        "name": "area:metastore"
+      },
+      {
+        "color": "e99695",
+        "description": "APIs, config, metrics or data formats change incompatibly",
+        "id": 3124399196811027651,
+        "name": "meta:breaking-change"
+      }
+    ],
+    "number": 7011,
+    "pull_request": {},
+    "state": "open",
+    "title": "Validate metastore configs when loading node config",
+    "updated_at": "2026-11-13T09:06:48Z",
+    "user": {
+      "login": "shuheiktgw"
     }
   }
 ]

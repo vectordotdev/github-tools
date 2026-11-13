@@ -1,7 +1,7 @@
 {
-  "collectedAt": "2026-11-12T14:59:37.804122+00:00",
-  "excludedDrafts": 120,
-  "openPrs": 482,
+  "collectedAt": "2026-11-13T14:56:36.398282+00:00",
+  "excludedDrafts": 119,
+  "openPrs": 479,
   "prs": [
     {
       "linkedIssues": [],
@@ -981,11 +981,11 @@
     {
       "linkedIssues": [],
       "number": 24563,
-      "reactions": 0,
+      "reactions": 2,
       "title": "docs(codecs): Document the output type of each decoder",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-01-28T18:59:18+00:00"
+      "updatedAt": "2026-11-12T18:04:10+00:00"
     },
     {
       "linkedIssues": [
@@ -1546,7 +1546,7 @@
       "title": "feat(sinks): add dlq logic on sink and support for elasticsearch ",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-03-15T11:28:37+00:00"
+      "updatedAt": "2026-11-12T15:11:43+00:00"
     },
     {
       "linkedIssues": [],
@@ -1675,7 +1675,7 @@
       "title": "feat(new sink): add dedicated syslog sink for RFC 5424/3164 output",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-12T09:17:40+00:00"
+      "updatedAt": "2026-11-12T15:11:30+00:00"
     },
     {
       "linkedIssues": [
@@ -2068,15 +2068,6 @@
     },
     {
       "linkedIssues": [],
-      "number": 25356,
-      "reactions": 0,
-      "title": "feat(config): graduated deprecation policy for removed config fields",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0,
-      "updatedAt": "2026-11-12T14:21:06+00:00"
-    },
-    {
-      "linkedIssues": [],
       "number": 25378,
       "reactions": 0,
       "title": "fix(redis sink): treat PUBLISH with 0 subscribers as success",
@@ -2134,11 +2125,11 @@
         }
       ],
       "number": 25431,
-      "reactions": 1,
+      "reactions": 2,
       "title": "enhancement(performance): udp & unix_datagram batch implementation",
       "unattributedComments": 0,
-      "uniqueCommenters": 3,
-      "updatedAt": "2026-11-12T03:04:53+00:00"
+      "uniqueCommenters": 4,
+      "updatedAt": "2026-11-13T14:13:01+00:00"
     },
     {
       "linkedIssues": [],
@@ -2167,25 +2158,6 @@
       "unattributedComments": 0,
       "uniqueCommenters": 2,
       "updatedAt": "2026-07-13T13:13:35+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 16387,
-          "reactions": 38,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "Include support for GCP authentication via workload identity federation",
-          "unattributedComments": 0,
-          "uniqueCommenters": 11
-        }
-      ],
-      "number": 25454,
-      "reactions": 0,
-      "title": "enhancement(gcp_cloud_storage sink): Add support for OIDC via Workload Identity Federation",
-      "unattributedComments": 0,
-      "uniqueCommenters": 4,
-      "updatedAt": "2026-11-03T16:37:53+00:00"
     },
     {
       "linkedIssues": [
@@ -2607,7 +2579,7 @@
       "title": "docs(website): add kubernetes autoscaling guide",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-06T21:32:46+00:00"
+      "updatedAt": "2026-11-12T19:13:58+00:00"
     },
     {
       "linkedIssues": [],
@@ -2771,7 +2743,7 @@
         }
       ],
       "number": 25810,
-      "reactions": 2,
+      "reactions": 3,
       "title": "fix(windows platform): report SERVICE_STOPPED to SCM when startup fails",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
@@ -2920,11 +2892,11 @@
         }
       ],
       "number": 25939,
-      "reactions": 3,
+      "reactions": 4,
       "title": "feat(clickhouse sink): add extra_query_params for arbitrary ClickHouse settings",
       "unattributedComments": 1,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-06T17:26:28+00:00"
+      "updatedAt": "2026-11-12T20:05:12+00:00"
     },
     {
       "linkedIssues": [],
@@ -3118,7 +3090,7 @@
       "title": "enhancement(sources): add subject_altnames to TLS client metadata",
       "unattributedComments": 0,
       "uniqueCommenters": 4,
-      "updatedAt": "2026-11-11T21:41:40+00:00"
+      "updatedAt": "2026-11-13T13:46:18+00:00"
     },
     {
       "linkedIssues": [
@@ -3151,11 +3123,11 @@
         }
       ],
       "number": 26118,
-      "reactions": 1,
+      "reactions": 3,
       "title": "fix(windows_event_log source): correct wevtapi error codes and re-subscribe on unusable handles",
       "unattributedComments": 0,
       "uniqueCommenters": 5,
-      "updatedAt": "2026-11-05T10:57:08+00:00"
+      "updatedAt": "2026-11-12T22:06:55+00:00"
     },
     {
       "linkedIssues": [
@@ -3304,7 +3276,7 @@
       "title": "feat(codecs): use Protobuf for native JSON",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T14:34:02+00:00"
+      "updatedAt": "2026-11-12T20:25:52+00:00"
     },
     {
       "linkedIssues": [],
@@ -3365,11 +3337,11 @@
         }
       ],
       "number": 26318,
-      "reactions": 4,
+      "reactions": 5,
       "title": "fix(prometheus_remote_write source): skip NaN histogram and summary counts",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-19T03:10:26+00:00"
+      "updatedAt": "2026-11-13T03:12:27+00:00"
     },
     {
       "linkedIssues": [
@@ -3387,8 +3359,8 @@
       "reactions": 1,
       "title": "enhancement(gcp sinks): Add support for Workload Identity Federation via external_account credentials",
       "unattributedComments": 0,
-      "uniqueCommenters": 3,
-      "updatedAt": "2026-11-03T16:39:38+00:00"
+      "uniqueCommenters": 4,
+      "updatedAt": "2026-11-12T18:21:05+00:00"
     },
     {
       "linkedIssues": [
@@ -3682,11 +3654,11 @@
     {
       "linkedIssues": [],
       "number": 26567,
-      "reactions": 2,
+      "reactions": 3,
       "title": "fix(kubernetes_logs): share compatible Kubernetes metadata watches",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-06T12:40:37+00:00"
+      "updatedAt": "2026-11-13T13:13:06+00:00"
     },
     {
       "linkedIssues": [
@@ -3822,11 +3794,11 @@
         }
       ],
       "number": 26647,
-      "reactions": 1,
+      "reactions": 2,
       "title": "fix(buffers): split oversized disk_v2 records instead of dropping all their events",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-13T14:22:53+00:00"
+      "updatedAt": "2026-11-13T09:08:43+00:00"
     },
     {
       "linkedIssues": [
@@ -3999,7 +3971,7 @@
       "linkedIssues": [
         {
           "number": 26772,
-          "reactions": 0,
+          "reactions": 1,
           "repository": "vectordotdev/vector",
           "state": "OPEN",
           "title": "HTTP-based sinks: retry backoff holds a concurrency-limit permit for the entire retry sequence, amplifying the blast radius of transient downstream errors.",
@@ -4008,11 +3980,11 @@
         }
       ],
       "number": 26787,
-      "reactions": 3,
+      "reactions": 2,
       "title": "fix(sinks): release concurrency permit during retry backoff",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-07T04:02:59+00:00"
+      "updatedAt": "2026-11-12T17:46:13+00:00"
     },
     {
       "linkedIssues": [
@@ -4060,15 +4032,6 @@
       "unattributedComments": 0,
       "uniqueCommenters": 1,
       "updatedAt": "2026-11-09T23:51:00+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 26805,
-      "reactions": 2,
-      "title": "docs: consolidate and refresh Vector Rust style guidance",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T14:45:03+00:00"
     },
     {
       "linkedIssues": [
@@ -4293,7 +4256,7 @@
       "title": "fix(gcp_chronicle_unstructured): retry transient errors",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-11T22:17:25+00:00"
+      "updatedAt": "2026-11-13T01:52:59+00:00"
     },
     {
       "linkedIssues": [],
@@ -4335,11 +4298,11 @@
     {
       "linkedIssues": [],
       "number": 26965,
-      "reactions": 2,
+      "reactions": 3,
       "title": "enhancement(sinks): add a zstd window_log compression option",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-02T10:44:02+00:00"
+      "updatedAt": "2026-11-12T19:44:19+00:00"
     },
     {
       "linkedIssues": [
@@ -4358,7 +4321,7 @@
       "title": "fix(sinks): Correct source acknowledgement precedence calculation (#26847)",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T05:31:45+00:00"
+      "updatedAt": "2026-11-12T18:31:44+00:00"
     },
     {
       "linkedIssues": [
@@ -4396,7 +4359,7 @@
       "title": "fix(buffers): flush partial sink batches during disk-buffer shutdown",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-05T15:35:07+00:00"
+      "updatedAt": "2026-11-12T21:14:32+00:00"
     },
     {
       "linkedIssues": [],
@@ -4525,7 +4488,7 @@
       "title": "fix(kafka source): allow null for message_key in schema definition",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-06T16:32:08+00:00"
+      "updatedAt": "2026-11-12T20:35:59+00:00"
     },
     {
       "linkedIssues": [
@@ -4553,7 +4516,7 @@
       "title": "enhancement(datadog_metrics sink): add expire_metrics_secs for series cache TTL",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T06:51:24+00:00"
+      "updatedAt": "2026-11-12T19:44:30+00:00"
     },
     {
       "linkedIssues": [
@@ -4581,7 +4544,7 @@
       "title": "chore(vdev): run e2e capture finalization in the harness",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T14:30:01+00:00"
+      "updatedAt": "2026-11-12T17:28:33+00:00"
     },
     {
       "linkedIssues": [],
@@ -4648,6 +4611,15 @@
       "updatedAt": "2026-11-10T19:43:49+00:00"
     },
     {
+      "linkedIssues": [],
+      "number": 27097,
+      "reactions": 2,
+      "title": "feat(metrics): measure sink CPU usage",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-13T14:55:17+00:00"
+    },
+    {
       "linkedIssues": [
         {
           "number": 26887,
@@ -4668,30 +4640,12 @@
     },
     {
       "linkedIssues": [],
-      "number": 27104,
-      "reactions": 2,
-      "title": "refactor(metrics): inherit component CPU counter in spawned tasks",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T14:46:44+00:00"
-    },
-    {
-      "linkedIssues": [],
       "number": 27106,
       "reactions": 1,
       "title": "fix(topology): wait for upstream components to release a changed disk buffer on reload",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
       "updatedAt": "2026-11-09T21:01:17+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 27111,
-      "reactions": 3,
-      "title": "perf(loki), perf(log_to_metric), perf(template): Compile scalar vrl templates",
-      "unattributedComments": 0,
-      "uniqueCommenters": 3,
-      "updatedAt": "2026-11-12T03:10:45+00:00"
     },
     {
       "linkedIssues": [],
@@ -4741,34 +4695,6 @@
     },
     {
       "linkedIssues": [],
-      "number": 27129,
-      "reactions": 2,
-      "title": "chore(metrics): rename MetricSetSettings max_events to max_series",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T02:49:11+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 16888,
-          "reactions": 2,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "`amqp` sink doesn't support PEM encoded certificates",
-          "unattributedComments": 0,
-          "uniqueCommenters": 0
-        }
-      ],
-      "number": 27130,
-      "reactions": 2,
-      "title": "fix(amqp sink): fix mutual TLS (mTLS) connection authentication (#16888)",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-11T21:22:26+00:00"
-    },
-    {
-      "linkedIssues": [],
       "number": 27133,
       "reactions": 3,
       "title": "enhancement(kubernetes_logs source): batch pod metadata insertion",
@@ -4795,15 +4721,6 @@
       "updatedAt": "2026-11-11T20:30:11+00:00"
     },
     {
-      "linkedIssues": [],
-      "number": 27139,
-      "reactions": 2,
-      "title": "fix(sources): apply the scrape timeout to reading the response body",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-11T22:13:58+00:00"
-    },
-    {
       "linkedIssues": [
         {
           "number": 26938,
@@ -4825,25 +4742,6 @@
     {
       "linkedIssues": [
         {
-          "number": 23091,
-          "reactions": 7,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "log_to_metric in all_metrics mode dropping integer-valued metrics",
-          "unattributedComments": 0,
-          "uniqueCommenters": 0
-        }
-      ],
-      "number": 27142,
-      "reactions": 3,
-      "title": "fix(log_to_metric transform): accept integer values in all_metrics mode",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T12:42:30+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
           "number": 23052,
           "reactions": 0,
           "repository": "vectordotdev/vector",
@@ -4858,7 +4756,7 @@
       "title": "fix(config): detect cycles that do not feed a sink",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T12:42:55+00:00"
+      "updatedAt": "2026-11-12T19:36:32+00:00"
     },
     {
       "linkedIssues": [
@@ -4878,63 +4776,6 @@
       "unattributedComments": 0,
       "uniqueCommenters": 1,
       "updatedAt": "2026-11-12T13:33:15+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 23243,
-          "reactions": 1,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "vector tap panics on broken pipe",
-          "unattributedComments": 0,
-          "uniqueCommenters": 0
-        }
-      ],
-      "number": 27146,
-      "reactions": 3,
-      "title": "fix(tap): stop cleanly when stdout is closed",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T13:37:01+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 19857,
-          "reactions": 0,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "http_client: invalid accept header base on the encoding setting",
-          "unattributedComments": 0,
-          "uniqueCommenters": 2
-        }
-      ],
-      "number": 27147,
-      "reactions": 3,
-      "title": "fix(http_client source): send application/json Accept header for json decoding",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T13:34:22+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 26391,
-          "reactions": 0,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "`abort \"msg\"` reason only preserved with explicit `reroute_dropped: true`",
-          "unattributedComments": 0,
-          "uniqueCommenters": 0
-        }
-      ],
-      "number": 27148,
-      "reactions": 3,
-      "title": "fix(remap transform): log the abort message when an event is aborted",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T14:39:37+00:00"
     },
     {
       "linkedIssues": [],
@@ -4962,16 +4803,117 @@
       "title": "fix(mezmo sink)!: send the event level as the line level",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T13:52:31+00:00"
+      "updatedAt": "2026-11-12T18:06:45+00:00"
     },
     {
       "linkedIssues": [],
-      "number": 27151,
-      "reactions": 3,
-      "title": "refactor(nats, mqtt, pulsar sources): use const for field names",
+      "number": 27155,
+      "reactions": 2,
+      "title": "fix(vector-buffers): report memory buffer byte limits in the correct gauge",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T14:54:08+00:00"
+      "updatedAt": "2026-11-12T17:12:33+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27156,
+      "reactions": 2,
+      "title": "chore(sources): read http client targets on every interval tick",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-13T14:44:34+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 26938,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "`webhdfs` sink permanently drops batches on transient write failures",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 27159,
+      "reactions": 3,
+      "title": "fix(webhdfs sink): retry transient write failures",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-13T01:27:33+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27160,
+      "reactions": 3,
+      "title": "perf(template): cache parsed field paths",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-13T13:23:20+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27161,
+      "reactions": 3,
+      "title": "feat(telemetry): make detailed topology metrics optional",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-13T04:26:57+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27162,
+      "reactions": 3,
+      "title": "feat(opensearch sink): support tls certificate hot-reload for elasticsearch and opensearch sinks",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-13T13:50:00+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 20322,
+          "reactions": 3,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "Tiered buffers on overflow two bugs",
+          "unattributedComments": 0,
+          "uniqueCommenters": 5
+        }
+      ],
+      "number": 27163,
+      "reactions": 3,
+      "title": "fix(buffers): make disk buffer record reads cancel-safe",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-13T11:51:12+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27164,
+      "reactions": 5,
+      "title": "enhancement(loki sink): add expanded_key_case option to keep the case of expanded keys",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-13T13:06:21+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27165,
+      "reactions": 2,
+      "title": "fix(loki sink): keep protobuf timestamp nanos non-negative for pre-epoch events",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-13T13:34:16+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27166,
+      "reactions": 2,
+      "title": "fix(elasticsearch sink): support data stream confinement fallback",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-13T14:56:30+00:00"
     }
   ],
   "repository": "vectordotdev/vector",

@@ -4192,7 +4192,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Replace unmaintained rust-stemmers with frostem",
-    "updated_at": "2026-08-06T09:23:04Z",
+    "updated_at": "2026-11-11T14:41:43Z",
     "user": {
       "login": "Xuanwo"
     }
@@ -7292,7 +7292,7 @@
     "pull_request": {},
     "state": "open",
     "title": "snippet: match document tokens against query terms exactly",
-    "updated_at": "2026-10-22T13:54:10Z",
+    "updated_at": "2026-11-13T11:15:53Z",
     "user": {
       "login": "knowack1"
     }
@@ -7308,7 +7308,7 @@
     "pull_request": {},
     "state": "open",
     "title": "aggregation: charge the term dictionary of computed text sources against the memory limit",
-    "updated_at": "2026-10-22T19:22:01Z",
+    "updated_at": "2026-11-09T14:38:25Z",
     "user": {
       "login": "0xamlab"
     }
@@ -7375,7 +7375,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-05T20:02:44Z",
     "created_at": "2026-10-23T20:04:09Z",
     "draft": false,
     "id": 4988575029,
@@ -7396,9 +7396,9 @@
     ],
     "number": 3209,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Bump github/codeql-action/upload-sarif from 4.36.1 to 4.39.1",
-    "updated_at": "2026-10-23T20:05:20Z",
+    "updated_at": "2026-11-05T20:02:48Z",
     "user": {
       "login": "dependabot"
     }
@@ -7638,7 +7638,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Choose Boolean unions by estimated match density",
-    "updated_at": "2026-10-29T17:47:47Z",
+    "updated_at": "2026-11-04T06:57:16Z",
     "user": {
       "login": "PSeitz"
     }
@@ -7646,7 +7646,7 @@
   {
     "closed_at": null,
     "created_at": "2026-10-29T15:56:32Z",
-    "draft": true,
+    "draft": false,
     "id": 5071315197,
     "issue_type": null,
     "labels": [],
@@ -7654,7 +7654,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Memoize jitexpr value sources per input term ord",
-    "updated_at": "2026-10-30T14:27:12Z",
+    "updated_at": "2026-11-04T12:35:06Z",
     "user": {
       "login": "Mallets"
     }
@@ -7740,7 +7740,7 @@
   {
     "closed_at": null,
     "created_at": "2026-11-01T18:03:46Z",
-    "draft": true,
+    "draft": false,
     "id": 5110067273,
     "issue_type": null,
     "labels": [],
@@ -7748,7 +7748,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Fix conjunction pruning bounds and score accumulation",
-    "updated_at": "2026-11-01T19:19:33Z",
+    "updated_at": "2026-11-03T01:21:14Z",
     "user": {
       "login": "kylebernhardy"
     }
@@ -7758,13 +7758,510 @@
     "created_at": "2026-11-01T20:11:34Z",
     "id": 6151508090,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "fbca04",
+        "description": null,
+        "id": 169050159450115259,
+        "name": "good first issue"
+      }
+    ],
     "number": 3232,
     "state": "open",
     "title": "Switch winapi dependency to windows/windows-sys",
-    "updated_at": "2026-11-01T20:11:34Z",
+    "updated_at": "2026-11-02T16:14:41Z",
     "user": {
       "login": "atouchet"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-02T16:17:50Z",
+    "draft": false,
+    "id": 5123564504,
+    "issue_type": null,
+    "labels": [],
+    "number": 3233,
+    "pull_request": {},
+    "state": "open",
+    "title": "Remove unused winapi dependency",
+    "updated_at": "2026-11-02T16:19:27Z",
+    "user": {
+      "login": "mukesh-dev-git"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-02T16:20:01Z",
+    "draft": false,
+    "id": 5123595863,
+    "issue_type": null,
+    "labels": [],
+    "number": 3234,
+    "pull_request": {},
+    "state": "open",
+    "title": "Fix numeric cardinality keys across segments",
+    "updated_at": "2026-11-09T17:19:51Z",
+    "user": {
+      "login": "hakarrr"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-02T21:37:21Z",
+    "id": 6171448648,
+    "issue_type": null,
+    "labels": [],
+    "number": 3235,
+    "state": "open",
+    "title": "Preserve outer and inner array nullability (`NULL`, `[]`, `[null, ...]`) in `tantivy-columnar`",
+    "updated_at": "2026-11-02T21:37:21Z",
+    "user": {
+      "login": "stuhood"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T03:54:34Z",
+    "draft": false,
+    "id": 5131624451,
+    "issue_type": null,
+    "labels": [],
+    "number": 3236,
+    "pull_request": {},
+    "state": "open",
+    "title": "Fix Block-WAND bounds and JSON conjunction scoring",
+    "updated_at": "2026-11-03T13:45:23Z",
+    "user": {
+      "login": "kylebernhardy"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T18:56:32Z",
+    "id": 6189181219,
+    "issue_type": null,
+    "labels": [],
+    "number": 3237,
+    "state": "open",
+    "title": "BooleanWeight::explain suppresses real errors from matching child weights",
+    "updated_at": "2026-11-03T18:56:32Z",
+    "user": {
+      "login": "kylebernhardy"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T18:58:22Z",
+    "id": 6189209266,
+    "issue_type": null,
+    "labels": [],
+    "number": 3238,
+    "state": "open",
+    "title": "Phrase-prefix and unbounded fast-field range scorers ignore boosts",
+    "updated_at": "2026-11-13T11:50:59Z",
+    "user": {
+      "login": "kylebernhardy"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-03T19:11:24Z",
+    "draft": false,
+    "id": 5143045154,
+    "issue_type": null,
+    "labels": [],
+    "number": 3239,
+    "pull_request": {},
+    "state": "open",
+    "title": "Preserve scorer boost context in explanations",
+    "updated_at": "2026-11-03T23:43:38Z",
+    "user": {
+      "login": "kylebernhardy"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-04T11:05:48Z",
+    "draft": false,
+    "id": 5153164702,
+    "issue_type": null,
+    "labels": [],
+    "number": 3240,
+    "pull_request": {},
+    "state": "open",
+    "title": "Fix collapse_overlapped_ranges docs: adjacent ranges are not merged",
+    "updated_at": "2026-11-04T11:07:02Z",
+    "user": {
+      "login": "LeeYudok"
+    }
+  },
+  {
+    "closed_at": "2026-11-05T17:36:16Z",
+    "created_at": "2026-11-05T13:15:47Z",
+    "draft": false,
+    "id": 5172176824,
+    "issue_type": null,
+    "labels": [],
+    "number": 3241,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Reset BitSet len in clear()",
+    "updated_at": "2026-11-05T17:36:16Z",
+    "user": {
+      "login": "G26karthik"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T14:31:46Z",
+    "draft": false,
+    "id": 5173263610,
+    "issue_type": null,
+    "labels": [],
+    "number": 3242,
+    "pull_request": {},
+    "state": "open",
+    "title": "Accept any whitespace and parentheses after query operators",
+    "updated_at": "2026-11-05T14:35:42Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T19:53:21Z",
+    "draft": false,
+    "id": 5177770203,
+    "issue_type": null,
+    "labels": [],
+    "number": 3243,
+    "pull_request": {},
+    "state": "open",
+    "title": "Return FieldDoesNotExist for query JSON paths containing a nul byte",
+    "updated_at": "2026-11-05T19:55:19Z",
+    "user": {
+      "login": "G26karthik"
+    }
+  },
+  {
+    "closed_at": "2026-11-06T20:02:50Z",
+    "created_at": "2026-11-05T20:02:33Z",
+    "draft": false,
+    "id": 5177886803,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 3397884688459367338,
+        "name": "github_actions"
+      }
+    ],
+    "number": 3244,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Bump github/codeql-action/upload-sarif from 4.36.1 to 4.39.2",
+    "updated_at": "2026-11-06T20:02:54Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-05T20:06:08Z",
+    "id": 6230728960,
+    "issue_type": null,
+    "labels": [],
+    "number": 3245,
+    "state": "open",
+    "title": "Doc store costs 4 bytes per document when the schema has no stored fields",
+    "updated_at": "2026-11-05T20:06:08Z",
+    "user": {
+      "login": "abhigyaan-jha"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T10:11:08Z",
+    "id": 6240770019,
+    "issue_type": null,
+    "labels": [],
+    "number": 3246,
+    "state": "open",
+    "title": "PhraseQuery with a slop above 255 matches terms further apart (u8 carried slop)",
+    "updated_at": "2026-11-06T14:26:37Z",
+    "user": {
+      "login": "fern4lvarez"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T10:11:09Z",
+    "id": 6240770332,
+    "issue_type": null,
+    "labels": [],
+    "number": 3247,
+    "state": "open",
+    "title": "PhraseScorer::seek_danger asserts target >= doc, which Exclude::new violates (debug panic with a phrase under MustNot)",
+    "updated_at": "2026-11-08T11:29:58Z",
+    "user": {
+      "login": "fern4lvarez"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T15:09:21Z",
+    "draft": false,
+    "id": 5189946397,
+    "issue_type": null,
+    "labels": [],
+    "number": 3248,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(query): preserve phrase slop above 255",
+    "updated_at": "2026-11-06T18:21:05Z",
+    "user": {
+      "login": "0xamlab"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-06T20:02:38Z",
+    "draft": false,
+    "id": 5193842695,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0025ff",
+        "description": null,
+        "id": 4576553370448459310,
+        "name": "dependencies"
+      },
+      {
+        "color": "000000",
+        "description": "Pull requests that update GitHub Actions code",
+        "id": 3397884688459367338,
+        "name": "github_actions"
+      }
+    ],
+    "number": 3249,
+    "pull_request": {},
+    "state": "open",
+    "title": "Bump github/codeql-action/upload-sarif from 4.36.1 to 4.39.3",
+    "updated_at": "2026-11-06T20:04:00Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-07T20:08:46Z",
+    "draft": false,
+    "id": 5205396891,
+    "issue_type": null,
+    "labels": [],
+    "number": 3250,
+    "pull_request": {},
+    "state": "open",
+    "title": "Guard against overflow on exclusive IP range bounds",
+    "updated_at": "2026-11-07T20:10:19Z",
+    "user": {
+      "login": "arpitjain099"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-08T11:29:44Z",
+    "draft": false,
+    "id": 5210931211,
+    "issue_type": null,
+    "labels": [],
+    "number": 3251,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(phrase): handle target < doc in PhraseScorer::seek_danger",
+    "updated_at": "2026-11-08T11:32:00Z",
+    "user": {
+      "login": "amitcoder79"
+    }
+  },
+  {
+    "closed_at": "2026-11-09T02:02:17Z",
+    "created_at": "2026-11-09T01:04:28Z",
+    "draft": true,
+    "id": 5217075585,
+    "issue_type": null,
+    "labels": [],
+    "number": 3252,
+    "pull_request": {},
+    "state": "closed",
+    "title": "aggregation: pre-size the term map from the dictionary hint",
+    "updated_at": "2026-11-09T02:02:17Z",
+    "user": {
+      "login": "wsxiaoys"
+    }
+  },
+  {
+    "closed_at": "2026-11-09T03:09:03Z",
+    "created_at": "2026-11-09T02:47:34Z",
+    "draft": false,
+    "id": 5217894555,
+    "issue_type": null,
+    "labels": [],
+    "number": 3253,
+    "pull_request": {},
+    "state": "closed",
+    "title": "perf(aggregation): top-k partition instead of a full sort in the final terms result",
+    "updated_at": "2026-11-09T03:09:03Z",
+    "user": {
+      "login": "wsxiaoys"
+    }
+  },
+  {
+    "closed_at": "2026-11-10T20:29:40Z",
+    "created_at": "2026-11-10T16:52:47Z",
+    "draft": false,
+    "id": 5245285508,
+    "issue_type": null,
+    "labels": [],
+    "number": 3254,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Avoid copying blocks in docstore reader with `Decompressor::None`",
+    "updated_at": "2026-11-10T20:29:43Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-11T22:20:16Z",
+    "draft": false,
+    "id": 5267625778,
+    "issue_type": null,
+    "labels": [],
+    "number": 3255,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add ability to disable fsync when using `MmapDirectory`",
+    "updated_at": "2026-11-11T23:05:46Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-12T10:07:54Z",
+    "id": 6347467674,
+    "issue_type": null,
+    "labels": [],
+    "number": 3256,
+    "state": "open",
+    "title": "PhrasePrefixQuery ignores the Bm25StatisticsProvider passed via EnableScoring",
+    "updated_at": "2026-11-12T14:27:21Z",
+    "user": {
+      "login": "ztorchan"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-12T12:02:03Z",
+    "draft": false,
+    "id": 5277018908,
+    "issue_type": null,
+    "labels": [],
+    "number": 3257,
+    "pull_request": {},
+    "state": "open",
+    "title": "Apply the registered raw analyzer to raw fast fields",
+    "updated_at": "2026-11-12T12:08:00Z",
+    "user": {
+      "login": "rdettai-sk"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-12T14:38:00Z",
+    "draft": false,
+    "id": 5279363594,
+    "issue_type": null,
+    "labels": [],
+    "number": 3258,
+    "pull_request": {},
+    "state": "open",
+    "title": "Use injected BM25 statistics in PhrasePrefixQuery",
+    "updated_at": "2026-11-12T14:39:58Z",
+    "user": {
+      "login": "0xamlab"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-13T08:47:12Z",
+    "id": 6367994422,
+    "issue_type": null,
+    "labels": [],
+    "number": 3259,
+    "state": "open",
+    "title": "SnippetGenerator highlights terms from negated (`MustNot`) clauses",
+    "updated_at": "2026-11-13T08:47:12Z",
+    "user": {
+      "login": "knowack1"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-13T10:50:58Z",
+    "draft": false,
+    "id": 5294183862,
+    "issue_type": null,
+    "labels": [],
+    "number": 3260,
+    "pull_request": {},
+    "state": "open",
+    "title": "Do not highlight terms of negated clauses in snippets",
+    "updated_at": "2026-11-13T10:52:43Z",
+    "user": {
+      "login": "LeeYudok"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-13T11:24:58Z",
+    "draft": false,
+    "id": 5294619842,
+    "issue_type": null,
+    "labels": [],
+    "number": 3261,
+    "pull_request": {},
+    "state": "open",
+    "title": "Replace read coalescing with batch reads",
+    "updated_at": "2026-11-13T11:29:24Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-13T12:22:41Z",
+    "draft": false,
+    "id": 5295393794,
+    "issue_type": null,
+    "labels": [],
+    "number": 3262,
+    "pull_request": {},
+    "state": "open",
+    "title": "Fix ignored boosts in phrase-prefix and unbounded range scorers",
+    "updated_at": "2026-11-13T12:26:13Z",
+    "user": {
+      "login": "akasakariko"
     }
   }
 ]

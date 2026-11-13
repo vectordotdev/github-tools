@@ -470,7 +470,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: try using linkme instead of inventory",
-    "updated_at": "2023-01-05T16:17:34Z",
+    "updated_at": "2026-11-03T23:04:49Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -11511,7 +11511,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "docs: Build rust docs in netlify",
-    "updated_at": "2023-02-10T20:17:40Z",
+    "updated_at": "2026-11-03T23:05:11Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -14141,7 +14141,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(docs): increase logging verbosity for debugging spurious `generate-component-docs` failures",
-    "updated_at": "2023-06-30T23:17:28Z",
+    "updated_at": "2026-11-03T23:05:14Z",
     "user": {
       "login": "tobz"
     }
@@ -14266,7 +14266,7 @@
     "number": 16387,
     "state": "open",
     "title": "Include support for GCP authentication via workload identity federation",
-    "updated_at": "2026-09-08T12:29:05Z",
+    "updated_at": "2026-11-12T18:36:55Z",
     "user": {
       "login": "cahartma"
     }
@@ -16782,7 +16782,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(docs): Fix VRL path docs",
-    "updated_at": "2023-02-23T14:15:00Z",
+    "updated_at": "2026-11-03T23:04:31Z",
     "user": {
       "login": "fuchsnj"
     }
@@ -18571,7 +18571,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.28.0",
-    "updated_at": "2026-03-05T16:10:07Z",
+    "updated_at": "2026-11-03T23:04:55Z",
     "user": {
       "login": "jszwedko"
     }
@@ -19810,7 +19810,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(vdev): Support `TEST_LOG` and add `--no-capture` flag to cargo nextest",
-    "updated_at": "2023-03-02T20:12:08Z",
+    "updated_at": "2026-11-03T23:04:38Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -20666,7 +20666,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.28.1 release",
-    "updated_at": "2026-03-05T16:10:10Z",
+    "updated_at": "2026-11-03T23:04:56Z",
     "user": {
       "login": "jszwedko"
     }
@@ -22143,13 +22143,19 @@
         "description": "Anything related to the vdev tooling",
         "id": 6235798767080406514,
         "name": "domain:vdev"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 16748,
     "pull_request": {},
     "state": "open",
     "title": "chore(vdev): Rewrite package-msi.sh to vdev",
-    "updated_at": "2025-08-20T18:11:45Z",
+    "updated_at": "2026-11-03T16:03:40Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -24527,7 +24533,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(component spec validation tests): validate component_errors_total source metric",
-    "updated_at": "2024-03-14T18:49:43Z",
+    "updated_at": "2026-11-03T23:04:25Z",
     "user": {
       "login": "davidhuie-dd"
     }
@@ -25212,7 +25218,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-12T21:09:49Z",
     "created_at": "2023-03-21T15:22:29Z",
     "id": 1634154817,
     "issue_type": "Bug",
@@ -25225,15 +25231,15 @@
       }
     ],
     "number": 16888,
-    "state": "open",
+    "state": "closed",
     "title": "`amqp` sink doesn't support PEM encoded certificates",
-    "updated_at": "2026-02-21T20:39:44Z",
+    "updated_at": "2026-11-12T21:09:49Z",
     "user": {
       "login": "Fiery-Fenix"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-09T15:24:08Z",
     "created_at": "2023-03-21T15:33:16Z",
     "id": 1634173622,
     "issue_type": "Bug",
@@ -25252,9 +25258,9 @@
       }
     ],
     "number": 16890,
-    "state": "open",
+    "state": "closed",
     "title": "`amqp` sink TLS doesn't work",
-    "updated_at": "2026-02-21T20:39:45Z",
+    "updated_at": "2026-11-09T15:24:08Z",
     "user": {
       "login": "Fiery-Fenix"
     }
@@ -25835,7 +25841,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(ci): Try out using CodeCov for differential PR coverage",
-    "updated_at": "2024-01-10T15:44:58Z",
+    "updated_at": "2026-11-03T23:04:39Z",
     "user": {
       "login": "jszwedko"
     }
@@ -26265,7 +26271,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(component spec validation tests): add partial support for `component_discarded_events_total` metrics",
-    "updated_at": "2024-03-14T18:49:45Z",
+    "updated_at": "2026-11-03T23:04:25Z",
     "user": {
       "login": "davidhuie-dd"
     }
@@ -26544,7 +26550,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(docs): fix rustdoc warnings",
-    "updated_at": "2024-03-14T18:49:22Z",
+    "updated_at": "2026-11-03T23:05:09Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -26576,7 +26582,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(dev): Re-triage done issues with new comment",
-    "updated_at": "2024-01-10T15:45:40Z",
+    "updated_at": "2026-11-03T23:05:02Z",
     "user": {
       "login": "jszwedko"
     }
@@ -29067,7 +29073,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(vdev): Inject labels block to ComposeConfig",
-    "updated_at": "2023-04-06T11:45:29Z",
+    "updated_at": "2026-11-03T23:04:38Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -29900,7 +29906,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(aws_kinesis_streams sink): Re-enable kinesis_put_records_with_partition_key()",
-    "updated_at": "2023-11-30T14:08:07Z",
+    "updated_at": "2026-11-03T23:05:07Z",
     "user": {
       "login": "spencergilbert"
     }
@@ -31286,7 +31292,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Covert calls to `panic` into returning `Result`",
-    "updated_at": "2023-04-19T09:29:47Z",
+    "updated_at": "2026-11-03T23:05:10Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -32718,7 +32724,7 @@
     "number": 17225,
     "state": "open",
     "title": "Update field names created by sources to use `const`",
-    "updated_at": "2026-10-20T12:58:55Z",
+    "updated_at": "2026-11-12T14:41:03Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -33215,7 +33221,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(remap transform): Always clone event",
-    "updated_at": "2023-05-01T21:51:11Z",
+    "updated_at": "2026-11-03T23:04:40Z",
     "user": {
       "login": "jszwedko"
     }
@@ -33843,7 +33849,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "WIP: add the source id to event metadata",
-    "updated_at": "2023-06-22T08:42:36Z",
+    "updated_at": "2026-11-03T23:05:12Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -35167,7 +35173,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-11T19:30:44Z",
     "created_at": "2023-05-08T21:33:06Z",
     "id": 1700973868,
     "issue_type": "Bug",
@@ -35180,9 +35186,9 @@
       }
     ],
     "number": 17343,
-    "state": "open",
+    "state": "closed",
     "title": "Environment variable substitution and YAML special characters",
-    "updated_at": "2026-02-21T20:40:04Z",
+    "updated_at": "2026-11-11T19:30:44Z",
     "user": {
       "login": "sbalmos"
     }
@@ -36553,7 +36559,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Add Vale with Datadog rules for vector.dev",
-    "updated_at": "2023-07-17T15:49:53Z",
+    "updated_at": "2026-11-03T23:05:07Z",
     "user": {
       "login": "spencergilbert"
     }
@@ -36744,7 +36750,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(lua transform): Allow traces to be passed through",
-    "updated_at": "2024-03-14T18:49:34Z",
+    "updated_at": "2026-11-03T23:04:40Z",
     "user": {
       "login": "jszwedko"
     }
@@ -37370,7 +37376,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.30.0 release",
-    "updated_at": "2026-03-05T16:10:21Z",
+    "updated_at": "2026-11-03T23:04:56Z",
     "user": {
       "login": "jszwedko"
     }
@@ -39380,7 +39386,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(observability): set `sent_event` and `received_event` metrics to estimated json size",
-    "updated_at": "2024-03-14T18:49:54Z",
+    "updated_at": "2026-11-03T23:05:10Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -39685,7 +39691,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "feat(flush on shutdown): flush all batches on shutdown",
-    "updated_at": "2023-06-13T08:30:03Z",
+    "updated_at": "2026-11-03T23:04:27Z",
     "user": {
       "login": "DominicBurkart"
     }
@@ -41786,7 +41792,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(flush on shutdown): do not re-poll closed streams",
-    "updated_at": "2024-03-14T18:49:38Z",
+    "updated_at": "2026-11-03T23:04:27Z",
     "user": {
       "login": "DominicBurkart"
     }
@@ -42666,7 +42672,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Upgrade OpenSSL crates",
-    "updated_at": "2023-06-21T15:39:59Z",
+    "updated_at": "2026-11-03T23:04:48Z",
     "user": {
       "login": "jszwedko"
     }
@@ -43072,7 +43078,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "retry check component docs",
-    "updated_at": "2023-06-23T13:15:10Z",
+    "updated_at": "2026-11-03T23:04:27Z",
     "user": {
       "login": "DominicBurkart"
     }
@@ -43167,7 +43173,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore: Track opentelemetry-proto as a submodule, currently tracking 0.19.0",
-    "updated_at": "2024-03-14T18:49:57Z",
+    "updated_at": "2026-11-03T23:05:07Z",
     "user": {
       "login": "spencergilbert"
     }
@@ -44314,7 +44320,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(releasing): Prepare v0.31.0 release",
-    "updated_at": "2026-03-05T16:10:32Z",
+    "updated_at": "2026-11-03T23:04:56Z",
     "user": {
       "login": "jszwedko"
     }
@@ -44385,7 +44391,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Test issue comment",
-    "updated_at": "2023-06-29T18:25:29Z",
+    "updated_at": "2026-11-03T23:04:44Z",
     "user": {
       "login": "jszwedko"
     }
@@ -44751,7 +44757,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(ci): Try larger OSX runners",
-    "updated_at": "2023-06-30T17:20:09Z",
+    "updated_at": "2026-11-03T23:04:46Z",
     "user": {
       "login": "jszwedko"
     }
@@ -44790,7 +44796,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "gardener board test",
-    "updated_at": "2023-06-30T16:40:34Z",
+    "updated_at": "2026-11-03T23:04:28Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -52350,7 +52356,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(website): Test rewriting package URLs",
-    "updated_at": "2024-01-05T15:39:28Z",
+    "updated_at": "2026-11-03T23:04:44Z",
     "user": {
       "login": "jszwedko"
     }
@@ -52824,7 +52830,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(aws_s3 sink): encode events before batching for accurate sizing",
-    "updated_at": "2025-01-27T22:17:09Z",
+    "updated_at": "2026-11-03T23:05:03Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -55618,7 +55624,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(dev): Unfeature flag internal_events::parser",
-    "updated_at": "2023-08-21T17:56:53Z",
+    "updated_at": "2026-11-03T23:04:41Z",
     "user": {
       "login": "jszwedko"
     }
@@ -56921,7 +56927,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(arm64 platform): Build packages with older glibc",
-    "updated_at": "2023-08-25T16:47:32Z",
+    "updated_at": "2026-11-03T23:04:40Z",
     "user": {
       "login": "jszwedko"
     }
@@ -57607,7 +57613,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Update ratatui to 0.23.0",
-    "updated_at": "2023-08-28T21:59:54Z",
+    "updated_at": "2026-11-03T23:04:48Z",
     "user": {
       "login": "jszwedko"
     }
@@ -59638,7 +59644,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(platform: arm): Add scaffolding for arm builds",
-    "updated_at": "2024-01-10T15:48:49Z",
+    "updated_at": "2026-11-03T23:04:39Z",
     "user": {
       "login": "jszwedko"
     }
@@ -61853,7 +61859,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(dev): Try enabling unwrap_used lint",
-    "updated_at": "2024-01-10T15:49:12Z",
+    "updated_at": "2026-11-03T23:04:46Z",
     "user": {
       "login": "jszwedko"
     }
@@ -62961,7 +62967,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(core): RFC for refactoring the metrics data model",
-    "updated_at": "2023-10-05T18:16:40Z",
+    "updated_at": "2026-11-03T23:05:15Z",
     "user": {
       "login": "tobz"
     }
@@ -63385,7 +63391,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(arc): Remove static maximum concurrency",
-    "updated_at": "2024-03-14T18:50:11Z",
+    "updated_at": "2026-11-03T23:04:43Z",
     "user": {
       "login": "jszwedko"
     }
@@ -63905,7 +63911,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(ARC): track response time based on when future is first polled",
-    "updated_at": "2024-03-14T18:50:11Z",
+    "updated_at": "2026-11-03T23:05:13Z",
     "user": {
       "login": "tobz"
     }
@@ -64031,7 +64037,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Update OpenDAL crate",
-    "updated_at": "2023-11-15T23:16:09Z",
+    "updated_at": "2026-11-03T23:04:49Z",
     "user": {
       "login": "jszwedko"
     }
@@ -64616,7 +64622,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "WIP: refactor HTTP-based request builder helpers to reduce boilerplate",
-    "updated_at": "2024-04-30T08:33:14Z",
+    "updated_at": "2026-11-03T23:05:15Z",
     "user": {
       "login": "tobz"
     }
@@ -64632,7 +64638,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "WIP chore(ci): add dogstatsd to datadog metrics regression case",
-    "updated_at": "2023-10-03T20:59:45Z",
+    "updated_at": "2026-11-03T23:04:28Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -65059,7 +65065,7 @@
     "number": 18779,
     "state": "open",
     "title": "Migrate native JSON encoding to serialize the protobuf data model instead of in-memory data model",
-    "updated_at": "2026-06-02T15:33:15Z",
+    "updated_at": "2026-11-05T18:05:48Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -65417,7 +65423,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Ignore",
-    "updated_at": "2024-03-14T18:50:13Z",
+    "updated_at": "2026-11-03T23:04:25Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -65997,7 +66003,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(ci): Avoid installing homebrew formulas from source in CI",
-    "updated_at": "2023-10-11T22:00:48Z",
+    "updated_at": "2026-11-03T23:04:45Z",
     "user": {
       "login": "jszwedko"
     }
@@ -66152,7 +66158,7 @@
     "number": 18831,
     "state": "open",
     "title": "Orphaned buffer lock",
-    "updated_at": "2026-05-29T23:17:38Z",
+    "updated_at": "2026-11-10T16:46:57Z",
     "user": {
       "login": "nabokihms"
     }
@@ -67325,7 +67331,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(topology): Add internal-only topology (DRAFT)",
-    "updated_at": "2023-10-25T00:43:59Z",
+    "updated_at": "2026-11-03T23:04:23Z",
     "user": {
       "login": "bruceg"
     }
@@ -67437,7 +67443,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(observability): remove deprecated metrics & high-cardinality_tags",
-    "updated_at": "2023-11-03T17:16:23Z",
+    "updated_at": "2026-11-03T23:04:28Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -68399,7 +68405,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "enhancement(datadog): Add datadog global config options",
-    "updated_at": "2026-03-05T16:10:53Z",
+    "updated_at": "2026-11-03T23:05:08Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -69488,7 +69494,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Replace atty with is-terminal",
-    "updated_at": "2024-03-14T18:49:59Z",
+    "updated_at": "2026-11-03T23:04:43Z",
     "user": {
       "login": "jszwedko"
     }
@@ -69525,7 +69531,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Update rustix",
-    "updated_at": "2023-10-27T20:23:47Z",
+    "updated_at": "2026-11-03T23:04:48Z",
     "user": {
       "login": "jszwedko"
     }
@@ -69541,7 +69547,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Update spin",
-    "updated_at": "2023-10-27T20:23:31Z",
+    "updated_at": "2026-11-03T23:04:48Z",
     "user": {
       "login": "jszwedko"
     }
@@ -69557,7 +69563,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Update rust_decimal and borsh",
-    "updated_at": "2023-10-27T20:23:36Z",
+    "updated_at": "2026-11-03T23:04:47Z",
     "user": {
       "login": "jszwedko"
     }
@@ -69589,7 +69595,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(observability): deprecate obsolete http metrics",
-    "updated_at": "2026-03-05T16:10:55Z",
+    "updated_at": "2026-11-03T22:45:23Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -69850,7 +69856,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(tag_cardinality_limit transform): add regression test",
-    "updated_at": "2023-11-03T17:12:47Z",
+    "updated_at": "2026-11-03T23:04:28Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -72590,7 +72596,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(loki sink): update to use the global list of compression algorithms",
-    "updated_at": "2026-03-05T16:11:02Z",
+    "updated_at": "2026-11-03T23:05:09Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -73577,7 +73583,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(docs): Replace setup.vector.dev references",
-    "updated_at": "2026-03-05T16:11:05Z",
+    "updated_at": "2026-11-03T23:04:43Z",
     "user": {
       "login": "jszwedko"
     }
@@ -73606,7 +73612,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "fix(datadog_logs sink): use estimated JSON size for batching and count escapable characters",
-    "updated_at": "2024-03-14T18:50:20Z",
+    "updated_at": "2026-11-03T23:04:24Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -74098,7 +74104,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "[dont merge] running CI on OPW 1.7",
-    "updated_at": "2023-11-16T21:39:57Z",
+    "updated_at": "2026-11-03T23:04:50Z",
     "user": {
       "login": "neuronull"
     }
@@ -74148,7 +74154,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-11T23:05:59Z",
     "created_at": "2023-11-17T04:02:40Z",
     "id": 1998236182,
     "issue_type": "Task",
@@ -74173,9 +74179,9 @@
       }
     ],
     "number": 19179,
-    "state": "open",
+    "state": "closed",
     "title": "Upgrade the `http` crate to version 1.0.0",
-    "updated_at": "2026-10-20T16:35:22Z",
+    "updated_at": "2026-11-12T20:34:10Z",
     "user": {
       "login": "bruceg"
     }
@@ -74647,7 +74653,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(datadog_agent source): random performance optimizations",
-    "updated_at": "2025-08-19T18:53:06Z",
+    "updated_at": "2026-11-03T23:05:15Z",
     "user": {
       "login": "tobz"
     }
@@ -76002,7 +76008,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Update lading to 0.20.0",
-    "updated_at": "2026-05-29T23:19:06Z",
+    "updated_at": "2026-11-03T23:04:30Z",
     "user": {
       "login": "bruceg"
     }
@@ -76983,7 +76989,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "Update to lading 0.20.1",
-    "updated_at": "2024-10-04T16:59:02Z",
+    "updated_at": "2026-11-03T23:05:19Z",
     "user": {
       "login": "blt"
     }
@@ -77177,7 +77183,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "chore(deps): Update anymap",
-    "updated_at": "2024-01-10T15:44:38Z",
+    "updated_at": "2026-11-03T23:04:46Z",
     "user": {
       "login": "jszwedko"
     }

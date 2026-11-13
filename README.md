@@ -56,6 +56,13 @@ DOCKER_PASSWORD=...   # purge commands only
 
 The target repository is always specified explicitly via `--repo org/name`.
 
+`fetch-all`, `fetch-issues`, `fetch-discussions`, `fetch-issue-interest`, and
+`automated-review-stats` can reuse an authenticated `gh` session when
+`GITHUB_TOKEN` is unset, matching the PR-interest and backlog collectors. No token
+is extracted from `gh`. An explicitly supplied token remains preferred. Use one
+account with access to the target repositories, including their closing-issue
+links and collaborator permissions.
+
 If you use a password manager CLI (e.g. `op`), store secret references there and inject at runtime — secrets never touch disk:
 
 ```sh
@@ -162,7 +169,7 @@ planned item; renaming requires permission to edit repository labels.
 
 ```shell
 for repo in vectordotdev/vector vectordotdev/vrl quickwit-oss/quickwit quickwit-oss/tantivy; do
-  op run --env-file secrets.env -- github-tools fetch-all --repo "$repo"
+  github-tools fetch-all --repo "$repo"
 done
 ```
 

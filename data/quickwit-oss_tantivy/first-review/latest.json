@@ -1,9 +1,9 @@
 {
-  "collectedAt": "2026-11-03T14:10:09.097728+00:00",
+  "collectedAt": "2026-11-13T15:03:16.527906+00:00",
   "excludedAwaitingAuthorPrs": 0,
   "excludedBotPrs": 16,
-  "excludedDrafts": 26,
-  "openPrs": 155,
+  "excludedDrafts": 25,
+  "openPrs": 168,
   "prs": [
     {
       "createdAt": "2020-12-10T10:17:17+00:00",
@@ -411,13 +411,13 @@
       "createdAt": "2026-10-22T13:48:06+00:00",
       "number": 3204,
       "title": "snippet: match document tokens against query terms exactly",
-      "updatedAt": "2026-10-22T13:54:10+00:00"
+      "updatedAt": "2026-11-13T11:15:53+00:00"
     },
     {
       "createdAt": "2026-10-22T19:04:31+00:00",
       "number": 3205,
       "title": "aggregation: charge the term dictionary of computed text sources against the memory limit",
-      "updatedAt": "2026-10-22T19:22:01+00:00"
+      "updatedAt": "2026-11-09T14:38:25+00:00"
     },
     {
       "createdAt": "2026-10-23T08:20:41+00:00",
@@ -477,7 +477,13 @@
       "createdAt": "2026-10-28T15:49:52+00:00",
       "number": 3224,
       "title": "Choose Boolean unions by estimated match density",
-      "updatedAt": "2026-10-29T17:47:47+00:00"
+      "updatedAt": "2026-11-04T06:57:16+00:00"
+    },
+    {
+      "createdAt": "2026-10-29T15:56:32+00:00",
+      "number": 3225,
+      "title": "Memoize jitexpr value sources per input term ord",
+      "updatedAt": "2026-11-04T12:35:06+00:00"
     },
     {
       "createdAt": "2026-10-30T17:51:43+00:00",
@@ -507,13 +513,91 @@
       "createdAt": "2026-11-02T16:20:01+00:00",
       "number": 3234,
       "title": "Fix numeric cardinality keys across segments",
-      "updatedAt": "2026-11-02T16:54:06+00:00"
+      "updatedAt": "2026-11-09T17:19:51+00:00"
     },
     {
       "createdAt": "2026-11-03T03:54:34+00:00",
       "number": 3236,
       "title": "Fix Block-WAND bounds and JSON conjunction scoring",
       "updatedAt": "2026-11-03T13:45:23+00:00"
+    },
+    {
+      "createdAt": "2026-11-03T19:11:24+00:00",
+      "number": 3239,
+      "title": "Preserve scorer boost context in explanations",
+      "updatedAt": "2026-11-03T23:43:38+00:00"
+    },
+    {
+      "createdAt": "2026-11-04T11:05:48+00:00",
+      "number": 3240,
+      "title": "Fix collapse_overlapped_ranges docs: adjacent ranges are not merged",
+      "updatedAt": "2026-11-04T11:07:02+00:00"
+    },
+    {
+      "createdAt": "2026-11-05T14:31:46+00:00",
+      "number": 3242,
+      "title": "Accept any whitespace and parentheses after query operators",
+      "updatedAt": "2026-11-05T14:35:42+00:00"
+    },
+    {
+      "createdAt": "2026-11-05T19:53:21+00:00",
+      "number": 3243,
+      "title": "Return FieldDoesNotExist for query JSON paths containing a nul byte",
+      "updatedAt": "2026-11-05T19:55:19+00:00"
+    },
+    {
+      "createdAt": "2026-11-06T15:09:21+00:00",
+      "number": 3248,
+      "title": "fix(query): preserve phrase slop above 255",
+      "updatedAt": "2026-11-06T18:21:05+00:00"
+    },
+    {
+      "createdAt": "2026-11-07T20:08:46+00:00",
+      "number": 3250,
+      "title": "Guard against overflow on exclusive IP range bounds",
+      "updatedAt": "2026-11-07T20:10:19+00:00"
+    },
+    {
+      "createdAt": "2026-11-08T11:29:44+00:00",
+      "number": 3251,
+      "title": "fix(phrase): handle target < doc in PhraseScorer::seek_danger",
+      "updatedAt": "2026-11-08T11:32:00+00:00"
+    },
+    {
+      "createdAt": "2026-11-11T22:20:16+00:00",
+      "number": 3255,
+      "title": "Add ability to disable fsync when using `MmapDirectory`",
+      "updatedAt": "2026-11-11T23:05:46+00:00"
+    },
+    {
+      "createdAt": "2026-11-12T12:02:03+00:00",
+      "number": 3257,
+      "title": "Apply the registered raw analyzer to raw fast fields",
+      "updatedAt": "2026-11-12T12:08:00+00:00"
+    },
+    {
+      "createdAt": "2026-11-12T14:38:00+00:00",
+      "number": 3258,
+      "title": "Use injected BM25 statistics in PhrasePrefixQuery",
+      "updatedAt": "2026-11-12T14:39:58+00:00"
+    },
+    {
+      "createdAt": "2026-11-13T10:50:58+00:00",
+      "number": 3260,
+      "title": "Do not highlight terms of negated clauses in snippets",
+      "updatedAt": "2026-11-13T10:52:43+00:00"
+    },
+    {
+      "createdAt": "2026-11-13T11:24:58+00:00",
+      "number": 3261,
+      "title": "Replace read coalescing with batch reads",
+      "updatedAt": "2026-11-13T11:29:24+00:00"
+    },
+    {
+      "createdAt": "2026-11-13T12:22:41+00:00",
+      "number": 3262,
+      "title": "Fix ignored boosts in phrase-prefix and unbounded range scorers",
+      "updatedAt": "2026-11-13T12:26:13+00:00"
     }
   ],
   "repository": "quickwit-oss/tantivy",

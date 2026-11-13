@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-02T14:48:58.116709+00:00",
+  "collectedAt": "2026-11-13T14:56:08.383733+00:00",
   "issues": [
     {
       "number": 33,
@@ -112,13 +112,6 @@
       "title": "Who's using Vector in production?",
       "unattributedComments": 0,
       "uniqueCommenters": 53
-    },
-    {
-      "number": 797,
-      "reactions": 4,
-      "title": "Commented environment variables are still attempted to be interpolated",
-      "unattributedComments": 2,
-      "uniqueCommenters": 4
     },
     {
       "number": 825,
@@ -430,7 +423,7 @@
     },
     {
       "number": 1516,
-      "reactions": 21,
+      "reactions": 22,
       "title": "AWS authentication for the kafka source and sink",
       "unattributedComments": 0,
       "uniqueCommenters": 7
@@ -1326,7 +1319,7 @@
     },
     {
       "number": 3848,
-      "reactions": 5,
+      "reactions": 6,
       "title": "Support Splunk \"cooked\" data",
       "unattributedComments": 0,
       "uniqueCommenters": 4
@@ -2859,10 +2852,10 @@
     },
     {
       "number": 7358,
-      "reactions": 25,
+      "reactions": 26,
       "title": "Support checkpointing and reading old logs with `docker_logs` source",
       "unattributedComments": 0,
-      "uniqueCommenters": 5
+      "uniqueCommenters": 7
     },
     {
       "number": 7362,
@@ -3412,10 +3405,10 @@
     },
     {
       "number": 8335,
-      "reactions": 2,
+      "reactions": 3,
       "title": "The kubernetes_logs source with in-cluster config doesn't work with intermediate CAs",
       "unattributedComments": 0,
-      "uniqueCommenters": 3
+      "uniqueCommenters": 4
     },
     {
       "number": 8353,
@@ -4762,13 +4755,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 10787,
-      "reactions": 9,
-      "title": "CloudWatch sink group_name can't contain templated variables during validate",
-      "unattributedComments": 0,
-      "uniqueCommenters": 6
-    },
-    {
       "number": 10788,
       "reactions": 0,
       "title": "Remove influxdb from the prometheus integration tests",
@@ -4830,13 +4816,6 @@
       "title": "vrl: `unnest` function has no useful examples in documentation",
       "unattributedComments": 0,
       "uniqueCommenters": 0
-    },
-    {
-      "number": 10870,
-      "reactions": 72,
-      "title": "Consider expanding the cases where Vector retries requests",
-      "unattributedComments": 0,
-      "uniqueCommenters": 19
     },
     {
       "number": 10877,
@@ -6125,13 +6104,6 @@
       "title": "HUP causes tap to lose the watch",
       "unattributedComments": 0,
       "uniqueCommenters": 2
-    },
-    {
-      "number": 13017,
-      "reactions": 0,
-      "title": "Integration test containers not being removed after test failure.",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
     },
     {
       "number": 13031,
@@ -7864,10 +7836,10 @@
     },
     {
       "number": 16387,
-      "reactions": 37,
+      "reactions": 38,
       "title": "Include support for GCP authentication via workload identity federation",
       "unattributedComments": 0,
-      "uniqueCommenters": 10
+      "uniqueCommenters": 11
     },
     {
       "number": 16389,
@@ -7920,7 +7892,7 @@
     },
     {
       "number": 16535,
-      "reactions": 7,
+      "reactions": 8,
       "title": "Provide a FIPS-compliant build of Vector",
       "unattributedComments": 0,
       "uniqueCommenters": 2
@@ -8185,20 +8157,6 @@
       "uniqueCommenters": 2
     },
     {
-      "number": 16888,
-      "reactions": 2,
-      "title": "`amqp` sink doesn't support PEM encoded certificates",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
-      "number": 16890,
-      "reactions": 3,
-      "title": "`amqp` sink TLS doesn't work",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1
-    },
-    {
       "number": 16891,
       "reactions": 7,
       "title": "Support `zstd` compression in the `file` source",
@@ -8364,7 +8322,7 @@
       "reactions": 0,
       "title": "Update field names created by sources to use `const`",
       "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 4
     },
     {
       "number": 17236,
@@ -8454,13 +8412,6 @@
       "number": 17321,
       "reactions": 2,
       "title": "tag_cardinality_limit transform to mark events that have been affected",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1
-    },
-    {
-      "number": 17343,
-      "reactions": 4,
-      "title": "Environment variable substitution and YAML special characters",
       "unattributedComments": 0,
       "uniqueCommenters": 1
     },
@@ -9204,7 +9155,7 @@
       "reactions": 1,
       "title": "Migrate native JSON encoding to serialize the protobuf data model instead of in-memory data model",
       "unattributedComments": 0,
-      "uniqueCommenters": 1
+      "uniqueCommenters": 2
     },
     {
       "number": 18784,
@@ -9257,10 +9208,10 @@
     },
     {
       "number": 18831,
-      "reactions": 2,
+      "reactions": 3,
       "title": "Orphaned buffer lock",
       "unattributedComments": 0,
-      "uniqueCommenters": 4
+      "uniqueCommenters": 5
     },
     {
       "number": 18845,
@@ -9506,13 +9457,6 @@
       "title": "Systemd journal sink",
       "unattributedComments": 0,
       "uniqueCommenters": 5
-    },
-    {
-      "number": 19179,
-      "reactions": 1,
-      "title": "Upgrade the `http` crate to version 1.0.0",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2
     },
     {
       "number": 19187,
@@ -9921,13 +9865,6 @@
       "uniqueCommenters": 4
     },
     {
-      "number": 19759,
-      "reactions": 22,
-      "title": "Unknown buffer disk limitation",
-      "unattributedComments": 0,
-      "uniqueCommenters": 12
-    },
-    {
       "number": 19767,
       "reactions": 14,
       "title": "auto_partial_merge doesn't work in kubernetes source",
@@ -9968,13 +9905,6 @@
       "title": "`*-component-docs` commands assume location of the target dir in looking for build artifacts.",
       "unattributedComments": 0,
       "uniqueCommenters": 1
-    },
-    {
-      "number": 19857,
-      "reactions": 0,
-      "title": "http_client: invalid accept header base on the encoding setting",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2
     },
     {
       "number": 19872,
@@ -10355,13 +10285,6 @@
       "uniqueCommenters": 2
     },
     {
-      "number": 20462,
-      "reactions": 3,
-      "title": "Update Syslog source to accept non UTF-8 encoding in syslog message",
-      "unattributedComments": 0,
-      "uniqueCommenters": 5
-    },
-    {
       "number": 20485,
       "reactions": 2,
       "title": "Unifi syslogs to Loki using Vector gives a no details 400 error",
@@ -10538,7 +10461,7 @@
     },
     {
       "number": 20814,
-      "reactions": 1,
+      "reactions": 2,
       "title": "fluent source with log_namespace puts all fields to namespace",
       "unattributedComments": 0,
       "uniqueCommenters": 1
@@ -10598,13 +10521,6 @@
       "title": "Missing storage-related metrics in AWS ECS metrics source. ",
       "unattributedComments": 0,
       "uniqueCommenters": 0
-    },
-    {
-      "number": 20927,
-      "reactions": 2,
-      "title": "GCP Cloud Storage sink shouldn't include api_key",
-      "unattributedComments": 0,
-      "uniqueCommenters": 3
     },
     {
       "number": 20939,
@@ -11279,13 +11195,6 @@
       "uniqueCommenters": 4
     },
     {
-      "number": 22145,
-      "reactions": 0,
-      "title": "Secrets in commented-out lines in vector.toml cause config validation to fail",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1
-    },
-    {
       "number": 22154,
       "reactions": 0,
       "title": "Host_metrics collection over http_server and data loss in pipelines",
@@ -11357,10 +11266,10 @@
     },
     {
       "number": 22310,
-      "reactions": 0,
+      "reactions": 1,
       "title": "SSL errors in log with http_endpoint with tls",
       "unattributedComments": 0,
-      "uniqueCommenters": 4
+      "uniqueCommenters": 5
     },
     {
       "number": 22339,
@@ -12091,13 +12000,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 23091,
-      "reactions": 7,
-      "title": "log_to_metric in all_metrics mode dropping integer-valued metrics",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 23093,
       "reactions": 1,
       "title": "Slow memory leak in vector aggregate",
@@ -12259,13 +12161,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 23243,
-      "reactions": 1,
-      "title": "vector tap panics on broken pipe",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 23262,
       "reactions": 1,
       "title": "Update parse_aws_cloudwatch_log_subscription_message to parse account level subscriptions",
@@ -12313,13 +12208,6 @@
       "title": "Add new source component `demo_traces`",
       "unattributedComments": 0,
       "uniqueCommenters": 1
-    },
-    {
-      "number": 23350,
-      "reactions": 0,
-      "title": "update `prost-*` and `tonic-*` crates",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
     },
     {
       "number": 23363,
@@ -12375,7 +12263,7 @@
       "reactions": 1,
       "title": "possibility to enable or disable force lowercase for labels on loki sink",
       "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 1
     },
     {
       "number": 23426,
@@ -12820,7 +12708,7 @@
     },
     {
       "number": 24010,
-      "reactions": 4,
+      "reactions": 5,
       "title": "Block `aws_s3_source` graceful shutdown until object processing completes",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -12942,7 +12830,7 @@
       "reactions": 0,
       "title": "MongoDB Metrics source fails with `DeserializationError` on newer versions of WiredTiger",
       "unattributedComments": 0,
-      "uniqueCommenters": 1
+      "uniqueCommenters": 2
     },
     {
       "number": 24273,
@@ -13226,7 +13114,7 @@
     },
     {
       "number": 24541,
-      "reactions": 3,
+      "reactions": 4,
       "title": "Vector only reloads enrichment tables even when other config files are also updated",
       "unattributedComments": 0,
       "uniqueCommenters": 3
@@ -14024,7 +13912,7 @@
     },
     {
       "number": 25809,
-      "reactions": 1,
+      "reactions": 2,
       "title": "Windows service stuck in START_PENDING forever when Vector fails to start",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -14108,10 +13996,10 @@
     },
     {
       "number": 26023,
-      "reactions": 0,
+      "reactions": 1,
       "title": "docker_logs: a transient stream error replays every record since the Vector process started",
       "unattributedComments": 0,
-      "uniqueCommenters": 1
+      "uniqueCommenters": 2
     },
     {
       "number": 26076,
@@ -14150,7 +14038,7 @@
     },
     {
       "number": 26111,
-      "reactions": 1,
+      "reactions": 2,
       "title": "tls_client_metadata should expose Subject Alternative Names (SANs) from the client certificate",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -14296,13 +14184,6 @@
       "uniqueCommenters": 1
     },
     {
-      "number": 26391,
-      "reactions": 0,
-      "title": "`abort \"msg\"` reason only preserved with explicit `reroute_dropped: true`",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 26392,
       "reactions": 0,
       "title": "Vector `file` source preserves BOM as U+FEFF char and CRLF trailing CR in EVERY line",
@@ -14367,7 +14248,7 @@
     },
     {
       "number": 26523,
-      "reactions": 2,
+      "reactions": 7,
       "title": "disk buffer: reader can be notified before the data file write completes, delaying the sink's send",
       "unattributedComments": 0,
       "uniqueCommenters": 5
@@ -14381,10 +14262,10 @@
     },
     {
       "number": 26526,
-      "reactions": 1,
+      "reactions": 2,
       "title": "Windows service hangs in START_PENDING forever when startup fails (prepare_start error is ignored in run_service)",
       "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 1
     },
     {
       "number": 26552,
@@ -14405,7 +14286,7 @@
       "reactions": 0,
       "title": "Disk buffer (v2) acknowledges in-flight and read-ahead records before delivery after a restart with buffered history; a later SIGKILL loses them",
       "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 1
     },
     {
       "number": 26565,
@@ -14451,7 +14332,7 @@
     },
     {
       "number": 26644,
-      "reactions": 0,
+      "reactions": 1,
       "title": "`gcp_chronicle_unstructured` sink never retries failed requests (503 / connection errors): \"Unexpected error type; dropping the request\"",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -14471,13 +14352,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 26730,
-      "reactions": 1,
-      "title": "mqtt source: stops receiving after the broker loses the session (no re-subscribe on reconnect)",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 26735,
       "reactions": 0,
       "title": "WebSocket connection repeatedly times out and restarts during sustained ingestion",
@@ -14493,7 +14367,7 @@
     },
     {
       "number": 26772,
-      "reactions": 0,
+      "reactions": 1,
       "title": "HTTP-based sinks: retry backoff holds a concurrency-limit permit for the entire retry sequence, amplifying the blast radius of transient downstream errors.",
       "unattributedComments": 0,
       "uniqueCommenters": 1
@@ -14501,7 +14375,7 @@
     {
       "number": 26792,
       "reactions": 0,
-      "title": "Revisit the 16 MiB HTTP/2 header list limit for gRPC (`GRPC_MAX_HEADER_LIST_SIZE`)",
+      "title": "Revisit the 16 MiB HTTP/2 header list limit (`HTTP2_MAX_HEADER_LIST_SIZE`)",
       "unattributedComments": 0,
       "uniqueCommenters": 2
     },
@@ -14559,7 +14433,7 @@
       "reactions": 0,
       "title": "file/kubernetes_logs source: lines written just before shutdown are not read (no final read after idle backoff)",
       "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 1
     },
     {
       "number": 26888,
@@ -14605,7 +14479,7 @@
     },
     {
       "number": 26931,
-      "reactions": 0,
+      "reactions": 2,
       "title": "Support the new Google SecOps (Chronicle) REST Ingestion API (logs:import) in gcp_chronicle_unstructured sink",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -14646,13 +14520,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 26981,
-      "reactions": 0,
-      "title": "Build failing since 0.61.0",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 26983,
       "reactions": 1,
       "title": "Windows service stays RUNNING while shutting down, so Stop-Service fails after 2 seconds",
@@ -14663,6 +14530,125 @@
       "number": 26985,
       "reactions": 0,
       "title": "Prometheus_remote_write throughput continuously degrades with histogram metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27006,
+      "reactions": 0,
+      "title": "Ad-hoc deprecation tracker",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27020,
+      "reactions": 0,
+      "title": "Disk-buffer reclamation can stall behind one retrying request, even with E2E acknowledgements disabled",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 27030,
+      "reactions": 0,
+      "title": "Revisit the WebSocket read buffer size (`read_buffer_size`) after the `tokio-tungstenite` 0.30 upgrade",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27052,
+      "reactions": 0,
+      "title": "throttle: support custom event-derived tags on discard metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27057,
+      "reactions": 0,
+      "title": "kafka source: Microsoft Entra ID authentication for Azure Event Hubs (SASL/OAUTHBEARER with managed identity or workload identity)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27059,
+      "reactions": 0,
+      "title": "windows_event_log: task_name/opcode_name come from an earlier event (EvtFormatMessage on a reused publisher metadata handle)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 27065,
+      "reactions": 0,
+      "title": "Revisit and remove the temporary GreptimeDB SDK fork",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27078,
+      "reactions": 1,
+      "title": "Confinement checks should not be applied to the `elasticsearch` sink `data_stream.*` attributes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27082,
+      "reactions": 0,
+      "title": "feat(source:okta): Add configurable limit parameter for page size",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27090,
+      "reactions": 1,
+      "title": "docker_logs: a container's last log line is emitted twice when the container exits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27101,
+      "reactions": 0,
+      "title": "s3 sink hang?",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27108,
+      "reactions": 0,
+      "title": "Add `opsimate` sink",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
+    },
+    {
+      "number": 27121,
+      "reactions": 0,
+      "title": "Vector performance patches",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2
+    },
+    {
+      "number": 27122,
+      "reactions": 0,
+      "title": "Kafka source cannot enable KIP-848: unconditional session.timeout.ms prevents consumer protocol initialization",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27127,
+      "reactions": 0,
+      "title": "`MetricSet` uses `LruCache` where eviction never happens, and the `incremental_to_absolute` cache cost is undocumented",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27140,
+      "reactions": 0,
+      "title": "prometheus_remote_write source: optionally cache metadata across requests to restore metric types",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27144,
+      "reactions": 1,
+      "title": "`opentelemetry` source: support CORS on the OTLP/HTTP server",
       "unattributedComments": 0,
       "uniqueCommenters": 0
     }
