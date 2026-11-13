@@ -1,0 +1,1640 @@
+{
+  "collectedAt": "2026-11-12T14:59:59.298359+00:00",
+  "excludedDrafts": 43,
+  "openPrs": 180,
+  "prs": [
+    {
+      "linkedIssues": [],
+      "number": 3241,
+      "reactions": 0,
+      "title": "timestamp pruning guide [docs]",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:07+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3518,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Update Dockerhub page ",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 3530,
+      "reactions": 0,
+      "title": "Enhancement of docker section",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:07+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3562,
+      "reactions": 0,
+      "title": "wasm RFC",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:07+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3767,
+      "reactions": 0,
+      "title": "gcp pubsub source: at_least_once",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2025-09-23T13:16:07+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 1990,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Warn user when using local filesystem as default index root URI",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 3839,
+      "reactions": 0,
+      "title": "add warning about file-backed storage",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 4049,
+      "reactions": 0,
+      "title": "check yield_after_each_message",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:07+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 4320,
+      "reactions": 0,
+      "title": "Add parameter to limit the size of a query string",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 4341,
+      "reactions": 0,
+      "title": "Add query matching keywords in elasticsearch response.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 4392,
+      "reactions": 0,
+      "title": "feat: add the tracing layer to enhance rest api metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-09-23T13:16:07+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 4565,
+      "reactions": 0,
+      "title": "improve error on missing config",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 4945,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Dynamic fields term set query not working",
+          "unattributedComments": 0,
+          "uniqueCommenters": 3
+        }
+      ],
+      "number": 4983,
+      "reactions": 0,
+      "title": "use correct tokenizer when building termsetquery",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2025-09-23T13:16:07+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5282,
+      "reactions": 0,
+      "title": "Avoid deserializing QueryAST for every split.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5285,
+      "reactions": 0,
+      "title": "docs: using-vector.md: Delete host field introduced by Vector 0.40.0.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5296,
+      "reactions": 0,
+      "title": "improve ingest lock",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5400,
+      "reactions": 0,
+      "title": "aws s3 server_side_encryption  configuration when upload object to s3",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5469,
+      "reactions": 0,
+      "title": "make some cache kind configureable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5492,
+      "reactions": 0,
+      "title": "fix(query-documentation): typo range query",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5527,
+      "reactions": 0,
+      "title": "doc mapper: convert number handling to deserialization",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5532,
+      "reactions": 0,
+      "title": "make tokenizer emit at least one empty token on empty strings",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5550,
+      "reactions": 0,
+      "title": "send extended_bounds in ms",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5557,
+      "reactions": 0,
+      "title": "add histogram to more core s3 calls",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 5588,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Same merge planned twice",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 5633,
+      "reactions": 0,
+      "title": "keep knowledge of ongoing merges across merge pipelines",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5722,
+      "reactions": 1,
+      "title": "Fix ingest error code when having control plane errors",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5758,
+      "reactions": 0,
+      "title": "Get count from split metadata on simple time range query",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5759,
+      "reactions": 0,
+      "title": "Optimize simple time ranged search queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5760,
+      "reactions": 0,
+      "title": "Remove timerange root search",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 4470,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Sequential merge prevent provoke back pressure on large index",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        },
+        {
+          "number": 4630,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Improve assignement of kafka source pipelines on several indexers ",
+          "unattributedComments": 0,
+          "uniqueCommenters": 3
+        },
+        {
+          "number": 5747,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Indexing scheduling unbalanced for Kafka source",
+          "unattributedComments": 0,
+          "uniqueCommenters": 5
+        }
+      ],
+      "number": 5808,
+      "reactions": 0,
+      "title": "Improve shard collocation while limiting to 3 pipelines per node",
+      "unattributedComments": 0,
+      "uniqueCommenters": 8,
+      "updatedAt": "2026-11-02T06:53:36+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5812,
+      "reactions": 0,
+      "title": "Fix typos in comments",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 5799,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Fix the object_storage_get_errors_total metric",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 5821,
+      "reactions": 0,
+      "title": "Reorganize object store metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-12-09T11:47:47+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5844,
+      "reactions": 0,
+      "title": "Update metric docs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-12-08T10:50:11+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3142,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Add sort_by examples in the docs",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 5846,
+      "reactions": 1,
+      "title": "Document sort order on search api",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5871,
+      "reactions": 0,
+      "title": "Changing method prototype in doc processor",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-23T13:16:06+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 4953,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "split_cache.max_file_descriptors parameter documentation",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 5894,
+      "reactions": 0,
+      "title": "Add missing max_file_descriptors option to split cache configuration",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-09-29T17:03:57+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 470,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Add a command to add a split file to an existing index.",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 5931,
+      "reactions": 0,
+      "title": "feat: https://github.com/quickwit-oss/quickwit/issues/470",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2025-10-11T03:51:24+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5957,
+      "reactions": 0,
+      "title": "Add composite aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T23:01:43+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 5985,
+      "reactions": 0,
+      "title": "add node_id to emited spans",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T23:01:16+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6007,
+      "reactions": 0,
+      "title": "Improve search error logs and metrics",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T23:00:46+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6013,
+      "reactions": 0,
+      "title": "Update dashboard and docs for split_search_outcome metric",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T23:00:43+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6015,
+      "reactions": 0,
+      "title": "UI editable config",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T23:00:41+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6088,
+      "reactions": 5,
+      "title": "fix(qw-search): TopHits aggregations because of unsupported OwnedValue deser with postcard",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-10-22T22:59:37+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6107,
+      "reactions": 0,
+      "title": "fix: Support datetime with timezone and with millis",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-04T18:12:24+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6196,
+      "reactions": 0,
+      "title": "fix: Properly shutdown quickwit-serve when subcomponents panic or otherwise error.",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-10-22T22:57:45+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6265,
+      "reactions": 0,
+      "title": "feat: add Nix flake with package, devShell, and NixOS module",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:56:36+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6309,
+      "reactions": 0,
+      "title": "Make fast-field normalizers truncate large token instead of dropping",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-10-22T22:55:50+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6331,
+      "reactions": 0,
+      "title": "Reduce mem usage lookups when indexing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:55:25+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6361,
+      "reactions": 0,
+      "title": "Use automaton for multi term query warmups",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:54:41+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3805,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "quickwit tool merge description might be inaccurate.",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 6438,
+      "reactions": 0,
+      "title": "fix(cli): correct merge command description",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:53:17+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 5664,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Add `drop_on_abort` option to VRL processing",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 6472,
+      "reactions": 1,
+      "title": "feat(vrl): add `drop_on_abort` option to VRL transform (#5664)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-10-27T19:17:57+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6487,
+      "reactions": 0,
+      "title": "fix(config): set MD5 checksums for DigitalOcean and GCS flavors since they don't support CRC32C, and explicitly set CRC32C for MinIO",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:52:20+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6491,
+      "reactions": 0,
+      "title": " KQL (Kibana Query Language) support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:52:16+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6523,
+      "reactions": 2,
+      "title": "feat(storage): add per-bucket S3 configuration via storage.s3.buckets",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4,
+      "updatedAt": "2026-11-12T08:24:04+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6561,
+      "reactions": 1,
+      "title": "feat(pulsar): support distributed indexing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:50:50+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6581,
+      "reactions": 0,
+      "title": "enforce retention at query time",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:50:30+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6585,
+      "reactions": 1,
+      "title": "control-plane: warn when the scheduler is stuck reapplying a non-converging plan",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-10-22T22:50:25+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6590,
+      "reactions": 0,
+      "title": "Add IPFS storage backend support",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-10-22T22:50:20+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6598,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "ingest v2: WAL truncation blocks persist/init_shards, causing ingest timeouts under load",
+          "unattributedComments": 0,
+          "uniqueCommenters": 3
+        }
+      ],
+      "number": 6599,
+      "reactions": 2,
+      "title": "ingest: batch WAL truncation in the shard-positions gossip handler",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-04T18:12:31+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6602,
+      "reactions": 1,
+      "title": "control-plane: rebuild the plan when the scheduler is stuck reapplying a non-converging plan",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-10-22T22:50:10+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6609,
+      "reactions": 1,
+      "title": "improve s3 retry log",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:50:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6618,
+      "reactions": 0,
+      "title": "use macro with cache to load env",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:49:59+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6622,
+      "reactions": 1,
+      "title": "Don't log NotFound as a critical error in delete_evicted_splits",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:49:54+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6629,
+      "reactions": 1,
+      "title": "Fix UI dependency vulnerabilities",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:49:52+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6635,
+      "reactions": 1,
+      "title": "fix(storage): skip caching splits larger than the split cache budget",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:49:44+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6647,
+      "reactions": 1,
+      "title": "indexing: label published split docs by publication type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-10-22T22:49:25+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6624,
+          "reactions": 1,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Support custom Azure Blob Storage endpoint / endpoint suffix for sovereign clouds",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 6666,
+      "reactions": 2,
+      "title": "fix: sovereign Azure storage token scopes for managed identity",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-04T18:12:40+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6672,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Azure: indexer fails with storage error(kind=Unauthorized) exactly 24h after startup when using Workload Identity",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 6687,
+      "reactions": 1,
+      "title": "fix(storage): re-read the Azure federated token file on every exchange",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-11-04T18:12:46+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6672,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Azure: indexer fails with storage error(kind=Unauthorized) exactly 24h after startup when using Workload Identity",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 6693,
+      "reactions": 2,
+      "title": "Migrate Azure blob storage to azure_storage_blob 1.0.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-04T18:12:52+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6719,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "MemorySizedCache could be leaking memory.",
+          "unattributedComments": 0,
+          "uniqueCommenters": 3
+        }
+      ],
+      "number": 6720,
+      "reactions": 2,
+      "title": "Take into account key size for MemorySizedCache",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:48:14+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6732,
+      "reactions": 2,
+      "title": "ui(deps): remove unused dep @testing-library/user-event",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:48:05+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6733,
+      "reactions": 2,
+      "title": "feat(ui): create index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:48:03+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3540,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "\"indices\" as alias for \"indexes\"",
+          "unattributedComments": 0,
+          "uniqueCommenters": 3
+        }
+      ],
+      "number": 6747,
+      "reactions": 1,
+      "title": "feat(api): indices as alias for indexes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:47:51+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3670,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Doc processing error with an object mapping and null value",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 6748,
+      "reactions": 2,
+      "title": "fix: ignore null objects",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-04T18:12:58+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6750,
+      "reactions": 2,
+      "title": "Preserve aggregation candidates during root merging",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:47:44+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 4266,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Add some examples of requests in the REST API reference docs",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 6751,
+      "reactions": 2,
+      "title": "docs(rest-api): add sort_by example",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:47:42+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6768,
+      "reactions": 4,
+      "title": "feat(indexer): drain indexing pipelines on planned teardowns",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-10-23T09:39:01+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6531,
+          "reactions": 3,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Persistent \"no open shard found on ingester\" after some indexer restart",
+          "unattributedComments": 0,
+          "uniqueCommenters": 5
+        }
+      ],
+      "number": 6769,
+      "reactions": 6,
+      "title": "Reset ingester shards periodically while running",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:47:20+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6676,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "doc_count_error_upper_bound is higher than necessary",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 6778,
+      "reactions": 2,
+      "title": "do not prune intermediate aggregation results at the root",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:47:10+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6494,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Reduce part size on Google Storage / Opendal",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 6779,
+      "reactions": 2,
+      "title": "reduce the multipart part size on the opendal backends",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:47:08+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6781,
+      "reactions": 1,
+      "title": "feat(storage): add split range disk cache",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:47:04+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6788,
+      "reactions": 1,
+      "title": "limit tag pruning to where it works",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:47:03+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6789,
+      "reactions": 1,
+      "title": "Skip split searches for match_none queries",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:47:01+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6786,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "OTLP record with `time_unix_nano: 0` is rejected with an empty `error_message`, and the response is JSON for a protobuf request",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 6801,
+      "reactions": 2,
+      "title": "fix(otlp): return application/x-protobuf response format on otlp endpoints",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-10-22T22:46:45+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6803,
+      "reactions": 6,
+      "title": "fix(metastore): keep the shard table entry of sources holding no shard",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:46:42+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6805,
+      "reactions": 0,
+      "title": "Support JSON subfields in list terms",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:46:38+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6811,
+      "reactions": 1,
+      "title": "Extract pipeline schedule logic from cooperative indexing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-02T13:20:37+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6813,
+      "reactions": 0,
+      "title": "Spread indexing pipelines behind an environment variable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-10T15:35:57+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6817,
+      "reactions": 1,
+      "title": "fix(datetime): parse `e` as the ISO day-of-week, Monday is 1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-11-04T18:13:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6818,
+      "reactions": 1,
+      "title": "Track affinity and retries on search_split_search_outcome metric",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:46:20+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6826,
+      "reactions": 1,
+      "title": "feat(storage): add conditional writes for compare-and-swap",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:46:05+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6828,
+      "reactions": 0,
+      "title": "Move indexer-specific gossip to gRPC",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:46:03+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6785,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Elasticsearch API: the `missing` sort option is ignored",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 6829,
+      "reactions": 1,
+      "title": "fix(es-api): reject unsupported sort missing values instead of ignoring them",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:46:01+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3967,
+          "reactions": 1,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "search_after on quickwit API",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 6830,
+      "reactions": 1,
+      "title": "Add search_after cursor paging to the native search API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:46:00+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6831,
+      "reactions": 1,
+      "title": "Make resource_attributes and span_status fast fields in otel-traces index",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:45:58+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6832,
+      "reactions": 1,
+      "title": "Load balancing for compactors",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:45:56+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6843,
+      "reactions": 0,
+      "title": "Add Parquet bulk load to `quickwit tool local-ingest`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-03T09:19:51+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6840,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "[bug] File-backed metastore holds the global state lock across a lazy index load, stalling unrelated metadata operations",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 6845,
+      "reactions": 1,
+      "title": "fix(metastore): do not hold the state guard across a lazy index load",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-11-04T18:13:11+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6842,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "[bug] ingest v2: `commit=wait_for` and `force` requests hang indefinitely when all documents are rejected, because the publish tracker waits for an already published position",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 6850,
+      "reactions": 1,
+      "title": "fix(ingest): do not track a persist that appended no record",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-11-04T18:13:17+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6784,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "An empty OTLP export is answered 500",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 6851,
+      "reactions": 1,
+      "title": "fix: Accept empty OTLP logs exports as a no-op",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:45:34+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6854,
+      "reactions": 1,
+      "title": "Track ingester shard queue size",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:45:31+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6857,
+      "reactions": 1,
+      "title": "fix(control-plane): do not hold the create-index reply for the plan rebuild",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-10-22T22:45:26+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6864,
+      "reactions": 2,
+      "title": "fix(ingest): Report sources without open shards in ingester persist responses",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-04T18:13:23+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6884,
+      "reactions": 1,
+      "title": "Use detailed mrecordlog responses; Add queue size tracking to ingester shard",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-27T18:02:04+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6885,
+      "reactions": 2,
+      "title": "Optimize HitSet seeking and counting",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:44:51+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6887,
+      "reactions": 0,
+      "title": "Publish ShardThroughputReadings for all shards; shared rate meter",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-29T16:30:47+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6889,
+      "reactions": 1,
+      "title": "Refactor BroadcastLocalShards task to use new shard readings",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-29T17:00:11+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6890,
+      "reactions": 0,
+      "title": "Shard scaling v2 feature flag",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-29T17:34:47+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6891,
+      "reactions": 0,
+      "title": "IndexerStateReporter task",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-02T16:35:49+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6894,
+      "reactions": 1,
+      "title": "Remove replication remnant in control plane",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:44:39+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6895,
+      "reactions": 0,
+      "title": "Refactor out legacy parts of ingest controller",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-09T16:48:15+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6896,
+      "reactions": 0,
+      "title": "Process indexing tasks from new RPC",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:44:36+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6897,
+      "reactions": 0,
+      "title": "New scaling controller and logic",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:44:34+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 5376,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Azure Managed Identity Support",
+          "unattributedComments": 0,
+          "uniqueCommenters": 3
+        }
+      ],
+      "number": 6900,
+      "reactions": 1,
+      "title": "feat(azure): add support for user-assigned azure managed identity",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:44:31+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6901,
+      "reactions": 2,
+      "title": "Cache regex and wildcard hitsets during warmup",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:44:29+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6909,
+      "reactions": 10,
+      "title": "feat: metastore recovery cli",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:44:17+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6672,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Azure: indexer fails with storage error(kind=Unauthorized) exactly 24h after startup when using Workload Identity",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 6910,
+      "reactions": 1,
+      "title": "Migrate Azure blob storage to the 1.0 Azure SDK",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-04T18:13:37+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6883,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Since 0.9, the S3 client negotiates HTTP/2 with GCS: one TCP connection per node, ~10x lower search throughput",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 6914,
+      "reactions": 2,
+      "title": "aws: use HTTP/1.1 for the S3 HTTP client to restore GCS throughput",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-10-22T22:44:07+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6916,
+      "reactions": 3,
+      "title": "Add node-wide indexing memory backpressure",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:44:03+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6922,
+      "reactions": 1,
+      "title": "Add datadog_v2 tokenizer with dot-separated parts",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T22:43:53+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6925,
+      "reactions": 2,
+      "title": "Track live heap bytes through the global allocator",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-03T15:44:00+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6927,
+      "reactions": 0,
+      "title": "Restore anonymous usage telemetry",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-09T19:24:02+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3696,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Update doc examples/tutorials using the dynamic mappings",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 6933,
+      "reactions": 1,
+      "title": "Update doc examples/tutorials using the dynamic mappings",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-23T01:13:17+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3717,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Add docs on tokenizers, filters and tokenizer API",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 6934,
+      "reactions": 1,
+      "title": "Add docs on tokenizers, filters and tokenizer API",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-23T01:12:50+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6950,
+      "reactions": 0,
+      "title": "build(deps): bump the npm-dependencies group across 1 directory with 31 updates",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-04T20:46:54+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6954,
+      "reactions": 1,
+      "title": "Refactor pipeline schedule",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-06T15:19:25+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6955,
+      "reactions": 2,
+      "title": "feat(api): allow creating an index without the default sources",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-28T17:22:51+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 5110,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Fix the way scores are combined in the elasticsearch API",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 6957,
+      "reactions": 2,
+      "title": "fix(search): honor multi_match scoring modes",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-28T23:23:39+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6962,
+      "reactions": 2,
+      "title": "Use Feuer Disk-Cache",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-12T10:22:14+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6963,
+      "reactions": 0,
+      "title": "Two phase commit init shards",
+      "unattributedComments": 0,
+      "uniqueCommenters": 4,
+      "updatedAt": "2026-11-09T17:20:44+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6977,
+      "reactions": 1,
+      "title": "build(deps): bump vrl from 0.37.0 to 0.38.0 in /quickwit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-11T14:05:37+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3205,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Quickwit UI index explorator takes space on small screens [quickwit-ui]",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 6979,
+      "reactions": 2,
+      "title": "feat(ui): make index explorer collapsible",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-02T14:31:04+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6982,
+      "reactions": 0,
+      "title": "Add best effort actor priority and make IndexSerializer high priority",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-10T13:29:31+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 6846,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "[bug] ingest v2: `ShardPositionsUpdate` has no publisher on nodes without the indexer or control-plane role",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 6984,
+      "reactions": 2,
+      "title": "fix: start shard publication tracking on every ingest router node",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-04T18:14:02+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6990,
+      "reactions": 0,
+      "title": "Enforce the warmup memory limit while warmup data is downloaded",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-10T14:04:02+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 864,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Repeated storage error messages",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 6992,
+      "reactions": 2,
+      "title": "fix(storage): stop repeating the error source in Display",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-06T15:15:57+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 6995,
+      "reactions": 2,
+      "title": "Build optimizations- reduce dependencies, better proto compilation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-09T17:07:09+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 7000,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Retention stops after deleting and recreating an index with the same ID",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 7001,
+      "reactions": 2,
+      "title": "Fix retention scheduling after index recreation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-11T07:41:37+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7005,
+      "reactions": 1,
+      "title": "Add a per-split warmup memory limit",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-10T15:41:30+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7010,
+      "reactions": 0,
+      "title": "Disable mmap dir fsync for indexers and compactors",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-11T23:12:38+00:00"
+    }
+  ],
+  "repository": "quickwit-oss/quickwit",
+  "schemaVersion": 1
+}

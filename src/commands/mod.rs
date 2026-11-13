@@ -9,16 +9,21 @@ pub mod fetch_automated_review_stats;
 pub mod fetch_discussions;
 pub mod fetch_issues;
 pub mod fetch_issue_interest;
+pub mod fetch_pr_interest;
 pub mod fetch_first_review;
 pub mod fetch_pr_contributors;
 pub mod fetch_labels;
 mod graphql_fetch;
+mod github_actor;
+mod interest;
+mod snapshots;
 pub mod generate_summaries;
 pub mod purge;
 pub mod push_metrics;
 pub mod remove_legacy_label;
 pub mod replace_label;
 pub mod workflows;
+pub mod save_backlog_history;
 
 /// Serialize snapshots with alphabetical object keys at every depth.
 pub(super) fn sorted_json(value: &impl Serialize) -> serde_json::Result<String> {

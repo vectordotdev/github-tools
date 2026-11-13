@@ -1,7 +1,7 @@
 //! Aggregate PR backlog by effective repository access. Never persist the roster.
 use super::{
-    fetch_first_review::{self, Actor},
-    graphql_fetch, sorted_json,
+    github_actor::{self, Actor},
+    graphql_fetch, snapshots,
 };
 use crate::config::Config;
 use anyhow::{Context, Result, ensure};
@@ -11,7 +11,6 @@ use serde::Serialize;
 use serde_json::{Value, json};
 use std::{
     collections::{BTreeMap, HashMap, HashSet},
-    fs,
     path::Path,
     process::Command,
 };
@@ -99,7 +98,7 @@ fn access(
 fn count(authors: &[Value], team: &HashSet<String>) -> Result<Counts> {
     let mut counts = Counts::default();
     for author in authors {
-        match fetch_first_review::actor(author)? {
+        match github_actor::actor(author)? {
             Actor::Bot => counts.bots += 1,
             Actor::Unknown => counts.unknown += 1,
             Actor::Human(login) if team.contains(&login) => counts.team += 1,
@@ -144,21 +143,12 @@ fn saved_authors(value: &Value) -> Result<Vec<Value>> {
     }
     Ok(authors)
 }
-fn history(path: &str) -> Result<Vec<Saved>> {
-    // Only real path-affecting commits; no event-based reconstruction or filled dates.
-    let log = String::from_utf8(git(&[
-        "log",
-        "-100",
-        "--format=%H %cI",
-        "HEAD",
-        "--",
-        path,
-    ])?)?;
+fn history(path: &str, config: &Config) -> Result<Vec<Saved>> {
+    let revisions = super::save_backlog_history::issue_revisions(config)?;
     let mut cache: HashMap<String, Option<SavedYear>> = HashMap::new();
     let mut days = BTreeMap::new();
-    for line in log.lines() {
-        let (sha, date) = line.split_once(' ').context("Invalid history revision")?;
-        let at = DateTime::parse_from_rfc3339(date)?
+    for (sha, date) in revisions {
+        let at = DateTime::parse_from_rfc3339(&date)?
             .with_timezone(&Utc)
             .to_rfc3339();
         if days
@@ -167,7 +157,7 @@ fn history(path: &str) -> Result<Vec<Saved>> {
         {
             continue;
         }
-        let tree = String::from_utf8(git(&["ls-tree", "-r", sha, "--", path])?)?;
+        let tree = String::from_utf8(git(&["ls-tree", "-r", &sha, "--", path])?)?;
         let mut all = Vec::new();
         let mut complete = false;
         let mut numbers = HashSet::new();
@@ -340,20 +330,20 @@ fn collect(
 
 pub fn run(config: &Config) -> Result<()> {
     let root = Path::new("data").join(format!("{}_{}", config.org, config.repo));
-    let saved = history(root.join("issues").to_str().context("Invalid data path")?)?;
+    let saved = history(
+        root.join("issues").to_str().context("Invalid data path")?,
+        config,
+    )?;
     let client = Client::new();
     let snapshot = collect(config, &saved, |q, v| {
         if q.starts_with("query{") {
-            fetch_first_review::request_accounts(&client, config, q)
+            graphql_fetch::request_accounts(&client, config, q)
         } else {
-            fetch_first_review::request(&client, config, q, v)
+            graphql_fetch::request_authenticated(&client, config, q, v)
         }
     })?;
     let directory = root.join("pr-contributors");
-    fs::create_dir_all(&directory)?;
-    let temp = directory.join("latest.json.tmp");
-    fs::write(&temp, sorted_json(&snapshot)?)?;
-    fs::rename(temp, directory.join("latest.json"))?;
+    snapshots::save_latest(&directory, &snapshot)?;
     let counts = snapshot
         .points
         .last()
@@ -374,6 +364,7 @@ pub fn run(config: &Config) -> Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::commands::sorted_json;
     use graphql_fetch::test_support::{config, page};
     fn human(login: &str) -> Value {
         json!({"__typename":"User","login":login})

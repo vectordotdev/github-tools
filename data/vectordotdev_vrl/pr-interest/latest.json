@@ -1,0 +1,358 @@
+{
+  "collectedAt": "2026-11-12T14:59:50.229203+00:00",
+  "excludedDrafts": 13,
+  "openPrs": 42,
+  "prs": [
+    {
+      "linkedIssues": [],
+      "number": 1051,
+      "reactions": 0,
+      "title": "Add optional argument forcing syslog parcing to one of both RFCs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-06-16T13:30:50+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 1139,
+          "reactions": 0,
+          "repository": "vectordotdev/vrl",
+          "state": "OPEN",
+          "title": "Fold enumeration function",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 1192,
+      "reactions": 0,
+      "title": "feat(stdlib): add fold function",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-07-01T14:11:16+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1334,
+      "reactions": 0,
+      "title": "enhancement(match_datadog_query): add is_phrase flag to equals method",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-06-16T13:15:06+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1349,
+      "reactions": 1,
+      "title": "performance(runtime)!: Copy-on-Write value optimization",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-06-12T14:25:42+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1399,
+      "reactions": 0,
+      "title": "fix(type system): Fix function closures not correctly updating `TypeState`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-04-17T18:29:38+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1504,
+      "reactions": 0,
+      "title": "feat(operators): Add AND, OR, and NOT bitwise operators",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2025-09-27T15:10:57+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1614,
+      "reactions": 1,
+      "title": "enhancement(stdlib): add IPv4-mapped IPv6 support to ip_cidr_contains",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-06-16T13:15:03+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1641,
+      "reactions": 0,
+      "title": "feat(vrl): add AES-GCM support to encrypt/decrypt functions",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-07-01T17:38:50+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 755,
+          "reactions": 0,
+          "repository": "vectordotdev/vrl",
+          "state": "OPEN",
+          "title": "parse_json - differs parsing floats",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        },
+        {
+          "number": 1503,
+          "reactions": 2,
+          "repository": "vectordotdev/vrl",
+          "state": "OPEN",
+          "title": "Provide `arbitrary_precision` option for `serde_json` float conversions",
+          "unattributedComments": 0,
+          "uniqueCommenters": 5
+        }
+      ],
+      "number": 1656,
+      "reactions": 0,
+      "title": "feat(parse json): add arbitrary_precision for serde_json",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-02-24T15:21:59+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1783,
+      "reactions": 0,
+      "title": "chore(releasing): publish to crates.io after prep PR is merged",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-05-28T19:49:09+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1803,
+      "reactions": 0,
+      "title": "chore(stdlib): Resolve bool and int constants during compilation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-06-12T14:42:57+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1814,
+      "reactions": 0,
+      "title": "fix(tests): Fix return values for stdlib benchmarks",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-06-16T17:20:03+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1816,
+      "reactions": 1,
+      "title": "feat(stdlib): Add support for parsing nginx error_log_tag",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-07-17T18:30:39+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1817,
+      "reactions": 1,
+      "title": "fix(stdlib): pop also removes last item from type definition",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-06-17T18:25:24+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 1638,
+          "reactions": 0,
+          "repository": "vectordotdev/vrl",
+          "state": "OPEN",
+          "title": "`Function::return_kind` should be checked",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 1818,
+      "reactions": 1,
+      "title": "chore(tests): checks function return type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-06-15T14:09:42+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1825,
+      "reactions": 1,
+      "title": "perf(value): back KeyString with SmolStr for zero-alloc inline key storage",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-06-18T21:10:40+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 1824,
+          "reactions": 0,
+          "repository": "vectordotdev/vrl",
+          "state": "OPEN",
+          "title": "datadog_filter: wildcard_regex fails to match strings with trailing newline",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 1855,
+      "reactions": 1,
+      "title": "fix(datadog_filter): make wildcard regexes match across newlines",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-07-09T00:17:14+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1865,
+      "reactions": 1,
+      "title": "chore(compiler): speed up typecheck for deep else-if ladders (remove quadratic complexity)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-08-07T22:49:39+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1894,
+      "reactions": 1,
+      "title": "fix(tests): support Windows path separators in vrl-tests",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0,
+      "updatedAt": "2026-08-11T13:04:15+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 1895,
+      "reactions": 1,
+      "title": "chore(compiler): perf speedup through type-state sharing",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-22T07:23:12+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 1960,
+          "reactions": 1,
+          "repository": "vectordotdev/vrl",
+          "state": "OPEN",
+          "title": "feat(compiler): support first-class for loops with break and continue",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 1952,
+      "reactions": 1,
+      "title": "feat(compiler): implement first-class for loops",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-10T21:13:09+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 865,
+          "reactions": 0,
+          "repository": "vectordotdev/vrl",
+          "state": "OPEN",
+          "title": "Add `encode_xml` function",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 1982,
+      "reactions": 1,
+      "title": "feat(stdlib): add encode_xml",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-10-09T15:19:47+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2006,
+      "reactions": 3,
+      "title": "enhancement(value): store objects in a sorted vector with inline keys",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-10-30T18:17:05+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2032,
+      "reactions": 2,
+      "title": "enhancement(compiler): cache structurally-constant object literals",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-11T09:17:35+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 127,
+          "reactions": 2,
+          "repository": "vectordotdev/vrl",
+          "state": "OPEN",
+          "title": "Allow specification of multiple timestamp formats to parse_timestamp",
+          "unattributedComments": 0,
+          "uniqueCommenters": 4
+        },
+        {
+          "number": 503,
+          "reactions": 0,
+          "repository": "vectordotdev/vrl",
+          "state": "OPEN",
+          "title": "Add formats parameter to parse_timestamp",
+          "unattributedComments": 0,
+          "uniqueCommenters": 2
+        }
+      ],
+      "number": 2036,
+      "reactions": 3,
+      "title": "enhancement(stdlib): accept an array of formats in parse_timestamp",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-04T01:36:33+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2037,
+      "reactions": 3,
+      "title": "enhancement(stdlib): fold constant `get` value arguments at compile time",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-11T11:23:48+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2044,
+      "reactions": 3,
+      "title": "enhancement(value): avoid allocating existing ancestor keys during insertion",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-11T20:23:42+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2046,
+      "reactions": 3,
+      "title": "chore: bump Rust toolchain to 1.99.1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-12T14:59:33+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2047,
+      "reactions": 2,
+      "title": "chore(ci): only fail deny on new errors and add daily scans",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-12T14:58:19+00:00"
+    }
+  ],
+  "repository": "vectordotdev/vrl",
+  "schemaVersion": 1
+}

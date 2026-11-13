@@ -3,9 +3,9 @@ use clap::{Parser, Subcommand};
 use github_tools::{
     commands::{
         build_db, close_old_prs, compact, delete_stale_branches, fetch_automated_review_stats,
-        fetch_discussions, fetch_first_review, fetch_pr_contributors, fetch_issue_interest, fetch_issues, fetch_labels,
+        fetch_discussions, fetch_first_review, fetch_pr_contributors, fetch_issue_interest, fetch_pr_interest, fetch_issues, fetch_labels,
         generate_charts, generate_summaries, purge, push_metrics, remove_legacy_label, replace_label,
-        workflows,
+        workflows, save_backlog_history,
     },
     config::{Config, Repo},
 };
@@ -24,6 +24,11 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
+    /// Save compact backlog history from local Git snapshots (no network credentials needed)
+    SaveBacklogHistory {
+        #[arg(long)]
+        repo: String,
+    },
     /// Snapshot Team & Community PR backlog using effective repository permissions
     FetchPrContributors {
         #[arg(long)]
@@ -56,6 +61,13 @@ enum Command {
     },
     /// Snapshot open issues ranked by reactions and distinct commenters
     FetchIssueInterest {
+        #[arg(long)]
+        repo: String,
+        #[arg(long)]
+        env_file: Option<String>,
+    },
+    /// Snapshot open non-draft PR interest including explicitly linked issues
+    FetchPrInterest {
         #[arg(long)]
         repo: String,
         #[arg(long)]
@@ -345,6 +357,7 @@ fn main() -> Result<()> {
     let cli = Cli::parse();
 
     match cli.command {
+        Command::SaveBacklogHistory { repo } => save_backlog_history::run(&Config::for_repo(&Repo::parse(&repo)?)),
         Command::FetchPrContributors { repo, env_file } => {
             let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
             fetch_pr_contributors::run(&config)
@@ -359,7 +372,12 @@ fn main() -> Result<()> {
         }
         Command::FetchIssues { repo, env_file, since } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
-            fetch_issues::run(&config, since.as_deref())
+            fetch_issues::run(&config, since.as_deref())?;
+            save_backlog_history::run(&config)
+        }
+        Command::FetchPrInterest { repo, env_file } => {
+            let config = Config::load_with_optional_token(&Repo::parse(&repo)?, env_file.as_deref())?;
+            fetch_pr_interest::run(&config)
         }
         Command::FetchIssueInterest { repo, env_file } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
@@ -367,7 +385,8 @@ fn main() -> Result<()> {
         }
         Command::FetchDiscussions { repo, env_file, since } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
-            fetch_discussions::run(&config, since.as_deref())
+            fetch_discussions::run(&config, since.as_deref())?;
+            save_backlog_history::run(&config)
         }
         Command::BuildDb { input, repo, env_file } => {
             let config = Config::load(&Repo::parse(&repo)?, env_file.as_deref())?;
