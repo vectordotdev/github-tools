@@ -1,7 +1,7 @@
 {
-  "collectedAt": "2026-11-13T15:01:29.986009+00:00",
-  "excludedDrafts": 43,
-  "openPrs": 181,
+  "collectedAt": "2026-11-20T14:24:53.711871+00:00",
+  "excludedDrafts": 42,
+  "openPrs": 177,
   "prs": [
     {
       "linkedIssues": [],
@@ -610,49 +610,12 @@
     },
     {
       "linkedIssues": [],
-      "number": 6585,
-      "reactions": 1,
-      "title": "control-plane: warn when the scheduler is stuck reapplying a non-converging plan",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-10-22T22:50:25+00:00"
-    },
-    {
-      "linkedIssues": [],
       "number": 6590,
       "reactions": 0,
       "title": "Add IPFS storage backend support",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
       "updatedAt": "2026-10-22T22:50:20+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 6598,
-          "reactions": 0,
-          "repository": "quickwit-oss/quickwit",
-          "state": "OPEN",
-          "title": "ingest v2: WAL truncation blocks persist/init_shards, causing ingest timeouts under load",
-          "unattributedComments": 0,
-          "uniqueCommenters": 3
-        }
-      ],
-      "number": 6599,
-      "reactions": 2,
-      "title": "ingest: batch WAL truncation in the shard-positions gossip handler",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-11-04T18:12:31+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 6602,
-      "reactions": 1,
-      "title": "control-plane: rebuild the plan when the scheduler is stuck reapplying a non-converging plan",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-10-22T22:50:10+00:00"
     },
     {
       "linkedIssues": [],
@@ -822,25 +785,6 @@
       "updatedAt": "2026-10-22T22:47:51+00:00"
     },
     {
-      "linkedIssues": [
-        {
-          "number": 3670,
-          "reactions": 0,
-          "repository": "quickwit-oss/quickwit",
-          "state": "OPEN",
-          "title": "Doc processing error with an object mapping and null value",
-          "unattributedComments": 0,
-          "uniqueCommenters": 2
-        }
-      ],
-      "number": 6748,
-      "reactions": 2,
-      "title": "fix: ignore null objects",
-      "unattributedComments": 0,
-      "uniqueCommenters": 3,
-      "updatedAt": "2026-11-04T18:12:58+00:00"
-    },
-    {
       "linkedIssues": [],
       "number": 6750,
       "reactions": 2,
@@ -875,26 +819,7 @@
       "title": "feat(indexer): drain indexing pipelines on planned teardowns",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-23T09:39:01+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 6531,
-          "reactions": 3,
-          "repository": "quickwit-oss/quickwit",
-          "state": "OPEN",
-          "title": "Persistent \"no open shard found on ingester\" after some indexer restart",
-          "unattributedComments": 0,
-          "uniqueCommenters": 5
-        }
-      ],
-      "number": 6769,
-      "reactions": 6,
-      "title": "Reset ingester shards periodically while running",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-10-22T22:47:20+00:00"
+      "updatedAt": "2026-11-16T11:01:24+00:00"
     },
     {
       "linkedIssues": [
@@ -931,8 +856,8 @@
       "reactions": 2,
       "title": "reduce the multipart part size on the opendal backends",
       "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-13T02:36:11+00:00"
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-19T21:21:26+00:00"
     },
     {
       "linkedIssues": [],
@@ -1005,16 +930,16 @@
       "title": "Extract pipeline schedule logic from cooperative indexing",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-02T13:20:37+00:00"
+      "updatedAt": "2026-11-17T14:02:47+00:00"
     },
     {
       "linkedIssues": [],
       "number": 6813,
       "reactions": 0,
-      "title": "Spread indexing pipelines behind an environment variable",
+      "title": "Spread indexing pipelines",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-10T15:35:57+00:00"
+      "updatedAt": "2026-11-18T21:38:26+00:00"
     },
     {
       "linkedIssues": [],
@@ -1212,15 +1137,6 @@
     },
     {
       "linkedIssues": [],
-      "number": 6885,
-      "reactions": 1,
-      "title": "Optimize HitSet seeking and counting",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-13T14:54:56+00:00"
-    },
-    {
-      "linkedIssues": [],
       "number": 6887,
       "reactions": 0,
       "title": "Publish ShardThroughputReadings for all shards; shared rate meter",
@@ -1313,11 +1229,11 @@
     {
       "linkedIssues": [],
       "number": 6901,
-      "reactions": 2,
+      "reactions": 1,
       "title": "Cache regex and wildcard hitsets during warmup",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-13T14:50:58+00:00"
+      "updatedAt": "2026-11-17T15:42:48+00:00"
     },
     {
       "linkedIssues": [],
@@ -1326,7 +1242,7 @@
       "title": "feat: metastore recovery cli",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-22T22:44:17+00:00"
+      "updatedAt": "2026-11-16T11:00:21+00:00"
     },
     {
       "linkedIssues": [
@@ -1396,11 +1312,11 @@
     {
       "linkedIssues": [],
       "number": 6927,
-      "reactions": 0,
+      "reactions": 1,
       "title": "Restore anonymous usage telemetry",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T19:55:16+00:00"
+      "updatedAt": "2026-11-19T20:11:30+00:00"
     },
     {
       "linkedIssues": [
@@ -1442,24 +1358,6 @@
     },
     {
       "linkedIssues": [],
-      "number": 6950,
-      "reactions": 0,
-      "title": "build(deps): bump the npm-dependencies group across 1 directory with 31 updates",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-04T20:46:54+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 6954,
-      "reactions": 1,
-      "title": "Refactor pipeline schedule",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-06T15:19:25+00:00"
-    },
-    {
-      "linkedIssues": [],
       "number": 6955,
       "reactions": 2,
       "title": "feat(api): allow creating an index without the default sources",
@@ -1488,30 +1386,12 @@
     },
     {
       "linkedIssues": [],
-      "number": 6962,
-      "reactions": 2,
-      "title": "Use Feuer Disk-Cache",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-11-13T12:59:26+00:00"
-    },
-    {
-      "linkedIssues": [],
       "number": 6963,
       "reactions": 0,
       "title": "Two phase commit init shards",
       "unattributedComments": 0,
       "uniqueCommenters": 4,
-      "updatedAt": "2026-11-09T17:20:44+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 6977,
-      "reactions": 1,
-      "title": "build(deps): bump vrl from 0.37.0 to 0.38.0 in /quickwit",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-11-11T14:05:37+00:00"
+      "updatedAt": "2026-11-18T21:18:01+00:00"
     },
     {
       "linkedIssues": [
@@ -1531,15 +1411,6 @@
       "unattributedComments": 0,
       "uniqueCommenters": 1,
       "updatedAt": "2026-11-02T14:31:04+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 6982,
-      "reactions": 0,
-      "title": "Add best effort actor priority and make IndexSerializer high priority",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-10T13:29:31+00:00"
     },
     {
       "linkedIssues": [
@@ -1562,12 +1433,12 @@
     },
     {
       "linkedIssues": [],
-      "number": 6990,
-      "reactions": 0,
-      "title": "Enforce the warmup memory limit while warmup data is downloaded",
+      "number": 6985,
+      "reactions": 1,
+      "title": "Reduce Memory Consumption - Streaming Coalescing in Quickwit ",
       "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-10T14:04:02+00:00"
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-18T15:21:14+00:00"
     },
     {
       "linkedIssues": [
@@ -1600,48 +1471,130 @@
     {
       "linkedIssues": [
         {
-          "number": 7000,
+          "number": 4314,
           "reactions": 0,
           "repository": "quickwit-oss/quickwit",
           "state": "OPEN",
-          "title": "Retention stops after deleting and recreating an index with the same ID",
+          "title": "Use tags and service name to derive a process ID in the jaeger REST API",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 7014,
+      "reactions": 2,
+      "title": "fix(jaeger): derive process IDs from service name and tags",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-15T02:54:17+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7017,
+      "reactions": 8,
+      "title": "feat(indexers): add vrl support for otel source input ",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T15:29:17+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7022,
+      "reactions": 1,
+      "title": "Bump tantivy to 787168c77",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T13:00:01+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7027,
+      "reactions": 1,
+      "title": "Make scaling arbiter configurable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T22:52:59+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7028,
+      "reactions": 0,
+      "title": "Add step amount for shard downscaling",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-18T20:20:54+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7030,
+      "reactions": 1,
+      "title": "search: add counting download bytes by data type",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T23:39:24+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7031,
+      "reactions": 1,
+      "title": "Stream automaton postings and debounce matching reads",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-20T07:14:39+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7034,
+      "reactions": 0,
+      "title": "Make scaling permits configurable, refactor",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-18T22:06:01+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7036,
+      "reactions": 1,
+      "title": "ci: move Dockerfile to Debian trixie",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-18T19:03:51+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7037,
+      "reactions": 1,
+      "title": "ci: cover /distribution/docker/ubuntu with Dependabot docker updates",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-18T19:01:39+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 7038,
+      "reactions": 0,
+      "title": "Per-source shard cap",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-18T20:09:44+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 7039,
+          "reactions": 0,
+          "repository": "quickwit-oss/quickwit",
+          "state": "OPEN",
+          "title": "Backlogged Kafka indexing pipelines can stall checkpoint publication on other pipelines",
           "unattributedComments": 0,
           "uniqueCommenters": 0
         }
       ],
-      "number": 7001,
+      "number": 7040,
       "reactions": 2,
-      "title": "Fix retention scheduling after index recreation",
-      "unattributedComments": 0,
-      "uniqueCommenters": 3,
-      "updatedAt": "2026-11-13T10:03:41+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 7005,
-      "reactions": 1,
-      "title": "Add a per-split warmup memory limit",
+      "title": "Yield between DocProcessor batches",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-10T15:41:30+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 7010,
-      "reactions": 0,
-      "title": "Disable mmap dir fsync for indexers and compactors",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-11T23:12:38+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 7011,
-      "reactions": 1,
-      "title": "Validate metastore configs when loading node config",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-13T09:06:48+00:00"
+      "updatedAt": "2026-11-19T03:39:55+00:00"
     }
   ],
   "repository": "quickwit-oss/quickwit",

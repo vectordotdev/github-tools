@@ -5543,7 +5543,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T20:22:03Z",
     "created_at": "2025-02-06T23:42:24Z",
     "id": 2836853928,
     "issue_type": "Bug",
@@ -5562,9 +5562,9 @@
       }
     ],
     "number": 22379,
-    "state": "open",
+    "state": "closed",
     "title": "Splunk integration tests are failing",
-    "updated_at": "2026-07-08T17:55:15Z",
+    "updated_at": "2026-11-17T20:22:03Z",
     "user": {
       "login": "pront"
     }
@@ -8936,13 +8936,19 @@
         "description": "Anything `opentelemetry` sink related",
         "id": 2424438130306630529,
         "name": "sink:opentelemetry"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 22550,
     "pull_request": {},
     "state": "open",
     "title": "feat(sink): add opentelemetry metrics support",
-    "updated_at": "2026-03-16T14:24:37Z",
+    "updated_at": "2026-11-19T20:53:07Z",
     "user": {
       "login": "brittonhayes"
     }
@@ -11893,13 +11899,19 @@
         "description": "Anything related to core crates i.e. vector-core, core-common, etc",
         "id": 6154848213855315177,
         "name": "domain:core"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 22693,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(vrl): Update to use VRL with Copy-on-Write optimization",
-    "updated_at": "2025-10-24T19:30:11Z",
+    "updated_at": "2026-11-19T20:53:26Z",
     "user": {
       "login": "Zettroke"
     }
@@ -17355,13 +17367,19 @@
         "description": "Anything related to Vector's sources",
         "id": 2021938762883471635,
         "name": "domain:sources"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 22963,
     "pull_request": {},
     "state": "open",
     "title": "feat(opentelemetry source): Add JSON support",
-    "updated_at": "2025-11-17T21:01:24Z",
+    "updated_at": "2026-11-19T20:53:48Z",
     "user": {
       "login": "fbs"
     }
@@ -18539,7 +18557,7 @@
     "number": 23029,
     "state": "open",
     "title": "InvalidRequest error when using S3 sink to CloudFlare R2",
-    "updated_at": "2026-05-29T23:26:13Z",
+    "updated_at": "2026-11-19T12:30:28Z",
     "user": {
       "login": "fahminlb33"
     }
@@ -19519,13 +19537,19 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain:external docs"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 23079,
     "pull_request": {},
     "state": "open",
     "title": "feat(aws_s3 source): separate s3 and sqs auth",
-    "updated_at": "2026-03-16T14:24:37Z",
+    "updated_at": "2026-11-19T20:53:12Z",
     "user": {
       "login": "sonnens"
     }
@@ -21278,13 +21302,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 23168,
     "pull_request": {},
     "state": "open",
     "title": "feat(sinks): Loki Sink supports setting requests of persistent connection",
-    "updated_at": "2026-11-07T03:27:11Z",
+    "updated_at": "2026-11-19T20:55:37Z",
     "user": {
       "login": "tiantangkuohai"
     }
@@ -21737,13 +21767,19 @@
         "description": "Anything related to Vector's transform components",
         "id": 4876837993745139454,
         "name": "domain:transforms"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 23190,
     "pull_request": {},
     "state": "open",
     "title": "feat(aggregate): Add option to control interval",
-    "updated_at": "2025-07-10T15:43:11Z",
+    "updated_at": "2026-11-19T20:54:04Z",
     "user": {
       "login": "rcassetta-figma"
     }
@@ -24983,13 +25019,19 @@
         "description": "Anything `http_client` source related",
         "id": 342413324656510975,
         "name": "source:http_client"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 23339,
     "pull_request": {},
     "state": "open",
     "title": "feat(http_client source): #23338 Enable AWS authentication for the http_client source.",
-    "updated_at": "2026-03-21T13:51:59Z",
+    "updated_at": "2026-11-19T20:54:17Z",
     "user": {
       "login": "johannesfloriangeiger"
     }
@@ -35710,13 +35752,19 @@
         "description": "Anything `internal_metrics` source related",
         "id": 5016304788044877220,
         "name": "source:internal_metrics"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 23793,
     "pull_request": {},
     "state": "open",
     "title": "feat(internal_metrics source): expose topology connections as metrics",
-    "updated_at": "2026-05-24T22:32:26Z",
+    "updated_at": "2026-11-19T20:56:07Z",
     "user": {
       "login": "elohmeier"
     }
@@ -40370,6 +40418,12 @@
         "name": "transform:aggregate"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -40380,7 +40434,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(aggregate transform): Add Distribution as an aggregation mode",
-    "updated_at": "2026-10-28T11:50:31Z",
+    "updated_at": "2026-11-19T20:55:04Z",
     "user": {
       "login": "jlambatl"
     }
@@ -41562,13 +41616,19 @@
         "description": "Anything related to Vector's codecs (encoding/decoding)",
         "id": 24217296173635418,
         "name": "domain:codecs"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24043,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(codecs): add influx line protocol serializer",
-    "updated_at": "2026-03-16T14:24:37Z",
+    "updated_at": "2026-11-19T20:55:17Z",
     "user": {
       "login": "elohmeier"
     }
@@ -41611,6 +41671,12 @@
         "name": "source:new"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -41621,7 +41687,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(new source): Add ODBC source implementation",
-    "updated_at": "2026-09-11T07:33:18Z",
+    "updated_at": "2026-11-19T20:56:24Z",
     "user": {
       "login": "powerumc"
     }
@@ -42689,7 +42755,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T20:24:12Z",
     "created_at": "2025-10-27T18:52:05Z",
     "id": 3558163089,
     "issue_type": "Task",
@@ -42702,9 +42768,9 @@
       }
     ],
     "number": 24089,
-    "state": "open",
+    "state": "closed",
     "title": "Provide pre-push hook for external contributors",
-    "updated_at": "2025-10-27T18:52:18Z",
+    "updated_at": "2026-11-17T20:25:57Z",
     "user": {
       "login": "pront"
     }
@@ -43345,13 +43411,19 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain:external docs"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24116,
     "pull_request": {},
     "state": "open",
     "title": "fix(incremental_to_absolute transform): fix LRU cache memory handling and emit cache metrics",
-    "updated_at": "2026-03-16T14:24:37Z",
+    "updated_at": "2026-11-19T20:56:37Z",
     "user": {
       "login": "GreyLilac09"
     }
@@ -47358,13 +47430,19 @@
         "description": "Anything `gcp` service provider related",
         "id": 5970174565153215818,
         "name": "provider:gcp"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24278,
     "pull_request": {},
     "state": "open",
     "title": "fix(gcp_pubsub source): fix metrics, shutdown behavior, re-enable IT tests",
-    "updated_at": "2026-07-27T22:29:06Z",
+    "updated_at": "2026-11-19T20:55:42Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -47387,13 +47465,19 @@
         "description": "Anything related to core crates i.e. vector-core, core-common, etc",
         "id": 6154848213855315177,
         "name": "domain:core"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24279,
     "pull_request": {},
     "state": "open",
     "title": "fix(core): handle errors from Partitioner",
-    "updated_at": "2026-02-25T22:19:12Z",
+    "updated_at": "2026-11-19T20:59:28Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -49552,6 +49636,12 @@
         "name": "domain:external docs"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "605f58",
         "description": "The documentation team reviews PRs only after a PR is approved by the COSE team.",
         "id": 6102271970520709555,
@@ -49562,7 +49652,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(file source): improve change detection for rarely modified files",
-    "updated_at": "2026-07-07T16:11:35Z",
+    "updated_at": "2026-11-19T20:55:59Z",
     "user": {
       "login": "htrendev"
     }
@@ -49661,13 +49751,19 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain:external docs"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24380,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(statsd source): add support for Unix datagram sockets in statsd source",
-    "updated_at": "2026-05-24T22:32:08Z",
+    "updated_at": "2026-11-19T20:59:46Z",
     "user": {
       "login": "ianneub"
     }
@@ -49696,13 +49792,19 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain:external docs"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24381,
     "pull_request": {},
     "state": "open",
     "title": "feat(clickhouse sink): add DNS auto-resolution for load balancing",
-    "updated_at": "2026-05-24T22:32:06Z",
+    "updated_at": "2026-11-19T21:01:39Z",
     "user": {
       "login": "sebinsunny"
     }
@@ -49725,13 +49827,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24382,
     "pull_request": {},
     "state": "open",
     "title": "fix(aws_kinesis_streams sink): metrics with partial failure retry exhausted",
-    "updated_at": "2026-05-24T22:32:04Z",
+    "updated_at": "2026-11-19T20:56:11Z",
     "user": {
       "login": "lht"
     }
@@ -49985,7 +50093,7 @@
     "number": 24395,
     "state": "open",
     "title": "aws_kinesis_streams: Support KPL Style Aggregation",
-    "updated_at": "2026-06-12T15:36:26Z",
+    "updated_at": "2026-11-18T18:36:02Z",
     "user": {
       "login": "lht"
     }
@@ -50341,13 +50449,19 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain:external docs"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 24412,
     "pull_request": {},
     "state": "open",
     "title": "feat(clickhouse sink): add multi-endpoint support with load balancing",
-    "updated_at": "2026-09-30T22:50:47Z",
+    "updated_at": "2026-11-19T20:59:58Z",
     "user": {
       "login": "pinylin"
     }

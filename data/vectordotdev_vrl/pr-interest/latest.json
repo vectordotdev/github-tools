@@ -1,7 +1,7 @@
 {
-  "collectedAt": "2026-11-13T14:59:15.725440+00:00",
-  "excludedDrafts": 13,
-  "openPrs": 40,
+  "collectedAt": "2026-11-20T14:23:25.015732+00:00",
+  "excludedDrafts": 14,
+  "openPrs": 53,
   "prs": [
     {
       "linkedIssues": [],
@@ -65,7 +65,7 @@
       "title": "feat(operators): Add AND, OR, and NOT bitwise operators",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2025-09-27T15:10:57+00:00"
+      "updatedAt": "2026-11-19T18:29:59+00:00"
     },
     {
       "linkedIssues": [],
@@ -74,7 +74,7 @@
       "title": "enhancement(stdlib): add IPv4-mapped IPv6 support to ip_cidr_contains",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-06-16T13:15:03+00:00"
+      "updatedAt": "2026-11-19T18:30:07+00:00"
     },
     {
       "linkedIssues": [],
@@ -83,7 +83,7 @@
       "title": "feat(vrl): add AES-GCM support to encrypt/decrypt functions",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-07-01T17:38:50+00:00"
+      "updatedAt": "2026-11-19T18:30:16+00:00"
     },
     {
       "linkedIssues": [
@@ -111,7 +111,7 @@
       "title": "feat(parse json): add arbitrary_precision for serde_json",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-02-24T15:21:59+00:00"
+      "updatedAt": "2026-11-19T18:30:24+00:00"
     },
     {
       "linkedIssues": [],
@@ -120,7 +120,7 @@
       "title": "chore(releasing): publish to crates.io after prep PR is merged",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-05-28T19:49:09+00:00"
+      "updatedAt": "2026-11-19T18:30:38+00:00"
     },
     {
       "linkedIssues": [],
@@ -129,7 +129,7 @@
       "title": "chore(stdlib): Resolve bool and int constants during compilation",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-06-12T14:42:57+00:00"
+      "updatedAt": "2026-11-19T18:30:45+00:00"
     },
     {
       "linkedIssues": [],
@@ -147,7 +147,7 @@
       "title": "feat(stdlib): Add support for parsing nginx error_log_tag",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-07-17T18:30:39+00:00"
+      "updatedAt": "2026-11-19T18:31:00+00:00"
     },
     {
       "linkedIssues": [],
@@ -175,7 +175,7 @@
       "title": "chore(tests): checks function return type",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-06-15T14:09:42+00:00"
+      "updatedAt": "2026-11-19T18:31:08+00:00"
     },
     {
       "linkedIssues": [],
@@ -184,7 +184,7 @@
       "title": "perf(value): back KeyString with SmolStr for zero-alloc inline key storage",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-06-18T21:10:40+00:00"
+      "updatedAt": "2026-11-19T18:31:23+00:00"
     },
     {
       "linkedIssues": [
@@ -212,7 +212,7 @@
       "title": "chore(compiler): speed up typecheck for deep else-if ladders (remove quadratic complexity)",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-08-07T22:49:39+00:00"
+      "updatedAt": "2026-11-19T18:31:35+00:00"
     },
     {
       "linkedIssues": [],
@@ -230,7 +230,7 @@
       "title": "chore(compiler): perf speedup through type-state sharing",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-22T07:23:12+00:00"
+      "updatedAt": "2026-11-19T18:31:50+00:00"
     },
     {
       "linkedIssues": [
@@ -277,7 +277,7 @@
       "title": "enhancement(value): store objects in a sorted vector with inline keys",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-30T18:17:05+00:00"
+      "updatedAt": "2026-11-19T18:32:03+00:00"
     },
     {
       "linkedIssues": [],
@@ -286,7 +286,7 @@
       "title": "enhancement(compiler): cache structurally-constant object literals",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-13T14:31:27+00:00"
+      "updatedAt": "2026-11-20T14:22:55+00:00"
     },
     {
       "linkedIssues": [
@@ -323,16 +323,124 @@
       "title": "enhancement(stdlib): fold constant `get` value arguments at compile time",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-13T12:48:33+00:00"
+      "updatedAt": "2026-11-20T08:25:46+00:00"
     },
     {
       "linkedIssues": [],
-      "number": 2044,
-      "reactions": 3,
-      "title": "enhancement(value): avoid allocating existing ancestor keys during insertion",
+      "number": 2054,
+      "reactions": 2,
+      "title": "chore(ci): bump the github_actions group with 2 updates",
       "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-11-11T20:23:42+00:00"
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T18:36:18+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2056,
+      "reactions": 2,
+      "title": "chore(deps): bump the cargo-major group with 3 updates",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T19:03:04+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2057,
+      "reactions": 1,
+      "title": "chore(deps): bump cc from 1.2.65 to 1.11.1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T19:02:48+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2058,
+      "reactions": 2,
+      "title": "chore(deps): bump defmt from 1.1.1 to 1.2.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T19:02:10+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2059,
+      "reactions": 2,
+      "title": "chore(deps): bump arbitrary from 1.4.2 to 1.5.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T19:02:58+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2060,
+      "reactions": 2,
+      "title": "chore(deps): bump owo-colors from 4.2.3 to 4.4.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T19:02:20+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2061,
+      "reactions": 2,
+      "title": "chore(deps): bump icu_normalizer from 2.3.0 to 2.4.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T19:03:31+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2062,
+      "reactions": 2,
+      "title": "chore(deps): bump icu_locale_core from 2.3.0 to 2.4.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T19:03:41+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2063,
+      "reactions": 2,
+      "title": "chore(deps): bump tokio from 1.53.3 to 1.54.1",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T19:03:30+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2064,
+      "reactions": 2,
+      "title": "chore(deps): bump http from 1.4.2 to 1.5.0",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T19:03:20+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2071,
+      "reactions": 3,
+      "title": "chore(deps): replace serde_yaml_ng with serde-saphyr",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-18T00:41:01+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2074,
+      "reactions": 2,
+      "title": "chore(deps): bump the patches group across 1 directory with 43 updates",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T17:37:27+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 2075,
+      "reactions": 2,
+      "title": "enhancement(compiler): record unnest's root instead of a root query for every get",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T22:04:09+00:00"
     }
   ],
   "repository": "vectordotdev/vrl",

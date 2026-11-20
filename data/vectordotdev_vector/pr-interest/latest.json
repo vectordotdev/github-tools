@@ -1,7 +1,7 @@
 {
-  "collectedAt": "2026-11-13T14:56:36.398282+00:00",
-  "excludedDrafts": 119,
-  "openPrs": 479,
+  "collectedAt": "2026-11-20T14:22:18.885254+00:00",
+  "excludedDrafts": 124,
+  "openPrs": 497,
   "prs": [
     {
       "linkedIssues": [],
@@ -392,7 +392,7 @@
       "title": "feat(aws_s3 source): separate s3 and sqs auth",
       "unattributedComments": 0,
       "uniqueCommenters": 4,
-      "updatedAt": "2026-03-16T14:24:37+00:00"
+      "updatedAt": "2026-11-19T20:53:12+00:00"
     },
     {
       "linkedIssues": [],
@@ -429,7 +429,7 @@
       "title": "feat(sinks): Loki Sink supports setting requests of persistent connection",
       "unattributedComments": 0,
       "uniqueCommenters": 5,
-      "updatedAt": "2026-11-07T03:27:11+00:00"
+      "updatedAt": "2026-11-19T20:55:37+00:00"
     },
     {
       "linkedIssues": [],
@@ -466,7 +466,7 @@
       "title": "feat(http_client source): #23338 Enable AWS authentication for the http_client source.",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-03-21T13:51:59+00:00"
+      "updatedAt": "2026-11-19T20:54:17+00:00"
     },
     {
       "linkedIssues": [],
@@ -549,7 +549,7 @@
       "title": "feat(internal_metrics source): expose topology connections as metrics",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-05-24T22:32:26+00:00"
+      "updatedAt": "2026-11-19T20:56:07+00:00"
     },
     {
       "linkedIssues": [
@@ -568,7 +568,7 @@
       "title": "enhancement(aggregate transform): Add Distribution as an aggregation mode",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-28T11:50:31+00:00"
+      "updatedAt": "2026-11-19T20:55:04+00:00"
     },
     {
       "linkedIssues": [],
@@ -605,7 +605,7 @@
       "title": "enhancement(codecs): add influx line protocol serializer",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-03-16T14:24:37+00:00"
+      "updatedAt": "2026-11-19T20:55:17+00:00"
     },
     {
       "linkedIssues": [],
@@ -614,7 +614,7 @@
       "title": "feat(new source): Add ODBC source implementation",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-09-11T07:33:18+00:00"
+      "updatedAt": "2026-11-19T20:56:24+00:00"
     },
     {
       "linkedIssues": [],
@@ -651,7 +651,7 @@
       "title": "fix(incremental_to_absolute transform): fix LRU cache memory handling and emit cache metrics",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-03-16T14:24:37+00:00"
+      "updatedAt": "2026-11-19T20:56:37+00:00"
     },
     {
       "linkedIssues": [],
@@ -762,7 +762,7 @@
       "title": "fix(file source): improve change detection for rarely modified files",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-07-07T16:11:35+00:00"
+      "updatedAt": "2026-11-19T20:55:59+00:00"
     },
     {
       "linkedIssues": [],
@@ -771,7 +771,7 @@
       "title": "enhancement(statsd source): add support for Unix datagram sockets in statsd source",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-05-24T22:32:08+00:00"
+      "updatedAt": "2026-11-19T20:59:46+00:00"
     },
     {
       "linkedIssues": [],
@@ -780,7 +780,7 @@
       "title": "feat(clickhouse sink): add DNS auto-resolution for load balancing",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-05-24T22:32:06+00:00"
+      "updatedAt": "2026-11-19T21:01:39+00:00"
     },
     {
       "linkedIssues": [],
@@ -789,7 +789,7 @@
       "title": "fix(aws_kinesis_streams sink): metrics with partial failure retry exhausted",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-05-24T22:32:04+00:00"
+      "updatedAt": "2026-11-19T20:56:11+00:00"
     },
     {
       "linkedIssues": [],
@@ -798,7 +798,7 @@
       "title": "feat(clickhouse sink): add multi-endpoint support with load balancing",
       "unattributedComments": 0,
       "uniqueCommenters": 5,
-      "updatedAt": "2026-09-30T22:50:47+00:00"
+      "updatedAt": "2026-11-19T20:59:58+00:00"
     },
     {
       "linkedIssues": [
@@ -842,7 +842,7 @@
       "linkedIssues": [
         {
           "number": 1293,
-          "reactions": 68,
+          "reactions": 69,
           "repository": "vectordotdev/vector",
           "state": "OPEN",
           "title": "New `kubernetes_system_events` source",
@@ -851,7 +851,7 @@
         }
       ],
       "number": 24448,
-      "reactions": 30,
+      "reactions": 31,
       "title": "feat(new source): add kubernetes_events source",
       "unattributedComments": 1,
       "uniqueCommenters": 7,
@@ -874,7 +874,7 @@
       "title": "fix(logs): Add event name handling in log",
       "unattributedComments": 0,
       "uniqueCommenters": 5,
-      "updatedAt": "2026-10-01T09:26:32+00:00"
+      "updatedAt": "2026-11-19T21:03:24+00:00"
     },
     {
       "linkedIssues": [],
@@ -911,7 +911,7 @@
       "title": "fix(buffers): treat I/O errors as recoverable to prevent panics",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-06-03T08:06:32+00:00"
+      "updatedAt": "2026-11-19T21:02:49+00:00"
     },
     {
       "linkedIssues": [
@@ -930,7 +930,7 @@
       "title": "fix(auth): add RefreshingFileCredentialsProvider for credential rotation",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-01-22T09:19:41+00:00"
+      "updatedAt": "2026-11-19T20:56:33+00:00"
     },
     {
       "linkedIssues": [],
@@ -939,7 +939,7 @@
       "title": "feat(new transform): add `stdio` transform",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-05-24T22:31:53+00:00"
+      "updatedAt": "2026-11-19T21:03:03+00:00"
     },
     {
       "linkedIssues": [
@@ -967,7 +967,7 @@
       "title": "feat(new_relic sink): add override_endpoint configuration option",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-05-24T22:31:49+00:00"
+      "updatedAt": "2026-11-19T20:56:44+00:00"
     },
     {
       "linkedIssues": [],
@@ -976,7 +976,7 @@
       "title": "enhancement(deployment): include http provider config in containers",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-01-28T18:40:47+00:00"
+      "updatedAt": "2026-11-19T21:03:15+00:00"
     },
     {
       "linkedIssues": [],
@@ -985,7 +985,7 @@
       "title": "docs(codecs): Document the output type of each decoder",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T18:04:10+00:00"
+      "updatedAt": "2026-11-19T21:03:54+00:00"
     },
     {
       "linkedIssues": [
@@ -1013,7 +1013,7 @@
       "title": "enhancement(reduce transform): add max_bytes configuration option",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-05-24T22:31:45+00:00"
+      "updatedAt": "2026-11-19T21:03:27+00:00"
     },
     {
       "linkedIssues": [
@@ -1032,7 +1032,7 @@
       "title": "feat(http_client source, prometheus_scrape source): add HTTP redirect following support",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-05-24T22:31:43+00:00"
+      "updatedAt": "2026-11-19T21:04:08+00:00"
     },
     {
       "linkedIssues": [
@@ -1051,7 +1051,7 @@
       "title": "enhancement(codecs): Avro codec Object Container File encode/decode support",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-28T11:46:32+00:00"
+      "updatedAt": "2026-11-19T20:57:03+00:00"
     },
     {
       "linkedIssues": [],
@@ -1117,7 +1117,7 @@
       "title": "feat(new source): add netflow source with NetFlow v5 support (PR 1/5)",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-09-01T08:26:11+00:00"
+      "updatedAt": "2026-11-19T21:04:33+00:00"
     },
     {
       "linkedIssues": [],
@@ -1126,7 +1126,7 @@
       "title": "feat(new sink): Azure Data Explorer Sink",
       "unattributedComments": 0,
       "uniqueCommenters": 9,
-      "updatedAt": "2026-09-23T19:35:31+00:00"
+      "updatedAt": "2026-11-19T21:00:20+00:00"
     },
     {
       "linkedIssues": [
@@ -1172,7 +1172,7 @@
       "title": "feat(prometheus_scrape source): add configurable headers, gzip compression, and redirect following",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-05-24T22:31:36+00:00"
+      "updatedAt": "2026-11-19T21:04:45+00:00"
     },
     {
       "linkedIssues": [],
@@ -1190,7 +1190,7 @@
       "title": "fix(kafka source): Prevent stale lag after consumer rebalance",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-01T14:11:01+00:00"
+      "updatedAt": "2026-11-19T21:04:06+00:00"
     },
     {
       "linkedIssues": [
@@ -1209,7 +1209,7 @@
       "title": "feat(websocket sink): Replace tokio-tungstenite with yawc for permessage-deflate compression support",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-08-18T10:00:18+00:00"
+      "updatedAt": "2026-11-19T21:04:59+00:00"
     },
     {
       "linkedIssues": [],
@@ -1218,7 +1218,7 @@
       "title": "feat(syslog source): add lossy option for UTF-8 handling",
       "unattributedComments": 0,
       "uniqueCommenters": 5,
-      "updatedAt": "2026-11-02T14:26:19+00:00"
+      "updatedAt": "2026-11-19T21:02:01+00:00"
     },
     {
       "linkedIssues": [
@@ -1237,7 +1237,7 @@
       "title": "enhancement(host_metrics source): Add HostInfo collector to host_metrics source",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-05-24T22:31:30+00:00"
+      "updatedAt": "2026-11-19T21:05:12+00:00"
     },
     {
       "linkedIssues": [
@@ -1256,7 +1256,7 @@
       "title": "fix(aws_s3 source): complete in-flight SQS message processing before shutdown",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-05-24T22:31:27+00:00"
+      "updatedAt": "2026-11-19T21:02:15+00:00"
     },
     {
       "linkedIssues": [
@@ -1281,7 +1281,7 @@
       "linkedIssues": [
         {
           "number": 7501,
-          "reactions": 26,
+          "reactions": 27,
           "repository": "vectordotdev/vector",
           "state": "OPEN",
           "title": "Request: Add google cloud storage source",
@@ -1294,7 +1294,7 @@
       "title": "feat(new source): Add gcp_cloud_storage source",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-03-23T04:31:27+00:00"
+      "updatedAt": "2026-11-19T21:04:43+00:00"
     },
     {
       "linkedIssues": [
@@ -1313,7 +1313,7 @@
       "title": "feat(throttle transform): Multi-threshold rate limiting with dropped output port",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-05-24T22:31:24+00:00"
+      "updatedAt": "2026-11-19T21:05:39+00:00"
     },
     {
       "linkedIssues": [],
@@ -1341,7 +1341,7 @@
       "title": "feat(new sink): new `gcp_bigquery` sink",
       "unattributedComments": 0,
       "uniqueCommenters": 4,
-      "updatedAt": "2026-11-10T19:27:41+00:00"
+      "updatedAt": "2026-11-13T18:10:27+00:00"
     },
     {
       "linkedIssues": [
@@ -1360,7 +1360,7 @@
       "title": "fix(sources): gcp_pubsub source connections through configured proxy",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-03-07T14:42:49+00:00"
+      "updatedAt": "2026-11-19T21:05:52+00:00"
     },
     {
       "linkedIssues": [],
@@ -1369,7 +1369,7 @@
       "title": "chore(deps): bump openssl-probe from 0.1.6 to 0.2.1",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-11-05T01:38:49+00:00"
+      "updatedAt": "2026-11-19T21:04:57+00:00"
     },
     {
       "linkedIssues": [],
@@ -1378,7 +1378,7 @@
       "title": "chore(deps): bump warp from 0.3.7 to 0.4.2",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-04-08T18:36:14+00:00"
+      "updatedAt": "2026-11-19T21:07:14+00:00"
     },
     {
       "linkedIssues": [],
@@ -1424,7 +1424,7 @@
       "title": "feat(new transform): #24655 Add a transformer to translate absolute to incremental metrics.",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-06-04T20:27:02+00:00"
+      "updatedAt": "2026-11-19T21:07:45+00:00"
     },
     {
       "linkedIssues": [],
@@ -1433,7 +1433,7 @@
       "title": "feat(observability): add component-probes feature for bpftrace component-level CPU attribution",
       "unattributedComments": 0,
       "uniqueCommenters": 5,
-      "updatedAt": "2026-04-28T20:25:24+00:00"
+      "updatedAt": "2026-11-19T21:07:33+00:00"
     },
     {
       "linkedIssues": [],
@@ -1508,7 +1508,7 @@
       "title": "fix(dnstap source): close TCP connection after sending FINISH to prevent CLOSE_WAIT socket leak",
       "unattributedComments": 0,
       "uniqueCommenters": 4,
-      "updatedAt": "2026-05-24T22:31:09+00:00"
+      "updatedAt": "2026-11-19T21:08:05+00:00"
     },
     {
       "linkedIssues": [
@@ -1527,7 +1527,7 @@
       "title": "feat(kafka source): Add topic and partition labels to consumed messages metrics",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-05-24T22:31:06+00:00"
+      "updatedAt": "2026-11-19T21:07:51+00:00"
     },
     {
       "linkedIssues": [
@@ -1546,16 +1546,16 @@
       "title": "feat(sinks): add dlq logic on sink and support for elasticsearch ",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T15:11:43+00:00"
+      "updatedAt": "2026-11-19T21:06:41+00:00"
     },
     {
       "linkedIssues": [],
       "number": 24963,
-      "reactions": 1,
+      "reactions": 2,
       "title": "enhancement(statsd source): add unix_mode and socket_file_mode support",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-09T11:38:15+00:00"
+      "updatedAt": "2026-11-20T13:46:02+00:00"
     },
     {
       "linkedIssues": [
@@ -1593,7 +1593,7 @@
       "title": "feat(opentelemetry sink): add gRPC transport support",
       "unattributedComments": 1,
       "uniqueCommenters": 5,
-      "updatedAt": "2026-11-09T21:23:30+00:00"
+      "updatedAt": "2026-11-19T21:08:16+00:00"
     },
     {
       "linkedIssues": [],
@@ -1611,7 +1611,7 @@
       "title": "chore(deps): bump databend-client from 0.28.2 to 0.33.6",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-04-23T18:25:23+00:00"
+      "updatedAt": "2026-11-19T21:11:55+00:00"
     },
     {
       "linkedIssues": [],
@@ -1620,7 +1620,7 @@
       "title": "chore(deps): bump console-subscriber from 0.4.1 to 0.5.0",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-04-23T18:25:25+00:00"
+      "updatedAt": "2026-11-19T21:08:28+00:00"
     },
     {
       "linkedIssues": [],
@@ -1629,7 +1629,7 @@
       "title": "chore(deps): bump redis from 0.32.5 to 1.1.0",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-04-23T18:25:26+00:00"
+      "updatedAt": "2026-11-19T21:08:46+00:00"
     },
     {
       "linkedIssues": [],
@@ -1637,8 +1637,8 @@
       "reactions": 0,
       "title": "chore(deps): bump windows from 0.58.0 to 0.61.3",
       "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-10-28T20:44:43+00:00"
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-19T21:12:08+00:00"
     },
     {
       "linkedIssues": [],
@@ -1647,7 +1647,7 @@
       "title": "chore(deps): bump sysinfo from 0.37.2 to 0.38.4",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-04-23T18:25:29+00:00"
+      "updatedAt": "2026-11-19T21:08:39+00:00"
     },
     {
       "linkedIssues": [],
@@ -1656,7 +1656,7 @@
       "title": "chore(deps): bump smpl_jwt from 0.8.0 to 0.9.0",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-04-23T18:25:32+00:00"
+      "updatedAt": "2026-11-19T21:08:58+00:00"
     },
     {
       "linkedIssues": [
@@ -1675,7 +1675,7 @@
       "title": "feat(new sink): add dedicated syslog sink for RFC 5424/3164 output",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T15:11:30+00:00"
+      "updatedAt": "2026-11-19T21:12:22+00:00"
     },
     {
       "linkedIssues": [
@@ -1713,7 +1713,7 @@
       "title": "feat(postgres sink): add support for specifying columns in insert query",
       "unattributedComments": 0,
       "uniqueCommenters": 5,
-      "updatedAt": "2026-09-23T14:15:02+00:00"
+      "updatedAt": "2026-11-19T21:09:11+00:00"
     },
     {
       "linkedIssues": [],
@@ -1779,7 +1779,7 @@
       "title": "feat(http_server source): add configuration for custom HTTP responses",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-06-30T05:11:38+00:00"
+      "updatedAt": "2026-11-19T21:09:04+00:00"
     },
     {
       "linkedIssues": [],
@@ -1797,7 +1797,7 @@
       "title": "fix(kafka source): track contiguous offsets before committing to Kafka",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-05-24T22:30:46+00:00"
+      "updatedAt": "2026-11-19T21:13:37+00:00"
     },
     {
       "linkedIssues": [],
@@ -1834,7 +1834,7 @@
       "title": "feat(honeycomb sink): add samplerate_field config option",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-01T13:59:09+00:00"
+      "updatedAt": "2026-11-19T21:15:15+00:00"
     },
     {
       "linkedIssues": [
@@ -1862,7 +1862,7 @@
       "title": "feat(vrl): add native parse_ddtags function",
       "unattributedComments": 0,
       "uniqueCommenters": 5,
-      "updatedAt": "2026-04-13T18:39:54+00:00"
+      "updatedAt": "2026-11-19T21:12:02+00:00"
     },
     {
       "linkedIssues": [],
@@ -1871,7 +1871,7 @@
       "title": "chore(dev): lint yaml inside markdown",
       "unattributedComments": 1,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-07-24T20:49:55+00:00"
+      "updatedAt": "2026-11-19T21:15:28+00:00"
     },
     {
       "linkedIssues": [],
@@ -1898,7 +1898,7 @@
       "title": "feat(new sink): add YDB sink support",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-06-05T04:20:57+00:00"
+      "updatedAt": "2026-11-19T21:12:29+00:00"
     },
     {
       "linkedIssues": [],
@@ -1934,7 +1934,7 @@
       "title": "enhancement(aws_kinesis_streams sink): Re-randomize partition key on partial failure retry",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-07-13T13:13:35+00:00"
+      "updatedAt": "2026-11-19T21:16:06+00:00"
     },
     {
       "linkedIssues": [
@@ -1962,7 +1962,7 @@
       "title": "chore(deps): bump maxminddb from 0.27.3 to 0.28.1",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-06T20:36:41+00:00"
+      "updatedAt": "2026-11-19T21:13:22+00:00"
     },
     {
       "linkedIssues": [],
@@ -1971,7 +1971,7 @@
       "title": "chore(deps): bump md-5 from 0.10.6 to 0.11.0",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-05-27T19:57:17+00:00"
+      "updatedAt": "2026-11-19T21:14:18+00:00"
     },
     {
       "linkedIssues": [],
@@ -1989,7 +1989,7 @@
       "title": "chore(deps): bump redis from 0.32.5 to 1.2.0",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-05-27T19:57:21+00:00"
+      "updatedAt": "2026-11-19T21:13:34+00:00"
     },
     {
       "linkedIssues": [],
@@ -1998,7 +1998,7 @@
       "title": "chore(deps): bump ordered-float from 4.6.0 to 5.3.0",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-05-27T19:57:22+00:00"
+      "updatedAt": "2026-11-19T21:14:31+00:00"
     },
     {
       "linkedIssues": [
@@ -2017,7 +2017,7 @@
       "title": "fix(topology): prevent source pump deadlock during sink config reload",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-25T15:37:01+00:00"
+      "updatedAt": "2026-11-19T21:14:42+00:00"
     },
     {
       "linkedIssues": [],
@@ -2026,7 +2026,7 @@
       "title": "feat(codecs): make avro codec optional via cargo feature flag",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-13T13:12:57+00:00"
+      "updatedAt": "2026-11-19T21:17:44+00:00"
     },
     {
       "linkedIssues": [
@@ -2045,7 +2045,7 @@
       "title": "feat(kafka sink): add SASL OAUTHBEARER method=default RFC 6749 token fetch…",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-09-18T16:30:42+00:00"
+      "updatedAt": "2026-11-19T21:13:53+00:00"
     },
     {
       "linkedIssues": [
@@ -2082,7 +2082,7 @@
       "title": "feat(reduce transform): Add max_bytes limit to flush groups by size",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-13T13:12:57+00:00"
+      "updatedAt": "2026-11-19T21:15:01+00:00"
     },
     {
       "linkedIssues": [
@@ -2101,7 +2101,7 @@
       "title": "feat(prometheus_exporter sink): add SAR auth strategy",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-21T20:02:00+00:00"
+      "updatedAt": "2026-11-19T21:18:11+00:00"
     },
     {
       "linkedIssues": [],
@@ -2110,7 +2110,7 @@
       "title": "feat(new source): add iggy source and sink",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-08-25T07:19:55+00:00"
+      "updatedAt": "2026-11-19T21:15:15+00:00"
     },
     {
       "linkedIssues": [
@@ -2125,11 +2125,11 @@
         }
       ],
       "number": 25431,
-      "reactions": 2,
+      "reactions": 3,
       "title": "enhancement(performance): udp & unix_datagram batch implementation",
       "unattributedComments": 0,
       "uniqueCommenters": 4,
-      "updatedAt": "2026-11-13T14:13:01+00:00"
+      "updatedAt": "2026-11-19T21:15:27+00:00"
     },
     {
       "linkedIssues": [],
@@ -2138,7 +2138,7 @@
       "title": "feat(vector sink): vector connection concurrency",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-07-13T13:13:35+00:00"
+      "updatedAt": "2026-11-19T21:15:30+00:00"
     },
     {
       "linkedIssues": [
@@ -2157,7 +2157,7 @@
       "title": "feat(aws_cloudwatch_logs sink): allow setting the log class",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-13T13:13:35+00:00"
+      "updatedAt": "2026-11-19T21:18:36+00:00"
     },
     {
       "linkedIssues": [
@@ -2176,7 +2176,7 @@
       "title": "chore(metrics): generate internal metric documentation from Rust source",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-05-19T18:13:13+00:00"
+      "updatedAt": "2026-11-19T21:15:41+00:00"
     },
     {
       "linkedIssues": [],
@@ -2185,7 +2185,7 @@
       "title": "enhancement(sinks): Add Databend ingest modes",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-13T13:13:06+00:00"
+      "updatedAt": "2026-11-19T21:18:49+00:00"
     },
     {
       "linkedIssues": [],
@@ -2194,7 +2194,7 @@
       "title": "feat(kafka source): process messages in batch",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-22T19:36:37+00:00"
+      "updatedAt": "2026-11-19T21:15:54+00:00"
     },
     {
       "linkedIssues": [],
@@ -2203,7 +2203,7 @@
       "title": "enhancement(tag_cardinality_limit transform): add sliding-window TTL for tag values",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-12T12:02:07+00:00"
+      "updatedAt": "2026-11-17T07:29:15+00:00"
     },
     {
       "linkedIssues": [],
@@ -2212,7 +2212,7 @@
       "title": "enhancement(reduce transform): support trace events in reduce transform",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-08-21T17:36:40+00:00"
+      "updatedAt": "2026-11-19T21:16:07+00:00"
     },
     {
       "linkedIssues": [
@@ -2231,7 +2231,7 @@
       "title": "enhancement(amqp source): expose message headers and properties in events (#23368)",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-13T13:13:35+00:00"
+      "updatedAt": "2026-11-19T21:16:07+00:00"
     },
     {
       "linkedIssues": [
@@ -2250,7 +2250,7 @@
       "title": "fix(metrics): add _total suffix to memory enrichment counters",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-13T13:12:43+00:00"
+      "updatedAt": "2026-11-19T21:20:41+00:00"
     },
     {
       "linkedIssues": [
@@ -2307,7 +2307,7 @@
       "title": "feat(datadog_agent source): add API key validation",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-10T17:57:08+00:00"
+      "updatedAt": "2026-11-19T21:20:53+00:00"
     },
     {
       "linkedIssues": [
@@ -2326,7 +2326,7 @@
       "title": "feat(cli): add --data-dir flag and VECTOR_DATA_DIR env var",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-29T16:26:40+00:00"
+      "updatedAt": "2026-11-19T21:16:24+00:00"
     },
     {
       "linkedIssues": [
@@ -2402,7 +2402,7 @@
       "title": "feat(aws_s3 sink): add `key` option for full object key control",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-12T09:24:39+00:00"
+      "updatedAt": "2026-11-19T21:23:15+00:00"
     },
     {
       "linkedIssues": [
@@ -2430,7 +2430,7 @@
       "title": "feat(mqtt source, mqtt sink): add MQTT v5 protocol support",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-07-13T13:13:35+00:00"
+      "updatedAt": "2026-11-19T21:23:28+00:00"
     },
     {
       "linkedIssues": [],
@@ -2439,7 +2439,7 @@
       "title": "feat(gcp_cloud_storage sink): support Parquet batch encoding",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-07-31T08:25:17+00:00"
+      "updatedAt": "2026-11-19T21:19:12+00:00"
     },
     {
       "linkedIssues": [],
@@ -2476,7 +2476,7 @@
       "title": "feat(nats source): expose NATS message headers via headers_key",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-07-23T13:11:17+00:00"
+      "updatedAt": "2026-11-19T21:23:59+00:00"
     },
     {
       "linkedIssues": [
@@ -2495,7 +2495,7 @@
       "title": "fix(aws_cloudwatch_logs sink): Parse string and integer `.timestamp` values",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-13T13:13:19+00:00"
+      "updatedAt": "2026-11-19T21:21:23+00:00"
     },
     {
       "linkedIssues": [
@@ -2542,7 +2542,7 @@
       "title": "enhancement(kafka source): add commit_offsets option to disable offse…",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-07-13T13:04:20+00:00"
+      "updatedAt": "2026-11-19T21:21:35+00:00"
     },
     {
       "linkedIssues": [],
@@ -2579,7 +2579,7 @@
       "title": "docs(website): add kubernetes autoscaling guide",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T19:13:58+00:00"
+      "updatedAt": "2026-11-19T21:24:24+00:00"
     },
     {
       "linkedIssues": [],
@@ -2588,7 +2588,7 @@
       "title": "perf(arrow codec): optimize scalar RecordBatch encoding",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-13T13:04:20+00:00"
+      "updatedAt": "2026-11-19T21:22:00+00:00"
     },
     {
       "linkedIssues": [],
@@ -2597,7 +2597,7 @@
       "title": "feat(duckdb sink): add DuckDB sink",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-26T13:44:09+00:00"
+      "updatedAt": "2026-11-19T21:28:23+00:00"
     },
     {
       "linkedIssues": [
@@ -2616,16 +2616,16 @@
       "title": "Add memory buffer drop_oldest mode",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-25T17:56:24+00:00"
+      "updatedAt": "2026-11-19T21:24:35+00:00"
     },
     {
       "linkedIssues": [],
       "number": 25751,
-      "reactions": 1,
+      "reactions": 3,
       "title": "feat(kafka source, kafka sink): support AWS MSK IAM auth via SASL/OAUTHBEARER",
       "unattributedComments": 1,
-      "uniqueCommenters": 5,
-      "updatedAt": "2026-11-03T15:25:43+00:00"
+      "uniqueCommenters": 6,
+      "updatedAt": "2026-11-20T13:45:56+00:00"
     },
     {
       "linkedIssues": [
@@ -2644,7 +2644,7 @@
       "title": "enchancement(internal_logs_source)!: decouple internal_logs log level from vector startup log level",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-07-13T13:04:20+00:00"
+      "updatedAt": "2026-11-19T21:28:38+00:00"
     },
     {
       "linkedIssues": [],
@@ -2653,7 +2653,7 @@
       "title": "enhancement(vector source, vector sink): enable HTTP/2 adaptive flow-control windows",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-13T13:04:20+00:00"
+      "updatedAt": "2026-11-19T21:24:49+00:00"
     },
     {
       "linkedIssues": [],
@@ -2662,18 +2662,18 @@
       "title": "fix(ci): retry fakeintake fetches in datadog-metrics e2e test",
       "unattributedComments": 1,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-07-21T21:06:23+00:00"
+      "updatedAt": "2026-11-19T21:22:30+00:00"
     },
     {
       "linkedIssues": [
         {
           "number": 21967,
-          "reactions": 2,
+          "reactions": 3,
           "repository": "vectordotdev/vector",
           "state": "OPEN",
           "title": "Handle `Incoming::PubAck` in the `mqtt` source",
           "unattributedComments": 0,
-          "uniqueCommenters": 2
+          "uniqueCommenters": 3
         }
       ],
       "number": 25785,
@@ -2696,12 +2696,12 @@
       "linkedIssues": [
         {
           "number": 23029,
-          "reactions": 19,
+          "reactions": 20,
           "repository": "vectordotdev/vector",
           "state": "OPEN",
           "title": "InvalidRequest error when using S3 sink to CloudFlare R2",
           "unattributedComments": 0,
-          "uniqueCommenters": 5
+          "uniqueCommenters": 6
         }
       ],
       "number": 25803,
@@ -2766,7 +2766,7 @@
       "title": "fix(sink socket): fix regression for udp socket recovery after error (#25804)",
       "unattributedComments": 1,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-07-21T20:02:30+00:00"
+      "updatedAt": "2026-11-19T21:26:31+00:00"
     },
     {
       "linkedIssues": [],
@@ -2784,7 +2784,7 @@
       "title": "feat(host_metrics source): add ROOTFS_ROOT support",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-08-06T08:39:07+00:00"
+      "updatedAt": "2026-11-19T21:26:45+00:00"
     },
     {
       "linkedIssues": [],
@@ -2793,7 +2793,7 @@
       "title": "fix(debian): move example configurations out of /etc/vector",
       "unattributedComments": 1,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-08T20:19:27+00:00"
+      "updatedAt": "2026-11-19T21:31:06+00:00"
     },
     {
       "linkedIssues": [],
@@ -2802,7 +2802,7 @@
       "title": "feat(codecs, databricks_zerobus sink): Unity Catalog VARIANT support",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-07-23T06:05:01+00:00"
+      "updatedAt": "2026-11-19T21:26:57+00:00"
     },
     {
       "linkedIssues": [
@@ -2821,7 +2821,7 @@
       "title": "fix(file source): avoid warning for empty files too small to fingerprint",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-08-09T19:15:39+00:00"
+      "updatedAt": "2026-11-19T21:27:13+00:00"
     },
     {
       "linkedIssues": [
@@ -2840,7 +2840,7 @@
       "title": "fix(gcp_pubsub source): recover from stalled streams and reduce error noise",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-27T14:36:35+00:00"
+      "updatedAt": "2026-11-19T21:27:11+00:00"
     },
     {
       "linkedIssues": [],
@@ -2868,7 +2868,7 @@
       "title": "fix(aws sinks): ensure component_sent_bytes_total carries component and region labels",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-07-30T15:42:00+00:00"
+      "updatedAt": "2026-11-19T21:27:25+00:00"
     },
     {
       "linkedIssues": [],
@@ -2877,7 +2877,7 @@
       "title": "feat(grpc connection management): add jitter controls to grpc max age",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-08-17T21:17:33+00:00"
+      "updatedAt": "2026-11-19T21:27:25+00:00"
     },
     {
       "linkedIssues": [
@@ -2905,7 +2905,7 @@
       "title": "docs(elasticsearch sink): fix invalid version field example",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-28T15:05:13+00:00"
+      "updatedAt": "2026-11-19T21:27:37+00:00"
     },
     {
       "linkedIssues": [
@@ -2924,7 +2924,7 @@
       "title": "feat(http_server source): add unix domain socket support",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-22T18:47:43+00:00"
+      "updatedAt": "2026-11-19T21:31:44+00:00"
     },
     {
       "linkedIssues": [],
@@ -2933,7 +2933,7 @@
       "title": "feat(buffers): add reject when_full mode for disk buffers",
       "unattributedComments": 1,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-16T04:33:32+00:00"
+      "updatedAt": "2026-11-19T21:30:56+00:00"
     },
     {
       "linkedIssues": [],
@@ -2961,7 +2961,7 @@
       "title": "feat(reduce transform): add max_groups option to bound memory usage",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-30T14:00:17+00:00"
+      "updatedAt": "2026-11-19T21:31:58+00:00"
     },
     {
       "linkedIssues": [],
@@ -2970,26 +2970,7 @@
       "title": "fix(buffers): recheck disk buffer progress before waiting",
       "unattributedComments": 1,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-07-31T23:18:07+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 2303,
-          "reactions": 42,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "Autodiscovery of Prometheus endpoints for scraping",
-          "unattributedComments": 0,
-          "uniqueCommenters": 13
-        }
-      ],
-      "number": 26013,
-      "reactions": 6,
-      "title": "feat(prometheus_scrape): support auto discovery in k8s",
-      "unattributedComments": 0,
-      "uniqueCommenters": 4,
-      "updatedAt": "2026-10-31T13:47:02+00:00"
+      "updatedAt": "2026-11-19T21:31:11+00:00"
     },
     {
       "linkedIssues": [],
@@ -2998,7 +2979,7 @@
       "title": "fix(opentelemetry source): implement standard gRPC health checking protocol",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-08-05T23:41:24+00:00"
+      "updatedAt": "2026-11-19T21:32:10+00:00"
     },
     {
       "linkedIssues": [],
@@ -3007,7 +2988,7 @@
       "title": "fix(disk buffer): coordinate published reader and writer progress",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-09-28T19:46:25+00:00"
+      "updatedAt": "2026-11-19T21:31:25+00:00"
     },
     {
       "linkedIssues": [],
@@ -3016,7 +2997,7 @@
       "title": "chore(deps): bump bytecheck from 0.6.11 to 0.7.0 in the rkyv-upgrade group across 1 directory",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-01T04:02:32+00:00"
+      "updatedAt": "2026-11-19T21:28:10+00:00"
     },
     {
       "linkedIssues": [
@@ -3044,7 +3025,7 @@
       "title": "fix(sources): only signal shutdown once for TCP sources",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-08-12T19:08:20+00:00"
+      "updatedAt": "2026-11-19T21:28:22+00:00"
     },
     {
       "linkedIssues": [],
@@ -3062,7 +3043,7 @@
       "title": "feat(azure_blob source): add Azure Blob Storage source",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-08-17T19:55:33+00:00"
+      "updatedAt": "2026-11-19T21:28:36+00:00"
     },
     {
       "linkedIssues": [],
@@ -3071,26 +3052,7 @@
       "title": "feat(prometheus_scrape source): add `scrape_delay` to stagger scrapes",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-08-14T10:22:34+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 26111,
-          "reactions": 2,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "tls_client_metadata should expose Subject Alternative Names (SANs) from the client certificate",
-          "unattributedComments": 0,
-          "uniqueCommenters": 0
-        }
-      ],
-      "number": 26113,
-      "reactions": 3,
-      "title": "enhancement(sources): add subject_altnames to TLS client metadata",
-      "unattributedComments": 0,
-      "uniqueCommenters": 4,
-      "updatedAt": "2026-11-13T13:46:18+00:00"
+      "updatedAt": "2026-11-19T21:32:37+00:00"
     },
     {
       "linkedIssues": [
@@ -3146,7 +3108,7 @@
       "title": "fix(packaging): use sysconfig environment file in RPMs (#26076)",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-08-15T15:59:33+00:00"
+      "updatedAt": "2026-11-19T21:28:50+00:00"
     },
     {
       "linkedIssues": [
@@ -3174,7 +3136,7 @@
       "title": "Fix datadog_metrics handling of Prometheus +Inf histogram buckets",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-09-23T05:58:00+00:00"
+      "updatedAt": "2026-11-19T21:29:03+00:00"
     },
     {
       "linkedIssues": [],
@@ -3202,7 +3164,7 @@
       "title": "feat(config): add `mutually_exclusive` for optional exclusive field groups",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-09-12T03:57:32+00:00"
+      "updatedAt": "2026-11-19T21:33:17+00:00"
     },
     {
       "linkedIssues": [],
@@ -3220,7 +3182,7 @@
       "title": "feat(clickhouse sink): add retry_strategy option",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-08-28T09:23:18+00:00"
+      "updatedAt": "2026-11-19T21:33:30+00:00"
     },
     {
       "linkedIssues": [
@@ -3239,7 +3201,7 @@
       "title": "enhancement(tls): add configurable minimum and maximum TLS versions",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-05T17:26:34+00:00"
+      "updatedAt": "2026-11-19T21:33:42+00:00"
     },
     {
       "linkedIssues": [],
@@ -3251,41 +3213,13 @@
       "updatedAt": "2026-08-31T18:23:06+00:00"
     },
     {
-      "linkedIssues": [
-        {
-          "number": 18570,
-          "reactions": 0,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "`native_json` codec is not serializing/deserializing `EventMetadata`.",
-          "unattributedComments": 0,
-          "uniqueCommenters": 2
-        },
-        {
-          "number": 18779,
-          "reactions": 1,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "Migrate native JSON encoding to serialize the protobuf data model instead of in-memory data model",
-          "unattributedComments": 0,
-          "uniqueCommenters": 2
-        }
-      ],
-      "number": 26281,
-      "reactions": 2,
-      "title": "feat(codecs): use Protobuf for native JSON",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T20:25:52+00:00"
-    },
-    {
       "linkedIssues": [],
       "number": 26304,
       "reactions": 2,
       "title": "feat(postgres sink): Add Upsert support",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-09-18T20:14:39+00:00"
+      "updatedAt": "2026-11-19T21:30:49+00:00"
     },
     {
       "linkedIssues": [],
@@ -3294,7 +3228,7 @@
       "title": "fix(startup): abort startup and validate on shutdown signals",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-09-17T21:33:06+00:00"
+      "updatedAt": "2026-11-19T21:33:55+00:00"
     },
     {
       "linkedIssues": [
@@ -3309,11 +3243,11 @@
         }
       ],
       "number": 26312,
-      "reactions": 1,
+      "reactions": 3,
       "title": "fix(disk buffer): record drop_newest discards from disk buffers",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-02T15:23:02+00:00"
+      "updatedAt": "2026-11-17T01:56:18+00:00"
     },
     {
       "linkedIssues": [],
@@ -3379,7 +3313,7 @@
       "title": "feat(file source): notify-based discovery + idle handle closing (#3567)",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-09-21T02:35:26+00:00"
+      "updatedAt": "2026-11-19T21:37:18+00:00"
     },
     {
       "linkedIssues": [
@@ -3398,7 +3332,16 @@
       "title": "fix(file source): discard stale checkpoints instead of silently dropping data",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-26T13:58:43+00:00"
+      "updatedAt": "2026-11-19T21:44:24+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 26342,
+      "reactions": 2,
+      "title": "feat(azure_blob sink): make storage API version configurable",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-20T00:10:45+00:00"
     },
     {
       "linkedIssues": [],
@@ -3407,7 +3350,7 @@
       "title": "Add aws_kinesis_streams source with KCL-style closed-shard completion.",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-09-27T11:14:34+00:00"
+      "updatedAt": "2026-11-19T21:37:30+00:00"
     },
     {
       "linkedIssues": [],
@@ -3416,7 +3359,7 @@
       "title": "Log Elasticsearch bulk rejections at debug with per-item error details.",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-09-17T08:08:52+00:00"
+      "updatedAt": "2026-11-19T21:44:36+00:00"
     },
     {
       "linkedIssues": [
@@ -3435,7 +3378,7 @@
       "title": "fix(deb): preserve vector.yaml on upgrade and relocate examples",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-01T07:04:37+00:00"
+      "updatedAt": "2026-11-19T21:37:43+00:00"
     },
     {
       "linkedIssues": [],
@@ -3453,7 +3396,7 @@
       "title": "feat(nats source): support end-to-end acknowledgements",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-01T12:25:31+00:00"
+      "updatedAt": "2026-11-19T21:37:57+00:00"
     },
     {
       "linkedIssues": [],
@@ -3465,19 +3408,10 @@
       "updatedAt": "2026-11-11T12:24:49+00:00"
     },
     {
-      "linkedIssues": [],
-      "number": 26427,
-      "reactions": 0,
-      "title": "chore(deps): bump the http-upgrade group across 1 directory with 15 updates",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-02T16:31:01+00:00"
-    },
-    {
       "linkedIssues": [
         {
           "number": 22006,
-          "reactions": 21,
+          "reactions": 22,
           "repository": "vectordotdev/vector",
           "state": "OPEN",
           "title": "On kafka consumer rebalance, Vector consumer stops consuming.",
@@ -3490,7 +3424,7 @@
       "title": "fix(kafka source): wait for aborted partition consumers before continuing a rebalance",
       "unattributedComments": 0,
       "uniqueCommenters": 6,
-      "updatedAt": "2026-11-05T05:31:55+00:00"
+      "updatedAt": "2026-11-19T21:38:11+00:00"
     },
     {
       "linkedIssues": [
@@ -3518,7 +3452,7 @@
       "title": "fix(windows_event_log source): keep only_event_ids XPath query shallow",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-09-24T18:24:37+00:00"
+      "updatedAt": "2026-11-19T21:38:25+00:00"
     },
     {
       "linkedIssues": [
@@ -3537,7 +3471,7 @@
       "title": "feat: add victoriametrics sink",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-10-19T23:13:22+00:00"
+      "updatedAt": "2026-11-19T21:48:36+00:00"
     },
     {
       "linkedIssues": [],
@@ -3546,7 +3480,7 @@
       "title": "chore(ci): run arch-independent jobs on Arm runners",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-09-28T20:47:03+00:00"
+      "updatedAt": "2026-11-19T21:38:02+00:00"
     },
     {
       "linkedIssues": [
@@ -3565,16 +3499,16 @@
       "title": "fix(opentelemetry source): return 4xx instead of 500 for rejected HTTP requests",
       "unattributedComments": 0,
       "uniqueCommenters": 4,
-      "updatedAt": "2026-10-15T19:45:41+00:00"
+      "updatedAt": "2026-11-19T21:38:37+00:00"
     },
     {
       "linkedIssues": [],
       "number": 26516,
-      "reactions": 3,
+      "reactions": 4,
       "title": "memory(kubernetes_logs): avoid per-line allocations in the partial event merger",
       "unattributedComments": 0,
-      "uniqueCommenters": 0,
-      "updatedAt": "2026-11-03T16:39:58+00:00"
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T19:07:07+00:00"
     },
     {
       "linkedIssues": [
@@ -3602,7 +3536,7 @@
       "title": "perf(internal_logs source): decouple broadcast drain from downstream send and batch events",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-14T20:10:45+00:00"
+      "updatedAt": "2026-11-19T21:38:51+00:00"
     },
     {
       "linkedIssues": [],
@@ -3630,7 +3564,7 @@
       "title": "feat(elasticsearch sink): add api_key authentication strategy",
       "unattributedComments": 0,
       "uniqueCommenters": 4,
-      "updatedAt": "2026-10-23T12:11:33+00:00"
+      "updatedAt": "2026-11-19T21:41:36+00:00"
     },
     {
       "linkedIssues": [
@@ -3724,7 +3658,7 @@
       "title": "feat(aggregate transform): Add `set_interval_ms` option",
       "unattributedComments": 0,
       "uniqueCommenters": 4,
-      "updatedAt": "2026-10-26T16:01:15+00:00"
+      "updatedAt": "2026-11-19T21:40:20+00:00"
     },
     {
       "linkedIssues": [],
@@ -3752,16 +3686,7 @@
       "title": "fix(websocket_server sink): release listener and connections on shutdown",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-10T08:58:01+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 26628,
-      "reactions": 2,
-      "title": "feat(sinks): Add on-conflict config support to postgres sink",
-      "unattributedComments": 0,
-      "uniqueCommenters": 3,
-      "updatedAt": "2026-10-10T02:50:09+00:00"
+      "updatedAt": "2026-11-19T21:40:32+00:00"
     },
     {
       "linkedIssues": [],
@@ -3817,7 +3742,7 @@
       "title": "fix(topology): don't hang a reload on a sink that stops polling its input",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-17T20:27:28+00:00"
+      "updatedAt": "2026-11-19T21:55:02+00:00"
     },
     {
       "linkedIssues": [
@@ -3854,7 +3779,7 @@
       "title": "fix(reduce transform): keep fields whose names contain quotes or backslashes",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-19T22:08:19+00:00"
+      "updatedAt": "2026-11-19T21:45:35+00:00"
     },
     {
       "linkedIssues": [],
@@ -3872,7 +3797,7 @@
       "title": "feat(aws_s3 source): add configurable timeouts for the S3 client",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-18T21:28:12+00:00"
+      "updatedAt": "2026-11-19T21:45:48+00:00"
     },
     {
       "linkedIssues": [],
@@ -3881,7 +3806,7 @@
       "title": "chore(vdev): Rewrite 'cue.sh vet' to vdev",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-03T16:36:59+00:00"
+      "updatedAt": "2026-11-19T21:59:12+00:00"
     },
     {
       "linkedIssues": [],
@@ -3899,7 +3824,7 @@
       "title": "fix(amqp sink): bound pending publish requests",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-31T11:24:07+00:00"
+      "updatedAt": "2026-11-19T21:44:06+00:00"
     },
     {
       "linkedIssues": [
@@ -3918,7 +3843,7 @@
       "title": "fix(elasticsearch sink): bound pending requests during retries",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-19T23:05:36+00:00"
+      "updatedAt": "2026-11-18T20:21:05+00:00"
     },
     {
       "linkedIssues": [
@@ -3936,17 +3861,8 @@
       "reactions": 2,
       "title": "fix(file source): don't remove files skipped by ignore_older_secs before reading them",
       "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-10-19T17:41:19+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 26768,
-      "reactions": 2,
-      "title": "chore(vrl): adapt to the ObjectMap newtype",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-11T21:55:57+00:00"
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-17T11:35:55+00:00"
     },
     {
       "linkedIssues": [
@@ -3965,7 +3881,7 @@
       "title": "fix(websocket source): prevent unexpected pong timeouts when reconnecting",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T10:29:48+00:00"
+      "updatedAt": "2026-11-19T16:19:07+00:00"
     },
     {
       "linkedIssues": [
@@ -3984,7 +3900,7 @@
       "title": "fix(sinks): release concurrency permit during retry backoff",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T17:46:13+00:00"
+      "updatedAt": "2026-11-19T23:32:22+00:00"
     },
     {
       "linkedIssues": [
@@ -4031,7 +3947,7 @@
       "title": "fix(aws-auth): Honour AWS auth.load_timeout_secs for non-AWS sinks",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-09T23:51:00+00:00"
+      "updatedAt": "2026-11-17T17:13:06+00:00"
     },
     {
       "linkedIssues": [
@@ -4050,7 +3966,7 @@
       "title": "feat(websocket source): add replay on reconnect support",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T10:32:39+00:00"
+      "updatedAt": "2026-11-19T21:55:20+00:00"
     },
     {
       "linkedIssues": [
@@ -4069,7 +3985,7 @@
       "title": "fix(sinks): reject batches that fail encoding",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-30T16:49:58+00:00"
+      "updatedAt": "2026-11-19T21:55:33+00:00"
     },
     {
       "linkedIssues": [
@@ -4088,7 +4004,7 @@
       "title": "fix(config): keep watching symlinked component files after atomic swaps",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-07T00:56:24+00:00"
+      "updatedAt": "2026-11-19T16:31:33+00:00"
     },
     {
       "linkedIssues": [],
@@ -4097,7 +4013,7 @@
       "title": "chore(deps): bump databricks-zerobus-ingest-sdk from 2.7.1 to 2.12.0",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-27T14:01:28+00:00"
+      "updatedAt": "2026-11-19T22:06:07+00:00"
     },
     {
       "linkedIssues": [
@@ -4116,7 +4032,7 @@
       "title": "feat(unix source): Cleanup orphaned unix socket files on startup",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-27T02:23:30+00:00"
+      "updatedAt": "2026-11-19T21:55:46+00:00"
     },
     {
       "linkedIssues": [
@@ -4134,8 +4050,8 @@
       "reactions": 3,
       "title": "fix(gcp_cloud_storage sink): retry requests on connection errors",
       "unattributedComments": 0,
-      "uniqueCommenters": 3,
-      "updatedAt": "2026-11-10T04:46:22+00:00"
+      "uniqueCommenters": 5,
+      "updatedAt": "2026-11-18T12:15:43+00:00"
     },
     {
       "linkedIssues": [
@@ -4182,25 +4098,7 @@
       "title": "fix(metrics): free expired metrics from the timeout cache",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-29T22:35:04+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 26910,
-      "reactions": 1,
-      "title": "feat(datadog_agent): Accept indexed trace payloads",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-09T23:30:29+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 26916,
-      "reactions": 1,
-      "title": "build: Share workspace package version",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-10T00:55:31+00:00"
+      "updatedAt": "2026-11-19T21:44:44+00:00"
     },
     {
       "linkedIssues": [],
@@ -4209,7 +4107,7 @@
       "title": "fix(cli): don't panic in vector validate on very long config path lists",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-28T22:26:54+00:00"
+      "updatedAt": "2026-11-19T21:57:10+00:00"
     },
     {
       "linkedIssues": [
@@ -4228,7 +4126,7 @@
       "title": "enhancement(aws_sqs source): Adaptive polling concurrency (#13322)",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-31T22:47:07+00:00"
+      "updatedAt": "2026-11-19T21:49:44+00:00"
     },
     {
       "linkedIssues": [],
@@ -4252,11 +4150,11 @@
         }
       ],
       "number": 26935,
-      "reactions": 4,
+      "reactions": 5,
       "title": "fix(gcp_chronicle_unstructured): retry transient errors",
       "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-11-13T01:52:59+00:00"
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-14T03:08:35+00:00"
     },
     {
       "linkedIssues": [],
@@ -4284,7 +4182,7 @@
       "title": "fix(sinks): account for terminal errored requests",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-02T15:03:04+00:00"
+      "updatedAt": "2026-11-19T22:12:00+00:00"
     },
     {
       "linkedIssues": [],
@@ -4293,7 +4191,7 @@
       "title": "docs(docker): fix dead transforms and releases links in Docker README",
       "unattributedComments": 0,
       "uniqueCommenters": 5,
-      "updatedAt": "2026-11-11T03:30:40+00:00"
+      "updatedAt": "2026-11-19T21:59:26+00:00"
     },
     {
       "linkedIssues": [],
@@ -4320,8 +4218,8 @@
       "reactions": 2,
       "title": "fix(sinks): Correct source acknowledgement precedence calculation (#26847)",
       "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T18:31:44+00:00"
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-19T16:21:08+00:00"
     },
     {
       "linkedIssues": [
@@ -4340,26 +4238,7 @@
       "title": "fix(opentelemetry source): accept empty OTLP exports and HTTP JSON",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-10-30T17:51:57+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 25774,
-          "reactions": 15,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "Disk buffer for S3 sink is not flushed on graceful termination",
-          "unattributedComments": 0,
-          "uniqueCommenters": 3
-        }
-      ],
-      "number": 26969,
-      "reactions": 5,
-      "title": "fix(buffers): flush partial sink batches during disk-buffer shutdown",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T21:14:32+00:00"
+      "updatedAt": "2026-11-19T21:59:40+00:00"
     },
     {
       "linkedIssues": [],
@@ -4368,7 +4247,7 @@
       "title": "chore(ci): report multiservice e2e results on the PR",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-04T14:01:50+00:00"
+      "updatedAt": "2026-11-19T21:55:01+00:00"
     },
     {
       "linkedIssues": [],
@@ -4386,7 +4265,7 @@
       "title": "feat(http_client source, prometheus_scrape source): add HTTP redirect following support",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-05T04:14:29+00:00"
+      "updatedAt": "2026-11-19T21:55:16+00:00"
     },
     {
       "linkedIssues": [
@@ -4424,7 +4303,7 @@
       "title": "fix(file source): report lines discarded for size at EOF",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-03T03:55:17+00:00"
+      "updatedAt": "2026-11-19T19:39:20+00:00"
     },
     {
       "linkedIssues": [
@@ -4442,8 +4321,8 @@
       "reactions": 2,
       "title": "feat(source): File source zstd support",
       "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-11-03T16:41:08+00:00"
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-17T16:02:34+00:00"
     },
     {
       "linkedIssues": [],
@@ -4452,7 +4331,7 @@
       "title": "fix(file source): recognize a multi-byte delimiter split by EOF",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-03T04:17:25+00:00"
+      "updatedAt": "2026-11-19T19:39:51+00:00"
     },
     {
       "linkedIssues": [],
@@ -4461,7 +4340,7 @@
       "title": "fix(sinks): account for partial deliveries across retries",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-04T18:42:21+00:00"
+      "updatedAt": "2026-11-19T22:03:39+00:00"
     },
     {
       "linkedIssues": [],
@@ -4479,7 +4358,7 @@
       "title": "chore(topology): return the diff applied by a successful reload",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-04T14:12:10+00:00"
+      "updatedAt": "2026-11-19T22:24:06+00:00"
     },
     {
       "linkedIssues": [],
@@ -4488,7 +4367,7 @@
       "title": "fix(kafka source): allow null for message_key in schema definition",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-12T20:35:59+00:00"
+      "updatedAt": "2026-11-17T21:03:23+00:00"
     },
     {
       "linkedIssues": [
@@ -4507,7 +4386,7 @@
       "title": "fix(buffers): do not acknowledge records replayed during disk buffer …",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-04T09:12:38+00:00"
+      "updatedAt": "2026-11-20T13:54:41+00:00"
     },
     {
       "linkedIssues": [],
@@ -4516,7 +4395,7 @@
       "title": "enhancement(datadog_metrics sink): add expire_metrics_secs for series cache TTL",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-12T19:44:30+00:00"
+      "updatedAt": "2026-11-17T07:27:38+00:00"
     },
     {
       "linkedIssues": [
@@ -4535,7 +4414,7 @@
       "title": "enhancement(throttle transform): Configure discard metric tags",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-04T23:38:10+00:00"
+      "updatedAt": "2026-11-19T22:06:26+00:00"
     },
     {
       "linkedIssues": [],
@@ -4544,7 +4423,7 @@
       "title": "chore(vdev): run e2e capture finalization in the harness",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T17:28:33+00:00"
+      "updatedAt": "2026-11-16T17:23:14+00:00"
     },
     {
       "linkedIssues": [],
@@ -4553,7 +4432,7 @@
       "title": "perf(fanout): Reuse send futures across batches",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-05T17:58:59+00:00"
+      "updatedAt": "2026-11-19T22:06:38+00:00"
     },
     {
       "linkedIssues": [],
@@ -4562,7 +4441,7 @@
       "title": "chore(opentelemetry): Share resource and scope across trace partitions",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-05T20:59:15+00:00"
+      "updatedAt": "2026-11-16T22:07:25+00:00"
     },
     {
       "linkedIssues": [],
@@ -4571,16 +4450,16 @@
       "title": "chore(opentelemetry): Index typed trace encode groups",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-05T20:59:34+00:00"
+      "updatedAt": "2026-11-17T13:14:48+00:00"
     },
     {
       "linkedIssues": [],
       "number": 27077,
-      "reactions": 2,
+      "reactions": 1,
       "title": "chore(vector): Move template out of the binary crate",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-06T01:54:39+00:00"
+      "updatedAt": "2026-11-17T17:13:20+00:00"
     },
     {
       "linkedIssues": [
@@ -4608,7 +4487,7 @@
       "title": "chore(kafka source): remove obsolete fede1024/rust-rdkafka#681 workaround",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-10T19:43:49+00:00"
+      "updatedAt": "2026-11-19T19:10:49+00:00"
     },
     {
       "linkedIssues": [],
@@ -4617,7 +4496,7 @@
       "title": "feat(metrics): measure sink CPU usage",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-13T14:55:17+00:00"
+      "updatedAt": "2026-11-20T08:50:09+00:00"
     },
     {
       "linkedIssues": [
@@ -4645,31 +4524,22 @@
       "title": "fix(topology): wait for upstream components to release a changed disk buffer on reload",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-09T21:01:17+00:00"
+      "updatedAt": "2026-11-19T22:37:25+00:00"
     },
     {
       "linkedIssues": [],
-      "number": 27112,
+      "number": 27109,
       "reactions": 3,
-      "title": "refactor(demo_logs source): use const for field names",
+      "title": "feat(new sink): add OpsiMate sink",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-11T20:41:55+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 27113,
-      "reactions": 3,
-      "title": "fix(tls): allow session resumption when verifying client certificates",
-      "unattributedComments": 0,
-      "uniqueCommenters": 3,
-      "updatedAt": "2026-11-11T16:24:46+00:00"
+      "updatedAt": "2026-11-18T13:18:38+00:00"
     },
     {
       "linkedIssues": [
         {
           "number": 26492,
-          "reactions": 3,
+          "reactions": 4,
           "repository": "vectordotdev/vector",
           "state": "OPEN",
           "title": "TCP-based sources: idle connections starve busy connections (`RequestLimiter` capped at `num_threads()`)",
@@ -4682,16 +4552,7 @@
       "title": "fix(sources): keep idle TCP connections from starving busy connections",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-10T16:52:59+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 27119,
-      "reactions": 2,
-      "title": "feat(codecs): MessagePack decoder- #24510",
-      "unattributedComments": 0,
-      "uniqueCommenters": 3,
-      "updatedAt": "2026-11-11T16:40:02+00:00"
+      "updatedAt": "2026-11-19T22:11:14+00:00"
     },
     {
       "linkedIssues": [],
@@ -4709,35 +4570,7 @@
       "title": "chore(deps): deny transitive unsound crates and bump arrow 58 and zstd-safe 7",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-11T23:13:10+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 27138,
-      "reactions": 2,
-      "title": "chore(deps): bump aws-sdk-cloudwatch to 1.142.0",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-11T20:30:11+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 26938,
-          "reactions": 0,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "`webhdfs` sink permanently drops batches on transient write failures",
-          "unattributedComments": 0,
-          "uniqueCommenters": 0
-        }
-      ],
-      "number": 27141,
-      "reactions": 3,
-      "title": "fix(webhdfs sink): retry transient write errors",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T12:44:14+00:00"
+      "updatedAt": "2026-11-19T22:11:28+00:00"
     },
     {
       "linkedIssues": [
@@ -4784,7 +4617,7 @@
       "title": "enhancement(observability): rate limit heartbeat trace to one per minute",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T13:45:36+00:00"
+      "updatedAt": "2026-11-20T08:40:43+00:00"
     },
     {
       "linkedIssues": [
@@ -4812,40 +4645,12 @@
       "title": "fix(vector-buffers): report memory buffer byte limits in the correct gauge",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T17:12:33+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 27156,
-      "reactions": 2,
-      "title": "chore(sources): read http client targets on every interval tick",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-13T14:44:34+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 26938,
-          "reactions": 0,
-          "repository": "vectordotdev/vector",
-          "state": "OPEN",
-          "title": "`webhdfs` sink permanently drops batches on transient write failures",
-          "unattributedComments": 0,
-          "uniqueCommenters": 0
-        }
-      ],
-      "number": 27159,
-      "reactions": 3,
-      "title": "fix(webhdfs sink): retry transient write failures",
-      "unattributedComments": 0,
-      "uniqueCommenters": 3,
-      "updatedAt": "2026-11-13T01:27:33+00:00"
+      "updatedAt": "2026-11-18T22:25:19+00:00"
     },
     {
       "linkedIssues": [],
       "number": 27160,
-      "reactions": 3,
+      "reactions": 4,
       "title": "perf(template): cache parsed field paths",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
@@ -4858,7 +4663,7 @@
       "title": "feat(telemetry): make detailed topology metrics optional",
       "unattributedComments": 0,
       "uniqueCommenters": 2,
-      "updatedAt": "2026-11-13T04:26:57+00:00"
+      "updatedAt": "2026-11-19T22:21:54+00:00"
     },
     {
       "linkedIssues": [],
@@ -4867,7 +4672,7 @@
       "title": "feat(opensearch sink): support tls certificate hot-reload for elasticsearch and opensearch sinks",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
-      "updatedAt": "2026-11-13T13:50:00+00:00"
+      "updatedAt": "2026-11-18T12:23:21+00:00"
     },
     {
       "linkedIssues": [
@@ -4885,13 +4690,13 @@
       "reactions": 3,
       "title": "fix(buffers): make disk buffer record reads cancel-safe",
       "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-11-13T11:51:12+00:00"
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-13T20:17:35+00:00"
     },
     {
       "linkedIssues": [],
       "number": 27164,
-      "reactions": 5,
+      "reactions": 6,
       "title": "enhancement(loki sink): add expanded_key_case option to keep the case of expanded keys",
       "unattributedComments": 0,
       "uniqueCommenters": 3,
@@ -4908,12 +4713,414 @@
     },
     {
       "linkedIssues": [],
-      "number": 27166,
+      "number": 27195,
       "reactions": 2,
-      "title": "fix(elasticsearch sink): support data stream confinement fallback",
+      "title": "feat(codecs): convert native OTLP traces when typed-trace is enabled",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-11-13T14:56:30+00:00"
+      "updatedAt": "2026-11-19T22:24:32+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27196,
+      "reactions": 1,
+      "title": "chore(datadog): map Datadog traces onto the RFC 25329 typed event",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-13T23:48:26+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 22046,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "The kafka source and sink incorrectly document support for non-PEM certificates",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        },
+        {
+          "number": 22047,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "kafka source doesn't support non-PEM certificates",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 27201,
+      "reactions": 2,
+      "title": "fix(kafka): support non-PEM certificates for Kafka connections via `TlsSettings`",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-15T09:53:48+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 23844,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "AWS_S3 Source Checksum warning",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 27208,
+      "reactions": 3,
+      "title": "fix(aws_s3 source): support response checksum validation configuration",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-15T21:39:46+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 20012,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "Content-Type is not dictated by Compression Scheme as Docs Claim",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 27209,
+      "reactions": 3,
+      "title": "fix(aws_s3 sink): clarify content_type default value in docs",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-15T22:54:58+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 16387,
+          "reactions": 38,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "Include support for GCP authentication via workload identity federation",
+          "unattributedComments": 0,
+          "uniqueCommenters": 11
+        }
+      ],
+      "number": 27210,
+      "reactions": 3,
+      "title": "feat(gcp sinks): support Workload Identity Federation credentials",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-17T20:25:28+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 27211,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "GELF codec: compressed messages over stream transports (TCP) fail to decode",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 27215,
+      "reactions": 2,
+      "title": "fix(codecs): decompress gzip/zlib GELF frames on stream transports",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T20:50:27+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27217,
+      "reactions": 2,
+      "title": "chore(dev): compare full records in datadog trace e2e",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T15:57:49+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 26161,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "Semantic meaning is taken from the wrong input when a multi-input transform feeds another transform — nondeterministic per process",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 27224,
+      "reactions": 2,
+      "title": "fix(topology): preserve semantic meanings through fan-in and disk buffers",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-17T01:17:37+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27228,
+      "reactions": 3,
+      "title": "refactor(amqp, heroku_logs sources): use const field names",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-17T15:47:50+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 26985,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "Prometheus_remote_write throughput continuously degrades with histogram metrics",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 27244,
+      "reactions": 3,
+      "title": "fix(prometheus_remote_write): stop retaining histogram sample history",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-18T02:51:11+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27246,
+      "reactions": 3,
+      "title": "feat(socket): add receive_concurrency to UDP source",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T20:22:16+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 27245,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "HTTP client sinks leak sockets stuck in TLS handshake (background connect has no timeout), eventually exhausting file descriptors",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 27247,
+      "reactions": 3,
+      "title": "fix(http): limit connection setup and enable TCP keepalive for HTTP clients",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-20T03:09:47+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27248,
+      "reactions": 3,
+      "title": "fix(azure_blob sink): retry transport errors and lost-response uploads",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-18T12:31:24+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 5794,
+          "reactions": 8,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "support unix socket for prometheus_scrape",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 27249,
+      "reactions": 3,
+      "title": "Prometheus scrape unix",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-19T22:30:21+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27257,
+      "reactions": 3,
+      "title": "feat(aws_kinesis_streams): add KPL and newline record aggregation",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3,
+      "updatedAt": "2026-11-18T18:56:54+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 25774,
+          "reactions": 15,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "Disk buffer for S3 sink is not flushed on graceful termination",
+          "unattributedComments": 0,
+          "uniqueCommenters": 3
+        }
+      ],
+      "number": 27260,
+      "reactions": 3,
+      "title": "fix(buffers): flush partial sink batches during disk-buffer shutdown",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-18T21:46:47+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27263,
+      "reactions": 1,
+      "title": "chore(deps): bump the cargo-major group across 1 directory with 29 updates",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T23:23:51+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27264,
+      "reactions": 2,
+      "title": "enhancement(remap transform): read metric values in VRL",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T22:04:29+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3435,
+          "reactions": 12,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "could clickhouse sink support metrics ?",
+          "unattributedComments": 0,
+          "uniqueCommenters": 6
+        }
+      ],
+      "number": 27266,
+      "reactions": 3,
+      "title": "feat(clickhouse sink): accept metric events",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T23:26:00+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27267,
+      "reactions": 3,
+      "title": "enhancement(transforms): Split mutable state, remove deep transform clones in Runner",
+      "unattributedComments": 0,
+      "uniqueCommenters": 5,
+      "updatedAt": "2026-11-20T13:46:22+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27268,
+      "reactions": 3,
+      "title": "enhancement(codecs): coerce numeric strings in GELF numeric fields in relaxed mode",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T20:43:39+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27269,
+      "reactions": 1,
+      "title": "chore(file source): add deterministic simulation testing harness and I/O seams",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T22:54:42+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 27229,
+          "reactions": 1,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "`azure_logs_ingestion` sink: Azure authentication does not respect proxy settings",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 27273,
+      "reactions": 3,
+      "title": "fix(azure sinks): send Entra ID token requests through the configured proxy",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-20T00:19:07+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 27203,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "TLS: DER-encoded certificate in `crt_file` fails because `TlsSettings` treats DER file as PKCS#12",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 27274,
+      "reactions": 3,
+      "title": "fix(tls): support DER-encoded X.509 identities",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-20T06:28:04+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 27144,
+          "reactions": 1,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "`opentelemetry` source: support CORS on the OTLP/HTTP server",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 27275,
+      "reactions": 3,
+      "title": "feat(http): support CORS for HTTP and OpenTelemetry sources",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-20T07:49:26+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 27276,
+      "reactions": 3,
+      "title": "feat(metrics): add shared-transport network byte counters",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-20T09:13:30+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 27278,
+          "reactions": 0,
+          "repository": "vectordotdev/vector",
+          "state": "OPEN",
+          "title": "Windows vector",
+          "unattributedComments": 0,
+          "uniqueCommenters": 0
+        }
+      ],
+      "number": 27280,
+      "reactions": 2,
+      "title": "enhancement(windows): add executable version information",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-20T14:12:35+00:00"
     }
   ],
   "repository": "vectordotdev/vector",

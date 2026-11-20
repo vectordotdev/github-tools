@@ -18089,15 +18089,15 @@
       },
       {
         "color": "94A3B8",
-        "description": "Anything related to the durability of Vector events",
-        "id": 8011932520508421718,
-        "name": "domain:durability"
+        "description": "Anything related to Vector's reliability",
+        "id": 5669051342270066101,
+        "name": "domain:reliability"
       }
     ],
     "number": 11473,
     "state": "open",
     "title": "Add an option to the `file` sink to sync changes to disk after each batch write",
-    "updated_at": "2026-05-29T23:39:30Z",
+    "updated_at": "2026-11-16T18:54:23Z",
     "user": {
       "login": "bruceg"
     }
@@ -28178,12 +28178,19 @@
     "draft": true,
     "id": 885816524,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 11932,
     "pull_request": {},
     "state": "open",
     "title": "docs(external docs): internal schema beta highlight article",
-    "updated_at": "2025-07-10T15:43:13Z",
+    "updated_at": "2026-11-19T20:46:12Z",
     "user": {
       "login": "JeanMertz"
     }
@@ -32970,21 +32977,21 @@
       },
       {
         "color": "94A3B8",
-        "description": "Anything related to Vector's performance",
-        "id": 7501419672228520413,
-        "name": "domain:performance"
+        "description": "Anything related to Vector's reliability",
+        "id": 5669051342270066101,
+        "name": "domain:reliability"
       },
       {
         "color": "94A3B8",
-        "description": "Anything related to the durability of Vector events",
-        "id": 8011932520508421718,
-        "name": "domain:durability"
+        "description": "Anything related to Vector's performance",
+        "id": 7501419672228520413,
+        "name": "domain:performance"
       }
     ],
     "number": 12147,
     "state": "open",
     "title": "Soak tests for durability scenarios",
-    "updated_at": "2022-04-08T21:19:55Z",
+    "updated_at": "2026-11-16T18:54:48Z",
     "user": {
       "login": "binarylogic"
     }
@@ -101376,7 +101383,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T14:33:12Z",
     "created_at": "2022-11-04T21:48:20Z",
     "id": 1436676267,
     "issue_type": null,
@@ -101389,9 +101396,9 @@
       }
     ],
     "number": 15118,
-    "state": "open",
+    "state": "closed",
     "title": "`amqp` source / sink docs need to be updated to include `tls` as one of the `connection` options.",
-    "updated_at": "2022-11-09T00:10:29Z",
+    "updated_at": "2026-11-16T14:33:12Z",
     "user": {
       "login": "neuronull"
     }
@@ -113270,13 +113277,19 @@
         "description": "Anything related to Vector's topology code",
         "id": 1103341506812725494,
         "name": "domain:topology"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 15638,
     "pull_request": {},
     "state": "open",
     "title": "chore(observability): try out thread-local accumulator design for allocation tracing",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:47:28Z",
     "user": {
       "login": "tobz"
     }
@@ -114956,13 +114969,19 @@
         "description": "Anything related to core crates i.e. vector-core, core-common, etc",
         "id": 6154848213855315177,
         "name": "domain:core"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 15704,
     "pull_request": {},
     "state": "open",
     "title": "chore(data model): Wrap metric tag mapping with `Arc`",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:48:27Z",
     "user": {
       "login": "bruceg"
     }

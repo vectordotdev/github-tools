@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-13T14:59:13.383824+00:00",
+  "collectedAt": "2026-11-20T14:23:22.022131+00:00",
   "issues": [
     {
       "number": 4,
@@ -1792,6 +1792,13 @@
       "title": "feat(compiler): support first-class for loops with break and continue",
       "unattributedComments": 0,
       "uniqueCommenters": 2
+    },
+    {
+      "number": 2070,
+      "reactions": 0,
+      "title": "`Value::insert` can partially modify a value when the path contains an invalid segment",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
     }
   ],
   "repository": "vectordotdev/vrl",

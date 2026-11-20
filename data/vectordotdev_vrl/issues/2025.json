@@ -7043,12 +7043,19 @@
     "draft": false,
     "id": 2813290955,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 1504,
     "pull_request": {},
     "state": "open",
     "title": "feat(operators): Add AND, OR, and NOT bitwise operators",
-    "updated_at": "2025-09-27T15:10:57Z",
+    "updated_at": "2026-11-19T18:29:59Z",
     "user": {
       "login": "asauzeau"
     }

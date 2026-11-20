@@ -5588,7 +5588,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Fix IndexWriter::commit_opstamp() never updating after a successful commit (#2666)",
-    "updated_at": "2026-10-19T03:09:56Z",
+    "updated_at": "2026-11-19T21:21:47Z",
     "user": {
       "login": "DeviousCardi"
     }
@@ -5742,7 +5742,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Bump codecov/codecov-action from 7.0.0 to 7.1.1",
-    "updated_at": "2026-09-18T20:04:37Z",
+    "updated_at": "2026-11-17T12:57:43Z",
     "user": {
       "login": "dependabot"
     }
@@ -6689,7 +6689,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Bump actions/upload-artifact from 7.0.1 to 7.0.2",
-    "updated_at": "2026-10-09T20:33:54Z",
+    "updated_at": "2026-11-17T12:57:48Z",
     "user": {
       "login": "dependabot"
     }
@@ -6969,7 +6969,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Bump ossf/scorecard-action from 2.4.4 to 2.5.0",
-    "updated_at": "2026-10-14T02:40:27Z",
+    "updated_at": "2026-11-17T12:57:49Z",
     "user": {
       "login": "dependabot"
     }
@@ -7660,7 +7660,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T14:22:14Z",
     "created_at": "2026-10-29T18:37:21Z",
     "draft": false,
     "id": 5073580219,
@@ -7668,9 +7668,9 @@
     "labels": [],
     "number": 3226,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Document the query-grammar subcrate",
-    "updated_at": "2026-10-31T11:39:45Z",
+    "updated_at": "2026-11-17T14:22:30Z",
     "user": {
       "login": "Reacher3745"
     }
@@ -7791,7 +7791,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T16:12:44Z",
     "created_at": "2026-11-02T16:20:01Z",
     "draft": false,
     "id": 5123595863,
@@ -7799,9 +7799,9 @@
     "labels": [],
     "number": 3234,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Fix numeric cardinality keys across segments",
-    "updated_at": "2026-11-09T17:19:51Z",
+    "updated_at": "2026-11-16T16:12:44Z",
     "user": {
       "login": "hakarrr"
     }
@@ -8141,7 +8141,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-13T16:12:19Z",
     "created_at": "2026-11-11T22:20:16Z",
     "draft": false,
     "id": 5267625778,
@@ -8149,9 +8149,9 @@
     "labels": [],
     "number": 3255,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Add ability to disable fsync when using `MmapDirectory`",
-    "updated_at": "2026-11-11T23:05:46Z",
+    "updated_at": "2026-11-13T16:12:20Z",
     "user": {
       "login": "guilload"
     }
@@ -8171,7 +8171,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T13:29:56Z",
     "created_at": "2026-11-12T12:02:03Z",
     "draft": false,
     "id": 5277018908,
@@ -8179,9 +8179,9 @@
     "labels": [],
     "number": 3257,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Apply the registered raw analyzer to raw fast fields",
-    "updated_at": "2026-11-12T12:08:00Z",
+    "updated_at": "2026-11-17T13:29:56Z",
     "user": {
       "login": "rdettai-sk"
     }
@@ -8233,7 +8233,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T11:36:52Z",
     "created_at": "2026-11-13T11:24:58Z",
     "draft": false,
     "id": 5294619842,
@@ -8241,9 +8241,9 @@
     "labels": [],
     "number": 3261,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Replace read coalescing with batch reads",
-    "updated_at": "2026-11-13T11:29:24Z",
+    "updated_at": "2026-11-17T11:36:53Z",
     "user": {
       "login": "PSeitz"
     }
@@ -8262,6 +8262,180 @@
     "updated_at": "2026-11-13T12:26:13Z",
     "user": {
       "login": "akasakariko"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T11:40:29Z",
+    "created_at": "2026-11-16T15:30:08Z",
+    "draft": false,
+    "id": 5339870068,
+    "issue_type": null,
+    "labels": [],
+    "number": 3263,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Distinguish \"no fast field tokenizer\" from the raw tokenizer",
+    "updated_at": "2026-11-17T11:40:32Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T07:43:03Z",
+    "created_at": "2026-11-17T07:42:53Z",
+    "draft": false,
+    "id": 5352851831,
+    "issue_type": null,
+    "labels": [],
+    "number": 3264,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Search perf",
+    "updated_at": "2026-11-17T07:46:49Z",
+    "user": {
+      "login": "Barre"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T09:12:58Z",
+    "id": 6441221858,
+    "issue_type": null,
+    "labels": [],
+    "number": 3265,
+    "state": "open",
+    "title": "Cannot write external SegmentPlugin as DocIdMapping public API is incomplete",
+    "updated_at": "2026-11-17T12:00:12Z",
+    "user": {
+      "login": "umweltinfo"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T12:56:31Z",
+    "created_at": "2026-11-17T12:43:08Z",
+    "draft": false,
+    "id": 5357035478,
+    "issue_type": null,
+    "labels": [],
+    "number": 3266,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Put the plain codec behind a plain_codec feature",
+    "updated_at": "2026-11-17T12:56:34Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T14:59:47Z",
+    "draft": false,
+    "id": 5359270777,
+    "issue_type": null,
+    "labels": [],
+    "number": 3267,
+    "pull_request": {},
+    "state": "open",
+    "title": "Stream postings from automaton into Bitsets",
+    "updated_at": "2026-11-20T09:11:04Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-18T08:11:22Z",
+    "draft": false,
+    "id": 5372318085,
+    "issue_type": null,
+    "labels": [],
+    "number": 3268,
+    "pull_request": {},
+    "state": "open",
+    "title": "Expose document ID mappings to segment plugins",
+    "updated_at": "2026-11-18T08:13:25Z",
+    "user": {
+      "login": "bingdongni"
+    }
+  },
+  {
+    "closed_at": "2026-11-18T14:03:14Z",
+    "created_at": "2026-11-18T13:54:12Z",
+    "draft": false,
+    "id": 5377320497,
+    "issue_type": null,
+    "labels": [],
+    "number": 3269,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Revert 3261 remove read coalescing",
+    "updated_at": "2026-11-18T14:03:16Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-18T16:10:45Z",
+    "draft": false,
+    "id": 5379613649,
+    "issue_type": null,
+    "labels": [],
+    "number": 3270,
+    "pull_request": {},
+    "state": "open",
+    "title": "Fix snippet panic when a token starts before its fragment",
+    "updated_at": "2026-11-18T16:13:34Z",
+    "user": {
+      "login": "mpr1255"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-18T18:16:09Z",
+    "draft": false,
+    "id": 5381583253,
+    "issue_type": null,
+    "labels": [],
+    "number": 3271,
+    "pull_request": {},
+    "state": "open",
+    "title": "Compute the BM25 term-frequency table once per field when serializing postings",
+    "updated_at": "2026-11-18T18:18:07Z",
+    "user": {
+      "login": "pronoco"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-19T05:16:37Z",
+    "draft": false,
+    "id": 5389276157,
+    "issue_type": null,
+    "labels": [],
+    "number": 3272,
+    "pull_request": {},
+    "state": "open",
+    "title": "Remember the term infos an InvertedIndexReader looked up",
+    "updated_at": "2026-11-19T07:38:04Z",
+    "user": {
+      "login": "b41sh"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-20T08:36:02Z",
+    "draft": false,
+    "id": 5410321283,
+    "issue_type": null,
+    "labels": [],
+    "number": 3273,
+    "pull_request": {},
+    "state": "open",
+    "title": "Reuse one token for the parts in SplitCompoundWords",
+    "updated_at": "2026-11-20T08:37:58Z",
+    "user": {
+      "login": "g4lb"
     }
   }
 ]

@@ -829,12 +829,19 @@
     "draft": true,
     "id": 1663754673,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 19511,
     "pull_request": {},
     "state": "open",
     "title": "chore: add api endpoint for heap profiling",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:48:24Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -1258,13 +1265,19 @@
         "description": "Anything related to core crates i.e. vector-core, core-common, etc",
         "id": 6154848213855315177,
         "name": "domain:core"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 19525,
     "pull_request": {},
     "state": "open",
     "title": "experiment(core): add new string type for optimizing memory usage",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:49:18Z",
     "user": {
       "login": "tobz"
     }
@@ -3954,29 +3967,29 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T21:20:27Z",
     "created_at": "2024-01-16T15:16:18Z",
     "id": 2084237364,
     "issue_type": null,
     "labels": [],
     "number": 19631,
-    "state": "open",
+    "state": "closed",
     "title": "Investigate fslock usage",
-    "updated_at": "2024-01-16T15:18:20Z",
+    "updated_at": "2026-11-17T21:20:27Z",
     "user": {
       "login": "pront"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-18T15:13:47Z",
     "created_at": "2024-01-16T17:55:14Z",
     "id": 2084525993,
     "issue_type": null,
     "labels": [],
     "number": 19632,
-    "state": "open",
+    "state": "closed",
     "title": "Tests should use a unique data directory",
-    "updated_at": "2024-01-17T19:52:48Z",
+    "updated_at": "2026-11-18T15:13:47Z",
     "user": {
       "login": "pront"
     }
@@ -26613,12 +26626,19 @@
     "draft": true,
     "id": 1886339444,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 20560,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(enrichment_tables): allow union queries in enrichment tables",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:50:23Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -41452,7 +41472,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T21:21:32Z",
     "created_at": "2024-09-05T15:46:37Z",
     "id": 2508155871,
     "issue_type": null,
@@ -41471,9 +41491,9 @@
       }
     ],
     "number": 21213,
-    "state": "open",
+    "state": "closed",
     "title": "Change `LogEvent::insert` function to return a `Result<Option<Value>>` ",
-    "updated_at": "2025-04-15T20:27:54Z",
+    "updated_at": "2026-11-17T21:21:32Z",
     "user": {
       "login": "pront"
     }
@@ -58549,7 +58569,7 @@
     "number": 21967,
     "state": "open",
     "title": "Handle `Incoming::PubAck` in the `mqtt` source",
-    "updated_at": "2026-06-23T14:35:54Z",
+    "updated_at": "2026-11-20T00:16:04Z",
     "user": {
       "login": "pront"
     }
@@ -60673,13 +60693,19 @@
         "description": "",
         "id": 3907211055831279021,
         "name": "do not merge"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 22071,
     "pull_request": {},
     "state": "open",
     "title": "Actually allow log namespacing when using the syslog source.",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:52:48Z",
     "user": {
       "login": "apollo13"
     }

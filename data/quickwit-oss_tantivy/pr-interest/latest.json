@@ -1,7 +1,7 @@
 {
-  "collectedAt": "2026-11-13T15:03:11.478407+00:00",
+  "collectedAt": "2026-11-20T14:25:53.330032+00:00",
   "excludedDrafts": 25,
-  "openPrs": 168,
+  "openPrs": 169,
   "prs": [
     {
       "linkedIssues": [],
@@ -10,7 +10,7 @@
       "title": "add score mode into Inverted Index",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2023-02-22T02:24:02+00:00"
+      "updatedAt": "2026-11-16T08:56:56+00:00"
     },
     {
       "linkedIssues": [],
@@ -790,8 +790,8 @@
       "reactions": 2,
       "title": "Fix IndexWriter::commit_opstamp() never updating after a successful commit (#2666)",
       "unattributedComments": 0,
-      "uniqueCommenters": 0,
-      "updatedAt": "2026-10-19T03:09:56+00:00"
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-19T21:21:47+00:00"
     },
     {
       "linkedIssues": [],
@@ -800,7 +800,7 @@
       "title": "Bump codecov/codecov-action from 7.0.0 to 7.1.1",
       "unattributedComments": 0,
       "uniqueCommenters": 0,
-      "updatedAt": "2026-09-18T20:04:37+00:00"
+      "updatedAt": "2026-11-17T12:57:43+00:00"
     },
     {
       "linkedIssues": [],
@@ -993,7 +993,7 @@
       "title": "Bump actions/upload-artifact from 7.0.1 to 7.0.2",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-09T20:33:54+00:00"
+      "updatedAt": "2026-11-17T12:57:48+00:00"
     },
     {
       "linkedIssues": [],
@@ -1011,7 +1011,7 @@
       "title": "Bump ossf/scorecard-action from 2.4.4 to 2.5.0",
       "unattributedComments": 0,
       "uniqueCommenters": 1,
-      "updatedAt": "2026-10-14T02:40:27+00:00"
+      "updatedAt": "2026-11-17T12:57:49+00:00"
     },
     {
       "linkedIssues": [
@@ -1273,15 +1273,6 @@
     },
     {
       "linkedIssues": [],
-      "number": 3226,
-      "reactions": 2,
-      "title": "Document the query-grammar subcrate",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-10-31T11:39:45+00:00"
-    },
-    {
-      "linkedIssues": [],
       "number": 3228,
       "reactions": 1,
       "title": "Remove TermSetQuery / Optional BitSet in Union",
@@ -1325,25 +1316,6 @@
       "unattributedComments": 0,
       "uniqueCommenters": 1,
       "updatedAt": "2026-11-02T16:19:27+00:00"
-    },
-    {
-      "linkedIssues": [
-        {
-          "number": 2891,
-          "reactions": 0,
-          "repository": "quickwit-oss/tantivy",
-          "state": "OPEN",
-          "title": "Missing key handling in cardinality is glitchy",
-          "unattributedComments": 0,
-          "uniqueCommenters": 0
-        }
-      ],
-      "number": 3234,
-      "reactions": 2,
-      "title": "Fix numeric cardinality keys across segments",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2,
-      "updatedAt": "2026-11-09T17:19:51+00:00"
     },
     {
       "linkedIssues": [
@@ -1457,24 +1429,6 @@
       "updatedAt": "2026-11-08T11:32:00+00:00"
     },
     {
-      "linkedIssues": [],
-      "number": 3255,
-      "reactions": 1,
-      "title": "Add ability to disable fsync when using `MmapDirectory`",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-11T23:05:46+00:00"
-    },
-    {
-      "linkedIssues": [],
-      "number": 3257,
-      "reactions": 2,
-      "title": "Apply the registered raw analyzer to raw fast fields",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-12T12:08:00+00:00"
-    },
-    {
       "linkedIssues": [
         {
           "number": 3256,
@@ -1513,15 +1467,6 @@
       "updatedAt": "2026-11-13T10:52:43+00:00"
     },
     {
-      "linkedIssues": [],
-      "number": 3261,
-      "reactions": 2,
-      "title": "Replace read coalescing with batch reads",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1,
-      "updatedAt": "2026-11-13T11:29:24+00:00"
-    },
-    {
       "linkedIssues": [
         {
           "number": 3238,
@@ -1539,6 +1484,70 @@
       "unattributedComments": 0,
       "uniqueCommenters": 1,
       "updatedAt": "2026-11-13T12:26:13+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3267,
+      "reactions": 1,
+      "title": "Stream postings from automaton into Bitsets",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-20T09:11:04+00:00"
+    },
+    {
+      "linkedIssues": [
+        {
+          "number": 3265,
+          "reactions": 0,
+          "repository": "quickwit-oss/tantivy",
+          "state": "OPEN",
+          "title": "Cannot write external SegmentPlugin as DocIdMapping public API is incomplete",
+          "unattributedComments": 0,
+          "uniqueCommenters": 1
+        }
+      ],
+      "number": 3268,
+      "reactions": 2,
+      "title": "Expose document ID mappings to segment plugins",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-18T08:13:25+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3270,
+      "reactions": 2,
+      "title": "Fix snippet panic when a token starts before its fragment",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-18T16:13:34+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3271,
+      "reactions": 2,
+      "title": "Compute the BM25 term-frequency table once per field when serializing postings",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-18T18:18:07+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3272,
+      "reactions": 1,
+      "title": "Remember the term infos an InvertedIndexReader looked up",
+      "unattributedComments": 0,
+      "uniqueCommenters": 2,
+      "updatedAt": "2026-11-19T07:38:04+00:00"
+    },
+    {
+      "linkedIssues": [],
+      "number": 3273,
+      "reactions": 2,
+      "title": "Reuse one token for the parts in SplitCompoundWords",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1,
+      "updatedAt": "2026-11-20T08:37:58+00:00"
     }
   ],
   "repository": "quickwit-oss/tantivy",

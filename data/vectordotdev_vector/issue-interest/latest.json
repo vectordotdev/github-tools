@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-13T14:56:08.383733+00:00",
+  "collectedAt": "2026-11-20T14:21:50.747473+00:00",
   "issues": [
     {
       "number": 33,
@@ -297,7 +297,7 @@
     },
     {
       "number": 1293,
-      "reactions": 68,
+      "reactions": 69,
       "title": "New `kubernetes_system_events` source",
       "unattributedComments": 1,
       "uniqueCommenters": 20
@@ -877,13 +877,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 2303,
-      "reactions": 42,
-      "title": "Autodiscovery of Prometheus endpoints for scraping",
-      "unattributedComments": 0,
-      "uniqueCommenters": 13
-    },
-    {
       "number": 2339,
       "reactions": 1,
       "title": "Add support for field path notation in Lua scripts",
@@ -1189,7 +1182,7 @@
       "reactions": 12,
       "title": "could clickhouse sink support metrics ?",
       "unattributedComments": 0,
-      "uniqueCommenters": 5
+      "uniqueCommenters": 6
     },
     {
       "number": 3455,
@@ -1312,7 +1305,7 @@
     },
     {
       "number": 3829,
-      "reactions": 15,
+      "reactions": 16,
       "title": "Better support for large S3 batches",
       "unattributedComments": 0,
       "uniqueCommenters": 10
@@ -2134,7 +2127,7 @@
       "reactions": 8,
       "title": "support unix socket for prometheus_scrape",
       "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 1
     },
     {
       "number": 5797,
@@ -2929,7 +2922,7 @@
     },
     {
       "number": 7501,
-      "reactions": 26,
+      "reactions": 27,
       "title": "Request: Add google cloud storage source",
       "unattributedComments": 0,
       "uniqueCommenters": 7
@@ -4819,7 +4812,7 @@
     },
     {
       "number": 10877,
-      "reactions": 12,
+      "reactions": 13,
       "title": "TLS certificates not reloaded on config reload",
       "unattributedComments": 0,
       "uniqueCommenters": 12
@@ -5323,7 +5316,7 @@
     },
     {
       "number": 11942,
-      "reactions": 81,
+      "reactions": 83,
       "title": "Make Vector aware of available memory",
       "unattributedComments": 0,
       "uniqueCommenters": 9
@@ -7282,13 +7275,6 @@
       "uniqueCommenters": 1
     },
     {
-      "number": 15118,
-      "reactions": 0,
-      "title": "`amqp` source / sink docs need to be updated to include `tls` as one of the `connection` options.",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2
-    },
-    {
       "number": 15121,
       "reactions": 0,
       "title": "`PrometheusRemoteWriteAuth` / `http::Auth` refactor ?",
@@ -8738,13 +8724,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 18138,
-      "reactions": 2,
-      "title": "Vector returns 415 (The request's content-type is not supported) when using AWS Kinesis Firehose to Splunk endpoint",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2
-    },
-    {
       "number": 18144,
       "reactions": 1,
       "title": "Update default framing for blob storage sinks to be newline delimited",
@@ -9004,13 +8983,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 18570,
-      "reactions": 0,
-      "title": "`native_json` codec is not serializing/deserializing `EventMetadata`.",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2
-    },
-    {
       "number": 18574,
       "reactions": 0,
       "title": "`schema_definition` metadata field is lost when event goes through disk buffers ",
@@ -9151,13 +9123,6 @@
       "uniqueCommenters": 1
     },
     {
-      "number": 18779,
-      "reactions": 1,
-      "title": "Migrate native JSON encoding to serialize the protobuf data model instead of in-memory data model",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2
-    },
-    {
       "number": 18784,
       "reactions": 18,
       "title": "Enable load shedding for `kubernetes_log` source",
@@ -9229,7 +9194,7 @@
     },
     {
       "number": 18857,
-      "reactions": 14,
+      "reactions": 15,
       "title": "Kubelet cAdvisor metrics",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -9758,20 +9723,6 @@
       "title": "File Source: Unicode Null Characters",
       "unattributedComments": 0,
       "uniqueCommenters": 3
-    },
-    {
-      "number": 19631,
-      "reactions": 0,
-      "title": "Investigate fslock usage",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
-      "number": 19632,
-      "reactions": 0,
-      "title": "Tests should use a unique data directory",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
     },
     {
       "number": 19640,
@@ -10684,13 +10635,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 21213,
-      "reactions": 1,
-      "title": "Change `LogEvent::insert` function to return a `Result<Option<Value>>` ",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 21223,
       "reactions": 1,
       "title": "Ability to inject events into sources for unit testing",
@@ -11091,10 +11035,10 @@
     },
     {
       "number": 21967,
-      "reactions": 2,
+      "reactions": 3,
       "title": "Handle `Incoming::PubAck` in the `mqtt` source",
       "unattributedComments": 0,
-      "uniqueCommenters": 2
+      "uniqueCommenters": 3
     },
     {
       "number": 21974,
@@ -11105,7 +11049,7 @@
     },
     {
       "number": 22006,
-      "reactions": 21,
+      "reactions": 22,
       "title": "On kafka consumer rebalance, Vector consumer stops consuming.",
       "unattributedComments": 0,
       "uniqueCommenters": 6
@@ -11312,13 +11256,6 @@
       "title": "Improve stackdriver logs sink",
       "unattributedComments": 0,
       "uniqueCommenters": 3
-    },
-    {
-      "number": 22379,
-      "reactions": 0,
-      "title": "Splunk integration tests are failing",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
     },
     {
       "number": 22384,
@@ -11910,10 +11847,10 @@
     },
     {
       "number": 23029,
-      "reactions": 19,
+      "reactions": 20,
       "title": "InvalidRequest error when using S3 sink to CloudFlare R2",
       "unattributedComments": 0,
-      "uniqueCommenters": 5
+      "uniqueCommenters": 6
     },
     {
       "number": 23034,
@@ -12491,7 +12428,7 @@
     },
     {
       "number": 23732,
-      "reactions": 0,
+      "reactions": 1,
       "title": "Disk buffer sends burst of logs to http sinks with significant delay",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -12726,13 +12663,6 @@
       "title": "Controlling Vector config via API",
       "unattributedComments": 0,
       "uniqueCommenters": 5
-    },
-    {
-      "number": 24089,
-      "reactions": 0,
-      "title": "Provide pre-push hook for external contributors",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
     },
     {
       "number": 24092,
@@ -12995,10 +12925,10 @@
     },
     {
       "number": 24395,
-      "reactions": 3,
+      "reactions": 4,
       "title": "aws_kinesis_streams: Support KPL Style Aggregation",
       "unattributedComments": 0,
-      "uniqueCommenters": 1
+      "uniqueCommenters": 2
     },
     {
       "number": 24397,
@@ -13082,7 +13012,7 @@
       "reactions": 0,
       "title": "Embedded DB support for enrichment tables",
       "unattributedComments": 0,
-      "uniqueCommenters": 3
+      "uniqueCommenters": 2
     },
     {
       "number": 24494,
@@ -13591,7 +13521,7 @@
     {
       "number": 25223,
       "reactions": 0,
-      "title": "Allocation tracing: fix panic in debug builds",
+      "title": "Allocation tracing: fix unsafe memory handling",
       "unattributedComments": 0,
       "uniqueCommenters": 0
     },
@@ -13996,10 +13926,10 @@
     },
     {
       "number": 26023,
-      "reactions": 1,
+      "reactions": 2,
       "title": "docker_logs: a transient stream error replays every record since the Vector process started",
       "unattributedComments": 0,
-      "uniqueCommenters": 2
+      "uniqueCommenters": 3
     },
     {
       "number": 26076,
@@ -14033,13 +13963,6 @@
       "number": 26109,
       "reactions": 0,
       "title": "Multiple `prometheus_scrape` sources with the same interval scrape in permanent lockstep",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
-      "number": 26111,
-      "reactions": 2,
-      "title": "tls_client_metadata should expose Subject Alternative Names (SANs) from the client certificate",
       "unattributedComments": 0,
       "uniqueCommenters": 0
     },
@@ -14170,13 +14093,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 26345,
-      "reactions": 2,
-      "title": "NATS source declares can_acknowledge() = true while its docs declare acknowledgements: no, suppressing the end-to-end acknowledgement warning",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 26353,
       "reactions": 0,
       "title": "Doris Sink Error Log in verbose mode",
@@ -14192,10 +14108,10 @@
     },
     {
       "number": 26439,
-      "reactions": 0,
+      "reactions": 1,
       "title": "syslog source: max_length silently drops oversized messages (docs say \"truncated\"); UDP mode ignores max_length entirely",
       "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 1
     },
     {
       "number": 26442,
@@ -14220,7 +14136,7 @@
     },
     {
       "number": 26492,
-      "reactions": 3,
+      "reactions": 4,
       "title": "TCP-based sources: idle connections starve busy connections (`RequestLimiter` capped at `num_threads()`)",
       "unattributedComments": 0,
       "uniqueCommenters": 3
@@ -14391,7 +14307,7 @@
       "reactions": 0,
       "title": "Implement network byte metrics and deprecate serialized-byte counters",
       "unattributedComments": 0,
-      "uniqueCommenters": 0
+      "uniqueCommenters": 1
     },
     {
       "number": 26814,
@@ -14492,13 +14408,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 26938,
-      "reactions": 0,
-      "title": "`webhdfs` sink permanently drops batches on transient write failures",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 26950,
       "reactions": 0,
       "title": "Terminal errored sink responses are missing error and discarded-event metrics",
@@ -14576,13 +14485,6 @@
       "uniqueCommenters": 1
     },
     {
-      "number": 27065,
-      "reactions": 0,
-      "title": "Revisit and remove the temporary GreptimeDB SDK fork",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 27078,
       "reactions": 1,
       "title": "Confinement checks should not be applied to the `elasticsearch` sink `data_stream.*` attributes",
@@ -14612,21 +14514,21 @@
     },
     {
       "number": 27108,
-      "reactions": 0,
+      "reactions": 1,
       "title": "Add `opsimate` sink",
-      "unattributedComments": 0,
-      "uniqueCommenters": 1
-    },
-    {
-      "number": 27121,
-      "reactions": 0,
-      "title": "Vector performance patches",
       "unattributedComments": 0,
       "uniqueCommenters": 2
     },
     {
+      "number": 27121,
+      "reactions": 2,
+      "title": "Vector performance patches",
+      "unattributedComments": 0,
+      "uniqueCommenters": 3
+    },
+    {
       "number": 27122,
-      "reactions": 0,
+      "reactions": 1,
       "title": "Kafka source cannot enable KIP-848: unconditional session.timeout.ms prevents consumer protocol initialization",
       "unattributedComments": 0,
       "uniqueCommenters": 0
@@ -14649,6 +14551,76 @@
       "number": 27144,
       "reactions": 1,
       "title": "`opentelemetry` source: support CORS on the OTLP/HTTP server",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27203,
+      "reactions": 0,
+      "title": "TLS: DER-encoded certificate in `crt_file` fails because `TlsSettings` treats DER file as PKCS#12",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27204,
+      "reactions": 0,
+      "title": "`windows_event_log`: with acknowledgements enabled, no checkpoint is ever written for events whose XML `<Channel>` differs from the subscribed channel name (e.g. `ForwardedEvents`)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27211,
+      "reactions": 0,
+      "title": "GELF codec: compressed messages over stream transports (TCP) fail to decode",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27222,
+      "reactions": 1,
+      "title": "Support reusable Kubernetes discovery for HTTP/JSON sources",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27229,
+      "reactions": 1,
+      "title": "`azure_logs_ingestion` sink: Azure authentication does not respect proxy settings",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27245,
+      "reactions": 0,
+      "title": "HTTP client sinks leak sockets stuck in TLS handshake (background connect has no timeout), eventually exhausting file descriptors",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27254,
+      "reactions": 0,
+      "title": "Support Kubernetes Service backend discovery via EndpointSlices in prometheus_scrape",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27255,
+      "reactions": 1,
+      "title": "Support Prometheus Operator ServiceMonitor and PodMonitor resources in prometheus_scrape",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27277,
+      "reactions": 0,
+      "title": "MetricRef claims Eq but hashes bounds as to_bits() while PartialEq compares them numerically",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 27278,
+      "reactions": 0,
+      "title": "Windows vector",
       "unattributedComments": 0,
       "uniqueCommenters": 0
     }
