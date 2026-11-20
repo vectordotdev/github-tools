@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-13T15:01:21.011097+00:00",
+  "collectedAt": "2026-11-20T14:24:46.038543+00:00",
   "issues": [
     {
       "number": 103,
@@ -2109,13 +2109,6 @@
       "uniqueCommenters": 0
     },
     {
-      "number": 3670,
-      "reactions": 0,
-      "title": "Doc processing error with an object mapping and null value",
-      "unattributedComments": 0,
-      "uniqueCommenters": 2
-    },
-    {
       "number": 3681,
       "reactions": 0,
       "title": "`Index XXX not found` even though the index has been created.",
@@ -3142,7 +3135,7 @@
       "reactions": 0,
       "title": "jemalloc failure on raspberry pi 5",
       "unattributedComments": 0,
-      "uniqueCommenters": 4
+      "uniqueCommenters": 3
     },
     {
       "number": 4788,
@@ -4748,13 +4741,6 @@
       "uniqueCommenters": 1
     },
     {
-      "number": 7000,
-      "reactions": 0,
-      "title": "Retention stops after deleting and recreating an index with the same ID",
-      "unattributedComments": 0,
-      "uniqueCommenters": 0
-    },
-    {
       "number": 7002,
       "reactions": 0,
       "title": "[bug] File-backed metastore blocks all reads of an index while writing its metadata",
@@ -4779,6 +4765,13 @@
       "number": 7006,
       "reactions": 0,
       "title": "0.9.3: `(A OR B) AND (id:x OR id:y OR id:z)` silently drops matching documents (tantivy BufferedUnion `seek_danger`, fixed on main, not released)",
+      "unattributedComments": 0,
+      "uniqueCommenters": 0
+    },
+    {
+      "number": 7039,
+      "reactions": 0,
+      "title": "Backlogged Kafka indexing pipelines can stall checkpoint publication on other pipelines",
       "unattributedComments": 0,
       "uniqueCommenters": 0
     }

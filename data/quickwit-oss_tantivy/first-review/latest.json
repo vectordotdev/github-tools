@@ -1,15 +1,15 @@
 {
-  "collectedAt": "2026-11-13T15:03:16.527906+00:00",
+  "collectedAt": "2026-11-20T14:25:57.880723+00:00",
   "excludedAwaitingAuthorPrs": 0,
   "excludedBotPrs": 16,
   "excludedDrafts": 25,
-  "openPrs": 168,
+  "openPrs": 169,
   "prs": [
     {
       "createdAt": "2020-12-10T10:17:17+00:00",
       "number": 955,
       "title": "add score mode into Inverted Index",
-      "updatedAt": "2023-02-22T02:24:02+00:00"
+      "updatedAt": "2026-11-16T08:56:56+00:00"
     },
     {
       "createdAt": "2022-03-20T04:19:05+00:00",
@@ -291,7 +291,7 @@
       "createdAt": "2026-09-15T16:32:47+00:00",
       "number": 3105,
       "title": "Fix IndexWriter::commit_opstamp() never updating after a successful commit (#2666)",
-      "updatedAt": "2026-10-19T03:09:56+00:00"
+      "updatedAt": "2026-11-19T21:21:47+00:00"
     },
     {
       "createdAt": "2026-09-22T06:16:52+00:00",
@@ -510,12 +510,6 @@
       "updatedAt": "2026-11-02T16:19:27+00:00"
     },
     {
-      "createdAt": "2026-11-02T16:20:01+00:00",
-      "number": 3234,
-      "title": "Fix numeric cardinality keys across segments",
-      "updatedAt": "2026-11-09T17:19:51+00:00"
-    },
-    {
       "createdAt": "2026-11-03T03:54:34+00:00",
       "number": 3236,
       "title": "Fix Block-WAND bounds and JSON conjunction scoring",
@@ -564,18 +558,6 @@
       "updatedAt": "2026-11-08T11:32:00+00:00"
     },
     {
-      "createdAt": "2026-11-11T22:20:16+00:00",
-      "number": 3255,
-      "title": "Add ability to disable fsync when using `MmapDirectory`",
-      "updatedAt": "2026-11-11T23:05:46+00:00"
-    },
-    {
-      "createdAt": "2026-11-12T12:02:03+00:00",
-      "number": 3257,
-      "title": "Apply the registered raw analyzer to raw fast fields",
-      "updatedAt": "2026-11-12T12:08:00+00:00"
-    },
-    {
       "createdAt": "2026-11-12T14:38:00+00:00",
       "number": 3258,
       "title": "Use injected BM25 statistics in PhrasePrefixQuery",
@@ -588,16 +570,40 @@
       "updatedAt": "2026-11-13T10:52:43+00:00"
     },
     {
-      "createdAt": "2026-11-13T11:24:58+00:00",
-      "number": 3261,
-      "title": "Replace read coalescing with batch reads",
-      "updatedAt": "2026-11-13T11:29:24+00:00"
-    },
-    {
       "createdAt": "2026-11-13T12:22:41+00:00",
       "number": 3262,
       "title": "Fix ignored boosts in phrase-prefix and unbounded range scorers",
       "updatedAt": "2026-11-13T12:26:13+00:00"
+    },
+    {
+      "createdAt": "2026-11-18T08:11:22+00:00",
+      "number": 3268,
+      "title": "Expose document ID mappings to segment plugins",
+      "updatedAt": "2026-11-18T08:13:25+00:00"
+    },
+    {
+      "createdAt": "2026-11-18T16:10:45+00:00",
+      "number": 3270,
+      "title": "Fix snippet panic when a token starts before its fragment",
+      "updatedAt": "2026-11-18T16:13:34+00:00"
+    },
+    {
+      "createdAt": "2026-11-18T18:16:09+00:00",
+      "number": 3271,
+      "title": "Compute the BM25 term-frequency table once per field when serializing postings",
+      "updatedAt": "2026-11-18T18:18:07+00:00"
+    },
+    {
+      "createdAt": "2026-11-19T05:16:37+00:00",
+      "number": 3272,
+      "title": "Remember the term infos an InvertedIndexReader looked up",
+      "updatedAt": "2026-11-19T07:38:04+00:00"
+    },
+    {
+      "createdAt": "2026-11-20T08:36:02+00:00",
+      "number": 3273,
+      "title": "Reuse one token for the parts in SplitCompoundWords",
+      "updatedAt": "2026-11-20T08:37:58+00:00"
     }
   ],
   "repository": "quickwit-oss/tantivy",

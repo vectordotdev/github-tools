@@ -7544,13 +7544,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 16119,
     "pull_request": {},
     "state": "open",
     "title": "feat(core): Log response bodies in HTTP request debug #15911",
-    "updated_at": "2025-07-10T15:43:13Z",
+    "updated_at": "2026-11-19T20:47:38Z",
     "user": {
       "login": "jonathanpv"
     }
@@ -14266,7 +14272,7 @@
     "number": 16387,
     "state": "open",
     "title": "Include support for GCP authentication via workload identity federation",
-    "updated_at": "2026-11-12T18:36:55Z",
+    "updated_at": "2026-11-16T09:25:14Z",
     "user": {
       "login": "cahartma"
     }
@@ -24884,7 +24890,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T18:37:12Z",
     "created_at": "2023-03-20T19:44:59Z",
     "draft": true,
     "id": 1283203395,
@@ -24892,9 +24898,9 @@
     "labels": [],
     "number": 16872,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "(dont merge) chore(observability): enable allocation tracing by default to establish baseline",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-16T18:37:24Z",
     "user": {
       "login": "tobz"
     }
@@ -28783,7 +28789,7 @@
     "number": 17050,
     "state": "open",
     "title": "generic support for endpoint URIs using unix:// scheme",
-    "updated_at": "2026-05-29T23:44:27Z",
+    "updated_at": "2026-11-18T14:34:17Z",
     "user": {
       "login": "jdef"
     }
@@ -32724,7 +32730,7 @@
     "number": 17225,
     "state": "open",
     "title": "Update field names created by sources to use `const`",
-    "updated_at": "2026-11-12T14:41:03Z",
+    "updated_at": "2026-11-17T19:04:33Z",
     "user": {
       "login": "StephenWakely"
     }
@@ -36300,13 +36306,19 @@
         "description": "Anything related to Vector's codecs (encoding/decoding)",
         "id": 24217296173635418,
         "name": "domain:codecs"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 17395,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(aws_s3 sink): Add `parquet` codec",
-    "updated_at": "2026-02-21T18:08:23Z",
+    "updated_at": "2026-11-19T20:47:49Z",
     "user": {
       "login": "ktff"
     }
@@ -37016,13 +37028,19 @@
         "description": "Anything related to Vector's CI environment",
         "id": 6526936644602743638,
         "name": "domain:ci"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 17429,
     "pull_request": {},
     "state": "open",
     "title": "chore(ci): Add a custom lint to check for misformatted tracing messages",
-    "updated_at": "2025-07-10T15:43:13Z",
+    "updated_at": "2026-11-19T20:48:44Z",
     "user": {
       "login": "bruceg"
     }
@@ -37181,13 +37199,19 @@
         "description": "Anything related to core crates i.e. vector-core, core-common, etc",
         "id": 6154848213855315177,
         "name": "domain:core"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 17438,
     "pull_request": {},
     "state": "open",
     "title": "chore: start to remove task transform",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:46:48Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -49090,13 +49114,19 @@
         "description": "Anything related to Vector's sinks",
         "id": 6524463192304363030,
         "name": "domain:sinks"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 18028,
     "pull_request": {},
     "state": "open",
     "title": "fix(sinks): spike out encoding events before batching",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:48:01Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -51444,7 +51474,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-19T16:57:07Z",
     "created_at": "2023-08-02T12:24:23Z",
     "id": 1833083792,
     "issue_type": "Bug",
@@ -51457,9 +51487,9 @@
       }
     ],
     "number": 18138,
-    "state": "open",
+    "state": "closed",
     "title": "Vector returns 415 (The request's content-type is not supported) when using AWS Kinesis Firehose to Splunk endpoint",
-    "updated_at": "2026-05-29T23:15:55Z",
+    "updated_at": "2026-11-19T16:57:08Z",
     "user": {
       "login": "RonShl"
     }
@@ -60910,7 +60940,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-19T16:45:53Z",
     "created_at": "2023-09-14T19:21:34Z",
     "id": 1897167413,
     "issue_type": "Bug",
@@ -60935,9 +60965,9 @@
       }
     ],
     "number": 18570,
-    "state": "open",
+    "state": "closed",
     "title": "`native_json` codec is not serializing/deserializing `EventMetadata`.",
-    "updated_at": "2026-08-31T20:09:09Z",
+    "updated_at": "2026-11-19T16:45:54Z",
     "user": {
       "login": "neuronull"
     }
@@ -61478,13 +61508,19 @@
         "description": "Anything related to core crates i.e. vector-core, core-common, etc",
         "id": 6154848213855315177,
         "name": "domain:core"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 18603,
     "pull_request": {},
     "state": "open",
     "title": "[WIP] feature(core): add serde support to event proto structs",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:48:54Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -65050,7 +65086,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-19T16:45:52Z",
     "created_at": "2023-10-05T15:06:42Z",
     "id": 1928520570,
     "issue_type": "Enhancement",
@@ -65063,9 +65099,9 @@
       }
     ],
     "number": 18779,
-    "state": "open",
+    "state": "closed",
     "title": "Migrate native JSON encoding to serialize the protobuf data model instead of in-memory data model",
-    "updated_at": "2026-11-05T18:05:48Z",
+    "updated_at": "2026-11-19T16:45:52Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -68908,13 +68944,19 @@
         "description": "Anything related to Vector's external, public documentation",
         "id": 5210716293491119031,
         "name": "domain:external docs"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 18947,
     "pull_request": {},
     "state": "open",
     "title": "docs(ARC): add examples to concurrency docs",
-    "updated_at": "2026-03-05T16:10:54Z",
+    "updated_at": "2026-11-19T20:48:14Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -73219,12 +73261,19 @@
     "draft": true,
     "id": 1599058198,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 19135,
     "pull_request": {},
     "state": "open",
     "title": "fix(http client): cleanup error_kind metric tag values",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:49:07Z",
     "user": {
       "login": "dsmith3197"
     }
@@ -79317,13 +79366,19 @@
         "description": "Anything related to Vector's topology code",
         "id": 1103341506812725494,
         "name": "domain:topology"
+      },
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 1951021668007277535,
+        "name": "meta:awaiting author"
       }
     ],
     "number": 19436,
     "pull_request": {},
     "state": "open",
     "title": "WIP: try a different approach to transform concurrency",
-    "updated_at": "2025-07-10T15:43:12Z",
+    "updated_at": "2026-11-19T20:47:04Z",
     "user": {
       "login": "tobz"
     }

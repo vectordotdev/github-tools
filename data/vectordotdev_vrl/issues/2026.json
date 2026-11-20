@@ -642,6 +642,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "B8C88D",
         "description": "VRL stdlib function: ip_cidr_contains",
         "id": 4997062788792776140,
@@ -652,7 +658,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(stdlib): add IPv4-mapped IPv6 support to ip_cidr_contains",
-    "updated_at": "2026-06-16T13:15:03Z",
+    "updated_at": "2026-11-19T18:30:07Z",
     "user": {
       "login": "milas"
     }
@@ -1268,6 +1274,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "B8C88D",
         "description": "VRL stdlib function: decrypt",
         "id": 5900732414936141317,
@@ -1290,7 +1302,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(vrl): add AES-GCM support to encrypt/decrypt functions",
-    "updated_at": "2026-07-01T17:38:50Z",
+    "updated_at": "2026-11-19T18:30:16Z",
     "user": {
       "login": "dodo0822"
     }
@@ -1689,12 +1701,19 @@
     "draft": false,
     "id": 3321290946,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 1656,
     "pull_request": {},
     "state": "open",
     "title": "feat(parse json): add arbitrary_precision for serde_json",
-    "updated_at": "2026-02-24T15:21:59Z",
+    "updated_at": "2026-11-19T18:30:24Z",
     "user": {
       "login": "YJDoc2"
     }
@@ -4654,6 +4673,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
@@ -4676,7 +4701,7 @@
     "pull_request": {},
     "state": "open",
     "title": "perf(parse_regex, parse_regex_all): pre-compute capture names",
-    "updated_at": "2026-06-16T13:14:57Z",
+    "updated_at": "2026-11-19T18:30:31Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -4961,6 +4986,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
@@ -4971,7 +5002,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(releasing): publish to crates.io after prep PR is merged",
-    "updated_at": "2026-05-28T19:49:09Z",
+    "updated_at": "2026-11-19T18:30:38Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -5488,12 +5519,19 @@
     "draft": false,
     "id": 3810899164,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 1803,
     "pull_request": {},
     "state": "open",
     "title": "chore(stdlib): Resolve bool and int constants during compilation",
-    "updated_at": "2026-06-12T14:42:57Z",
+    "updated_at": "2026-11-19T18:30:45Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -5572,6 +5610,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "B8C88D",
         "description": "VRL stdlib function: parse_user_agent",
         "id": 2471982089171752361,
@@ -5582,7 +5626,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(stdlib): LRU cache for parse_user_agent function",
-    "updated_at": "2026-06-16T13:14:53Z",
+    "updated_at": "2026-11-19T18:30:53Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -5809,6 +5853,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "B8C88D",
         "description": "VRL stdlib function: parse_nginx_log",
         "id": 3283702677068885973,
@@ -5819,7 +5869,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(stdlib): Add support for parsing nginx error_log_tag",
-    "updated_at": "2026-07-17T18:30:39Z",
+    "updated_at": "2026-11-19T18:31:00Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -5859,12 +5909,19 @@
     "draft": false,
     "id": 3867068523,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 1818,
     "pull_request": {},
     "state": "open",
     "title": "chore(tests): checks function return type",
-    "updated_at": "2026-06-15T14:09:42Z",
+    "updated_at": "2026-11-19T18:31:08Z",
     "user": {
       "login": "JakubOnderka"
     }
@@ -5975,6 +6032,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
@@ -5985,7 +6048,7 @@
     "pull_request": {},
     "state": "open",
     "title": "fix(stdlib): validate tdef against runtime value and fix incorrect type_defs",
-    "updated_at": "2026-06-15T20:29:04Z",
+    "updated_at": "2026-11-19T18:31:16Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -6010,12 +6073,19 @@
     "draft": false,
     "id": 3884646630,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 1825,
     "pull_request": {},
     "state": "open",
     "title": "perf(value): back KeyString with SmolStr for zero-alloc inline key storage",
-    "updated_at": "2026-06-18T21:10:40Z",
+    "updated_at": "2026-11-19T18:31:23Z",
     "user": {
       "login": "thomasqueirozb"
     }
@@ -6940,12 +7010,19 @@
     "draft": true,
     "id": 4092658632,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 1864,
     "pull_request": {},
     "state": "open",
     "title": "chore(value): migrate Arbitrary impls from quicktest to proptest",
-    "updated_at": "2026-07-20T16:22:01Z",
+    "updated_at": "2026-11-19T18:31:29Z",
     "user": {
       "login": "hjooh"
     }
@@ -6956,12 +7033,19 @@
     "draft": false,
     "id": 4119484484,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 1865,
     "pull_request": {},
     "state": "open",
     "title": "chore(compiler): speed up typecheck for deep else-if ladders (remove quadratic complexity)",
-    "updated_at": "2026-08-07T22:49:39Z",
+    "updated_at": "2026-11-19T18:31:35Z",
     "user": {
       "login": "klondikedragon"
     }
@@ -7709,6 +7793,12 @@
         "name": "domain:ci"
       },
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
@@ -7719,7 +7809,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(ci): automate Dependabot license updates",
-    "updated_at": "2026-09-15T14:21:33Z",
+    "updated_at": "2026-11-19T18:31:43Z",
     "user": {
       "login": "pront"
     }
@@ -7746,12 +7836,19 @@
     "draft": false,
     "id": 4232043711,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 1895,
     "pull_request": {},
     "state": "open",
     "title": "chore(compiler): perf speedup through type-state sharing",
-    "updated_at": "2026-10-22T07:23:12Z",
+    "updated_at": "2026-11-19T18:31:50Z",
     "user": {
       "login": "klondikedragon"
     }
@@ -10178,6 +10275,12 @@
     "issue_type": null,
     "labels": [
       {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      },
+      {
         "color": "4FC887",
         "description": "Changes in this PR do not need user-facing explanations in the release changelog",
         "id": 405647549714097197,
@@ -10188,7 +10291,7 @@
     "pull_request": {},
     "state": "open",
     "title": "chore(compiler): represent query targets by kind",
-    "updated_at": "2026-10-13T14:05:57Z",
+    "updated_at": "2026-11-19T18:31:56Z",
     "user": {
       "login": "pront"
     }
@@ -10471,12 +10574,19 @@
     "draft": false,
     "id": 4944675012,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 2006,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(value): store objects in a sorted vector with inline keys",
-    "updated_at": "2026-10-30T18:17:05Z",
+    "updated_at": "2026-11-19T18:32:03Z",
     "user": {
       "login": "lukesteensen"
     }
@@ -11105,7 +11215,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(compiler): cache structurally-constant object literals",
-    "updated_at": "2026-11-13T14:31:27Z",
+    "updated_at": "2026-11-20T14:11:11Z",
     "user": {
       "login": "yackushevas"
     }
@@ -11231,7 +11341,7 @@
     "pull_request": {},
     "state": "open",
     "title": "enhancement(stdlib): fold constant `get` value arguments at compile time",
-    "updated_at": "2026-11-13T12:48:33Z",
+    "updated_at": "2026-11-20T08:25:46Z",
     "user": {
       "login": "yackushevas"
     }
@@ -11289,9 +11399,9 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T18:29:04Z",
     "created_at": "2026-11-04T16:54:01Z",
-    "draft": true,
+    "draft": false,
     "id": 5158171993,
     "issue_type": null,
     "labels": [
@@ -11304,9 +11414,9 @@
     ],
     "number": 2040,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "chore(deps): upgrade mlua to 0.12",
-    "updated_at": "2026-11-04T16:54:03Z",
+    "updated_at": "2026-11-17T18:29:05Z",
     "user": {
       "login": "pront"
     }
@@ -11354,18 +11464,25 @@
     "draft": true,
     "id": 5239021750,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
     "number": 2043,
     "pull_request": {},
     "state": "open",
     "title": "enhancement(value): add insert and remove variants with a modification hook",
-    "updated_at": "2026-11-10T10:50:26Z",
+    "updated_at": "2026-11-19T18:32:10Z",
     "user": {
       "login": "gwenaskell"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-19T17:08:42Z",
     "created_at": "2026-11-10T15:17:45Z",
     "draft": false,
     "id": 5243795732,
@@ -11373,9 +11490,9 @@
     "labels": [],
     "number": 2044,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "enhancement(value): avoid allocating existing ancestor keys during insertion",
-    "updated_at": "2026-11-11T20:23:42Z",
+    "updated_at": "2026-11-19T17:08:42Z",
     "user": {
       "login": "titaneric"
     }
@@ -11440,6 +11557,692 @@
     "updated_at": "2026-11-12T18:02:38Z",
     "user": {
       "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-18T17:29:43Z",
+    "created_at": "2026-11-14T18:09:23Z",
+    "draft": false,
+    "id": 5314605836,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2048,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): improve CI experience on vrl forks",
+    "updated_at": "2026-11-18T17:29:51Z",
+    "user": {
+      "login": "notpeter"
+    }
+  },
+  {
+    "closed_at": "2026-11-16T14:24:58Z",
+    "created_at": "2026-11-16T14:13:20Z",
+    "draft": false,
+    "id": 5338587579,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2049,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(releasing): prepare v0.39.0",
+    "updated_at": "2026-11-16T14:24:59Z",
+    "user": {
+      "login": "vectordotdev-bot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T09:49:13Z",
+    "draft": true,
+    "id": 5354523326,
+    "issue_type": null,
+    "labels": [],
+    "number": 2050,
+    "pull_request": {},
+    "state": "open",
+    "title": "enhancement(regex) add PCRE2 jit",
+    "updated_at": "2026-11-17T11:51:40Z",
+    "user": {
+      "login": "splitice"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T18:01:17Z",
+    "created_at": "2026-11-17T17:41:46Z",
+    "draft": false,
+    "id": 5361946691,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2051,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): include VRL integration tests in coverage",
+    "updated_at": "2026-11-17T18:01:19Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T18:21:23Z",
+    "created_at": "2026-11-17T18:05:24Z",
+    "draft": false,
+    "id": 5362312637,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2052,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(ci): preserve workspace coverage in merged report",
+    "updated_at": "2026-11-17T18:21:25Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T18:31:07Z",
+    "created_at": "2026-11-17T18:18:22Z",
+    "draft": false,
+    "id": 5362515981,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2053,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump Rust to 1.100.0 and enable dependency cooldowns",
+    "updated_at": "2026-11-17T18:31:08Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T18:33:15Z",
+    "draft": false,
+    "id": 5362735254,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to Vector's CI environment",
+        "id": 3978135660969177644,
+        "name": "domain:ci"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2054,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(ci): bump the github_actions group with 2 updates",
+    "updated_at": "2026-11-17T18:36:18Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-11-19T17:29:24Z",
+    "created_at": "2026-11-17T18:51:45Z",
+    "draft": false,
+    "id": 5363003482,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2055,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): bump the patches group with 37 updates",
+    "updated_at": "2026-11-19T17:29:31Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T18:59:07Z",
+    "draft": false,
+    "id": 5363108722,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2056,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump the cargo-major group with 3 updates",
+    "updated_at": "2026-11-17T19:03:04Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T18:59:21Z",
+    "draft": false,
+    "id": 5363112558,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2057,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump cc from 1.2.65 to 1.11.1",
+    "updated_at": "2026-11-17T19:02:48Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T18:59:31Z",
+    "draft": false,
+    "id": 5363115073,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2058,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump defmt from 1.1.1 to 1.2.0",
+    "updated_at": "2026-11-17T19:02:10Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T18:59:46Z",
+    "draft": false,
+    "id": 5363118651,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2059,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump arbitrary from 1.4.2 to 1.5.0",
+    "updated_at": "2026-11-17T19:02:58Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T18:59:56Z",
+    "draft": false,
+    "id": 5363121150,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2060,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump owo-colors from 4.2.3 to 4.4.0",
+    "updated_at": "2026-11-17T19:02:20Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T19:00:19Z",
+    "draft": false,
+    "id": 5363126562,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2061,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump icu_normalizer from 2.3.0 to 2.4.0",
+    "updated_at": "2026-11-17T19:03:31Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T19:00:32Z",
+    "draft": false,
+    "id": 5363129800,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2062,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump icu_locale_core from 2.3.0 to 2.4.0",
+    "updated_at": "2026-11-17T19:03:41Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T19:00:40Z",
+    "draft": false,
+    "id": 5363131923,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2063,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump tokio from 1.53.3 to 1.54.1",
+    "updated_at": "2026-11-17T19:03:30Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T19:00:49Z",
+    "draft": false,
+    "id": 5363134102,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2064,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump http from 1.4.2 to 1.5.0",
+    "updated_at": "2026-11-17T19:03:20Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T21:45:56Z",
+    "created_at": "2026-11-17T19:10:58Z",
+    "draft": false,
+    "id": 5363285083,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2065,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deps): remove Cargo min-publish-age setting",
+    "updated_at": "2026-11-17T21:45:58Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T20:14:25Z",
+    "created_at": "2026-11-17T19:47:50Z",
+    "draft": false,
+    "id": 5363842344,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2066,
+    "pull_request": {},
+    "state": "closed",
+    "title": "fix(lua): truncate fractional numbers in timestamp fields",
+    "updated_at": "2026-11-17T20:14:28Z",
+    "user": {
+      "login": "JinchengCao"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T20:21:00Z",
+    "created_at": "2026-11-17T19:56:55Z",
+    "draft": false,
+    "id": 5363975102,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2067,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(deny): ignore unmaintained chrono and chrono-tz advisories",
+    "updated_at": "2026-11-17T20:21:01Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T20:44:04Z",
+    "created_at": "2026-11-17T20:27:02Z",
+    "draft": false,
+    "id": 5364423638,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2068,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): remove empty Gardener workflow",
+    "updated_at": "2026-11-17T20:44:06Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T20:35:36Z",
+    "draft": true,
+    "id": 5364553601,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "BDC3CD",
+        "description": "Pull requests that are awaiting their author.",
+        "id": 7173230675418129594,
+        "name": "meta:awaiting author"
+      }
+    ],
+    "number": 2069,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): replace chrono and chrono-tz with jiff",
+    "updated_at": "2026-11-19T18:32:17Z",
+    "user": {
+      "login": "thomasqueirozb"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T21:28:18Z",
+    "id": 6454496396,
+    "issue_type": "Bug",
+    "labels": [],
+    "number": 2070,
+    "state": "open",
+    "title": "`Value::insert` can partially modify a value when the path contains an invalid segment",
+    "updated_at": "2026-11-17T21:28:18Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-18T00:19:09Z",
+    "draft": false,
+    "id": 5367426137,
+    "issue_type": null,
+    "labels": [],
+    "number": 2071,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): replace serde_yaml_ng with serde-saphyr",
+    "updated_at": "2026-11-18T00:41:01Z",
+    "user": {
+      "login": "shrey-aria"
+    }
+  },
+  {
+    "closed_at": "2026-11-19T15:01:29Z",
+    "created_at": "2026-11-19T09:34:49Z",
+    "draft": false,
+    "id": 5392353789,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2072,
+    "pull_request": {},
+    "state": "closed",
+    "title": "feat(value): add ObjectMap::extract_if",
+    "updated_at": "2026-11-19T15:01:31Z",
+    "user": {
+      "login": "gwenaskell"
+    }
+  },
+  {
+    "closed_at": "2026-11-19T17:05:21Z",
+    "created_at": "2026-11-19T16:47:24Z",
+    "draft": false,
+    "id": 5399147017,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2073,
+    "pull_request": {},
+    "state": "closed",
+    "title": "chore(ci): remove awaiting-author label workflow",
+    "updated_at": "2026-11-19T17:05:23Z",
+    "user": {
+      "login": "pront"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-19T17:30:47Z",
+    "draft": false,
+    "id": 5399816207,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "94A3B8",
+        "description": "Anything related to dependencies",
+        "id": 2612821526597292841,
+        "name": "domain:deps"
+      },
+      {
+        "color": "4FC887",
+        "description": "Changes in this PR do not need user-facing explanations in the release changelog",
+        "id": 405647549714097197,
+        "name": "no-changelog"
+      }
+    ],
+    "number": 2074,
+    "pull_request": {},
+    "state": "open",
+    "title": "chore(deps): bump the patches group across 1 directory with 43 updates",
+    "updated_at": "2026-11-19T17:37:27Z",
+    "user": {
+      "login": "dependabot"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-19T20:43:57Z",
+    "draft": false,
+    "id": 5402652774,
+    "issue_type": null,
+    "labels": [],
+    "number": 2075,
+    "pull_request": {},
+    "state": "open",
+    "title": "enhancement(compiler): record unnest's root instead of a root query for every get",
+    "updated_at": "2026-11-19T22:04:09Z",
+    "user": {
+      "login": "JinchengCao"
     }
   }
 ]

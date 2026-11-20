@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T15:02:50.838316+00:00",
+  "generatedAt": "2026-11-20T14:25:34.342358+00:00",
   "repository": "quickwit-oss/tantivy",
   "schemaVersion": 1,
   "series": {
@@ -15,6 +15,14 @@
       {
         "coverage": "incremental",
         "date": "2026-11-13T15:02:38.867675+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": "abc9c304e4a7cfe27e52319ebca709f6721b2be4",
+        "total": 0
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-20T14:25:32.247161+00:00",
         "dateBasis": "collected",
         "reason": null,
         "sourceRevision": null,
@@ -75,8 +83,16 @@
         "date": "2026-11-13T15:02:38.016563+00:00",
         "dateBasis": "collected",
         "reason": null,
-        "sourceRevision": null,
+        "sourceRevision": "abc9c304e4a7cfe27e52319ebca709f6721b2be4",
         "total": 356
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-20T14:25:31.754555+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 357
       }
     ],
     "prs": [
@@ -133,8 +149,16 @@
         "date": "2026-11-13T15:02:38.016563+00:00",
         "dateBasis": "collected",
         "reason": null,
-        "sourceRevision": null,
+        "sourceRevision": "abc9c304e4a7cfe27e52319ebca709f6721b2be4",
         "total": 143
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-20T14:25:31.754555+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 144
       }
     ]
   }

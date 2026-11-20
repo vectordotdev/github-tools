@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-13T15:03:02.613978+00:00",
+  "collectedAt": "2026-11-20T14:25:46.259817+00:00",
   "issues": [
     {
       "number": 7,
@@ -1490,7 +1490,7 @@
       "reactions": 0,
       "title": "Support f64 Compression",
       "unattributedComments": 0,
-      "uniqueCommenters": 3
+      "uniqueCommenters": 2
     },
     {
       "number": 2163,
@@ -2492,6 +2492,13 @@
       "title": "SnippetGenerator highlights terms from negated (`MustNot`) clauses",
       "unattributedComments": 0,
       "uniqueCommenters": 0
+    },
+    {
+      "number": 3265,
+      "reactions": 0,
+      "title": "Cannot write external SegmentPlugin as DocIdMapping public API is incomplete",
+      "unattributedComments": 0,
+      "uniqueCommenters": 1
     }
   ],
   "repository": "quickwit-oss/tantivy",

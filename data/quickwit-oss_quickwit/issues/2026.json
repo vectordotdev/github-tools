@@ -13706,7 +13706,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-14T20:07:44Z",
     "created_at": "2026-07-09T15:34:57Z",
     "draft": false,
     "id": 4023151508,
@@ -13727,9 +13727,9 @@
     ],
     "number": 6585,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "control-plane: warn when the scheduler is stuck reapplying a non-converging plan",
-    "updated_at": "2026-10-22T22:50:25Z",
+    "updated_at": "2026-11-14T20:07:44Z",
     "user": {
       "login": "aanufriev-celonis"
     }
@@ -14031,7 +14031,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-14T20:07:45Z",
     "created_at": "2026-07-13T10:39:01Z",
     "draft": false,
     "id": 4043659630,
@@ -14058,9 +14058,9 @@
     ],
     "number": 6599,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "ingest: batch WAL truncation in the shard-positions gossip handler",
-    "updated_at": "2026-11-04T18:12:31Z",
+    "updated_at": "2026-11-14T20:07:45Z",
     "user": {
       "login": "aanufriev-celonis"
     }
@@ -14116,7 +14116,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-14T20:07:45Z",
     "created_at": "2026-07-13T16:07:31Z",
     "draft": false,
     "id": 4045913056,
@@ -14137,9 +14137,9 @@
     ],
     "number": 6602,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "control-plane: rebuild the plan when the scheduler is stuck reapplying a non-converging plan",
-    "updated_at": "2026-10-22T22:50:10Z",
+    "updated_at": "2026-11-14T20:07:45Z",
     "user": {
       "login": "aanufriev-celonis"
     }
@@ -17233,7 +17233,7 @@
     "pull_request": {},
     "state": "closed",
     "title": "POC: Remove deeply nested stack of boxed `Storage::get_slice` futures",
-    "updated_at": "2026-08-28T18:00:14Z",
+    "updated_at": "2026-11-13T18:20:18Z",
     "user": {
       "login": "guilload"
     }
@@ -18111,7 +18111,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T19:22:08Z",
     "created_at": "2026-08-30T18:14:00Z",
     "draft": false,
     "id": 4396983307,
@@ -18132,9 +18132,9 @@
     ],
     "number": 6748,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "fix: ignore null objects",
-    "updated_at": "2026-11-04T18:12:58Z",
+    "updated_at": "2026-11-17T19:22:08Z",
     "user": {
       "login": "cemremengu"
     }
@@ -18773,13 +18773,13 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(indexer): drain indexing pipelines on planned teardowns",
-    "updated_at": "2026-10-23T09:39:01Z",
+    "updated_at": "2026-11-16T11:01:24Z",
     "user": {
       "login": "Totodore"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T16:37:37Z",
     "created_at": "2026-09-06T21:25:36Z",
     "draft": false,
     "id": 4458332058,
@@ -18800,9 +18800,9 @@
     ],
     "number": 6769,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Reset ingester shards periodically while running",
-    "updated_at": "2026-10-22T22:47:20Z",
+    "updated_at": "2026-11-16T16:37:38Z",
     "user": {
       "login": "atirna"
     }
@@ -19069,7 +19069,7 @@
     "pull_request": {},
     "state": "open",
     "title": "reduce the multipart part size on the opendal backends",
-    "updated_at": "2026-11-13T02:36:11Z",
+    "updated_at": "2026-11-19T21:21:26Z",
     "user": {
       "login": "DeviousCardi"
     }
@@ -19435,7 +19435,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat(indexers): add a scalable NATS JetStream source",
-    "updated_at": "2026-10-23T09:28:04Z",
+    "updated_at": "2026-11-16T10:53:12Z",
     "user": {
       "login": "Totodore"
     }
@@ -19971,7 +19971,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Extract pipeline schedule logic from cooperative indexing",
-    "updated_at": "2026-11-02T13:20:37Z",
+    "updated_at": "2026-11-17T14:02:47Z",
     "user": {
       "login": "loutPhilipps"
     }
@@ -20022,8 +20022,8 @@
     "number": 6813,
     "pull_request": {},
     "state": "open",
-    "title": "Spread indexing pipelines behind an environment variable",
-    "updated_at": "2026-11-10T15:35:57Z",
+    "title": "Spread indexing pipelines",
+    "updated_at": "2026-11-18T21:38:26Z",
     "user": {
       "login": "loutPhilipps"
     }
@@ -20189,7 +20189,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T19:03:32Z",
     "created_at": "2026-09-23T15:25:32Z",
     "draft": true,
     "id": 4615398378,
@@ -20216,9 +20216,9 @@
     ],
     "number": 6820,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "feat(mTLS) Verify client identities ",
-    "updated_at": "2026-10-22T22:46:16Z",
+    "updated_at": "2026-11-17T19:03:32Z",
     "user": {
       "login": "guilload"
     }
@@ -20600,7 +20600,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T19:03:14Z",
     "created_at": "2026-09-28T20:48:36Z",
     "draft": true,
     "id": 4669132118,
@@ -20621,9 +20621,9 @@
     ],
     "number": 6833,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Sort index by field",
-    "updated_at": "2026-10-22T22:45:55Z",
+    "updated_at": "2026-11-17T19:03:14Z",
     "user": {
       "login": "guilload"
     }
@@ -22057,7 +22057,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-14T12:37:32Z",
     "created_at": "2026-10-07T19:22:48Z",
     "draft": false,
     "id": 4777390521,
@@ -22084,9 +22084,9 @@
     ],
     "number": 6885,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Optimize HitSet seeking and counting",
-    "updated_at": "2026-11-13T14:54:56Z",
+    "updated_at": "2026-11-14T12:37:34Z",
     "user": {
       "login": "PSeitz"
     }
@@ -22270,7 +22270,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T09:41:12Z",
     "created_at": "2026-10-09T14:53:08Z",
     "draft": true,
     "id": 4802075835,
@@ -22291,9 +22291,9 @@
     ],
     "number": 6893,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Do not merge, this is a proof of concept.",
-    "updated_at": "2026-10-22T22:44:41Z",
+    "updated_at": "2026-11-16T09:41:12Z",
     "user": {
       "login": "fulmicoton"
     }
@@ -22530,7 +22530,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Cache regex and wildcard hitsets during warmup",
-    "updated_at": "2026-11-13T14:50:58Z",
+    "updated_at": "2026-11-17T15:42:48Z",
     "user": {
       "login": "PSeitz"
     }
@@ -22728,7 +22728,7 @@
     "pull_request": {},
     "state": "open",
     "title": "feat: metastore recovery cli",
-    "updated_at": "2026-10-22T22:44:17Z",
+    "updated_at": "2026-11-16T11:00:21Z",
     "user": {
       "login": "Totodore"
     }
@@ -23308,7 +23308,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Restore anonymous usage telemetry",
-    "updated_at": "2026-11-12T19:55:16Z",
+    "updated_at": "2026-11-19T20:11:30Z",
     "user": {
       "login": "dayaffe"
     }
@@ -23883,7 +23883,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-18T17:28:40Z",
     "created_at": "2026-10-23T18:07:27Z",
     "draft": false,
     "id": 4987209326,
@@ -23910,9 +23910,9 @@
     ],
     "number": 6950,
     "pull_request": {},
-    "state": "open",
-    "title": "build(deps): bump the npm-dependencies group across 1 directory with 31 updates",
-    "updated_at": "2026-11-04T20:46:54Z",
+    "state": "closed",
+    "title": "build(deps): bump 23 npm dependencies in quickwit-ui (TypeScript 7, Vite 8, react-router 8)",
+    "updated_at": "2026-11-18T17:28:42Z",
     "user": {
       "login": "dependabot"
     }
@@ -24017,7 +24017,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T15:10:34Z",
     "created_at": "2026-10-27T15:43:06Z",
     "draft": false,
     "id": 5036797086,
@@ -24038,9 +24038,9 @@
     ],
     "number": 6954,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Refactor pipeline schedule",
-    "updated_at": "2026-11-06T15:19:25Z",
+    "updated_at": "2026-11-17T15:10:36Z",
     "user": {
       "login": "loutPhilipps"
     }
@@ -24186,7 +24186,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T13:51:16Z",
     "created_at": "2026-10-29T12:44:05Z",
     "draft": true,
     "id": 5068220339,
@@ -24194,9 +24194,9 @@
     "labels": [],
     "number": 6959,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Keep form-feed blank lines out of zero-copy NDJSON docs",
-    "updated_at": "2026-10-29T12:44:05Z",
+    "updated_at": "2026-11-16T13:51:16Z",
     "user": {
       "login": "Mallets"
     }
@@ -24272,7 +24272,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-17T15:04:01Z",
     "created_at": "2026-10-29T16:36:52Z",
     "draft": false,
     "id": 5071897325,
@@ -24305,9 +24305,9 @@
     ],
     "number": 6962,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Use Feuer Disk-Cache",
-    "updated_at": "2026-11-13T12:59:26Z",
+    "updated_at": "2026-11-17T15:04:03Z",
     "user": {
       "login": "PSeitz"
     }
@@ -24342,7 +24342,7 @@
     "pull_request": {},
     "state": "open",
     "title": "Two phase commit init shards",
-    "updated_at": "2026-11-09T17:20:44Z",
+    "updated_at": "2026-11-18T21:18:01Z",
     "user": {
       "login": "nadav-govari"
     }
@@ -24742,7 +24742,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T19:23:45Z",
     "created_at": "2026-11-01T22:16:11Z",
     "draft": false,
     "id": 5112115601,
@@ -24769,9 +24769,9 @@
     ],
     "number": 6977,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "build(deps): bump vrl from 0.37.0 to 0.38.0 in /quickwit",
-    "updated_at": "2026-11-11T14:05:37Z",
+    "updated_at": "2026-11-16T19:23:47Z",
     "user": {
       "login": "dependabot"
     }
@@ -24892,7 +24892,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T09:40:51Z",
     "created_at": "2026-11-02T15:57:36Z",
     "draft": false,
     "id": 5123277509,
@@ -24919,9 +24919,9 @@
     ],
     "number": 6982,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Add best effort actor priority and make IndexSerializer high priority",
-    "updated_at": "2026-11-10T13:29:31Z",
+    "updated_at": "2026-11-16T09:40:51Z",
     "user": {
       "login": "fulmicoton-dd"
     }
@@ -24993,7 +24993,7 @@
   {
     "closed_at": null,
     "created_at": "2026-11-03T11:29:50Z",
-    "draft": true,
+    "draft": false,
     "id": 5136442138,
     "issue_type": null,
     "labels": [
@@ -25002,6 +25002,12 @@
         "description": "S3, GCS, Azure and local storage",
         "id": 1907476925564528387,
         "name": "area:storage"
+      },
+      {
+        "color": "d4c5f9",
+        "description": "Speed, memory or cost is the point. Added on top of the code areas",
+        "id": 798951655199625886,
+        "name": "area:performance"
       },
       {
         "color": "a2eeef",
@@ -25019,8 +25025,8 @@
     "number": 6985,
     "pull_request": {},
     "state": "open",
-    "title": "Fix OOM - Streaming Coalescing in Quickwit ",
-    "updated_at": "2026-11-13T09:53:22Z",
+    "title": "Reduce Memory Consumption - Streaming Coalescing in Quickwit ",
+    "updated_at": "2026-11-18T15:21:14Z",
     "user": {
       "login": "PSeitz"
     }
@@ -25154,7 +25160,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T10:56:48Z",
     "created_at": "2026-11-05T13:32:45Z",
     "draft": false,
     "id": 5172409037,
@@ -25175,9 +25181,9 @@
     ],
     "number": 6990,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Enforce the warmup memory limit while warmup data is downloaded",
-    "updated_at": "2026-11-10T14:04:02Z",
+    "updated_at": "2026-11-16T10:56:52Z",
     "user": {
       "login": "fulmicoton-dd"
     }
@@ -25247,17 +25253,30 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T14:30:54Z",
     "created_at": "2026-11-05T18:06:21Z",
-    "draft": true,
+    "draft": false,
     "id": 5176328315,
     "issue_type": null,
-    "labels": [],
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
     "number": 6993,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Do not retry splits that ran out of warmup memory",
-    "updated_at": "2026-11-10T15:55:13Z",
+    "updated_at": "2026-11-16T14:30:57Z",
     "user": {
       "login": "fulmicoton-dd"
     }
@@ -25442,7 +25461,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-13T18:28:06Z",
     "created_at": "2026-11-09T02:48:29Z",
     "id": 6278956588,
     "issue_type": null,
@@ -25461,15 +25480,15 @@
       }
     ],
     "number": 7000,
-    "state": "open",
+    "state": "closed",
     "title": "Retention stops after deleting and recreating an index with the same ID",
-    "updated_at": "2026-11-09T02:48:37Z",
+    "updated_at": "2026-11-13T18:28:06Z",
     "user": {
       "login": "honganan"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-13T18:28:04Z",
     "created_at": "2026-11-09T02:49:37Z",
     "draft": false,
     "id": 5217911153,
@@ -25490,9 +25509,9 @@
     ],
     "number": 7001,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Fix retention scheduling after index recreation",
-    "updated_at": "2026-11-13T10:03:41Z",
+    "updated_at": "2026-11-13T18:28:04Z",
     "user": {
       "login": "honganan"
     }
@@ -25591,7 +25610,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-16T13:28:42Z",
     "created_at": "2026-11-09T10:07:13Z",
     "draft": false,
     "id": 5222139584,
@@ -25618,9 +25637,9 @@
     ],
     "number": 7005,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Add a per-split warmup memory limit",
-    "updated_at": "2026-11-10T15:41:30Z",
+    "updated_at": "2026-11-16T13:28:46Z",
     "user": {
       "login": "fulmicoton-dd"
     }
@@ -25739,7 +25758,7 @@
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-13T18:16:44Z",
     "created_at": "2026-11-11T22:48:03Z",
     "draft": false,
     "id": 5267937026,
@@ -25766,15 +25785,15 @@
     ],
     "number": 7010,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Disable mmap dir fsync for indexers and compactors",
-    "updated_at": "2026-11-11T23:12:38Z",
+    "updated_at": "2026-11-13T18:19:41Z",
     "user": {
       "login": "guilload"
     }
   },
   {
-    "closed_at": null,
+    "closed_at": "2026-11-13T17:09:48Z",
     "created_at": "2026-11-13T09:01:37Z",
     "draft": false,
     "id": 5292904348,
@@ -25801,11 +25820,1019 @@
     ],
     "number": 7011,
     "pull_request": {},
-    "state": "open",
+    "state": "closed",
     "title": "Validate metastore configs when loading node config",
-    "updated_at": "2026-11-13T09:06:48Z",
+    "updated_at": "2026-11-14T13:04:16Z",
     "user": {
       "login": "shuheiktgw"
+    }
+  },
+  {
+    "closed_at": "2026-11-13T16:10:48Z",
+    "created_at": "2026-11-13T15:12:25Z",
+    "draft": true,
+    "id": 5297950092,
+    "issue_type": null,
+    "labels": [],
+    "number": 7012,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Run index serializer `finalize` method inside `block_in_place`",
+    "updated_at": "2026-11-13T18:19:38Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": "2026-11-13T20:03:22Z",
+    "created_at": "2026-11-13T18:24:26Z",
+    "draft": false,
+    "id": 5300744611,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d4c5f9",
+        "description": "Speed, memory or cost is the point. Added on top of the code areas",
+        "id": 798951655199625886,
+        "name": "area:performance"
+      },
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      }
+    ],
+    "number": 7013,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Run indexing and compaction without fsync optionally",
+    "updated_at": "2026-11-13T20:03:24Z",
+    "user": {
+      "login": "guilload"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-14T08:13:18Z",
+    "draft": false,
+    "id": 5309109194,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "OTLP ingest, otel indexes, Jaeger",
+        "id": 5461867101297585673,
+        "name": "area:otel"
+      },
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      }
+    ],
+    "number": 7014,
+    "pull_request": {},
+    "state": "open",
+    "title": "fix(jaeger): derive process IDs from service name and tags",
+    "updated_at": "2026-11-15T02:54:17Z",
+    "user": {
+      "login": "DeviousCardi"
+    }
+  },
+  {
+    "closed_at": "2026-11-14T14:21:57Z",
+    "created_at": "2026-11-14T08:18:57Z",
+    "draft": false,
+    "id": 5309158686,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0075ca",
+        "description": "Documentation only",
+        "id": 4264803440413478105,
+        "name": "type:docs"
+      },
+      {
+        "color": "c5def5",
+        "description": "Membership, node lifecycle, shutdown, decommissioning",
+        "id": 2184966194316538547,
+        "name": "area:cluster"
+      }
+    ],
+    "number": 7015,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs: add a multi-node Docker Compose tutorial",
+    "updated_at": "2026-11-14T14:21:57Z",
+    "user": {
+      "login": "DeviousCardi"
+    }
+  },
+  {
+    "closed_at": "2026-11-14T14:21:58Z",
+    "created_at": "2026-11-14T08:24:59Z",
+    "draft": false,
+    "id": 5309207798,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "_elastic endpoints and ES client compatibility",
+        "id": 6493268398281695590,
+        "name": "area:elasticsearch-api"
+      },
+      {
+        "color": "0075ca",
+        "description": "Documentation only",
+        "id": 4264803440413478105,
+        "name": "type:docs"
+      }
+    ],
+    "number": 7016,
+    "pull_request": {},
+    "state": "closed",
+    "title": "docs(openapi): document the Elasticsearch-compatible endpoints",
+    "updated_at": "2026-11-14T14:21:59Z",
+    "user": {
+      "login": "DeviousCardi"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-16T13:56:36Z",
+    "draft": false,
+    "id": 5338317342,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "OTLP ingest, otel indexes, Jaeger",
+        "id": 5461867101297585673,
+        "name": "area:otel"
+      },
+      {
+        "color": "0e8a16",
+        "description": "A new capability, such as an endpoint, query type, source, setting or command",
+        "id": 2190467787450955896,
+        "name": "type:feature"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      }
+    ],
+    "number": 7017,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(indexers): add vrl support for otel source input ",
+    "updated_at": "2026-11-17T15:29:17Z",
+    "user": {
+      "login": "Totodore"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-16T14:38:09Z",
+    "draft": true,
+    "id": 5339004610,
+    "issue_type": null,
+    "labels": [],
+    "number": 7018,
+    "pull_request": {},
+    "state": "open",
+    "title": "Remove the warmup memory factor for leading-wildcard queries",
+    "updated_at": "2026-11-16T14:38:09Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-11-18T17:09:07Z",
+    "created_at": "2026-11-16T21:25:26Z",
+    "draft": false,
+    "id": 5345432921,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "CI, test infrastructure, dev environment",
+        "id": 4984374509985217181,
+        "name": "area:ci"
+      }
+    ],
+    "number": 7019,
+    "pull_request": {},
+    "state": "closed",
+    "title": "ci(ui): run UI e2e tests in the merge queue and cover every view",
+    "updated_at": "2026-11-18T17:09:09Z",
+    "user": {
+      "login": "dayaffe"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T13:07:35Z",
+    "created_at": "2026-11-17T11:31:50Z",
+    "draft": false,
+    "id": 5356018238,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "S3, GCS, Azure and local storage",
+        "id": 1907476925564528387,
+        "name": "area:storage"
+      },
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      },
+      {
+        "color": "d93f0b",
+        "description": "It worked in an earlier version",
+        "id": 1557972878938159965,
+        "name": "meta:regression"
+      }
+    ],
+    "number": 7020,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Do not count cached bytes twice in the warmup memory",
+    "updated_at": "2026-11-17T13:07:37Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-11-18T16:02:55Z",
+    "created_at": "2026-11-17T11:50:49Z",
+    "draft": false,
+    "id": 5356275899,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      },
+      {
+        "color": "c5def5",
+        "description": "Quickwit's own metrics, logs and traces",
+        "id": 6990182148964070640,
+        "name": "area:instrumentation"
+      }
+    ],
+    "number": 7021,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Expose the searcher warmup memory budget as a gauge",
+    "updated_at": "2026-11-18T16:02:57Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T12:10:19Z",
+    "draft": false,
+    "id": 5356549154,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Added by Dependabot",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      }
+    ],
+    "number": 7022,
+    "pull_request": {},
+    "state": "open",
+    "title": "Bump tantivy to 787168c77",
+    "updated_at": "2026-11-17T13:00:01Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T13:21:39Z",
+    "draft": true,
+    "id": 5357642815,
+    "issue_type": null,
+    "labels": [],
+    "number": 7023,
+    "pull_request": {},
+    "state": "open",
+    "title": "Move build metadata into executables and pass BuildInfo explicitly",
+    "updated_at": "2026-11-17T13:21:39Z",
+    "user": {
+      "login": "Platane"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T15:05:25Z",
+    "draft": true,
+    "id": 5359371808,
+    "issue_type": null,
+    "labels": [],
+    "number": 7024,
+    "pull_request": {},
+    "state": "open",
+    "title": "Bypass byte caches during predicate preparation",
+    "updated_at": "2026-11-17T15:05:25Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T15:55:02Z",
+    "draft": true,
+    "id": 5360212776,
+    "issue_type": null,
+    "labels": [],
+    "number": 7025,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add leaf_search and leaf_resource_stats logs",
+    "updated_at": "2026-11-17T15:55:02Z",
+    "user": {
+      "login": "Abdul-Andha"
+    }
+  },
+  {
+    "closed_at": "2026-11-17T20:44:42Z",
+    "created_at": "2026-11-17T20:08:27Z",
+    "draft": false,
+    "id": 5364139816,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Index schema, field types, tokenizers, date formats",
+        "id": 8259985754685014489,
+        "name": "area:doc-mapping"
+      }
+    ],
+    "number": 7026,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Ignore empty and null-only arrays for object fields",
+    "updated_at": "2026-11-17T21:17:05Z",
+    "user": {
+      "login": "cemremengu"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T22:25:45Z",
+    "draft": false,
+    "id": 5366098460,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "Scheduling, pipeline placement, shard scaling",
+        "id": 8017706257682046681,
+        "name": "area:control-plane"
+      },
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      }
+    ],
+    "number": 7027,
+    "pull_request": {},
+    "state": "open",
+    "title": "Make scaling arbiter configurable",
+    "updated_at": "2026-11-17T22:52:59Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T23:12:52Z",
+    "draft": false,
+    "id": 5366684094,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "Scheduling, pipeline placement, shard scaling",
+        "id": 8017706257682046681,
+        "name": "area:control-plane"
+      },
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Ingest API, Ingest V2, WAL, shards, _bulk writes",
+        "id": 7540669830975836018,
+        "name": "area:ingest"
+      }
+    ],
+    "number": 7028,
+    "pull_request": {},
+    "state": "open",
+    "title": "Add step amount for shard downscaling",
+    "updated_at": "2026-11-18T20:20:54Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-17T23:37:53Z",
+    "draft": false,
+    "id": 5366979647,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "S3, GCS, Azure and local storage",
+        "id": 1907476925564528387,
+        "name": "area:storage"
+      },
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
+    "number": 7030,
+    "pull_request": {},
+    "state": "open",
+    "title": "search: add counting download bytes by data type",
+    "updated_at": "2026-11-17T23:39:24Z",
+    "user": {
+      "login": "Abdul-Andha"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-18T15:40:07Z",
+    "draft": false,
+    "id": 5379076559,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "S3, GCS, Azure and local storage",
+        "id": 1907476925564528387,
+        "name": "area:storage"
+      },
+      {
+        "color": "d4c5f9",
+        "description": "Speed, memory or cost is the point. Added on top of the code areas",
+        "id": 798951655199625886,
+        "name": "area:performance"
+      },
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
+    "number": 7031,
+    "pull_request": {},
+    "state": "open",
+    "title": "Stream automaton postings and debounce matching reads",
+    "updated_at": "2026-11-20T07:14:39Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-11-18T16:23:55Z",
+    "created_at": "2026-11-18T16:09:58Z",
+    "draft": true,
+    "id": 5379600802,
+    "issue_type": null,
+    "labels": [],
+    "number": 7032,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Paul.masurel/wait for warmup memory b",
+    "updated_at": "2026-11-18T16:23:55Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-11-19T15:56:06Z",
+    "created_at": "2026-11-18T16:24:22Z",
+    "draft": true,
+    "id": 5379832137,
+    "issue_type": null,
+    "labels": [],
+    "number": 7033,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Paul.masurel/wait for warmup memory c",
+    "updated_at": "2026-11-19T15:56:06Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-18T16:27:26Z",
+    "draft": false,
+    "id": 5379883133,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "Scheduling, pipeline placement, shard scaling",
+        "id": 8017706257682046681,
+        "name": "area:control-plane"
+      },
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      }
+    ],
+    "number": 7034,
+    "pull_request": {},
+    "state": "open",
+    "title": "Make scaling permits configurable, refactor",
+    "updated_at": "2026-11-18T22:06:01Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-18T18:10:21Z",
+    "draft": false,
+    "id": 5381494062,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "Docker images, binaries, releases, platforms",
+        "id": 4224372316935564414,
+        "name": "area:packaging"
+      },
+      {
+        "color": "ededed",
+        "description": null,
+        "id": 8314876766840335216,
+        "name": "Bits AI"
+      }
+    ],
+    "number": 7036,
+    "pull_request": {},
+    "state": "open",
+    "title": "ci: move Dockerfile to Debian trixie",
+    "updated_at": "2026-11-18T19:03:51Z",
+    "user": {
+      "login": "dayaffe"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-18T18:11:30Z",
+    "draft": false,
+    "id": 5381510922,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "CI, test infrastructure, dev environment",
+        "id": 4984374509985217181,
+        "name": "area:ci"
+      },
+      {
+        "color": "ededed",
+        "description": null,
+        "id": 8314876766840335216,
+        "name": "Bits AI"
+      }
+    ],
+    "number": 7037,
+    "pull_request": {},
+    "state": "open",
+    "title": "ci: cover /distribution/docker/ubuntu with Dependabot docker updates",
+    "updated_at": "2026-11-18T19:01:39Z",
+    "user": {
+      "login": "dayaffe"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-18T20:07:07Z",
+    "draft": false,
+    "id": 5383236735,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "Scheduling, pipeline placement, shard scaling",
+        "id": 8017706257682046681,
+        "name": "area:control-plane"
+      },
+      {
+        "color": "0e8a16",
+        "description": "A new capability, such as an endpoint, query type, source, setting or command",
+        "id": 2190467787450955896,
+        "name": "type:feature"
+      },
+      {
+        "color": "c5def5",
+        "description": "Ingest API, Ingest V2, WAL, shards, _bulk writes",
+        "id": 7540669830975836018,
+        "name": "area:ingest"
+      }
+    ],
+    "number": 7038,
+    "pull_request": {},
+    "state": "open",
+    "title": "Per-source shard cap",
+    "updated_at": "2026-11-18T20:09:44Z",
+    "user": {
+      "login": "nadav-govari"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-19T03:25:34Z",
+    "id": 6481688905,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d4c5f9",
+        "description": "Speed, memory or cost is the point. Added on top of the code areas",
+        "id": 798951655199625886,
+        "name": "area:performance"
+      },
+      {
+        "color": "c5def5",
+        "description": "Kafka, Kinesis, Pulsar, SQS, Pub/Sub and file sources",
+        "id": 6819608011975247486,
+        "name": "area:sources"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      },
+      {
+        "color": "fbca04",
+        "description": "The bot labeled it and no maintainer has confirmed yet",
+        "id": 6665141372089049609,
+        "name": "needs-triage"
+      }
+    ],
+    "number": 7039,
+    "state": "open",
+    "title": "Backlogged Kafka indexing pipelines can stall checkpoint publication on other pipelines",
+    "updated_at": "2026-11-19T03:27:01Z",
+    "user": {
+      "login": "honganan"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-19T03:31:14Z",
+    "draft": false,
+    "id": 5388290979,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Kafka, Kinesis, Pulsar, SQS, Pub/Sub and file sources",
+        "id": 6819608011975247486,
+        "name": "area:sources"
+      },
+      {
+        "color": "c5def5",
+        "description": "Indexing and merge pipelines, compactor",
+        "id": 5746514523672509643,
+        "name": "area:indexing"
+      }
+    ],
+    "number": 7040,
+    "pull_request": {},
+    "state": "open",
+    "title": "Yield between DocProcessor batches",
+    "updated_at": "2026-11-19T03:39:55Z",
+    "user": {
+      "login": "honganan"
+    }
+  },
+  {
+    "closed_at": "2026-11-19T14:37:15Z",
+    "created_at": "2026-11-19T08:19:07Z",
+    "draft": false,
+    "id": 5391332944,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d73a4a",
+        "description": "Fixes something that is broken",
+        "id": 1744160974891855577,
+        "name": "type:bug"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      },
+      {
+        "color": "e99695",
+        "description": "APIs, config, metrics or data formats change incompatibly",
+        "id": 3124399196811027651,
+        "name": "meta:breaking-change"
+      }
+    ],
+    "number": 7041,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Wait for warmup memory instead of failing split searches",
+    "updated_at": "2026-11-19T14:37:19Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-11-19T14:07:51Z",
+    "created_at": "2026-11-19T08:20:28Z",
+    "draft": true,
+    "id": 5391352163,
+    "issue_type": null,
+    "labels": [],
+    "number": 7042,
+    "pull_request": {},
+    "state": "closed",
+    "title": "wait on oom carbon",
+    "updated_at": "2026-11-19T14:07:51Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": "2026-11-20T13:32:21Z",
+    "created_at": "2026-11-19T09:45:27Z",
+    "id": 6486777520,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d4c5f9",
+        "description": "Speed, memory or cost is the point. Added on top of the code areas",
+        "id": 798951655199625886,
+        "name": "area:performance"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      },
+      {
+        "color": "fbca04",
+        "description": "The bot labeled it and no maintainer has confirmed yet",
+        "id": 6665141372089049609,
+        "name": "needs-triage"
+      }
+    ],
+    "number": 7043,
+    "state": "closed",
+    "title": "Reduce peak memory when listing fields across many splits",
+    "updated_at": "2026-11-20T13:32:21Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-11-20T13:32:19Z",
+    "created_at": "2026-11-19T09:47:01Z",
+    "draft": false,
+    "id": 5392525602,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "d4c5f9",
+        "description": "Speed, memory or cost is the point. Added on top of the code areas",
+        "id": 798951655199625886,
+        "name": "area:performance"
+      },
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
+    "number": 7044,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Reduce peak memory when listing fields across splits",
+    "updated_at": "2026-11-20T13:32:20Z",
+    "user": {
+      "login": "PSeitz"
+    }
+  },
+  {
+    "closed_at": "2026-11-19T13:44:55Z",
+    "created_at": "2026-11-19T11:14:51Z",
+    "draft": false,
+    "id": 5393820020,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "c5def5",
+        "description": "S3, GCS, Azure and local storage",
+        "id": 1907476925564528387,
+        "name": "area:storage"
+      },
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
+    "number": 7045,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Revert \"Use Feuer Disk-Cache\"",
+    "updated_at": "2026-11-19T13:44:57Z",
+    "user": {
+      "login": "fulmicoton"
+    }
+  },
+  {
+    "closed_at": null,
+    "created_at": "2026-11-19T13:21:48Z",
+    "draft": true,
+    "id": 5395707616,
+    "issue_type": null,
+    "labels": [],
+    "number": 7046,
+    "pull_request": {},
+    "state": "open",
+    "title": "feat(indexing): commit workbench on idle drain (DRAFT / needs-review benchmark experiment)",
+    "updated_at": "2026-11-19T13:21:48Z",
+    "user": {
+      "login": "zwpaper"
+    }
+  },
+  {
+    "closed_at": "2026-11-19T14:07:00Z",
+    "created_at": "2026-11-19T13:55:39Z",
+    "draft": false,
+    "id": 5396238547,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "0366d6",
+        "description": "Added by Dependabot",
+        "id": 1011518828275194980,
+        "name": "dependencies"
+      },
+      {
+        "color": "cfd3d7",
+        "description": "No user-visible change, such as refactors, tests, CI, dependency bumps and flaky tests",
+        "id": 3198312636878800864,
+        "name": "type:chore"
+      }
+    ],
+    "number": 7047,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Update tantivy to the tip of main",
+    "updated_at": "2026-11-19T14:07:03Z",
+    "user": {
+      "login": "fulmicoton-dd"
+    }
+  },
+  {
+    "closed_at": "2026-11-20T13:05:33Z",
+    "created_at": "2026-11-19T15:32:37Z",
+    "draft": false,
+    "id": 5397886129,
+    "issue_type": null,
+    "labels": [
+      {
+        "color": "a2eeef",
+        "description": "An improvement to something that exists, or its deprecation or removal",
+        "id": 7469650383003461888,
+        "name": "type:enhancement"
+      },
+      {
+        "color": "c5def5",
+        "description": "Root and leaf search, caches, sorting, pagination, Lambda offload",
+        "id": 2433098826676246568,
+        "name": "area:search"
+      }
+    ],
+    "number": 7048,
+    "pull_request": {},
+    "state": "closed",
+    "title": "Give running split searches priority for warmup memory",
+    "updated_at": "2026-11-20T13:05:35Z",
+    "user": {
+      "login": "fulmicoton-dd"
     }
   }
 ]

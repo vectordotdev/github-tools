@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T14:55:03.276524+00:00",
+  "generatedAt": "2026-11-20T14:20:51.772623+00:00",
   "repository": "vectordotdev/vector",
   "schemaVersion": 1,
   "series": {
@@ -73,8 +73,16 @@
         "date": "2026-11-13T14:54:45.216655+00:00",
         "dateBasis": "collected",
         "reason": null,
-        "sourceRevision": null,
+        "sourceRevision": "abc9c304e4a7cfe27e52319ebca709f6721b2be4",
         "total": 31
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-20T14:20:41.525422+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 33
       }
     ],
     "issues": [
@@ -163,8 +171,16 @@
         "date": "2026-11-13T14:53:42.619406+00:00",
         "dateBasis": "collected",
         "reason": null,
-        "sourceRevision": null,
+        "sourceRevision": "abc9c304e4a7cfe27e52319ebca709f6721b2be4",
         "total": 2093
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-20T14:19:36.965369+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 2089
       }
     ],
     "prs": [
@@ -253,8 +269,16 @@
         "date": "2026-11-13T14:53:42.619406+00:00",
         "dateBasis": "collected",
         "reason": null,
-        "sourceRevision": null,
+        "sourceRevision": "abc9c304e4a7cfe27e52319ebca709f6721b2be4",
         "total": 361
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-20T14:19:36.965369+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 374
       }
     ]
   }

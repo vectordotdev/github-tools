@@ -2556,7 +2556,7 @@
     "closed": false,
     "closedAt": null,
     "comments": {
-      "totalCount": 0
+      "totalCount": 2
     },
     "createdAt": "2026-11-02T19:15:08Z",
     "isAnswered": false,
@@ -2565,8 +2565,86 @@
     "number": 27004,
     "stateReason": null,
     "title": "Vector seems to have memory leak",
-    "updatedAt": "2026-11-02T19:15:08Z",
+    "updatedAt": "2026-11-18T21:13:43Z",
     "upvoteCount": 1,
     "url": "https://github.com/vectordotdev/vector/discussions/27004"
+  },
+  {
+    "answerChosenAt": null,
+    "author": {
+      "login": "cdrso"
+    },
+    "bodyText": "Question\nHi! I’m investigating issue #26439 as a first contribution and would appreciate guidance on the intended behavior before changing it.\nI reproduced the report using a locally compiled Vector 0.62.0-dev with max_length: 60. I sent three valid ASCII syslog messages: a short message, a 530-byte message containing a 500-character body, then another short message.\n\nTCP emits the two short messages and drops the oversized message.\nUDP emits all three, preserving the complete 500-character body.\n\nThe public syslog docs promise truncation, but the code and history suggest a documentation/contract mismatch:\n\nTCP passes max_length into OctetCountingDecoder, whose newline fallback defaults to dropping oversized frames.\nUDP accepts _max_length but does not use it.\n\nWhich contribution scope would be desired?\n\nCorrect the documentation to describe the existing behavior: TCP/Unix drop oversized frames, while UDP does not apply this setting.\nEnforce max_length for UDP and TCP as described in the web docs. If so, after truncating the frame should there be  logging/metrics to accompany that action?\n\nVector Config\nsources:\n  syslog_tcp:\n    type: syslog\n    mode: tcp\n    address: 127.0.0.1:15514\n    max_length: 60\n\n  syslog_udp:\n    type: syslog\n    mode: udp\n    address: 127.0.0.1:15515\n    max_length: 60\n\nsinks:\n  capture_tcp:\n    type: file\n    inputs: [syslog_tcp]\n    path: /home/acn/Dev/vector-issues/issue-26439/tcp.ndjson\n    encoding:\n      codec: json\n\n  capture_udp:\n    type: file\n    inputs: [syslog_udp]\n    path: /home/acn/Dev/vector-issues/issue-26439/udp.ndjson\n    encoding:\n      codec: json\nVector Logs\n2026-11-14T19:00:18.633937Z  INFO source{component_kind=\"source\" component_id=syslog_tcp component_type=syslog}: vector::sources::util::net::tcp: Listening. addr=127.0.0.1:15514\n2026-11-14T19:00:18.633956Z  INFO source{component_kind=\"source\" component_id=syslog_udp component_type=syslog}: vector::sources::syslog: Listening. addr=127.0.0.1:15515 type=\"udp\"\n2026-11-14T19:05:44.770228Z ERROR source{component_kind=\"source\" component_id=syslog_tcp component_type=syslog}:connection{peer_addr=127.0.0.1:38050}: codecs::internal_events: Discarding frame larger than max_length. length=531 max_length=60 error_code=\"decoder_frame_too_long\" error_type=\"parser_failed\" stage=\"processing\"\n2026-11-14T19:05:44.770488Z ERROR source{component_kind=\"source\" component_id=syslog_tcp component_type=syslog}:connection{peer_addr=127.0.0.1:38050}: codecs::internal_events: Failed deserializing frame. error=unable to parse input as valid syslog message error_code=\"decoder_deserialize\" error_type=\"parser_failed\" stage=\"processing\"",
+    "category": {
+      "isAnswerable": true,
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2026-11-14T20:45:32Z",
+    "isAnswered": false,
+    "labels": [],
+    "locked": false,
+    "number": 27202,
+    "stateReason": null,
+    "title": "Contribution guidance for #26439: intended syslog max_length behavior across TCP and UDP",
+    "updatedAt": "2026-11-14T20:47:47Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/27202"
+  },
+  {
+    "answerChosenAt": null,
+    "author": {
+      "login": "pront"
+    },
+    "bodyText": "APT/YUM users: Vector’s package repositories will use a new signing key from November 30, 2026. Follow the migration instructions before then to continue installing and updating Vector. Existing installations will keep running.",
+    "category": {
+      "isAnswerable": false,
+      "name": "Announcements"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 0
+    },
+    "createdAt": "2026-11-16T20:25:37Z",
+    "isAnswered": null,
+    "labels": [],
+    "locked": false,
+    "number": 27220,
+    "stateReason": null,
+    "title": "Upcoming APT/YUM signing key change — November 30",
+    "updatedAt": "2026-11-16T20:25:37Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/27220"
+  },
+  {
+    "answerChosenAt": null,
+    "author": {
+      "login": "jstangroome"
+    },
+    "bodyText": "Question\nI'm running vector with the SSLKEYLOGFILE environment variable configured and it appears that the key log only contains entries for the outgoing TLS connections made from Vector to its sink destinations, but the incoming connections to the TLS-enabled http_server source do not record their pre-master-secrets in the key log file.\nI'm not fluent in Rustlang, but it appears the Vector code for a http source is not leveraging rust-openssl's SslContextBuilder::set_keylog_callback. Is this a bug, a missing feature request, or am I just holding it wrong?\nVector Config\nNo response\nVector Logs\nNo response",
+    "category": {
+      "isAnswerable": true,
+      "name": "Q&A"
+    },
+    "closed": false,
+    "closedAt": null,
+    "comments": {
+      "totalCount": 1
+    },
+    "createdAt": "2026-11-18T21:37:51Z",
+    "isAnswered": false,
+    "labels": [],
+    "locked": false,
+    "number": 27261,
+    "stateReason": null,
+    "title": "SSLKEYLOGFILE works for sinks but not sources?",
+    "updatedAt": "2026-11-19T11:17:33Z",
+    "upvoteCount": 1,
+    "url": "https://github.com/vectordotdev/vector/discussions/27261"
   }
 ]

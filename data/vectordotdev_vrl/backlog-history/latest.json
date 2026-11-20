@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T14:59:05.927735+00:00",
+  "generatedAt": "2026-11-20T14:23:14.543438+00:00",
   "repository": "vectordotdev/vrl",
   "schemaVersion": 1,
   "series": {
@@ -55,6 +55,14 @@
       {
         "coverage": "incremental",
         "date": "2026-11-13T14:58:46.789210+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": "abc9c304e4a7cfe27e52319ebca709f6721b2be4",
+        "total": 5
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-20T14:23:10.308826+00:00",
         "dateBasis": "collected",
         "reason": null,
         "sourceRevision": null,
@@ -131,8 +139,16 @@
         "date": "2026-11-13T14:58:44.109331+00:00",
         "dateBasis": "collected",
         "reason": null,
-        "sourceRevision": null,
+        "sourceRevision": "abc9c304e4a7cfe27e52319ebca709f6721b2be4",
         "total": 256
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-20T14:23:07.172308+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 257
       }
     ],
     "prs": [
@@ -205,8 +221,16 @@
         "date": "2026-11-13T14:58:44.109331+00:00",
         "dateBasis": "collected",
         "reason": null,
-        "sourceRevision": null,
+        "sourceRevision": "abc9c304e4a7cfe27e52319ebca709f6721b2be4",
         "total": 27
+      },
+      {
+        "coverage": "incremental",
+        "date": "2026-11-20T14:23:07.172308+00:00",
+        "dateBasis": "collected",
+        "reason": null,
+        "sourceRevision": null,
+        "total": 39
       }
     ]
   }
